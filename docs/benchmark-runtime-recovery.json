@@ -1,0 +1,26 @@
+{
+  "kind": "Real local runtime cancellation and recovery; synthetic prompt",
+  "cancel": {
+    "response": {
+      "cancelled": true
+    },
+    "chat_status": 409,
+    "seconds": 0.013
+  },
+  "recovery": {
+    "status": 200,
+    "seconds": 8.86,
+    "response": {
+      "hanzi": "我叫小島。",
+      "pinyin": "Wǒ jiào Xiǎodǎo.",
+      "vi": "Tôi tên là Tiểu Đảo.",
+      "feedback": "",
+      "elapsed_ms": 3290,
+      "generated": true,
+      "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn.",
+      "annotation_source": "AI tạo, chưa đối chiếu",
+      "quality_warnings": []
+    }
+  },
+  "unloaded": true
+}

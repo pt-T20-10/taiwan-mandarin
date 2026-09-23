@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-09-23",
+  "scope": "Agent read the linked MOE entries and compared spelling, Pinyin and the basic meaning used here. Not teacher/audio/grammar review.",
+  "words": {
+    "先生": {"pinyin":"xiānshēng","source":"https://dict.concised.moe.edu.tw/dictView.jsp?ID=27312&q=1","verification":"source-checked","note":"Đối chiếu MOE: shēng thanh 1; nghĩa đang dùng là cách gọi nam giới/chồng. Chưa duyệt audio."},
+    "太太": {"pinyin":"tàitai","source":"https://dict.concised.moe.edu.tw/dictView.jsp?ID=10100&la=0&powerMode=0","verification":"source-checked","note":"Đối chiếu MOE: âm tai thứ hai là thanh nhẹ; nghĩa vợ hoặc kính xưng phụ nữ đã kết hôn."},
+    "名字": {"pinyin":"míngzi","source":"https://dict.concised.moe.edu.tw/dictView.jsp?ID=4842&la=0&powerMode=0","verification":"source-checked","note":"Đối chiếu MOE: zi thanh nhẹ; tên. Không mặc định tất cả âm thứ hai đều là thanh nhẹ."},
+    "朋友": {"pinyin":"péngyǒu","source":"https://dict.concised.moe.edu.tw/dictView.jsp?ID=2895&la=0&powerMode=0","verification":"source-checked","note":"Đối chiếu MOE: yǒu thanh 3; bạn bè."},
+    "星期": {"pinyin":"xīngqí","source":"https://dict.concised.moe.edu.tw/dictView.jsp?ID=28118&la=0&powerMode=0","verification":"source-checked","note":"Đối chiếu MOE Đài Loan: qí thanh 2; tuần/thứ. Không đổi sang qī."},
+    "麻煩": {"pinyin":"máfán","source":"https://dict.concised.moe.edu.tw/search.jsp?la=0&powerMode=0&word=%E9%BA%BB%E7%85%A9","verification":"draft","note":"Đã đối chiếu âm đọc ㄇㄚˊ ㄈㄢˊ trong kết quả MOE; còn cần đối chiếu đầy đủ nghĩa/ngữ cảnh."},
+    "不客氣": {"pinyin":"bú kèqì","source":"https://dict.concised.moe.edu.tw/dictView.jsp?ID=18072&la=0&powerMode=0","verification":"draft","note":"Đã đối chiếu 客氣 kè qì với MOE; 不 đọc bú trước thanh 4 trong cụm. Cần đối chiếu thêm cả cách dùng cụm đáp lời cảm ơn."}
+  }
+}

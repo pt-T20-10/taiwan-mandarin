@@ -1,0 +1,10 @@
+{
+  "input": "synthetic 5s PCM16 16kHz mono zero samples",
+  "elapsed_ms": 11,
+  "status": 200,
+  "result": {
+    "text": "",
+    "elapsed_ms": 0,
+    "notice": "Bản ghi im lặng hoặc quá nhỏ. Hãy kiểm tra micro; không tạo transcript từ im lặng."
+  }
+}

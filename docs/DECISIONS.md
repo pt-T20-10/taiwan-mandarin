@@ -1,0 +1,24 @@
+# Quyết định triển khai — 23/09/2026
+
+1. Giữ Windows native, Git root hiện có và .venv Python 3.14.3. FastAPI/Pydantic có wheel tương thích; đã cài bằng interpreter riêng, không đổi Python global.
+2. React 19.3.0 + TypeScript 7.0.2 + Vite 8.3.0; ts-fsrs 5.4.2. Lock npm bằng package-lock.json, Python bằng requirements.lock. Không thêm framework state/router: hash navigation và context đủ cho bản local.
+3. FastAPI phục vụ dist cùng origin tại 127.0.0.1:8765. Launcher kiểm tra health, tránh mở thêm dịch vụ. Runtime không dùng CDN/cloud. Chặn Host lạ, Origin khác và yêu cầu header riêng cho mutation; không mở CORS cho website bên ngoài.
+4. SQLite WAL, schema user_version=1; version/CAS cho object; event ID + action_key chống trùng trong cùng transaction với tiến độ. Xung đột trả 409, không tự ghi đè. Các object xóa có tombstone.
+5. Backup JSON có nội dung/tiến độ/thẻ/ghi chú/chat, không kèm model. Restore kiểm tra trước, transaction và bản trước phục hồi. Gói có schema + SHA-256 + dung lượng; chỉ cài version mới, giữ mọi ID cũ. Không tự nâng gói khi mở app để tránh thay đổi nội dung ngoài ý muốn.
+6. FSRS với retention .9, fuzz=false để có thể tái hiện; mỗi hướng thẻ có schedule riêng. Luyện tự do ghi sự kiện và không cập nhật lịch.
+7. Nội dung 12 đơn vị là bản nháp do AI hỗ trợ viết, không sao chép giáo trình. Kiểm tra cấu trúc không có nghĩa đã kiểm chứng ngôn ngữ. Không công bố hoàn thành A1/B2. Xem CONTENT_GUIDE.md.
+8. Luyện nét dùng 12 mẫu hình học tự soạn 一 二 三 十 人 大 小 日 月 口 上 下, đủ chữ chọn lọc của 12 đơn vị. Đối chiếu số nét, thứ tự và hướng với dữ liệu MOE ngày 23/09/2026; hình học giản lược không phải font/thư pháp. Mã kiểm tra đường đi có hướng xử lý nét xiên/gấp/móc; ba chế độ tô/nhạt/tự nhớ. Xem STROKE_SOURCES.md. Không dùng thư viện Hanzi Writer vì phạm vi 12 mẫu này đã có bộ dựng/kiểm tra nhỏ, không cần kho dữ liệu ngoài.
+9. Giữ font Windows Microsoft JhengHei đang có cho zh-TW; không sao chép/phân phối font Windows. UI dùng Segoe UI/Arial local. Nhân vật hòn đảo tự dựng CSS.
+10. Runtime đầu tiên llama.cpp b11120 CPU, Whisper.cpp v1.9.2 CPU. Qwen3-1.7B Q4_K_M được requantize từ Q8 chính thức (có thể giảm chất lượng), lưu hash. Tất cả tải tường minh bằng script setup, không tải ngầm khi học.
+11. Đã thử 30 lượt Qwen 1.7B và 30 lượt Qwen3-4B Q4 chính thức. Chọn 4B/CUDA cho tính năng thử nghiệm vì duy trì hội thoại khá hơn và warm median 2.960 s; vẫn sai Pinyin/dịch/Phồn thể, chưa đạt chất lượng gia sư. Ghi rõ lỗi trong UI, ẩn Pinyin/Việt lẫn Hán tự, chỉ tái sử dụng chú thích trong gói khi khớp toàn câu. Không nạp nhiều LLM đồng thời.
+12. Kiểm tra đầu phiên chưa có zh-TW; cuối phiên đã phát hiện Hanhan Desktop và Edge Hanhan/Yating/Zhiwei local. Native TTS chạy thật được. Adapter chỉ dùng browser localService + zh-TW hoặc Windows zh-TW; lỗi phát browser được báo, thiếu giọng được báo thật. Không dùng edge-tts/zh-CN thay thế. Người dùng chưa thử micro/loa offline.
+13. Whisper tạo câu trên file im lặng; thêm cổng RMS cho im lặng/âm quá nhỏ trước inference. Đây không phải bộ phát hiện giọng nói đầy đủ hoặc chấm phát âm. Micro thật, 40 câu ASR và 30 câu TTS vẫn cần kiểm tra.
+14. Đếm thời gian chủ động trên bài tập khi tab có focus, không hidden, có thao tác trong 30 giây; tối đa 5 phút/câu. Không tính thời gian inference nền là học chủ động.
+15. Android/LAN chưa làm. Hợp đồng adapter Storage, ContentStore, SpeechRecognition, SpeechSynthesis, ChatModel, Sync ở src/adapters/contracts.ts để thay runtime sau.
+
+16. CUDA 12.4 binary và DLL chính thức chạy được với driver hiện có; Vulkan không đạt health trong thời hạn. Không đổi driver/toolkit. Cấu hình nằm ở models/active.json và có UI chuyển CPU. Xem BENCHMARKS.md về lần CUDA đầu chậm và lỗi ngôn ngữ.
+17. Sau restore, tăng revision object để tab đang mở không ghi bằng version cũ trùng lại. Sự kiện cùng action_key nhưng đáp án khác trả xung đột thay vì âm thầm coi là lặp.
+18. Nhập thẻ theo giao dịch, kiểm tra schema/lịch trước khi ghi; không hồi sinh ID đã tồn tại. Audio ghi âm tối đa 60 giây/4 MB và được xóa khỏi phía server sau xử lý; nhận dạng có hủy và giới hạn một tiến trình đồng thời.
+19. Tài sản thử nghiệm được giữ trong ngân sách thực ~7.62 GB (model 5.587 GB, runtime/ZIP 2.030 GB). Script tải kiểm tra ngân sách 10 GB và dung lượng trống. Không coi bảng phân bổ ban đầu là số đo thực tế.
+20. Dùng apply_patch/file UTF-8 để giữ dấu tiếng Việt. Đã sửa nhãn thiết bị, ghi chú nguồn và tài liệu bị dấu hỏi do encoding khi pipe PowerShell sang Python. Không thay đổi file benchmark thô để làm đẹp kết quả.
+21. Whisper thêm ngữ cảnh cố định “以下是臺灣華語的繁體中文逐字稿。” qua --prompt để giảm Giản thể, không truyền đáp án/câu mục tiêu và không chuyển chữ sau nhận dạng. Pilot 10 đoạn âm tổng hợp giảm lỗi ký tự từ 20 xuống 15; vẫn sai 郵局、圖書館借書、捷運站見. Lưu cả benchmark trước/sau; không coi âm TTS là kiểm thử người học thật.

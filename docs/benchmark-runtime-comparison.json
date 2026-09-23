@@ -1,0 +1,235 @@
+{
+  "system": "你是台灣朋友「小島」，陪越南學習者聊天。請直接回答對方的問題或接續話題，不要重複、翻譯、改寫使用者原句。回覆只用一到兩句自然的台灣繁體中文。\n輸出 JSON：hanzi 是你自己的回答；pinyin 是這個回答的漢語拼音（聲調符號）；vi 是這個回答的越南文翻譯；feedback 通常是空字串，只在對方真的有語法錯誤時，用越南文簡短說明。不要無故糾正。/no_think",
+  "samples": [
+    {
+      "runtime": "llama",
+      "model": "Qwen3-1.7B-Q4_K_M.gguf",
+      "load_ms": 1831,
+      "total_ms": 3792,
+      "rss_bytes_after_request": 2354790400,
+      "gpu_memory_MiB_and_util_percent_after_request": "233, 0",
+      "prompt": "我要一杯熱茶，謝謝。",
+      "status": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"hanzi\": \"不問題！我這裡有熱茶。\", \"pinyin\": \"Bù wèn wèi! Wǒ zhè lǐ yǒu rè chá.\", \"vi\": \"Không vấn đề! Tôi đây có trà nóng.\", \"feedback\": \"\"}"
+            }
+          }
+        ],
+        "created": 1790155877,
+        "model": "D:\\Taiwanese App\\taiwan-mandarin\\models\\Qwen3-1.7B-Q4_K_M.gguf",
+        "system_fingerprint": "b11120-08b1d2aea",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 61,
+          "prompt_tokens": 254,
+          "total_tokens": 315,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-gpUAkUSRRPaio411QsFsq957o8AJqXp6",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 254,
+          "prompt_ms": 1720.757,
+          "prompt_per_token_ms": 6.774633858267717,
+          "prompt_per_second": 147.60945328131749,
+          "predicted_n": 61,
+          "predicted_ms": 1959.877,
+          "predicted_per_token_ms": 32.66461666666667,
+          "predicted_per_second": 30.61416609307625
+        }
+      }
+    },
+    {
+      "runtime": "llama",
+      "model": "Qwen3-1.7B-Q4_K_M.gguf",
+      "load_ms": 1831,
+      "total_ms": 2309,
+      "rss_bytes_after_request": 2354827264,
+      "gpu_memory_MiB_and_util_percent_after_request": "233, 0",
+      "prompt": "我家有四個人。你呢？",
+      "status": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"hanzi\": \"我家有四個人。你呢？\", \"pinyin\": \"Wǒ jiā yǒu sì gè rén. Nǐ ne?\", \"vi\": \"Wǒ jiā yǒu sì gè rén. Nǐ ne?\", \"feedback\": \"\"}"
+            }
+          }
+        ],
+        "created": 1790155879,
+        "model": "D:\\Taiwanese App\\taiwan-mandarin\\models\\Qwen3-1.7B-Q4_K_M.gguf",
+        "system_fingerprint": "b11120-08b1d2aea",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 65,
+          "prompt_tokens": 254,
+          "total_tokens": 319,
+          "prompt_tokens_details": {
+            "cached_tokens": 237
+          }
+        },
+        "id": "chatcmpl-24iyw1t5yb6DS1IPW4IbDx9eGs482SDv",
+        "timings": {
+          "cache_n": 237,
+          "prompt_n": 17,
+          "prompt_ms": 146.844,
+          "prompt_per_token_ms": 8.637882352941176,
+          "prompt_per_second": 115.7691155239574,
+          "predicted_n": 65,
+          "predicted_ms": 2071.808,
+          "predicted_per_token_ms": 32.372,
+          "predicted_per_second": 30.890893364636106
+        }
+      }
+    },
+    {
+      "runtime": "llama",
+      "model": "Qwen3-1.7B-Q4_K_M.gguf",
+      "load_ms": 1831,
+      "total_ms": 2464,
+      "rss_bytes_after_request": 2354884608,
+      "gpu_memory_MiB_and_util_percent_after_request": "233, 0",
+      "prompt": "老師您好，我想跟您討論報告。",
+      "status": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"hanzi\": \"老師您好，我想跟您討論報告。\", \"pinyin\": \"Lǎo shī hǎo dì, wǒ xiǎng gēn nín tǎo lùbài.\", \"vi\": \"Thầy giáo您好，我想跟您讨论报告。\", \"feedback\": \"\"}"
+            }
+          }
+        ],
+        "created": 1790155882,
+        "model": "D:\\Taiwanese App\\taiwan-mandarin\\models\\Qwen3-1.7B-Q4_K_M.gguf",
+        "system_fingerprint": "b11120-08b1d2aea",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 71,
+          "prompt_tokens": 255,
+          "total_tokens": 326,
+          "prompt_tokens_details": {
+            "cached_tokens": 237
+          }
+        },
+        "id": "chatcmpl-3YjnEYxOcrkPEQPZOkypNkPXFaxNbP4L",
+        "timings": {
+          "cache_n": 237,
+          "prompt_n": 18,
+          "prompt_ms": 144.359,
+          "prompt_per_token_ms": 8.019944444444445,
+          "prompt_per_second": 124.68914303922858,
+          "predicted_n": 71,
+          "predicted_ms": 2235.756,
+          "predicted_per_token_ms": 31.939371428571427,
+          "predicted_per_second": 31.30931997946109
+        }
+      }
+    },
+    {
+      "runtime": "llama",
+      "model": "Qwen3-1.7B-Q4_K_M.gguf",
+      "load_ms": 1831,
+      "total_ms": 3341,
+      "rss_bytes_after_request": 2354884608,
+      "gpu_memory_MiB_and_util_percent_after_request": "233, 0",
+      "prompt": "我不有錢。",
+      "status": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"hanzi\": \"不有錢的意思是「沒有錢」，可以說『我沒有錢』。\", \"pinyin\": \"Bù yǒu qián的意思是「沒有錢」，可以說『我沒有錢』。\", \"vi\": \"Ý nghĩa của 'bù yǒu qián' là 'mình không có tiền', có thể nói 'tôi không có tiền'.\", \"feedback\": \"\"}"
+            }
+          }
+        ],
+        "created": 1790155885,
+        "model": "D:\\Taiwanese App\\taiwan-mandarin\\models\\Qwen3-1.7B-Q4_K_M.gguf",
+        "system_fingerprint": "b11120-08b1d2aea",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 93,
+          "prompt_tokens": 250,
+          "total_tokens": 343,
+          "prompt_tokens_details": {
+            "cached_tokens": 237
+          }
+        },
+        "id": "chatcmpl-jviHuvKR5AVO431OgiGZoLhxrAaMYCby",
+        "timings": {
+          "cache_n": 237,
+          "prompt_n": 13,
+          "prompt_ms": 115.763,
+          "prompt_per_token_ms": 8.904846153846155,
+          "prompt_per_second": 112.29840277117904,
+          "predicted_n": 93,
+          "predicted_ms": 3142.601,
+          "predicted_per_token_ms": 34.158706521739134,
+          "predicted_per_second": 29.27511319445262
+        }
+      }
+    },
+    {
+      "runtime": "llama",
+      "model": "Qwen3-1.7B-Q4_K_M.gguf",
+      "load_ms": 1831,
+      "total_ms": 2673,
+      "rss_bytes_after_request": 2354921472,
+      "gpu_memory_MiB_and_util_percent_after_request": "233, 0",
+      "prompt": "明天下午三點方便嗎？",
+      "status": 200,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"hanzi\": \"方便嗎？我明天下午三點在家。\", \"pinyin\": \"Fāngbiàn ma? Wǒ míngtiān wǔmǎn sāndiǎn zài jiā.\", \"vi\": \"Okay, tôi ở nhà vào lúc 3 giờ chiều ngày mai.\", \"feedback\": \"\"}"
+            }
+          }
+        ],
+        "created": 1790155888,
+        "model": "D:\\Taiwanese App\\taiwan-mandarin\\models\\Qwen3-1.7B-Q4_K_M.gguf",
+        "system_fingerprint": "b11120-08b1d2aea",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 76,
+          "prompt_tokens": 253,
+          "total_tokens": 329,
+          "prompt_tokens_details": {
+            "cached_tokens": 237
+          }
+        },
+        "id": "chatcmpl-idsaCDjEq4KjLxcnjR8HwgwCVN3pOLgd",
+        "timings": {
+          "cache_n": 237,
+          "prompt_n": 16,
+          "prompt_ms": 129.859,
+          "prompt_per_token_ms": 8.1161875,
+          "prompt_per_second": 123.2105591449187,
+          "predicted_n": 76,
+          "predicted_ms": 2459.554,
+          "predicted_per_token_ms": 32.79405333333334,
+          "predicted_per_second": 30.493333344175404
+        }
+      }
+    }
+  ]
+}

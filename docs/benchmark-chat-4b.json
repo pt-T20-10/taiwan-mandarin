@@ -1,0 +1,487 @@
+{
+  "config": "Qwen3-4B-Q4_K_M · CUDA; llama b11120, 6 threads, ctx4096; non-streaming",
+  "quality": "unreviewed; not certification",
+  "samples": [
+    {
+      "index": 0,
+      "prompt": "你好，我是越南人。你叫什麼名字？",
+      "total_ms": 7499,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2936348672,
+      "response": {
+        "hanzi": "你好！我叫小島。很高興認識你！",
+        "pinyin": "Nǐ hǎo! Wǒ jiào Xiǎodǎo. Hěn gāoxìng rènshì nǐ!",
+        "vi": "Chào bạn! Tôi tên Tiểu Đảo. Rất vui được biết bạn!",
+        "feedback": "",
+        "elapsed_ms": 3814,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 1,
+      "prompt": "早安！今天你好嗎？",
+      "total_ms": 2960,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2936700928,
+      "response": {
+        "hanzi": "早安！今天很好，謝謝問候！",
+        "pinyin": "Zǎoān! Jīn tiān hěn hǎo, xiè xie wèn hou!",
+        "vi": "Chào bạn! Hôm nay rất tốt, cảm ơn đã hỏi!",
+        "feedback": "",
+        "elapsed_ms": 1906,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 2,
+      "prompt": "我要一杯熱茶，謝謝。",
+      "total_ms": 3004,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2936889344,
+      "response": {
+        "hanzi": "好啊，我來倒茶。",
+        "pinyin": "Hǎo ā, wǒ lái dǎo chá.",
+        "vi": "Tốt lắm, tôi sẽ đổ trà.",
+        "feedback": "",
+        "elapsed_ms": 1551,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 3,
+      "prompt": "我不吃辣，可以不要辣嗎？",
+      "total_ms": 2700,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2937139200,
+      "response": {
+        "hanzi": "當然可以，不加辣椒就好。",
+        "pinyin": "Dāngrán kěyǐ, bù jiā jiāoliě jiù hǎo.",
+        "vi": "Tất nhiên có thể, không cần thêm tiêu cũng được.",
+        "feedback": "",
+        "elapsed_ms": 1744,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 4,
+      "prompt": "請問，這個多少錢？",
+      "total_ms": 3094,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2937364480,
+      "response": {
+        "hanzi": "這個是十五元。",
+        "pinyin": "Zhè gè shì shíwǔ yuán.",
+        "vi": "Đây là 15 nhân.",
+        "feedback": "",
+        "elapsed_ms": 1656,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 5,
+      "prompt": "我想買兩個蘋果。",
+      "total_ms": 4140,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2937442304,
+      "response": {
+        "hanzi": "好啊，你要買兩個蘋果嗎？",
+        "pinyin": "Hǎo ā, nǐ yào mǎi liǎng píngguǒ ma?",
+        "vi": "Okay, bạn có muốn mua hai quả táo không?",
+        "feedback": "",
+        "elapsed_ms": 1847,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 6,
+      "prompt": "請問，捷運站在哪裡？",
+      "total_ms": 5154,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2937516032,
+      "response": {
+        "hanzi": "捷運站通常在車站大廳有標示，你可以問服務台或看地標。",
+        "pinyin": "Tiěyùn zhàn tōngcháng zài chēzhàn dàtīng yǒu biāoshì, nǐkěyǐ 问 fúwèitái huò kàn dìbiāo.",
+        "vi": "Bến tàu thường có biển hiệu ở大厅 của ga tàu, bạn có thể hỏi quầy phục vụ hoặc nhìn dấu hiệu.",
+        "feedback": "",
+        "elapsed_ms": 3262,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 7,
+      "prompt": "到臺北車站怎麼走？",
+      "total_ms": 3687,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2937593856,
+      "response": {
+        "hanzi": "坐捷運到臺北車站，步行約10分鐘。",
+        "pinyin": "Zuò jiéyùn dào Tāiběi Chēzhàn, bùxíng yuē 10 fēnzhōng.",
+        "vi": "Đi tàu điện đến ga Tàibei, đi bộ khoảng 10 phút.",
+        "feedback": "",
+        "elapsed_ms": 2609,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 8,
+      "prompt": "我想坐公車去學校。",
+      "total_ms": 2848,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2937671680,
+      "response": {
+        "hanzi": "公車在這邊。",
+        "pinyin": "Gōngchē zài zhè边。",
+        "vi": "Xe buýt ở đây.",
+        "feedback": "",
+        "elapsed_ms": 1449,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 9,
+      "prompt": "我家有四個人。",
+      "total_ms": 3781,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2937819136,
+      "response": {
+        "hanzi": "哦，你們家有四個人啊！",
+        "pinyin": "Ō, nǐmen jiā yǒu sì gè rén a!",
+        "vi": "Ô, gia bạn có bốn người đó!",
+        "feedback": "",
+        "elapsed_ms": 1551,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 10,
+      "prompt": "我有一個妹妹。你呢？",
+      "total_ms": 2558,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915692544,
+      "response": {
+        "hanzi": "我也有一个妹妹。",
+        "pinyin": "Wǒ yě yǒu yī gè mèizi.",
+        "vi": "Tôi cũng có một em妹.",
+        "feedback": "em妹",
+        "elapsed_ms": 1687,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 11,
+      "prompt": "這個房間有冷氣嗎？",
+      "total_ms": 2447,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915696640,
+      "response": {
+        "hanzi": "有啊，開了冷氣。",
+        "pinyin": "Yǒu a, kāi le lěng qì.",
+        "vi": "Có chứ, đã bật máy lạnh.",
+        "feedback": "",
+        "elapsed_ms": 1514,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 12,
+      "prompt": "一個月的房租多少錢？",
+      "total_ms": 3989,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915708928,
+      "response": {
+        "hanzi": "一個月的房租視情況而定，通常在1萬到3萬新台幣之間。",
+        "pinyin": "Yī gè yuè de fáng gù shì qīn qíng ér dìng, tōng常 zài 1 wàn dào 3 wàn xīn táibì zhī jiān.",
+        "vi": "Tiền房租 một tháng thường phụ thuộc vào tình hình, thường dao động từ 10.000 đến 30.000 NTD.",
+        "feedback": "",
+        "elapsed_ms": 3076,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 13,
+      "prompt": "我明天下午有課。",
+      "total_ms": 2483,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915708928,
+      "response": {
+        "hanzi": "啊，那你要去上課了呢！",
+        "pinyin": "Ā, nà nǐ yào qù shàngkè le ne!",
+        "vi": "À, thì bạn phải đi học rồi.",
+        "feedback": "",
+        "elapsed_ms": 1515,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 14,
+      "prompt": "你星期三有空嗎？",
+      "total_ms": 3324,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915708928,
+      "response": {
+        "hanzi": "星期三我有空，可以一起吃飯嗎？",
+        "pinyin": "Xìngzhīsān wǒ yǒukōng, kěyǐ yīqǐ chīfàn ma?",
+        "vi": "Thứ ba tôi có thời gian, có thể cùng nhau ăn trưa không?",
+        "feedback": "",
+        "elapsed_ms": 2088,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 15,
+      "prompt": "現在幾點？",
+      "total_ms": 2451,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915708928,
+      "response": {
+        "hanzi": "現在是下午四點多。",
+        "pinyin": "Xiàn zài shì xiǎng wǔ diǎn duō.",
+        "vi": "Bây giờ là gần 4 giờ chiều.",
+        "feedback": "",
+        "elapsed_ms": 1498,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 16,
+      "prompt": "請問，郵局在哪裡？",
+      "total_ms": 2421,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915708928,
+      "response": {
+        "hanzi": "郵局在市政府大樓附近。",
+        "pinyin": "Yóu jú zài zhèng fǔ shì dà lóu fēn wéi.",
+        "vi": "Bưu điện ở gần tòa nhà chính quyền.",
+        "feedback": "",
+        "elapsed_ms": 1762,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 17,
+      "prompt": "我聽不懂，請再說一次。",
+      "total_ms": 3203,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915708928,
+      "response": {
+        "hanzi": "我叫小島。很高興認識你！",
+        "pinyin": "Wǒ jiào Xiǎodǎo. Hěn gāoxìng rènshì nǐ!",
+        "vi": "Tôi tên Tiểu Đảo. Rất vui được biết bạn!",
+        "feedback": "",
+        "elapsed_ms": 1841,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 18,
+      "prompt": "這個詞是什麼意思？",
+      "total_ms": 2473,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915639296,
+      "response": {
+        "hanzi": "這個詞是問對方的姓名。",
+        "pinyin": "Zhègè cí shì wèn duìfāng de xingmèng.",
+        "vi": "Từ này là hỏi tên của người đối phương.",
+        "feedback": "",
+        "elapsed_ms": 1672,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 19,
+      "prompt": "我會說一點中文。",
+      "total_ms": 3359,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915639296,
+      "response": {
+        "hanzi": "太好了！我們可以一起學習中文。",
+        "pinyin": "Tài hǎo le! Wǒmen kěyǐ yīqǐ xuéxí zhōngwén.",
+        "vi": "Tuyệt vời! Chúng ta có thể học Trung văn вместе.",
+        "feedback": "",
+        "elapsed_ms": 1879,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 20,
+      "prompt": "我已經吃飯了。",
+      "total_ms": 3275,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915639296,
+      "response": {
+        "hanzi": "啊，那太好了！你今天吃什麼？",
+        "pinyin": "Ah, nà tài hǎo le! Nǐ jīn tiān chī shénme?",
+        "vi": "Ôi, thì quá tốt rồi! Bạn hôm nay ăn gì?",
+        "feedback": "",
+        "elapsed_ms": 2030,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 21,
+      "prompt": "你週末喜歡做什麼？",
+      "total_ms": 3270,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915639296,
+      "response": {
+        "hanzi": "週末我喜欢和朋友一起出去玩，或者看電影。",
+        "pinyin": "Zhōu mǎo wǒ xǐhuan hé péngyǒu yīqǐ chūqù wán, huòér kàn diànyǐng.",
+        "vi": "Cuối tuần tôi thích đi chơi với bạn bè hoặc xem phim.",
+        "feedback": "",
+        "elapsed_ms": 2247,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 22,
+      "prompt": "我想去圖書館借書。",
+      "total_ms": 2443,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915639296,
+      "response": {
+        "hanzi": "圖書館在這邊，你要去嗎？",
+        "pinyin": "Túshūguǎn zài zhèxiē, nǐ yào qù ma?",
+        "vi": " Thư viện ở đây, bạn có muốn đi không?",
+        "feedback": "",
+        "elapsed_ms": 1760,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 23,
+      "prompt": "老師您好，我想跟您討論報告。",
+      "total_ms": 2349,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915770368,
+      "response": {
+        "hanzi": "好的，請說。",
+        "pinyin": "Hǎo de, qǐng shuō.",
+        "vi": "Được, bạn xin nói.",
+        "feedback": "",
+        "elapsed_ms": 1365,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 24,
+      "prompt": "明天下午三點方便嗎？",
+      "total_ms": 2418,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915770368,
+      "response": {
+        "hanzi": "方便，我們可以約時間。",
+        "pinyin": "Fānyìng, wǒmen kěyǐ yuē shíjiān.",
+        "vi": "Được, chúng ta có thể hẹn thời gian.",
+        "feedback": "",
+        "elapsed_ms": 1671,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 25,
+      "prompt": "請幫我修改這句：我是很忙。",
+      "total_ms": 2405,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915770368,
+      "response": {
+        "hanzi": "我現在很忙。",
+        "pinyin": "Wǒ xiànzài hěn máng.",
+        "vi": "Tôi đang rất bận.",
+        "feedback": "",
+        "elapsed_ms": 1320,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 26,
+      "prompt": "請幫我修改這句：我不有錢。",
+      "total_ms": 2350,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915770368,
+      "response": {
+        "hanzi": "我沒有錢。",
+        "pinyin": "Wǒ méi yǒu qián.",
+        "vi": "Tôi không có tiền.",
+        "feedback": "",
+        "elapsed_ms": 1183,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 27,
+      "prompt": "我想喝珍珠奶茶，半糖少冰。",
+      "total_ms": 3272,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915770368,
+      "response": {
+        "hanzi": "好呀！你想要珍珠奶茶，半糖少冰吗？",
+        "pinyin": "Hǎo ya! Nǐ xiǎo yào zhū huā tāi yá, bàn táng shǎo jīng ma?",
+        "vi": "Okay! Bạn muốn trà xôi đậu, nửa đường ít lạnh chứ?",
+        "feedback": "",
+        "elapsed_ms": 2141,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 28,
+      "prompt": "我想練習用繁體中文寫電子郵件。",
+      "total_ms": 3415,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915770368,
+      "response": {
+        "hanzi": "好啊！我可以幫你寫範例郵件。",
+        "pinyin": "Hǎo ā! Wǒ kěyǐ bāng nǐ xiě fànyì yóujiàn.",
+        "vi": "Tốt rồi! Tôi có thể giúp bạn viết mẫu email.",
+        "feedback": "",
+        "elapsed_ms": 1981,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "index": 29,
+      "prompt": "謝謝你，明天見！",
+      "total_ms": 2712,
+      "http_status": 200,
+      "peak_llama_rss_bytes": 2915770368,
+      "response": {
+        "hanzi": "不客氣！明天見！",
+        "pinyin": "Bù kèqì! Mingtiān jiàn!",
+        "vi": "Không ngại! Chào mai!",
+        "feedback": "",
+        "elapsed_ms": 1415,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    }
+  ],
+  "peak_llama_rss_bytes": 2937819136
+}

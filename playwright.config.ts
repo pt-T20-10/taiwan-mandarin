@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./e2e',fullyParallel:false,workers:1,timeout:45000,use:{baseURL:'http://127.0.0.1:8767',channel:'msedge',headless:true,trace:'retain-on-failure',viewport:{width:1440,height:1000},launchOptions:{args:['--use-fake-ui-for-media-stream','--use-fake-device-for-media-stream']}},webServer:{command:'.venv\\Scripts\\python.exe -m backend.launcher --no-browser --port 8767',url:'http://127.0.0.1:8767/api/health',reuseExistingServer:false,env:{MANDARIN_DATA_DIR:'data/e2e'},timeout:30000}});

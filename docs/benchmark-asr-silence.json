@@ -1,0 +1,10 @@
+{
+  "input": "synthetic 5s PCM16 16kHz mono zero samples",
+  "elapsed_ms": 4660,
+  "status": 200,
+  "result": {
+    "text": "你不要再想我了",
+    "elapsed_ms": 4649,
+    "notice": "Transcript cần kiểm tra; không phải điểm phát âm/thanh điệu."
+  }
+}

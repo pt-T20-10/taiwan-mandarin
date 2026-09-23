@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Qwen3-1.7B-Q4_K_M.gguf",
+    "bytes": 1107408544,
+    "sha256": "54c0f1203a724e9f33e76916beab3bdfaffef56cf7b42a93b1bc21319fc0bf97"
+  },
+  {
+    "name": "Qwen3-1.7B-Q8_0.gguf",
+    "bytes": 1834426016,
+    "sha256": "061b54daade076b5d3362dac252678d17da8c68f07560be70818cace6590cb1a"
+  },
+  {
+    "name": "Qwen3-4B-Q4_K_M.gguf",
+    "bytes": 2497280256,
+    "sha256": "7485fe6f11af29433bc51cab58009521f205840f5b4ae3a32fa7f92e8534fdf5"
+  },
+  {
+    "name": "cudart-llama-bin-win-cuda-12.4-x64.zip",
+    "bytes": 391443627,
+    "sha256": "8c79a9b226de4b3cacfd1f83d24f962d0773be79f1e7b75c6af4ded7e32ae1d6"
+  },
+  {
+    "name": "llama-b11120-bin-win-cpu-x64.zip",
+    "bytes": 18558140,
+    "sha256": "bbaf0584954c7ef53c2ccc5675f96b8849ac81ca181f540b862eefef1a09a402"
+  },
+  {
+    "name": "llama-b11120-bin-win-cuda-12.4-x64.zip",
+    "bytes": 253782409,
+    "sha256": "3a2fee9dbb1d8ddf2928ed8a4a664424108136762c79fe79ab4d5c70a7b7240d"
+  },
+  {
+    "name": "llama-b11120-bin-win-vulkan-x64.zip",
+    "bytes": 31971307,
+    "sha256": "626d6cf928f5e98ebcaf550231a0f86c83e7a364ebabbc6674e707f64f795515"
+  },
+  {
+    "name": "whisper-bin-x64.zip",
+    "bytes": 8194445,
+    "sha256": "49dcc16de826f20bd53d44f947a1ae49dfa81f86cad67a64d80820cb192d674a"
+  }
+]

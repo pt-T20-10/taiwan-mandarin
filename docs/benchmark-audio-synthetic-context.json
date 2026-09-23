@@ -1,0 +1,617 @@
+{
+  "kind": "Native Hanhan zh-TW TTS -> Whisper base; 40 synthetic clips, NOT human microphone or auditory review",
+  "offline_scope": "Loopback API and Windows installed voice; Windows network was not physically disconnected",
+  "asr_prompt": "traditional-context",
+  "complete": true,
+  "samples": [
+    {
+      "index": 1,
+      "text": "你好，我是越南人。你叫什麼名字？",
+      "tts_ms": 603,
+      "duration_seconds": 4.564,
+      "native_sample_rate": 22050,
+      "asr_ms": 1758,
+      "asr": {
+        "text": "你好,我是越男人,你叫什麼名字?",
+        "elapsed_ms": 1653,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 1,
+      "reference_characters": 13
+    },
+    {
+      "index": 2,
+      "text": "早安！今天你好嗎？",
+      "tts_ms": 602,
+      "duration_seconds": 3.231,
+      "native_sample_rate": 22050,
+      "asr_ms": 1661,
+      "asr": {
+        "text": "早安。今天你好嗎?",
+        "elapsed_ms": 1597,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 7
+    },
+    {
+      "index": 3,
+      "text": "我要一杯熱茶，謝謝。",
+      "tts_ms": 625,
+      "duration_seconds": 2.768,
+      "native_sample_rate": 22050,
+      "asr_ms": 1433,
+      "asr": {
+        "text": "我要一杯熱茶,謝謝。",
+        "elapsed_ms": 1352,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 8
+    },
+    {
+      "index": 4,
+      "text": "我不吃辣，可以不要辣嗎？",
+      "tts_ms": 519,
+      "duration_seconds": 3.105,
+      "native_sample_rate": 22050,
+      "asr_ms": 1984,
+      "asr": {
+        "text": "我不吃辣,可以不要辣嗎?",
+        "elapsed_ms": 1861,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 10
+    },
+    {
+      "index": 5,
+      "text": "請問，這個多少錢？",
+      "tts_ms": 632,
+      "duration_seconds": 2.625,
+      "native_sample_rate": 22050,
+      "asr_ms": 1647,
+      "asr": {
+        "text": "請問這個多少錢?",
+        "elapsed_ms": 1540,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 7
+    },
+    {
+      "index": 6,
+      "text": "我想買兩個蘋果。",
+      "tts_ms": 557,
+      "duration_seconds": 2.305,
+      "native_sample_rate": 22050,
+      "asr_ms": 1664,
+      "asr": {
+        "text": "我向買兩個蘋果。",
+        "elapsed_ms": 1551,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 1,
+      "reference_characters": 7
+    },
+    {
+      "index": 7,
+      "text": "請問，捷運站在哪裡？",
+      "tts_ms": 659,
+      "duration_seconds": 2.854,
+      "native_sample_rate": 22050,
+      "asr_ms": 1894,
+      "asr": {
+        "text": "請問 捷運站在哪裡?",
+        "elapsed_ms": 1784,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 8
+    },
+    {
+      "index": 8,
+      "text": "到臺北車站怎麼走？",
+      "tts_ms": 592,
+      "duration_seconds": 2.624,
+      "native_sample_rate": 22050,
+      "asr_ms": 1546,
+      "asr": {
+        "text": "到台北車站怎麼走?",
+        "elapsed_ms": 1471,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 1,
+      "reference_characters": 8
+    },
+    {
+      "index": 9,
+      "text": "我想坐公車去學校。",
+      "tts_ms": 560,
+      "duration_seconds": 2.728,
+      "native_sample_rate": 22050,
+      "asr_ms": 1766,
+      "asr": {
+        "text": "我想坐公車去學校。",
+        "elapsed_ms": 1645,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 8
+    },
+    {
+      "index": 10,
+      "text": "我家有四個人。",
+      "tts_ms": 534,
+      "duration_seconds": 2.165,
+      "native_sample_rate": 22050,
+      "asr_ms": 1657,
+      "asr": {
+        "text": "我家有四個人。",
+        "elapsed_ms": 1535,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 6
+    },
+    {
+      "index": 11,
+      "text": "我有一個妹妹。你呢？",
+      "tts_ms": 515,
+      "duration_seconds": 3.052,
+      "native_sample_rate": 22050,
+      "asr_ms": 1672,
+      "asr": {
+        "text": "我有一個妹妹。你呢?",
+        "elapsed_ms": 1619,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 8
+    },
+    {
+      "index": 12,
+      "text": "這個房間有冷氣嗎？",
+      "tts_ms": 573,
+      "duration_seconds": 2.499,
+      "native_sample_rate": 22050,
+      "asr_ms": 1667,
+      "asr": {
+        "text": "這個房間有冷氣嗎?",
+        "elapsed_ms": 1599,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 8
+    },
+    {
+      "index": 13,
+      "text": "一個月的房租多少錢？",
+      "tts_ms": 536,
+      "duration_seconds": 2.745,
+      "native_sample_rate": 22050,
+      "asr_ms": 1440,
+      "asr": {
+        "text": "一個月的房租多少錢?",
+        "elapsed_ms": 1395,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 9
+    },
+    {
+      "index": 14,
+      "text": "我明天下午有課。",
+      "tts_ms": 512,
+      "duration_seconds": 2.29,
+      "native_sample_rate": 22050,
+      "asr_ms": 1889,
+      "asr": {
+        "text": "我明天下午有課。",
+        "elapsed_ms": 1771,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 7
+    },
+    {
+      "index": 15,
+      "text": "你星期三有空嗎？",
+      "tts_ms": 740,
+      "duration_seconds": 2.366,
+      "native_sample_rate": 22050,
+      "asr_ms": 1548,
+      "asr": {
+        "text": "你星期三有空嗎?",
+        "elapsed_ms": 1504,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 7
+    },
+    {
+      "index": 16,
+      "text": "現在幾點？",
+      "tts_ms": 578,
+      "duration_seconds": 1.705,
+      "native_sample_rate": 22050,
+      "asr_ms": 1540,
+      "asr": {
+        "text": "現在幾點?",
+        "elapsed_ms": 1464,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 4
+    },
+    {
+      "index": 17,
+      "text": "請問，郵局在哪裡？",
+      "tts_ms": 634,
+      "duration_seconds": 2.554,
+      "native_sample_rate": 22050,
+      "asr_ms": 1770,
+      "asr": {
+        "text": "請問,有局在哪裡?",
+        "elapsed_ms": 1650,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 1,
+      "reference_characters": 7
+    },
+    {
+      "index": 18,
+      "text": "我聽不懂，請再說一次。",
+      "tts_ms": 550,
+      "duration_seconds": 3.014,
+      "native_sample_rate": 22050,
+      "asr_ms": 1651,
+      "asr": {
+        "text": "我聽不懂,請再說一次。",
+        "elapsed_ms": 1535,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 9
+    },
+    {
+      "index": 19,
+      "text": "這個詞是什麼意思？",
+      "tts_ms": 558,
+      "duration_seconds": 2.403,
+      "native_sample_rate": 22050,
+      "asr_ms": 1765,
+      "asr": {
+        "text": "這個詞是什麼意思?",
+        "elapsed_ms": 1734,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 8
+    },
+    {
+      "index": 20,
+      "text": "我會說一點中文。",
+      "tts_ms": 636,
+      "duration_seconds": 2.343,
+      "native_sample_rate": 22050,
+      "asr_ms": 1555,
+      "asr": {
+        "text": "我會說一點中文。",
+        "elapsed_ms": 1515,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 7
+    },
+    {
+      "index": 21,
+      "text": "我已經吃飯了。",
+      "tts_ms": 635,
+      "duration_seconds": 2.054,
+      "native_sample_rate": 22050,
+      "asr_ms": 1561,
+      "asr": {
+        "text": "我已經吃飯了。",
+        "elapsed_ms": 1519,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 6
+    },
+    {
+      "index": 22,
+      "text": "你週末喜歡做什麼？",
+      "tts_ms": 548,
+      "duration_seconds": 2.527,
+      "native_sample_rate": 22050,
+      "asr_ms": 1998,
+      "asr": {
+        "text": "你周末喜歡做什麼?",
+        "elapsed_ms": 1873,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 1,
+      "reference_characters": 8
+    },
+    {
+      "index": 23,
+      "text": "我想去圖書館借書。",
+      "tts_ms": 799,
+      "duration_seconds": 2.667,
+      "native_sample_rate": 22050,
+      "asr_ms": 1440,
+      "asr": {
+        "text": "我想去圖書管界書。",
+        "elapsed_ms": 1317,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 2,
+      "reference_characters": 8
+    },
+    {
+      "index": 24,
+      "text": "老師您好，我想跟您討論報告。",
+      "tts_ms": 510,
+      "duration_seconds": 3.764,
+      "native_sample_rate": 22050,
+      "asr_ms": 1200,
+      "asr": {
+        "text": "老師您好,我想跟您討論報告。",
+        "elapsed_ms": 1128,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 12
+    },
+    {
+      "index": 25,
+      "text": "明天下午三點方便嗎？",
+      "tts_ms": 446,
+      "duration_seconds": 2.848,
+      "native_sample_rate": 22050,
+      "asr_ms": 1327,
+      "asr": {
+        "text": "明天下午3點方便嗎?",
+        "elapsed_ms": 1299,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 1,
+      "reference_characters": 9
+    },
+    {
+      "index": 26,
+      "text": "請幫我修改這句：我是很忙。",
+      "tts_ms": 461,
+      "duration_seconds": 3.568,
+      "native_sample_rate": 22050,
+      "asr_ms": 1104,
+      "asr": {
+        "text": "請幫我修改這句,我是很忙。",
+        "elapsed_ms": 1091,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 11
+    },
+    {
+      "index": 27,
+      "text": "請幫我修改這句：我不有錢。",
+      "tts_ms": 430,
+      "duration_seconds": 3.505,
+      "native_sample_rate": 22050,
+      "asr_ms": 1268,
+      "asr": {
+        "text": "請幫我修改這句,我不有錢。",
+        "elapsed_ms": 1206,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 11
+    },
+    {
+      "index": 28,
+      "text": "我想喝珍珠奶茶，半糖少冰。",
+      "tts_ms": 464,
+      "duration_seconds": 3.694,
+      "native_sample_rate": 22050,
+      "asr_ms": 1331,
+      "asr": {
+        "text": "我想喝珍珠奶茶半糖少冰。",
+        "elapsed_ms": 1219,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 11
+    },
+    {
+      "index": 29,
+      "text": "我想練習用繁體中文寫電子郵件。",
+      "tts_ms": 461,
+      "duration_seconds": 4.003,
+      "native_sample_rate": 22050,
+      "asr_ms": 2017,
+      "asr": {
+        "text": "我想練習用繁體中文寫電子郵件。",
+        "elapsed_ms": 1937,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 14
+    },
+    {
+      "index": 30,
+      "text": "謝謝你，明天見！",
+      "tts_ms": 697,
+      "duration_seconds": 2.424,
+      "native_sample_rate": 22050,
+      "asr_ms": 1329,
+      "asr": {
+        "text": "謝謝你,明天見。",
+        "elapsed_ms": 1297,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 6
+    },
+    {
+      "index": 31,
+      "text": "銀行在學校旁邊。",
+      "tts_ms": 690,
+      "duration_seconds": 2.539,
+      "native_sample_rate": 22050,
+      "asr_ms": 1320,
+      "asr": {
+        "text": "銀行在學校旁邊。",
+        "elapsed_ms": 1268,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 7
+    },
+    {
+      "index": 32,
+      "text": "我喜歡聽音樂，也喜歡旅行。",
+      "tts_ms": 482,
+      "duration_seconds": 3.54,
+      "native_sample_rate": 22050,
+      "asr_ms": 1219,
+      "asr": {
+        "text": "我喜歡聽音樂,也喜歡旅行。",
+        "elapsed_ms": 1162,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 11
+    },
+    {
+      "index": 33,
+      "text": "這個孩子長大了。",
+      "tts_ms": 463,
+      "duration_seconds": 2.185,
+      "native_sample_rate": 22050,
+      "asr_ms": 1203,
+      "asr": {
+        "text": "這個孩子長大了。",
+        "elapsed_ms": 1093,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 7
+    },
+    {
+      "index": 34,
+      "text": "請重新說一次今天的重點。",
+      "tts_ms": 429,
+      "duration_seconds": 3.286,
+      "native_sample_rate": 22050,
+      "asr_ms": 1206,
+      "asr": {
+        "text": "請重新說以次今天的重點。",
+        "elapsed_ms": 1149,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 1,
+      "reference_characters": 11
+    },
+    {
+      "index": 35,
+      "text": "這條路的長度大約是兩公里。",
+      "tts_ms": 445,
+      "duration_seconds": 3.346,
+      "native_sample_rate": 22050,
+      "asr_ms": 1209,
+      "asr": {
+        "text": "這條路的長度大約是兩公里。",
+        "elapsed_ms": 1098,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 12
+    },
+    {
+      "index": 36,
+      "text": "他跑得很快，可是今天沒有跑步。",
+      "tts_ms": 433,
+      "duration_seconds": 3.983,
+      "native_sample_rate": 22050,
+      "asr_ms": 1107,
+      "asr": {
+        "text": "他跑得很快,可是今天沒有跑步。",
+        "elapsed_ms": 1024,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 13
+    },
+    {
+      "index": 37,
+      "text": "我買了三本書和兩杯茶。",
+      "tts_ms": 420,
+      "duration_seconds": 3.055,
+      "native_sample_rate": 22050,
+      "asr_ms": 1212,
+      "asr": {
+        "text": "我買了三本書和兩杯茶。",
+        "elapsed_ms": 1104,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 0,
+      "reference_characters": 10
+    },
+    {
+      "index": 38,
+      "text": "星期三下午三點半在捷運站見。",
+      "tts_ms": 432,
+      "duration_seconds": 4.023,
+      "native_sample_rate": 22050,
+      "asr_ms": 1224,
+      "asr": {
+        "text": "星期三下午三點半在捷運戰艦。",
+        "elapsed_ms": 1148,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 2,
+      "reference_characters": 13
+    },
+    {
+      "index": 39,
+      "text": "這杯珍珠奶茶要半糖少冰。",
+      "tts_ms": 416,
+      "duration_seconds": 3.359,
+      "native_sample_rate": 22050,
+      "asr_ms": 1216,
+      "asr": {
+        "text": "這杯珍珠奶茶藥半糖少冰。",
+        "elapsed_ms": 1129,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 1,
+      "reference_characters": 11
+    },
+    {
+      "index": 40,
+      "text": "今天九月二十三日，我想去郵局寄信。",
+      "tts_ms": 428,
+      "duration_seconds": 4.488,
+      "native_sample_rate": 22050,
+      "asr_ms": 1221,
+      "asr": {
+        "text": "今天9月23日,我想去郵局記性。",
+        "elapsed_ms": 1106,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "character_edits": 6,
+      "reference_characters": 15
+    }
+  ],
+  "voices": [
+    "Microsoft Hanhan Desktop"
+  ],
+  "summary": {
+    "tts_median_ms": 542.0,
+    "asr_median_ms": 1543.0,
+    "raw_character_error_rate": 0.049723756906077346,
+    "quality": "Traditional/Simplified/numeral differences count as errors; no pronunciation rating; no subjective listening performed"
+  }
+}

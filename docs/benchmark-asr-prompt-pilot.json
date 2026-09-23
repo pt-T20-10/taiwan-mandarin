@@ -1,0 +1,88 @@
+{
+  "kind": "Exploratory ten-clip synthetic pilot, selected after baseline; not held-out human validation",
+  "prompt": "以下是臺灣華語的繁體中文逐字稿。",
+  "samples": [
+    {
+      "index": 1,
+      "text": "你好，我是越南人。你叫什麼名字？",
+      "baseline": "你好,我是越男人,你叫什么名字?",
+      "candidate": "你好,我是越男人,你叫什麼名字?",
+      "baseline_edits": 2,
+      "candidate_edits": 1
+    },
+    {
+      "index": 2,
+      "text": "早安！今天你好嗎？",
+      "baseline": "早安 今天你好吗",
+      "candidate": "早安。今天你好嗎?",
+      "baseline_edits": 1,
+      "candidate_edits": 0
+    },
+    {
+      "index": 6,
+      "text": "我想買兩個蘋果。",
+      "baseline": "我向買兩個蘋果",
+      "candidate": "我向買兩個蘋果。",
+      "baseline_edits": 1,
+      "candidate_edits": 1
+    },
+    {
+      "index": 11,
+      "text": "我有一個妹妹。你呢？",
+      "baseline": "我有一个妹妹 你呢",
+      "candidate": "我有一個妹妹。你呢?",
+      "baseline_edits": 1,
+      "candidate_edits": 0
+    },
+    {
+      "index": 17,
+      "text": "請問，郵局在哪裡？",
+      "baseline": "請問,有局在哪裡?",
+      "candidate": "請問,有局在哪裡?",
+      "baseline_edits": 1,
+      "candidate_edits": 1
+    },
+    {
+      "index": 22,
+      "text": "你週末喜歡做什麼？",
+      "baseline": "你周末喜欢做什么?",
+      "candidate": "你周末喜歡做什麼?",
+      "baseline_edits": 3,
+      "candidate_edits": 1
+    },
+    {
+      "index": 23,
+      "text": "我想去圖書館借書。",
+      "baseline": "我想去圖書管界書。",
+      "candidate": "我想去圖書管界書。",
+      "baseline_edits": 2,
+      "candidate_edits": 2
+    },
+    {
+      "index": 34,
+      "text": "請重新說一次今天的重點。",
+      "baseline": "請重新說以次今天的重點。",
+      "candidate": "請重新說以次今天的重點。",
+      "baseline_edits": 1,
+      "candidate_edits": 1
+    },
+    {
+      "index": 38,
+      "text": "星期三下午三點半在捷運站見。",
+      "baseline": "星期三下午三點半在捷運戰艦。",
+      "candidate": "星期三下午三點半在捷運戰艦。",
+      "baseline_edits": 2,
+      "candidate_edits": 2
+    },
+    {
+      "index": 40,
+      "text": "今天九月二十三日，我想去郵局寄信。",
+      "baseline": "今天9月23日,我想去郵局記性。",
+      "candidate": "今天9月23日,我想去郵局記性。",
+      "baseline_edits": 6,
+      "candidate_edits": 6
+    }
+  ],
+  "baseline_total_edits": 20,
+  "candidate_total_edits": 15
+}

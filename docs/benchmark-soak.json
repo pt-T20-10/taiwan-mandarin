@@ -1,0 +1,455 @@
+{
+  "kind": "15 minute scripted text-only soak; no hardware mic/TTS assessment",
+  "complete": true,
+  "elapsed_seconds": 900.0,
+  "samples": [
+    {
+      "seconds": 7.2,
+      "latency_ms": 6937,
+      "status": 200,
+      "llama_rss_bytes": 2936250368,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好呀！可以跟我練習嗎？",
+        "pinyin": "Hǎo ya! Kěyǐ gēn wǒ liànxí ma?",
+        "vi": "Okay! Có thể tập luyện với tôi không?",
+        "feedback": "",
+        "elapsed_ms": 3387,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 39.8,
+      "latency_ms": 2570,
+      "status": 200,
+      "llama_rss_bytes": 2941911040,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好的，熱茶不加糖。",
+        "pinyin": "Hǎo de, rè chá bù jiā táng.",
+        "vi": "Được, trà nóng không thêm đường.",
+        "feedback": "",
+        "elapsed_ms": 1861,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 72.3,
+      "latency_ms": 2502,
+      "status": 200,
+      "llama_rss_bytes": 2942013440,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "大概十五元。",
+        "pinyin": "Dàgài shíwǔ yuán.",
+        "vi": "Khoảng 15 đồng.",
+        "feedback": "",
+        "elapsed_ms": 1670,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 104.7,
+      "latency_ms": 2418,
+      "status": 200,
+      "llama_rss_bytes": 2943426560,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "了解，不加辣。",
+        "pinyin": "Liǎojiě, bù jiālà.",
+        "vi": "Tôi hiểu, không thêm cay.",
+        "feedback": "",
+        "elapsed_ms": 1731,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 137.2,
+      "latency_ms": 2532,
+      "status": 200,
+      "llama_rss_bytes": 2940362752,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "不客氣！明天見！",
+        "pinyin": "Bù kèqù! Mingtiān jiàn!",
+        "vi": "Không cần hỏi! Chào mai！",
+        "feedback": "",
+        "elapsed_ms": 1760,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 180.0,
+      "latency_ms": 12799,
+      "status": 200,
+      "llama_rss_bytes": 2955292672,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好啊！來，我教你怎麼點餐。",
+        "pinyin": "Hǎo ā! lái, wǒ jiāo nǐ zěnme diǎn cān.",
+        "vi": "Tốt rồi! Hãy, tôi sẽ dạy bạn cách điểm餐.",
+        "feedback": "",
+        "elapsed_ms": 11869,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 212.7,
+      "latency_ms": 2701,
+      "status": 200,
+      "llama_rss_bytes": 2960920576,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好的，要熱茶，不加糖。",
+        "pinyin": "Hǎo de, yào rè chá, bù jiā táng.",
+        "vi": "Được, muốn trà nóng, không thêm đường.",
+        "feedback": "",
+        "elapsed_ms": 1964,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 245.7,
+      "latency_ms": 2951,
+      "status": 200,
+      "llama_rss_bytes": 2961342464,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "大概十五到二十新台幣。",
+        "pinyin": "Dàgù shíwǔ dào èrshí xīntàibiàn.",
+        "vi": "Khoảng 15 đến 20 Đài币.",
+        "feedback": "",
+        "elapsed_ms": 2027,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 278.4,
+      "latency_ms": 2744,
+      "status": 200,
+      "llama_rss_bytes": 2961436672,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "明白了，不加辣。",
+        "pinyin": "Míng白了，bù jiālà.",
+        "vi": "Tôi hiểu rồi, không thêm cay.",
+        "feedback": "",
+        "elapsed_ms": 1860,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 311.1,
+      "latency_ms": 2684,
+      "status": 200,
+      "llama_rss_bytes": 2961936384,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "不客氣！明天見！",
+        "pinyin": "Bù kèqì! Mingtiān jiàn!",
+        "vi": "Không ngại! Chào mai！",
+        "feedback": "",
+        "elapsed_ms": 1767,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 343.6,
+      "latency_ms": 2511,
+      "status": 200,
+      "llama_rss_bytes": 2962014208,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好啊！要點什麼菜？",
+        "pinyin": "Hǎo ā! Yào diǎn shénme cài?",
+        "vi": "Okay! Bạn muốn điểm món gì?",
+        "feedback": "",
+        "elapsed_ms": 1649,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 376.3,
+      "latency_ms": 2684,
+      "status": 200,
+      "llama_rss_bytes": 2962169856,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好的，熱茶不加糖。",
+        "pinyin": "Hǎo de, rè chá bù jiā táng.",
+        "vi": "Được, trà nóng không thêm đường.",
+        "feedback": "",
+        "elapsed_ms": 1862,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 408.8,
+      "latency_ms": 2496,
+      "status": 200,
+      "llama_rss_bytes": 2962165760,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "大概十五塊左右。",
+        "pinyin": "Dàgài shíwǔ kuài yuèliǎo.",
+        "vi": "Khoảng 15 đồng.",
+        "feedback": "",
+        "elapsed_ms": 1846,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 442.2,
+      "latency_ms": 3425,
+      "status": 200,
+      "llama_rss_bytes": 2962182144,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "明白了，不加辣。",
+        "pinyin": "Míngbái le, bù jiālà.",
+        "vi": "Tôi hiểu rồi, không thêm cay.",
+        "feedback": "",
+        "elapsed_ms": 1868,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 474.7,
+      "latency_ms": 2500,
+      "status": 200,
+      "llama_rss_bytes": 2962178048,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "不客氣！明天見！",
+        "pinyin": "Bù kèqù! Mingtiān jiàn!",
+        "vi": "Không ngại! Chào mai!",
+        "feedback": "",
+        "elapsed_ms": 1786,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 507.9,
+      "latency_ms": 3150,
+      "status": 200,
+      "llama_rss_bytes": 2962182144,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好啊！要不要我教你一些點餐用語？",
+        "pinyin": "Hǎo ā! Yào bù yào wǒ jiāo nǐ yī xiē diǎn cān yòng yǔ?",
+        "vi": "Tốt rồi! Bạn có muốn tôi dạy bạn một số từ ngữ dùng để điểm餐 không?",
+        "feedback": "",
+        "elapsed_ms": 2413,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 540.6,
+      "latency_ms": 2668,
+      "status": 200,
+      "llama_rss_bytes": 2962182144,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好的，熱茶不加糖可以。",
+        "pinyin": "Hǎo de, rè chá bù jiā táng kě yǐ.",
+        "vi": "Được, trà nóng không thêm đường.",
+        "feedback": "",
+        "elapsed_ms": 2022,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 573.3,
+      "latency_ms": 2734,
+      "status": 200,
+      "llama_rss_bytes": 2962194432,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "大概二十新台幣左右。",
+        "pinyin": "Dàgài èrshí xīntàibiàn yuèxiǎo.",
+        "vi": "Khoảng hai mươi đồng台湾币.",
+        "feedback": "",
+        "elapsed_ms": 2042,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 605.9,
+      "latency_ms": 2615,
+      "status": 200,
+      "llama_rss_bytes": 2962255872,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "了解，不加辣。",
+        "pinyin": "Liǎngjiě, bù jiālà.",
+        "vi": "Tôi hiểu, không thêm cay.",
+        "feedback": "",
+        "elapsed_ms": 1814,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 638.3,
+      "latency_ms": 2357,
+      "status": 200,
+      "llama_rss_bytes": 2962280448,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "不客氣！明天見！",
+        "pinyin": "Bù kèqù! Mingtiān jiàn!",
+        "vi": "Không ngại! Chào mai!",
+        "feedback": "",
+        "elapsed_ms": 1664,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 670.8,
+      "latency_ms": 2503,
+      "status": 200,
+      "llama_rss_bytes": 2962264064,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好啊！要點什麼菜？",
+        "pinyin": "Hǎo ā! Yào diǎn shénme cài?",
+        "vi": "Tốt rồi! Bạn muốn điểm món gì?",
+        "feedback": "",
+        "elapsed_ms": 1765,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 703.8,
+      "latency_ms": 3049,
+      "status": 200,
+      "llama_rss_bytes": 2962235392,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好的，要喝熱茶，不加糖。",
+        "pinyin": "Hǎo de, yào hē rè chá, bù jiā táng.",
+        "vi": "Được, muốn uống trà nóng, không thêm đường.",
+        "feedback": "",
+        "elapsed_ms": 2304,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 736.3,
+      "latency_ms": 2436,
+      "status": 200,
+      "llama_rss_bytes": 2962231296,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "熱茶大概十五元。",
+        "pinyin": "Rè chá dàgù shíwǔ yuán.",
+        "vi": "Nước trà nóng khoảng 15 nhân.",
+        "feedback": "",
+        "elapsed_ms": 1747,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 768.7,
+      "latency_ms": 2475,
+      "status": 200,
+      "llama_rss_bytes": 2962685952,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "了解，不加辣。",
+        "pinyin": "Liǎojiě, bù jiālà.",
+        "vi": "Tôi hiểu, không thêm cay.",
+        "feedback": "",
+        "elapsed_ms": 1741,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 802.0,
+      "latency_ms": 3279,
+      "status": 200,
+      "llama_rss_bytes": 2938740736,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "不客氣！明天見！",
+        "pinyin": "Bù kèqù! Mingtiān jiàn!",
+        "vi": "Không客气！Chào mai！",
+        "feedback": "",
+        "elapsed_ms": 2002,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 834.4,
+      "latency_ms": 2418,
+      "status": 200,
+      "llama_rss_bytes": 2938740736,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好啊！要點什麼菜？",
+        "pinyin": "Hǎo ā! Yào diǎn shénme cài?",
+        "vi": "Tốt vậy! Bạn muốn điểm món gì?",
+        "feedback": "",
+        "elapsed_ms": 1707,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 866.9,
+      "latency_ms": 2436,
+      "status": 200,
+      "llama_rss_bytes": 2938740736,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "好的，熱茶不加糖。",
+        "pinyin": "Hǎo de, rè chá bù jiā táng.",
+        "vi": "Được, trà nóng không thêm đường.",
+        "feedback": "",
+        "elapsed_ms": 1755,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    },
+    {
+      "seconds": 899.4,
+      "latency_ms": 2521,
+      "status": 200,
+      "llama_rss_bytes": 2938748928,
+      "whole_gpu_used_MiB": "3155",
+      "response": {
+        "hanzi": "大概二十新台幣。",
+        "pinyin": "Dàgài èrshí xīntàibiàn.",
+        "vi": "Khoảng 20 đồng mới.",
+        "feedback": "",
+        "elapsed_ms": 1777,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn."
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "taiwan-mandarin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run src",
+    "test:e2e": "playwright test",
+    "content:check": ".venv\\Scripts\\python.exe -m backend.content",
+    "server": ".venv\\Scripts\\python.exe -m backend.launcher --no-browser"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "ts-fsrs": "5.4.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.0",
+    "vitest": "5.0.1"
+  }
+}
