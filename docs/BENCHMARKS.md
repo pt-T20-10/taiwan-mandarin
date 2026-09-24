@@ -29,6 +29,8 @@ File thô: benchmark-chat.json (1.7B), benchmark-runtime-comparison.json (prompt
 
 ## ASR và TTS
 
+**Phản hồi người dùng 24/09/2026:** đã ngắt Internet, đổi câu mới và nghe được; ghi âm/nghe lại được. Nhận dạng sai, transcript lặp một phần câu ngữ cảnh của Whisper; người dùng còn báo giọng đọc rời. Đây là bằng chứng thực tế khiến cấu hình --prompt bên dưới bị rút lại, dù số đo trên âm tổng hợp tốt hơn. Chưa có file micro thật để chạy lại cùng đầu vào.
+
 - Whisper.cpp v1.9.2 + base đa ngôn ngữ, CPU. SHA trong docs/MODELS.json và models/installed.json.
 - File im lặng tổng hợp 5 giây PCM16/16kHz/mono ban đầu bị nhận dạng thành một câu không có thật, inference 4.649 s. File thô benchmark-asr-silence.json.
 - Đã thêm cổng RMS cho im lặng/âm quá nhỏ; chạy lại trả transcript rỗng với thông báo, không gọi model. File benchmark-asr-silence-after-fix.json và regression test backend. Đây không phải benchmark 40 mẫu tiếng nói, không phải chấm phát âm.
@@ -36,6 +38,7 @@ File thô: benchmark-chat.json (1.7B), benchmark-runtime-comparison.json (prompt
 - Đã chạy 40 câu bằng Hanhan Desktop → WAV → PCM16 mono/16kHz → Whisper thật. Không giữ WAV sau thử. Bản trước thêm ngữ cảnh: TTS median 420.5 ms, ASR median 1088.5 ms; lỗi ký tự thô 6.63%. Bản có ngữ cảnh Phồn thể: TTS median 542 ms, ASR median 1543 ms, lỗi ký tự thô 4.97%. Lượt sau chạy cùng lúc Edge E2E nên không quy mọi chênh lệch tốc độ cho prompt. File benchmark-audio-synthetic.json và benchmark-audio-synthetic-context.json.
 - Đây là **âm thanh tổng hợp**, không phải 40 mẫu micro của người học hoặc 30 câu được nghe duyệt. Thời gian TTS tới khi WAV hoàn tất, không phải lúc loa bắt đầu phát. Lỗi ký tự tính cả khác biệt Giản/Phồn và chữ số; chưa chuẩn hóa các trường hợp ngôn ngữ tương đương. Có lỗi thật như 郵局 → 有局, 圖書館借書 → 圖書管界書, 捷運站見 → 捷運戰艦.
 - Pilot 10 câu thêm ngữ cảnh Phồn thể giảm lỗi từ 20 xuống 15 ký tự; chọn mẫu sau khi xem baseline, không gọi là tập kiểm định độc lập. Không đưa đáp án vào prompt, không chuyển Giản thể hàng loạt sau ASR. Có bản so sánh đầy đủ 40 câu sau pilot.
+- Các số đo có ngữ cảnh hiện chỉ là lịch sử thử nghiệm. Bản sửa bỏ prompt hoàn toàn, cho phép chọn giọng/nhịp đọc và có 11 ca nghe biến điệu; không tuyên bố việc đổi tốc độ làm giọng tự nhiên hoặc sửa mọi lỗi nhận dạng.
 - Browser E2E ghi âm dùng thiết bị giả của Edge và ASR/LLM fixture gắn TEST chỉ trong test. Đã kiểm tra ghi → dừng → nhận dạng → sửa transcript → gửi → lưu; không gọi đó là kiểm thử micro/loa thật.
 
 ## Offline và hiệu năng học
@@ -52,4 +55,19 @@ Thử hủy trong lúc model đang nạp: API hủy trả trong 0.013 s, lượt
 
 ## Dung lượng
 
-Trước dọn cache: models ~5.587 GB (gồm Q8 nguồn và ứng viên 1.7B), runtime ~2.030 GB (gồm ZIP tải và thử Vulkan), tổng thư mục được ứng dụng quản lý ~7.62 GB, dưới 10 GB. Phân bổ thực tế khác bảng dự kiến trong PLAN do giữ tài sản thử nghiệm; không giấu chúng khỏi tổng. node_modules/.venv là công cụ phát triển, không tính vào phép cộng trên theo PLAN. Không lưu lâu bản ghi micro.
+### Cập nhật ASR ngày 24/09
+
+Đã so sánh Whisper base và small đa ngôn ngữ trên cùng 12 WAV tổng hợp Hanhan, không dùng prompt. Đây là tập thăm dò có các ca lỗi đã biết, không phải kiểm định giọng người học.
+
+| Model | Median toàn tiến trình | Peak RSS lấy mẫu | Lỗi ký tự thô |
+|---|---:|---:|---:|
+| base | 995 ms | 301.2 MiB | 15.32% |
+| small | 3063 ms | 766.1 MiB | 18.55% |
+
+Không giấu việc CER thô tăng: small trả Giản thể thường hơn, và chỉ số này tính cả Giản/Phồn, 台/臺, chữ số 3/三. Đọc thủ công output cho thấy small sửa các lỗi từ thật 越男人 → 越南人, 圖書管界書 → 圖書館借書, 有局 → 郵局, 捷運戰艦 → 捷運站見, 想再加休息 → 想在家休息. Chọn small cho lần thử micro tiếp theo vì các lỗi nội dung này, chấp nhận chậm hơn và giữ cảnh báo Giản thể; có base để người dùng đổi lại. Chưa tuyên bố small tốt hơn trên mọi người nói.
+
+File thô: benchmark-asr-models.json. Model official ggml-small.bin 487601967 bytes, SHA-256 trong MODELS.json. Tổng thư mục quản lý sau tải ~8.107 GB, dưới 10 GB.
+
+Kiểm tra API đang chọn small: benchmark-audio-small-regression.json ghi 11 WAV mới, chọn rate -2 hoạt động, im lặng trả rỗng. Câu tổng hợp “我是越南人，我是留學生。” trả đúng chữ trong ~3.034 s inference. Đây không phải bản ghi micro người dùng; chưa đánh giá bằng nghe biến điệu hay độ tự nhiên.
+
+Trước khi thêm Whisper small: models ~5.587 GB, runtime ~2.030 GB, tổng ~7.62 GB. Sau thêm small tổng ~8.107 GB. Có cả Q8 nguồn, ứng viên 1.7B, ZIP tải và Vulkan thử; không giấu tài sản này khỏi tổng. node_modules/.venv là công cụ phát triển, không tính vào phép cộng trên theo PLAN. Không lưu lâu bản ghi micro.

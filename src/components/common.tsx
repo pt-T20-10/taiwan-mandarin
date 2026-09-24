@@ -4,17 +4,17 @@ import {encodeWav,recognition,speech} from '../adapters/local';
 import {useApp} from '../context';
 
 export function LayerText({item,layers,newWord,force=false}:{item:TextItem;layers:Layers;newWord?:boolean;force?:boolean}){
-  const {state}=useApp();
+  const {state,notify}=useApp();
   const isNew=newWord??!Object.values(state.objects.cards).some(c=>!c.deleted&&c.data.word.hanzi===item.hanzi&&c.data.schedule.reps>0);
   const [revealed,setRevealed]=useState<Record<string,boolean>>({});
   useEffect(()=>setRevealed({}),[item.hanzi]);
   return <div className="layers">{(['hanzi','pinyin','vi'] as const).map(key=>{
     const mode=force?'show':layers[key];if(mode==='hide'||(mode==='new'&&!isNew)||!item[key])return null;
     const visible=mode==='show'||mode==='new'||revealed[key];
-    return visible?<div key={key} className={key} lang={key==='hanzi'?'zh-TW':undefined}>{item[key]}</div>:<button className="reveal" key={key} onClick={()=>setRevealed({...revealed,[key]:true})}>Hiện {key==='hanzi'?'Hán tự':key==='pinyin'?'Pinyin':'nghĩa Việt'}</button>;
+    return visible?<div key={key} className={key+' text-with-audio'} lang={key==='hanzi'?'zh-TW':undefined}><span>{item[key]}</span>{key!=='vi'&&item.hanzi&&<Speak text={item.hanzi} label={'Nghe '+(key==='hanzi'?'Hán tự':'Pinyin')} onError={notify}/>}</div>:<button className="reveal" key={key} onClick={()=>setRevealed({...revealed,[key]:true})}>Hiện {key==='hanzi'?'Hán tự':key==='pinyin'?'Pinyin':'nghĩa Việt'}</button>;
   })}</div>;
 }
-export function Speak({text,onError}:{text:string;onError:(s:string)=>void}){return <button className="icon-button" title="Đọc bằng giọng Đài Loan local" onClick={()=>speech.speak(text).catch(e=>onError(e.message))}>◖)) <span>Nghe</span></button>;}
+export function Speak({text,onError,label}:{text:string;onError:(s:string)=>void;label?:string}){return <button type="button" className="icon-button" aria-label={label} title="Nghe cả từ/cụm/câu bằng giọng Đài Loan local" onClick={()=>speech.speak(text).catch(e=>onError(e.message))}>◖)) <span>Nghe</span></button>;}
 export function Scratchpad(){
   const canvas=useRef<HTMLCanvasElement>(null),down=useRef(false),last=useRef([0,0]);
   function point(e:React.PointerEvent){const r=e.currentTarget.getBoundingClientRect();return[(e.clientX-r.left)*300/r.width,(e.clientY-r.top)*300/r.height];}

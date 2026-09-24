@@ -11,17 +11,26 @@ export const recognition:SpeechRecognition={async transcribe(wav,signal){const r
 let audio:HTMLAudioElement|null=null;let audioUrl:string|null=null;let generation=0;
 let finishSpeech:(()=>void)|null=null;
 let pendingAudio:AbortController|null=null;
+export type SpeechPreferences={voice:string;pace:'slow'|'normal'|'brisk'};
+let preferences:SpeechPreferences={voice:'auto',pace:'normal'};
+export function configureSpeech(value?:Partial<SpeechPreferences>){
+  preferences={voice:typeof value?.voice==='string'?value.voice:'auto',pace:['slow','normal','brisk'].includes(value?.pace||'')?value!.pace!:'normal'};
+}
 export const speech:SpeechSynthesis={
   stop(){generation++;finishSpeech?.();finishSpeech=null;pendingAudio?.abort();pendingAudio=null;window.speechSynthesis?.cancel();if(audio){audio.pause();audio=null;}if(audioUrl){URL.revokeObjectURL(audioUrl);audioUrl=null;}},
   async speak(text){speech.stop();const ticket=generation;
-    const voice=window.speechSynthesis?.getVoices().find(v=>v.lang.toLowerCase()==='zh-tw'&&v.localService);
-    if(voice){await new Promise<void>((resolve,reject)=>{const utterance=new SpeechSynthesisUtterance(text);utterance.voice=voice;utterance.lang='zh-TW';utterance.rate=.85;
+    const choices=window.speechSynthesis?.getVoices().filter(v=>v.lang.toLowerCase()==='zh-tw'&&v.localService)||[];
+    const voice=preferences.voice==='auto'?choices[0]:choices.find(v=>'browser:'+v.voiceURI===preferences.voice);
+    if(preferences.voice.startsWith('browser:')&&!voice)throw new Error('Giọng zh-TW đã chọn không có trong trình duyệt này. Hãy chọn lại trong Cài đặt.');
+    // Always send the complete Hanzi phrase; never read romanized Pinyin or
+    // synthesize one character at a time. Prosody remains the voice's responsibility.
+    if(voice){await new Promise<void>((resolve,reject)=>{const utterance=new SpeechSynthesisUtterance(text);utterance.voice=voice;utterance.lang='zh-TW';utterance.rate=({slow:.85,normal:1,brisk:1.1})[preferences.pace];
       const finish=()=>{if(ticket===generation)finishSpeech=null;resolve();};finishSpeech=finish;
       utterance.onend=finish;utterance.onerror=e=>{if(ticket!==generation){resolve();return;}finishSpeech=null;reject(new Error('Giọng zh-TW không đọc được: '+e.error+'. Hãy kiểm tra thiết bị và giọng Windows.'));};
       window.speechSynthesis.speak(utterance);});return;}
     const controller=new AbortController();pendingAudio=controller;
     let r:Response;
-    try{r=await fetch('/api/ai/tts',{method:'POST',headers:{'Content-Type':'application/json','X-Mandarin-Client':'local-ui'},body:JSON.stringify({text}),signal:controller.signal});}
+    try{r=await fetch('/api/ai/tts',{method:'POST',headers:{'Content-Type':'application/json','X-Mandarin-Client':'local-ui'},body:JSON.stringify({text,voice:preferences.voice.startsWith('native:')?preferences.voice.slice(7):undefined,rate:({slow:-2,normal:0,brisk:1})[preferences.pace]}),signal:controller.signal});}
     catch(error){if(controller.signal.aborted)return;throw error;}
     finally{if(pendingAudio===controller)pendingAudio=null;}
     if(ticket!==generation)return;

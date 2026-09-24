@@ -1,17 +1,29 @@
 import {afterEach,describe,expect,it,vi} from 'vitest';
-import {speech} from './local';
+import {speech,configureSpeech} from './local';
 
 class Utterance {
   voice:unknown;lang='';rate=1;
   onend=()=>{};onerror=(_event:{error:string})=>{};
   constructor(public text:string){}
 }
-afterEach(()=>{speech.stop();vi.unstubAllGlobals();});
+afterEach(()=>{speech.stop();configureSpeech();vi.unstubAllGlobals();});
 describe('TTS local và hủy phát',()=>{
   function setup(voices:unknown[]){
     const synth={getVoices:()=>voices,speak:vi.fn(),cancel:vi.fn()};
     vi.stubGlobal('window',{speechSynthesis:synth});vi.stubGlobal('SpeechSynthesisUtterance',Utterance);return synth;
   }
+  it('gửi nguyên câu, dùng giọng đã chọn và tốc độ thường mặc định',async()=>{
+    const first={voiceURI:'hanhan',lang:'zh-TW',localService:true},second={voiceURI:'yating',lang:'zh-TW',localService:true};
+    const synth=setup([first,second]);configureSpeech({voice:'browser:yating',pace:'normal'});
+    const pending=speech.speak('我是越南人，我是留學生。');
+    expect(synth.speak).toHaveBeenCalledTimes(1);const utterance=synth.speak.mock.calls[0][0] as Utterance;
+    expect(utterance.text).toBe('我是越南人，我是留學生。');expect(utterance.voice).toBe(second);expect(utterance.rate).toBe(1);
+    utterance.onend();await pending;
+  });
+  it('không âm thầm đổi sang giọng khác khi giọng đã chọn không còn',async()=>{
+    setup([{voiceURI:'other',lang:'zh-TW',localService:true}]);configureSpeech({voice:'browser:missing'});
+    await expect(speech.speak('你好')).rejects.toThrow('chọn lại');
+  });
   it('chọn đúng zh-TW local và báo lỗi phát từ trình duyệt',async()=>{
     const local={name:'Hanhan',lang:'zh-TW',localService:true};
     const synth=setup([{lang:'zh-CN',localService:true},{lang:'zh-TW',localService:false},local]);

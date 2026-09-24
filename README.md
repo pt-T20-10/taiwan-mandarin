@@ -1,6 +1,6 @@
 # Đảo nhỏ — Hoa ngữ Đài Loan
 
-Ứng dụng học local cho Windows, UI tiếng Việt. **Bản đang phát triển, chưa đạt nghiệm thu Windows v1.** Đã có gói 12 đơn vị/48 bài, 240 từ và 12 chữ luyện nét chọn lọc; phần lớn nội dung còn là bản nháp. Máy hiện có giọng Windows zh-TW Hanhan và đã chạy TTS → Whisper bằng âm thanh tổng hợp; người dùng chưa thử micro/loa offline.
+Ứng dụng học local cho Windows, UI tiếng Việt. **Bản đang phát triển, chưa đạt nghiệm thu Windows v1.** Đã có gói 12 đơn vị/48 bài, 240 từ và 12 chữ luyện nét chọn lọc; phần lớn nội dung còn là bản nháp. Người dùng đã xác nhận nghe câu mới, ghi âm và nghe lại offline được; ASR còn sai và giọng đọc chưa tự nhiên.
 
 ## Dùng hằng ngày
 
@@ -41,6 +41,8 @@ Trong Cài đặt có màn hình ghi âm/nghe lại/nhận dạng, danh sách vo
 
 Chữ/flashcard/ghi chú dùng offline. Bài nghe cần zh-TW local; thiếu có thể bỏ qua, không tính đạt kỹ năng. ASR không phải chấm thanh điệu. AI sinh Pinyin/dịch có thể sai và không tham gia chấm bài đóng.
 
-Model đang chọn: Qwen3-4B Q4_K_M trên CUDA 12.4; Whisper base đa ngôn ngữ trên CPU. Có thể chuyển LLM sang CPU trong Cài đặt. Tài sản ứng dụng khoảng 7,62 GB/10 GB, gồm cả model/runtime thử nghiệm. Số đo và giới hạn chất lượng ở [BENCHMARKS](docs/BENCHMARKS.md).
+Nút nghe cạnh Hán tự hoặc Pinyin đọc nguyên từ/cụm/câu. Chọn giọng và nhịp trong Cài đặt hoặc mục **Phát âm**. Mục Phát âm có bài đối chiếu biến điệu, thanh nhẹ và nhịp câu; âm TTS chưa được chứng nhận phát âm chuẩn. Đã bỏ câu gợi dẫn ASR gây lặp transcript; cần thu lại câu để kiểm tra trên micro thật sau khi cập nhật.
+
+Model đang chọn: Qwen3-4B Q4_K_M trên CUDA 12.4; Whisper small đa ngôn ngữ trên CPU. Có thể chuyển LLM sang CPU hoặc ASR về base trong Cài đặt. Small sửa được một số lỗi từ trong thử nghiệm, chậm hơn và vẫn có Giản thể. Tài sản ứng dụng khoảng 8,11 GB/10 GB, gồm cả model/runtime thử nghiệm. Số đo và giới hạn chất lượng ở [BENCHMARKS](docs/BENCHMARKS.md).
 
 Xem [TASKS](docs/TASKS.md), [ENVIRONMENT](docs/ENVIRONMENT.md), [DECISIONS](docs/DECISIONS.md), [CONTENT_GUIDE](docs/CONTENT_GUIDE.md) và [PLAN](docs/PLAN.md) để tiếp tục.

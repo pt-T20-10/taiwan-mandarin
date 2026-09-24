@@ -24,25 +24,28 @@ class LocalAI:
         self.log = None
         self.voices = []
         self.key = secrets.token_urlsafe(32)
-        self.config = {'model': 'Qwen3-1.7B-Q4_K_M.gguf', 'runtime': 'cpu'}
+        self.config = {'model': 'Qwen3-1.7B-Q4_K_M.gguf', 'runtime': 'cpu', 'asr_model':'ggml-base.bin'}
         config_path = ROOT / 'models/active.json'
         if config_path.exists():
             try:
                 config=json.loads(config_path.read_text(encoding='utf-8'))
                 if config.get('model') in ('Qwen3-1.7B-Q4_K_M.gguf','Qwen3-4B-Q4_K_M.gguf') and config.get('runtime') in ('cpu','cuda'):
-                    self.config.update(config)
+                    self.config.update({key:config[key] for key in ('model','runtime')})
+                if config.get('asr_model') in ('ggml-base.bin','ggml-small.bin'):
+                    self.config['asr_model']=config['asr_model']
             except (ValueError,TypeError):
                 self.error='Cấu hình AI hỏng; đã dùng cấu hình CPU mặc định.'
 
     def paths(self):
         folder = 'llama-cuda' if self.config['runtime'] == 'cuda' else 'llama'
-        return (ROOT / 'runtime' / folder / 'llama-server.exe', ROOT / 'models' / self.config['model'], ROOT / 'runtime/whisper/whisper-cli.exe', ROOT / 'models/ggml-base.bin')
+        return (ROOT / 'runtime' / folder / 'llama-server.exe', ROOT / 'models' / self.config['model'], ROOT / 'runtime/whisper/whisper-cli.exe', ROOT / 'models' / self.config['asr_model'])
 
     def status(self):
         ll, lm, wh, wm = self.paths()
         return {'llm_installed': ll.exists() and lm.exists(), 'llm_running': self.process is not None and self.process.poll() is None,
                 'asr_installed': wh.exists() and wm.exists(), 'tts_voices': self.voices, 'error': self.error,
-                'model': self.config['model'].removesuffix('.gguf') + ' · ' + self.config['runtime'].upper(), 'asr': 'Whisper base đa ngôn ngữ (CPU)', 'quality': 'Chưa đạt chất lượng gia sư: đã phát hiện lỗi Pinyin/dịch và lẫn Giản thể trong thử nghiệm.', 'config': self.config,
+                'model': self.config['model'].removesuffix('.gguf') + ' · ' + self.config['runtime'].upper(), 'asr': 'Whisper '+self.config['asr_model'].removeprefix('ggml-').removesuffix('.bin')+' đa ngôn ngữ (CPU)', 'quality': 'Chưa đạt chất lượng gia sư: đã phát hiện lỗi Pinyin/dịch và lẫn Giản thể trong thử nghiệm.', 'config': self.config,
+                'available_asr_models':[name for name in ('ggml-base.bin','ggml-small.bin') if (ROOT/'models'/name).exists()],
                 'available_models':[name for name in ('Qwen3-1.7B-Q4_K_M.gguf','Qwen3-4B-Q4_K_M.gguf') if (ROOT/'models'/name).exists()],
                 'cuda_installed': (ROOT/'runtime/llama-cuda/llama-server.exe').exists()}
 
@@ -167,12 +170,14 @@ class LocalAI:
             if rms < 60:
                 return {'text': '', 'elapsed_ms': 0, 'notice': 'Bản ghi im lặng hoặc quá nhỏ. Hãy kiểm tra micro; không tạo transcript từ im lặng.'}
         if not exe.exists() or not model.exists():
-            raise RuntimeError('Chưa cài Whisper base. Bạn có thể gõ transcript thủ công.')
+            raise RuntimeError('Chưa cài model Whisper đã chọn. Bạn có thể chọn lại model trong Cài đặt hoặc gõ transcript thủ công.')
         with tempfile.TemporaryDirectory(prefix='mandarin-asr-') as temp:
             path = Path(temp) / 'speech.wav'
             path.write_bytes(audio)
             start = time.perf_counter()
-            proc = await asyncio.create_subprocess_exec(str(exe), '-m', str(model), '-f', str(path), '-l', 'zh', '-t', '6', '--prompt', '以下是臺灣華語的繁體中文逐字稿。', '-otxt', '-of', str(Path(temp) / 'result'), '-nt', creationflags=CREATE_NO_WINDOW, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
+            # No initial transcript prompt: the previous fixed phrase leaked into
+            # a real user's recognition result. Never seed ASR with target answers.
+            proc = await asyncio.create_subprocess_exec(str(exe), '-m', str(model), '-f', str(path), '-l', 'zh', '-t', '6', '-otxt', '-of', str(Path(temp) / 'result'), '-nt', creationflags=CREATE_NO_WINDOW, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
             try:
                 _, err = await asyncio.wait_for(proc.communicate(), timeout=90)
             except BaseException:
@@ -195,13 +200,15 @@ class LocalAI:
         except ValueError:
             self.voices = []
 
-    async def synthesize(self, text):
+    async def synthesize(self, text, voice=None, rate=0):
         if not self.voices:
             raise RuntimeError('Chưa có giọng Windows zh-TW local. Cài giọng trong Windows rồi mở lại ứng dụng.')
+        if voice and voice not in self.voices:
+            raise ValueError('Giọng zh-TW đã chọn không có trên máy. Hãy chọn lại trong Cài đặt.')
         with tempfile.TemporaryDirectory(prefix='mandarin-tts-') as temp:
             path = Path(temp) / 'speech.wav'
-            payload = base64.b64encode(json.dumps({'text': text, 'voice': self.voices[0], 'path': str(path)}, ensure_ascii=False).encode()).decode()
-            code = "$p=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String([Console]::In.ReadToEnd())) | ConvertFrom-Json; Add-Type -AssemblyName System.Speech; $s=New-Object System.Speech.Synthesis.SpeechSynthesizer; $s.SelectVoice($p.voice); $s.SetOutputToWaveFile($p.path); $s.Speak($p.text); $s.Dispose()"
+            payload = base64.b64encode(json.dumps({'text': text, 'voice': voice or self.voices[0], 'rate': rate, 'path': str(path)}, ensure_ascii=False).encode()).decode()
+            code = "$p=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String([Console]::In.ReadToEnd())) | ConvertFrom-Json; Add-Type -AssemblyName System.Speech; $s=New-Object System.Speech.Synthesis.SpeechSynthesizer; $s.SelectVoice($p.voice); $s.Rate=[int]$p.rate; $s.SetOutputToWaveFile($p.path); $s.Speak($p.text); $s.Dispose()"
             proc = await asyncio.create_subprocess_exec('powershell.exe', '-NoProfile', '-NonInteractive', '-Command', code, stdin=asyncio.subprocess.PIPE, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE, creationflags=CREATE_NO_WINDOW)
             try:
                 await asyncio.wait_for(proc.communicate(payload.encode()), timeout=60)

@@ -177,7 +177,20 @@ async def ai_config(body: AIConfig):
     folder='llama-cuda' if body.runtime=='cuda' else 'llama'
     if not (ROOT/'models'/body.model).exists() or not (ROOT/'runtime'/folder/'llama-server.exe').exists():
         raise HTTPException(422,'Model/runtime chưa cài đủ')
-    ai.stop();ai.config=body.model_dump()
+    ai.stop();ai.config.update(body.model_dump())
+    (ROOT/'models/active.json').write_text(json.dumps(ai.config),encoding='utf-8')
+    return ai.status()
+
+class ASRConfig(BaseModel):
+    model: Literal['ggml-base.bin','ggml-small.bin']
+
+@app.post('/api/ai/asr/config')
+async def asr_config(body: ASRConfig):
+    if asr_lock.locked():
+        raise HTTPException(409,'Hãy chờ hoặc hủy nhận dạng đang chạy trước khi đổi model')
+    if not (ROOT/'models'/body.model).exists():
+        raise HTTPException(422,'Model ASR chưa được cài')
+    ai.config['asr_model']=body.model
     (ROOT/'models/active.json').write_text(json.dumps(ai.config),encoding='utf-8')
     return ai.status()
 
@@ -244,11 +257,13 @@ async def asr(request: Request):
 
 class TTSRequest(BaseModel):
     text: str = Field(min_length=1, max_length=1200)
+    voice: str | None = Field(default=None, max_length=200)
+    rate: int = Field(default=0, ge=-2, le=1)
 
 @app.post('/api/ai/tts')
 async def tts(body: TTSRequest):
     try:
-        return Response(await ai.synthesize(body.text), media_type='audio/wav')
+        return Response(await ai.synthesize(body.text, body.voice, body.rate), media_type='audio/wav')
     except RuntimeError as exc:
         raise HTTPException(503, str(exc))
 

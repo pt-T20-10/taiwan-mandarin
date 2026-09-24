@@ -1,0 +1,106 @@
+{
+  "kind": "Native TTS and prompt-free Whisper regression; synthetic speech, no human prosody certification",
+  "samples": [
+    {
+      "text": "你好。",
+      "voice": "Microsoft Hanhan Desktop",
+      "native_rate": 0,
+      "duration_seconds": 1.181,
+      "native_sample_rate": 22050,
+      "tts_ms": 713
+    },
+    {
+      "text": "我今天很忙。",
+      "voice": "Microsoft Hanhan Desktop",
+      "native_rate": 0,
+      "duration_seconds": 1.973,
+      "native_sample_rate": 22050,
+      "tts_ms": 455
+    },
+    {
+      "text": "我要一杯茶。",
+      "voice": "Microsoft Hanhan Desktop",
+      "native_rate": 0,
+      "duration_seconds": 1.833,
+      "native_sample_rate": 22050,
+      "tts_ms": 436
+    },
+    {
+      "text": "我想買一本書。",
+      "voice": "Microsoft Hanhan Desktop",
+      "native_rate": 0,
+      "duration_seconds": 2.024,
+      "native_sample_rate": 22050,
+      "tts_ms": 438
+    },
+    {
+      "text": "請再說一次。",
+      "voice": "Microsoft Hanhan Desktop",
+      "native_rate": 0,
+      "duration_seconds": 2.016,
+      "native_sample_rate": 22050,
+      "tts_ms": 440
+    },
+    {
+      "text": "這是第一課。",
+      "voice": "Microsoft Hanhan Desktop",
+      "native_rate": 0,
+      "duration_seconds": 1.82,
+      "native_sample_rate": 22050,
+      "tts_ms": 440
+    },
+    {
+      "text": "我不要冰。",
+      "voice": "Microsoft Hanhan Desktop",
+      "native_rate": 0,
+      "duration_seconds": 1.624,
+      "native_sample_rate": 22050,
+      "tts_ms": 427
+    },
+    {
+      "text": "我不喝咖啡。",
+      "voice": "Microsoft Hanhan Desktop",
+      "native_rate": 0,
+      "duration_seconds": 1.865,
+      "native_sample_rate": 22050,
+      "tts_ms": 440
+    },
+    {
+      "text": "你叫什麼名字？",
+      "voice": "Microsoft Hanhan Desktop",
+      "native_rate": 0,
+      "duration_seconds": 2.009,
+      "native_sample_rate": 22050,
+      "tts_ms": 442
+    },
+    {
+      "text": "銀行在學校旁邊。",
+      "voice": "Microsoft Hanhan Desktop",
+      "native_rate": 0,
+      "duration_seconds": 2.539,
+      "native_sample_rate": 22050,
+      "tts_ms": 446
+    },
+    {
+      "text": "我是越南人，我是留學生。",
+      "voice": "Microsoft Hanhan Desktop",
+      "native_rate": 0,
+      "duration_seconds": 3.319,
+      "native_sample_rate": 22050,
+      "tts_ms": 459,
+      "synthetic_asr": {
+        "text": "我是越南人,我是留學生。",
+        "elapsed_ms": 3034,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      }
+    }
+  ],
+  "asr_model": "ggml-small.bin",
+  "slow_duration_seconds": 4.123,
+  "silence": {
+    "text": "",
+    "elapsed_ms": 0,
+    "notice": "Bản ghi im lặng hoặc quá nhỏ. Hãy kiểm tra micro; không tạo transcript từ im lặng."
+  },
+  "complete": true
+}

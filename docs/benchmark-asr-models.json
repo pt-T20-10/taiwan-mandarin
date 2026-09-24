@@ -1,0 +1,259 @@
+{
+  "kind": "Exploratory paired synthetic speech comparison, includes known failures; not human microphone benchmark",
+  "prompt": null,
+  "samples": [
+    {
+      "reference": "我是越南人，我是留學生。",
+      "duration_seconds": 3.319,
+      "models": {
+        "base": {
+          "text": "我是越男人 我是留學生",
+          "elapsed_ms": 940,
+          "peak_rss_bytes": 312913920,
+          "edits": 1,
+          "characters": 10
+        },
+        "small": {
+          "text": "我是越南人,我是留學生。",
+          "elapsed_ms": 3061,
+          "peak_rss_bytes": 801644544,
+          "edits": 0,
+          "characters": 10
+        }
+      }
+    },
+    {
+      "reference": "我來自越南，現在在臺灣念書。",
+      "duration_seconds": 3.789,
+      "models": {
+        "base": {
+          "text": "我來自越南,現在在台灣念書。",
+          "elapsed_ms": 1009,
+          "peak_rss_bytes": 311484416,
+          "edits": 1,
+          "characters": 12
+        },
+        "small": {
+          "text": "我来自越南,现在在台湾念书。",
+          "elapsed_ms": 3244,
+          "peak_rss_bytes": 801390592,
+          "edits": 5,
+          "characters": 12
+        }
+      }
+    },
+    {
+      "reference": "我想去圖書館借書。",
+      "duration_seconds": 2.667,
+      "models": {
+        "base": {
+          "text": "我想去圖書管界書。",
+          "elapsed_ms": 1001,
+          "peak_rss_bytes": 311074816,
+          "edits": 2,
+          "characters": 8
+        },
+        "small": {
+          "text": "我想去圖書館借書。",
+          "elapsed_ms": 3065,
+          "peak_rss_bytes": 802164736,
+          "edits": 0,
+          "characters": 8
+        }
+      }
+    },
+    {
+      "reference": "請問，郵局在哪裡？",
+      "duration_seconds": 2.554,
+      "models": {
+        "base": {
+          "text": "請問,有局在哪裡?",
+          "elapsed_ms": 942,
+          "peak_rss_bytes": 315863040,
+          "edits": 1,
+          "characters": 7
+        },
+        "small": {
+          "text": "请问,邮局在哪里?",
+          "elapsed_ms": 3004,
+          "peak_rss_bytes": 803291136,
+          "edits": 4,
+          "characters": 7
+        }
+      }
+    },
+    {
+      "reference": "星期三下午三點半在捷運站見。",
+      "duration_seconds": 4.023,
+      "models": {
+        "base": {
+          "text": "星期三下午三點半在捷運戰艦。",
+          "elapsed_ms": 1069,
+          "peak_rss_bytes": 311980032,
+          "edits": 2,
+          "characters": 13
+        },
+        "small": {
+          "text": "星期三下午3點半在捷運站見。",
+          "elapsed_ms": 3126,
+          "peak_rss_bytes": 801882112,
+          "edits": 1,
+          "characters": 13
+        }
+      }
+    },
+    {
+      "reference": "這杯珍珠奶茶要半糖少冰。",
+      "duration_seconds": 3.359,
+      "models": {
+        "base": {
+          "text": "這杯珍珠奶茶藥半糖少冰。",
+          "elapsed_ms": 1059,
+          "peak_rss_bytes": 312086528,
+          "edits": 1,
+          "characters": 11
+        },
+        "small": {
+          "text": "這杯珍珠奶茶要半糖少冰",
+          "elapsed_ms": 3197,
+          "peak_rss_bytes": 802205696,
+          "edits": 0,
+          "characters": 11
+        }
+      }
+    },
+    {
+      "reference": "我想買兩個蘋果。",
+      "duration_seconds": 2.305,
+      "models": {
+        "base": {
+          "text": "我向買兩個蘋果",
+          "elapsed_ms": 946,
+          "peak_rss_bytes": 312651776,
+          "edits": 1,
+          "characters": 7
+        },
+        "small": {
+          "text": "我想買兩個蘋果。",
+          "elapsed_ms": 2939,
+          "peak_rss_bytes": 801349632,
+          "edits": 0,
+          "characters": 7
+        }
+      }
+    },
+    {
+      "reference": "請重新說一次今天的重點。",
+      "duration_seconds": 3.286,
+      "models": {
+        "base": {
+          "text": "請重新說以次今天的重點。",
+          "elapsed_ms": 998,
+          "peak_rss_bytes": 311083008,
+          "edits": 1,
+          "characters": 11
+        },
+        "small": {
+          "text": "请重新说一次今天的重点。",
+          "elapsed_ms": 2939,
+          "peak_rss_bytes": 801591296,
+          "edits": 3,
+          "characters": 11
+        }
+      }
+    },
+    {
+      "reference": "今天九月二十三日，我想去郵局寄信。",
+      "duration_seconds": 4.488,
+      "models": {
+        "base": {
+          "text": "今天9月23日,我想去郵局記性。",
+          "elapsed_ms": 1059,
+          "peak_rss_bytes": 312799232,
+          "edits": 6,
+          "characters": 15
+        },
+        "small": {
+          "text": "今天9月23日,我想去郵局寄信。",
+          "elapsed_ms": 3262,
+          "peak_rss_bytes": 803028992,
+          "edits": 4,
+          "characters": 15
+        }
+      }
+    },
+    {
+      "reference": "你好，你叫什麼名字？",
+      "duration_seconds": 2.665,
+      "models": {
+        "base": {
+          "text": "你好,你叫什么名字?",
+          "elapsed_ms": 946,
+          "peak_rss_bytes": 311525376,
+          "edits": 1,
+          "characters": 8
+        },
+        "small": {
+          "text": "你好,你叫什么名字?",
+          "elapsed_ms": 2941,
+          "peak_rss_bytes": 800329728,
+          "edits": 1,
+          "characters": 8
+        }
+      }
+    },
+    {
+      "reference": "我今天沒有課，想在家休息。",
+      "duration_seconds": 3.653,
+      "models": {
+        "base": {
+          "text": "我今天沒有課,想再加休息。",
+          "elapsed_ms": 933,
+          "peak_rss_bytes": 312836096,
+          "edits": 2,
+          "characters": 11
+        },
+        "small": {
+          "text": "我今天沒有課,想在家休息。",
+          "elapsed_ms": 3058,
+          "peak_rss_bytes": 801890304,
+          "edits": 0,
+          "characters": 11
+        }
+      }
+    },
+    {
+      "reference": "請問，這裡可以用信用卡嗎？",
+      "duration_seconds": 3.394,
+      "models": {
+        "base": {
+          "text": "請問,這裡可以用信用卡嗎?",
+          "elapsed_ms": 992,
+          "peak_rss_bytes": 312635392,
+          "edits": 0,
+          "characters": 11
+        },
+        "small": {
+          "text": "请问,这里可以用信用卡吗?",
+          "elapsed_ms": 3116,
+          "peak_rss_bytes": 801439744,
+          "edits": 5,
+          "characters": 11
+        }
+      }
+    }
+  ],
+  "complete": true,
+  "summary": {
+    "base": {
+      "median_ms": 995.0,
+      "cer": 0.1532258064516129,
+      "peak_rss_bytes": 315863040
+    },
+    "small": {
+      "median_ms": 3063.0,
+      "cer": 0.18548387096774194,
+      "peak_rss_bytes": 803291136
+    }
+  }
+}

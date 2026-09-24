@@ -110,3 +110,41 @@ test('giọng Windows local thật tạo WAV cho câu mới, chặn mạng ngoà
  await expect.poll(()=>page.evaluate(()=>(window as any).__testAudio?.currentTime||0)).toBeGreaterThan(0);
  await page.getByRole('button',{name:'Dừng audio',exact:true}).click();expect(await page.evaluate(()=>(window as any).__testAudio.paused)).toBe(true);expect(external).toEqual([]);
 });
+test('nghe cạnh Hán tự/Pinyin gửi nguyên cụm; giữ kín đáp án và lưu cấu hình giọng',async({page,request})=>{
+ // TEST speech API captures the exact utterance; it does not claim natural audio.
+ await page.addInitScript(()=>{
+  const voices=[{voiceURI:'TEST-a',name:'TEST Hanhan',lang:'zh-TW',localService:true},{voiceURI:'TEST-b',name:'TEST Yating',lang:'zh-TW',localService:true}];
+  window.speechSynthesis.getVoices=()=>voices as SpeechSynthesisVoice[];
+  (window as any).SpeechSynthesisUtterance=class {voice:unknown;lang='';rate=1;onend=(_event:Event)=>{};constructor(public text:string){}};
+  (window as any).__utterances=[];
+  window.speechSynthesis.speak=utterance=>{(window as any).__utterances.push({text:utterance.text,rate:utterance.rate,voice:utterance.voice?.voiceURI});setTimeout(()=>utterance.onend?.(new Event('end') as SpeechSynthesisEvent),0);};
+ });
+ await page.goto('/#settings');await page.getByRole('combobox',{name:'Giọng zh-TW local',exact:true}).selectOption('browser:TEST-b');
+ await expect.poll(async()=>(await(await request.get('/api/state')).json()).objects.settings.speech.data.voice).toBe('browser:TEST-b');
+ await page.goto('/');await page.getByRole('button',{name:'1 Khám phá từ mới'}).first().click();
+ const word=page.locator('.word').first();await word.getByRole('button',{name:'Nghe Hán tự',exact:true}).click();
+ await word.getByRole('button',{name:'Hiện Pinyin',exact:true}).click();await word.getByRole('button',{name:'Nghe Pinyin',exact:true}).click();
+ expect(await page.evaluate(()=>(window as any).__utterances)).toEqual([{text:'你好',rate:1,voice:'TEST-b'},{text:'你好',rate:1,voice:'TEST-b'}]);
+ await page.getByRole('button',{name:'Bắt đầu luyện tập'}).click();await page.getByRole('button',{name:'Nghe câu hỏi'}).click();
+ await expect(page.locator('.exercise')).not.toContainText('nǐ hǎo');
+ expect((await(await request.get('/api/state')).json()).events).toHaveLength(0);
+ await page.screenshot({path:'test-results/exercise-audio.png'});
+ await page.goto('/#pronunciation');await expect(page.locator('.pronunciation-case')).toHaveCount(11);
+ await page.getByRole('combobox',{name:'Nhịp đọc',exact:true}).selectOption('slow');
+ await expect.poll(async()=>(await(await request.get('/api/state')).json()).objects.settings.speech.data.pace).toBe('slow');
+ await page.getByRole('button',{name:'Nghe trong câu: grouping',exact:true}).click();
+ expect(await page.evaluate(()=>(window as any).__utterances.at(-1))).toEqual({text:'我是越南人，我是留學生。',rate:.85,voice:'TEST-b'});
+ await page.getByLabel('Nhận xét: grouping',{exact:true}).selectOption('choppy');
+ await expect.poll(async()=>Object.values((await(await request.get('/api/state')).json()).objects.reports).filter((r:any)=>r.data.kind==='pronunciation-listening').length).toBe(1);
+ await page.reload();await expect(page.getByText('1 nhận xét của bạn với cấu hình này')).toBeVisible();
+ await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.screenshot({path:'test-results/pronunciation-mobile.png',fullPage:true});
+});
+test('chọn ASR cập nhật thông tin model, fixture TEST không đổi cấu hình máy thật',async({page,request})=>{
+ const status=await(await request.get('/api/status')).json();status.config.asr_model='ggml-small.bin';status.available_asr_models=['ggml-base.bin','ggml-small.bin'];
+ await page.route('**/api/status',r=>r.fulfill({json:status}));
+ await page.route('**/api/ai/asr/config',r=>{status.config.asr_model=r.request().postDataJSON().model;status.asr='Whisper base đa ngôn ngữ (CPU)';return r.fulfill({json:status});});
+ await page.goto('/#settings');await page.getByRole('combobox',{name:'Model nhận dạng',exact:true}).selectOption('ggml-base.bin');
+ await expect(page.getByText('Whisper base đa ngôn ngữ (CPU)',{exact:true})).toBeVisible();
+ await page.reload();await expect(page.getByRole('combobox',{name:'Model nhận dạng',exact:true})).toHaveValue('ggml-base.bin');
+});

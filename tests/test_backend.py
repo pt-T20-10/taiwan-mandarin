@@ -3,6 +3,7 @@ import json
 import uuid
 import io
 import wave
+from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 from backend import db
@@ -109,6 +110,45 @@ def test_corrupted_wav_reports_validation_error(client):
     response=client.post('/api/ai/asr',content=b'RIFF\x00\x00\x00\x00WAVE',headers={'Content-Type':'audio/wav'})
     assert response.status_code==422
     assert 'WAV' in response.json()['detail']
+
+def test_asr_never_seeds_user_transcript_with_fixed_prompt(client,tmp_path,monkeypatch):
+    # TEST subprocess only: regression for the reported prompt echo. This does
+    # not certify recognition of the user's unavailable recording.
+    executable=tmp_path/'whisper.exe';model=tmp_path/'base.bin'
+    executable.touch();model.touch()
+    monkeypatch.setattr(ai,'paths',lambda:(executable,model,executable,model))
+    arguments=[]
+    class Process:
+        returncode=0
+        async def communicate(self):return b'',b''
+    async def spawn(*args,**kwargs):
+        arguments.extend(args)
+        Path(args[args.index('-of')+1]+'.txt').write_text('TEST 我是越南人',encoding='utf-8')
+        return Process()
+    monkeypatch.setattr('backend.ai.asyncio.create_subprocess_exec',spawn)
+    buffer=io.BytesIO()
+    with wave.open(buffer,'wb') as wav:
+        wav.setnchannels(1);wav.setsampwidth(2);wav.setframerate(16000);wav.writeframes(b'\xf4\x01\x0c\xfe'*8000)
+    response=client.post('/api/ai/asr',content=buffer.getvalue(),headers={'Content-Type':'audio/wav'})
+    assert response.status_code==200
+    assert response.json()['text']=='TEST 我是越南人'
+    assert '--prompt' not in arguments and '--carry-initial-prompt' not in arguments
+    assert not any('逐字稿' in value or '我是越南人' in value for value in arguments)
+
+def test_native_voice_selection_and_rate_are_validated(client,monkeypatch):
+    monkeypatch.setattr(ai,'voices',['TEST zh-TW'])
+    assert client.post('/api/ai/tts',json={'text':'你好','voice':'unknown'}).status_code==422
+    assert client.post('/api/ai/tts',json={'text':'你好','rate':8}).status_code==422
+
+def test_asr_model_selection_is_persisted_without_changing_llm(client,tmp_path,monkeypatch):
+    monkeypatch.setattr('backend.app.ROOT',tmp_path)
+    monkeypatch.setattr(ai,'config',{'model':'Qwen3-4B-Q4_K_M.gguf','runtime':'cuda','asr_model':'ggml-base.bin'})
+    (tmp_path/'models').mkdir();(tmp_path/'models/ggml-small.bin').touch()
+    assert client.post('/api/ai/asr/config',json={'model':'../../outside.bin'}).status_code==422
+    assert client.post('/api/ai/asr/config',json={'model':'ggml-base.bin'}).status_code==422
+    assert client.post('/api/ai/asr/config',json={'model':'ggml-small.bin'}).status_code==200
+    saved=json.loads((tmp_path/'models/active.json').read_text())
+    assert saved=={'model':'Qwen3-4B-Q4_K_M.gguf','runtime':'cuda','asr_model':'ggml-small.bin'}
 
 def test_bulk_import_atomic_and_invalid_backup_rejected(client):
     card={'word':{'hanzi':'你好','pinyin':'nǐ hǎo','vi':'xin chào'},'direction':'recognize','tags':[],

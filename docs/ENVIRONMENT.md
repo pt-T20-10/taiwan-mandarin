@@ -8,4 +8,4 @@
 - Kiểm tra đầu phiên: System.Speech desktop chỉ David/Zira, WinRT David/Zira/Mark, Edge chưa có zh-TW local. Kiểm tra lại cuối phiên: System.Speech có Microsoft Hanhan Desktop; Edge có Hanhan/Yating/Zhiwei zh-TW local. Không do script dự án cài thành phần Windows. Dữ liệu hiện tại thay thế kết luận thiếu voice ban đầu.
 - llama.cpp b11120 CPU/CUDA 12.4 và Whisper.cpp v1.9.2 chạy native trong runtime/. CUDA chạy được với driver hiện có; Vulkan thử nghiệm không đạt health. Model/hash và khóa phiên bản xem MODELS.json.
 - Build bằng Vite phục vụ từ FastAPI tại 127.0.0.1:8765; Edge E2E chạy riêng 8767, dữ liệu riêng data/e2e. Không cài browser hoặc Python global.
-- Native Hanhan đã tạo WAV thành công trên 40 câu và chạy qua Whisper thật; xem BENCHMARKS. Người dùng trả lời “Chưa thử” khi hỏi kiểm tra micro/loa offline; chưa trực tiếp nghe loa hoặc thử micro thật, không suy ra chất lượng audio từ kết quả kỹ thuật.
+- Native Hanhan đã tạo WAV thành công trên 40 câu và chạy qua Whisper thật; xem BENCHMARKS. Ngày 24/09 người dùng xác nhận nghe câu mới, ghi âm/nghe lại khi ngắt Internet được, nhưng ASR sai và giọng đọc rời; chưa đạt nghiệm thu chất lượng phát âm.

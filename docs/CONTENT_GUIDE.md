@@ -21,7 +21,17 @@ Nguồn để đối chiếu tiếp: [MOE từ điển giản biên](https://dic
 
 Không đóng gói ảnh/audio/định nghĩa từ các trang trên. Văn bản bài học, đáp án, hình CSS và 12 mẫu nét hình học do dự án tự soạn. Nét đã đối chiếu số/thứ tự/hướng theo MOE, ghi phạm vi ở STROKE_SOURCES.md. Không có tài sản giáo trình/audio trả phí. Không tuyên bố nội dung do giáo viên phê duyệt.
 
-Font Microsoft JhengHei được Windows cung cấp tại máy, không phân phối lại. Audio đọc trực tiếp bằng giọng hệ điều hành/browser local khi có; không xuất audio Windows để phân phối sang Android. Hiện máy thiếu zh-TW nên chưa có audio được nghe duyệt.
+Font Microsoft JhengHei được Windows cung cấp tại máy, không phân phối lại. Audio đọc trực tiếp bằng giọng hệ điều hành/browser local; không xuất audio Windows để phân phối sang Android. Máy đã có zh-TW và người dùng xác nhận nghe câu mới offline được, nhưng báo giọng đọc rời, chưa đạt kiểm tra biến điệu.
+
+## Phát âm trong lời nói
+
+src/core/pronunciation.ts có 11 ca tự soạn để nghe cả cụm và câu: thanh 3 nối thanh 3, thanh 3 trước thanh khác, 一/不, thanh nhẹ, chữ đa âm và nhịp câu. Phiên âm cơ sở giữ riêng với ghi chú biến điệu; không thay dữ liệu Pinyin/chấm bài bằng cách đọc do TTS suy ra. Không áp một độ dài cố định cho từng thanh; độ dài và cao độ còn phụ thuộc trọng âm, tốc độ và ngữ cảnh.
+
+Nguồn quy tắc đã đọc: [MOE — 一/不 và thanh nhẹ](https://dict.concised.moe.edu.tw/page.jsp?ID=55&la=0&powerMode=0), [NTU ICLP — đặc điểm âm học thanh điệu](https://iclpnews.ntu.edu.tw/journal/info/28). Tài liệu nghiên cứu bổ sung: [NCCU](https://ah.lib.nccu.edu.tw/bitstream/140.119/152670/1/101401.pdf). Không đóng gói tài sản audio/giáo trình từ các nguồn này. Các ghi chú là diễn giải của dự án, chưa phải đánh giá giáo viên cho từng audio.
+
+Đối chiếu ví dụ thanh nhẹ ngày 24/09/2026: MOE giản biên ghi [名字 — míng zi](https://dict.concised.moe.edu.tw/dictView.jsp?ID=4842&la=0&powerMode=0) và [桌子 — zhuō zi](https://dict.concised.moe.edu.tw/dictView.jsp?ID=30786&la=1&powerMode=0). Không suy rộng thành mọi âm cuối đều nhẹ hoặc mọi người nói có cách đọc giống nhau.
+
+Nhận xét “khá liền mạch / còn rời / nghi sai âm / chưa phân biệt” lưu trong reports, gắn cấu hình voice/nhịp. Chúng là ý kiến người học, không nâng nhãn thành audio chuẩn. Cần người nghe đủ năng lực đối chiếu các ca với từng giọng trước khi dùng làm mẫu phát âm đã duyệt.
 
 ## Kiểm tra gói
 
