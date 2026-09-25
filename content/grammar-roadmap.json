@@ -1,0 +1,3970 @@
+[
+  {
+    "id": "tbcl.001",
+    "title": "繫動詞",
+    "tbcl_level": "第1級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.002",
+    "title": "表所有「的」",
+    "tbcl_level": "第1級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.003",
+    "title": "「的」省略用法",
+    "tbcl_level": "第1級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.004",
+    "title": "不",
+    "tbcl_level": "第1級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.005",
+    "title": "這/那/哪",
+    "tbcl_level": "第1級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.006",
+    "title": "什麼",
+    "tbcl_level": "第1級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.007",
+    "title": "嗎",
+    "tbcl_level": "第1級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.008",
+    "title": "在1",
+    "tbcl_level": "第1*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.009",
+    "title": "地點表達",
+    "tbcl_level": "第1*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.010",
+    "title": "時間表達",
+    "tbcl_level": "第1*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.011",
+    "title": "稱數法",
+    "tbcl_level": "第1*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.012",
+    "title": "數+量",
+    "tbcl_level": "第1*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.013",
+    "title": "誰",
+    "tbcl_level": "第1*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.014",
+    "title": "哪（裡/兒）",
+    "tbcl_level": "第1*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.015",
+    "title": "A-not-A",
+    "tbcl_level": "第1*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.016",
+    "title": "Vs（的）N",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.017",
+    "title": "V了1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.018",
+    "title": "和1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.019",
+    "title": "沒（有）1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.020",
+    "title": "會1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.021",
+    "title": "V著1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.022",
+    "title": "序數",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.023",
+    "title": "如果",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.024",
+    "title": "可以1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 1
+  },
+  {
+    "id": "tbcl.025",
+    "title": "要2",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.026",
+    "title": "要3",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.027",
+    "title": "時量補語",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.028",
+    "title": "但是",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.029",
+    "title": "能1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.030",
+    "title": "V過1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.031",
+    "title": "就1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.032",
+    "title": "「的」後接成分省略",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.033",
+    "title": "會2",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.034",
+    "title": "能2",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.035",
+    "title": "要1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.036",
+    "title": "賓+被+V",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.037",
+    "title": "V+Vs",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.038",
+    "title": "跟2",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.039",
+    "title": "想",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.040",
+    "title": "和2",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.041",
+    "title": "從1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.042",
+    "title": "用",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.043",
+    "title": "在2/正在V",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.044",
+    "title": "呢1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.045",
+    "title": "（雖然），可是",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.046",
+    "title": "N+們",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.047",
+    "title": "開始V",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.048",
+    "title": "怎麼",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 2
+  },
+  {
+    "id": "tbcl.049",
+    "title": "可以2",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.050",
+    "title": "為什麼",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.051",
+    "title": "給",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.052",
+    "title": "V見",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.053",
+    "title": "V了2",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.054",
+    "title": "（請）不要",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.055",
+    "title": "數字+幾",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.056",
+    "title": "請",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.057",
+    "title": "V得+補語",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.058",
+    "title": "幫",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.059",
+    "title": "以前",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.060",
+    "title": "V出1",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.061",
+    "title": "多/少",
+    "tbcl_level": "第2級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.062",
+    "title": "也",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.063",
+    "title": "在3",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.064",
+    "title": "以後",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.065",
+    "title": "怎麼樣",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.066",
+    "title": "幾/多少1",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.067",
+    "title": "怎麼辦",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.068",
+    "title": "跟1",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.069",
+    "title": "請問",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.070",
+    "title": "好嗎",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.071",
+    "title": "怎麼了",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.072",
+    "title": "V到2/在",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 3
+  },
+  {
+    "id": "tbcl.073",
+    "title": "從......到......1",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.074",
+    "title": "從......到......2",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.075",
+    "title": "都1",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.076",
+    "title": "V來/去1",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.077",
+    "title": "因為......所以......",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.078",
+    "title": "有的......有的......",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.079",
+    "title": "到......（去/來）+VP",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.080",
+    "title": "太Vs了",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.081",
+    "title": "......還是......",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.082",
+    "title": "又......又......",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.083",
+    "title": "有（一）點Vs",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.084",
+    "title": "（在） PW 的 N",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.085",
+    "title": "從2",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.086",
+    "title": "V起來1",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.087",
+    "title": "Vs一點",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.088",
+    "title": "數詞+多（量詞）",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.089",
+    "title": "V到1",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.090",
+    "title": "又1",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.091",
+    "title": "又2",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.092",
+    "title": "V過來1/過去",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.093",
+    "title": "V下來/下去1",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.094",
+    "title": "A比B ......",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.095",
+    "title": "A跟B一樣......",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.096",
+    "title": "一......就......",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 4
+  },
+  {
+    "id": "tbcl.097",
+    "title": "（是）......的",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.098",
+    "title": "好/難+V",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.099",
+    "title": "了......就......",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.100",
+    "title": "從......往......",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.101",
+    "title": "A離B......",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.102",
+    "title": "VP 的 N",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.103",
+    "title": "多+Vs？",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.104",
+    "title": "V進/出/上/回+（......）來/去",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.105",
+    "title": "零代詞",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.106",
+    "title": "概數",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.107",
+    "title": "話題優先",
+    "tbcl_level": "第2*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.108",
+    "title": "V過2",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.109",
+    "title": "V著2",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.110",
+    "title": "V到3",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.111",
+    "title": "才1",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.112",
+    "title": "才4",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.113",
+    "title": "讓1",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.114",
+    "title": "讓2",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.115",
+    "title": "叫1",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.116",
+    "title": "叫2",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.117",
+    "title": "呢2",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.118",
+    "title": "沒（有）2",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.119",
+    "title": "必須",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.120",
+    "title": "到",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 5
+  },
+  {
+    "id": "tbcl.121",
+    "title": "要是......就......",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.122",
+    "title": "......的話",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.123",
+    "title": "A沒有B（這/那麼）......",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.124",
+    "title": "不但......而且......",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.125",
+    "title": "不但......還/也......",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.126",
+    "title": "而且",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.127",
+    "title": "真Vs",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.128",
+    "title": "越......越......",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.129",
+    "title": "越來越......",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.130",
+    "title": "本來",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.131",
+    "title": "然後",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.132",
+    "title": "一邊......一邊......",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.133",
+    "title": "先......再......",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.134",
+    "title": "就要......了",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.135",
+    "title": "快要......了",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.136",
+    "title": "V一下",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.137",
+    "title": "（當）......的時候",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.138",
+    "title": "V上",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.139",
+    "title": "V下",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.140",
+    "title": "V起",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.141",
+    "title": "V滿",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.142",
+    "title": "（也）......也......",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.143",
+    "title": "有時候......有時候......",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.144",
+    "title": "對",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 6
+  },
+  {
+    "id": "tbcl.145",
+    "title": "對......有興趣",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.146",
+    "title": "替",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.147",
+    "title": "為了",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.148",
+    "title": "動詞重疊（ABAB）",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.149",
+    "title": "狀態動詞重疊做謂語AA/AABB",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.150",
+    "title": "狀態動詞重疊做定語",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.151",
+    "title": "狀態動詞重疊做狀語",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.152",
+    "title": "VV看",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.153",
+    "title": "還沒（有）",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.154",
+    "title": "不太/不很",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.155",
+    "title": "不用/不必",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.156",
+    "title": "是不是+VP",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.157",
+    "title": "好不好",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.158",
+    "title": "好+幾/多/些+量詞",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.159",
+    "title": "結構助詞「地」",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.160",
+    "title": "不知道......",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.161",
+    "title": "那麼",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.162",
+    "title": "那",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.163",
+    "title": "（請）別",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.164",
+    "title": "（請）+VP",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.165",
+    "title": "還是......吧",
+    "tbcl_level": "第3級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.166",
+    "title": "應該1",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.167",
+    "title": "應該2",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.168",
+    "title": "可以3",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 7
+  },
+  {
+    "id": "tbcl.169",
+    "title": "V起來2",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.170",
+    "title": "V起來3",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.171",
+    "title": "V下去2",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.172",
+    "title": "才2",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.173",
+    "title": "才3",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.174",
+    "title": "就2",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.175",
+    "title": "還1",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.176",
+    "title": "願意",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.177",
+    "title": "只要......就......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.178",
+    "title": "只有......才......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.179",
+    "title": "只好",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.180",
+    "title": "不管......都......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.181",
+    "title": "一M比一M......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.182",
+    "title": "Vs得多",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.183",
+    "title": "尤其（是）",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.184",
+    "title": "V 得/不 了",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.185",
+    "title": "V得/不......（表可能）",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.186",
+    "title": "V 得/不 下",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.187",
+    "title": "疑問代詞",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.188",
+    "title": "差不多",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.189",
+    "title": "Vs極了/得不得了/得很",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.190",
+    "title": "Vs死了",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.191",
+    "title": "Vs壞了",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.192",
+    "title": "Vs了一點",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 8
+  },
+  {
+    "id": "tbcl.193",
+    "title": "把O V（一）V",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.194",
+    "title": "把 O V到......（來/去）",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.195",
+    "title": "把 O V 了",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.196",
+    "title": "把......V+結果補語",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.197",
+    "title": "把 O V-在 PW",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.198",
+    "title": "把+N1+V給+N2",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.199",
+    "title": "被+（N）+V得",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.200",
+    "title": "其實",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.201",
+    "title": "什麼都......就是......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.202",
+    "title": "V好",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.203",
+    "title": "V完",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.204",
+    "title": "VP+VP(連動)",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.205",
+    "title": "才......就......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.206",
+    "title": "時段+否定",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.207",
+    "title": "從......起",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.208",
+    "title": "V  得/不 起",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.209",
+    "title": "V （得/不）出來",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.210",
+    "title": "V住",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.211",
+    "title": "V著（ㄓㄠˊ）",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.212",
+    "title": "V 得/不 動",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.213",
+    "title": "V慣",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.214",
+    "title": "V掉",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.215",
+    "title": "V個不停/沒完",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.216",
+    "title": "V個夠",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 9
+  },
+  {
+    "id": "tbcl.217",
+    "title": "PW+V（存現）",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.218",
+    "title": "會......的",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.219",
+    "title": "（連）....../一......都/也+不/沒......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.220",
+    "title": "不是......就是......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.221",
+    "title": "V（了）（一）V",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.222",
+    "title": "一M一M ......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.223",
+    "title": "不再......了",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.224",
+    "title": "一點也/都+不/沒",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.225",
+    "title": "從來+不/沒......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.226",
+    "title": "不/沒+嗎",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.227",
+    "title": "不是/沒......嗎",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.228",
+    "title": "......QW......就......QW......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.229",
+    "title": "其中",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.230",
+    "title": "等/等等",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.231",
+    "title": "以+上/下/內/外",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.232",
+    "title": "除了......（以外），......都......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.233",
+    "title": "除了......以外， 還/也......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.234",
+    "title": "數+（量詞）+左右",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.235",
+    "title": "百分數",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.236",
+    "title": "倍數",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.237",
+    "title": "分數",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.238",
+    "title": "四則運算",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.239",
+    "title": "小數點",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.240",
+    "title": "VP/S+的......",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 10
+  },
+  {
+    "id": "tbcl.241",
+    "title": "別（再）......了",
+    "tbcl_level": "第3*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.242",
+    "title": "可1",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.243",
+    "title": "可2",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.244",
+    "title": "可3",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.245",
+    "title": "該1",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.246",
+    "title": "該2",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.247",
+    "title": "V出2",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.248",
+    "title": "還3",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.249",
+    "title": "V起來4",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.250",
+    "title": "不能不/不得不/不可不",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.251",
+    "title": "跟/和......比起來",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.252",
+    "title": "A像B一樣......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.253",
+    "title": "A不如B",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.254",
+    "title": "多Vs啊",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.255",
+    "title": "差一點（就）......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.256",
+    "title": "跟......（沒）有關",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.257",
+    "title": "給......帶來......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.258",
+    "title": "不......不......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.259",
+    "title": "看/要看/得看",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.260",
+    "title": "不論/無論",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.261",
+    "title": "只是",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.262",
+    "title": "卻",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.263",
+    "title": "（要）不然",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.264",
+    "title": "是",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 11
+  },
+  {
+    "id": "tbcl.265",
+    "title": "哪裡......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.266",
+    "title": "說......就......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.267",
+    "title": "通過",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.268",
+    "title": "經過",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.269",
+    "title": "拿",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.270",
+    "title": "按照",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.271",
+    "title": "照（著）",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.272",
+    "title": "趁（著）",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.273",
+    "title": "離",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.274",
+    "title": "V著V著......就......了",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.275",
+    "title": "早就......了",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.276",
+    "title": "......以內/之內",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.277",
+    "title": "一會兒......，一會兒......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.278",
+    "title": "一下......一下......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.279",
+    "title": "既......又......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.280",
+    "title": "一V起",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.281",
+    "title": "V起N（來）",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.282",
+    "title": "V光",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.283",
+    "title": "因為......的關係",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.284",
+    "title": "另外",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.285",
+    "title": "再加上",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.286",
+    "title": "不只......而且/還/也......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.287",
+    "title": "除了......之外......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.288",
+    "title": "像......什麼的",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 12
+  },
+  {
+    "id": "tbcl.289",
+    "title": "......而已",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.290",
+    "title": "以+內/外/左/右/東/西/南/北（位置）",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.291",
+    "title": "說到/談到/講到",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.292",
+    "title": "拿......來說",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.293",
+    "title": "對......來說",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.294",
+    "title": "不是",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.295",
+    "title": "不到",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.296",
+    "title": "怎麼（一）回事",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.297",
+    "title": "量詞重疊",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.298",
+    "title": "害",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.299",
+    "title": "把 ......V成......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.300",
+    "title": "把......V作/做......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=6&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.301",
+    "title": "被......V作/做......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.302",
+    "title": "被......V成......",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.303",
+    "title": "賓+受（N）+V",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.304",
+    "title": "一般來說",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.305",
+    "title": "你說",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.306",
+    "title": "看樣子",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.307",
+    "title": "誰知道",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.308",
+    "title": "所以啦",
+    "tbcl_level": "第4級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.309",
+    "title": "可4",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.310",
+    "title": "與1",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.311",
+    "title": "與2",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.312",
+    "title": "由1",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 13
+  },
+  {
+    "id": "tbcl.313",
+    "title": "多少2",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.314",
+    "title": "都2",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.315",
+    "title": "V去2",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.316",
+    "title": "V過來2",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.317",
+    "title": "還2",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.318",
+    "title": "才5",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.319",
+    "title": "A有B（這/那麼）......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.320",
+    "title": "比......來得 Vs",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.321",
+    "title": "Vs得沒話說",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.322",
+    "title": "向",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.323",
+    "title": "為",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.324",
+    "title": "既然......就......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.325",
+    "title": "不/沒（有）......，就......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.326",
+    "title": "再不......就......了",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.327",
+    "title": "非......不（可）",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.328",
+    "title": "即使......也......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.329",
+    "title": "就是......，也......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.330",
+    "title": "再......也......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.331",
+    "title": "就算......也......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.332",
+    "title": "除非",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.333",
+    "title": "否則",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.334",
+    "title": "假如...... （就）......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.335",
+    "title": "倒（是）",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.336",
+    "title": "寧願......也（不）要......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 14
+  },
+  {
+    "id": "tbcl.337",
+    "title": "寧可......也（不）要......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.338",
+    "title": "居然",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.339",
+    "title": "簡直",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.340",
+    "title": "反正",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.341",
+    "title": "幸虧",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.342",
+    "title": "難道......（嗎）",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.343",
+    "title": "算（是）",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.344",
+    "title": "難怪/怪不得",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.345",
+    "title": "果然",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.346",
+    "title": "竟（然）",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.347",
+    "title": "照V",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.348",
+    "title": "就是",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.349",
+    "title": "光N/V（O）就",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.350",
+    "title": "根本",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=7&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.351",
+    "title": "靠/靠著",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.352",
+    "title": "根據",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.353",
+    "title": "......好......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.354",
+    "title": "自從......後",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.355",
+    "title": "自從......以來",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.356",
+    "title": "至今",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.357",
+    "title": "原來A，如今B",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.358",
+    "title": "一方面......，一方面......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.359",
+    "title": "一面......一面......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.360",
+    "title": "千萬",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 15
+  },
+  {
+    "id": "tbcl.361",
+    "title": "V中",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.362",
+    "title": "結果",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.363",
+    "title": "由於",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.364",
+    "title": "因此",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.365",
+    "title": "甚至（於）",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.366",
+    "title": "任何",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.367",
+    "title": "以上",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.368",
+    "title": "（在）......方面",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.369",
+    "title": "關於",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.370",
+    "title": "以/從......來看",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.371",
+    "title": "V 得/不 來",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.372",
+    "title": "V下",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.373",
+    "title": "不免",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.374",
+    "title": "不見得",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.375",
+    "title": "並+不/沒",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.376",
+    "title": "再也（不/沒）",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.377",
+    "title": "沒有一M（N） 不/沒......的",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.378",
+    "title": "把......V為......",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.379",
+    "title": "老實說",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.380",
+    "title": "據說",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.381",
+    "title": "我看",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.382",
+    "title": "你看",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.383",
+    "title": "這麼說",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.384",
+    "title": "相反地",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 16
+  },
+  {
+    "id": "tbcl.385",
+    "title": "再說",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.386",
+    "title": "（也/那/這）就是說",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.387",
+    "title": "可不是",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.388",
+    "title": "怎麼說呢",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.389",
+    "title": "這樣一來",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.390",
+    "title": "算了",
+    "tbcl_level": "第4*級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.391",
+    "title": "以1",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.392",
+    "title": "以2",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.393",
+    "title": "於1",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.394",
+    "title": "於2",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.395",
+    "title": "由2",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.396",
+    "title": "又3",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.397",
+    "title": "就3",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.398",
+    "title": "透過",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.399",
+    "title": "順（著）",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.400",
+    "title": "沿（著）",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=8&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.401",
+    "title": "以......為......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.402",
+    "title": "憑",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.403",
+    "title": "視......而定",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.404",
+    "title": "經由......而來......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.405",
+    "title": "A跟B......相當",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.406",
+    "title": "比不上",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.407",
+    "title": "（A）與B相比",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.408",
+    "title": "於是",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 17
+  },
+  {
+    "id": "tbcl.409",
+    "title": "（之）所以......，是因為......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.410",
+    "title": "隨著",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.411",
+    "title": "因（為）......而......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.412",
+    "title": "因而",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.413",
+    "title": "為了A而B",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.414",
+    "title": "無須",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.415",
+    "title": "不至於",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.416",
+    "title": "絕不",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.417",
+    "title": "未曾",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.418",
+    "title": "不得",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.419",
+    "title": "無法",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.420",
+    "title": "以及",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.421",
+    "title": "一來......二來......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.422",
+    "title": "既A，也B",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.423",
+    "title": "（請）勿",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.424",
+    "title": "使得",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.425",
+    "title": "使",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.426",
+    "title": "令",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.427",
+    "title": "（在）......之餘",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.428",
+    "title": "一口氣",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.429",
+    "title": "早晚",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.430",
+    "title": "若",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.431",
+    "title": "要不是",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.432",
+    "title": "萬一",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 18
+  },
+  {
+    "id": "tbcl.433",
+    "title": "一旦",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.434",
+    "title": "沒有......就沒有......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.435",
+    "title": "儘管......（還/但是）......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.436",
+    "title": "將",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.437",
+    "title": "Vs得要命",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.438",
+    "title": "不料",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.439",
+    "title": "誰叫......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.440",
+    "title": "有什麼好V（O）/SV的",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.441",
+    "title": "畢竟",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.442",
+    "title": "難免",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.443",
+    "title": "別看",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.444",
+    "title": "無所謂",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.445",
+    "title": "動不動就",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.446",
+    "title": "明明",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.447",
+    "title": "好在",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.448",
+    "title": "所+V+的（N）",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.449",
+    "title": "無論如何",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.450",
+    "title": "一般而言",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=9&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.451",
+    "title": "這下子",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.452",
+    "title": "主要（的）是",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.453",
+    "title": "基本上",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.454",
+    "title": "可見",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.455",
+    "title": "（可是）話說回來",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.456",
+    "title": "反之",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 19
+  },
+  {
+    "id": "tbcl.457",
+    "title": "換句話說",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.458",
+    "title": "除此之外",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.459",
+    "title": "相對地",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.460",
+    "title": "事實上",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.461",
+    "title": "總之",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.462",
+    "title": "由此可知/看來/可見",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.463",
+    "title": "總而言之",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.464",
+    "title": "簡言之",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.465",
+    "title": "如此一來",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.466",
+    "title": "從......的角度來+V",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.467",
+    "title": "至於",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.468",
+    "title": "所謂......是指/就是......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.469",
+    "title": "在......（之）下",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.470",
+    "title": "對（於）......而言",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.471",
+    "title": "（在）......（之）中",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.472",
+    "title": "就......而言",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.473",
+    "title": "在......上",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.474",
+    "title": "以......為主",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.475",
+    "title": "是否",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.476",
+    "title": "如何",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.477",
+    "title": "（更）何況",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.478",
+    "title": "不說......還......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.479",
+    "title": "更別說......了",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.480",
+    "title": "別說......（連）......也......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 20
+  },
+  {
+    "id": "tbcl.481",
+    "title": "此外",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.482",
+    "title": "非但......還......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.483",
+    "title": "小自......大至......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.484",
+    "title": "正如",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.485",
+    "title": "（V）自",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.486",
+    "title": "（V）於",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.487",
+    "title": "至",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.488",
+    "title": "以......為例",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.489",
+    "title": "免得",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.490",
+    "title": "然而",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.491",
+    "title": "不是......而是......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.492",
+    "title": "(不但)不/沒......反而......",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.493",
+    "title": "則",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.494",
+    "title": "而",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.495",
+    "title": "竟",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  },
+  {
+    "id": "tbcl.496",
+    "title": "之",
+    "tbcl_level": "第5級",
+    "source": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=10&deng_ji=all",
+    "status": "planned",
+    "batch": 21
+  }
+]

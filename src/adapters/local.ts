@@ -17,7 +17,7 @@ export function configureSpeech(value?:Partial<SpeechPreferences>){
   preferences={voice:typeof value?.voice==='string'?value.voice:'auto',pace:['slow','normal','brisk'].includes(value?.pace||'')?value!.pace!:'normal'};
 }
 export const speech:SpeechSynthesis={
-  stop(){generation++;finishSpeech?.();finishSpeech=null;pendingAudio?.abort();pendingAudio=null;window.speechSynthesis?.cancel();if(audio){audio.pause();audio=null;}if(audioUrl){URL.revokeObjectURL(audioUrl);audioUrl=null;}},
+  stop(){generation++;audio?.pause();finishSpeech?.();finishSpeech=null;pendingAudio?.abort();pendingAudio=null;window.speechSynthesis?.cancel();audio=null;if(audioUrl){URL.revokeObjectURL(audioUrl);audioUrl=null;}},
   async speak(text){speech.stop();const ticket=generation;
     const choices=window.speechSynthesis?.getVoices().filter(v=>v.lang.toLowerCase()==='zh-tw'&&v.localService)||[];
     const voice=preferences.voice==='auto'?choices[0]:choices.find(v=>'browser:'+v.voiceURI===preferences.voice);
@@ -40,6 +40,19 @@ export const speech:SpeechSynthesis={
   }
 };
 export function downloadJSON(value:unknown,name:string){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+export async function playSamples(steps:{label:string;path:string}[],onStep:(index:number)=>void){
+  speech.stop();const ticket=generation;
+  try{for(let i=0;i<steps.length;i++){
+    if(ticket!==generation)return;onStep(i);
+    await new Promise<void>((resolve,reject)=>{
+      const current=new Audio(steps[i].path);audio=current;
+      const cleanup=()=>{current.onended=null;current.onerror=null;if(audio===current)audio=null;if(finishSpeech===finish)finishSpeech=null;};
+      const finish=()=>{cleanup();onStep(-1);resolve();};finishSpeech=finish;
+      current.onended=finish;current.onerror=()=>{cleanup();reject(new Error('Không mở được âm mẫu local. Kiểm tra lại gói âm thanh.'));};
+      current.play().catch(e=>{cleanup();reject(e);});
+    });
+  }}catch(error){if(ticket===generation)throw error;}finally{if(ticket===generation)onStep(-1);}
+}
 export async function encodeWav(blob:Blob):Promise<Blob>{
   const context=new AudioContext();let buffer:AudioBuffer;
   try{buffer=await context.decodeAudioData(await blob.arrayBuffer());}finally{await context.close();}

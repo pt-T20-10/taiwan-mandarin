@@ -1,5 +1,5 @@
 import {afterEach,describe,expect,it,vi} from 'vitest';
-import {speech,configureSpeech} from './local';
+import {speech,configureSpeech,playSamples} from './local';
 
 class Utterance {
   voice:unknown;lang='';rate=1;
@@ -43,5 +43,24 @@ describe('TTS local và hủy phát',()=>{
     })));
     const pending=speech.speak('你好');speech.stop();await expect(pending).resolves.toBeUndefined();expect(signal?.aborted).toBe(true);
     expect(fetch).toHaveBeenCalledWith('/api/ai/tts',expect.anything());
+  });
+  it('hủy chuỗi âm mẫu dừng audio, xóa highlight và bỏ qua lỗi muộn của chuỗi cũ',async()=>{
+    setup([]);
+    const instances:Sample[]=[];
+    class Sample {
+      onended:(()=>void)|null=null;onerror:(()=>void)|null=null;
+      reject:((error:Error)=>void)|undefined;
+      pause=vi.fn();
+      play=()=>new Promise<void>((_,reject)=>{this.reject=reject;});
+      constructor(public src:string){instances.push(this);}
+    }
+    vi.stubGlobal('Audio',Sample);
+    const first=vi.fn(),second=vi.fn();
+    const old=playSamples([{label:'b',path:'/b.wav'},{label:'a',path:'/a.wav'}],first);
+    const next=playSamples([{label:'nü',path:'/nuu3.mp3'}],second);
+    expect(instances[0].pause).toHaveBeenCalledTimes(1);expect(first).toHaveBeenLastCalledWith(-1);
+    instances[0].reject!(new Error('late abort'));await old;
+    expect(instances).toHaveLength(2);expect(second).toHaveBeenLastCalledWith(0);
+    instances[1].onended!();await next;expect(second).toHaveBeenLastCalledWith(-1);
   });
 });

@@ -1,6 +1,27 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
-Cập nhật 24/09/2026. Không coi số lượng bản nháp hoặc test tự động là chứng nhận nội dung/audio.
+Cập nhật 25/09/2026. Không coi số lượng bản nháp hoặc test tự động là chứng nhận nội dung/audio. Các con số kiểm thử của mốc 23–24/09 bên dưới là lịch sử; kết quả đợt mới nằm ở phần này.
+
+## Đợt bốn tính năng — hoàn tất triển khai và kiểm thử
+
+- [x] Animation 294/294 chữ; chọn chữ, chạy một lần/phát lại/tạm dừng/từng nét/chậm, reduced motion; cấu tạo ẩn trước nộp/gợi ý. Bộ thủ 23 chữ bổ sung đối chiếu MOE; sửa IDS 局/常 và 研 = 石 + 开. Bổ sung bản quyền/ngày/cách sửa từng JSON, giấy phép local. Xem STROKE_SOURCES.md; chấm viết tay vẫn 12 mẫu.
+- [x] Ghép Pinyin 406 âm tiết; 37 WAV thành phần MOE, 1.598 mẫu thanh 1–4 được tham chiếu. Audio thật local, dừng ngay khi đổi âm/route; regression lỗi phát muộn không làm hỏng lượt mới. 26 tổ hợp thiếu và thanh nhẹ báo giới hạn đúng.
+- [x] Route bài theo ID, chuyển bài/chủ đề từ tổng kết, cuối lộ trình tới ôn; reload/Back và phiên dở/tổng kết được giữ.
+- [x] Tab Ngữ pháp: 24 ID cũ, 72 ví dụ khác nhau, 96 bài tập, nguồn/giới hạn/biến thể; lưu tiếp tục/gợi ý kể cả reload, sổ lỗi và tiến độ riêng. Không tự đổi FSRS/số bài nền tảng. Có link tiên quyết.
+- [x] Lộ trình biên soạn B2: 4 nhóm, 12 chủ điểm, 27 lô có mục tiêu/tiên quyết/cấp nguồn; 496 mục tham chiếu lọc theo nhóm/cấp/lô/từ khóa. Tất cả lô vẫn ghi chưa biên soạn đầy đủ. Không quy đổi TBCL sang CEFR.
+- [x] Source cuối ngày 25/09: `npm.cmd run build`, `npm.cmd run content:check`, `npm.cmd test` **23/23**, `.venv\Scripts\python.exe -m pytest -q` **18/18**, `npm.cmd run test:e2e` **29/29 trong một lượt đầy đủ, 2,3 phút**. Lượt trước cũng 29/29 nhưng source được sửa thêm rồi mới chạy lại toàn bộ. Backend có một cảnh báo Starlette/httpx deprecation; chưa thay dependency đã khóa.
+- [x] E2E đi cả 48 bài; media fixture có nhãn TEST, native Windows TTS tạo WAV thật, Pinyin phát WAV/MP3 thật. Chặn mạng ngoài loopback trong các ca offline; desktop/mobile không tràn ngang. Kiểm tra âm thiếu, dừng audio, gợi ý sau reload, navigation/resume, tiên quyết và filter. Xem hình tại `test-results/` (có thể bị lượt sau thay thế).
+- [x] Manifest SHA-256/bytes kiểm tra **1.975 file / 40.741.100 byte** tài sản, chưa tính manifest; Git giữ byte tài sản qua `.gitattributes`. Build copy đủ tài sản sang dist. Không tải lại model hoặc tạo venv.
+- [x] Sau backup/nâng gói, `/api/status` đo **8.270.310.936 / 10.000.000.000 byte** (~8,270 GB): models 6.074.669.223; runtime 2.029.697.983; data 82.364.492; dist 41.451.250; content 1.043.190; public 41.084.798. Data gồm cache/E2E/backup và có thể tăng khi học. Không tính môi trường phát triển `.venv`/`node_modules` theo PLAN.
+- [x] Backup API `data/backups/before-v5-20260925-125640.json`, nâng v4 → v5 qua `/api/packages`. **Toàn bộ state trước/sau bằng nhau: 10 object, 17 sự kiện**; hash state `e3002e2effb27d3fc579ab438edcc49c6bbaa93b1b0a41f8be91ea1736edccba`. Báo cáo local `data/backups/upgrade-v5-20260925-125640.json`; bản gói cũ `data/previous-package.json`. Không restore dữ liệu cá nhân để test.
+- [x] Localhost `http://127.0.0.1:8765` phục vụ build mới/gói v5. Script nâng gói `scripts/upgrade_bundled.py` mặc định chỉ đọc; `--apply` backup rồi gọi transaction, từ chối khi version không mới hơn. Bốn helper tích hợp một lần đã lưu vào `data/archived-integration-2026-09-25/`, không chạy lại.
+
+## Phần cần tiếp tục sau đợt này
+
+- [ ] Nghe duyệt toàn bộ MP3, xác minh vùng giọng, bổ sung 26 tổ hợp thiếu và bộ thanh nhẹ ngữ cảnh khi có nguồn phù hợp; không thay ngầm bằng TTS.
+- [ ] Người dạy rà dáng/thứ tự/hướng 294 chữ, ưu tiên 23 chữ bổ sung và bốn mẫu ghép. Agent đã xem bảng hình tĩnh; không coi đó là giáo viên duyệt. Chưa mở rộng chấm viết tay.
+- [ ] Rà ngôn ngữ 24 mục/72 ví dụ/96 bài tập và nội dung nền tảng cũ theo từng mục; `ready` chỉ xác nhận đủ cấu trúc. Biên soạn tiếp từng lô B2 đầy đủ và đánh giá nghe/nói/đọc/viết; danh mục không được tính là bài đã hoàn thành.
+- [ ] Giữ các hạn chế AI/TTS/ASR, yêu cầu giọng người thật và tiêu chí Windows v1 bên dưới; ASR không chấm phát âm. Android/sync không thuộc đợt này.
 
 ## Đã chạy được
 
@@ -30,9 +51,9 @@ Cập nhật 24/09/2026. Không coi số lượng bản nháp hoặc test tự �
 - [x] Người dùng đã ngắt Internet, sửa câu mới nghe được; ghi âm và nghe lại được. Đây là xác nhận thiết bị/offline cơ bản, không phải xác nhận ASR hoặc biến điệu đạt chuẩn.
 - [ ] Người dùng báo ASR sai, lặp câu gợi dẫn; đã bỏ --prompt và thêm regression test. Giọng TTS bị nhận xét rời từng âm; đã thêm giọng/nhịp và bộ nghe 11 ca. Cần thu lại câu thật sau cập nhật, nghe đánh giá biến điệu và tiếp tục bộ 40 đoạn người thật/30 câu TTS/buổi chat giọng 15 phút.
 - [ ] Chưa đối chiếu toàn bộ 240 từ/24 ngữ pháp/360 bài: 5 từ có source-checked, 235 draft (2 trong số này đã đối chiếu một phần âm). Chưa có giáo viên duyệt/audio được nghe duyệt.
-- [ ] 12 chữ nét chọn lọc đã có nguồn đối chiếu; chưa có dữ liệu nét cho mọi chữ trong từ vựng, chưa kiểm chứng dáng chữ bằng người dạy.
+- [ ] 294 chữ đã có animation và 12 chữ có chấm viết tay chọn lọc; chưa kiểm chứng toàn bộ dáng chữ bằng người dạy.
 - [ ] Chưa đo riêng TTFT hoặc mọi thao tác <200 ms. Bảng latency hiện là thời gian toàn bộ kết quả; không suy ra đạt mục tiêu TTFT.
-- [ ] Chưa triển khai Android, Wi-Fi sync hoặc chương trình B2 (đúng thứ tự PLAN).
+- [ ] Chưa triển khai Android, Wi-Fi sync hoặc chương trình B2 đầy đủ; đã có lộ trình biên soạn theo nhóm.
 
 ## Tiếp tục sau gián đoạn
 

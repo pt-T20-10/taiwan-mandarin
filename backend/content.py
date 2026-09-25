@@ -28,6 +28,17 @@ class Word(Text):
 class Grammar(Text):
     id: str
     explanation: str
+    title: str = ''
+    pattern: str = ''
+    restrictions: str = ''
+    common_mistake: str = ''
+    examples: list[Text] = []
+    exercises: list['Exercise'] = []
+    status: Literal['planned','ready'] = 'planned'
+    group: str = 'Câu cơ bản'
+    level: str = 'Nền tảng'
+    prerequisites: list[str] = []
+    references: list[dict[str,str]] = []
 
 class Exercise(Strict):
     id: str
@@ -39,6 +50,7 @@ class Exercise(Strict):
     tokens: list[str] = []
     explanation: str
     word_id: str | None = None
+    grammar_id: str | None = None
     skill: Literal['vocabulary', 'grammar', 'reading', 'listening', 'writing', 'speaking', 'sound']
     source: str = 'original-ai-draft'
     verification: Literal['draft','source-checked'] = 'draft'
@@ -62,6 +74,26 @@ class Unit(Strict):
     character: str
     lessons: list[Lesson]
 
+class GrammarBatch(Strict):
+    id: str
+    title: str
+    group: str
+    objective: str
+    prerequisites: list[str] = []
+    source_levels: list[str]
+    status: Literal['planned'] = 'planned'
+
+def validate_dependencies(graph):
+    visited,active=set(),set()
+    def visit(node):
+        if node not in graph:raise ValueError('Kiến thức tiên quyết không tồn tại')
+        if node in active:raise ValueError('Kiến thức tiên quyết tạo vòng lặp')
+        if node in visited:return
+        active.add(node)
+        for parent in graph[node]:visit(parent)
+        active.remove(node);visited.add(node)
+    for node in graph:visit(node)
+
 class Content(Strict):
     id: Literal['foundation-tw']
     version: int = Field(ge=1)
@@ -69,19 +101,54 @@ class Content(Strict):
     license: str
     source_note: str
     units: list[Unit] = Field(min_length=1, max_length=100)
+    grammar_roadmap: list[dict] = []
+    grammar_batches: list[GrammarBatch] = []
 
     @model_validator(mode='after')
     def references(self):
         ids = set()
+        all_grammar={g.id for u in self.units for g in u.grammar}
+        validate_dependencies({g.id:g.prerequisites for u in self.units for g in u.grammar})
+        batches={b.id:b for b in self.grammar_batches}
+        if len(batches)!=len(self.grammar_batches):raise ValueError('ID lô ngữ pháp trùng')
+        validate_dependencies({b.id:b.prerequisites for b in self.grammar_batches})
+        if batches:
+            references=set()
+            for row in self.grammar_roadmap:
+                if row['id'] in references:raise ValueError('ID danh mục ngữ pháp trùng')
+                references.add(row['id'])
+                batch=batches.get(row.get('batch_id'))
+                if not batch or row.get('group')!=batch.group or row.get('status')!='planned':
+                    raise ValueError('Liên kết lô ngữ pháp không hợp lệ')
+            for batch in batches.values():
+                rows=[r for r in self.grammar_roadmap if r['batch_id']==batch.id]
+                if not 1<=len(rows)<=24 or set(batch.source_levels)!={r['tbcl_level'] for r in rows}:
+                    raise ValueError('Lô ngữ pháp cần 1–24 mục và đúng cấp nguồn')
         for unit in self.units:
             words = {w.id for w in unit.words}
             grammars = {g.id for g in unit.grammar}
             entities = [unit, *unit.words, *unit.grammar, *unit.lessons]
+            for grammar in unit.grammar:
+                if grammar.status=='ready' and (len(grammar.examples)<3 or len(grammar.exercises)<4 or not grammar.pattern or not grammar.references):
+                    raise ValueError('Ngữ pháp sẵn sàng phải đủ ví dụ, bài tập, cấu trúc và nguồn')
+                if not set(grammar.prerequisites)<=all_grammar or grammar.id in grammar.prerequisites:
+                    raise ValueError('Ngữ pháp tiên quyết không tồn tại')
+                if grammar.status=='ready' and len({e.hanzi for e in grammar.examples})<3:
+                    raise ValueError('Ngữ pháp sẵn sàng cần ít nhất ba ví dụ khác nhau')
+                entities.extend(grammar.exercises)
+                for exercise in grammar.exercises:
+                    if exercise.grammar_id!=grammar.id:raise ValueError('Bài tập sai liên kết ngữ pháp')
+                    if exercise.choices and not set(exercise.answers)<=set(exercise.choices):raise ValueError('Đáp án ngữ pháp không nằm trong lựa chọn')
+                    if len(exercise.choices)!=len(set(exercise.choices)):raise ValueError('Lựa chọn ngữ pháp trùng')
+                    if exercise.tokens:
+                        normal=lambda s:re.sub(r'[\s，。！？、：；「」,.!?]','',s)
+                        if sorted(''.join(exercise.tokens))!=sorted(normal(exercise.answers[0])):raise ValueError('Mảnh ghép ngữ pháp không khớp đáp án')
             for lesson in unit.lessons:
                 if not set(lesson.word_ids) <= words or not set(lesson.grammar_ids) <= grammars:
                     raise ValueError('Tham chiếu bài học không tồn tại')
                 entities.extend(lesson.exercises)
                 for ex in lesson.exercises:
+                    if ex.grammar_id and ex.grammar_id not in grammars:raise ValueError('Tham chiếu ngữ pháp không tồn tại')
                     if ex.word_id and ex.word_id not in words:
                         raise ValueError('Tham chiếu từ không tồn tại')
                     if ex.choices and not set(ex.answers) <= set(ex.choices):

@@ -1,6 +1,6 @@
 import {useEffect,useState} from 'react';
 import {useApp} from '../context';
-import {api,speech,type SpeechPreferences} from '../adapters/local';
+import {api,speech,configureSpeech,type SpeechPreferences} from '../adapters/local';
 import type {Status} from '../core/types';
 
 export function SpeechControls(){
@@ -9,7 +9,7 @@ export function SpeechControls(){
   useEffect(()=>{const update=()=>setVoices(window.speechSynthesis?.getVoices().filter(v=>v.lang.toLowerCase()==='zh-tw'&&v.localService)||[]);
     update();window.speechSynthesis?.addEventListener('voiceschanged',update);api<Status>('/status').then(s=>setNative(s.tts_voices)).catch(e=>notify(e.message));
     return()=>window.speechSynthesis?.removeEventListener('voiceschanged',update);},[]);
-  async function save(next:SpeechPreferences){speech.stop();setBusy(true);try{await put({collection:'settings',id:'speech',expected_version:saved?.version||0,data:next});}catch(e){notify((e as Error).message);}finally{setBusy(false);}}
+  async function save(next:SpeechPreferences){speech.stop();setBusy(true);try{await put({collection:'settings',id:'speech',expected_version:saved?.version||0,data:next});configureSpeech(next);}catch(e){notify((e as Error).message);}finally{setBusy(false);}}
   const available=['auto',...voices.map(v=>'browser:'+v.voiceURI),...native.map(v=>'native:'+v)];
   return <section className="panel"><h2>Giọng đọc và nhịp nói</h2><div className="form-grid">
     <label>Giọng zh-TW local<select aria-label="Giọng zh-TW local" disabled={busy} value={choice.voice} onChange={e=>void save({...choice,voice:e.target.value})}>

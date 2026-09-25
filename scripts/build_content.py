@@ -5,6 +5,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from content.seeds import UNITS, READING
+from content.grammar_details import enrich
+from content.grammar_roadmap import organize
 from backend.content import Content, envelope
 
 def text(row):
@@ -20,6 +22,7 @@ def sentence_tokens(sentence, words):
     return tokens[1:]+tokens[:1]
 
 def build(limit=None):
+    roadmap,batches=organize(json.loads((ROOT/'content/grammar-roadmap.json').read_text(encoding='utf-8')))
     source_checks=json.loads((ROOT/'content/source_checks.json').read_text(encoding='utf-8'))['words']
     units = []
     for slug, title, description, character, rows, grammar_rows, dialogue_rows, writing in UNITS[:limit]:
@@ -31,7 +34,7 @@ def build(limit=None):
             word['id'] = uid + '.w.' + '-'.join(f'{ord(c):x}' for c in fields[0])
             if fields[0] in source_checks:word.update(source_checks[fields[0]])
             words.append(word)
-        grammar = [dict(id=f'{uid}.g.{i+1}', **text(r), explanation=r[3]) for i, r in enumerate(grammar_rows)]
+        grammar = [enrich(dict(id=f'{uid}.g.{i+1}', **text(r), explanation=r[3]),len(units)*2+i,roadmap) for i, r in enumerate(grammar_rows)]
         dialogue = [text(r) for r in dialogue_rows]
         lessons = []
         def exercise(lid, suffix, kind, prompt, answers, explanation, stimulus=None, choices=None, word=None, skill='vocabulary'):
@@ -54,6 +57,7 @@ def build(limit=None):
                 for j,g in enumerate(grammar):
                     item=exercise(lid, f'translate{j}', 'order', 'Sắp xếp hoặc gõ câu theo nghĩa: '+g['vi'], [g['hanzi']], g['explanation'], text(tuple(g[k] for k in ('hanzi','pinyin','vi'))), skill='grammar')
                     item['tokens']=sentence_tokens(g['hanzi'],[w['hanzi'] for w in words])
+                    item['grammar_id']=g['id']
                     exercises.append(item)
                 exercises.append(exercise(lid, 'cloze', 'cloze', 'Điền từ còn thiếu: '+grammar[0]['hanzi'].replace(words[0]['hanzi'],'___') if words[0]['hanzi'] in grammar[0]['hanzi'] else 'Hoàn thành câu bằng cách gõ Hán tự: '+grammar[0]['vi'], [words[0]['hanzi']] if words[0]['hanzi'] in grammar[0]['hanzi'] else [grammar[0]['hanzi']], grammar[0]['explanation'], skill='grammar'))
             if index == 2:
@@ -71,7 +75,11 @@ def build(limit=None):
                 exercises.append(exercise(lid, 'write', 'writing', writing, [grammar[0]['hanzi']], 'Đáp án mẫu chỉ để tham khảo; bài mở không chấm đúng/sai tự động.', skill='writing'))
             lessons.append(dict(id=lid,title=name,objective=description,word_ids=[w['id'] for w in selected],grammar_ids=[g['id'] for g in grammar] if index==1 else [],exercises=exercises))
         units.append(dict(id=uid,title=title,description=description,words=words,grammar=grammar,dialogue=dialogue,writing_prompt=writing,character=character,lessons=lessons))
-    payload = Content.model_validate(dict(id='foundation-tw',version=4,title='Bước đầu đến Đài Loan',license='Original AI-assisted draft; project-authored text. No third-party textbook assets bundled.',source_note='Bản nháp do AI hỗ trợ biên soạn, chưa có giáo viên duyệt. Nguồn để đối chiếu: MOE Taiwan, TBCL và TOCFL; chưa tuyên bố đã đối chiếu từng mục hoặc hoàn thành A1.',units=units)).model_dump()
+    grammars=[g for u in units for g in u['grammar']]
+    dependencies={12:[0],13:[9,10],17:[5],19:[5],20:[3],21:[7],22:[15],23:[1,3]}
+    for index,prerequisites in dependencies.items():
+        if index<len(grammars):grammars[index]['prerequisites']=[grammars[i]['id'] for i in prerequisites]
+    payload = Content.model_validate(dict(id='foundation-tw',version=5,title='Bước đầu đến Đài Loan',license='Original AI-assisted teaching text. TBCL catalog: reference labels and levels only; no textbook examples copied. Local assets carry separate licenses.',source_note='Nội dung do dự án biên soạn; chưa có giáo viên duyệt. Ngữ pháp có tham chiếu TBCL, không đồng nhất cấp TBCL với CEFR/B2. Nét và âm mẫu có nguồn/giấy phép riêng.',units=units,grammar_roadmap=roadmap,grammar_batches=batches)).model_dump()
     (ROOT/'content/foundation.pack.json').write_text(json.dumps(envelope(payload),ensure_ascii=False,indent=2),encoding='utf-8')
     print(f'Built {len(units)} units; {sum(len(u["words"]) for u in units)} words')
 

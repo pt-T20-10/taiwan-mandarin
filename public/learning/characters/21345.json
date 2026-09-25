@@ -1,0 +1,146 @@
+{
+  "character": "卡",
+  "radical": "卜",
+  "decomposition": "⿱上卜",
+  "strokes": [
+    {
+      "outline": "M529,495Q535,571 540,641C541,660 541,660 542,670Q545,733 559,778Q563,790 542,804Q506,823 482,827Q466,831 458,822Q451,815 459,799Q478,772 479,754Q489,633 487,490C487,476 529,481 529,495Z",
+      "median": [
+        [
+          462,
+          820
+        ],
+        [
+          518,
+          772
+        ],
+        [
+          503,
+          485
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M540,641Q591,623 645,640Q690,650 737,663Q758,669 761,672Q771,682 765,691Q755,704 722,709Q697,712 609,683Q579,676 544,671Q541,671 542,670C532,668 531,645 540,641Z",
+      "median": [
+        [
+          541,
+          652
+        ],
+        [
+          760,
+          687
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M516,453Q610,463 898,463Q922,463 927,473Q934,486 914,503Q847,555 779,535Q679,517 529,495C501,492 501,492 487,490Q322,471 131,450Q106,447 124,427Q140,411 162,404Q187,397 206,403Q324,433 458,447Q465,448 473,448C502,451 502,451 516,453Z",
+      "median": [
+        [
+          126,
+          439
+        ],
+        [
+          200,
+          430
+        ],
+        [
+          817,
+          502
+        ],
+        [
+          924,
+          488
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M473,448Q497,405 472,131Q471,121 469,109Q468,84 464,71Q449,32 498,-33Q502,-39 508,-42Q520,-43 525,-30Q538,1 534,33Q528,333 539,419Q542,432 535,438Q525,447 516,453C504,460 468,461 473,448Z",
+      "median": [
+        [
+          481,
+          452
+        ],
+        [
+          511,
+          421
+        ],
+        [
+          497,
+          46
+        ],
+        [
+          512,
+          -35
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M578,330Q627,296 688,244Q709,225 725,223Q735,223 741,235Q751,251 732,295Q716,337 644,350Q598,360 574,363Q564,367 564,353Q565,340 578,330Z",
+      "median": [
+        [
+          572,
+          355
+        ],
+        [
+          684,
+          297
+        ],
+        [
+          733,
+          231
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    }
+  ],
+  "source": "https://github.com/parsimonhi/animCJK/tree/ec5e17cca76c87587790bcbce5ea0b4d4fb753d6",
+  "reference": "https://stroke-order.learningweb.moe.edu.tw/dictView.jsp?ID=21345",
+  "license": "Arphic Public License; dictionary LGPL-3.0",
+  "variant": "Taiwan",
+  "verification": "Đã so số nét và đường đi với MOE bằng công cụ; chưa duyệt dáng chữ",
+  "expected_count": 5,
+  "copyright": "Arphic Technology Co., Ltd. ©1999; AnimCJK FM&SH ©2016–2026",
+  "modification": "2026-09-25: converted to JSON/matrix coordinates; original outlines retained. Derivative outlines remain under APL; no warranty.",
+  "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6",
+  "structure_verification": "Cấu tạo trực quan để nhận hình, chưa thẩm định chuyên môn; không phải giải thích từ nguyên."
+}

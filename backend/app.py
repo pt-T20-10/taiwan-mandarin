@@ -151,6 +151,7 @@ def install_package(package: dict):
                     for kind in ('words','grammar','lessons'):
                         result.update(x['id'] for x in u[kind])
                     for lesson in u['lessons']:result.update(x['id'] for x in lesson['exercises'])
+                    for grammar in u['grammar']:result.update(x['id'] for x in grammar.get('exercises',[]))
                 return result
             if not ids(previous) <= ids(c):
                 raise HTTPException(422,'Gói cập nhật làm mất ID cũ; cần migration nội dung riêng')
@@ -162,7 +163,7 @@ def install_package(package: dict):
 @app.get('/api/status')
 def status():
     sizes = {}
-    for folder in ('models', 'runtime', 'data', 'dist', 'content'):
+    for folder in ('models', 'runtime', 'data', 'dist', 'content', 'public'):
         sizes[folder] = sum(f.stat().st_size for f in (ROOT / folder).rglob('*') if f.is_file()) if (ROOT / folder).exists() else 0
     return {**ai.status(), 'sizes': sizes, 'budget_bytes': 10_000_000_000}
 

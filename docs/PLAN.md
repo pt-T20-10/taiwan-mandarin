@@ -25,7 +25,7 @@ Tài liệu này xác định sản phẩm, thứ tự xây dựng và cách chu
 | Dung lượng | Ngân sách thiết kế 10 GB trên mỗi thiết bị cho bản sử dụng, gồm model và nội dung |
 | Thời gian học | Không áp đặt lịch hoặc số phút/ngày |
 
-Người dùng chưa chốt điểm cuối B2 hay C1–C2. Kế hoạch tạm lấy B2 làm mốc mở rộng chính, thiết kế dữ liệu cho cấp cao hơn; đây không phải quyết định đã được người dùng xác nhận. Bản đầu chỉ chứa một gói nền tảng hoàn chỉnh, không được quảng bá là đã có đủ chương trình B2.
+Ngày 25/09/2026, người dùng đã chốt mở rộng đến B2 theo từng nhóm nội dung hoàn chỉnh. Đợt hiện tại hoàn thiện 24 mục ngữ pháp nền tảng và lập lộ trình biên soạn tiếp; không phải yêu cầu biên soạn toàn bộ B2 trong một đợt. Gói v5 có 27 lô/12 chủ điểm/4 nhóm, mục tiêu và tiên quyết; 496 nhãn TBCL vẫn là danh mục tham chiếu chưa có bài đầy đủ. Không coi danh mục hoặc hoàn thành bài luyện nền tảng là đạt B2. C1–C2 chưa thuộc phạm vi hiện tại.
 
 ### Phần cứng từ ảnh người dùng
 
@@ -408,4 +408,3 @@ Các nguồn đã tham khảo trong phiên lập kế hoạch. Phiên bản cài
 18. [Duolingo Practice tab](https://blog.duolingo.com/guide-to-duolingo-practice-hub/).
 19. [Duolingo spaced repetition](https://blog.duolingo.com/spaced-repetition-for-learning/).
 20. [Duolingo writing activities](https://blog.duolingo.com/covering-all-the-bases-duolingos-approach-to-writing-skills/).
-

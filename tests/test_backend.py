@@ -3,6 +3,8 @@ import json
 import uuid
 import io
 import wave
+import hashlib
+import math
 from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
@@ -12,6 +14,41 @@ from backend.content import bundled, envelope, validate_package
 from backend.ai import ai
 
 HEADERS={'X-Mandarin-Client':'local-ui'}
+
+def test_packaged_character_and_audio_assets_are_complete():
+    root=Path(__file__).resolve().parents[1];content=bundled()['content']
+    manifest=json.loads((root/'public/learning/manifest.json').read_text(encoding='utf-8'))
+    actual={p.relative_to(root/'public/learning').as_posix() for p in (root/'public/learning').rglob('*') if p.is_file() and p.name!='manifest.json'}
+    assert actual=={f['path'] for f in manifest['files']}
+    for file in manifest['files']:
+        data=(root/'public/learning'/file['path']).read_bytes()
+        assert len(data)==file['bytes'] and hashlib.sha256(data).hexdigest()==file['sha256']
+    characters=set(''.join(w['hanzi'] for u in content['units'] for w in u['words']))
+    assert len(characters)==294
+    for char in characters:
+        data=json.loads((root/f'public/learning/characters/{ord(char)}.json').read_text(encoding='utf-8'))
+        assert data['character']==char and data['radical']
+        assert len(data['strokes'])==data['expected_count']
+        pending=1
+        for part in data['decomposition']:
+            assert pending>0,(char,data['decomposition'])
+            pending-=1
+            pending+=3 if part in '⿲⿳' else 2 if part in '⿰⿱⿴⿵⿶⿷⿸⿹⿺⿻' else 0
+        assert not data['decomposition'] or pending==0,(char,data['decomposition'])
+        assert data['copyright'] and '2026-09-25' in data['modification']
+        for stroke in data['strokes']:
+            assert stroke['outline'] and len(stroke['median'])>1
+            assert all(math.isfinite(v) for v in stroke['matrix'])
+    catalog=json.loads((root/'public/learning/pinyin/catalog.json').read_text(encoding='utf-8'))
+    for row in catalog:
+        for sample in row['tones'].values():
+            if sample:
+                path=root/'public'/sample['path'].lstrip('/');data=path.read_bytes()
+                assert len(data)==sample['bytes'] and hashlib.sha256(data).hexdigest()==sample['sha256']
+                assert data[:3]==b'ID3' or data[0]==255
+    files=list((root/'public/learning/pinyin/moe').glob('*.WAV'));assert len(files)==37
+    for file in files:
+        with wave.open(str(file)) as wav:assert wav.getnframes()>0 and wav.getframerate()>0
 
 @pytest.fixture
 def client(tmp_path,monkeypatch):
@@ -38,6 +75,45 @@ def test_content_integrity_and_references():
     with pytest.raises(ValueError):validate_package(envelope(bad))
     bad=copy.deepcopy(c);bad['units'][0]['words'][0]['pinyin']='ni3 hao3'
     with pytest.raises(ValueError):validate_package(envelope(bad))
+
+def test_v4_package_compatibility_and_grammar_upgrade_preserves_learning(client):
+    current=bundled();legacy=copy.deepcopy(current['content']);legacy['version']=4;legacy.pop('grammar_roadmap',None);legacy.pop('grammar_batches',None)
+    for unit in legacy['units']:
+        for grammar in unit['grammar']:
+            for key in ('title','pattern','restrictions','common_mistake','examples','exercises','status','group','level','prerequisites','references'):grammar.pop(key,None)
+        for lesson in unit['lessons']:
+            for ex in lesson['exercises']:ex.pop('grammar_id',None)
+    old=envelope(legacy);validate_package(old)
+    backup=client.get('/api/backup').json();backup['packages']=[{'id':'foundation-tw','version':4,'payload':json.dumps(old,ensure_ascii=False)}]
+    assert client.post('/api/restore',json=backup).status_code==200
+    session={'collection':'sessions','id':legacy['units'][0]['lessons'][0]['id'],'expected_version':0,'data':{'index':2,'phase':'exercise','draft':'保留','answers':[],'run':'test'}}
+    assert client.post('/api/objects',json=session).status_code==200
+    assert client.post('/api/events',json={'event':event('upgrade-test')}).status_code==200
+    before=client.get('/api/state').json()
+    assert client.post('/api/packages',json=current).status_code==200
+    after=client.get('/api/state').json();assert before==after
+    assert len(client.get('/api/content').json()['units'][0]['grammar'][0]['exercises'])==4
+    grammar_session={**session,'id':'grammar:'+legacy['units'][0]['grammar'][0]['id'],'data':{'scope':'grammar','phase':'exercise','index':1,'draft':'是','answers':[],'run':'test-grammar'}}
+    assert client.post('/api/objects',json=grammar_session).status_code==200
+    saved=client.get('/api/backup').json();assert client.post('/api/restore',json=saved).status_code==200
+    assert client.get('/api/state').json()['objects']['sessions'][grammar_session['id']]['data']['draft']=='是'
+
+def test_ready_grammar_requires_examples_and_valid_links():
+    payload=copy.deepcopy(bundled()['content']);payload['units'][0]['grammar'][0]['examples']=[]
+    with pytest.raises(ValueError):validate_package(envelope(payload))
+    payload=copy.deepcopy(bundled()['content']);payload['units'][0]['grammar'][0]['exercises'][0]['grammar_id']='missing'
+    with pytest.raises(ValueError):validate_package(envelope(payload))
+
+def test_prerequisites_and_roadmap_reject_cycles_and_wrong_groups():
+    payload=copy.deepcopy(bundled()['content'])
+    first,second=payload['units'][0]['grammar']
+    first['prerequisites']=[second['id']];second['prerequisites']=[first['id']]
+    with pytest.raises(ValueError,match='vòng lặp'):validate_package(envelope(payload))
+    payload=copy.deepcopy(bundled()['content'])
+    payload['grammar_batches'][0]['prerequisites']=[payload['grammar_batches'][-1]['id']]
+    with pytest.raises(ValueError,match='vòng lặp'):validate_package(envelope(payload))
+    payload=copy.deepcopy(bundled()['content']);payload['grammar_roadmap'][0]['group']='wrong'
+    with pytest.raises(ValueError):validate_package(envelope(payload))
 
 def test_event_idempotency_atomic_conflict(client):
     e=event();body={'event':e,'mutation':mutation()}

@@ -2,7 +2,7 @@
 
 ## Phạm vi và trạng thái
 
-Gói foundation-tw v4 có 12 chủ đề, 48 bài, 240 mục từ, 24 điểm ngữ pháp, 360 bài tập. Có 5 mục từ đã đối chiếu chữ, Pinyin và nghĩa cơ bản với MOE: 先生、太太、名字、朋友、星期; xem content/source_checks.json. 235 mục còn là **bản nháp do AI hỗ trợ**, trong đó 麻煩 và 不客氣 mới đối chiếu một phần âm đọc. Tất cả ngữ pháp/bài tập/audio chưa được giáo viên duyệt. Trạng thái được hiển thị theo từng mục; không gán cấp TBCL/CEFR/TOCFL chưa được chứng minh.
+Gói foundation-tw v5 giữ 12 chủ đề, 48 bài, 240 mục từ, 24 điểm ngữ pháp và 360 bài tập trong bài. Tab Ngữ pháp có thêm 72 ví dụ riêng biệt và 96 bài tập, giữ ID ngữ pháp cũ. Có 5 mục từ đã đối chiếu chữ, Pinyin và nghĩa cơ bản với MOE: 先生、太太、名字、朋友、星期; xem content/source_checks.json. 235 mục còn là **bản nháp do AI hỗ trợ**, trong đó 麻煩 và 不客氣 mới đối chiếu một phần âm đọc. Tất cả ngữ pháp/bài tập/audio chưa được giáo viên duyệt. `ready` nghĩa là đủ cấu trúc để học/luyện, không phải `source-checked` hoặc đạt CEFR.
 
 Nội dung nằm trong content/seeds.py, bộ tạo scripts/build_content.py. Không sửa ID bằng vị trí dòng: từ dùng slug chủ đề + mã Unicode, bài/grammar/exercise dùng khóa cố định. Khi thay nội dung không tái sử dụng ID cũ cho nghĩa khác.
 
@@ -19,7 +19,7 @@ Nội dung nằm trong content/seeds.py, bộ tạo scripts/build_content.py. Kh
 
 Nguồn để đối chiếu tiếp: [MOE từ điển giản biên](https://dict.concised.moe.edu.tw/), [MOE nét chữ](https://stroke-order.learningweb.moe.edu.tw/), [TBCL](https://bcoct.naer.edu.tw/TBCL/), [TOCFL](https://tocfl.edu.tw/tocfl/index.php/teach/download). Đã mở các trang nguồn; chưa được gọi việc này là đối chiếu 240 mục.
 
-Không đóng gói ảnh/audio/định nghĩa từ các trang trên. Văn bản bài học, đáp án, hình CSS và 12 mẫu nét hình học do dự án tự soạn. Nét đã đối chiếu số/thứ tự/hướng theo MOE, ghi phạm vi ở STROKE_SOURCES.md. Không có tài sản giáo trình/audio trả phí. Không tuyên bố nội dung do giáo viên phê duyệt.
+Văn bản bài học, đáp án, hình CSS và 12 mẫu chấm viết tay do dự án tự soạn. V5 bổ sung animation 294 chữ từ AnimCJK (APL/LGPL), 37 WAV MOE (CC BY 4.0) và MP3 Quan thoại bổ sung (Unlicense). MOE outline/HTML chỉ dùng để đối chiếu, không phân phối. Xem [nguồn và giấy phép](../public/learning/ATTRIBUTION.md), [đối chiếu chữ](STROKE_SOURCES.md). Không có tài sản giáo trình/audio trả phí. Không tuyên bố nội dung do giáo viên phê duyệt.
 
 Font Microsoft JhengHei được Windows cung cấp tại máy, không phân phối lại. Audio đọc trực tiếp bằng giọng hệ điều hành/browser local; không xuất audio Windows để phân phối sang Android. Máy đã có zh-TW và người dùng xác nhận nghe câu mới offline được, nhưng báo giọng đọc rời, chưa đạt kiểm tra biến điệu.
 
@@ -37,4 +37,12 @@ Nhận xét “khá liền mạch / còn rời / nghi sai âm / chưa phân bi�
 
 `npm.cmd run content:check` kiểm tra schema, hash, bytes, ID trùng, liên kết bài–từ/ngữ pháp, đáp án trong lựa chọn. Đây là kiểm tra cấu trúc; chưa tự xác minh tính đúng của Pinyin, nghĩa, chuẩn Đài Loan hoặc chất lượng audio.
 
-Lộ trình đối chiếu tiếp: từng mục và chữ đa âm → ghi URL/mục cụ thể, ngày và người đối chiếu → rà câu/đáp án theo ngữ cảnh → nghe voice thật → cập nhật verification từng mục → tăng version và hash. Cập nhật không xóa ID cũ. Mỗi đơn vị hiện có một chữ luyện nét chọn lọc; chưa có bộ nét cho mọi Hán tự trong từ vựng.
+Lộ trình đối chiếu tiếp: từng mục và chữ đa âm → ghi URL/mục cụ thể, ngày và người đối chiếu → rà câu/đáp án theo ngữ cảnh → nghe voice thật → cập nhật verification từng mục → tăng version và hash. Cập nhật không xóa ID cũ. Animation phủ 294 chữ trong từ vựng; chấm viết tay vẫn là 12 mẫu chọn lọc.
+
+## Ngữ pháp và lộ trình biên soạn
+
+`content/grammar_details.py` bổ sung giải thích, giới hạn, lỗi/ngữ cảnh cần sửa, ví dụ, bài tập và tham chiếu theo ID. Đã rà 24 hàng: cloze có nghĩa dự định, 是在 không bị kết luận luôn sai, 會 không bị đồng nhất với 在, có thêm biến thể viết lại ở các câu thời gian/đồng nghĩa. Tập đáp án vẫn có giới hạn; ngoài tập không đồng nghĩa sai ngôn ngữ trong mọi ngữ cảnh. Các câu chưa được giáo viên duyệt và không tự nâng mức kiểm chứng.
+
+`content/grammar-roadmap.json` giữ snapshot 496 nhãn/cấp nguồn. `content/grammar_roadmap.py` phân nhóm biên tập thành 12 chủ điểm, 27 lô tối đa 24 mục, xếp từ cấp nguồn thấp đến cao trong từng chủ điểm và có tiên quyết không vòng lặp. Đây là định hướng biên soạn, không quy đổi TBCL sang CEFR; bộ lọc nhóm/cấp/lô áp dụng cả danh mục chờ soạn. Mỗi lô cần đủ giải thích, ít nhất 3 ví dụ và 4 bài tập mỗi mục, đáp án/biến thể, nguồn, rà ngôn ngữ trước khi chuyển thành nội dung sẵn học. Sau nền tảng tiếp tục thời–thể/bổ ngữ → so sánh/câu phức → lập luận/văn viết; đánh giá nghe/nói/đọc/viết để xác định độ phủ B2 riêng.
+
+Phiên `grammar:<id>` dùng CAS/sự kiện chống trùng, gợi ý được lưu ngay, tạm dừng lưu bản nháp. Đi hết bài luyện chỉ tính cho tab ngữ pháp; không tăng số bài trong 48 bài hoặc tự đổi lịch FSRS.

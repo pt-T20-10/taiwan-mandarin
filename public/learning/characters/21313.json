@@ -1,0 +1,71 @@
+{
+  "character": "十",
+  "radical": "十",
+  "decomposition": "⿸一丨",
+  "strokes": [
+    {
+      "outline": "M541,450C683,465 802,469 901,462C923,461 937,464 940,467C946,477 944,486 935,494C886,538 839,551 793,538C761,530 677,515 542,499C502,494 502,494 482,492C429,486 334,473 290,469C241,465 182,457 112,455C102,455 96,451 96,443C95,435 101,425 116,414C127,406 145,397 168,388C175,386 185,389 199,393C232,404 412,437 482,444C521,448 521,448 541,450Z",
+      "median": [
+        [
+          103,
+          442
+        ],
+        [
+          184,
+          424
+        ],
+        [
+          810,
+          504
+        ],
+        [
+          939,
+          480
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M482,444C482,308 480,254 478,171C474,53 479,-18 495,-40C503,-52 515,-49 521,-34C529,-11 534,58 537,171C538,240 537,299 541,450C542,483 542,483 542,499C545,648 553,735 569,763C575,775 569,787 555,798C537,813 512,823 482,830C467,834 456,831 447,821C440,815 440,808 450,799C469,782 482,763 482,739C482,574 482,574 482,492C482,460 482,460 482,444Z",
+      "median": [
+        [
+          447,
+          812
+        ],
+        [
+          526,
+          760
+        ],
+        [
+          504,
+          -42
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    }
+  ],
+  "source": "https://github.com/parsimonhi/animCJK/tree/ec5e17cca76c87587790bcbce5ea0b4d4fb753d6",
+  "reference": "https://stroke-order.learningweb.moe.edu.tw/dictView.jsp?ID=21313",
+  "license": "Arphic Public License; dictionary LGPL-3.0",
+  "variant": "Taiwan",
+  "verification": "Đã so số nét và đường đi với MOE bằng công cụ; chưa duyệt dáng chữ",
+  "expected_count": 2,
+  "copyright": "Arphic Technology Co., Ltd. ©1999; AnimCJK FM&SH ©2016–2026",
+  "modification": "2026-09-25: converted to JSON/matrix coordinates; original outlines retained. Derivative outlines remain under APL; no warranty.",
+  "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6",
+  "structure_verification": "Cấu tạo trực quan để nhận hình, chưa thẩm định chuyên môn; không phải giải thích từ nguyên."
+}

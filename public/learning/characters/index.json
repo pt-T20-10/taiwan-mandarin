@@ -1,0 +1,1472 @@
+{
+  "一": {
+    "path": "/learning/characters/19968.json",
+    "radical": "一",
+    "decomposition": ""
+  },
+  "七": {
+    "path": "/learning/characters/19971.json",
+    "radical": "一",
+    "decomposition": "⿻一乚"
+  },
+  "三": {
+    "path": "/learning/characters/19977.json",
+    "radical": "一",
+    "decomposition": "⿳一一一"
+  },
+  "上": {
+    "path": "/learning/characters/19978.json",
+    "radical": "一",
+    "decomposition": "⿱⺊一"
+  },
+  "下": {
+    "path": "/learning/characters/19979.json",
+    "radical": "一",
+    "decomposition": "⿱一卜"
+  },
+  "不": {
+    "path": "/learning/characters/19981.json",
+    "radical": "一",
+    "decomposition": "⿸丆卜"
+  },
+  "中": {
+    "path": "/learning/characters/20013.json",
+    "radical": "丨",
+    "decomposition": "⿻口丨"
+  },
+  "九": {
+    "path": "/learning/characters/20061.json",
+    "radical": "乙",
+    "decomposition": "⿻丿乙"
+  },
+  "乾": {
+    "path": "/learning/characters/20094.json",
+    "radical": "乙",
+    "decomposition": "⿰𠦝乞"
+  },
+  "了": {
+    "path": "/learning/characters/20102.json",
+    "radical": "亅",
+    "decomposition": "⿱乛亅"
+  },
+  "二": {
+    "path": "/learning/characters/20108.json",
+    "radical": "二",
+    "decomposition": "⿱一一"
+  },
+  "五": {
+    "path": "/learning/characters/20116.json",
+    "radical": "二",
+    "decomposition": "⿱一𫝀"
+  },
+  "人": {
+    "path": "/learning/characters/20154.json",
+    "radical": "人",
+    "decomposition": "⿸丿㇏"
+  },
+  "什": {
+    "path": "/learning/characters/20160.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻十"
+  },
+  "今": {
+    "path": "/learning/characters/20170.json",
+    "radical": "𠆢 (人)",
+    "decomposition": "⿱亼㇇"
+  },
+  "他": {
+    "path": "/learning/characters/20182.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻也"
+  },
+  "以": {
+    "path": "/learning/characters/20197.json",
+    "radical": "人",
+    "decomposition": "⿲⿱丨㇀丶人"
+  },
+  "件": {
+    "path": "/learning/characters/20214.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻牛"
+  },
+  "休": {
+    "path": "/learning/characters/20241.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻木"
+  },
+  "住": {
+    "path": "/learning/characters/20303.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻主"
+  },
+  "作": {
+    "path": "/learning/characters/20316.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻乍"
+  },
+  "你": {
+    "path": "/learning/characters/20320.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻尔"
+  },
+  "便": {
+    "path": "/learning/characters/20415.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻更"
+  },
+  "係": {
+    "path": "/learning/characters/20418.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻系"
+  },
+  "信": {
+    "path": "/learning/characters/20449.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻言"
+  },
+  "個": {
+    "path": "/learning/characters/20491.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻固"
+  },
+  "們": {
+    "path": "/learning/characters/20497.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻門"
+  },
+  "候": {
+    "path": "/learning/characters/20505.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿲亻丨⿱⿱𠃍一矢"
+  },
+  "借": {
+    "path": "/learning/characters/20511.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻昔"
+  },
+  "備": {
+    "path": "/learning/characters/20633.json",
+    "radical": "亻 (人)",
+    "decomposition": "⿰亻𤰇"
+  },
+  "元": {
+    "path": "/learning/characters/20803.json",
+    "radical": "儿",
+    "decomposition": "⿱一兀"
+  },
+  "先": {
+    "path": "/learning/characters/20808.json",
+    "radical": "儿",
+    "decomposition": "⿱𠂒儿"
+  },
+  "兩": {
+    "path": "/learning/characters/20841.json",
+    "radical": "入",
+    "decomposition": "⿻帀𠓜"
+  },
+  "八": {
+    "path": "/learning/characters/20843.json",
+    "radical": "八",
+    "decomposition": "⿹丿乀"
+  },
+  "公": {
+    "path": "/learning/characters/20844.json",
+    "radical": "八",
+    "decomposition": "⿱八厶"
+  },
+  "六": {
+    "path": "/learning/characters/20845.json",
+    "radical": "八",
+    "decomposition": "⿱亠八"
+  },
+  "再": {
+    "path": "/learning/characters/20877.json",
+    "radical": "冂",
+    "decomposition": "⿱一冉"
+  },
+  "冷": {
+    "path": "/learning/characters/20919.json",
+    "radical": "冫",
+    "decomposition": "⿰冫令"
+  },
+  "分": {
+    "path": "/learning/characters/20998.json",
+    "radical": "刀",
+    "decomposition": "⿱八刀"
+  },
+  "利": {
+    "path": "/learning/characters/21033.json",
+    "radical": "刂 (刀)",
+    "decomposition": "⿰禾刂"
+  },
+  "到": {
+    "path": "/learning/characters/21040.json",
+    "radical": "刂 (刀)",
+    "decomposition": "⿰至刂"
+  },
+  "前": {
+    "path": "/learning/characters/21069.json",
+    "radical": "刂 (刀)",
+    "decomposition": "⿱䒑刖"
+  },
+  "動": {
+    "path": "/learning/characters/21205.json",
+    "radical": "力",
+    "decomposition": "⿰重力"
+  },
+  "務": {
+    "path": "/learning/characters/21209.json",
+    "radical": "力",
+    "decomposition": "⿸敄力"
+  },
+  "十": {
+    "path": "/learning/characters/21313.json",
+    "radical": "十",
+    "decomposition": "⿸一丨"
+  },
+  "午": {
+    "path": "/learning/characters/21320.json",
+    "radical": "十",
+    "decomposition": "⿱𠂉十"
+  },
+  "半": {
+    "path": "/learning/characters/21322.json",
+    "radical": "十",
+    "decomposition": "⿻丷𰀁"
+  },
+  "南": {
+    "path": "/learning/characters/21335.json",
+    "radical": "十",
+    "decomposition": "⿱十⿵冂𢆉"
+  },
+  "卡": {
+    "path": "/learning/characters/21345.json",
+    "radical": "卜",
+    "decomposition": "⿱上卜"
+  },
+  "去": {
+    "path": "/learning/characters/21435.json",
+    "radical": "厶",
+    "decomposition": "⿱土厶"
+  },
+  "友": {
+    "path": "/learning/characters/21451.json",
+    "radical": "又",
+    "decomposition": "⿱𠂇又"
+  },
+  "句": {
+    "path": "/learning/characters/21477.json",
+    "radical": "口",
+    "decomposition": "⿹勹口"
+  },
+  "叫": {
+    "path": "/learning/characters/21483.json",
+    "radical": "口",
+    "decomposition": "⿰口丩"
+  },
+  "可": {
+    "path": "/learning/characters/21487.json",
+    "radical": "口",
+    "decomposition": "⿹丁口"
+  },
+  "右": {
+    "path": "/learning/characters/21491.json",
+    "radical": "口",
+    "decomposition": "⿱𠂇口"
+  },
+  "吃": {
+    "path": "/learning/characters/21507.json",
+    "radical": "口",
+    "decomposition": "⿰口乞"
+  },
+  "同": {
+    "path": "/learning/characters/21516.json",
+    "radical": "口",
+    "decomposition": "⿵冂𠮛"
+  },
+  "名": {
+    "path": "/learning/characters/21517.json",
+    "radical": "口",
+    "decomposition": "⿱夕口"
+  },
+  "告": {
+    "path": "/learning/characters/21578.json",
+    "radical": "口",
+    "decomposition": "⿱𠂒口"
+  },
+  "咖": {
+    "path": "/learning/characters/21654.json",
+    "radical": "口",
+    "decomposition": "⿰口加"
+  },
+  "哥": {
+    "path": "/learning/characters/21733.json",
+    "radical": "口",
+    "decomposition": "⿱可可"
+  },
+  "哪": {
+    "path": "/learning/characters/21738.json",
+    "radical": "口",
+    "decomposition": "⿰口那"
+  },
+  "商": {
+    "path": "/learning/characters/21830.json",
+    "radical": "口",
+    "decomposition": "⿱⿱亠丷冏"
+  },
+  "問": {
+    "path": "/learning/characters/21839.json",
+    "radical": "口",
+    "decomposition": "⿵門口"
+  },
+  "啡": {
+    "path": "/learning/characters/21857.json",
+    "radical": "口",
+    "decomposition": "⿰口非"
+  },
+  "喜": {
+    "path": "/learning/characters/21916.json",
+    "radical": "口",
+    "decomposition": "⿱壴口"
+  },
+  "喝": {
+    "path": "/learning/characters/21917.json",
+    "radical": "口",
+    "decomposition": "⿰口曷"
+  },
+  "單": {
+    "path": "/learning/characters/21934.json",
+    "radical": "口",
+    "decomposition": "⿱吅⿻日十"
+  },
+  "四": {
+    "path": "/learning/characters/22235.json",
+    "radical": "囗",
+    "decomposition": "⿴囗儿"
+  },
+  "回": {
+    "path": "/learning/characters/22238.json",
+    "radical": "囗",
+    "decomposition": "⿴囗口"
+  },
+  "因": {
+    "path": "/learning/characters/22240.json",
+    "radical": "囗",
+    "decomposition": "⿴囗大"
+  },
+  "圖": {
+    "path": "/learning/characters/22294.json",
+    "radical": "囗",
+    "decomposition": "⿴囗啚"
+  },
+  "在": {
+    "path": "/learning/characters/22312.json",
+    "radical": "土",
+    "decomposition": "⿱才土"
+  },
+  "地": {
+    "path": "/learning/characters/22320.json",
+    "radical": "土",
+    "decomposition": "⿰土也"
+  },
+  "址": {
+    "path": "/learning/characters/22336.json",
+    "radical": "土",
+    "decomposition": "⿰土止"
+  },
+  "坐": {
+    "path": "/learning/characters/22352.json",
+    "radical": "土",
+    "decomposition": "⿻从土"
+  },
+  "報": {
+    "path": "/learning/characters/22577.json",
+    "radical": "土",
+    "decomposition": "⿰幸𠬝"
+  },
+  "塊": {
+    "path": "/learning/characters/22602.json",
+    "radical": "土",
+    "decomposition": "⿰土鬼"
+  },
+  "多": {
+    "path": "/learning/characters/22810.json",
+    "radical": "夕",
+    "decomposition": "⿱夕夕"
+  },
+  "大": {
+    "path": "/learning/characters/22823.json",
+    "radical": "大",
+    "decomposition": "⿻一人"
+  },
+  "天": {
+    "path": "/learning/characters/22825.json",
+    "radical": "大",
+    "decomposition": "⿻一大"
+  },
+  "太": {
+    "path": "/learning/characters/22826.json",
+    "radical": "大",
+    "decomposition": "⿻大丶"
+  },
+  "奶": {
+    "path": "/learning/characters/22902.json",
+    "radical": "女",
+    "decomposition": "⿰女乃"
+  },
+  "她": {
+    "path": "/learning/characters/22905.json",
+    "radical": "女",
+    "decomposition": "⿰女也"
+  },
+  "好": {
+    "path": "/learning/characters/22909.json",
+    "radical": "女",
+    "decomposition": "⿰女子"
+  },
+  "妹": {
+    "path": "/learning/characters/22969.json",
+    "radical": "女",
+    "decomposition": "⿰女未"
+  },
+  "始": {
+    "path": "/learning/characters/22987.json",
+    "radical": "女",
+    "decomposition": "⿰女台"
+  },
+  "姐": {
+    "path": "/learning/characters/22992.json",
+    "radical": "女",
+    "decomposition": "⿰女且"
+  },
+  "媽": {
+    "path": "/learning/characters/23229.json",
+    "radical": "女",
+    "decomposition": "⿰女馬"
+  },
+  "子": {
+    "path": "/learning/characters/23376.json",
+    "radical": "子",
+    "decomposition": "⿻了一"
+  },
+  "字": {
+    "path": "/learning/characters/23383.json",
+    "radical": "子",
+    "decomposition": "⿱宀子"
+  },
+  "孩": {
+    "path": "/learning/characters/23401.json",
+    "radical": "子",
+    "decomposition": "⿰子亥"
+  },
+  "學": {
+    "path": "/learning/characters/23416.json",
+    "radical": "子",
+    "decomposition": "⿱𦥯子"
+  },
+  "安": {
+    "path": "/learning/characters/23433.json",
+    "radical": "宀",
+    "decomposition": "⿱宀女"
+  },
+  "宜": {
+    "path": "/learning/characters/23452.json",
+    "radical": "宀",
+    "decomposition": "⿱宀且"
+  },
+  "客": {
+    "path": "/learning/characters/23458.json",
+    "radical": "宀",
+    "decomposition": "⿱宀各"
+  },
+  "室": {
+    "path": "/learning/characters/23460.json",
+    "radical": "宀",
+    "decomposition": "⿱宀至"
+  },
+  "家": {
+    "path": "/learning/characters/23478.json",
+    "radical": "宀",
+    "decomposition": "⿱宀豕"
+  },
+  "宿": {
+    "path": "/learning/characters/23487.json",
+    "radical": "宀",
+    "decomposition": "⿱宀佰"
+  },
+  "寄": {
+    "path": "/learning/characters/23492.json",
+    "radical": "宀",
+    "decomposition": "⿱宀奇"
+  },
+  "寫": {
+    "path": "/learning/characters/23531.json",
+    "radical": "宀",
+    "decomposition": "⿱宀舄"
+  },
+  "對": {
+    "path": "/learning/characters/23565.json",
+    "radical": "寸",
+    "decomposition": "⿰⿱业𦍌寸"
+  },
+  "小": {
+    "path": "/learning/characters/23567.json",
+    "radical": "小",
+    "decomposition": "⿻亅八"
+  },
+  "少": {
+    "path": "/learning/characters/23569.json",
+    "radical": "小",
+    "decomposition": "⿱小丿"
+  },
+  "局": {
+    "path": "/learning/characters/23616.json",
+    "radical": "尸",
+    "decomposition": "⿸尸⿹𠃌口"
+  },
+  "工": {
+    "path": "/learning/characters/24037.json",
+    "radical": "工",
+    "decomposition": "⿱一丄"
+  },
+  "左": {
+    "path": "/learning/characters/24038.json",
+    "radical": "工",
+    "decomposition": "⿱𠂇工"
+  },
+  "已": {
+    "path": "/learning/characters/24050.json",
+    "radical": "已 (己)",
+    "decomposition": "⿺乚⿱𠃍一"
+  },
+  "市": {
+    "path": "/learning/characters/24066.json",
+    "radical": "巾",
+    "decomposition": "⿱亠巾"
+  },
+  "師": {
+    "path": "/learning/characters/24107.json",
+    "radical": "巾",
+    "decomposition": "⿰𠂤帀"
+  },
+  "常": {
+    "path": "/learning/characters/24120.json",
+    "radical": "巾",
+    "decomposition": "⿱龸吊"
+  },
+  "幫": {
+    "path": "/learning/characters/24171.json",
+    "radical": "巾",
+    "decomposition": "⿱封帛"
+  },
+  "床": {
+    "path": "/learning/characters/24202.json",
+    "radical": "广",
+    "decomposition": "⿸广木"
+  },
+  "店": {
+    "path": "/learning/characters/24215.json",
+    "radical": "广",
+    "decomposition": "⿸广占"
+  },
+  "廁": {
+    "path": "/learning/characters/24257.json",
+    "radical": "广",
+    "decomposition": "⿸广則"
+  },
+  "廚": {
+    "path": "/learning/characters/24282.json",
+    "radical": "广",
+    "decomposition": "⿸广尌"
+  },
+  "弟": {
+    "path": "/learning/characters/24351.json",
+    "radical": "弓",
+    "decomposition": "⿱丷𢎨"
+  },
+  "影": {
+    "path": "/learning/characters/24433.json",
+    "radical": "彡",
+    "decomposition": "⿰景彡"
+  },
+  "後": {
+    "path": "/learning/characters/24460.json",
+    "radical": "彳",
+    "decomposition": "⿰彳⿱幺夊"
+  },
+  "忙": {
+    "path": "/learning/characters/24537.json",
+    "radical": "忄 (心)",
+    "decomposition": "⿰忄亡"
+  },
+  "怎": {
+    "path": "/learning/characters/24590.json",
+    "radical": "心",
+    "decomposition": "⿱乍心"
+  },
+  "思": {
+    "path": "/learning/characters/24605.json",
+    "radical": "心",
+    "decomposition": "⿱田心"
+  },
+  "息": {
+    "path": "/learning/characters/24687.json",
+    "radical": "心",
+    "decomposition": "⿱自心"
+  },
+  "悠": {
+    "path": "/learning/characters/24736.json",
+    "radical": "心",
+    "decomposition": "⿱攸心"
+  },
+  "您": {
+    "path": "/learning/characters/24744.json",
+    "radical": "心",
+    "decomposition": "⿱你心"
+  },
+  "意": {
+    "path": "/learning/characters/24847.json",
+    "radical": "心",
+    "decomposition": "⿱音心"
+  },
+  "慢": {
+    "path": "/learning/characters/24930.json",
+    "radical": "忄 (心)",
+    "decomposition": "⿰忄曼"
+  },
+  "懂": {
+    "path": "/learning/characters/25026.json",
+    "radical": "忄 (心)",
+    "decomposition": "⿰忄董"
+  },
+  "我": {
+    "path": "/learning/characters/25105.json",
+    "radical": "戈",
+    "decomposition": "⿻千戈"
+  },
+  "戶": {
+    "path": "/learning/characters/25142.json",
+    "radical": "戶",
+    "decomposition": ""
+  },
+  "房": {
+    "path": "/learning/characters/25151.json",
+    "radical": "戶",
+    "decomposition": "⿸戶方"
+  },
+  "所": {
+    "path": "/learning/characters/25152.json",
+    "radical": "戶",
+    "decomposition": "⿰戶斤"
+  },
+  "手": {
+    "path": "/learning/characters/25163.json",
+    "radical": "手",
+    "decomposition": "⿻𠂌一"
+  },
+  "找": {
+    "path": "/learning/characters/25214.json",
+    "radical": "扌 (手)",
+    "decomposition": "⿰扌戈"
+  },
+  "捷": {
+    "path": "/learning/characters/25463.json",
+    "radical": "手",
+    "decomposition": "⿰扌疌"
+  },
+  "授": {
+    "path": "/learning/characters/25480.json",
+    "radical": "手",
+    "decomposition": "⿰扌受"
+  },
+  "收": {
+    "path": "/learning/characters/25910.json",
+    "radical": "攵 (攴)",
+    "decomposition": "⿰丩攵"
+  },
+  "教": {
+    "path": "/learning/characters/25945.json",
+    "radical": "攵 (攴)",
+    "decomposition": "⿰孝攵"
+  },
+  "文": {
+    "path": "/learning/characters/25991.json",
+    "radical": "文",
+    "decomposition": "⿱亠乂"
+  },
+  "料": {
+    "path": "/learning/characters/26009.json",
+    "radical": "斗",
+    "decomposition": "⿰米斗"
+  },
+  "斤": {
+    "path": "/learning/characters/26020.json",
+    "radical": "斤",
+    "decomposition": "⿸𠂆丅"
+  },
+  "方": {
+    "path": "/learning/characters/26041.json",
+    "radical": "方",
+    "decomposition": "⿱丶万"
+  },
+  "早": {
+    "path": "/learning/characters/26089.json",
+    "radical": "日",
+    "decomposition": "⿱日十"
+  },
+  "明": {
+    "path": "/learning/characters/26126.json",
+    "radical": "日",
+    "decomposition": "⿰日月"
+  },
+  "星": {
+    "path": "/learning/characters/26143.json",
+    "radical": "日",
+    "decomposition": "⿱日生"
+  },
+  "昨": {
+    "path": "/learning/characters/26152.json",
+    "radical": "日",
+    "decomposition": "⿰日乍"
+  },
+  "是": {
+    "path": "/learning/characters/26159.json",
+    "radical": "日",
+    "decomposition": "⿱日𤴓"
+  },
+  "時": {
+    "path": "/learning/characters/26178.json",
+    "radical": "日",
+    "decomposition": "⿰日寺"
+  },
+  "晚": {
+    "path": "/learning/characters/26202.json",
+    "radical": "日",
+    "decomposition": "⿰日免"
+  },
+  "書": {
+    "path": "/learning/characters/26360.json",
+    "radical": "曰",
+    "decomposition": "⿱聿曰"
+  },
+  "會": {
+    "path": "/learning/characters/26371.json",
+    "radical": "曰",
+    "decomposition": "⿱曾曰"
+  },
+  "有": {
+    "path": "/learning/characters/26377.json",
+    "radical": "月",
+    "decomposition": "⿱𠂇月"
+  },
+  "朋": {
+    "path": "/learning/characters/26379.json",
+    "radical": "月",
+    "decomposition": "⿰月月"
+  },
+  "服": {
+    "path": "/learning/characters/26381.json",
+    "radical": "月",
+    "decomposition": "⿰月𠬝"
+  },
+  "期": {
+    "path": "/learning/characters/26399.json",
+    "radical": "月",
+    "decomposition": "⿰其月"
+  },
+  "末": {
+    "path": "/learning/characters/26411.json",
+    "radical": "木",
+    "decomposition": "⿻一木"
+  },
+  "本": {
+    "path": "/learning/characters/26412.json",
+    "radical": "木",
+    "decomposition": "⿻木一"
+  },
+  "束": {
+    "path": "/learning/characters/26463.json",
+    "radical": "木",
+    "decomposition": "⿻木口"
+  },
+  "杯": {
+    "path": "/learning/characters/26479.json",
+    "radical": "木",
+    "decomposition": "⿰木不"
+  },
+  "東": {
+    "path": "/learning/characters/26481.json",
+    "radical": "木",
+    "decomposition": "⿻木日"
+  },
+  "果": {
+    "path": "/learning/characters/26524.json",
+    "radical": "木",
+    "decomposition": "⿻田木"
+  },
+  "校": {
+    "path": "/learning/characters/26657.json",
+    "radical": "木",
+    "decomposition": "⿰木交"
+  },
+  "桌": {
+    "path": "/learning/characters/26700.json",
+    "radical": "木",
+    "decomposition": "⿱⺊杲"
+  },
+  "椅": {
+    "path": "/learning/characters/26885.json",
+    "radical": "木",
+    "decomposition": "⿰木奇"
+  },
+  "業": {
+    "path": "/learning/characters/26989.json",
+    "radical": "木",
+    "decomposition": "⿱业𦍎"
+  },
+  "樂": {
+    "path": "/learning/characters/27138.json",
+    "radical": "木",
+    "decomposition": "⿱⿻𢆶白木"
+  },
+  "機": {
+    "path": "/learning/characters/27231.json",
+    "radical": "木",
+    "decomposition": "⿰木幾"
+  },
+  "歡": {
+    "path": "/learning/characters/27489.json",
+    "radical": "欠",
+    "decomposition": "⿰雚欠"
+  },
+  "步": {
+    "path": "/learning/characters/27493.json",
+    "radical": "止",
+    "decomposition": "⿱止𣥂"
+  },
+  "歲": {
+    "path": "/learning/characters/27506.json",
+    "radical": "止",
+    "decomposition": "⿱止⿵戌𣥂"
+  },
+  "每": {
+    "path": "/learning/characters/27599.json",
+    "radical": "母 (毋)",
+    "decomposition": "⿱𠂉母"
+  },
+  "氣": {
+    "path": "/learning/characters/27683.json",
+    "radical": "气",
+    "decomposition": "⿱气米"
+  },
+  "水": {
+    "path": "/learning/characters/27700.json",
+    "radical": "水",
+    "decomposition": "⿲㇇亅⿱丿㇏"
+  },
+  "沒": {
+    "path": "/learning/characters/27794.json",
+    "radical": "氵 (水)",
+    "decomposition": "⿰氵𠬛"
+  },
+  "泳": {
+    "path": "/learning/characters/27891.json",
+    "radical": "氵 (水)",
+    "decomposition": "⿰氵永"
+  },
+  "洗": {
+    "path": "/learning/characters/27927.json",
+    "radical": "氵 (水)",
+    "decomposition": "⿰氵先"
+  },
+  "浴": {
+    "path": "/learning/characters/28020.json",
+    "radical": "水",
+    "decomposition": "⿰氵谷"
+  },
+  "淨": {
+    "path": "/learning/characters/28136.json",
+    "radical": "氵 (水)",
+    "decomposition": "⿰氵爭"
+  },
+  "游": {
+    "path": "/learning/characters/28216.json",
+    "radical": "氵 (水)",
+    "decomposition": "⿰氵斿"
+  },
+  "準": {
+    "path": "/learning/characters/28310.json",
+    "radical": "氵 (水)",
+    "decomposition": "⿱淮十"
+  },
+  "澡": {
+    "path": "/learning/characters/28577.json",
+    "radical": "氵 (水)",
+    "decomposition": "⿰氵喿"
+  },
+  "灣": {
+    "path": "/learning/characters/28771.json",
+    "radical": "水",
+    "decomposition": "⿰氵⿱䜌弓"
+  },
+  "火": {
+    "path": "/learning/characters/28779.json",
+    "radical": "火",
+    "decomposition": "⿻⿰丿丿人"
+  },
+  "為": {
+    "path": "/learning/characters/28858.json",
+    "radical": "灬 (火)",
+    "decomposition": "⿵⿻⿻丶丿⿳𠃌𠃌𠃌灬"
+  },
+  "煩": {
+    "path": "/learning/characters/29033.json",
+    "radical": "火",
+    "decomposition": "⿰火頁"
+  },
+  "爸": {
+    "path": "/learning/characters/29240.json",
+    "radical": "父",
+    "decomposition": "⿱父巴"
+  },
+  "牛": {
+    "path": "/learning/characters/29275.json",
+    "radical": "牛",
+    "decomposition": "⿻𠂉十"
+  },
+  "現": {
+    "path": "/learning/characters/29694.json",
+    "radical": "王 (玉)",
+    "decomposition": "⿰王見"
+  },
+  "生": {
+    "path": "/learning/characters/29983.json",
+    "radical": "生",
+    "decomposition": "⿻𠂉土"
+  },
+  "用": {
+    "path": "/learning/characters/29992.json",
+    "radical": "用",
+    "decomposition": "⿻月丨"
+  },
+  "發": {
+    "path": "/learning/characters/30332.json",
+    "radical": "癶",
+    "decomposition": "⿱癶𭚧"
+  },
+  "百": {
+    "path": "/learning/characters/30334.json",
+    "radical": "白",
+    "decomposition": "⿱一白"
+  },
+  "看": {
+    "path": "/learning/characters/30475.json",
+    "radical": "目",
+    "decomposition": "⿱龵目"
+  },
+  "睡": {
+    "path": "/learning/characters/30561.json",
+    "radical": "目",
+    "decomposition": "⿰目垂"
+  },
+  "知": {
+    "path": "/learning/characters/30693.json",
+    "radical": "矢",
+    "decomposition": "⿰矢口"
+  },
+  "研": {
+    "path": "/learning/characters/30740.json",
+    "radical": "石",
+    "decomposition": "⿰石开"
+  },
+  "碗": {
+    "path": "/learning/characters/30871.json",
+    "radical": "石",
+    "decomposition": "⿰石宛"
+  },
+  "碼": {
+    "path": "/learning/characters/30908.json",
+    "radical": "石",
+    "decomposition": "⿰石馬"
+  },
+  "票": {
+    "path": "/learning/characters/31080.json",
+    "radical": "示",
+    "decomposition": "⿱覀示"
+  },
+  "租": {
+    "path": "/learning/characters/31199.json",
+    "radical": "禾",
+    "decomposition": "⿰禾且"
+  },
+  "程": {
+    "path": "/learning/characters/31243.json",
+    "radical": "禾",
+    "decomposition": "⿰禾呈"
+  },
+  "究": {
+    "path": "/learning/characters/31350.json",
+    "radical": "穴",
+    "decomposition": "⿱穴九"
+  },
+  "空": {
+    "path": "/learning/characters/31354.json",
+    "radical": "穴",
+    "decomposition": "⿱穴工"
+  },
+  "窗": {
+    "path": "/learning/characters/31383.json",
+    "radical": "穴",
+    "decomposition": "⿱穴囱"
+  },
+  "站": {
+    "path": "/learning/characters/31449.json",
+    "radical": "立",
+    "decomposition": "⿰立占"
+  },
+  "筆": {
+    "path": "/learning/characters/31558.json",
+    "radical": "𥫗 (竹)",
+    "decomposition": "⿱𥫗聿"
+  },
+  "約": {
+    "path": "/learning/characters/32004.json",
+    "radical": "糹 (糸)",
+    "decomposition": "⿰糹勺"
+  },
+  "素": {
+    "path": "/learning/characters/32032.json",
+    "radical": "糸",
+    "decomposition": "⿱龶糸"
+  },
+  "結": {
+    "path": "/learning/characters/32080.json",
+    "radical": "糹 (糸)",
+    "decomposition": "⿰糹吉"
+  },
+  "經": {
+    "path": "/learning/characters/32147.json",
+    "radical": "糹 (糸)",
+    "decomposition": "⿰糹巠"
+  },
+  "網": {
+    "path": "/learning/characters/32178.json",
+    "radical": "糹 (糸)",
+    "decomposition": "⿰糹罔"
+  },
+  "老": {
+    "path": "/learning/characters/32769.json",
+    "radical": "老",
+    "decomposition": "⿱耂匕"
+  },
+  "考": {
+    "path": "/learning/characters/32771.json",
+    "radical": "耂 (老)",
+    "decomposition": "⿸耂丂"
+  },
+  "聽": {
+    "path": "/learning/characters/32893.json",
+    "radical": "耳",
+    "decomposition": "⿰⿹耳𡈼𢛳"
+  },
+  "腦": {
+    "path": "/learning/characters/33126.json",
+    "radical": "月",
+    "decomposition": "⿰月𡿺"
+  },
+  "腳": {
+    "path": "/learning/characters/33139.json",
+    "radical": "月",
+    "decomposition": "⿰月卻"
+  },
+  "臺": {
+    "path": "/learning/characters/33274.json",
+    "radical": "至",
+    "decomposition": "⿱吉⿱冖至"
+  },
+  "舍": {
+    "path": "/learning/characters/33293.json",
+    "radical": "舌",
+    "decomposition": "⿱亼古"
+  },
+  "英": {
+    "path": "/learning/characters/33521.json",
+    "radical": "艹 (艸)",
+    "decomposition": "⿱艹央"
+  },
+  "茶": {
+    "path": "/learning/characters/33590.json",
+    "radical": "艹 (艸)",
+    "decomposition": "⿳艹𠆢木"
+  },
+  "菜": {
+    "path": "/learning/characters/33756.json",
+    "radical": "艹 (艸)",
+    "decomposition": "⿰艹采"
+  },
+  "華": {
+    "path": "/learning/characters/33775.json",
+    "radical": "艹 (艸)",
+    "decomposition": "⿱艹⿻丅⿱艹二"
+  },
+  "蘋": {
+    "path": "/learning/characters/34315.json",
+    "radical": "艹 (艸)",
+    "decomposition": "⿰艹頻"
+  },
+  "號": {
+    "path": "/learning/characters/34399.json",
+    "radical": "虍",
+    "decomposition": "⿰号虎"
+  },
+  "袋": {
+    "path": "/learning/characters/34955.json",
+    "radical": "衣",
+    "decomposition": "⿱代衣"
+  },
+  "裡": {
+    "path": "/learning/characters/35041.json",
+    "radical": "衤 (衣)",
+    "decomposition": "⿰衤里"
+  },
+  "要": {
+    "path": "/learning/characters/35201.json",
+    "radical": "覀 (襾)",
+    "decomposition": "⿱覀女"
+  },
+  "見": {
+    "path": "/learning/characters/35211.json",
+    "radical": "見",
+    "decomposition": "⿱目儿"
+  },
+  "覺": {
+    "path": "/learning/characters/35258.json",
+    "radical": "見",
+    "decomposition": "⿱𦥯見"
+  },
+  "計": {
+    "path": "/learning/characters/35336.json",
+    "radical": "言",
+    "decomposition": "⿰言十"
+  },
+  "討": {
+    "path": "/learning/characters/35342.json",
+    "radical": "言",
+    "decomposition": "⿰言寸"
+  },
+  "詞": {
+    "path": "/learning/characters/35422.json",
+    "radical": "言",
+    "decomposition": "⿰言司"
+  },
+  "試": {
+    "path": "/learning/characters/35430.json",
+    "radical": "言",
+    "decomposition": "⿰言式"
+  },
+  "話": {
+    "path": "/learning/characters/35441.json",
+    "radical": "言",
+    "decomposition": "⿰言舌"
+  },
+  "語": {
+    "path": "/learning/characters/35486.json",
+    "radical": "言",
+    "decomposition": "⿰言吾"
+  },
+  "說": {
+    "path": "/learning/characters/35498.json",
+    "radical": "言",
+    "decomposition": "⿰言兌"
+  },
+  "誰": {
+    "path": "/learning/characters/35504.json",
+    "radical": "言",
+    "decomposition": "⿰言隹"
+  },
+  "課": {
+    "path": "/learning/characters/35506.json",
+    "radical": "言",
+    "decomposition": "⿰言果"
+  },
+  "請": {
+    "path": "/learning/characters/35531.json",
+    "radical": "言",
+    "decomposition": "⿰言青"
+  },
+  "論": {
+    "path": "/learning/characters/35542.json",
+    "radical": "言",
+    "decomposition": "⿰言侖"
+  },
+  "謝": {
+    "path": "/learning/characters/35613.json",
+    "radical": "言",
+    "decomposition": "⿰言射"
+  },
+  "讀": {
+    "path": "/learning/characters/35712.json",
+    "radical": "言",
+    "decomposition": "⿰言賣"
+  },
+  "貴": {
+    "path": "/learning/characters/36020.json",
+    "radical": "貝",
+    "decomposition": "⿱𠀐貝"
+  },
+  "買": {
+    "path": "/learning/characters/36023.json",
+    "radical": "貝",
+    "decomposition": "⿱罒貝"
+  },
+  "資": {
+    "path": "/learning/characters/36039.json",
+    "radical": "貝",
+    "decomposition": "⿱次貝"
+  },
+  "賣": {
+    "path": "/learning/characters/36067.json",
+    "radical": "貝",
+    "decomposition": "⿱士買"
+  },
+  "走": {
+    "path": "/learning/characters/36208.json",
+    "radical": "走",
+    "decomposition": "⿱土龰"
+  },
+  "起": {
+    "path": "/learning/characters/36215.json",
+    "radical": "走",
+    "decomposition": "⿺走巳"
+  },
+  "超": {
+    "path": "/learning/characters/36229.json",
+    "radical": "走",
+    "decomposition": "⿺走召"
+  },
+  "越": {
+    "path": "/learning/characters/36234.json",
+    "radical": "走",
+    "decomposition": "⿺走戉"
+  },
+  "跑": {
+    "path": "/learning/characters/36305.json",
+    "radical": "𧾷 (足)",
+    "decomposition": "⿰𧾷包"
+  },
+  "路": {
+    "path": "/learning/characters/36335.json",
+    "radical": "𧾷 (足)",
+    "decomposition": "⿰𧾷各"
+  },
+  "踏": {
+    "path": "/learning/characters/36367.json",
+    "radical": "足",
+    "decomposition": "⿰𧾷沓"
+  },
+  "車": {
+    "path": "/learning/characters/36554.json",
+    "radical": "車",
+    "decomposition": "⿻亘丨"
+  },
+  "辣": {
+    "path": "/learning/characters/36771.json",
+    "radical": "辛",
+    "decomposition": "⿰辛束"
+  },
+  "辦": {
+    "path": "/learning/characters/36774.json",
+    "radical": "辛",
+    "decomposition": "⿻辡力"
+  },
+  "近": {
+    "path": "/learning/characters/36817.json",
+    "radical": "⻎ (辵)",
+    "decomposition": "⿺⻎斤"
+  },
+  "這": {
+    "path": "/learning/characters/36889.json",
+    "radical": "⻎ (辵)",
+    "decomposition": "⿺⻎言"
+  },
+  "週": {
+    "path": "/learning/characters/36913.json",
+    "radical": "⻎ (辵)",
+    "decomposition": "⿺⻎周"
+  },
+  "遊": {
+    "path": "/learning/characters/36938.json",
+    "radical": "⻎ (辵)",
+    "decomposition": "⿺⻎斿"
+  },
+  "運": {
+    "path": "/learning/characters/36939.json",
+    "radical": "⻎ (辵)",
+    "decomposition": "⿺⻎軍"
+  },
+  "道": {
+    "path": "/learning/characters/36947.json",
+    "radical": "⻎ (辵)",
+    "decomposition": "⿺⻎首"
+  },
+  "遠": {
+    "path": "/learning/characters/36960.json",
+    "radical": "⻎ (辵)",
+    "decomposition": "⿺⻎袁"
+  },
+  "還": {
+    "path": "/learning/characters/36996.json",
+    "radical": "⻎ (辵)",
+    "decomposition": "⿺⻎睘"
+  },
+  "邊": {
+    "path": "/learning/characters/37002.json",
+    "radical": "⻎ (辵)",
+    "decomposition": "⿺⻎臱"
+  },
+  "那": {
+    "path": "/learning/characters/37027.json",
+    "radical": "阝 (阜)",
+    "decomposition": "⿰⿻刀二阝"
+  },
+  "郵": {
+    "path": "/learning/characters/37109.json",
+    "radical": "阝 (阜)",
+    "decomposition": "⿰垂阝"
+  },
+  "醫": {
+    "path": "/learning/characters/37291.json",
+    "radical": "酉",
+    "decomposition": "⿱殹酉"
+  },
+  "金": {
+    "path": "/learning/characters/37329.json",
+    "radical": "金",
+    "decomposition": "⿱𫢉䒑"
+  },
+  "錢": {
+    "path": "/learning/characters/37666.json",
+    "radical": "金",
+    "decomposition": "⿰金戔"
+  },
+  "鐵": {
+    "path": "/learning/characters/37941.json",
+    "radical": "金",
+    "decomposition": "⿰金𢧜"
+  },
+  "門": {
+    "path": "/learning/characters/38272.json",
+    "radical": "門",
+    "decomposition": "⿰𠁣𠃛"
+  },
+  "開": {
+    "path": "/learning/characters/38283.json",
+    "radical": "門",
+    "decomposition": "⿵門开"
+  },
+  "間": {
+    "path": "/learning/characters/38291.json",
+    "radical": "門",
+    "decomposition": "⿵門日"
+  },
+  "關": {
+    "path": "/learning/characters/38364.json",
+    "radical": "門",
+    "decomposition": "⿵門𢇇"
+  },
+  "附": {
+    "path": "/learning/characters/38468.json",
+    "radical": "阝 (阜)",
+    "decomposition": "⿰阝付"
+  },
+  "院": {
+    "path": "/learning/characters/38498.json",
+    "radical": "阝 (阜)",
+    "decomposition": "⿰阝完"
+  },
+  "零": {
+    "path": "/learning/characters/38646.json",
+    "radical": "雨",
+    "decomposition": "⿱雨令"
+  },
+  "電": {
+    "path": "/learning/characters/38651.json",
+    "radical": "雨",
+    "decomposition": "⿱雨电"
+  },
+  "需": {
+    "path": "/learning/characters/38656.json",
+    "radical": "雨",
+    "decomposition": "⿱雨而"
+  },
+  "靜": {
+    "path": "/learning/characters/38748.json",
+    "radical": "青 (靑)",
+    "decomposition": "⿰青爭"
+  },
+  "面": {
+    "path": "/learning/characters/38754.json",
+    "radical": "面",
+    "decomposition": "⿱丆囬"
+  },
+  "音": {
+    "path": "/learning/characters/38899.json",
+    "radical": "音",
+    "decomposition": "⿱立日"
+  },
+  "預": {
+    "path": "/learning/characters/38928.json",
+    "radical": "頁",
+    "decomposition": "⿰予頁"
+  },
+  "題": {
+    "path": "/learning/characters/38988.json",
+    "radical": "頁",
+    "decomposition": "⿺是頁"
+  },
+  "食": {
+    "path": "/learning/characters/39135.json",
+    "radical": "食",
+    "decomposition": "⿱𠆢良"
+  },
+  "飯": {
+    "path": "/learning/characters/39151.json",
+    "radical": "飠 (食)",
+    "decomposition": "⿰飠反"
+  },
+  "餐": {
+    "path": "/learning/characters/39184.json",
+    "radical": "食",
+    "decomposition": "⿱𣦼食"
+  },
+  "館": {
+    "path": "/learning/characters/39208.json",
+    "radical": "飠 (食)",
+    "decomposition": "⿰飠官"
+  },
+  "高": {
+    "path": "/learning/characters/39640.json",
+    "radical": "高",
+    "decomposition": "⿳亠口冋"
+  },
+  "麵": {
+    "path": "/learning/characters/40629.json",
+    "radical": "麥",
+    "decomposition": "⿰麥面"
+  },
+  "麻": {
+    "path": "/learning/characters/40635.json",
+    "radical": "麻",
+    "decomposition": "⿸广𣏟"
+  },
+  "麼": {
+    "path": "/learning/characters/40636.json",
+    "radical": "幺",
+    "decomposition": "⿸麻幺"
+  },
+  "點": {
+    "path": "/learning/characters/40670.json",
+    "radical": "黑",
+    "decomposition": "⿰黑占"
+  }
+}

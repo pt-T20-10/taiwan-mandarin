@@ -1,0 +1,129 @@
+{
+  "character": "不",
+  "radical": "一",
+  "decomposition": "⿸丆卜",
+  "strokes": [
+    {
+      "outline": "M606,682C672,690 718,693 750,694C817,697 876,692 882,697C891,708 884,717 877,722C827,765 786,770 746,759C627,730 404,698 230,683C212,682 199,683 188,680C179,679 174,676 174,668C173,660 176,652 192,642C244,612 237,616 270,624C378,653 489,670 560,677C591,680 591,680 606,682Z",
+      "median": [
+        [
+          178,
+          667
+        ],
+        [
+          244,
+          651
+        ],
+        [
+          784,
+          730
+        ],
+        [
+          881,
+          709
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M560,677C557,611 525,557 489,507C386,365 238,254 111,165C105,161 101,156 112,156C162,156 373,285 484,417C521,461 521,461 539,483C579,532 618,595 644,615C649,620 652,627 652,632C650,642 647,650 639,658C629,670 618,677 606,682C591,687 560,692 560,677Z",
+      "median": [
+        [
+          567,
+          682
+        ],
+        [
+          601,
+          628
+        ],
+        [
+          448,
+          415
+        ],
+        [
+          297,
+          278
+        ],
+        [
+          117,
+          161
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M484,417C491,288 481,177 461,87C453,55 458,19 485,-17C498,-35 513,-32 523,-11C536,20 540,53 539,86C534,253 530,376 534,422C535,442 535,442 536,452C537,465 538,475 539,483C545,511 484,446 484,417Z",
+      "median": [
+        [
+          534,
+          483
+        ],
+        [
+          508,
+          412
+        ],
+        [
+          496,
+          -24
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M534,422C600,372 736,290 846,208C859,198 872,187 884,184C889,183 897,188 903,195C910,206 912,242 865,286C806,343 669,396 536,452C527,456 526,428 534,422Z",
+      "median": [
+        [
+          535,
+          445
+        ],
+        [
+          798,
+          290
+        ],
+        [
+          894,
+          190
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    }
+  ],
+  "source": "https://github.com/parsimonhi/animCJK/tree/ec5e17cca76c87587790bcbce5ea0b4d4fb753d6",
+  "reference": "https://stroke-order.learningweb.moe.edu.tw/dictView.jsp?ID=19981",
+  "license": "Arphic Public License; dictionary LGPL-3.0",
+  "variant": "Taiwan",
+  "verification": "Đã so số nét và đường đi với MOE bằng công cụ; chưa duyệt dáng chữ",
+  "expected_count": 4,
+  "copyright": "Arphic Technology Co., Ltd. ©1999; AnimCJK FM&SH ©2016–2026",
+  "modification": "2026-09-25: converted to JSON/matrix coordinates; original outlines retained. Derivative outlines remain under APL; no warranty.",
+  "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6",
+  "structure_verification": "Cấu tạo trực quan để nhận hình, chưa thẩm định chuyên môn; không phải giải thích từ nguyên."
+}
