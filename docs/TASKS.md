@@ -2,6 +2,18 @@
 
 Cập nhật 25/09/2026. Không coi số lượng bản nháp hoặc test tự động là chứng nhận nội dung/audio. Các con số kiểm thử của mốc 23–24/09 bên dưới là lịch sử; kết quả đợt mới nằm ở phần này.
 
+## Phản hồi giọng đọc và giao diện Phát âm — tiếp nối checkpoint def42b5
+
+- [x] Theo chấp thuận của người dùng, thêm 3 giọng Kokoro v1.1 neural offline (2 nữ/1 nam), ghi Quan thoại phổ thông/chưa xác minh Đài Loan. Nghe so sánh cùng câu, chọn áp dụng/lưu giọng cho toàn app; nghe thử không đổi settings. Giữ browser/native zh-TW, Qwen4B/CUDA và Whisper small/base. Windows Traditional Chinese cung cấp giọng local, không tự nâng chất lượng giọng legacy.
+- [x] Dùng bộ chạy sherpa-onnx 1.13.8 standalone CPU, không cài dependency Python/global. Kiểm tra SHA-256 download, manifest file cài đặt, ngân sách/disk/path. Nguồn/giấy phép và số đo ở NEURAL_TTS.md; có bản Apache/MIT/GPL/ThirdPartyNotices local, không commit model/runtime.
+- [x] Tạo WAV cả câu, cache RAM giới hạn 16 MB/48 mục theo giọng/nhịp/câu, một lượt tổng hợp đồng thời, hủy và dọn file tạm. Đã phát hiện/sửa disconnect thật không được polling bắt qua middleware; dùng ASGI receive, đo child thoát sau 61 ms. Không thay giọng âm thầm khi lỗi/thiếu.
+- [x] Grid 406 âm Pinyin hiển thị trực tiếp thay dropdown thanh/vận mẫu, tìm nhanh, nghe ngay tùy chọn; desktop grid cạnh phần nghe, mobile không tràn. 6 nhóm quy tắc giữ 11 ID cũ/nhận xét, 一 và 不 mỗi chữ một mục.
+- [x] Benchmark thật 12 WAV: 3 neural + Hanhan × 3 câu Phồn thể, neural 4,510–6,647 ms gồm nạp model, WAV 24 kHz; cache ~0,5 ms ở ba câu thử. ASR raw 4 câu lưu nguyên trạng; nam 009 có 越南 → 岳南. Không chứng nhận độ tự nhiên, biến điệu hay giọng Đài Loan. Lexicon có 294/294 chữ, không suy ra đọc đúng từ đa âm.
+- [x] Source cuối: build, content checker, core/adapter **25/25**, backend **21/21**, Edge E2E **31/31 trong một lượt đầy đủ, 2,5 phút** qua. Gồm hủy tiến trình neural thật trước khi phát câu khác, nghe thử/áp dụng/reload và mobile. Một lượt trước có 30/31 do selector trạng thái trùng, đã sửa; sau sửa disconnect thật đã chạy lại toàn bộ. Backend giữ một warning deprecation Starlette/httpx từ dependency đã khóa.
+- [x] Backup thêm `data/backups/before-voice-update-20260925-181553.json`. State cá nhân trước/sau sửa và khởi động lại bằng nhau: **12 object / 20 sự kiện**, SHA-256 `3e1e2f82248cbdcd2c45d1253e3c5a795709aa324823e495b2d4752d0034028e`. Gói vẫn v5, không nâng lại hoặc restore. Chênh số object/event so với mốc bốn tính năng là tiến độ người dùng đã có trước lần sửa giọng.
+- [x] Localhost 8765 chạy source/build mới bằng launcher ẩn. Tổng tài sản đo **9.124.705.305 / 10.000.000.000 byte**, gồm archive tải về, model, runtime, data/cache/backup, public/dist/content; dữ liệu có thể tăng khi học. Vẫn không tính môi trường phát triển.
+- [ ] Người dùng nghe so sánh và chọn giọng phù hợp; chưa có đánh giá nghe chuyên môn. 30 câu TTS nghe duyệt, micro thật và buổi hội thoại giọng 15 phút vẫn còn thiếu. Giữ các hạn chế B2/nội dung/ASR dưới đây.
+
 ## Đợt bốn tính năng — hoàn tất triển khai và kiểm thử
 
 - [x] Animation 294/294 chữ; chọn chữ, chạy một lần/phát lại/tạm dừng/từng nét/chậm, reduced motion; cấu tạo ẩn trước nộp/gợi ý. Bộ thủ 23 chữ bổ sung đối chiếu MOE; sửa IDS 局/常 và 研 = 石 + 开. Bổ sung bản quyền/ngày/cách sửa từng JSON, giấy phép local. Xem STROKE_SOURCES.md; chấm viết tay vẫn 12 mẫu.

@@ -51,7 +51,7 @@ test('không gọi mạng ngoài máy khi học; các màn hình và mobile khô
 test('ghi chú bền vững và tình huống thiếu giọng TEST có thông báo',async({page})=>{
  await page.addInitScript(()=>{window.speechSynthesis.getVoices=()=>[];});
  await page.route('**/api/ai/tts',route=>route.fulfill({status:503,json:{detail:'TEST: chưa có giọng zh-TW local'}}));
- await page.goto('/#notebook');await page.getByRole('button',{name:'Ghi chú',exact:true}).click();await page.getByLabel('Ghi chú học tập').fill('明天見 — hẹn gặp ngày mai');await page.getByRole('button',{name:'Lưu ghi chú',exact:true}).click();await expect(page.getByRole('status')).toContainText('Đã lưu');await page.reload();await page.getByRole('button',{name:'Ghi chú',exact:true}).click();await expect(page.getByLabel('Ghi chú học tập')).toHaveValue('明天見 — hẹn gặp ngày mai');await page.getByRole('button',{name:'Cài đặt',exact:true}).click();await page.getByRole('button',{name:'◖)) Nghe',exact:true}).click();await expect(page.getByRole('status')).toContainText('zh-TW');
+ await page.goto('/#notebook');await page.getByRole('button',{name:'Ghi chú',exact:true}).click();await page.getByLabel('Ghi chú học tập').fill('明天見 — hẹn gặp ngày mai');await page.getByRole('button',{name:'Lưu ghi chú',exact:true}).click();await expect(page.getByRole('status')).toContainText('Đã lưu');await page.reload();await page.getByRole('button',{name:'Ghi chú',exact:true}).click();await expect(page.getByLabel('Ghi chú học tập')).toHaveValue('明天見 — hẹn gặp ngày mai');await page.getByRole('button',{name:'Cài đặt',exact:true}).click();await page.getByRole('button',{name:'◖)) Nghe',exact:true}).click();await expect(page.locator('.toast')).toContainText('zh-TW');
 });
 test('hai tab cùng câu không tạo lượt học trùng',async({page,context,request})=>{
  await page.goto('/');await page.getByRole('button',{name:'1 Khám phá từ mới'}).first().click();await page.getByRole('button',{name:'Bắt đầu luyện tập'}).click();
@@ -119,7 +119,7 @@ test('nghe cạnh Hán tự/Pinyin gửi nguyên cụm; giữ kín đáp án và
   (window as any).__utterances=[];
   window.speechSynthesis.speak=utterance=>{(window as any).__utterances.push({text:utterance.text,rate:utterance.rate,voice:utterance.voice?.voiceURI});setTimeout(()=>utterance.onend?.(new Event('end') as SpeechSynthesisEvent),0);};
  });
- await page.goto('/#settings');await page.getByRole('combobox',{name:'Giọng zh-TW local',exact:true}).selectOption('browser:TEST-b');
+ await page.goto('/#settings');await page.getByRole('combobox',{name:'Giọng đọc offline',exact:true}).selectOption('browser:TEST-b');
  await expect.poll(async()=>(await(await request.get('/api/state')).json()).objects.settings.speech.data.voice).toBe('browser:TEST-b');
  await page.goto('/');await page.getByRole('button',{name:'1 Khám phá từ mới'}).first().click();
  const word=page.locator('.word').first();await word.getByRole('button',{name:'Nghe Hán tự',exact:true}).click();
@@ -132,11 +132,11 @@ test('nghe cạnh Hán tự/Pinyin gửi nguyên cụm; giữ kín đáp án và
  await page.goto('/#pronunciation');await expect(page.locator('.pronunciation-case')).toHaveCount(11);
  await page.getByRole('combobox',{name:'Nhịp đọc',exact:true}).selectOption('slow');
  await expect.poll(async()=>(await(await request.get('/api/state')).json()).objects.settings.speech.data.pace).toBe('slow');await expect(page.getByRole('combobox',{name:'Nhịp đọc',exact:true})).toBeEnabled();
- await page.getByRole('button',{name:'Nghe trong câu: grouping',exact:true}).click();
+ await page.locator('.pronunciation-group summary').filter({hasText:'Nhịp câu'}).click();await page.getByRole('button',{name:'Nghe trong câu: grouping',exact:true}).click();
  expect(await page.evaluate(()=>(window as any).__utterances.at(-1))).toEqual({text:'我是越南人，我是留學生。',rate:.85,voice:'TEST-b'});
  await page.getByLabel('Nhận xét: grouping',{exact:true}).selectOption('choppy');
  await expect.poll(async()=>Object.values((await(await request.get('/api/state')).json()).objects.reports).filter((r:any)=>r.data.kind==='pronunciation-listening').length).toBe(1);
- await page.reload();await expect(page.getByText('1 nhận xét của bạn với cấu hình này')).toBeVisible();
+ await page.reload();await page.locator('.pronunciation-group summary').filter({hasText:'Nhịp câu'}).click();await expect(page.getByText('1 nhận xét của bạn với cấu hình này')).toBeVisible();
  await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.screenshot({path:'test-results/pronunciation-mobile.png',fullPage:true});
 });

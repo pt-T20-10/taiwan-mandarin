@@ -18,7 +18,10 @@ export function configureSpeech(value?:Partial<SpeechPreferences>){
 }
 export const speech:SpeechSynthesis={
   stop(){generation++;audio?.pause();finishSpeech?.();finishSpeech=null;pendingAudio?.abort();pendingAudio=null;window.speechSynthesis?.cancel();audio=null;if(audioUrl){URL.revokeObjectURL(audioUrl);audioUrl=null;}},
-  async speak(text){speech.stop();const ticket=generation;
+  speak(text){return previewSpeech(text,preferences);}
+};
+export async function previewSpeech(text:string,selected:SpeechPreferences){speech.stop();const ticket=generation;
+    const preferences={...selected};
     const choices=window.speechSynthesis?.getVoices().filter(v=>v.lang.toLowerCase()==='zh-tw'&&v.localService)||[];
     const voice=preferences.voice==='auto'?choices[0]:choices.find(v=>'browser:'+v.voiceURI===preferences.voice);
     if(preferences.voice.startsWith('browser:')&&!voice)throw new Error('Giọng zh-TW đã chọn không có trong trình duyệt này. Hãy chọn lại trong Cài đặt.');
@@ -29,16 +32,21 @@ export const speech:SpeechSynthesis={
       utterance.onend=finish;utterance.onerror=e=>{if(ticket!==generation){resolve();return;}finishSpeech=null;reject(new Error('Giọng zh-TW không đọc được: '+e.error+'. Hãy kiểm tra thiết bị và giọng Windows.'));};
       window.speechSynthesis.speak(utterance);});return;}
     const controller=new AbortController();pendingAudio=controller;
-    let r:Response;
-    try{r=await fetch('/api/ai/tts',{method:'POST',headers:{'Content-Type':'application/json','X-Mandarin-Client':'local-ui'},body:JSON.stringify({text,voice:preferences.voice.startsWith('native:')?preferences.voice.slice(7):undefined,rate:({slow:-2,normal:0,brisk:1})[preferences.pace]}),signal:controller.signal});}
+    let blob:Blob;
+    try{const r=await fetch('/api/ai/tts',{method:'POST',headers:{'Content-Type':'application/json','X-Mandarin-Client':'local-ui'},body:JSON.stringify({text,voice:preferences.voice.startsWith('native:')?preferences.voice.slice(7):preferences.voice.startsWith('neural:')?preferences.voice:undefined,rate:({slow:-2,normal:0,brisk:1})[preferences.pace]}),signal:controller.signal});
+      if(!r.ok)throw new Error((await r.json()).detail);blob=await r.blob();}
     catch(error){if(controller.signal.aborted)return;throw error;}
     finally{if(pendingAudio===controller)pendingAudio=null;}
     if(ticket!==generation)return;
-    if(!r.ok)throw new Error((await r.json()).detail);
-    const blob=await r.blob();if(ticket!==generation)return;
-    audioUrl=URL.createObjectURL(blob);audio=new Audio(audioUrl);await audio.play();
-  }
-};
+    audioUrl=URL.createObjectURL(blob);const url=audioUrl,current=new Audio(url);audio=current;
+    await new Promise<void>((resolve,reject)=>{
+      const cleanup=()=>{current.onended=null;current.onerror=null;if(audio===current)audio=null;if(audioUrl===url){URL.revokeObjectURL(url);audioUrl=null;}if(finishSpeech===finish)finishSpeech=null;};
+      const finish=()=>{cleanup();resolve();};finishSpeech=finish;
+      const failed=(error:Error)=>{cleanup();if(ticket!==generation)resolve();else reject(error);};
+      current.onended=finish;current.onerror=()=>failed(new Error('Không phát được audio local. Hãy thử lại.'));
+      current.play().catch(failed);
+    });
+}
 export function downloadJSON(value:unknown,name:string){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 export async function playSamples(steps:{label:string;path:string}[],onStep:(index:number)=>void){
   speech.stop();const ticket=generation;

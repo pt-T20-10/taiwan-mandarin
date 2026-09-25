@@ -13,3 +13,12 @@ export const pronunciationCases = [
   {id:'polyphonic',title:'Chữ đa âm cần ngữ cảnh',hanzi:'銀行',pinyin:'yínháng',vi:'ngân hàng',spoken:'行 trong 銀行 đọc háng; 行 trong 行走 đọc xíng. Phải nghe cả từ/câu, không ghép âm từng chữ.',context:'銀行在學校旁邊。'},
   {id:'grouping',title:'Nhịp câu và chỗ ngắt',hanzi:'我是越南人，我是留學生。',pinyin:'Wǒ shì Yuènán rén, wǒ shì liúxuéshēng.',vi:'Tôi là người Việt Nam, tôi là du học sinh.',spoken:'Nối các âm thành cụm theo nghĩa, ngắt tại dấu phẩy. Độ dài còn phụ thuộc trọng âm, tốc độ và vị trí trong câu; không có một số mili giây cố định cho mỗi thanh.',context:'我是越南人，我是留學生。'},
 ];
+
+export const pronunciationGroups=[
+ {id:'third',title:'Thanh 3',summary:'Thanh 3 nối thanh 3 và dạng thấp trước thanh khác.',cases:['third-third','half-third']},
+ {id:'yi',title:'一 · yī',summary:'Đọc yì trước thanh 1/2/3, yí trước thanh 4; giữ yī trong số thứ tự.',cases:['yi-first','yi-third','yi-fourth','yi-ordinal']},
+ {id:'bu',title:'不 · bù',summary:'Đọc bú trước thanh 4; giữ bù trước thanh 1/2/3.',cases:['bu-fourth','bu-other']},
+ {id:'neutral',title:'Thanh nhẹ',summary:'Ngắn, ít nhấn; cao độ phụ thuộc ngữ cảnh.',cases:['neutral']},
+ {id:'polyphonic',title:'Chữ đa âm',summary:'Chọn âm đọc theo từ và nghĩa trong câu.',cases:['polyphonic']},
+ {id:'grouping',title:'Nhịp câu',summary:'Nối theo cụm nghĩa, ngắt tại ranh giới câu.',cases:['grouping']},
+];

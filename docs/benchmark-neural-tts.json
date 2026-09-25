@@ -1,0 +1,141 @@
+{
+  "kind": "Synthetic TTS only; not human listening, pronunciation scoring or microphone evaluation",
+  "complete": true,
+  "threads": 4,
+  "neural": "Kokoro v1.1 zh FP32 / sherpa-onnx 1.13.8 CPU",
+  "asr_model": "ggml-small.bin",
+  "samples": [
+    {
+      "voice": "neural:kokoro-zf001",
+      "text": "你好，我是越南人，現在在臺灣學中文。很高興認識你！",
+      "tts_ms": 5015,
+      "duration_seconds": 5.761,
+      "sample_rate": 24000,
+      "rms": 2432,
+      "peak": 15500,
+      "asr_regression_only": {
+        "text": "你好,我是越南人,現在在台灣學中文,很高興認識你。",
+        "elapsed_ms": 4355,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "cached_ms": 0.5
+    },
+    {
+      "voice": "neural:kokoro-zf001",
+      "text": "我不是老師，也不喝咖啡。我想買一杯茶，明天一起去，好嗎？",
+      "tts_ms": 5109,
+      "duration_seconds": 6.054,
+      "sample_rate": 24000,
+      "rms": 2520,
+      "peak": 17050
+    },
+    {
+      "voice": "neural:kokoro-zf001",
+      "text": "銀行在學校旁邊。我喜歡聽音樂，也喜歡旅行。今天是2026年9月25日。",
+      "tts_ms": 5753,
+      "duration_seconds": 8.412,
+      "sample_rate": 24000,
+      "rms": 2334,
+      "peak": 14181
+    },
+    {
+      "voice": "neural:kokoro-zf002",
+      "text": "你好，我是越南人，現在在臺灣學中文。很高興認識你！",
+      "tts_ms": 4912,
+      "duration_seconds": 6.418,
+      "sample_rate": 24000,
+      "rms": 2914,
+      "peak": 12164,
+      "asr_regression_only": {
+        "text": "你好,我是越南人,现在在台湾学中文,很高兴认识你。",
+        "elapsed_ms": 3550,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "cached_ms": 0.5
+    },
+    {
+      "voice": "neural:kokoro-zf002",
+      "text": "我不是老師，也不喝咖啡。我想買一杯茶，明天一起去，好嗎？",
+      "tts_ms": 5761,
+      "duration_seconds": 6.874,
+      "sample_rate": 24000,
+      "rms": 2965,
+      "peak": 14573
+    },
+    {
+      "voice": "neural:kokoro-zf002",
+      "text": "銀行在學校旁邊。我喜歡聽音樂，也喜歡旅行。今天是2026年9月25日。",
+      "tts_ms": 6647,
+      "duration_seconds": 9.533,
+      "sample_rate": 24000,
+      "rms": 2775,
+      "peak": 13336
+    },
+    {
+      "voice": "neural:kokoro-zm009",
+      "text": "你好，我是越南人，現在在臺灣學中文。很高興認識你！",
+      "tts_ms": 4510,
+      "duration_seconds": 5.822,
+      "sample_rate": 24000,
+      "rms": 1961,
+      "peak": 19742,
+      "asr_regression_only": {
+        "text": "你好,我是岳南人,现在在台湾学中文,很高兴认识你。",
+        "elapsed_ms": 3529,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "cached_ms": 0.51
+    },
+    {
+      "voice": "neural:kokoro-zm009",
+      "text": "我不是老師，也不喝咖啡。我想買一杯茶，明天一起去，好嗎？",
+      "tts_ms": 4880,
+      "duration_seconds": 6.111,
+      "sample_rate": 24000,
+      "rms": 2036,
+      "peak": 18125
+    },
+    {
+      "voice": "neural:kokoro-zm009",
+      "text": "銀行在學校旁邊。我喜歡聽音樂，也喜歡旅行。今天是2026年9月25日。",
+      "tts_ms": 5952,
+      "duration_seconds": 8.51,
+      "sample_rate": 24000,
+      "rms": 1856,
+      "peak": 19730
+    },
+    {
+      "voice": "Microsoft Hanhan Desktop",
+      "text": "你好，我是越南人，現在在臺灣學中文。很高興認識你！",
+      "tts_ms": 1150,
+      "duration_seconds": 6.879,
+      "sample_rate": 22050,
+      "rms": 2543,
+      "peak": 30247,
+      "asr_regression_only": {
+        "text": "你好,我是越南人,现在在台湾学中文。很高兴认识你。",
+        "elapsed_ms": 4454,
+        "notice": "Transcript có thể sai chữ hoặc lẫn Giản thể; hãy xem và sửa. Không phải điểm phát âm/thanh điệu."
+      },
+      "cached_ms": 0.01
+    },
+    {
+      "voice": "Microsoft Hanhan Desktop",
+      "text": "我不是老師，也不喝咖啡。我想買一杯茶，明天一起去，好嗎？",
+      "tts_ms": 597,
+      "duration_seconds": 7.204,
+      "sample_rate": 22050,
+      "rms": 2035,
+      "peak": 19269
+    },
+    {
+      "voice": "Microsoft Hanhan Desktop",
+      "text": "銀行在學校旁邊。我喜歡聽音樂，也喜歡旅行。今天是2026年9月25日。",
+      "tts_ms": 546,
+      "duration_seconds": 10.002,
+      "sample_rate": 22050,
+      "rms": 2349,
+      "peak": 28764
+    }
+  ]
+}

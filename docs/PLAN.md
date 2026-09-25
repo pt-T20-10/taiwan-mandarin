@@ -27,6 +27,8 @@ Tài liệu này xác định sản phẩm, thứ tự xây dựng và cách chu
 
 Ngày 25/09/2026, người dùng đã chốt mở rộng đến B2 theo từng nhóm nội dung hoàn chỉnh. Đợt hiện tại hoàn thiện 24 mục ngữ pháp nền tảng và lập lộ trình biên soạn tiếp; không phải yêu cầu biên soạn toàn bộ B2 trong một đợt. Gói v5 có 27 lô/12 chủ điểm/4 nhóm, mục tiêu và tiên quyết; 496 nhãn TBCL vẫn là danh mục tham chiếu chưa có bài đầy đủ. Không coi danh mục hoặc hoàn thành bài luyện nền tảng là đạt B2. C1–C2 chưa thuộc phạm vi hiện tại.
 
+Phản hồi tiếp theo cùng ngày ưu tiên độ tự nhiên giọng đọc và grid Pinyin. Người dùng cho phép thêm neural Quan thoại phổ thông offline có nhãn để so sánh, giữ lựa chọn zh-TW cũ. Đã tích hợp Kokoro v1.1 Chinese tùy chọn, không đổi model chat/ASR; thông số, nguồn và phần chưa nghe duyệt ở [NEURAL_TTS.md](NEURAL_TTS.md).
+
 ### Phần cứng từ ảnh người dùng
 
 - Windows 11 Home Single Language, Ryzen 5 5600H, RAM 16 GB.

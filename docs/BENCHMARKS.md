@@ -2,6 +2,12 @@
 
 Ryzen 5 5600H, GTX 1650 4 GB, driver 572.83, Windows 11. Có ứng dụng phát triển/trình duyệt đang chạy; đây là số đo tại phiên làm việc, không phải phòng thử nghiệm cô lập. Không có số đo nào lấy từ máy khác.
 
+## Bổ sung giọng neural — 25/09/2026
+
+Đã đo Kokoro v1.1 Chinese FP32 qua sherpa-onnx 1.13.8 CPU 4 luồng, 3 speaker × 3 câu; thêm Hanhan 3 câu đối chiếu. Neural mất 4,510–6,647 ms để có cả WAV gồm nạp model, cache RAM ba mẫu ~0,5 ms; không phải TTFA hoặc đánh giá tự nhiên. File [benchmark-neural-tts.json](benchmark-neural-tts.json) giữ số đo waveform và 4 transcript Whisper small thô; nam 009 có lỗi 越南 → 岳南. Không chấm phát âm bằng ASR. Chi tiết nguồn/giấy phép/hạn chế ở [NEURAL_TTS.md](NEURAL_TTS.md).
+
+Kiểm tra hủy HTTP thật ban đầu phát hiện child tiếp tục chạy vì polling disconnect không bắt được sự kiện qua middleware. Sau khi dùng watcher ASGI receive, cùng kiểm tra thấy child thoát sau 61 ms; E2E có kiểm tra hủy tổng hợp dài trước khi phát câu khác. Đây là phép kiểm tra vận hành, không phải bằng chứng chất lượng giọng.
+
 ## LLM
 
 llama.cpp b11120, context 4096, 6 CPU threads, một slot, tắt thinking, trả JSON không streaming. Chỉ nạp một LLM mỗi lần. HTTP tổng tính tới khi có **toàn bộ** câu trả lời, chưa đo riêng chữ đầu/TTFT.

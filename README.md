@@ -8,7 +8,7 @@ Nhấp đúp **Start.cmd** trong thư mục này. Trình duyệt mở **http://1
 
 Tiến độ nằm trong `data/learning.sqlite3`. Tải sao lưu ở Cài đặt; phục hồi cũng tại đó. Mỗi thiết bị dùng SQLite, không phụ thuộc cache trình duyệt. Không chia sẻ thư mục data nếu có thông tin cá nhân.
 
-Trong **Học**, chọn từng chữ cạnh từ để xem nét; tổng kết có nút chuyển bài/chủ đề và giữ tiến độ cũ. Trong **Phát âm**, chọn thanh mẫu/vận mẫu/thanh rồi nghe âm tiết hoặc đánh vần. Mẫu âm tiết bổ sung là Quan thoại chưa xác minh vùng giọng; âm thiếu báo thiếu. Trong **Ngữ pháp**, học và lưu tiến độ riêng, xem kiến thức tiên quyết; lộ trình 27 lô B2 là kế hoạch biên soạn, chưa phải nội dung B2 hoàn thành. Xem [nguồn/giấy phép tài sản](public/learning/ATTRIBUTION.md).
+Trong **Học**, chọn từng chữ cạnh từ để xem nét; tổng kết có nút chuyển bài/chủ đề và giữ tiến độ cũ. Trong **Phát âm**, bấm trực tiếp grid 406 âm tiết, tìm nhanh, chọn thanh rồi nghe/đánh vần; sáu nhóm quy tắc giữ đủ ví dụ 一/不/thanh nhẹ. Mẫu âm tiết bổ sung là Quan thoại chưa xác minh vùng giọng; âm thiếu báo thiếu. Trong **Ngữ pháp**, học và lưu tiến độ riêng, xem kiến thức tiên quyết; lộ trình 27 lô B2 là kế hoạch biên soạn, chưa phải nội dung B2 hoàn thành. Xem [nguồn/giấy phép tài sản](public/learning/ATTRIBUTION.md).
 
 ## Cài dependency/build lại
 
@@ -41,10 +41,12 @@ Test trình duyệt dùng Edge đã có, không cần tải browser khác. Test 
 
 Trong Cài đặt có màn hình ghi âm/nghe lại/nhận dạng, danh sách voice thực tế và thử câu mới. Cấp quyền micro cho localhost khi muốn ghi. Trên máy hiện tại không cần cài thêm voice: đã thấy Hanhan Desktop qua System.Speech và Hanhan/Yating/Zhiwei local qua Edge. Để tự kiểm tra, ngắt Internet, sửa câu thử, bấm Nghe rồi ghi 5–10 giây, nghe lại và nhận dạng. Nếu chuyển máy mà thiếu voice, cài Chinese (Traditional, Taiwan) và Speech/Text-to-speech qua Windows Settings, mở lại dịch vụ/trình duyệt. Không đổi registry hoặc dùng giọng online thay thế.
 
-Chữ/flashcard/ghi chú dùng offline. Bài nghe cần zh-TW local; thiếu có thể bỏ qua, không tính đạt kỹ năng. ASR không phải chấm thanh điệu. AI sinh Pinyin/dịch có thể sai và không tham gia chấm bài đóng.
+Chữ/flashcard/ghi chú dùng offline. Bài nghe cần giọng local đã chọn; thiếu có thể bỏ qua, không tính đạt kỹ năng. ASR không phải chấm thanh điệu. AI sinh Pinyin/dịch có thể sai và không tham gia chấm bài đóng.
+
+Đã thêm **Kokoro nữ 001, nữ 002, nam 009** neural offline để nghe so sánh. Trong Cài đặt/Phát âm, nhập cùng một câu rồi nghe thử; **Dùng giọng này** mới lưu cho các nút nghe. Đây là Quan thoại phổ thông, chưa xác minh Đài Loan; các giọng Windows vẫn giữ nguyên. Lần đầu tạo câu cần vài giây, câu lặp được cache RAM. Xem [nguồn, giấy phép, kết quả và hạn chế](docs/NEURAL_TTS.md). Gói Traditional Chinese của Windows cung cấp giọng local nhưng không tự nâng chất lượng các giọng cũ thành neural.
 
 Nút nghe cạnh Hán tự hoặc Pinyin đọc nguyên từ/cụm/câu. Chọn giọng và nhịp trong Cài đặt hoặc mục **Phát âm**. Mục Phát âm có bài đối chiếu biến điệu, thanh nhẹ và nhịp câu; âm TTS chưa được chứng nhận phát âm chuẩn. Đã bỏ câu gợi dẫn ASR gây lặp transcript; cần thu lại câu để kiểm tra trên micro thật sau khi cập nhật.
 
-Model đang chọn: Qwen3-4B Q4_K_M trên CUDA 12.4; Whisper small đa ngôn ngữ trên CPU. Có thể chuyển LLM sang CPU hoặc ASR về base trong Cài đặt. Small sửa được một số lỗi từ trong thử nghiệm, chậm hơn và vẫn có Giản thể. Tài sản ứng dụng khoảng 8,27 GB/10 GB, gồm cả model/runtime thử nghiệm, public/dist/cache và backup; đo ngày 25/09/2026. Số đo và giới hạn chất lượng ở [BENCHMARKS](docs/BENCHMARKS.md).
+Model đang chọn: Qwen3-4B Q4_K_M trên CUDA 12.4; Whisper small đa ngôn ngữ trên CPU. Có thể chuyển LLM sang CPU hoặc ASR về base trong Cài đặt. Small sửa được một số lỗi từ trong thử nghiệm, chậm hơn và vẫn có Giản thể. Tài sản ứng dụng sau khi thêm Kokoro khoảng 9,13 GB/10 GB, gồm cả model/runtime thử nghiệm, public/dist/cache và backup; đo ngày 25/09/2026. Số đo và giới hạn chất lượng ở [BENCHMARKS](docs/BENCHMARKS.md) và [NEURAL_TTS](docs/NEURAL_TTS.md).
 
 Xem [TASKS](docs/TASKS.md), [ENVIRONMENT](docs/ENVIRONMENT.md), [DECISIONS](docs/DECISIONS.md), [CONTENT_GUIDE](docs/CONTENT_GUIDE.md) và [PLAN](docs/PLAN.md) để tiếp tục.

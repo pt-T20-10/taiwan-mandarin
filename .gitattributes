@@ -2,3 +2,4 @@
 /public/learning/** -text whitespace=cr-at-eol
 # Preserve upstream license notices verbatim, including their whitespace.
 /public/learning/licenses/** -whitespace
+/docs/licenses/neural-tts/** -text -whitespace

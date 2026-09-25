@@ -9,9 +9,11 @@ import math
 import secrets
 import re
 from array import array
+from collections import OrderedDict
 from pathlib import Path
 import httpx
 from .content import ROOT
+from . import neural_tts
 
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
@@ -23,6 +25,8 @@ class LocalAI:
         self.error = ''
         self.log = None
         self.voices = []
+        self.tts_lock = asyncio.Lock()
+        self.tts_cache = OrderedDict()
         self.key = secrets.token_urlsafe(32)
         self.config = {'model': 'Qwen3-1.7B-Q4_K_M.gguf', 'runtime': 'cpu', 'asr_model':'ggml-base.bin'}
         config_path = ROOT / 'models/active.json'
@@ -43,7 +47,7 @@ class LocalAI:
     def status(self):
         ll, lm, wh, wm = self.paths()
         return {'llm_installed': ll.exists() and lm.exists(), 'llm_running': self.process is not None and self.process.poll() is None,
-                'asr_installed': wh.exists() and wm.exists(), 'tts_voices': self.voices, 'error': self.error,
+                'asr_installed': wh.exists() and wm.exists(), 'tts_voices': self.voices, 'neural_voices': neural_tts.voices(), 'error': self.error,
                 'model': self.config['model'].removesuffix('.gguf') + ' · ' + self.config['runtime'].upper(), 'asr': 'Whisper '+self.config['asr_model'].removeprefix('ggml-').removesuffix('.bin')+' đa ngôn ngữ (CPU)', 'quality': 'Chưa đạt chất lượng gia sư: đã phát hiện lỗi Pinyin/dịch và lẫn Giản thể trong thử nghiệm.', 'config': self.config,
                 'available_asr_models':[name for name in ('ggml-base.bin','ggml-small.bin') if (ROOT/'models'/name).exists()],
                 'available_models':[name for name in ('Qwen3-1.7B-Q4_K_M.gguf','Qwen3-4B-Q4_K_M.gguf') if (ROOT/'models'/name).exists()],
@@ -201,6 +205,32 @@ class LocalAI:
             self.voices = []
 
     async def synthesize(self, text, voice=None, rate=0):
+        if rate not in (-2, -1, 0, 1):
+            raise ValueError('Nhịp đọc không hợp lệ')
+        if voice and voice.startswith('neural:'):
+            if voice not in neural_tts.VOICES:
+                raise ValueError('Giọng neural không hợp lệ. Hãy chọn lại giọng đọc.')
+            if not neural_tts.available():
+                raise RuntimeError('Chưa cài đủ giọng Kokoro offline.')
+        elif voice and voice not in self.voices:
+            raise ValueError('Giọng zh-TW đã chọn không có trên máy. Hãy chọn lại trong Cài đặt.')
+        key = (text, voice or (self.voices[0] if self.voices else None), rate)
+        async with self.tts_lock:
+            if key in self.tts_cache:
+                self.tts_cache.move_to_end(key)
+                return self.tts_cache[key]
+            if voice and voice.startswith('neural:'):
+                result = await neural_tts.synthesize(text, voice, rate)
+            else:
+                result = await self.synthesize_windows(text, voice, rate)
+            # Only a bounded RAM cache; user text/audio is never persisted here.
+            if len(result) <= 16_000_000:
+                self.tts_cache[key] = result
+                while len(self.tts_cache) > 48 or sum(map(len, self.tts_cache.values())) > 16_000_000:
+                    self.tts_cache.popitem(last=False)
+            return result
+
+    async def synthesize_windows(self, text, voice=None, rate=0):
         if not self.voices:
             raise RuntimeError('Chưa có giọng Windows zh-TW local. Cài giọng trong Windows rồi mở lại ứng dụng.')
         if voice and voice not in self.voices:

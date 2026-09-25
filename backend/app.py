@@ -262,11 +262,29 @@ class TTSRequest(BaseModel):
     rate: int = Field(default=0, ge=-2, le=1)
 
 @app.post('/api/ai/tts')
-async def tts(body: TTSRequest):
+async def tts(body: TTSRequest, request: Request):
+    task = asyncio.create_task(ai.synthesize(body.text, body.voice, body.rate))
+    async def disconnected():
+        # The request body was consumed by FastAPI. Await the next ASGI event;
+        # polling is_disconnected can miss it through BaseHTTPMiddleware.
+        while True:
+            if (await request.receive())['type'] == 'http.disconnect':
+                return
+    watcher = asyncio.create_task(disconnected())
     try:
-        return Response(await ai.synthesize(body.text, body.voice, body.rate), media_type='audio/wav')
+        await asyncio.wait((task, watcher), return_when=asyncio.FIRST_COMPLETED)
+        if not task.done():
+            raise HTTPException(499, 'Đã hủy tạo giọng đọc')
+        return Response(await task, media_type='audio/wav')
     except RuntimeError as exc:
         raise HTTPException(503, str(exc))
+    finally:
+        watcher.cancel()
+        await asyncio.gather(watcher, return_exceptions=True)
+        if not task.done():
+            task.cancel()
+            try: await task
+            except asyncio.CancelledError: pass
 
 @app.post('/api/shutdown')
 async def shutdown():
