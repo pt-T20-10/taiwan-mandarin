@@ -1,0 +1,2032 @@
+[
+  {
+    "base": "a",
+    "initial": "",
+    "final": "a"
+  },
+  {
+    "base": "ai",
+    "initial": "",
+    "final": "ai"
+  },
+  {
+    "base": "an",
+    "initial": "",
+    "final": "an"
+  },
+  {
+    "base": "ang",
+    "initial": "",
+    "final": "ang"
+  },
+  {
+    "base": "ao",
+    "initial": "",
+    "final": "ao"
+  },
+  {
+    "base": "ba",
+    "initial": "b",
+    "final": "a"
+  },
+  {
+    "base": "bai",
+    "initial": "b",
+    "final": "ai"
+  },
+  {
+    "base": "ban",
+    "initial": "b",
+    "final": "an"
+  },
+  {
+    "base": "bang",
+    "initial": "b",
+    "final": "ang"
+  },
+  {
+    "base": "bao",
+    "initial": "b",
+    "final": "ao"
+  },
+  {
+    "base": "bei",
+    "initial": "b",
+    "final": "ei"
+  },
+  {
+    "base": "ben",
+    "initial": "b",
+    "final": "en"
+  },
+  {
+    "base": "beng",
+    "initial": "b",
+    "final": "eng"
+  },
+  {
+    "base": "bi",
+    "initial": "b",
+    "final": "i"
+  },
+  {
+    "base": "bian",
+    "initial": "b",
+    "final": "ian"
+  },
+  {
+    "base": "biao",
+    "initial": "b",
+    "final": "iao"
+  },
+  {
+    "base": "bie",
+    "initial": "b",
+    "final": "ie"
+  },
+  {
+    "base": "bin",
+    "initial": "b",
+    "final": "in"
+  },
+  {
+    "base": "bing",
+    "initial": "b",
+    "final": "ing"
+  },
+  {
+    "base": "bo",
+    "initial": "b",
+    "final": "o"
+  },
+  {
+    "base": "bu",
+    "initial": "b",
+    "final": "u"
+  },
+  {
+    "base": "ca",
+    "initial": "c",
+    "final": "a"
+  },
+  {
+    "base": "cai",
+    "initial": "c",
+    "final": "ai"
+  },
+  {
+    "base": "can",
+    "initial": "c",
+    "final": "an"
+  },
+  {
+    "base": "cang",
+    "initial": "c",
+    "final": "ang"
+  },
+  {
+    "base": "cao",
+    "initial": "c",
+    "final": "ao"
+  },
+  {
+    "base": "ce",
+    "initial": "c",
+    "final": "e"
+  },
+  {
+    "base": "cen",
+    "initial": "c",
+    "final": "en"
+  },
+  {
+    "base": "ceng",
+    "initial": "c",
+    "final": "eng"
+  },
+  {
+    "base": "cha",
+    "initial": "ch",
+    "final": "a"
+  },
+  {
+    "base": "chai",
+    "initial": "ch",
+    "final": "ai"
+  },
+  {
+    "base": "chan",
+    "initial": "ch",
+    "final": "an"
+  },
+  {
+    "base": "chang",
+    "initial": "ch",
+    "final": "ang"
+  },
+  {
+    "base": "chao",
+    "initial": "ch",
+    "final": "ao"
+  },
+  {
+    "base": "che",
+    "initial": "ch",
+    "final": "e"
+  },
+  {
+    "base": "chen",
+    "initial": "ch",
+    "final": "en"
+  },
+  {
+    "base": "cheng",
+    "initial": "ch",
+    "final": "eng"
+  },
+  {
+    "base": "chi",
+    "initial": "ch",
+    "final": "-i"
+  },
+  {
+    "base": "chong",
+    "initial": "ch",
+    "final": "ong"
+  },
+  {
+    "base": "chou",
+    "initial": "ch",
+    "final": "ou"
+  },
+  {
+    "base": "chu",
+    "initial": "ch",
+    "final": "u"
+  },
+  {
+    "base": "chua",
+    "initial": "ch",
+    "final": "ua"
+  },
+  {
+    "base": "chuai",
+    "initial": "ch",
+    "final": "uai"
+  },
+  {
+    "base": "chuan",
+    "initial": "ch",
+    "final": "uan"
+  },
+  {
+    "base": "chuang",
+    "initial": "ch",
+    "final": "uang"
+  },
+  {
+    "base": "chui",
+    "initial": "ch",
+    "final": "uei"
+  },
+  {
+    "base": "chun",
+    "initial": "ch",
+    "final": "uen"
+  },
+  {
+    "base": "chuo",
+    "initial": "ch",
+    "final": "uo"
+  },
+  {
+    "base": "ci",
+    "initial": "c",
+    "final": "-i"
+  },
+  {
+    "base": "cong",
+    "initial": "c",
+    "final": "ong"
+  },
+  {
+    "base": "cou",
+    "initial": "c",
+    "final": "ou"
+  },
+  {
+    "base": "cu",
+    "initial": "c",
+    "final": "u"
+  },
+  {
+    "base": "cuan",
+    "initial": "c",
+    "final": "uan"
+  },
+  {
+    "base": "cui",
+    "initial": "c",
+    "final": "uei"
+  },
+  {
+    "base": "cun",
+    "initial": "c",
+    "final": "uen"
+  },
+  {
+    "base": "cuo",
+    "initial": "c",
+    "final": "uo"
+  },
+  {
+    "base": "da",
+    "initial": "d",
+    "final": "a"
+  },
+  {
+    "base": "dai",
+    "initial": "d",
+    "final": "ai"
+  },
+  {
+    "base": "dan",
+    "initial": "d",
+    "final": "an"
+  },
+  {
+    "base": "dang",
+    "initial": "d",
+    "final": "ang"
+  },
+  {
+    "base": "dao",
+    "initial": "d",
+    "final": "ao"
+  },
+  {
+    "base": "de",
+    "initial": "d",
+    "final": "e"
+  },
+  {
+    "base": "dei",
+    "initial": "d",
+    "final": "ei"
+  },
+  {
+    "base": "den",
+    "initial": "d",
+    "final": "en"
+  },
+  {
+    "base": "deng",
+    "initial": "d",
+    "final": "eng"
+  },
+  {
+    "base": "di",
+    "initial": "d",
+    "final": "i"
+  },
+  {
+    "base": "dian",
+    "initial": "d",
+    "final": "ian"
+  },
+  {
+    "base": "diao",
+    "initial": "d",
+    "final": "iao"
+  },
+  {
+    "base": "die",
+    "initial": "d",
+    "final": "ie"
+  },
+  {
+    "base": "ding",
+    "initial": "d",
+    "final": "ing"
+  },
+  {
+    "base": "diu",
+    "initial": "d",
+    "final": "iou"
+  },
+  {
+    "base": "dong",
+    "initial": "d",
+    "final": "ong"
+  },
+  {
+    "base": "dou",
+    "initial": "d",
+    "final": "ou"
+  },
+  {
+    "base": "du",
+    "initial": "d",
+    "final": "u"
+  },
+  {
+    "base": "duan",
+    "initial": "d",
+    "final": "uan"
+  },
+  {
+    "base": "dui",
+    "initial": "d",
+    "final": "uei"
+  },
+  {
+    "base": "dun",
+    "initial": "d",
+    "final": "uen"
+  },
+  {
+    "base": "duo",
+    "initial": "d",
+    "final": "uo"
+  },
+  {
+    "base": "e",
+    "initial": "",
+    "final": "e"
+  },
+  {
+    "base": "ei",
+    "initial": "",
+    "final": "ei"
+  },
+  {
+    "base": "en",
+    "initial": "",
+    "final": "en"
+  },
+  {
+    "base": "eng",
+    "initial": "",
+    "final": "eng"
+  },
+  {
+    "base": "er",
+    "initial": "",
+    "final": "er"
+  },
+  {
+    "base": "fa",
+    "initial": "f",
+    "final": "a"
+  },
+  {
+    "base": "fan",
+    "initial": "f",
+    "final": "an"
+  },
+  {
+    "base": "fang",
+    "initial": "f",
+    "final": "ang"
+  },
+  {
+    "base": "fei",
+    "initial": "f",
+    "final": "ei"
+  },
+  {
+    "base": "fen",
+    "initial": "f",
+    "final": "en"
+  },
+  {
+    "base": "feng",
+    "initial": "f",
+    "final": "eng"
+  },
+  {
+    "base": "fo",
+    "initial": "f",
+    "final": "o"
+  },
+  {
+    "base": "fou",
+    "initial": "f",
+    "final": "ou"
+  },
+  {
+    "base": "fu",
+    "initial": "f",
+    "final": "u"
+  },
+  {
+    "base": "ga",
+    "initial": "g",
+    "final": "a"
+  },
+  {
+    "base": "gai",
+    "initial": "g",
+    "final": "ai"
+  },
+  {
+    "base": "gan",
+    "initial": "g",
+    "final": "an"
+  },
+  {
+    "base": "gang",
+    "initial": "g",
+    "final": "ang"
+  },
+  {
+    "base": "gao",
+    "initial": "g",
+    "final": "ao"
+  },
+  {
+    "base": "ge",
+    "initial": "g",
+    "final": "e"
+  },
+  {
+    "base": "gei",
+    "initial": "g",
+    "final": "ei"
+  },
+  {
+    "base": "gen",
+    "initial": "g",
+    "final": "en"
+  },
+  {
+    "base": "geng",
+    "initial": "g",
+    "final": "eng"
+  },
+  {
+    "base": "gong",
+    "initial": "g",
+    "final": "ong"
+  },
+  {
+    "base": "gou",
+    "initial": "g",
+    "final": "ou"
+  },
+  {
+    "base": "gu",
+    "initial": "g",
+    "final": "u"
+  },
+  {
+    "base": "gua",
+    "initial": "g",
+    "final": "ua"
+  },
+  {
+    "base": "guai",
+    "initial": "g",
+    "final": "uai"
+  },
+  {
+    "base": "guan",
+    "initial": "g",
+    "final": "uan"
+  },
+  {
+    "base": "guang",
+    "initial": "g",
+    "final": "uang"
+  },
+  {
+    "base": "gui",
+    "initial": "g",
+    "final": "uei"
+  },
+  {
+    "base": "gun",
+    "initial": "g",
+    "final": "uen"
+  },
+  {
+    "base": "guo",
+    "initial": "g",
+    "final": "uo"
+  },
+  {
+    "base": "ha",
+    "initial": "h",
+    "final": "a"
+  },
+  {
+    "base": "hai",
+    "initial": "h",
+    "final": "ai"
+  },
+  {
+    "base": "han",
+    "initial": "h",
+    "final": "an"
+  },
+  {
+    "base": "hang",
+    "initial": "h",
+    "final": "ang"
+  },
+  {
+    "base": "hao",
+    "initial": "h",
+    "final": "ao"
+  },
+  {
+    "base": "he",
+    "initial": "h",
+    "final": "e"
+  },
+  {
+    "base": "hei",
+    "initial": "h",
+    "final": "ei"
+  },
+  {
+    "base": "hen",
+    "initial": "h",
+    "final": "en"
+  },
+  {
+    "base": "heng",
+    "initial": "h",
+    "final": "eng"
+  },
+  {
+    "base": "hong",
+    "initial": "h",
+    "final": "ong"
+  },
+  {
+    "base": "hou",
+    "initial": "h",
+    "final": "ou"
+  },
+  {
+    "base": "hu",
+    "initial": "h",
+    "final": "u"
+  },
+  {
+    "base": "hua",
+    "initial": "h",
+    "final": "ua"
+  },
+  {
+    "base": "huai",
+    "initial": "h",
+    "final": "uai"
+  },
+  {
+    "base": "huan",
+    "initial": "h",
+    "final": "uan"
+  },
+  {
+    "base": "huang",
+    "initial": "h",
+    "final": "uang"
+  },
+  {
+    "base": "hui",
+    "initial": "h",
+    "final": "uei"
+  },
+  {
+    "base": "hun",
+    "initial": "h",
+    "final": "uen"
+  },
+  {
+    "base": "huo",
+    "initial": "h",
+    "final": "uo"
+  },
+  {
+    "base": "ji",
+    "initial": "j",
+    "final": "i"
+  },
+  {
+    "base": "jia",
+    "initial": "j",
+    "final": "ia"
+  },
+  {
+    "base": "jian",
+    "initial": "j",
+    "final": "ian"
+  },
+  {
+    "base": "jiang",
+    "initial": "j",
+    "final": "iang"
+  },
+  {
+    "base": "jiao",
+    "initial": "j",
+    "final": "iao"
+  },
+  {
+    "base": "jie",
+    "initial": "j",
+    "final": "ie"
+  },
+  {
+    "base": "jin",
+    "initial": "j",
+    "final": "in"
+  },
+  {
+    "base": "jing",
+    "initial": "j",
+    "final": "ing"
+  },
+  {
+    "base": "jiong",
+    "initial": "j",
+    "final": "iong"
+  },
+  {
+    "base": "jiu",
+    "initial": "j",
+    "final": "iou"
+  },
+  {
+    "base": "ju",
+    "initial": "j",
+    "final": "ü"
+  },
+  {
+    "base": "juan",
+    "initial": "j",
+    "final": "üan"
+  },
+  {
+    "base": "jue",
+    "initial": "j",
+    "final": "üe"
+  },
+  {
+    "base": "jun",
+    "initial": "j",
+    "final": "ün"
+  },
+  {
+    "base": "ka",
+    "initial": "k",
+    "final": "a"
+  },
+  {
+    "base": "kai",
+    "initial": "k",
+    "final": "ai"
+  },
+  {
+    "base": "kan",
+    "initial": "k",
+    "final": "an"
+  },
+  {
+    "base": "kang",
+    "initial": "k",
+    "final": "ang"
+  },
+  {
+    "base": "kao",
+    "initial": "k",
+    "final": "ao"
+  },
+  {
+    "base": "ke",
+    "initial": "k",
+    "final": "e"
+  },
+  {
+    "base": "ken",
+    "initial": "k",
+    "final": "en"
+  },
+  {
+    "base": "keng",
+    "initial": "k",
+    "final": "eng"
+  },
+  {
+    "base": "kong",
+    "initial": "k",
+    "final": "ong"
+  },
+  {
+    "base": "kou",
+    "initial": "k",
+    "final": "ou"
+  },
+  {
+    "base": "ku",
+    "initial": "k",
+    "final": "u"
+  },
+  {
+    "base": "kua",
+    "initial": "k",
+    "final": "ua"
+  },
+  {
+    "base": "kuai",
+    "initial": "k",
+    "final": "uai"
+  },
+  {
+    "base": "kuan",
+    "initial": "k",
+    "final": "uan"
+  },
+  {
+    "base": "kuang",
+    "initial": "k",
+    "final": "uang"
+  },
+  {
+    "base": "kui",
+    "initial": "k",
+    "final": "uei"
+  },
+  {
+    "base": "kun",
+    "initial": "k",
+    "final": "uen"
+  },
+  {
+    "base": "kuo",
+    "initial": "k",
+    "final": "uo"
+  },
+  {
+    "base": "la",
+    "initial": "l",
+    "final": "a"
+  },
+  {
+    "base": "lai",
+    "initial": "l",
+    "final": "ai"
+  },
+  {
+    "base": "lan",
+    "initial": "l",
+    "final": "an"
+  },
+  {
+    "base": "lang",
+    "initial": "l",
+    "final": "ang"
+  },
+  {
+    "base": "lao",
+    "initial": "l",
+    "final": "ao"
+  },
+  {
+    "base": "le",
+    "initial": "l",
+    "final": "e"
+  },
+  {
+    "base": "lei",
+    "initial": "l",
+    "final": "ei"
+  },
+  {
+    "base": "leng",
+    "initial": "l",
+    "final": "eng"
+  },
+  {
+    "base": "li",
+    "initial": "l",
+    "final": "i"
+  },
+  {
+    "base": "lia",
+    "initial": "l",
+    "final": "ia"
+  },
+  {
+    "base": "lian",
+    "initial": "l",
+    "final": "ian"
+  },
+  {
+    "base": "liang",
+    "initial": "l",
+    "final": "iang"
+  },
+  {
+    "base": "liao",
+    "initial": "l",
+    "final": "iao"
+  },
+  {
+    "base": "lie",
+    "initial": "l",
+    "final": "ie"
+  },
+  {
+    "base": "lin",
+    "initial": "l",
+    "final": "in"
+  },
+  {
+    "base": "ling",
+    "initial": "l",
+    "final": "ing"
+  },
+  {
+    "base": "liu",
+    "initial": "l",
+    "final": "iou"
+  },
+  {
+    "base": "long",
+    "initial": "l",
+    "final": "ong"
+  },
+  {
+    "base": "lou",
+    "initial": "l",
+    "final": "ou"
+  },
+  {
+    "base": "lu",
+    "initial": "l",
+    "final": "u"
+  },
+  {
+    "base": "luan",
+    "initial": "l",
+    "final": "uan"
+  },
+  {
+    "base": "lun",
+    "initial": "l",
+    "final": "uen"
+  },
+  {
+    "base": "luo",
+    "initial": "l",
+    "final": "uo"
+  },
+  {
+    "base": "lü",
+    "initial": "l",
+    "final": "ü"
+  },
+  {
+    "base": "lüe",
+    "initial": "l",
+    "final": "üe"
+  },
+  {
+    "base": "ma",
+    "initial": "m",
+    "final": "a"
+  },
+  {
+    "base": "mai",
+    "initial": "m",
+    "final": "ai"
+  },
+  {
+    "base": "man",
+    "initial": "m",
+    "final": "an"
+  },
+  {
+    "base": "mang",
+    "initial": "m",
+    "final": "ang"
+  },
+  {
+    "base": "mao",
+    "initial": "m",
+    "final": "ao"
+  },
+  {
+    "base": "me",
+    "initial": "m",
+    "final": "e"
+  },
+  {
+    "base": "mei",
+    "initial": "m",
+    "final": "ei"
+  },
+  {
+    "base": "men",
+    "initial": "m",
+    "final": "en"
+  },
+  {
+    "base": "meng",
+    "initial": "m",
+    "final": "eng"
+  },
+  {
+    "base": "mi",
+    "initial": "m",
+    "final": "i"
+  },
+  {
+    "base": "mian",
+    "initial": "m",
+    "final": "ian"
+  },
+  {
+    "base": "miao",
+    "initial": "m",
+    "final": "iao"
+  },
+  {
+    "base": "mie",
+    "initial": "m",
+    "final": "ie"
+  },
+  {
+    "base": "min",
+    "initial": "m",
+    "final": "in"
+  },
+  {
+    "base": "ming",
+    "initial": "m",
+    "final": "ing"
+  },
+  {
+    "base": "miu",
+    "initial": "m",
+    "final": "iou"
+  },
+  {
+    "base": "mo",
+    "initial": "m",
+    "final": "o"
+  },
+  {
+    "base": "mou",
+    "initial": "m",
+    "final": "ou"
+  },
+  {
+    "base": "mu",
+    "initial": "m",
+    "final": "u"
+  },
+  {
+    "base": "na",
+    "initial": "n",
+    "final": "a"
+  },
+  {
+    "base": "nai",
+    "initial": "n",
+    "final": "ai"
+  },
+  {
+    "base": "nan",
+    "initial": "n",
+    "final": "an"
+  },
+  {
+    "base": "nang",
+    "initial": "n",
+    "final": "ang"
+  },
+  {
+    "base": "nao",
+    "initial": "n",
+    "final": "ao"
+  },
+  {
+    "base": "ne",
+    "initial": "n",
+    "final": "e"
+  },
+  {
+    "base": "nei",
+    "initial": "n",
+    "final": "ei"
+  },
+  {
+    "base": "nen",
+    "initial": "n",
+    "final": "en"
+  },
+  {
+    "base": "neng",
+    "initial": "n",
+    "final": "eng"
+  },
+  {
+    "base": "ni",
+    "initial": "n",
+    "final": "i"
+  },
+  {
+    "base": "nian",
+    "initial": "n",
+    "final": "ian"
+  },
+  {
+    "base": "niang",
+    "initial": "n",
+    "final": "iang"
+  },
+  {
+    "base": "niao",
+    "initial": "n",
+    "final": "iao"
+  },
+  {
+    "base": "nie",
+    "initial": "n",
+    "final": "ie"
+  },
+  {
+    "base": "nin",
+    "initial": "n",
+    "final": "in"
+  },
+  {
+    "base": "ning",
+    "initial": "n",
+    "final": "ing"
+  },
+  {
+    "base": "niu",
+    "initial": "n",
+    "final": "iou"
+  },
+  {
+    "base": "nong",
+    "initial": "n",
+    "final": "ong"
+  },
+  {
+    "base": "nu",
+    "initial": "n",
+    "final": "u"
+  },
+  {
+    "base": "nuan",
+    "initial": "n",
+    "final": "uan"
+  },
+  {
+    "base": "nun",
+    "initial": "n",
+    "final": "uen"
+  },
+  {
+    "base": "nuo",
+    "initial": "n",
+    "final": "uo"
+  },
+  {
+    "base": "nü",
+    "initial": "n",
+    "final": "ü"
+  },
+  {
+    "base": "nüe",
+    "initial": "n",
+    "final": "üe"
+  },
+  {
+    "base": "ou",
+    "initial": "",
+    "final": "ou"
+  },
+  {
+    "base": "pa",
+    "initial": "p",
+    "final": "a"
+  },
+  {
+    "base": "pai",
+    "initial": "p",
+    "final": "ai"
+  },
+  {
+    "base": "pan",
+    "initial": "p",
+    "final": "an"
+  },
+  {
+    "base": "pang",
+    "initial": "p",
+    "final": "ang"
+  },
+  {
+    "base": "pao",
+    "initial": "p",
+    "final": "ao"
+  },
+  {
+    "base": "pei",
+    "initial": "p",
+    "final": "ei"
+  },
+  {
+    "base": "pen",
+    "initial": "p",
+    "final": "en"
+  },
+  {
+    "base": "peng",
+    "initial": "p",
+    "final": "eng"
+  },
+  {
+    "base": "pi",
+    "initial": "p",
+    "final": "i"
+  },
+  {
+    "base": "pian",
+    "initial": "p",
+    "final": "ian"
+  },
+  {
+    "base": "piao",
+    "initial": "p",
+    "final": "iao"
+  },
+  {
+    "base": "pie",
+    "initial": "p",
+    "final": "ie"
+  },
+  {
+    "base": "pin",
+    "initial": "p",
+    "final": "in"
+  },
+  {
+    "base": "ping",
+    "initial": "p",
+    "final": "ing"
+  },
+  {
+    "base": "po",
+    "initial": "p",
+    "final": "o"
+  },
+  {
+    "base": "pou",
+    "initial": "p",
+    "final": "ou"
+  },
+  {
+    "base": "pu",
+    "initial": "p",
+    "final": "u"
+  },
+  {
+    "base": "qi",
+    "initial": "q",
+    "final": "i"
+  },
+  {
+    "base": "qia",
+    "initial": "q",
+    "final": "ia"
+  },
+  {
+    "base": "qian",
+    "initial": "q",
+    "final": "ian"
+  },
+  {
+    "base": "qiang",
+    "initial": "q",
+    "final": "iang"
+  },
+  {
+    "base": "qiao",
+    "initial": "q",
+    "final": "iao"
+  },
+  {
+    "base": "qie",
+    "initial": "q",
+    "final": "ie"
+  },
+  {
+    "base": "qin",
+    "initial": "q",
+    "final": "in"
+  },
+  {
+    "base": "qing",
+    "initial": "q",
+    "final": "ing"
+  },
+  {
+    "base": "qiong",
+    "initial": "q",
+    "final": "iong"
+  },
+  {
+    "base": "qiu",
+    "initial": "q",
+    "final": "iou"
+  },
+  {
+    "base": "qu",
+    "initial": "q",
+    "final": "ü"
+  },
+  {
+    "base": "quan",
+    "initial": "q",
+    "final": "üan"
+  },
+  {
+    "base": "que",
+    "initial": "q",
+    "final": "üe"
+  },
+  {
+    "base": "qun",
+    "initial": "q",
+    "final": "ün"
+  },
+  {
+    "base": "ran",
+    "initial": "r",
+    "final": "an"
+  },
+  {
+    "base": "rang",
+    "initial": "r",
+    "final": "ang"
+  },
+  {
+    "base": "rao",
+    "initial": "r",
+    "final": "ao"
+  },
+  {
+    "base": "re",
+    "initial": "r",
+    "final": "e"
+  },
+  {
+    "base": "rei",
+    "initial": "r",
+    "final": "ei"
+  },
+  {
+    "base": "ren",
+    "initial": "r",
+    "final": "en"
+  },
+  {
+    "base": "reng",
+    "initial": "r",
+    "final": "eng"
+  },
+  {
+    "base": "ri",
+    "initial": "r",
+    "final": "-i"
+  },
+  {
+    "base": "rong",
+    "initial": "r",
+    "final": "ong"
+  },
+  {
+    "base": "rou",
+    "initial": "r",
+    "final": "ou"
+  },
+  {
+    "base": "ru",
+    "initial": "r",
+    "final": "u"
+  },
+  {
+    "base": "ruan",
+    "initial": "r",
+    "final": "uan"
+  },
+  {
+    "base": "rui",
+    "initial": "r",
+    "final": "uei"
+  },
+  {
+    "base": "run",
+    "initial": "r",
+    "final": "uen"
+  },
+  {
+    "base": "ruo",
+    "initial": "r",
+    "final": "uo"
+  },
+  {
+    "base": "sa",
+    "initial": "s",
+    "final": "a"
+  },
+  {
+    "base": "sai",
+    "initial": "s",
+    "final": "ai"
+  },
+  {
+    "base": "san",
+    "initial": "s",
+    "final": "an"
+  },
+  {
+    "base": "sang",
+    "initial": "s",
+    "final": "ang"
+  },
+  {
+    "base": "sao",
+    "initial": "s",
+    "final": "ao"
+  },
+  {
+    "base": "se",
+    "initial": "s",
+    "final": "e"
+  },
+  {
+    "base": "sei",
+    "initial": "s",
+    "final": "ei"
+  },
+  {
+    "base": "sen",
+    "initial": "s",
+    "final": "en"
+  },
+  {
+    "base": "seng",
+    "initial": "s",
+    "final": "eng"
+  },
+  {
+    "base": "sha",
+    "initial": "sh",
+    "final": "a"
+  },
+  {
+    "base": "shai",
+    "initial": "sh",
+    "final": "ai"
+  },
+  {
+    "base": "shan",
+    "initial": "sh",
+    "final": "an"
+  },
+  {
+    "base": "shang",
+    "initial": "sh",
+    "final": "ang"
+  },
+  {
+    "base": "shao",
+    "initial": "sh",
+    "final": "ao"
+  },
+  {
+    "base": "she",
+    "initial": "sh",
+    "final": "e"
+  },
+  {
+    "base": "shei",
+    "initial": "sh",
+    "final": "ei"
+  },
+  {
+    "base": "shen",
+    "initial": "sh",
+    "final": "en"
+  },
+  {
+    "base": "sheng",
+    "initial": "sh",
+    "final": "eng"
+  },
+  {
+    "base": "shi",
+    "initial": "sh",
+    "final": "-i"
+  },
+  {
+    "base": "shou",
+    "initial": "sh",
+    "final": "ou"
+  },
+  {
+    "base": "shu",
+    "initial": "sh",
+    "final": "u"
+  },
+  {
+    "base": "shua",
+    "initial": "sh",
+    "final": "ua"
+  },
+  {
+    "base": "shuai",
+    "initial": "sh",
+    "final": "uai"
+  },
+  {
+    "base": "shuan",
+    "initial": "sh",
+    "final": "uan"
+  },
+  {
+    "base": "shuang",
+    "initial": "sh",
+    "final": "uang"
+  },
+  {
+    "base": "shui",
+    "initial": "sh",
+    "final": "uei"
+  },
+  {
+    "base": "shun",
+    "initial": "sh",
+    "final": "uen"
+  },
+  {
+    "base": "shuo",
+    "initial": "sh",
+    "final": "uo"
+  },
+  {
+    "base": "si",
+    "initial": "s",
+    "final": "-i"
+  },
+  {
+    "base": "song",
+    "initial": "s",
+    "final": "ong"
+  },
+  {
+    "base": "sou",
+    "initial": "s",
+    "final": "ou"
+  },
+  {
+    "base": "su",
+    "initial": "s",
+    "final": "u"
+  },
+  {
+    "base": "suan",
+    "initial": "s",
+    "final": "uan"
+  },
+  {
+    "base": "sui",
+    "initial": "s",
+    "final": "uei"
+  },
+  {
+    "base": "sun",
+    "initial": "s",
+    "final": "uen"
+  },
+  {
+    "base": "suo",
+    "initial": "s",
+    "final": "uo"
+  },
+  {
+    "base": "ta",
+    "initial": "t",
+    "final": "a"
+  },
+  {
+    "base": "tai",
+    "initial": "t",
+    "final": "ai"
+  },
+  {
+    "base": "tan",
+    "initial": "t",
+    "final": "an"
+  },
+  {
+    "base": "tang",
+    "initial": "t",
+    "final": "ang"
+  },
+  {
+    "base": "tao",
+    "initial": "t",
+    "final": "ao"
+  },
+  {
+    "base": "te",
+    "initial": "t",
+    "final": "e"
+  },
+  {
+    "base": "teng",
+    "initial": "t",
+    "final": "eng"
+  },
+  {
+    "base": "ti",
+    "initial": "t",
+    "final": "i"
+  },
+  {
+    "base": "tian",
+    "initial": "t",
+    "final": "ian"
+  },
+  {
+    "base": "tiao",
+    "initial": "t",
+    "final": "iao"
+  },
+  {
+    "base": "tie",
+    "initial": "t",
+    "final": "ie"
+  },
+  {
+    "base": "ting",
+    "initial": "t",
+    "final": "ing"
+  },
+  {
+    "base": "tong",
+    "initial": "t",
+    "final": "ong"
+  },
+  {
+    "base": "tou",
+    "initial": "t",
+    "final": "ou"
+  },
+  {
+    "base": "tu",
+    "initial": "t",
+    "final": "u"
+  },
+  {
+    "base": "tuan",
+    "initial": "t",
+    "final": "uan"
+  },
+  {
+    "base": "tui",
+    "initial": "t",
+    "final": "uei"
+  },
+  {
+    "base": "tun",
+    "initial": "t",
+    "final": "uen"
+  },
+  {
+    "base": "tuo",
+    "initial": "t",
+    "final": "uo"
+  },
+  {
+    "base": "wa",
+    "initial": "",
+    "final": "ua"
+  },
+  {
+    "base": "wai",
+    "initial": "",
+    "final": "uai"
+  },
+  {
+    "base": "wan",
+    "initial": "",
+    "final": "uan"
+  },
+  {
+    "base": "wang",
+    "initial": "",
+    "final": "uang"
+  },
+  {
+    "base": "wei",
+    "initial": "",
+    "final": "uei"
+  },
+  {
+    "base": "wen",
+    "initial": "",
+    "final": "uen"
+  },
+  {
+    "base": "weng",
+    "initial": "",
+    "final": "ueng"
+  },
+  {
+    "base": "wo",
+    "initial": "",
+    "final": "uo"
+  },
+  {
+    "base": "wu",
+    "initial": "",
+    "final": "u"
+  },
+  {
+    "base": "xi",
+    "initial": "x",
+    "final": "i"
+  },
+  {
+    "base": "xia",
+    "initial": "x",
+    "final": "ia"
+  },
+  {
+    "base": "xian",
+    "initial": "x",
+    "final": "ian"
+  },
+  {
+    "base": "xiang",
+    "initial": "x",
+    "final": "iang"
+  },
+  {
+    "base": "xiao",
+    "initial": "x",
+    "final": "iao"
+  },
+  {
+    "base": "xie",
+    "initial": "x",
+    "final": "ie"
+  },
+  {
+    "base": "xin",
+    "initial": "x",
+    "final": "in"
+  },
+  {
+    "base": "xing",
+    "initial": "x",
+    "final": "ing"
+  },
+  {
+    "base": "xiong",
+    "initial": "x",
+    "final": "iong"
+  },
+  {
+    "base": "xiu",
+    "initial": "x",
+    "final": "iou"
+  },
+  {
+    "base": "xu",
+    "initial": "x",
+    "final": "ü"
+  },
+  {
+    "base": "xuan",
+    "initial": "x",
+    "final": "üan"
+  },
+  {
+    "base": "xue",
+    "initial": "x",
+    "final": "üe"
+  },
+  {
+    "base": "xun",
+    "initial": "x",
+    "final": "ün"
+  },
+  {
+    "base": "ya",
+    "initial": "",
+    "final": "ia"
+  },
+  {
+    "base": "yan",
+    "initial": "",
+    "final": "ian"
+  },
+  {
+    "base": "yang",
+    "initial": "",
+    "final": "iang"
+  },
+  {
+    "base": "yao",
+    "initial": "",
+    "final": "iao"
+  },
+  {
+    "base": "ye",
+    "initial": "",
+    "final": "ie"
+  },
+  {
+    "base": "yi",
+    "initial": "",
+    "final": "i"
+  },
+  {
+    "base": "yin",
+    "initial": "",
+    "final": "in"
+  },
+  {
+    "base": "ying",
+    "initial": "",
+    "final": "ing"
+  },
+  {
+    "base": "yong",
+    "initial": "",
+    "final": "iong"
+  },
+  {
+    "base": "you",
+    "initial": "",
+    "final": "iou"
+  },
+  {
+    "base": "yu",
+    "initial": "",
+    "final": "ü"
+  },
+  {
+    "base": "yuan",
+    "initial": "",
+    "final": "üan"
+  },
+  {
+    "base": "yue",
+    "initial": "",
+    "final": "üe"
+  },
+  {
+    "base": "yun",
+    "initial": "",
+    "final": "ün"
+  },
+  {
+    "base": "za",
+    "initial": "z",
+    "final": "a"
+  },
+  {
+    "base": "zai",
+    "initial": "z",
+    "final": "ai"
+  },
+  {
+    "base": "zan",
+    "initial": "z",
+    "final": "an"
+  },
+  {
+    "base": "zang",
+    "initial": "z",
+    "final": "ang"
+  },
+  {
+    "base": "zao",
+    "initial": "z",
+    "final": "ao"
+  },
+  {
+    "base": "ze",
+    "initial": "z",
+    "final": "e"
+  },
+  {
+    "base": "zei",
+    "initial": "z",
+    "final": "ei"
+  },
+  {
+    "base": "zen",
+    "initial": "z",
+    "final": "en"
+  },
+  {
+    "base": "zeng",
+    "initial": "z",
+    "final": "eng"
+  },
+  {
+    "base": "zha",
+    "initial": "zh",
+    "final": "a"
+  },
+  {
+    "base": "zhai",
+    "initial": "zh",
+    "final": "ai"
+  },
+  {
+    "base": "zhan",
+    "initial": "zh",
+    "final": "an"
+  },
+  {
+    "base": "zhang",
+    "initial": "zh",
+    "final": "ang"
+  },
+  {
+    "base": "zhao",
+    "initial": "zh",
+    "final": "ao"
+  },
+  {
+    "base": "zhe",
+    "initial": "zh",
+    "final": "e"
+  },
+  {
+    "base": "zhei",
+    "initial": "zh",
+    "final": "ei"
+  },
+  {
+    "base": "zhen",
+    "initial": "zh",
+    "final": "en"
+  },
+  {
+    "base": "zheng",
+    "initial": "zh",
+    "final": "eng"
+  },
+  {
+    "base": "zhi",
+    "initial": "zh",
+    "final": "-i"
+  },
+  {
+    "base": "zhong",
+    "initial": "zh",
+    "final": "ong"
+  },
+  {
+    "base": "zhou",
+    "initial": "zh",
+    "final": "ou"
+  },
+  {
+    "base": "zhu",
+    "initial": "zh",
+    "final": "u"
+  },
+  {
+    "base": "zhua",
+    "initial": "zh",
+    "final": "ua"
+  },
+  {
+    "base": "zhuai",
+    "initial": "zh",
+    "final": "uai"
+  },
+  {
+    "base": "zhuan",
+    "initial": "zh",
+    "final": "uan"
+  },
+  {
+    "base": "zhuang",
+    "initial": "zh",
+    "final": "uang"
+  },
+  {
+    "base": "zhui",
+    "initial": "zh",
+    "final": "uei"
+  },
+  {
+    "base": "zhun",
+    "initial": "zh",
+    "final": "uen"
+  },
+  {
+    "base": "zhuo",
+    "initial": "zh",
+    "final": "uo"
+  },
+  {
+    "base": "zi",
+    "initial": "z",
+    "final": "-i"
+  },
+  {
+    "base": "zong",
+    "initial": "z",
+    "final": "ong"
+  },
+  {
+    "base": "zou",
+    "initial": "z",
+    "final": "ou"
+  },
+  {
+    "base": "zu",
+    "initial": "z",
+    "final": "u"
+  },
+  {
+    "base": "zuan",
+    "initial": "z",
+    "final": "uan"
+  },
+  {
+    "base": "zui",
+    "initial": "z",
+    "final": "uei"
+  },
+  {
+    "base": "zun",
+    "initial": "z",
+    "final": "uen"
+  },
+  {
+    "base": "zuo",
+    "initial": "z",
+    "final": "uo"
+  }
+]

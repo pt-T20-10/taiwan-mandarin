@@ -1,0 +1,3294 @@
+{
+  "tw.greetings.g.1": {
+    "hanzi": "我是越南人。",
+    "pinyin": "Wǒ shì Yuènán rén.",
+    "vi": "Tôi là người Việt Nam.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.greetings.g.1",
+    "explanation": "A 是 B: 是 nối chủ ngữ với danh từ chỉ danh tính; không dùng 是 trước mọi tính từ.",
+    "title": "Là ai: 是",
+    "pattern": "A + 是 + danh từ",
+    "restrictions": "Không dùng 是 để nối trực tiếp với tính từ chỉ trạng thái.",
+    "common_mistake": "我是忙。",
+    "examples": [
+      {
+        "hanzi": "我是越南人。",
+        "pinyin": "Wǒ shì Yuènán rén.",
+        "vi": "Tôi là người Việt Nam.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我是學生。",
+        "pinyin": "Wǒ shì xuéshēng.",
+        "vi": "Tôi là học sinh/sinh viên.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "她是老師。",
+        "pinyin": "Tā shì lǎoshī.",
+        "vi": "Cô ấy là giáo viên.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.greetings.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我是越南人。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Là ai: 是"
+        ],
+        "choices": [
+          "Là ai: 是",
+          "Phủ định: 不",
+          "Sở hữu: 的",
+          "Nguyên nhân và kết quả"
+        ],
+        "tokens": [],
+        "explanation": "A 是 B: 是 nối chủ ngữ với danh từ chỉ danh tính; không dùng 是 trước mọi tính từ.",
+        "word_id": null,
+        "grammar_id": "tw.greetings.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.greetings.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Cô ấy là giáo viên.”: 她___老師。",
+        "stimulus": null,
+        "answers": [
+          "是"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Không dùng 是 để nối trực tiếp với tính từ chỉ trạng thái.",
+        "word_id": null,
+        "grammar_id": "tw.greetings.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.greetings.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Cô ấy là giáo viên.",
+        "stimulus": null,
+        "answers": [
+          "她是老師。"
+        ],
+        "choices": [],
+        "tokens": [
+          "是",
+          "老",
+          "師",
+          "她"
+        ],
+        "explanation": "A 是 B: 是 nối chủ ngữ với danh từ chỉ danh tính; không dùng 是 trước mọi tính từ.",
+        "word_id": null,
+        "grammar_id": "tw.greetings.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.greetings.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi là học sinh/sinh viên.”: 我是忙。",
+        "stimulus": null,
+        "answers": [
+          "我是學生。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Không dùng 是 để nối trực tiếp với tính từ chỉ trạng thái. Câu tham khảo: 我是學生。",
+        "word_id": null,
+        "grammar_id": "tw.greetings.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "繫動詞",
+        "tbcl_level": "第1級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.001"
+      }
+    ]
+  },
+  "tw.greetings.g.2": {
+    "hanzi": "你叫什麼名字？",
+    "pinyin": "Nǐ jiào shénme míngzi?",
+    "vi": "Bạn tên là gì?",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.greetings.g.2",
+    "explanation": "什麼 đứng tại vị trí thông tin cần hỏi; không đảo trật tự câu.",
+    "title": "Hỏi thông tin: 什麼",
+    "pattern": "Chủ ngữ + động từ + 什麼 + danh từ",
+    "restrictions": "Từ hỏi ở đúng vị trí thông tin cần biết; không đưa 什麼 lên đầu theo tiếng Việt.",
+    "common_mistake": "什麼你叫名字？",
+    "examples": [
+      {
+        "hanzi": "你叫什麼名字？",
+        "pinyin": "Nǐ jiào shénme míngzi?",
+        "vi": "Bạn tên là gì?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "你喝什麼茶？",
+        "pinyin": "Nǐ hē shénme chá?",
+        "vi": "Bạn uống trà gì?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "你想買什麼？",
+        "pinyin": "Nǐ xiǎng mǎi shénme?",
+        "vi": "Bạn muốn mua gì?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.greetings.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “你叫什麼名字？” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Hỏi thông tin: 什麼"
+        ],
+        "choices": [
+          "Hỏi giá và số lượng: 多少",
+          "Miêu tả bằng tính từ: 很",
+          "Lặp lại hành động: 再",
+          "Hỏi thông tin: 什麼"
+        ],
+        "tokens": [],
+        "explanation": "什麼 đứng tại vị trí thông tin cần hỏi; không đảo trật tự câu.",
+        "word_id": null,
+        "grammar_id": "tw.greetings.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.greetings.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Bạn uống trà gì?”: 你喝___茶？",
+        "stimulus": null,
+        "answers": [
+          "什麼"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Từ hỏi ở đúng vị trí thông tin cần biết; không đưa 什麼 lên đầu theo tiếng Việt.",
+        "word_id": null,
+        "grammar_id": "tw.greetings.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.greetings.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Bạn muốn mua gì?",
+        "stimulus": null,
+        "answers": [
+          "你想買什麼？"
+        ],
+        "choices": [],
+        "tokens": [
+          "想",
+          "買",
+          "什",
+          "麼",
+          "你"
+        ],
+        "explanation": "什麼 đứng tại vị trí thông tin cần hỏi; không đảo trật tự câu.",
+        "word_id": null,
+        "grammar_id": "tw.greetings.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.greetings.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Bạn tên là gì?”: 什麼你叫名字？",
+        "stimulus": null,
+        "answers": [
+          "你叫什麼名字？"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Từ hỏi ở đúng vị trí thông tin cần biết; không đưa 什麼 lên đầu theo tiếng Việt. Câu tham khảo: 你叫什麼名字？",
+        "word_id": null,
+        "grammar_id": "tw.greetings.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "什麼",
+        "tbcl_level": "第1級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.006"
+      }
+    ]
+  },
+  "tw.numbers.g.1": {
+    "hanzi": "現在幾點？",
+    "pinyin": "Xiànzài jǐ diǎn?",
+    "vi": "Bây giờ là mấy giờ?",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.numbers.g.1",
+    "explanation": "幾 hỏi số nhỏ hoặc thời gian; 幾點 hỏi giờ.",
+    "title": "Hỏi giờ: 幾點",
+    "pattern": "現在 + 幾點",
+    "restrictions": "幾點 hỏi giờ; 多少錢 hỏi giá, không thay thế cho nhau.",
+    "common_mistake": "現在多少錢？",
+    "examples": [
+      {
+        "hanzi": "現在幾點？",
+        "pinyin": "Xiànzài jǐ diǎn?",
+        "vi": "Bây giờ mấy giờ?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "你幾點上課？",
+        "pinyin": "Nǐ jǐ diǎn shàngkè?",
+        "vi": "Bạn học lúc mấy giờ?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "老師幾點來？",
+        "pinyin": "Lǎoshī jǐ diǎn lái?",
+        "vi": "Giáo viên đến lúc mấy giờ?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.numbers.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “現在幾點？” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Hỏi giờ: 幾點"
+        ],
+        "choices": [
+          "Tồn tại: nơi chốn + 有",
+          "Bổ ngữ khả năng: V 不 C",
+          "Hỏi giờ: 幾點",
+          "Mong muốn: 想"
+        ],
+        "tokens": [],
+        "explanation": "幾 hỏi số nhỏ hoặc thời gian; 幾點 hỏi giờ.",
+        "word_id": null,
+        "grammar_id": "tw.numbers.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.numbers.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Bạn học lúc mấy giờ?”: 你___上課？",
+        "stimulus": null,
+        "answers": [
+          "幾點"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "幾點 hỏi giờ; 多少錢 hỏi giá, không thay thế cho nhau.",
+        "word_id": null,
+        "grammar_id": "tw.numbers.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.numbers.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Giáo viên đến lúc mấy giờ?",
+        "stimulus": null,
+        "answers": [
+          "老師幾點來？"
+        ],
+        "choices": [],
+        "tokens": [
+          "師",
+          "幾",
+          "點",
+          "來",
+          "老"
+        ],
+        "explanation": "幾 hỏi số nhỏ hoặc thời gian; 幾點 hỏi giờ.",
+        "word_id": null,
+        "grammar_id": "tw.numbers.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.numbers.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Bây giờ mấy giờ?”: 現在多少錢？",
+        "stimulus": null,
+        "answers": [
+          "現在幾點？"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "幾點 hỏi giờ; 多少錢 hỏi giá, không thay thế cho nhau. Câu tham khảo: 現在幾點？",
+        "word_id": null,
+        "grammar_id": "tw.numbers.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "時間表達",
+        "tbcl_level": "第1*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.010"
+      },
+      {
+        "title": "幾/多少1",
+        "tbcl_level": "第2*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+        "id": "tbcl.066"
+      }
+    ]
+  },
+  "tw.numbers.g.2": {
+    "hanzi": "我們明天三點見。",
+    "pinyin": "Wǒmen míngtiān sān diǎn jiàn.",
+    "vi": "Ngày mai chúng ta gặp nhau lúc ba giờ.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.numbers.g.2",
+    "explanation": "Từ chỉ thời gian thường đứng sau chủ ngữ hoặc trước cả chủ ngữ, trước động từ.",
+    "title": "Thời gian trong câu",
+    "pattern": "Chủ ngữ + thời gian + động từ",
+    "restrictions": "Thời gian có thể đứng trước chủ ngữ; thường không đặt cuối câu như tiếng Việt.",
+    "common_mistake": "我們見明天。",
+    "examples": [
+      {
+        "hanzi": "我們明天三點見。",
+        "pinyin": "Wǒmen míngtiān sān diǎn jiàn.",
+        "vi": "Ngày mai chúng ta gặp nhau lúc ba giờ.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我們明天見。",
+        "pinyin": "Wǒmen míngtiān jiàn.",
+        "vi": "Ngày mai chúng ta gặp nhau.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "明天我上課。",
+        "pinyin": "Míngtiān wǒ shàngkè.",
+        "vi": "Ngày mai tôi đi học.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.numbers.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我們明天三點見。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Thời gian trong câu"
+        ],
+        "choices": [
+          "Đã: 已經…了",
+          "Thời gian trong câu",
+          "Đi bằng phương tiện",
+          "Khoảng thời gian: 從…到…"
+        ],
+        "tokens": [],
+        "explanation": "Từ chỉ thời gian thường đứng sau chủ ngữ hoặc trước cả chủ ngữ, trước động từ.",
+        "word_id": null,
+        "grammar_id": "tw.numbers.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.numbers.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Ngày mai chúng ta gặp nhau.”: 我們___見。",
+        "stimulus": null,
+        "answers": [
+          "明天"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Thời gian có thể đứng trước chủ ngữ; thường không đặt cuối câu như tiếng Việt.",
+        "word_id": null,
+        "grammar_id": "tw.numbers.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.numbers.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Ngày mai tôi đi học.",
+        "stimulus": null,
+        "answers": [
+          "明天我上課。"
+        ],
+        "choices": [],
+        "tokens": [
+          "天",
+          "我",
+          "上",
+          "課",
+          "明"
+        ],
+        "explanation": "Từ chỉ thời gian thường đứng sau chủ ngữ hoặc trước cả chủ ngữ, trước động từ.",
+        "word_id": null,
+        "grammar_id": "tw.numbers.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.numbers.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Ngày mai chúng ta gặp nhau.”: 我們見明天。",
+        "stimulus": null,
+        "answers": [
+          "我們明天見。",
+          "明天我們見。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Thời gian có thể đứng trước chủ ngữ; thường không đặt cuối câu như tiếng Việt. Câu tham khảo: 我們明天見。",
+        "word_id": null,
+        "grammar_id": "tw.numbers.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "時間表達",
+        "tbcl_level": "第1*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.010"
+      }
+    ]
+  },
+  "tw.food.g.1": {
+    "hanzi": "我要一杯茶。",
+    "pinyin": "Wǒ yào yì bēi chá.",
+    "vi": "Tôi muốn một ly trà.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.food.g.1",
+    "explanation": "Số + lượng từ + danh từ: 一杯茶. 一 đổi thành yì trước thanh 1, 2, 3 khi nói.",
+    "title": "Số và lượng từ",
+    "pattern": "Số + lượng từ + danh từ",
+    "restrictions": "Chọn lượng từ theo danh từ; không dùng 個 thay cho mọi lượng từ.",
+    "common_mistake": "我要一茶。",
+    "examples": [
+      {
+        "hanzi": "我要一杯茶。",
+        "pinyin": "Wǒ yào yī bēi chá.",
+        "vi": "Tôi muốn một ly trà.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "他買兩本書。",
+        "pinyin": "Tā mǎi liǎng běn shū.",
+        "vi": "Anh ấy mua hai quyển sách.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我有三個杯子。",
+        "pinyin": "Wǒ yǒu sān ge bēizi.",
+        "vi": "Tôi có ba cái ly.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.food.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我要一杯茶。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Số và lượng từ"
+        ],
+        "choices": [
+          "Số và lượng từ",
+          "Vị trí: 在",
+          "Nối danh từ: 和",
+          "Kỹ năng học được: 會"
+        ],
+        "tokens": [],
+        "explanation": "Số + lượng từ + danh từ: 一杯茶. 一 đổi thành yì trước thanh 1, 2, 3 khi nói.",
+        "word_id": null,
+        "grammar_id": "tw.food.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.food.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Anh ấy mua hai quyển sách.”: 他買兩___書。",
+        "stimulus": null,
+        "answers": [
+          "本"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Chọn lượng từ theo danh từ; không dùng 個 thay cho mọi lượng từ.",
+        "word_id": null,
+        "grammar_id": "tw.food.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.food.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Tôi có ba cái ly.",
+        "stimulus": null,
+        "answers": [
+          "我有三個杯子。"
+        ],
+        "choices": [],
+        "tokens": [
+          "有",
+          "三",
+          "個",
+          "杯",
+          "子",
+          "我"
+        ],
+        "explanation": "Số + lượng từ + danh từ: 一杯茶. 一 đổi thành yì trước thanh 1, 2, 3 khi nói.",
+        "word_id": null,
+        "grammar_id": "tw.food.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.food.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi muốn một ly trà.”: 我要一茶。",
+        "stimulus": null,
+        "answers": [
+          "我要一杯茶。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Chọn lượng từ theo danh từ; không dùng 個 thay cho mọi lượng từ. Câu tham khảo: 我要一杯茶。",
+        "word_id": null,
+        "grammar_id": "tw.food.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "數+量",
+        "tbcl_level": "第1*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.012"
+      }
+    ]
+  },
+  "tw.food.g.2": {
+    "hanzi": "這碗麵不辣。",
+    "pinyin": "Zhè wǎn miàn bú là.",
+    "vi": "Bát mì này không cay.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.food.g.2",
+    "explanation": "不 phủ định tính từ/động từ; trước thanh 4, 不 đọc bú.",
+    "title": "Phủ định: 不",
+    "pattern": "Chủ ngữ + 不 + động từ/tính từ",
+    "restrictions": "Sở hữu 有 phủ định bằng 沒有. 不 trước thanh 4 thường đọc bú khi nói liền.",
+    "common_mistake": "這碗麵沒辣。",
+    "examples": [
+      {
+        "hanzi": "這碗麵不辣。",
+        "pinyin": "Zhè wǎn miàn bù là.",
+        "vi": "Bát mì này không cay.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我不喝咖啡。",
+        "pinyin": "Wǒ bù hē kāfēi.",
+        "vi": "Tôi không uống cà phê.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "他不去學校。",
+        "pinyin": "Tā bù qù xuéxiào.",
+        "vi": "Anh ấy không đến trường.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.food.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “這碗麵不辣。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Phủ định: 不"
+        ],
+        "choices": [
+          "Sở hữu: 有 / 沒有",
+          "Xin phép hoặc nhờ: 可以…嗎",
+          "Cùng ai: 跟",
+          "Phủ định: 不"
+        ],
+        "tokens": [],
+        "explanation": "不 phủ định tính từ/động từ; trước thanh 4, 不 đọc bú.",
+        "word_id": null,
+        "grammar_id": "tw.food.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.food.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Tôi không uống cà phê.”: 我___喝咖啡。",
+        "stimulus": null,
+        "answers": [
+          "不"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Sở hữu 有 phủ định bằng 沒有. 不 trước thanh 4 thường đọc bú khi nói liền.",
+        "word_id": null,
+        "grammar_id": "tw.food.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.food.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Anh ấy không đến trường.",
+        "stimulus": null,
+        "answers": [
+          "他不去學校。"
+        ],
+        "choices": [],
+        "tokens": [
+          "不",
+          "去",
+          "學",
+          "校",
+          "他"
+        ],
+        "explanation": "不 phủ định tính từ/động từ; trước thanh 4, 不 đọc bú.",
+        "word_id": null,
+        "grammar_id": "tw.food.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.food.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Bát mì này không cay.”: 這碗麵沒辣。",
+        "stimulus": null,
+        "answers": [
+          "這碗麵不辣。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Sở hữu 有 phủ định bằng 沒有. 不 trước thanh 4 thường đọc bú khi nói liền. Câu tham khảo: 這碗麵不辣。",
+        "word_id": null,
+        "grammar_id": "tw.food.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "不",
+        "tbcl_level": "第1級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.004"
+      }
+    ]
+  },
+  "tw.shopping.g.1": {
+    "hanzi": "這個多少錢？",
+    "pinyin": "Zhège duōshǎo qián?",
+    "vi": "Cái này bao nhiêu tiền?",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.shopping.g.1",
+    "explanation": "多少 hỏi số lượng/giá, không giới hạn ở số nhỏ.",
+    "title": "Hỏi giá và số lượng: 多少",
+    "pattern": "Danh từ + 多少 + đơn vị",
+    "restrictions": "多少錢 hỏi giá; không dùng 幾點 để hỏi giá.",
+    "common_mistake": "這個幾點？",
+    "examples": [
+      {
+        "hanzi": "這個多少錢？",
+        "pinyin": "Zhège duōshǎo qián?",
+        "vi": "Cái này bao nhiêu tiền?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "這裡有多少學生？",
+        "pinyin": "Zhèlǐ yǒu duōshǎo xuéshēng?",
+        "vi": "Ở đây có bao nhiêu học sinh?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "你有多少本書？",
+        "pinyin": "Nǐ yǒu duōshǎo běn shū?",
+        "vi": "Bạn có bao nhiêu quyển sách?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.shopping.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “這個多少錢？” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Hỏi giá và số lượng: 多少"
+        ],
+        "choices": [
+          "Nguyên nhân và kết quả",
+          "Hỏi khi nào: 什麼時候",
+          "Hỏi giá và số lượng: 多少",
+          "Sở hữu: 的"
+        ],
+        "tokens": [],
+        "explanation": "多少 hỏi số lượng/giá, không giới hạn ở số nhỏ.",
+        "word_id": null,
+        "grammar_id": "tw.shopping.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.shopping.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Cái này bao nhiêu tiền?”: 這個___錢？",
+        "stimulus": null,
+        "answers": [
+          "多少"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "多少錢 hỏi giá; không dùng 幾點 để hỏi giá.",
+        "word_id": null,
+        "grammar_id": "tw.shopping.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.shopping.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Bạn có bao nhiêu quyển sách?",
+        "stimulus": null,
+        "answers": [
+          "你有多少本書？"
+        ],
+        "choices": [],
+        "tokens": [
+          "有",
+          "多",
+          "少",
+          "本",
+          "書",
+          "你"
+        ],
+        "explanation": "多少 hỏi số lượng/giá, không giới hạn ở số nhỏ.",
+        "word_id": null,
+        "grammar_id": "tw.shopping.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.shopping.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Cái này bao nhiêu tiền?”: 這個幾點？",
+        "stimulus": null,
+        "answers": [
+          "這個多少錢？",
+          "這個要多少錢？"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "多少錢 hỏi giá; không dùng 幾點 để hỏi giá. Câu tham khảo: 這個多少錢？",
+        "word_id": null,
+        "grammar_id": "tw.shopping.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "幾/多少1",
+        "tbcl_level": "第2*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+        "id": "tbcl.066"
+      }
+    ]
+  },
+  "tw.shopping.g.2": {
+    "hanzi": "我想買蘋果。",
+    "pinyin": "Wǒ xiǎng mǎi píngguǒ.",
+    "vi": "Tôi muốn mua táo.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.shopping.g.2",
+    "explanation": "想 + động từ diễn đạt mong muốn; 想買 nhẹ hơn yêu cầu trực tiếp.",
+    "title": "Mong muốn: 想",
+    "pattern": "Chủ ngữ + 想 + động từ",
+    "restrictions": "想 đứng trước hành động mong muốn; nghĩa nhớ/nghĩ thuộc ngữ cảnh khác.",
+    "common_mistake": "我買想蘋果。",
+    "examples": [
+      {
+        "hanzi": "我想買蘋果。",
+        "pinyin": "Wǒ xiǎng mǎi píngguǒ.",
+        "vi": "Tôi muốn mua táo.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "她想喝茶。",
+        "pinyin": "Tā xiǎng hē chá.",
+        "vi": "Cô ấy muốn uống trà.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我們想去臺灣。",
+        "pinyin": "Wǒmen xiǎng qù Táiwān.",
+        "vi": "Chúng tôi muốn đến Đài Loan.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.shopping.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我想買蘋果。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Mong muốn: 想"
+        ],
+        "choices": [
+          "Là ai: 是",
+          "Mong muốn: 想",
+          "Miêu tả bằng tính từ: 很",
+          "Lặp lại hành động: 再"
+        ],
+        "tokens": [],
+        "explanation": "想 + động từ diễn đạt mong muốn; 想買 nhẹ hơn yêu cầu trực tiếp.",
+        "word_id": null,
+        "grammar_id": "tw.shopping.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.shopping.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Cô ấy muốn uống trà.”: 她___喝茶。",
+        "stimulus": null,
+        "answers": [
+          "想"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "想 đứng trước hành động mong muốn; nghĩa nhớ/nghĩ thuộc ngữ cảnh khác.",
+        "word_id": null,
+        "grammar_id": "tw.shopping.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.shopping.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Chúng tôi muốn đến Đài Loan.",
+        "stimulus": null,
+        "answers": [
+          "我們想去臺灣。"
+        ],
+        "choices": [],
+        "tokens": [
+          "們",
+          "想",
+          "去",
+          "臺",
+          "灣",
+          "我"
+        ],
+        "explanation": "想 + động từ diễn đạt mong muốn; 想買 nhẹ hơn yêu cầu trực tiếp.",
+        "word_id": null,
+        "grammar_id": "tw.shopping.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.shopping.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi muốn mua táo.”: 我買想蘋果。",
+        "stimulus": null,
+        "answers": [
+          "我想買蘋果。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "想 đứng trước hành động mong muốn; nghĩa nhớ/nghĩ thuộc ngữ cảnh khác. Câu tham khảo: 我想買蘋果。",
+        "word_id": null,
+        "grammar_id": "tw.shopping.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "想",
+        "tbcl_level": "第2級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.039"
+      }
+    ]
+  },
+  "tw.transport.g.1": {
+    "hanzi": "我坐公車去學校。",
+    "pinyin": "Wǒ zuò gōngchē qù xuéxiào.",
+    "vi": "Tôi đi xe buýt đến trường.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.transport.g.1",
+    "explanation": "坐 + phương tiện + 去 + nơi đến.",
+    "title": "Đi bằng phương tiện",
+    "pattern": "Chủ ngữ + 坐 + phương tiện + 去 + nơi đến",
+    "restrictions": "坐 đi với phương tiện có thể đi/ngồi; đi bộ dùng 走路, không dùng 坐腳.",
+    "common_mistake": "我坐學校去公車。",
+    "examples": [
+      {
+        "hanzi": "我坐公車去學校。",
+        "pinyin": "Wǒ zuò gōngchē qù xuéxiào.",
+        "vi": "Tôi đi xe buýt đến trường.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "他坐火車去臺南。",
+        "pinyin": "Tā zuò huǒchē qù Táinán.",
+        "vi": "Anh ấy đi tàu đến Đài Nam.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "她坐捷運去車站。",
+        "pinyin": "Tā zuò jiéyùn qù chēzhàn.",
+        "vi": "Cô ấy đi MRT đến nhà ga.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.transport.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我坐公車去學校。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Đi bằng phương tiện"
+        ],
+        "choices": [
+          "Đi bằng phương tiện",
+          "Tồn tại: nơi chốn + 有",
+          "Bổ ngữ khả năng: V 不 C",
+          "Hỏi thông tin: 什麼"
+        ],
+        "tokens": [],
+        "explanation": "坐 + phương tiện + 去 + nơi đến.",
+        "word_id": null,
+        "grammar_id": "tw.transport.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.transport.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Anh ấy đi tàu đến Đài Nam.”: 他___火車去臺南。",
+        "stimulus": null,
+        "answers": [
+          "坐"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "坐 đi với phương tiện có thể đi/ngồi; đi bộ dùng 走路, không dùng 坐腳.",
+        "word_id": null,
+        "grammar_id": "tw.transport.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.transport.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Cô ấy đi MRT đến nhà ga.",
+        "stimulus": null,
+        "answers": [
+          "她坐捷運去車站。"
+        ],
+        "choices": [],
+        "tokens": [
+          "坐",
+          "捷",
+          "運",
+          "去",
+          "車",
+          "站",
+          "她"
+        ],
+        "explanation": "坐 + phương tiện + 去 + nơi đến.",
+        "word_id": null,
+        "grammar_id": "tw.transport.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.transport.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi đi xe buýt đến trường.”: 我坐學校去公車。",
+        "stimulus": null,
+        "answers": [
+          "我坐公車去學校。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "坐 đi với phương tiện có thể đi/ngồi; đi bộ dùng 走路, không dùng 坐腳. Câu tham khảo: 我坐公車去學校。",
+        "word_id": null,
+        "grammar_id": "tw.transport.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "VP+VP(連動)",
+        "tbcl_level": "第3*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+        "id": "tbcl.204"
+      }
+    ]
+  },
+  "tw.transport.g.2": {
+    "hanzi": "車站在右邊。",
+    "pinyin": "Chēzhàn zài yòubiān.",
+    "vi": "Nhà ga ở bên phải.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.transport.g.2",
+    "explanation": "Câu chỉ vị trí trung tính dùng 在. 是在 có thể nhấn mạnh/xác nhận vị trí trong ngữ cảnh khác; không coi mọi câu 是在 đều sai.",
+    "title": "Vị trí: 在",
+    "pattern": "Người/vật + 在 + nơi chốn",
+    "restrictions": "Câu chỉ vị trí trung tính dùng 在. 是在 có thể nhấn mạnh/xác nhận vị trí trong ngữ cảnh khác; không coi mọi câu 是在 đều sai.",
+    "common_mistake": "車站是在右邊。",
+    "examples": [
+      {
+        "hanzi": "車站在右邊。",
+        "pinyin": "Chēzhàn zài yòubiān.",
+        "vi": "Nhà ga ở bên phải.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "老師在教室。",
+        "pinyin": "Lǎoshī zài jiàoshì.",
+        "vi": "Giáo viên ở trong lớp.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "書在桌子上。",
+        "pinyin": "Shū zài zhuōzi shàng.",
+        "vi": "Sách ở trên bàn.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.transport.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “車站在右邊。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Vị trí: 在"
+        ],
+        "choices": [
+          "Khoảng thời gian: 從…到…",
+          "Đã: 已經…了",
+          "Hỏi giờ: 幾點",
+          "Vị trí: 在"
+        ],
+        "tokens": [],
+        "explanation": "Câu chỉ vị trí trung tính dùng 在. 是在 có thể nhấn mạnh/xác nhận vị trí trong ngữ cảnh khác; không coi mọi câu 是在 đều sai.",
+        "word_id": null,
+        "grammar_id": "tw.transport.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.transport.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Giáo viên ở trong lớp.”: 老師___教室。",
+        "stimulus": null,
+        "answers": [
+          "在"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Câu chỉ vị trí trung tính dùng 在. 是在 có thể nhấn mạnh/xác nhận vị trí trong ngữ cảnh khác; không coi mọi câu 是在 đều sai.",
+        "word_id": null,
+        "grammar_id": "tw.transport.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.transport.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Sách ở trên bàn.",
+        "stimulus": null,
+        "answers": [
+          "書在桌子上。"
+        ],
+        "choices": [],
+        "tokens": [
+          "在",
+          "桌",
+          "子",
+          "上",
+          "書"
+        ],
+        "explanation": "Câu chỉ vị trí trung tính dùng 在. 是在 có thể nhấn mạnh/xác nhận vị trí trong ngữ cảnh khác; không coi mọi câu 是在 đều sai.",
+        "word_id": null,
+        "grammar_id": "tw.transport.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.transport.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Nhà ga ở bên phải.”: 車站是在右邊。",
+        "stimulus": null,
+        "answers": [
+          "車站在右邊。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Câu chỉ vị trí trung tính dùng 在. 是在 có thể nhấn mạnh/xác nhận vị trí trong ngữ cảnh khác; không coi mọi câu 是在 đều sai. Câu tham khảo: 車站在右邊。",
+        "word_id": null,
+        "grammar_id": "tw.transport.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "在1",
+        "tbcl_level": "第1*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.008"
+      }
+    ]
+  },
+  "tw.family.g.1": {
+    "hanzi": "我有一個妹妹。",
+    "pinyin": "Wǒ yǒu yí ge mèimei.",
+    "vi": "Tôi có một em gái.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.family.g.1",
+    "explanation": "有 biểu thị sở hữu; phủ định là 沒有, không dùng 不有. 一 trước 個 thường đọc yí.",
+    "title": "Sở hữu: 有 / 沒有",
+    "pattern": "Chủ ngữ + 有／沒有 + danh từ",
+    "restrictions": "Không dùng 不有 để phủ định sở hữu.",
+    "common_mistake": "我不有妹妹。",
+    "examples": [
+      {
+        "hanzi": "我有一個妹妹。",
+        "pinyin": "Wǒ yǒu yí ge mèimei.",
+        "vi": "Tôi có một em gái.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我沒有妹妹。",
+        "pinyin": "Wǒ méiyǒu mèimei.",
+        "vi": "Tôi không có em gái.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "她有兩個哥哥。",
+        "pinyin": "Tā yǒu liǎng ge gēge.",
+        "vi": "Cô ấy có hai anh trai.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.family.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我有一個妹妹。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Sở hữu: 有 / 沒有"
+        ],
+        "choices": [
+          "Kỹ năng học được: 會",
+          "Thời gian trong câu",
+          "Sở hữu: 有 / 沒有",
+          "Nối danh từ: 和"
+        ],
+        "tokens": [],
+        "explanation": "有 biểu thị sở hữu; phủ định là 沒有, không dùng 不有. 一 trước 個 thường đọc yí.",
+        "word_id": null,
+        "grammar_id": "tw.family.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.family.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Tôi không có em gái.”: 我___妹妹。",
+        "stimulus": null,
+        "answers": [
+          "沒有"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Không dùng 不有 để phủ định sở hữu.",
+        "word_id": null,
+        "grammar_id": "tw.family.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.family.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Cô ấy có hai anh trai.",
+        "stimulus": null,
+        "answers": [
+          "她有兩個哥哥。"
+        ],
+        "choices": [],
+        "tokens": [
+          "有",
+          "兩",
+          "個",
+          "哥",
+          "哥",
+          "她"
+        ],
+        "explanation": "有 biểu thị sở hữu; phủ định là 沒有, không dùng 不有. 一 trước 個 thường đọc yí.",
+        "word_id": null,
+        "grammar_id": "tw.family.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.family.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi không có em gái.”: 我不有妹妹。",
+        "stimulus": null,
+        "answers": [
+          "我沒有妹妹。",
+          "我沒妹妹。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Không dùng 不有 để phủ định sở hữu. Câu tham khảo: 我沒有妹妹。",
+        "word_id": null,
+        "grammar_id": "tw.family.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "沒（有）1",
+        "tbcl_level": "第2級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.019"
+      }
+    ]
+  },
+  "tw.family.g.2": {
+    "hanzi": "這是我的家人。",
+    "pinyin": "Zhè shì wǒ de jiārén.",
+    "vi": "Đây là người nhà của tôi.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.family.g.2",
+    "explanation": "的 nối người sở hữu với danh từ; với quan hệ thân thuộc đôi khi có thể lược 的.",
+    "title": "Sở hữu: 的",
+    "pattern": "Người sở hữu + 的 + vật/người",
+    "restrictions": "Với quan hệ gần gũi có thể lược 的; không bỏ tùy ý trong mọi cụm.",
+    "common_mistake": "這是我書。",
+    "examples": [
+      {
+        "hanzi": "這是我的家人。",
+        "pinyin": "Zhè shì wǒ de jiārén.",
+        "vi": "Đây là người nhà của tôi.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "這是我的書。",
+        "pinyin": "Zhè shì wǒ de shū.",
+        "vi": "Đây là sách của tôi.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "那是老師的車。",
+        "pinyin": "Nà shì lǎoshī de chē.",
+        "vi": "Kia là xe của giáo viên.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.family.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “這是我的家人。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Sở hữu: 的"
+        ],
+        "choices": [
+          "Số và lượng từ",
+          "Sở hữu: 的",
+          "Xin phép hoặc nhờ: 可以…嗎",
+          "Cùng ai: 跟"
+        ],
+        "tokens": [],
+        "explanation": "的 nối người sở hữu với danh từ; với quan hệ thân thuộc đôi khi có thể lược 的.",
+        "word_id": null,
+        "grammar_id": "tw.family.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.family.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Kia là xe của giáo viên.”: 那是老師___車。",
+        "stimulus": null,
+        "answers": [
+          "的"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Với quan hệ gần gũi có thể lược 的; không bỏ tùy ý trong mọi cụm.",
+        "word_id": null,
+        "grammar_id": "tw.family.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.family.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Kia là xe của giáo viên.",
+        "stimulus": null,
+        "answers": [
+          "那是老師的車。"
+        ],
+        "choices": [],
+        "tokens": [
+          "是",
+          "老",
+          "師",
+          "的",
+          "車",
+          "那"
+        ],
+        "explanation": "的 nối người sở hữu với danh từ; với quan hệ thân thuộc đôi khi có thể lược 的.",
+        "word_id": null,
+        "grammar_id": "tw.family.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.family.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Đây là sách của tôi.”: 這是我書。",
+        "stimulus": null,
+        "answers": [
+          "這是我的書。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Với quan hệ gần gũi có thể lược 的; không bỏ tùy ý trong mọi cụm. Câu tham khảo: 這是我的書。",
+        "word_id": null,
+        "grammar_id": "tw.family.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "表所有「的」",
+        "tbcl_level": "第1級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.002"
+      },
+      {
+        "title": "「的」省略用法",
+        "tbcl_level": "第1級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.003"
+      }
+    ]
+  },
+  "tw.home.g.1": {
+    "hanzi": "房間很乾淨。",
+    "pinyin": "Fángjiān hěn gānjìng.",
+    "vi": "Căn phòng sạch sẽ.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.home.g.1",
+    "explanation": "很 thường nối chủ ngữ với tính từ, không nhất thiết nhấn mạnh mức độ rất.",
+    "title": "Miêu tả bằng tính từ: 很",
+    "pattern": "Chủ ngữ + 很 + tính từ",
+    "restrictions": "很 thường làm câu miêu tả tự nhiên; không phải lúc nào cũng nhấn mạnh rất.",
+    "common_mistake": "房間是乾淨。",
+    "examples": [
+      {
+        "hanzi": "房間很乾淨。",
+        "pinyin": "Fángjiān hěn gānjìng.",
+        "vi": "Căn phòng sạch sẽ.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "這本書很有趣。",
+        "pinyin": "Zhè běn shū hěn yǒuqù.",
+        "vi": "Quyển sách này thú vị.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "今天很冷。",
+        "pinyin": "Jīntiān hěn lěng.",
+        "vi": "Hôm nay trời lạnh.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.home.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “房間很乾淨。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Miêu tả bằng tính từ: 很"
+        ],
+        "choices": [
+          "Miêu tả bằng tính từ: 很",
+          "Nguyên nhân và kết quả",
+          "Hỏi khi nào: 什麼時候",
+          "Phủ định: 不"
+        ],
+        "tokens": [],
+        "explanation": "很 thường nối chủ ngữ với tính từ, không nhất thiết nhấn mạnh mức độ rất.",
+        "word_id": null,
+        "grammar_id": "tw.home.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.home.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Căn phòng sạch sẽ.”: 房間___乾淨。",
+        "stimulus": null,
+        "answers": [
+          "很"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "很 thường làm câu miêu tả tự nhiên; không phải lúc nào cũng nhấn mạnh rất.",
+        "word_id": null,
+        "grammar_id": "tw.home.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.home.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Hôm nay trời lạnh.",
+        "stimulus": null,
+        "answers": [
+          "今天很冷。"
+        ],
+        "choices": [],
+        "tokens": [
+          "天",
+          "很",
+          "冷",
+          "今"
+        ],
+        "explanation": "很 thường nối chủ ngữ với tính từ, không nhất thiết nhấn mạnh mức độ rất.",
+        "word_id": null,
+        "grammar_id": "tw.home.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.home.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Căn phòng sạch sẽ.”: 房間是乾淨。",
+        "stimulus": null,
+        "answers": [
+          "房間很乾淨。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "很 thường làm câu miêu tả tự nhiên; không phải lúc nào cũng nhấn mạnh rất. Câu tham khảo: 房間很乾淨。",
+        "word_id": null,
+        "grammar_id": "tw.home.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [
+      "tw.greetings.g.1"
+    ],
+    "references": [
+      {
+        "title": "很",
+        "tbcl_level": "",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=很",
+        "id": ""
+      }
+    ]
+  },
+  "tw.home.g.2": {
+    "hanzi": "桌子上有一本書。",
+    "pinyin": "Zhuōzi shàng yǒu yì běn shū.",
+    "vi": "Trên bàn có một quyển sách.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.home.g.2",
+    "explanation": "Nơi chốn + 有 + sự vật để giới thiệu vật tồn tại tại nơi đó.",
+    "title": "Tồn tại: nơi chốn + 有",
+    "pattern": "Nơi chốn + 有 + sự vật",
+    "restrictions": "Giới thiệu vật ở một nơi dùng 有; xác định vị trí của vật đã biết thường dùng 在.",
+    "common_mistake": "桌子上在一本書。",
+    "examples": [
+      {
+        "hanzi": "桌子上有一本書。",
+        "pinyin": "Zhuōzi shàng yǒu yī běn shū.",
+        "vi": "Trên bàn có một quyển sách.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "學校旁邊有銀行。",
+        "pinyin": "Xuéxiào pángbiān yǒu yínháng.",
+        "vi": "Bên cạnh trường có ngân hàng.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "教室裡有三個人。",
+        "pinyin": "Jiàoshì lǐ yǒu sān ge rén.",
+        "vi": "Trong lớp có ba người.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.home.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “桌子上有一本書。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Tồn tại: nơi chốn + 有"
+        ],
+        "choices": [
+          "Lặp lại hành động: 再",
+          "Là ai: 是",
+          "Hỏi giá và số lượng: 多少",
+          "Tồn tại: nơi chốn + 有"
+        ],
+        "tokens": [],
+        "explanation": "Nơi chốn + 有 + sự vật để giới thiệu vật tồn tại tại nơi đó.",
+        "word_id": null,
+        "grammar_id": "tw.home.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.home.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Bên cạnh trường có ngân hàng.”: 學校旁邊___銀行。",
+        "stimulus": null,
+        "answers": [
+          "有"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Giới thiệu vật ở một nơi dùng 有; xác định vị trí của vật đã biết thường dùng 在.",
+        "word_id": null,
+        "grammar_id": "tw.home.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.home.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Trong lớp có ba người.",
+        "stimulus": null,
+        "answers": [
+          "教室裡有三個人。"
+        ],
+        "choices": [],
+        "tokens": [
+          "室",
+          "裡",
+          "有",
+          "三",
+          "個",
+          "人",
+          "教"
+        ],
+        "explanation": "Nơi chốn + 有 + sự vật để giới thiệu vật tồn tại tại nơi đó.",
+        "word_id": null,
+        "grammar_id": "tw.home.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.home.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Trên bàn có một quyển sách.”: 桌子上在一本書。",
+        "stimulus": null,
+        "answers": [
+          "桌子上有一本書。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Giới thiệu vật ở một nơi dùng 有; xác định vị trí của vật đã biết thường dùng 在. Câu tham khảo: 桌子上有一本書。",
+        "word_id": null,
+        "grammar_id": "tw.home.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [
+      "tw.transport.g.2",
+      "tw.family.g.1"
+    ],
+    "references": [
+      {
+        "title": "PW+V（存現）",
+        "tbcl_level": "第3*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+        "id": "tbcl.217"
+      }
+    ]
+  },
+  "tw.schedule.g.1": {
+    "hanzi": "我從九點上課到十二點。",
+    "pinyin": "Wǒ cóng jiǔ diǎn shàngkè dào shí èr diǎn.",
+    "vi": "Tôi học từ chín giờ đến mười hai giờ.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.schedule.g.1",
+    "explanation": "從…到… xác định điểm đầu và điểm cuối của thời gian hoặc không gian.",
+    "title": "Khoảng thời gian: 從…到…",
+    "pattern": "從 + điểm đầu + 到 + điểm cuối",
+    "restrictions": "Giữ đúng thứ tự điểm bắt đầu rồi điểm kết thúc; không đảo 從 và 到.",
+    "common_mistake": "我到九點上課從十二點。",
+    "examples": [
+      {
+        "hanzi": "我從九點上課到十二點。",
+        "pinyin": "Wǒ cóng jiǔ diǎn shàngkè dào shíèr diǎn.",
+        "vi": "Tôi học từ chín giờ đến mười hai giờ.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "從這裡到學校很近。",
+        "pinyin": "Cóng zhèlǐ dào xuéxiào hěn jìn.",
+        "vi": "Từ đây đến trường rất gần.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我從家裡走到學校。",
+        "pinyin": "Wǒ cóng jiā lǐ zǒu dào xuéxiào.",
+        "vi": "Tôi đi bộ từ nhà đến trường.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.schedule.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我從九點上課到十二點。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Khoảng thời gian: 從…到…"
+        ],
+        "choices": [
+          "Hỏi thông tin: 什麼",
+          "Mong muốn: 想",
+          "Khoảng thời gian: 從…到…",
+          "Bổ ngữ khả năng: V 不 C"
+        ],
+        "tokens": [],
+        "explanation": "從…到… xác định điểm đầu và điểm cuối của thời gian hoặc không gian.",
+        "word_id": null,
+        "grammar_id": "tw.schedule.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.schedule.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Từ đây đến trường rất gần.”: 從這裡___學校很近。",
+        "stimulus": null,
+        "answers": [
+          "到"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Giữ đúng thứ tự điểm bắt đầu rồi điểm kết thúc; không đảo 從 và 到.",
+        "word_id": null,
+        "grammar_id": "tw.schedule.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.schedule.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Tôi đi bộ từ nhà đến trường.",
+        "stimulus": null,
+        "answers": [
+          "我從家裡走到學校。"
+        ],
+        "choices": [],
+        "tokens": [
+          "從",
+          "家",
+          "裡",
+          "走",
+          "到",
+          "學",
+          "校",
+          "我"
+        ],
+        "explanation": "從…到… xác định điểm đầu và điểm cuối của thời gian hoặc không gian.",
+        "word_id": null,
+        "grammar_id": "tw.schedule.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.schedule.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi học từ chín giờ đến mười hai giờ.”: 我到九點上課從十二點。",
+        "stimulus": null,
+        "answers": [
+          "我從九點上課到十二點。",
+          "我從九點到十二點上課。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Giữ đúng thứ tự điểm bắt đầu rồi điểm kết thúc; không đảo 從 và 到. Câu tham khảo: 我從九點上課到十二點。",
+        "word_id": null,
+        "grammar_id": "tw.schedule.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "從......到......1",
+        "tbcl_level": "第2*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+        "id": "tbcl.073"
+      },
+      {
+        "title": "從......到......2",
+        "tbcl_level": "第2*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+        "id": "tbcl.074"
+      }
+    ]
+  },
+  "tw.schedule.g.2": {
+    "hanzi": "我星期一和星期三有課。",
+    "pinyin": "Wǒ xīngqí yī hé xīngqí sān yǒu kè.",
+    "vi": "Tôi có lớp vào thứ Hai và thứ Tư.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.schedule.g.2",
+    "explanation": "和 nối danh từ/cụm danh từ; không dùng thay mọi liên từ và trong tiếng Việt.",
+    "title": "Nối danh từ: 和",
+    "pattern": "Danh từ/cụm danh từ + 和 + danh từ/cụm danh từ",
+    "restrictions": "和 không thay mọi chữ và; nối hai mệnh đề độc lập cần cấu trúc phù hợp khác.",
+    "common_mistake": "我和喜歡喝茶。",
+    "examples": [
+      {
+        "hanzi": "我星期一和星期三有課。",
+        "pinyin": "Wǒ xīngqí yī hé xīngqí sān yǒu kè.",
+        "vi": "Tôi có lớp vào thứ Hai và thứ Tư.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我和她喜歡喝茶。",
+        "pinyin": "Wǒ hé tā xǐhuān hē chá.",
+        "vi": "Tôi và cô ấy thích uống trà.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我買茶和咖啡。",
+        "pinyin": "Wǒ mǎi chá hé kāfēi.",
+        "vi": "Tôi mua trà và cà phê.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.schedule.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我星期一和星期三有課。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Nối danh từ: 和"
+        ],
+        "choices": [
+          "Đi bằng phương tiện",
+          "Nối danh từ: 和",
+          "Đã: 已經…了",
+          "Hỏi giờ: 幾點"
+        ],
+        "tokens": [],
+        "explanation": "和 nối danh từ/cụm danh từ; không dùng thay mọi liên từ và trong tiếng Việt.",
+        "word_id": null,
+        "grammar_id": "tw.schedule.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.schedule.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Tôi mua trà và cà phê.”: 我買茶___咖啡。",
+        "stimulus": null,
+        "answers": [
+          "和"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "和 không thay mọi chữ và; nối hai mệnh đề độc lập cần cấu trúc phù hợp khác.",
+        "word_id": null,
+        "grammar_id": "tw.schedule.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.schedule.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Tôi mua trà và cà phê.",
+        "stimulus": null,
+        "answers": [
+          "我買茶和咖啡。"
+        ],
+        "choices": [],
+        "tokens": [
+          "買",
+          "茶",
+          "和",
+          "咖",
+          "啡",
+          "我"
+        ],
+        "explanation": "和 nối danh từ/cụm danh từ; không dùng thay mọi liên từ và trong tiếng Việt.",
+        "word_id": null,
+        "grammar_id": "tw.schedule.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.schedule.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi và cô ấy thích uống trà.”: 我和喜歡喝茶。",
+        "stimulus": null,
+        "answers": [
+          "我和她喜歡喝茶。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "和 không thay mọi chữ và; nối hai mệnh đề độc lập cần cấu trúc phù hợp khác. Câu tham khảo: 我和她喜歡喝茶。",
+        "word_id": null,
+        "grammar_id": "tw.schedule.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "和1",
+        "tbcl_level": "第2級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.018"
+      }
+    ]
+  },
+  "tw.information.g.1": {
+    "hanzi": "可以幫我嗎？",
+    "pinyin": "Kěyǐ bāng wǒ ma?",
+    "vi": "Có thể giúp tôi không?",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.information.g.1",
+    "explanation": "可以…嗎 dùng hỏi xin phép hoặc nhờ một việc một cách lịch sự.",
+    "title": "Xin phép hoặc nhờ: 可以…嗎",
+    "pattern": "可以 + hành động + 嗎",
+    "restrictions": "可以 hỏi sự cho phép/khả năng trong hoàn cảnh; không đồng nhất với kỹ năng học được của 會.",
+    "common_mistake": "我可以嗎進去。",
+    "examples": [
+      {
+        "hanzi": "可以幫我嗎？",
+        "pinyin": "Kěyǐ bāng wǒ ma?",
+        "vi": "Có thể giúp tôi không?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我可以進去嗎？",
+        "pinyin": "Wǒ kěyǐ jìnqù ma?",
+        "vi": "Tôi có thể vào không?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "你可以幫我嗎？",
+        "pinyin": "Nǐ kěyǐ bāng wǒ ma?",
+        "vi": "Bạn có thể giúp tôi không?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.information.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “可以幫我嗎？” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Xin phép hoặc nhờ: 可以…嗎"
+        ],
+        "choices": [
+          "Xin phép hoặc nhờ: 可以…嗎",
+          "Kỹ năng học được: 會",
+          "Thời gian trong câu",
+          "Vị trí: 在"
+        ],
+        "tokens": [],
+        "explanation": "可以…嗎 dùng hỏi xin phép hoặc nhờ một việc một cách lịch sự.",
+        "word_id": null,
+        "grammar_id": "tw.information.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.information.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Bạn có thể giúp tôi không?”: 你___幫我嗎？",
+        "stimulus": null,
+        "answers": [
+          "可以"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "可以 hỏi sự cho phép/khả năng trong hoàn cảnh; không đồng nhất với kỹ năng học được của 會.",
+        "word_id": null,
+        "grammar_id": "tw.information.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.information.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Bạn có thể giúp tôi không?",
+        "stimulus": null,
+        "answers": [
+          "你可以幫我嗎？"
+        ],
+        "choices": [],
+        "tokens": [
+          "可",
+          "以",
+          "幫",
+          "我",
+          "嗎",
+          "你"
+        ],
+        "explanation": "可以…嗎 dùng hỏi xin phép hoặc nhờ một việc một cách lịch sự.",
+        "word_id": null,
+        "grammar_id": "tw.information.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.information.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi có thể vào không?”: 我可以嗎進去。",
+        "stimulus": null,
+        "answers": [
+          "我可以進去嗎？",
+          "可以讓我進去嗎？"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "可以 hỏi sự cho phép/khả năng trong hoàn cảnh; không đồng nhất với kỹ năng học được của 會. Câu tham khảo: 我可以進去嗎？",
+        "word_id": null,
+        "grammar_id": "tw.information.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "可以1",
+        "tbcl_level": "第2級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.024"
+      },
+      {
+        "title": "可以2",
+        "tbcl_level": "第2級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.049"
+      }
+    ]
+  },
+  "tw.information.g.2": {
+    "hanzi": "因為我有課，所以不能去。",
+    "pinyin": "Yīnwèi wǒ yǒu kè, suǒyǐ bù néng qù.",
+    "vi": "Vì tôi có lớp nên không thể đi.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.information.g.2",
+    "explanation": "因為 nêu nguyên nhân; 所以 nêu kết quả; có thể cùng xuất hiện trong một câu.",
+    "title": "Nguyên nhân và kết quả",
+    "pattern": "因為 + nguyên nhân，所以 + kết quả",
+    "restrictions": "因為 đặt trước nguyên nhân, 所以 trước kết quả; có thể lược một vế liên từ khi ngữ cảnh rõ.",
+    "common_mistake": "所以我有課，因為不能去。",
+    "examples": [
+      {
+        "hanzi": "因為我有課，所以不能去。",
+        "pinyin": "Yīnwèi wǒ yǒu kè, suǒyǐ bù néng qù.",
+        "vi": "Vì tôi có tiết học nên không thể đi.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "因為下雨，所以我在家。",
+        "pinyin": "Yīnwèi xiàyǔ, suǒyǐ wǒ zài jiā.",
+        "vi": "Vì trời mưa nên tôi ở nhà.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "因為很忙，所以我沒去。",
+        "pinyin": "Yīnwèi hěn máng, suǒyǐ wǒ méi qù.",
+        "vi": "Vì rất bận nên tôi đã không đi.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.information.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “因為我有課，所以不能去。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Nguyên nhân và kết quả"
+        ],
+        "choices": [
+          "Cùng ai: 跟",
+          "Số và lượng từ",
+          "Sở hữu: 有 / 沒有",
+          "Nguyên nhân và kết quả"
+        ],
+        "tokens": [],
+        "explanation": "因為 nêu nguyên nhân; 所以 nêu kết quả; có thể cùng xuất hiện trong một câu.",
+        "word_id": null,
+        "grammar_id": "tw.information.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.information.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Vì trời mưa nên tôi ở nhà.”: 因為下雨，___我在家。",
+        "stimulus": null,
+        "answers": [
+          "所以"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "因為 đặt trước nguyên nhân, 所以 trước kết quả; có thể lược một vế liên từ khi ngữ cảnh rõ.",
+        "word_id": null,
+        "grammar_id": "tw.information.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.information.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Vì rất bận nên tôi đã không đi.",
+        "stimulus": null,
+        "answers": [
+          "因為很忙，所以我沒去。"
+        ],
+        "choices": [],
+        "tokens": [
+          "為",
+          "很",
+          "忙",
+          "所",
+          "以",
+          "我",
+          "沒",
+          "去",
+          "因"
+        ],
+        "explanation": "因為 nêu nguyên nhân; 所以 nêu kết quả; có thể cùng xuất hiện trong một câu.",
+        "word_id": null,
+        "grammar_id": "tw.information.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.information.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Vì tôi có tiết học nên không thể đi.”: 所以我有課，因為不能去。",
+        "stimulus": null,
+        "answers": [
+          "因為我有課，所以不能去。",
+          "我因為有課，所以不能去。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "因為 đặt trước nguyên nhân, 所以 trước kết quả; có thể lược một vế liên từ khi ngữ cảnh rõ. Câu tham khảo: 因為我有課，所以不能去。",
+        "word_id": null,
+        "grammar_id": "tw.information.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "So sánh và câu phức",
+    "level": "Nền tảng",
+    "prerequisites": [
+      "tw.food.g.2"
+    ],
+    "references": [
+      {
+        "title": "因為......所以......",
+        "tbcl_level": "第2*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+        "id": "tbcl.077"
+      }
+    ]
+  },
+  "tw.classroom.g.1": {
+    "hanzi": "請再說一次。",
+    "pinyin": "Qǐng zài shuō yí cì.",
+    "vi": "Xin nói lại một lần nữa.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.classroom.g.1",
+    "explanation": "再 + động từ diễn đạt hành động sẽ lặp lại; 次 đếm số lần.",
+    "title": "Lặp lại hành động: 再",
+    "pattern": "再 + động từ + số lần",
+    "restrictions": "再 thường dùng cho lần tiếp theo; 又 thường nói hành động đã lặp lại.",
+    "common_mistake": "請說再一次。",
+    "examples": [
+      {
+        "hanzi": "請再說一次。",
+        "pinyin": "Qǐng zài shuō yī cì.",
+        "vi": "Xin nói lại một lần.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我想再看一次。",
+        "pinyin": "Wǒ xiǎng zài kàn yī cì.",
+        "vi": "Tôi muốn xem lại một lần.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "請再等五分鐘。",
+        "pinyin": "Qǐng zài děng wǔ fēnzhōng.",
+        "vi": "Xin đợi thêm năm phút.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.classroom.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “請再說一次。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Lặp lại hành động: 再"
+        ],
+        "choices": [
+          "Phủ định: 不",
+          "Sở hữu: 的",
+          "Lặp lại hành động: 再",
+          "Hỏi khi nào: 什麼時候"
+        ],
+        "tokens": [],
+        "explanation": "再 + động từ diễn đạt hành động sẽ lặp lại; 次 đếm số lần.",
+        "word_id": null,
+        "grammar_id": "tw.classroom.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.classroom.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Xin nói lại một lần.”: 請___說一次。",
+        "stimulus": null,
+        "answers": [
+          "再"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "再 thường dùng cho lần tiếp theo; 又 thường nói hành động đã lặp lại.",
+        "word_id": null,
+        "grammar_id": "tw.classroom.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.classroom.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Xin đợi thêm năm phút.",
+        "stimulus": null,
+        "answers": [
+          "請再等五分鐘。"
+        ],
+        "choices": [],
+        "tokens": [
+          "再",
+          "等",
+          "五",
+          "分",
+          "鐘",
+          "請"
+        ],
+        "explanation": "再 + động từ diễn đạt hành động sẽ lặp lại; 次 đếm số lần.",
+        "word_id": null,
+        "grammar_id": "tw.classroom.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.classroom.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Xin nói lại một lần.”: 請說再一次。",
+        "stimulus": null,
+        "answers": [
+          "請再說一次。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "再 thường dùng cho lần tiếp theo; 又 thường nói hành động đã lặp lại. Câu tham khảo: 請再說一次。",
+        "word_id": null,
+        "grammar_id": "tw.classroom.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Thời–thể và bổ ngữ",
+    "level": "Nền tảng",
+    "prerequisites": [],
+    "references": [
+      {
+        "title": "先......再......",
+        "tbcl_level": "第3級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=3&deng_ji=all",
+        "id": "tbcl.133"
+      },
+      {
+        "title": "不再......了",
+        "tbcl_level": "第3*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+        "id": "tbcl.223"
+      }
+    ]
+  },
+  "tw.classroom.g.2": {
+    "hanzi": "我聽不懂。",
+    "pinyin": "Wǒ tīng bu dǒng.",
+    "vi": "Tôi nghe không hiểu.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.classroom.g.2",
+    "explanation": "Động từ + 不 + bổ ngữ kết quả diễn đạt không đạt được kết quả; 聽不懂 là không hiểu điều nghe được.",
+    "title": "Bổ ngữ khả năng: V 不 C",
+    "pattern": "Động từ + 不 + kết quả",
+    "restrictions": "聽不懂 nói không hiểu điều nghe được; 不聽懂 không phải cách đặt bổ ngữ khả năng này.",
+    "common_mistake": "我不聽懂。",
+    "examples": [
+      {
+        "hanzi": "我聽不懂。",
+        "pinyin": "Wǒ tīng bù dǒng.",
+        "vi": "Tôi nghe không hiểu.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "這個字我看不懂。",
+        "pinyin": "Zhège zì wǒ kàn bù dǒng.",
+        "vi": "Chữ này tôi đọc không hiểu.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我買不起這部車。",
+        "pinyin": "Wǒ mǎi bù qǐ zhè bù chē.",
+        "vi": "Tôi không đủ tiền mua chiếc xe này.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.classroom.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我聽不懂。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Bổ ngữ khả năng: V 不 C"
+        ],
+        "choices": [
+          "Miêu tả bằng tính từ: 很",
+          "Bổ ngữ khả năng: V 不 C",
+          "Là ai: 是",
+          "Hỏi giá và số lượng: 多少"
+        ],
+        "tokens": [],
+        "explanation": "Động từ + 不 + bổ ngữ kết quả diễn đạt không đạt được kết quả; 聽不懂 là không hiểu điều nghe được.",
+        "word_id": null,
+        "grammar_id": "tw.classroom.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.classroom.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Chữ này tôi đọc không hiểu.”: 這個字我看不___。",
+        "stimulus": null,
+        "answers": [
+          "懂"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "聽不懂 nói không hiểu điều nghe được; 不聽懂 không phải cách đặt bổ ngữ khả năng này.",
+        "word_id": null,
+        "grammar_id": "tw.classroom.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.classroom.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Tôi không đủ tiền mua chiếc xe này.",
+        "stimulus": null,
+        "answers": [
+          "我買不起這部車。"
+        ],
+        "choices": [],
+        "tokens": [
+          "買",
+          "不",
+          "起",
+          "這",
+          "部",
+          "車",
+          "我"
+        ],
+        "explanation": "Động từ + 不 + bổ ngữ kết quả diễn đạt không đạt được kết quả; 聽不懂 là không hiểu điều nghe được.",
+        "word_id": null,
+        "grammar_id": "tw.classroom.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.classroom.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi nghe không hiểu.”: 我不聽懂。",
+        "stimulus": null,
+        "answers": [
+          "我聽不懂。",
+          "我聽不明白。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "聽不懂 nói không hiểu điều nghe được; 不聽懂 không phải cách đặt bổ ngữ khả năng này. Câu tham khảo: 我聽不懂。",
+        "word_id": null,
+        "grammar_id": "tw.classroom.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Thời–thể và bổ ngữ",
+    "level": "Nền tảng",
+    "prerequisites": [
+      "tw.food.g.2"
+    ],
+    "references": [
+      {
+        "title": "V得/不......（表可能）",
+        "tbcl_level": "第3*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=4&deng_ji=all",
+        "id": "tbcl.185"
+      },
+      {
+        "title": "V  得/不 起",
+        "tbcl_level": "第3*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=5&deng_ji=all",
+        "id": "tbcl.208"
+      }
+    ]
+  },
+  "tw.daily.g.1": {
+    "hanzi": "我已經吃飯了。",
+    "pinyin": "Wǒ yǐjīng chīfàn le.",
+    "vi": "Tôi đã ăn cơm rồi.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.daily.g.1",
+    "explanation": "已經…了 nhấn mạnh việc đã xảy ra/tình trạng đã thay đổi; 了 không đơn giản là thì quá khứ.",
+    "title": "Đã: 已經…了",
+    "pattern": "已經 + hành động/trạng thái + 了",
+    "restrictions": "了 không phải dấu quá khứ dùng cho mọi câu. Cần phân biệt hoàn tất hành động và thay đổi trạng thái.",
+    "common_mistake": "我吃飯已經了。",
+    "examples": [
+      {
+        "hanzi": "我已經吃飯了。",
+        "pinyin": "Wǒ yǐjīng chīfàn le.",
+        "vi": "Tôi đã ăn rồi.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "他已經到學校了。",
+        "pinyin": "Tā yǐjīng dào xuéxiào le.",
+        "vi": "Anh ấy đã đến trường rồi.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我已經寫完了。",
+        "pinyin": "Wǒ yǐjīng xiě wán le.",
+        "vi": "Tôi đã viết xong rồi.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.daily.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我已經吃飯了。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Đã: 已經…了"
+        ],
+        "choices": [
+          "Đã: 已經…了",
+          "Hỏi thông tin: 什麼",
+          "Mong muốn: 想",
+          "Tồn tại: nơi chốn + 有"
+        ],
+        "tokens": [],
+        "explanation": "已經…了 nhấn mạnh việc đã xảy ra/tình trạng đã thay đổi; 了 không đơn giản là thì quá khứ.",
+        "word_id": null,
+        "grammar_id": "tw.daily.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.daily.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Anh ấy đã đến trường rồi.”: 他___到學校了。",
+        "stimulus": null,
+        "answers": [
+          "已經"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "了 không phải dấu quá khứ dùng cho mọi câu. Cần phân biệt hoàn tất hành động và thay đổi trạng thái.",
+        "word_id": null,
+        "grammar_id": "tw.daily.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.daily.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Tôi đã viết xong rồi.",
+        "stimulus": null,
+        "answers": [
+          "我已經寫完了。"
+        ],
+        "choices": [],
+        "tokens": [
+          "已",
+          "經",
+          "寫",
+          "完",
+          "了",
+          "我"
+        ],
+        "explanation": "已經…了 nhấn mạnh việc đã xảy ra/tình trạng đã thay đổi; 了 không đơn giản là thì quá khứ.",
+        "word_id": null,
+        "grammar_id": "tw.daily.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.daily.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi đã ăn rồi.”: 我吃飯已經了。",
+        "stimulus": null,
+        "answers": [
+          "我已經吃飯了。",
+          "我已經吃過飯了。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "了 không phải dấu quá khứ dùng cho mọi câu. Cần phân biệt hoàn tất hành động và thay đổi trạng thái. Câu tham khảo: 我已經吃飯了。",
+        "word_id": null,
+        "grammar_id": "tw.daily.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Thời–thể và bổ ngữ",
+    "level": "Nền tảng",
+    "prerequisites": [
+      "tw.numbers.g.2"
+    ],
+    "references": [
+      {
+        "title": "V了1",
+        "tbcl_level": "第2級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.017"
+      },
+      {
+        "title": "V了2",
+        "tbcl_level": "第2級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+        "id": "tbcl.053"
+      }
+    ]
+  },
+  "tw.daily.g.2": {
+    "hanzi": "我會游泳。",
+    "pinyin": "Wǒ huì yóuyǒng.",
+    "vi": "Tôi biết bơi.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.daily.g.2",
+    "explanation": "會 + động từ có thể chỉ kỹ năng học được; nghĩa sẽ phụ thuộc ngữ cảnh.",
+    "title": "Kỹ năng học được: 會",
+    "pattern": "Chủ ngữ + 會 + động từ",
+    "restrictions": "會 còn có nghĩa dự đoán sẽ; bài này chỉ luyện kỹ năng học được, không thay bằng 在.",
+    "common_mistake": "我在游泳。",
+    "examples": [
+      {
+        "hanzi": "我會游泳。",
+        "pinyin": "Wǒ huì yóuyǒng.",
+        "vi": "Tôi biết bơi.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "她會說華語。",
+        "pinyin": "Tā huì shuō Huáyǔ.",
+        "vi": "Cô ấy biết nói Hoa ngữ.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "他會開車。",
+        "pinyin": "Tā huì kāichē.",
+        "vi": "Anh ấy biết lái xe.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.daily.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我會游泳。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Kỹ năng học được: 會"
+        ],
+        "choices": [
+          "Hỏi giờ: 幾點",
+          "Đi bằng phương tiện",
+          "Khoảng thời gian: 從…到…",
+          "Kỹ năng học được: 會"
+        ],
+        "tokens": [],
+        "explanation": "會 + động từ có thể chỉ kỹ năng học được; nghĩa sẽ phụ thuộc ngữ cảnh.",
+        "word_id": null,
+        "grammar_id": "tw.daily.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.daily.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Cô ấy biết nói Hoa ngữ.”: 她___說華語。",
+        "stimulus": null,
+        "answers": [
+          "會"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "會 còn có nghĩa dự đoán sẽ; bài này chỉ luyện kỹ năng học được, không thay bằng 在.",
+        "word_id": null,
+        "grammar_id": "tw.daily.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.daily.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Anh ấy biết lái xe.",
+        "stimulus": null,
+        "answers": [
+          "他會開車。"
+        ],
+        "choices": [],
+        "tokens": [
+          "會",
+          "開",
+          "車",
+          "他"
+        ],
+        "explanation": "會 + động từ có thể chỉ kỹ năng học được; nghĩa sẽ phụ thuộc ngữ cảnh.",
+        "word_id": null,
+        "grammar_id": "tw.daily.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.daily.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi biết bơi.”: 我在游泳。",
+        "stimulus": null,
+        "answers": [
+          "我會游泳。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "會 còn có nghĩa dự đoán sẽ; bài này chỉ luyện kỹ năng học được, không thay bằng 在. Câu tham khảo: 我會游泳。",
+        "word_id": null,
+        "grammar_id": "tw.daily.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [
+      "tw.shopping.g.2"
+    ],
+    "references": [
+      {
+        "title": "會1",
+        "tbcl_level": "第2級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.020"
+      }
+    ]
+  },
+  "tw.campus.g.1": {
+    "hanzi": "我想跟老師討論報告。",
+    "pinyin": "Wǒ xiǎng gēn lǎoshī tǎolùn bàogào.",
+    "vi": "Tôi muốn thảo luận báo cáo với giáo viên.",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.campus.g.1",
+    "explanation": "跟 + người đứng trước động từ để chỉ người cùng tham gia.",
+    "title": "Cùng ai: 跟",
+    "pattern": "Chủ ngữ + 跟 + người + hành động",
+    "restrictions": "Cụm 跟 + người đứng trước hành động trong cấu trúc luyện ở đây.",
+    "common_mistake": "我想跟討論老師報告。",
+    "examples": [
+      {
+        "hanzi": "我想跟老師討論報告。",
+        "pinyin": "Wǒ xiǎng gēn lǎoshī tǎolùn bàogào.",
+        "vi": "Tôi muốn thảo luận báo cáo với giáo viên.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "她跟朋友一起吃飯。",
+        "pinyin": "Tā gēn péngyǒu yīqǐ chīfàn.",
+        "vi": "Cô ấy ăn cùng bạn.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "我跟同學一起讀書。",
+        "pinyin": "Wǒ gēn tóngxué yīqǐ dúshū.",
+        "vi": "Tôi học cùng bạn học.",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.campus.g.1.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “我想跟老師討論報告。” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Cùng ai: 跟"
+        ],
+        "choices": [
+          "Vị trí: 在",
+          "Nối danh từ: 和",
+          "Cùng ai: 跟",
+          "Thời gian trong câu"
+        ],
+        "tokens": [],
+        "explanation": "跟 + người đứng trước động từ để chỉ người cùng tham gia.",
+        "word_id": null,
+        "grammar_id": "tw.campus.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.campus.g.1.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Cô ấy ăn cùng bạn.”: 她___朋友一起吃飯。",
+        "stimulus": null,
+        "answers": [
+          "跟"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Cụm 跟 + người đứng trước hành động trong cấu trúc luyện ở đây.",
+        "word_id": null,
+        "grammar_id": "tw.campus.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.campus.g.1.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Tôi học cùng bạn học.",
+        "stimulus": null,
+        "answers": [
+          "我跟同學一起讀書。"
+        ],
+        "choices": [],
+        "tokens": [
+          "跟",
+          "同",
+          "學",
+          "一",
+          "起",
+          "讀",
+          "書",
+          "我"
+        ],
+        "explanation": "跟 + người đứng trước động từ để chỉ người cùng tham gia.",
+        "word_id": null,
+        "grammar_id": "tw.campus.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.campus.g.1.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Tôi muốn thảo luận báo cáo với giáo viên.”: 我想跟討論老師報告。",
+        "stimulus": null,
+        "answers": [
+          "我想跟老師討論報告。",
+          "我想和老師討論報告。"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "Cụm 跟 + người đứng trước hành động trong cấu trúc luyện ở đây. Câu tham khảo: 我想跟老師討論報告。",
+        "word_id": null,
+        "grammar_id": "tw.campus.g.1",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [
+      "tw.schedule.g.2"
+    ],
+    "references": [
+      {
+        "title": "跟1",
+        "tbcl_level": "第2*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=2&deng_ji=all",
+        "id": "tbcl.068"
+      }
+    ]
+  },
+  "tw.campus.g.2": {
+    "hanzi": "您什麼時候方便？",
+    "pinyin": "Nín shénme shíhòu fāngbiàn?",
+    "vi": "Khi nào thầy/cô thuận tiện?",
+    "source": "original-ai-draft",
+    "verification": "draft",
+    "audio": "Windows/browser zh-TW local; not yet auditioned",
+    "id": "tw.campus.g.2",
+    "explanation": "什麼時候 hỏi thời gian; 您 và cách hỏi sự thuận tiện giúp lời hẹn lịch sự.",
+    "title": "Hỏi khi nào: 什麼時候",
+    "pattern": "Chủ ngữ + 什麼時候 + vị ngữ",
+    "restrictions": "什麼時候 hỏi thời điểm; hỏi ai dùng 誰. 您 thể hiện cách xưng hô kính trọng.",
+    "common_mistake": "您誰方便？",
+    "examples": [
+      {
+        "hanzi": "您什麼時候方便？",
+        "pinyin": "Nín shénme shíhou fāngbiàn?",
+        "vi": "Khi nào thầy/cô/ông/bà tiện?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "你什麼時候回家？",
+        "pinyin": "Nǐ shénme shíhou huí jiā?",
+        "vi": "Khi nào bạn về nhà?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      },
+      {
+        "hanzi": "老師什麼時候來？",
+        "pinyin": "Lǎoshī shénme shíhou lái?",
+        "vi": "Khi nào giáo viên đến?",
+        "source": "original-ai-draft",
+        "verification": "draft",
+        "audio": "Windows/browser zh-TW local; not yet auditioned"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "tw.campus.g.2.practice.use",
+        "kind": "meaning",
+        "prompt": "Câu “您什麼時候方便？” minh họa cấu trúc nào đang học?",
+        "stimulus": null,
+        "answers": [
+          "Hỏi khi nào: 什麼時候"
+        ],
+        "choices": [
+          "Xin phép hoặc nhờ: 可以…嗎",
+          "Hỏi khi nào: 什麼時候",
+          "Số và lượng từ",
+          "Sở hữu: 有 / 沒有"
+        ],
+        "tokens": [],
+        "explanation": "什麼時候 hỏi thời gian; 您 và cách hỏi sự thuận tiện giúp lời hẹn lịch sự.",
+        "word_id": null,
+        "grammar_id": "tw.campus.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.campus.g.2.practice.cloze",
+        "kind": "cloze",
+        "prompt": "Điền cấu trúc đang học để diễn đạt “Khi nào bạn về nhà?”: 你___回家？",
+        "stimulus": null,
+        "answers": [
+          "什麼時候"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "什麼時候 hỏi thời điểm; hỏi ai dùng 誰. 您 thể hiện cách xưng hô kính trọng.",
+        "word_id": null,
+        "grammar_id": "tw.campus.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.campus.g.2.practice.order",
+        "kind": "order",
+        "prompt": "Sắp xếp hoặc gõ câu theo nghĩa: Khi nào giáo viên đến?",
+        "stimulus": null,
+        "answers": [
+          "老師什麼時候來？"
+        ],
+        "choices": [],
+        "tokens": [
+          "師",
+          "什",
+          "麼",
+          "時",
+          "候",
+          "來",
+          "老"
+        ],
+        "explanation": "什麼時候 hỏi thời gian; 您 và cách hỏi sự thuận tiện giúp lời hẹn lịch sự.",
+        "word_id": null,
+        "grammar_id": "tw.campus.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      },
+      {
+        "id": "tw.campus.g.2.practice.correct",
+        "kind": "hanzi",
+        "prompt": "Viết lại câu sau theo cấu trúc đang học để diễn đạt “Khi nào thầy/cô/ông/bà tiện?”: 您誰方便？",
+        "stimulus": null,
+        "answers": [
+          "您什麼時候方便？",
+          "什麼時候您方便？"
+        ],
+        "choices": [],
+        "tokens": [],
+        "explanation": "什麼時候 hỏi thời điểm; hỏi ai dùng 誰. 您 thể hiện cách xưng hô kính trọng. Câu tham khảo: 您什麼時候方便？",
+        "word_id": null,
+        "grammar_id": "tw.campus.g.2",
+        "skill": "grammar",
+        "source": "original-ai-draft",
+        "verification": "draft"
+      }
+    ],
+    "status": "ready",
+    "group": "Câu cơ bản",
+    "level": "Nền tảng",
+    "prerequisites": [
+      "tw.greetings.g.2",
+      "tw.numbers.g.2"
+    ],
+    "references": [
+      {
+        "title": "什麼",
+        "tbcl_level": "第1級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.006"
+      },
+      {
+        "title": "時間表達",
+        "tbcl_level": "第1*級",
+        "url": "https://bcoct.naer.edu.tw/standsys/querygrammars.php?q=&num=50&page=1&deng_ji=all",
+        "id": "tbcl.010"
+      }
+    ]
+  }
+}

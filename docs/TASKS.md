@@ -1,5 +1,20 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Hoàn tất đợt v6 — 27/09/2026
+
+Kết quả hiện tại: [RELEASE-V6.md](RELEASE-V6.md), [HANDOFF-2026-09-27.md](HANDOFF-2026-09-27.md). Kokoro/audio Pinyin ở các mục dưới là lịch sử đã thay thế.
+
+- [x] Chỉ Qwen 4B, CPU/CUDA kiểm tra thật; giữ Whisper base/small và config 4B/CUDA/small.
+- [x] Gỡ 1.7B, Kokoro/runtime/archive, WAV/MP3 Pinyin và hai WAV thử; xóa 3.906.879.800 bytes. Còn khoảng 5,251 GB cho tài sản quản lý.
+- [x] 18 chủ đề/72 bài/360 từ/36 grammar/540 bài tập trong bài/144 bài grammar riêng; 424 chữ, 294 cũ giữ byte. ID/nội dung cũ giữ nguyên. B2 vẫn chưa hoàn thành.
+- [x] Sửa ba lỗi E2E: chờ lưu/tạm dừng, số câu đầu vào 54, khóa nghe khi lựa chọn giọng đang lưu. Rà/sửa thứ tự chọn lọc năm chữ mới; không tự reorder mọi chữ.
+- [x] Build/content checker, 25 core/adapter, 36 backend, **39/39 Edge E2E trên source cuối**; native TTS/cancel và Qwen 4B CPU/CUDA thật qua. Một cảnh báo deprecation Starlette/httpx, không đổi lockfile.
+- [x] Nguồn/giấy phép/giới hạn/manifest cập nhật. Audit TBCL 48/120 từ mới khớp mục/Pinyin; giữ draft, không giả giáo viên duyệt.
+- [x] Backup `before-v6-20260927-201705.json`, nâng dữ liệu thật v5→v6 qua transaction, giữ nguyên 13 objects/33 events và settings. Edge kiểm tra bản cài thật không ghi dữ liệu học.
+- [x] Localhost chạy trên 8765. Checkpoint Git chứa source/tài liệu, không model/runtime/data; không push.
+
+Không còn task triển khai/phát hành trong đợt đã duyệt. Những việc chất lượng dài hạn (giáo viên rà nội dung, nghe giọng thực, mẫu nét nguồn Ja/ghép, toàn bộ B2) vẫn là giới hạn/lộ trình, không được ghi đã đạt Windows v1.
+
 Cập nhật 25/09/2026. Không coi số lượng bản nháp hoặc test tự động là chứng nhận nội dung/audio. Các con số kiểm thử của mốc 23–24/09 bên dưới là lịch sử; kết quả đợt mới nằm ở phần này.
 
 ## Phản hồi giọng đọc và giao diện Phát âm — tiếp nối checkpoint def42b5

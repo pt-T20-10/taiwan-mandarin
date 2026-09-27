@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-27",
+  "package_sha256": "5d38f51fe40cc46dcf750d6e9218bf0c2270d3a7314f68fc2362a8ac5b4188eb",
+  "build": "passed",
+  "content_checker": "passed",
+  "core_adapter_tests": 25,
+  "backend_tests": 36,
+  "edge_e2e_tests": 39,
+  "edge_e2e_failed": 0,
+  "installed_read_only_ui_smoke": "passed (desktop/mobile, no learning writes)",
+  "isolated_v5_to_v6_test": "passed",
+  "real_upgrade": {
+    "from": 5,
+    "to": 6,
+    "state_preserved": true,
+    "objects": 13,
+    "events": 33,
+    "backup": "data/backups/before-v6-20260927-201705.json"
+  },
+  "selected_config": {
+    "model": "Qwen3-4B-Q4_K_M.gguf",
+    "runtime": "cuda",
+    "asr_model": "ggml-small.bin"
+  },
+  "speech_setting": "Existing browser Yating zh-TW and normal pace retained; no real voice migration needed",
+  "warning": "One Starlette/httpx deprecation warning. Tests do not certify language, ASR pronunciation, TTS naturalness or B2 coverage."
+}

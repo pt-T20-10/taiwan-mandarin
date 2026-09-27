@@ -22,6 +22,7 @@ export const speech:SpeechSynthesis={
 };
 export async function previewSpeech(text:string,selected:SpeechPreferences){speech.stop();const ticket=generation;
     const preferences={...selected};
+    if(preferences.voice!=='auto'&&!preferences.voice.startsWith('browser:')&&!preferences.voice.startsWith('native:'))throw new Error('Giọng đã lưu không còn được hỗ trợ. Hãy chọn giọng Windows zh-TW.');
     const choices=window.speechSynthesis?.getVoices().filter(v=>v.lang.toLowerCase()==='zh-tw'&&v.localService)||[];
     const voice=preferences.voice==='auto'?choices[0]:choices.find(v=>'browser:'+v.voiceURI===preferences.voice);
     if(preferences.voice.startsWith('browser:')&&!voice)throw new Error('Giọng zh-TW đã chọn không có trong trình duyệt này. Hãy chọn lại trong Cài đặt.');
@@ -33,7 +34,7 @@ export async function previewSpeech(text:string,selected:SpeechPreferences){spee
       window.speechSynthesis.speak(utterance);});return;}
     const controller=new AbortController();pendingAudio=controller;
     let blob:Blob;
-    try{const r=await fetch('/api/ai/tts',{method:'POST',headers:{'Content-Type':'application/json','X-Mandarin-Client':'local-ui'},body:JSON.stringify({text,voice:preferences.voice.startsWith('native:')?preferences.voice.slice(7):preferences.voice.startsWith('neural:')?preferences.voice:undefined,rate:({slow:-2,normal:0,brisk:1})[preferences.pace]}),signal:controller.signal});
+    try{const r=await fetch('/api/ai/tts',{method:'POST',headers:{'Content-Type':'application/json','X-Mandarin-Client':'local-ui'},body:JSON.stringify({text,voice:preferences.voice.startsWith('native:')?preferences.voice.slice(7):undefined,rate:({slow:-2,normal:0,brisk:1})[preferences.pace]}),signal:controller.signal});
       if(!r.ok)throw new Error((await r.json()).detail);blob=await r.blob();}
     catch(error){if(controller.signal.aborted)return;throw error;}
     finally{if(pendingAudio===controller)pendingAudio=null;}
@@ -48,19 +49,6 @@ export async function previewSpeech(text:string,selected:SpeechPreferences){spee
     });
 }
 export function downloadJSON(value:unknown,name:string){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-export async function playSamples(steps:{label:string;path:string}[],onStep:(index:number)=>void){
-  speech.stop();const ticket=generation;
-  try{for(let i=0;i<steps.length;i++){
-    if(ticket!==generation)return;onStep(i);
-    await new Promise<void>((resolve,reject)=>{
-      const current=new Audio(steps[i].path);audio=current;
-      const cleanup=()=>{current.onended=null;current.onerror=null;if(audio===current)audio=null;if(finishSpeech===finish)finishSpeech=null;};
-      const finish=()=>{cleanup();onStep(-1);resolve();};finishSpeech=finish;
-      current.onended=finish;current.onerror=()=>{cleanup();reject(new Error('Không mở được âm mẫu local. Kiểm tra lại gói âm thanh.'));};
-      current.play().catch(e=>{cleanup();reject(e);});
-    });
-  }}catch(error){if(ticket===generation)throw error;}finally{if(ticket===generation)onStep(-1);}
-}
 export async function encodeWav(blob:Blob):Promise<Blob>{
   const context=new AudioContext();let buffer:AudioBuffer;
   try{buffer=await context.decodeAudioData(await blob.arrayBuffer());}finally{await context.close();}

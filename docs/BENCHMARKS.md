@@ -1,5 +1,7 @@
 # Đo thực tế tại máy — 23/09/2026
 
+> Trạng thái v6 ngày 27/09/2026: 1.7B/Kokoro đã gỡ; các số đo của chúng bên dưới là lịch sử. Giữ Qwen 4B CPU/CUDA, Whisper base/small và zh-TW. Smoke sau dọn model: CPU 34.706 ms, CUDA 9.409 ms gồm nạp model/toàn bộ trả lời, không benchmark thống kê. Xem benchmark-v6-4b-smoke.json, benchmark-v6-native-tts.json và RELEASE-V6.md; không suy chất lượng ngôn ngữ từ việc chạy thành công.
+
 Ryzen 5 5600H, GTX 1650 4 GB, driver 572.83, Windows 11. Có ứng dụng phát triển/trình duyệt đang chạy; đây là số đo tại phiên làm việc, không phải phòng thử nghiệm cô lập. Không có số đo nào lấy từ máy khác.
 
 ## Bổ sung giọng neural — 25/09/2026

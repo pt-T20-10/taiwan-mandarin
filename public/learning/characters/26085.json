@@ -1,0 +1,117 @@
+{
+  "character": "日",
+  "radical": "日",
+  "decomposition": "⿴囗一",
+  "strokes": [
+    {
+      "outline": "M349,664C334,682 313,696 298,697C288,698 278,697 274,689C270,684 274,677 279,666C314,576 318,441 294,261C289,231 281,201 271,169C265,151 263,134 267,118C273,94 280,78 291,65C298,57 305,57 314,66C321,75 327,87 332,102C335,115 337,126 339,137C352,222 348,314 351,391C352,410 352,410 352,420C355,524 355,593 361,626C364,639 357,653 349,664Z",
+      "median": [
+        [
+          279,
+          689
+        ],
+        [
+          319,
+          651
+        ],
+        [
+          329,
+          603
+        ],
+        [
+          305,
+          66
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M642,120C670,5 697,-7 730,59C751,106 739,152 736,197C728,297 724,429 721,593C720,619 726,638 738,654C744,664 744,675 738,681C723,698 694,712 656,730C640,737 630,736 617,729C547,697 457,678 349,664C336,661 348,624 361,626C393,632 470,646 590,672C656,687 658,631 663,593C674,517 672,384 662,197C660,171 657,151 648,144C642,138 640,128 642,120Z",
+      "median": [
+        [
+          348,
+          652
+        ],
+        [
+          634,
+          703
+        ],
+        [
+          695,
+          665
+        ],
+        [
+          693,
+          24
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M351,391C366,387 383,383 400,384C452,387 508,402 554,411C572,415 583,419 587,421C593,426 593,433 591,437C585,446 574,452 556,455C533,459 505,449 450,435C400,423 367,422 352,420C342,418 342,393 351,391Z",
+      "median": [
+        [
+          347,
+          407
+        ],
+        [
+          586,
+          431
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M332,102C348,90 452,123 642,120C650,120 654,138 648,144C594,199 602,165 339,137C327,135 321,106 332,102Z",
+      "median": [
+        [
+          329,
+          115
+        ],
+        [
+          647,
+          139
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    }
+  ],
+  "source": "https://github.com/parsimonhi/animCJK/tree/ec5e17cca76c87587790bcbce5ea0b4d4fb753d6",
+  "reference": "https://stroke-order.learningweb.moe.edu.tw/dictView.jsp?ID=26085",
+  "license": "Arphic Public License; dictionary LGPL-3.0",
+  "variant": "Taiwan",
+  "verification": "Đã so số nét và đường đi với MOE bằng công cụ; chưa duyệt dáng chữ",
+  "expected_count": 4,
+  "copyright": "Arphic Technology Co., Ltd. ©1999; AnimCJK FM&SH ©2016–2026",
+  "modification": "2026-09-27: converted to JSON/matrix coordinates; original outlines retained from graphicsZhHant. Derivative outlines remain under APL; no warranty.",
+  "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6",
+  "structure_verification": "Cấu tạo trực quan để nhận hình, chưa thẩm định chuyên môn; không phải giải thích từ nguyên."
+}

@@ -1,0 +1,25 @@
+import {test,expect} from '@playwright/test';
+const headers={'X-Mandarin-Client':'local-ui'};
+test('zh-TW Windows thật: API đã gỡ neural, phát, dừng, lưu giọng và mobile',async({page,request})=>{
+ const status=await(await request.get('/api/status')).json();expect(status.neural_voices).toEqual([]);
+ expect((await request.post('/api/ai/tts',{headers,data:{text:'你好',voice:'neural:kokoro-zf001'}})).status()).toBe(422);
+ expect((await request.post('/api/ai/config',{headers,data:{model:'Qwen3-1.7B-Q4_K_M.gguf',runtime:'cpu'}})).status()).toBe(422);
+ test.skip(!status.tts_voices.length,'Máy thiếu zh-TW; kiểm tra báo thiếu bằng backend tests');
+ const backup=await(await request.get('/api/backup')).json();backup.objects=[];backup.events=[];await request.post('/api/restore',{headers,data:backup});
+ await page.addInitScript(()=>{const Real=window.Audio;window.Audio=new Proxy(Real,{construct(Target,args){const audio=new Target(...args as []);(window as any).__audio=audio;return audio;}});});
+ await page.goto('/#settings');await page.getByLabel('Giọng đọc offline',{exact:true}).selectOption('native:'+status.tts_voices[0]);
+ await expect.poll(async()=>(await(await request.get('/api/state')).json()).objects.settings.speech?.data.voice).toBe('native:'+status.tts_voices[0]);
+ await page.getByLabel('Câu so sánh giọng').fill('你好，明天下午一起去圖書館，好嗎？');
+ const response=page.waitForResponse(r=>r.url().endsWith('/api/ai/tts'));await page.getByRole('button',{name:'Nghe giọng đang chọn',exact:true}).click();const wav=await response;
+ expect(wav.status()).toBe(200);expect(wav.request().postDataJSON().voice).toBe(status.tts_voices[0]);
+ await expect.poll(()=>page.evaluate(()=>(window as any).__audio?.currentTime||0)).toBeGreaterThan(0);
+ await page.getByRole('button',{name:'Dừng nghe thử'}).click();expect(await page.evaluate(()=>(window as any).__audio.paused)).toBe(true);
+ await page.reload();await expect(page.getByLabel('Giọng đọc offline',{exact:true})).toHaveValue('native:'+status.tts_voices[0]);
+ expect(await page.getByLabel('Giọng đọc offline',{exact:true}).textContent()).not.toContain('Kokoro');
+ const cancelled:string[]=[];page.on('requestfailed',r=>{if(r.url().endsWith('/api/ai/tts'))cancelled.push(r.url());});
+ await page.getByLabel('Câu so sánh giọng').fill('今天下午我想去圖書館學習中文，然後和朋友一起吃晚餐。'.repeat(20));
+ const pending=page.waitForRequest(r=>r.url().endsWith('/api/ai/tts'));await page.getByRole('button',{name:'Nghe giọng đang chọn',exact:true}).click();await pending;
+ await page.getByRole('button',{name:'Học',exact:true}).click();await expect(page).toHaveURL(/#learn$/);await expect.poll(()=>cancelled.length).toBe(1);
+ await page.goto('/#settings');
+ await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.locator('.speech-controls').screenshot({path:'test-results/zh-tw-mobile.png'});
+});

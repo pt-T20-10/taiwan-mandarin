@@ -6,13 +6,14 @@ test.beforeEach(async({request})=>{
  const pack=JSON.parse(fs.readFileSync('content/foundation.pack.json','utf8'));backup.packages=[{id:pack.content.id,version:pack.content.version,payload:JSON.stringify(pack)}];
  await request.post('/api/restore',{headers:{'X-Mandarin-Client':'local-ui'},data:backup});
 });
-test('36 câu đầu vào, kết thúc và làm lại không mất trạng thái',async({page,request})=>{
- const content=await(await request.get('/api/content')).json();expect(content.units).toHaveLength(12);
+test('đầu vào theo số chủ đề, kết thúc và làm lại không mất trạng thái',async({page,request})=>{
+ const content=await(await request.get('/api/content')).json();expect(content.units).toHaveLength(18);
  await page.goto('/#placement');await page.getByRole('button',{name:'Bắt đầu kiểm tra',exact:true}).click();
- for(let i=0;i<36;i++)await page.getByRole('button',{name:'Chưa biết / bỏ qua',exact:true}).click();
+ const count=content.units.length*3;
+ for(let i=0;i<count;i++)await page.getByRole('button',{name:'Chưa biết / bỏ qua',exact:true}).click();
  await expect(page.getByRole('heading',{name:'Gợi ý vị trí bắt đầu'})).toBeVisible();
- expect((await(await request.get('/api/state')).json()).objects.placement.latest.data.answers).toHaveLength(36);
- await page.getByRole('button',{name:'Làm lại kiểm tra'}).click();await page.getByRole('button',{name:'Bắt đầu kiểm tra',exact:true}).click();await expect(page.getByText('Câu 1/36',{exact:true})).toBeVisible();
+ expect((await(await request.get('/api/state')).json()).objects.placement.latest.data.answers).toHaveLength(count);
+ await page.getByRole('button',{name:'Làm lại kiểm tra'}).click();await page.getByRole('button',{name:'Bắt đầu kiểm tra',exact:true}).click();await expect(page.getByText(`Câu 1/${count}`,{exact:true})).toBeVisible();
 });
 test('nhập/xuất thẻ JSON và lịch ôn tự do không đổi',async({page,request})=>{
  await page.goto('/#notebook');await page.getByRole('button',{name:'Thẻ cá nhân',exact:true}).click();
@@ -30,7 +31,7 @@ test('học bài, không lộ đáp án, lưu lại sau reload, IME không gửi
  const input=page.getByRole('textbox',{name:'Câu trả lời'});await input.fill('ni3 hao3');await input.dispatchEvent('compositionstart');await input.press('Enter');await expect(page.getByText('Đúng rồi!',{exact:true})).not.toBeVisible();await input.dispatchEvent('compositionend');await input.fill('ni3 hao3');await page.getByRole('button',{name:'Lưu & tạm dừng'}).click();await expect(page).toHaveURL(/#learn$/);await page.reload();await page.getByRole('button',{name:'Tiếp tục bài đang học'}).click();await expect(page.getByRole('textbox',{name:'Câu trả lời'})).toHaveValue('ni3 hao3');await page.getByRole('button',{name:'Kiểm tra',exact:true}).click();await page.getByRole('button',{name:'Tiếp tục →',exact:true}).click();await expect(page.getByText('Bạn đã đi hết bài học')).toBeVisible();await page.getByRole('button',{name:'Thêm từ vào ôn tập'}).click();await expect.poll(async()=>Object.keys((await(await request.get('/api/state')).json()).objects.cards).length).toBe(5);
  await page.reload();await page.getByRole('button',{name:'Ôn tập',exact:false}).first().click();await page.getByRole('button',{name:'Lật thẻ'}).click();await page.getByRole('button',{name:'3 Nhớ',exact:true}).click();await expect.poll(async()=>(await(await request.get('/api/state')).json()).events.filter((e:any)=>e.kind==='review').length).toBe(1);
 });
-for(let unitIndex=0;unitIndex<12;unitIndex++)test(`đơn vị ${unitIndex+1}: bài đóng, nghe bỏ qua, nói/viết mở, tổng kết`,async({page,request})=>{
+for(let unitIndex=0;unitIndex<18;unitIndex++)test(`đơn vị ${unitIndex+1}: bài đóng, nghe bỏ qua, nói/viết mở, tổng kết`,async({page,request})=>{
  const content=await(await request.get('/api/content')).json();
  for(const lesson of content.units[unitIndex].lessons){
   await page.goto('/');await page.getByRole('button',{name:new RegExp(lesson.title.replace('&','&'))}).nth(unitIndex).click();await page.getByRole('button',{name:'Bắt đầu luyện tập'}).click();

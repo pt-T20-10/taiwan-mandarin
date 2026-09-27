@@ -1,5 +1,14 @@
 # Đối chiếu nét chọn lọc — 23/09/2026
 
+## Bổ sung v6 — 27/09/2026
+
+130 chữ mới, tổng 424; 294 JSON cũ giữ nguyên byte và được khóa bằng fixture/test. 424 số nét khớp MOE; bộ thủ 130 chữ mới lấy metadata MOE. Nguồn cùng revision AnimCJK, bổ sung graphics/dictionary Ja khi thiếu Hant/Hans; ghi từng JSON và ATTRIBUTION.
+
+Ghép 嚨 (口/龍), 圾 (土/及), thay 臣 bảy nét trong 覽 thành sáu nét; chọn 邀 17 nét. Đã xem hình tĩnh 14 chữ và so median có đánh số của 嚴/惜/感/聯/訊/邀 với MOE. Sửa thứ tự cụ thể của năm chữ đầu, giữ 邀: thuật toán greedy nhầm các nét 辶 do vị trí hình khác nhau. Không tự áp thuật toán cho mọi chữ. Sau sửa, chỉ 邀 còn cost >0,9 (0,907); đó là cờ hình học, không kết luận sai.
+
+Đây là rà kỹ thuật chọn lọc, không giáo viên duyệt toàn bộ hình/hướng/từ nguyên. Hình nguồn Ja/mẫu ghép còn cần rà dáng Đài Loan, tỉ lệ và độ dày. MOE reference HTML/median chỉ ở cache ignored, không phân phối. Bộ chấm viết tay giữ 12 mẫu. Lịch sử 294 chữ dưới đây vẫn có giá trị.
+
+
 ## Bổ sung animation ngày 25/09/2026
 
 294 chữ trong 240 mục từ có animation local: 271 hình Hant, 19 hình Hans dùng cho cùng chữ, 4 mẫu ghép 廁 廚 灣 碼. Mã tái tạo: `scripts/build_character_assets.py`; báo cáo đầy đủ: `docs/character-audit.json`; [revision/nguồn/giấy phép](../public/learning/ATTRIBUTION.md). Hình AnimCJK chuyển sang JSON/matrix, giữ APL; dữ liệu dictionary giữ LGPL/Unihan, có ngày/cách sửa và thông báo không bảo hành.

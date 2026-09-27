@@ -1,0 +1,14 @@
+{
+  "voices": [
+    "Microsoft Hanhan Desktop"
+  ],
+  "samples": [
+    {
+      "voice": "Microsoft Hanhan Desktop",
+      "bytes": 257852,
+      "ms": 1321
+    }
+  ],
+  "notice": "Technical synthesis/cancellation check; not human listening or pronunciation certification.",
+  "cancelled_child_exit_code": 1
+}

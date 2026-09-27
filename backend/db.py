@@ -65,6 +65,21 @@ def get_state():
         return {'device_id': db.execute("SELECT value FROM meta WHERE key='device_id'").fetchone()[0],
                 'objects': objects, 'events': [json.loads(r['payload']) for r in db.execute('SELECT payload FROM events ORDER BY created_at,id')]}
 
+def migrate_retired_voice():
+    """Back up before changing only the retired speech setting; idempotent."""
+    with connect() as connection:
+        connection.execute('BEGIN IMMEDIATE')
+        row=connection.execute("SELECT * FROM objects WHERE collection='settings' AND id='speech' AND deleted=0").fetchone()
+        if not row:return
+        data=json.loads(row['payload'])
+        if not str(data.get('voice','')).startswith('neural:'):return
+        folder=DATA/'backups';folder.mkdir(exist_ok=True)
+        backup=folder/('before-retired-voice-'+uuid.uuid4().hex+'.json')
+        with backup.open('x',encoding='utf-8') as handle:json.dump(snapshot(connection),handle,ensure_ascii=False,indent=2)
+        updated={**data,'voice':'auto','retired_voice':data['voice'],
+                 'migration_notice':'Giọng Kokoro đã được gỡ theo cấu hình mới. Đã chuyển sang tự chọn giọng Windows zh-TW, giữ nhịp đọc; bản sao lưu và nhận xét cũ vẫn còn.'}
+        put_object(connection,'settings','speech',row['version'],updated)
+
 class Conflict(Exception):
     pass
 

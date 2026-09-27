@@ -1,0 +1,1169 @@
+{
+  "date": "2026-09-27",
+  "scope": "Exact TBCL headword and Pinyin only; meanings, collocations and lesson prose still project draft. No CEFR equivalence implied.",
+  "words": [
+    {
+      "hanzi": "身體",
+      "authored_pinyin": "shēntǐ",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%BA%AB%E9%AB%94&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "身體",
+          "pinyin": "shēntǐ",
+          "tbcl_level": "第1*級"
+        },
+        {
+          "headword": "身體",
+          "pinyin": "shēntǐ",
+          "tbcl_level": "第1*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "不舒服",
+      "authored_pinyin": "bù shūfu",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E4%B8%8D%E8%88%92%E6%9C%8D&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "感冒",
+      "authored_pinyin": "gǎnmào",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%84%9F%E5%86%92&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "感冒",
+          "pinyin": "gǎnmào",
+          "tbcl_level": "第1*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "發燒",
+      "authored_pinyin": "fāshāo",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%99%BC%E7%87%92&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "發燒",
+          "pinyin": "fāshāo",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "咳嗽",
+      "authored_pinyin": "késòu",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%92%B3%E5%97%BD&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "咳嗽",
+          "pinyin": "késòu",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "頭痛",
+      "authored_pinyin": "tóutòng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%A0%AD%E7%97%9B&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "頭痛",
+          "pinyin": "tóutòng",
+          "tbcl_level": "第3級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "肚子",
+      "authored_pinyin": "dùzi",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%82%9A%E5%AD%90&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "肚子/肚",
+          "pinyin": "dùzi",
+          "tbcl_level": "第2*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "喉嚨",
+      "authored_pinyin": "hóulóng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%96%89%E5%9A%A8&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "痛",
+      "authored_pinyin": "tòng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%97%9B&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "痛",
+          "pinyin": "tòng",
+          "tbcl_level": "第1*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "累",
+      "authored_pinyin": "lèi",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%B4%AF&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "診所",
+      "authored_pinyin": "zhěnsuǒ",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%A8%BA%E6%89%80&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "醫生",
+      "authored_pinyin": "yīshēng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%86%AB%E7%94%9F&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "醫生/醫師",
+          "pinyin": "yīshēng",
+          "tbcl_level": "第1級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "護士",
+      "authored_pinyin": "hùshì",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%AD%B7%E5%A3%AB&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "護士",
+          "pinyin": "hùshì",
+          "tbcl_level": "第2*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "掛號",
+      "authored_pinyin": "guàhào",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%8E%9B%E8%99%9F&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "健保卡",
+      "authored_pinyin": "jiànbǎokǎ",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%81%A5%E4%BF%9D%E5%8D%A1&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "藥",
+      "authored_pinyin": "yào",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%97%A5&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "藥",
+          "pinyin": "yào",
+          "tbcl_level": "第1*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "藥局",
+      "authored_pinyin": "yàojú",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%97%A5%E5%B1%80&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "藥局",
+          "pinyin": "yàojú",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "看病",
+      "authored_pinyin": "kànbìng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%9C%8B%E7%97%85&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "看病",
+          "pinyin": "kànbìng",
+          "tbcl_level": "第1*級"
+        },
+        {
+          "headword": "看病",
+          "pinyin": "kànbìng",
+          "tbcl_level": "第1*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "量體溫",
+      "authored_pinyin": "liáng tǐwēn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%87%8F%E9%AB%94%E6%BA%AB&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "嚴重",
+      "authored_pinyin": "yánzhòng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%9A%B4%E9%87%8D&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "嚴重",
+          "pinyin": "yánzhòng",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "租屋",
+      "authored_pinyin": "zūwū",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%A7%9F%E5%B1%8B&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "套房",
+      "authored_pinyin": "tàofáng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%A5%97%E6%88%BF&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "雅房",
+      "authored_pinyin": "yǎfáng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%9B%85%E6%88%BF&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "押金",
+      "authored_pinyin": "yājīn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%8A%BC%E9%87%91&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "合約",
+      "authored_pinyin": "héyuē",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%90%88%E7%B4%84&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "租金",
+      "authored_pinyin": "zūjīn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%A7%9F%E9%87%91&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "水電費",
+      "authored_pinyin": "shuǐdiànfèi",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%B0%B4%E9%9B%BB%E8%B2%BB&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "管理費",
+      "authored_pinyin": "guǎnlǐfèi",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%AE%A1%E7%90%86%E8%B2%BB&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "電梯",
+      "authored_pinyin": "diàntī",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%9B%BB%E6%A2%AF&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "電梯",
+          "pinyin": "diàntī",
+          "tbcl_level": "第2*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "樓層",
+      "authored_pinyin": "lóucéng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%A8%93%E5%B1%A4&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "陽臺",
+      "authored_pinyin": "yángtái",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%99%BD%E8%87%BA&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "家具",
+      "authored_pinyin": "jiājù",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%AE%B6%E5%85%B7&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "家具/傢俱",
+          "pinyin": "jiājù",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "冰箱",
+      "authored_pinyin": "bīngxiāng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%86%B0%E7%AE%B1&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "冰箱",
+          "pinyin": "bīngxiāng",
+          "tbcl_level": "第2*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "洗衣機",
+      "authored_pinyin": "xǐyījī",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%B4%97%E8%A1%A3%E6%A9%9F&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "洗衣機",
+          "pinyin": "xǐyījī",
+          "tbcl_level": "第3級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "熱水",
+      "authored_pinyin": "rèshuǐ",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%86%B1%E6%B0%B4&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "壞了",
+      "authored_pinyin": "huài le",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%A3%9E%E4%BA%86&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "修理",
+      "authored_pinyin": "xiūlǐ",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E4%BF%AE%E7%90%86&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "漏水",
+      "authored_pinyin": "lòushuǐ",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%BC%8F%E6%B0%B4&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "搬家",
+      "authored_pinyin": "bānjiā",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%90%AC%E5%AE%B6&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "搬家",
+          "pinyin": "bānjiā",
+          "tbcl_level": "第2*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "垃圾",
+      "authored_pinyin": "lèsè",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%9E%83%E5%9C%BE&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "垃圾",
+          "pinyin": "lèsè",
+          "tbcl_level": "第3級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "包裹",
+      "authored_pinyin": "bāoguǒ",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%8C%85%E8%A3%B9&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "郵票",
+      "authored_pinyin": "yóupiào",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%83%B5%E7%A5%A8&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "郵票",
+          "pinyin": "yóupiào",
+          "tbcl_level": "第2*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "信封",
+      "authored_pinyin": "xìnfēng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E4%BF%A1%E5%B0%81&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "信封",
+          "pinyin": "xìnfēng",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "運費",
+      "authored_pinyin": "yùnfèi",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%81%8B%E8%B2%BB&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "寄件人",
+      "authored_pinyin": "jìjiànrén",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%AF%84%E4%BB%B6%E4%BA%BA&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "收件人",
+      "authored_pinyin": "shōujiànrén",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%94%B6%E4%BB%B6%E4%BA%BA&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "填寫",
+      "authored_pinyin": "tiánxiě",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%A1%AB%E5%AF%AB&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "表格",
+      "authored_pinyin": "biǎogé",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%A1%A8%E6%A0%BC&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "簽名",
+      "authored_pinyin": "qiānmíng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%B0%BD%E5%90%8D&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "櫃臺",
+      "authored_pinyin": "guìtái",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%AB%83%E8%87%BA&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "排隊",
+      "authored_pinyin": "páiduì",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%8E%92%E9%9A%8A&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "排隊",
+          "pinyin": "páiduì",
+          "tbcl_level": "第3級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "領取",
+      "authored_pinyin": "lǐngqǔ",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%A0%98%E5%8F%96&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "通知",
+      "authored_pinyin": "tōngzhī",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%80%9A%E7%9F%A5&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "證件",
+      "authored_pinyin": "zhèngjiàn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%AD%89%E4%BB%B6&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "影印",
+      "authored_pinyin": "yǐngyìn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%BD%B1%E5%8D%B0&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "申請",
+      "authored_pinyin": "shēnqǐng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%94%B3%E8%AB%8B&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "手續",
+      "authored_pinyin": "shǒuxù",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%89%8B%E7%BA%8C&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "取件",
+      "authored_pinyin": "qǔjiàn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%8F%96%E4%BB%B6&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "付款",
+      "authored_pinyin": "fùkuǎn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E4%BB%98%E6%AC%BE&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "收據",
+      "authored_pinyin": "shōujù",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%94%B6%E6%93%9A&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "公司",
+      "authored_pinyin": "gōngsī",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%85%AC%E5%8F%B8&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "公司",
+          "pinyin": "gōngsī",
+          "tbcl_level": "第2級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "同事",
+      "authored_pinyin": "tóngshì",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%90%8C%E4%BA%8B&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "主管",
+      "authored_pinyin": "zhǔguǎn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E4%B8%BB%E7%AE%A1&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "上班",
+      "authored_pinyin": "shàngbān",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E4%B8%8A%E7%8F%AD&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "上班",
+          "pinyin": "shàngbān",
+          "tbcl_level": "第2*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "下班",
+      "authored_pinyin": "xiàbān",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E4%B8%8B%E7%8F%AD&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "下班",
+          "pinyin": "xiàbān",
+          "tbcl_level": "第2*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "加班",
+      "authored_pinyin": "jiābān",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%8A%A0%E7%8F%AD&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "加班",
+          "pinyin": "jiābān",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "請假",
+      "authored_pinyin": "qǐngjià",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%AB%8B%E5%81%87&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "排班",
+      "authored_pinyin": "páibān",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%8E%92%E7%8F%AD&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "早班",
+      "authored_pinyin": "zǎobān",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%97%A9%E7%8F%AD&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "晚班",
+      "authored_pinyin": "wǎnbān",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%99%9A%E7%8F%AD&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "開會",
+      "authored_pinyin": "kāihuì",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%96%8B%E6%9C%83&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "開會",
+          "pinyin": "kāihuì",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "會議",
+      "authored_pinyin": "huìyì",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%9C%83%E8%AD%B0&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "行程",
+      "authored_pinyin": "xíngchéng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%A1%8C%E7%A8%8B&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "改期",
+      "authored_pinyin": "gǎiqí",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%94%B9%E6%9C%9F&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "遲到",
+      "authored_pinyin": "chídào",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%81%B2%E5%88%B0&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "遲到",
+          "pinyin": "chídào",
+          "tbcl_level": "第3級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "準時",
+      "authored_pinyin": "zhǔnshí",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%BA%96%E6%99%82&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "完成",
+      "authored_pinyin": "wánchéng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%AE%8C%E6%88%90&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "檢查",
+      "authored_pinyin": "jiǎnchá",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%AA%A2%E6%9F%A5&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "聯絡",
+      "authored_pinyin": "liánluò",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%81%AF%E7%B5%A1&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "訊息",
+      "authored_pinyin": "xùnxí",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%A8%8A%E6%81%AF&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "旅行",
+      "authored_pinyin": "lǚxíng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%97%85%E8%A1%8C&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "旅行",
+          "pinyin": "lǚxíng",
+          "tbcl_level": "第2級"
+        },
+        {
+          "headword": "旅行",
+          "pinyin": "lǚxíng",
+          "tbcl_level": "第2級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "旅館",
+      "authored_pinyin": "lǚguǎn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%97%85%E9%A4%A8&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "旅館",
+          "pinyin": "lǚguǎn",
+          "tbcl_level": "第2*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "民宿",
+      "authored_pinyin": "mínsù",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%B0%91%E5%AE%BF&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "訂房",
+      "authored_pinyin": "dìngfáng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%A8%82%E6%88%BF&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "入住",
+      "authored_pinyin": "rùzhù",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%85%A5%E4%BD%8F&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "退房",
+      "authored_pinyin": "tuìfáng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%80%80%E6%88%BF&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "護照",
+      "authored_pinyin": "hùzhào",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%AD%B7%E7%85%A7&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "行李",
+      "authored_pinyin": "xínglǐ",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%A1%8C%E6%9D%8E&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "行李",
+          "pinyin": "xínglǐ",
+          "tbcl_level": "第3級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "雙人房",
+      "authored_pinyin": "shuāngrénfáng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%9B%99%E4%BA%BA%E6%88%BF&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "單人房",
+      "authored_pinyin": "dānrénfáng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%96%AE%E4%BA%BA%E6%88%BF&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "景點",
+      "authored_pinyin": "jǐngdiǎn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%99%AF%E9%BB%9E&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "門票",
+      "authored_pinyin": "ménpiào",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%96%80%E7%A5%A8&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "門票",
+          "pinyin": "ménpiào",
+          "tbcl_level": "第2*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "導覽",
+      "authored_pinyin": "dǎolǎn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%B0%8E%E8%A6%BD&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "拍照",
+      "authored_pinyin": "pāizhào",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%8B%8D%E7%85%A7&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "拍照",
+          "pinyin": "pāizhào",
+          "tbcl_level": "第3級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "風景",
+      "authored_pinyin": "fēngjǐng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%A2%A8%E6%99%AF&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "風景",
+          "pinyin": "fēngjǐng",
+          "tbcl_level": "第2*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "海邊",
+      "authored_pinyin": "hǎibiān",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%B5%B7%E9%82%8A&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "爬山",
+      "authored_pinyin": "páshān",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%88%AC%E5%B1%B1&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "爬山",
+          "pinyin": "páshān",
+          "tbcl_level": "第3級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "出發",
+      "authored_pinyin": "chūfā",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%87%BA%E7%99%BC&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "抵達",
+      "authored_pinyin": "dǐdá",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%8A%B5%E9%81%94&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "紀念品",
+      "authored_pinyin": "jìniànpǐn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%B4%80%E5%BF%B5%E5%93%81&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "邀請",
+      "authored_pinyin": "yāoqǐng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E9%82%80%E8%AB%8B&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "聚餐",
+      "authored_pinyin": "jùcān",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%81%9A%E9%A4%90&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "約會",
+      "authored_pinyin": "yuēhuì",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%B4%84%E6%9C%83&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "約會",
+          "pinyin": "yuēhuì",
+          "tbcl_level": "第3*級"
+        },
+        {
+          "headword": "約會",
+          "pinyin": "yuēhuì",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "生日",
+      "authored_pinyin": "shēngrì",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%94%9F%E6%97%A5&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "生日",
+          "pinyin": "shēngrì",
+          "tbcl_level": "第1*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "禮物",
+      "authored_pinyin": "lǐwù",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%A6%AE%E7%89%A9&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "禮物",
+          "pinyin": "lǐwù",
+          "tbcl_level": "第3級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "祝福",
+      "authored_pinyin": "zhùfú",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E7%A5%9D%E7%A6%8F&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "恭喜",
+      "authored_pinyin": "gōngxǐ",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%81%AD%E5%96%9C&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "參加",
+      "authored_pinyin": "cānjiā",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%8F%83%E5%8A%A0&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "參加",
+          "pinyin": "cānjiā",
+          "tbcl_level": "第2級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "活動",
+      "authored_pinyin": "huódòng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%B4%BB%E5%8B%95&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "活動",
+          "pinyin": "huódòng",
+          "tbcl_level": "第2級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "聊天",
+      "authored_pinyin": "liáotiān",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E8%81%8A%E5%A4%A9&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "聊天/聊",
+          "pinyin": "liáotiān",
+          "tbcl_level": "第2級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "介紹",
+      "authored_pinyin": "jièshào",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E4%BB%8B%E7%B4%B9&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "介紹",
+          "pinyin": "jièshào",
+          "tbcl_level": "第1*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "客人",
+      "authored_pinyin": "kèrén",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%AE%A2%E4%BA%BA&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "客人",
+          "pinyin": "kèrén",
+          "tbcl_level": "第2級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "主人",
+      "authored_pinyin": "zhǔrén",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E4%B8%BB%E4%BA%BA&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "主人",
+          "pinyin": "zhǔrén",
+          "tbcl_level": "第3*級"
+        },
+        {
+          "headword": "主人",
+          "pinyin": "zhǔrén",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "打擾",
+      "authored_pinyin": "dǎrǎo",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%89%93%E6%93%BE&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "抱歉",
+      "authored_pinyin": "bàoqiàn",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%8A%B1%E6%AD%89&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "可惜",
+      "authored_pinyin": "kěxí",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%8F%AF%E6%83%9C&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "可惜",
+          "pinyin": "kěxí",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "下次",
+      "authored_pinyin": "xià cì",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E4%B8%8B%E6%AC%A1&num=50&page=1&deng_ji=all",
+      "matches": [],
+      "reading_matches": false
+    },
+    {
+      "hanzi": "決定",
+      "authored_pinyin": "juédìng",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E6%B1%BA%E5%AE%9A&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "決定",
+          "pinyin": "juédìng",
+          "tbcl_level": "第2級"
+        },
+        {
+          "headword": "決定",
+          "pinyin": "juédìng",
+          "tbcl_level": "第2級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "建議",
+      "authored_pinyin": "jiànyì",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%BB%BA%E8%AD%B0&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "建議",
+          "pinyin": "jiànyì",
+          "tbcl_level": "第3*級"
+        },
+        {
+          "headword": "建議",
+          "pinyin": "jiànyì",
+          "tbcl_level": "第3*級"
+        }
+      ],
+      "reading_matches": true
+    },
+    {
+      "hanzi": "同意",
+      "authored_pinyin": "tóngyì",
+      "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=%E5%90%8C%E6%84%8F&num=50&page=1&deng_ji=all",
+      "matches": [
+        {
+          "headword": "同意",
+          "pinyin": "tóngyì",
+          "tbcl_level": "第3級"
+        }
+      ],
+      "reading_matches": true
+    }
+  ]
+}

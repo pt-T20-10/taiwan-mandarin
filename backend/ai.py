@@ -13,12 +13,11 @@ from collections import OrderedDict
 from pathlib import Path
 import httpx
 from .content import ROOT
-from . import neural_tts
 
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
 class LocalAI:
-    def __init__(self):
+    def __init__(self, config_path=None):
         self.process = None
         self.lock = asyncio.Lock()
         self.active = {}
@@ -28,17 +27,26 @@ class LocalAI:
         self.tts_lock = asyncio.Lock()
         self.tts_cache = OrderedDict()
         self.key = secrets.token_urlsafe(32)
-        self.config = {'model': 'Qwen3-1.7B-Q4_K_M.gguf', 'runtime': 'cpu', 'asr_model':'ggml-base.bin'}
-        config_path = ROOT / 'models/active.json'
+        self.config = {'model': 'Qwen3-4B-Q4_K_M.gguf', 'runtime': 'cpu', 'asr_model':'ggml-base.bin'}
+        config_path = Path(config_path) if config_path is not None else ROOT / 'models/active.json'
         if config_path.exists():
             try:
                 config=json.loads(config_path.read_text(encoding='utf-8'))
-                if config.get('model') in ('Qwen3-1.7B-Q4_K_M.gguf','Qwen3-4B-Q4_K_M.gguf') and config.get('runtime') in ('cpu','cuda'):
-                    self.config.update({key:config[key] for key in ('model','runtime')})
+                if not isinstance(config,dict):raise ValueError('Expected object')
+                if config.get('model') in ('Qwen3-1.7B-Q4_K_M.gguf','Qwen3-1.7B-Q8_0.gguf','Qwen3-4B-Q4_K_M.gguf') and config.get('runtime') in ('cpu','cuda'):
+                    self.config['runtime']=config['runtime']
+                else:self.error='Cấu hình model không hợp lệ; dùng Qwen 4B/CPU. Hãy kiểm tra Cài đặt.'
                 if config.get('asr_model') in ('ggml-base.bin','ggml-small.bin'):
                     self.config['asr_model']=config['asr_model']
+                if str(config.get('model','')).startswith('Qwen3-1.7B'):
+                    backup=config_path.with_name(config_path.stem+'.before-v6.json')
+                    if not backup.exists():
+                        with backup.open('xb') as handle:handle.write(config_path.read_bytes())
+                    temp=config_path.with_suffix('.tmp');temp.write_text(json.dumps(self.config),encoding='utf-8');temp.replace(config_path)
+                    self.error='Đã chuyển cấu hình Qwen 1.7B cũ sang 4B, giữ lựa chọn CPU/CUDA và ASR hợp lệ.'
             except (ValueError,TypeError):
-                self.error='Cấu hình AI hỏng; đã dùng cấu hình CPU mặc định.'
+                self.error='Cấu hình AI hỏng; đã dùng Qwen 4B/CPU mặc định. Hãy kiểm tra Cài đặt.'
+        else:self.error='Chưa có cấu hình AI; dùng Qwen 4B/CPU mặc định.'
 
     def paths(self):
         folder = 'llama-cuda' if self.config['runtime'] == 'cuda' else 'llama'
@@ -47,10 +55,10 @@ class LocalAI:
     def status(self):
         ll, lm, wh, wm = self.paths()
         return {'llm_installed': ll.exists() and lm.exists(), 'llm_running': self.process is not None and self.process.poll() is None,
-                'asr_installed': wh.exists() and wm.exists(), 'tts_voices': self.voices, 'neural_voices': neural_tts.voices(), 'error': self.error,
+                'asr_installed': wh.exists() and wm.exists(), 'tts_voices': self.voices, 'neural_voices': [], 'error': self.error,
                 'model': self.config['model'].removesuffix('.gguf') + ' · ' + self.config['runtime'].upper(), 'asr': 'Whisper '+self.config['asr_model'].removeprefix('ggml-').removesuffix('.bin')+' đa ngôn ngữ (CPU)', 'quality': 'Chưa đạt chất lượng gia sư: đã phát hiện lỗi Pinyin/dịch và lẫn Giản thể trong thử nghiệm.', 'config': self.config,
                 'available_asr_models':[name for name in ('ggml-base.bin','ggml-small.bin') if (ROOT/'models'/name).exists()],
-                'available_models':[name for name in ('Qwen3-1.7B-Q4_K_M.gguf','Qwen3-4B-Q4_K_M.gguf') if (ROOT/'models'/name).exists()],
+                'available_models':[name for name in ('Qwen3-4B-Q4_K_M.gguf',) if (ROOT/'models'/name).exists()],
                 'cuda_installed': (ROOT/'runtime/llama-cuda/llama-server.exe').exists()}
 
     async def start(self):
@@ -208,10 +216,7 @@ class LocalAI:
         if rate not in (-2, -1, 0, 1):
             raise ValueError('Nhịp đọc không hợp lệ')
         if voice and voice.startswith('neural:'):
-            if voice not in neural_tts.VOICES:
-                raise ValueError('Giọng neural không hợp lệ. Hãy chọn lại giọng đọc.')
-            if not neural_tts.available():
-                raise RuntimeError('Chưa cài đủ giọng Kokoro offline.')
+            raise ValueError('Giọng neural đã được gỡ. Hãy chọn giọng Windows zh-TW.')
         elif voice and voice not in self.voices:
             raise ValueError('Giọng zh-TW đã chọn không có trên máy. Hãy chọn lại trong Cài đặt.')
         key = (text, voice or (self.voices[0] if self.voices else None), rate)
@@ -219,10 +224,7 @@ class LocalAI:
             if key in self.tts_cache:
                 self.tts_cache.move_to_end(key)
                 return self.tts_cache[key]
-            if voice and voice.startswith('neural:'):
-                result = await neural_tts.synthesize(text, voice, rate)
-            else:
-                result = await self.synthesize_windows(text, voice, rate)
+            result = await self.synthesize_windows(text, voice, rate)
             # Only a bounded RAM cache; user text/audio is never persisted here.
             if len(result) <= 16_000_000:
                 self.tts_cache[key] = result

@@ -15,7 +15,7 @@ from backend.ai import ai
 
 HEADERS={'X-Mandarin-Client':'local-ui'}
 
-def test_packaged_character_and_audio_assets_are_complete():
+def test_packaged_characters_and_visual_pinyin_are_complete():
     root=Path(__file__).resolve().parents[1];content=bundled()['content']
     manifest=json.loads((root/'public/learning/manifest.json').read_text(encoding='utf-8'))
     actual={p.relative_to(root/'public/learning').as_posix() for p in (root/'public/learning').rglob('*') if p.is_file() and p.name!='manifest.json'}
@@ -24,7 +24,7 @@ def test_packaged_character_and_audio_assets_are_complete():
         data=(root/'public/learning'/file['path']).read_bytes()
         assert len(data)==file['bytes'] and hashlib.sha256(data).hexdigest()==file['sha256']
     characters=set(''.join(w['hanzi'] for u in content['units'] for w in u['words']))
-    assert len(characters)==294
+    assert len(characters)==424
     for char in characters:
         data=json.loads((root/f'public/learning/characters/{ord(char)}.json').read_text(encoding='utf-8'))
         assert data['character']==char and data['radical']
@@ -35,20 +35,15 @@ def test_packaged_character_and_audio_assets_are_complete():
             pending-=1
             pending+=3 if part in '⿲⿳' else 2 if part in '⿰⿱⿴⿵⿶⿷⿸⿹⿺⿻' else 0
         assert not data['decomposition'] or pending==0,(char,data['decomposition'])
-        assert data['copyright'] and '2026-09-25' in data['modification']
+        assert data['copyright'] and '2026-09-' in data['modification']
         for stroke in data['strokes']:
             assert stroke['outline'] and len(stroke['median'])>1
             assert all(math.isfinite(v) for v in stroke['matrix'])
     catalog=json.loads((root/'public/learning/pinyin/catalog.json').read_text(encoding='utf-8'))
-    for row in catalog:
-        for sample in row['tones'].values():
-            if sample:
-                path=root/'public'/sample['path'].lstrip('/');data=path.read_bytes()
-                assert len(data)==sample['bytes'] and hashlib.sha256(data).hexdigest()==sample['sha256']
-                assert data[:3]==b'ID3' or data[0]==255
-    files=list((root/'public/learning/pinyin/moe').glob('*.WAV'));assert len(files)==37
-    for file in files:
-        with wave.open(str(file)) as wav:assert wav.getnframes()>0 and wav.getframerate()>0
+    assert len(catalog)==406
+    assert all(set(row)=={'base','initial','final'} for row in catalog)
+    assert not list((root/'public/learning/pinyin').rglob('*.WAV'))
+    assert not list((root/'public/learning/pinyin').rglob('*.mp3'))
 
 @pytest.fixture
 def client(tmp_path,monkeypatch):
@@ -242,4 +237,4 @@ def test_bulk_import_atomic_and_invalid_backup_rejected(client):
 def test_package_cannot_remove_stable_ids(client):
     p=bundled()['content'];p['version']+=1;p['units']=p['units'][:-1]
     assert client.post('/api/packages',json=envelope(p)).status_code==422
-    assert len(client.get('/api/content').json()['units'])==12
+    assert len(client.get('/api/content').json()['units'])==18

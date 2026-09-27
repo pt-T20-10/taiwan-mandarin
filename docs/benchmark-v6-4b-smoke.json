@@ -1,0 +1,35 @@
+{
+  "note": "Two synthetic smoke requests, not language quality certification",
+  "samples": [
+    {
+      "runtime": "cpu",
+      "elapsed_ms": 34706,
+      "result": {
+        "hanzi": "好啊！我們可以一起練習中文。",
+        "pinyin": "Hǎo ā! Wǒmen kěyǐ yīqǐ liànxisī zhōngwén.",
+        "vi": "Tốt lắm! Chúng ta có thể cùng nhau luyện tập tiếng Trung. ",
+        "feedback": "",
+        "elapsed_ms": 12531,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn.",
+        "annotation_source": "AI tạo, chưa đối chiếu",
+        "quality_warnings": []
+      }
+    },
+    {
+      "runtime": "cuda",
+      "elapsed_ms": 9409,
+      "result": {
+        "hanzi": "好啊！我們可以一起練習中文。",
+        "pinyin": "Hǎo ā! Wǒmen kěyǐ yīqǐ liànxisī zhōngwén.",
+        "vi": "Tốt lắm! Chúng ta có thể cùng tập trung văn. ",
+        "feedback": "",
+        "elapsed_ms": 3915,
+        "generated": true,
+        "quality_notice": "AI thử nghiệm; Pinyin/dịch/góp ý chưa đối chiếu. Không dùng làm đáp án chuẩn.",
+        "annotation_source": "AI tạo, chưa đối chiếu",
+        "quality_warnings": []
+      }
+    }
+  ]
+}

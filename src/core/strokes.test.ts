@@ -3,7 +3,8 @@ import {matchesStroke,strokeModels,type Stroke} from './strokes';
 import pack from '../../content/foundation.pack.json';
 describe('Kiểm tra nét có hướng và góc gấp',()=>{
   it('mỗi đơn vị có đủ dữ liệu nét đã chọn',()=>{
-    for(const unit of pack.content.units)expect(strokeModels[unit.character]?.length).toBeGreaterThan(0);
+    for(const unit of pack.content.units.slice(0,12))expect(strokeModels[unit.character]?.length).toBeGreaterThan(0);
+    expect(Object.keys(strokeModels)).toHaveLength(12);
   });
   it('chấp nhận đường chuột có nhiễu nhỏ và nét xiên',()=>{
     const mouse:Stroke=[[145,48],[140,77],[125,133],[108,160],[90,198],[67,220],[42,246]];

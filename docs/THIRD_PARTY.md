@@ -1,5 +1,10 @@
 # Nguồn và giấy phép
 
+## Thay đổi v6 — 27/09/2026
+
+Qwen 1.7B và Kokoro/sherpa-tts đã gỡ. Giữ giấy phép neural trong `docs/licenses/neural-tts/`, hash model đã gỡ ở MODELS-RETIRED.json và benchmark lịch sử; các dòng 1.7B dưới đây chỉ để truy vết. Qwen 4B Apache-2.0 cùng Whisper base/small và runtime CPU/CUDA tiếp tục dùng. Animation 424 chữ giữ APL/LGPL/Unihan; MOE chỉ đối chiếu. WAV MOE/MP3 Pinyin đã gỡ, thông báo CC BY/Unlicense vẫn giữ. Xem [ATTRIBUTION](../public/learning/ATTRIBUTION.md) về nguồn từng loại và [RELEASE-V6](RELEASE-V6.md) về giới hạn.
+
+
 Không có CDN hoặc tài sản web từ xa trong phiên học. Các URL dưới đây dành cho cài đặt/đối chiếu khi có mạng.
 
 | Thành phần | Nguồn | Điều kiện |

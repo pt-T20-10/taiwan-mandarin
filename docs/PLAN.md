@@ -1,5 +1,7 @@
 # Kế hoạch ứng dụng tự học Hoa ngữ Đài Loan
 
+> Cập nhật phạm vi 27/09/2026: kế hoạch v6 đã duyệt thay lựa chọn model/giọng cũ bên dưới. Chỉ Qwen3-4B-Q4_K_M, CPU/CUDA, Whisper base/small; zh-TW local, không Kokoro/audio mẫu Pinyin. Thêm 6 chủ đề A2 định hướng (24 bài/120 từ/12 ngữ pháp), tổng 18 chủ đề/72 bài/360 từ/36 ngữ pháp và animation 424 chữ. Giữ ID, dữ liệu, schema, offline và ngân sách 10 GB; B2 chưa hoàn thành. Trạng thái nghiệm thu ở TASKS/RELEASE-V6, không suy từ tài liệu kế hoạch gốc.
+
 Ngày lập: 23/09/2026. Phiên bản: 1.0 — kế hoạch trước triển khai.
 
 Tài liệu này xác định sản phẩm, thứ tự xây dựng và cách chuẩn bị VS Code/Codex. Chưa phải prompt yêu cầu xây toàn bộ ứng dụng, chưa có mã ứng dụng và chưa đo hiệu năng trên máy người dùng. Các công nghệ/model là lựa chọn triển khai dự kiến, cần xác nhận bằng thử nghiệm ở giai đoạn đầu.

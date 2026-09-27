@@ -15,7 +15,7 @@ PROMPTS=['我要一杯熱茶，謝謝。','我家有四個人。你呢？','老�
 def run():
     parser=argparse.ArgumentParser();parser.add_argument('--large',action='store_true');args=parser.parse_args()
     all_results=[]
-    model='Qwen3-4B-Q4_K_M.gguf' if args.large else 'Qwen3-1.7B-Q4_K_M.gguf'
+    model='Qwen3-4B-Q4_K_M.gguf'
     destination=ROOT/'docs'/('benchmark-4b-comparison.json' if args.large else 'benchmark-runtime-comparison.json')
     for folder,ngl in [('llama','0'),('llama-cuda','99')]:
         log=(ROOT/'data'/f'{folder}-compare.log').open('wb')

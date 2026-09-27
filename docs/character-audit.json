@@ -97,6 +97,22 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "主",
+    "model_count": 5,
+    "moe_count": 5,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_cost": 0.234,
+    "variant": "Taiwan",
+    "moe_radical": "丶",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "九",
     "model_count": 2,
     "moe_count": 2,
@@ -140,6 +156,25 @@
       1
     ],
     "max_cost": 0.107,
+    "variant": "Taiwan",
+    "moe_radical": "亅",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "事",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.169,
     "variant": "Taiwan",
     "moe_radical": "亅",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -216,6 +251,21 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "介",
+    "model_count": 4,
+    "moe_count": 4,
+    "order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "max_cost": 0.282,
+    "variant": "Taiwan",
+    "moe_radical": "人",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "他",
     "model_count": 5,
     "moe_count": 5,
@@ -227,6 +277,22 @@
       4
     ],
     "max_cost": 0.187,
+    "variant": "Taiwan",
+    "moe_radical": "人",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "付",
+    "model_count": 5,
+    "moe_count": 5,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_cost": 0.225,
     "variant": "Taiwan",
     "moe_radical": "人",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -376,6 +442,26 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "保",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.367,
+    "variant": "Taiwan",
+    "moe_radical": "人",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "信",
     "model_count": 9,
     "moe_count": 9,
@@ -391,6 +477,27 @@
       8
     ],
     "max_cost": 0.183,
+    "variant": "Taiwan",
+    "moe_radical": "人",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "修",
+    "model_count": 10,
+    "moe_count": 10,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "max_cost": 0.235,
     "variant": "Taiwan",
     "moe_radical": "人",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -480,6 +587,50 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "假",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.155,
+    "variant": "Taiwan",
+    "moe_radical": "人",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "健",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.209,
+    "variant": "Taiwan",
+    "moe_radical": "人",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "備",
     "model_count": 12,
     "moe_count": 12,
@@ -532,6 +683,19 @@
     "max_cost": 0.225,
     "variant": "Taiwan",
     "moe_radical": "儿",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "入",
+    "model_count": 2,
+    "moe_count": 2,
+    "order": [
+      0,
+      1
+    ],
+    "max_cost": 0.184,
+    "variant": "Taiwan",
+    "moe_radical": "入",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -597,6 +761,25 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "具",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.174,
+    "variant": "Taiwan",
+    "moe_radical": "八",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "再",
     "model_count": 6,
     "moe_count": 6,
@@ -611,6 +794,43 @@
     "max_cost": 0.183,
     "variant": "Taiwan",
     "moe_radical": "冂",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "冒",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.258,
+    "variant": "Taiwan",
+    "moe_radical": "冂",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "冰",
+    "model_count": 6,
+    "moe_count": 6,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "max_cost": 0.207,
+    "variant": "Taiwan",
+    "moe_radical": "冫",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -629,6 +849,22 @@
     "max_cost": 0.208,
     "variant": "Taiwan",
     "moe_radical": "冫",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "出",
+    "model_count": 5,
+    "moe_count": 5,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_cost": 0.396,
+    "variant": "Taiwan",
+    "moe_radical": "凵",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -704,6 +940,22 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "加",
+    "model_count": 5,
+    "moe_count": 5,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_cost": 0.153,
+    "variant": "Taiwan",
+    "moe_radical": "力",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "動",
     "model_count": 11,
     "moe_count": 11,
@@ -745,6 +997,22 @@
     "max_cost": 0.15,
     "variant": "Taiwan",
     "moe_radical": "力",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "包",
+    "model_count": 5,
+    "moe_count": 5,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_cost": 0.237,
+    "variant": "Taiwan",
+    "moe_radical": "勹",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -828,6 +1096,23 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "印",
+    "model_count": 6,
+    "moe_count": 6,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "max_cost": 0.277,
+    "variant": "Taiwan",
+    "moe_radical": "卩",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "去",
     "model_count": 5,
     "moe_count": 5,
@@ -844,6 +1129,28 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "參",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.205,
+    "variant": "Taiwan",
+    "moe_radical": "厶",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "友",
     "model_count": 4,
     "moe_count": 4,
@@ -854,6 +1161,25 @@
       3
     ],
     "max_cost": 0.234,
+    "variant": "Taiwan",
+    "moe_radical": "又",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "取",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.198,
     "variant": "Taiwan",
     "moe_radical": "又",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -923,6 +1249,22 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "司",
+    "model_count": 5,
+    "moe_count": 5,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_cost": 0.205,
+    "variant": "Taiwan",
+    "moe_radical": "口",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "吃",
     "model_count": 6,
     "moe_count": 6,
@@ -938,6 +1280,23 @@
     "variant": "project-adapted",
     "moe_radical": "口",
     "structure_source": "project visual IDS; radical checked against MOE"
+  },
+  {
+    "character": "合",
+    "model_count": 6,
+    "moe_count": 6,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "max_cost": 0.176,
+    "variant": "Taiwan",
+    "moe_radical": "口",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
     "character": "同",
@@ -1006,6 +1365,46 @@
       7
     ],
     "max_cost": 0.237,
+    "variant": "Taiwan",
+    "moe_radical": "口",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "咳",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.271,
+    "variant": "project-adapted",
+    "moe_radical": "口",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "品",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.253,
     "variant": "Taiwan",
     "moe_radical": "口",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -1119,6 +1518,29 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "喉",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.214,
+    "variant": "project-adapted",
+    "moe_radical": "口",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "喜",
     "model_count": 12,
     "moe_count": 12,
@@ -1186,6 +1608,92 @@
     "variant": "Taiwan",
     "moe_radical": "口",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "嗽",
+    "model_count": 14,
+    "moe_count": 14,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "max_cost": 0.286,
+    "variant": "project-adapted",
+    "moe_radical": "口",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "嚨",
+    "model_count": 19,
+    "moe_count": 19,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "max_cost": 0.623,
+    "variant": "project-adapted",
+    "moe_radical": "口",
+    "structure_source": "project visual IDS; radical checked against MOE"
+  },
+  {
+    "character": "嚴",
+    "model_count": 20,
+    "moe_count": 20,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19
+    ],
+    "max_cost": 0.25,
+    "variant": "project-adapted",
+    "moe_radical": "口",
+    "structure_source": "project visual IDS; radical checked against MOE"
   },
   {
     "character": "四",
@@ -1297,6 +1805,24 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "圾",
+    "model_count": 7,
+    "moe_count": 7,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "max_cost": 0.449,
+    "variant": "project-adapted",
+    "moe_radical": "土",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "址",
     "model_count": 7,
     "moe_count": 7,
@@ -1329,6 +1855,25 @@
     ],
     "max_cost": 0.252,
     "variant": "Taiwan",
+    "moe_radical": "土",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "垃",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.442,
+    "variant": "project-adapted",
     "moe_radical": "土",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
@@ -1377,6 +1922,74 @@
     "max_cost": 0.152,
     "variant": "Taiwan",
     "moe_radical": "土",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "填",
+    "model_count": 13,
+    "moe_count": 13,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "max_cost": 0.146,
+    "variant": "project-adapted",
+    "moe_radical": "土",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "壞",
+    "model_count": 19,
+    "moe_count": 19,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "max_cost": 0.16,
+    "variant": "Taiwan",
+    "moe_radical": "土",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "士",
+    "model_count": 3,
+    "moe_count": 3,
+    "order": [
+      0,
+      1,
+      2
+    ],
+    "max_cost": 0.079,
+    "variant": "project-adapted",
+    "moe_radical": "士",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -1436,6 +2049,27 @@
       3
     ],
     "max_cost": 0.151,
+    "variant": "Taiwan",
+    "moe_radical": "大",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "套",
+    "model_count": 10,
+    "moe_count": 10,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "max_cost": 0.195,
     "variant": "Taiwan",
     "moe_radical": "大",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -1667,6 +2301,43 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "完",
+    "model_count": 7,
+    "moe_count": 7,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "max_cost": 0.223,
+    "variant": "Taiwan",
+    "moe_radical": "宀",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "定",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.216,
+    "variant": "Taiwan",
+    "moe_radical": "宀",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "宜",
     "model_count": 8,
     "moe_count": 8,
@@ -1817,6 +2488,26 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "封",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.259,
+    "variant": "Taiwan",
+    "moe_radical": "寸",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "對",
     "model_count": 14,
     "moe_count": 14,
@@ -1837,6 +2528,33 @@
       13
     ],
     "max_cost": 0.219,
+    "variant": "Taiwan",
+    "moe_radical": "寸",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "導",
+    "model_count": 16,
+    "moe_count": 16,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "max_cost": 0.245,
     "variant": "Taiwan",
     "moe_radical": "寸",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -1887,6 +2605,66 @@
     "variant": "project-adapted",
     "moe_radical": "尸",
     "structure_source": "project visual IDS; radical checked against MOE"
+  },
+  {
+    "character": "屋",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.193,
+    "variant": "Taiwan",
+    "moe_radical": "尸",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "層",
+    "model_count": 15,
+    "moe_count": 15,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "max_cost": 0.247,
+    "variant": "Taiwan",
+    "moe_radical": "尸",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "山",
+    "model_count": 3,
+    "moe_count": 3,
+    "order": [
+      0,
+      1,
+      2
+    ],
+    "max_cost": 0.299,
+    "variant": "Taiwan",
+    "moe_radical": "山",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
     "character": "工",
@@ -2106,6 +2884,26 @@
     "structure_source": "project visual IDS; radical checked against MOE"
   },
   {
+    "character": "建",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.195,
+    "variant": "Taiwan",
+    "moe_radical": "廴",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "弟",
     "model_count": 7,
     "moe_count": 7,
@@ -2187,6 +2985,25 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "念",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.248,
+    "variant": "Taiwan",
+    "moe_radical": "心",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "怎",
     "model_count": 9,
     "moe_count": 9,
@@ -2223,6 +3040,27 @@
     ],
     "max_cost": 0.168,
     "variant": "Taiwan",
+    "moe_radical": "心",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "恭",
+    "model_count": 10,
+    "moe_count": 10,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "max_cost": 0.32,
+    "variant": "project-adapted",
     "moe_radical": "心",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
@@ -2292,6 +3130,28 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "惜",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      2,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.246,
+    "variant": "project-adapted",
+    "moe_radical": "心",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "意",
     "model_count": 13,
     "moe_count": 13,
@@ -2311,6 +3171,30 @@
       12
     ],
     "max_cost": 0.146,
+    "variant": "Taiwan",
+    "moe_radical": "心",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "感",
+    "model_count": 13,
+    "moe_count": 13,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.869,
     "variant": "Taiwan",
     "moe_radical": "心",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -2365,6 +3249,23 @@
     "max_cost": 0.2,
     "variant": "Taiwan",
     "moe_radical": "心",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "成",
+    "model_count": 6,
+    "moe_count": 6,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "max_cost": 0.299,
+    "variant": "Taiwan",
+    "moe_radical": "戈",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -2454,6 +3355,22 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "打",
+    "model_count": 5,
+    "moe_count": 5,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_cost": 0.252,
+    "variant": "Taiwan",
+    "moe_radical": "手",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "找",
     "model_count": 7,
     "moe_count": 7,
@@ -2467,6 +3384,82 @@
       6
     ],
     "max_cost": 0.196,
+    "variant": "Taiwan",
+    "moe_radical": "手",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "抱",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.162,
+    "variant": "project-adapted",
+    "moe_radical": "手",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "抵",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.327,
+    "variant": "project-adapted",
+    "moe_radical": "手",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "押",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.188,
+    "variant": "project-adapted",
+    "moe_radical": "手",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "拍",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.245,
     "variant": "Taiwan",
     "moe_radical": "手",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -2516,6 +3509,130 @@
     "structure_source": "project visual IDS; radical checked against MOE"
   },
   {
+    "character": "排",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.23,
+    "variant": "Taiwan",
+    "moe_radical": "手",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "掛",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.205,
+    "variant": "Taiwan",
+    "moe_radical": "手",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "搬",
+    "model_count": 13,
+    "moe_count": 13,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "max_cost": 0.134,
+    "variant": "Taiwan",
+    "moe_radical": "手",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "據",
+    "model_count": 16,
+    "moe_count": 16,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "max_cost": 0.213,
+    "variant": "Taiwan",
+    "moe_radical": "手",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "擾",
+    "model_count": 18,
+    "moe_count": 18,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "max_cost": 0.375,
+    "variant": "project-adapted",
+    "moe_radical": "手",
+    "structure_source": "project visual IDS; radical checked against MOE"
+  },
+  {
     "character": "收",
     "model_count": 6,
     "moe_count": 6,
@@ -2528,6 +3645,24 @@
       5
     ],
     "max_cost": 0.256,
+    "variant": "Taiwan",
+    "moe_radical": "攴",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "改",
+    "model_count": 7,
+    "moe_count": 7,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "max_cost": 0.289,
     "variant": "Taiwan",
     "moe_radical": "攴",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -2618,6 +3753,42 @@
     "max_cost": 0.341,
     "variant": "Taiwan",
     "moe_radical": "方",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "旅",
+    "model_count": 10,
+    "moe_count": 10,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "max_cost": 0.412,
+    "variant": "Taiwan",
+    "moe_radical": "方",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "日",
+    "model_count": 4,
+    "moe_count": 4,
+    "order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "max_cost": 0.577,
+    "variant": "Taiwan",
+    "moe_radical": "日",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -2755,6 +3926,29 @@
       10
     ],
     "max_cost": 0.201,
+    "variant": "Taiwan",
+    "moe_radical": "日",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "景",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.244,
     "variant": "Taiwan",
     "moe_radical": "日",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -2915,6 +4109,24 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "李",
+    "model_count": 7,
+    "moe_count": 7,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "max_cost": 0.246,
+    "variant": "Taiwan",
+    "moe_radical": "木",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "束",
     "model_count": 7,
     "moe_count": 7,
@@ -2990,6 +4202,26 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "查",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.289,
+    "variant": "Taiwan",
+    "moe_radical": "木",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "校",
     "model_count": 10,
     "moe_count": 10,
@@ -3011,6 +4243,27 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "格",
+    "model_count": 10,
+    "moe_count": 10,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "max_cost": 0.201,
+    "variant": "Taiwan",
+    "moe_radical": "木",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "桌",
     "model_count": 10,
     "moe_count": 10,
@@ -3027,6 +4280,28 @@
       9
     ],
     "max_cost": 0.203,
+    "variant": "Taiwan",
+    "moe_radical": "木",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "梯",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.194,
     "variant": "Taiwan",
     "moe_radical": "木",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -3105,6 +4380,32 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "樓",
+    "model_count": 15,
+    "moe_count": 15,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "max_cost": 0.185,
+    "variant": "Taiwan",
+    "moe_radical": "木",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "機",
     "model_count": 16,
     "moe_count": 16,
@@ -3129,6 +4430,128 @@
     "max_cost": 0.257,
     "variant": "Taiwan",
     "moe_radical": "木",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "檢",
+    "model_count": 17,
+    "moe_count": 17,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "max_cost": 0.232,
+    "variant": "Taiwan",
+    "moe_radical": "木",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "櫃",
+    "model_count": 18,
+    "moe_count": 18,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "max_cost": 0.225,
+    "variant": "project-adapted",
+    "moe_radical": "木",
+    "structure_source": "project visual IDS; radical checked against MOE"
+  },
+  {
+    "character": "次",
+    "model_count": 6,
+    "moe_count": 6,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "max_cost": 0.249,
+    "variant": "Taiwan",
+    "moe_radical": "欠",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "款",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.203,
+    "variant": "project-adapted",
+    "moe_radical": "欠",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "歉",
+    "model_count": 14,
+    "moe_count": 14,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "max_cost": 0.188,
+    "variant": "project-adapted",
+    "moe_radical": "欠",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -3225,6 +4648,22 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "民",
+    "model_count": 5,
+    "moe_count": 5,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_cost": 0.211,
+    "variant": "Taiwan",
+    "moe_radical": "氏",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "氣",
     "model_count": 10,
     "moe_count": 10,
@@ -3256,6 +4695,24 @@
       3
     ],
     "max_cost": 0.184,
+    "variant": "Taiwan",
+    "moe_radical": "水",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "決",
+    "model_count": 7,
+    "moe_count": 7,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "max_cost": 0.222,
     "variant": "Taiwan",
     "moe_radical": "水",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -3318,6 +4775,26 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "活",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.26,
+    "variant": "Taiwan",
+    "moe_radical": "水",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "浴",
     "model_count": 10,
     "moe_count": 10,
@@ -3337,6 +4814,27 @@
     "variant": "project-adapted",
     "moe_radical": "水",
     "structure_source": "project visual IDS; radical checked against MOE"
+  },
+  {
+    "character": "海",
+    "model_count": 10,
+    "moe_count": 10,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "max_cost": 0.169,
+    "variant": "Taiwan",
+    "moe_radical": "水",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
     "character": "淨",
@@ -3404,6 +4902,55 @@
     ],
     "max_cost": 0.196,
     "variant": "Taiwan",
+    "moe_radical": "水",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "溫",
+    "model_count": 13,
+    "moe_count": 13,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "max_cost": 0.167,
+    "variant": "Taiwan",
+    "moe_radical": "水",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "漏",
+    "model_count": 14,
+    "moe_count": 14,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "max_cost": 0.22,
+    "variant": "project-adapted",
     "moe_radical": "水",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
@@ -3506,6 +5053,30 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "照",
+    "model_count": 13,
+    "moe_count": 13,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "max_cost": 0.269,
+    "variant": "Taiwan",
+    "moe_radical": "火",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "煩",
     "model_count": 13,
     "moe_count": 13,
@@ -3527,6 +5098,78 @@
     "max_cost": 0.186,
     "variant": "Taiwan",
     "moe_radical": "火",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "熱",
+    "model_count": 15,
+    "moe_count": 15,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "max_cost": 0.195,
+    "variant": "Taiwan",
+    "moe_radical": "火",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "燒",
+    "model_count": 16,
+    "moe_count": 16,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "max_cost": 0.193,
+    "variant": "Taiwan",
+    "moe_radical": "火",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "爬",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.233,
+    "variant": "Taiwan",
+    "moe_radical": "爪",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -3564,6 +5207,46 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "物",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.245,
+    "variant": "Taiwan",
+    "moe_radical": "牛",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "班",
+    "model_count": 10,
+    "moe_count": 10,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "max_cost": 0.202,
+    "variant": "Taiwan",
+    "moe_radical": "玉",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "現",
     "model_count": 11,
     "moe_count": 11,
@@ -3581,6 +5264,28 @@
       10
     ],
     "max_cost": 0.252,
+    "variant": "Taiwan",
+    "moe_radical": "玉",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "理",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.292,
     "variant": "Taiwan",
     "moe_radical": "玉",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -3615,6 +5320,66 @@
     "max_cost": 0.262,
     "variant": "Taiwan",
     "moe_radical": "用",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "申",
+    "model_count": 5,
+    "moe_count": 5,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_cost": 0.353,
+    "variant": "project-adapted",
+    "moe_radical": "田",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "病",
+    "model_count": 10,
+    "moe_count": 10,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "max_cost": 0.248,
+    "variant": "Taiwan",
+    "moe_radical": "疒",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "痛",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.197,
+    "variant": "Taiwan",
+    "moe_radical": "疒",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -3792,6 +5557,26 @@
     "structure_source": "project visual IDS; radical checked against MOE"
   },
   {
+    "character": "祝",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.184,
+    "variant": "Taiwan",
+    "moe_radical": "示",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "票",
     "model_count": 11,
     "moe_count": 11,
@@ -3809,6 +5594,58 @@
       10
     ],
     "max_cost": 0.196,
+    "variant": "Taiwan",
+    "moe_radical": "示",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "福",
+    "model_count": 13,
+    "moe_count": 13,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "max_cost": 0.23,
+    "variant": "Taiwan",
+    "moe_radical": "示",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "禮",
+    "model_count": 17,
+    "moe_count": 17,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "max_cost": 0.238,
     "variant": "Taiwan",
     "moe_radical": "示",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -3962,6 +5799,107 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "管",
+    "model_count": 14,
+    "moe_count": 14,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "max_cost": 0.172,
+    "variant": "Taiwan",
+    "moe_radical": "竹",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "箱",
+    "model_count": 15,
+    "moe_count": 15,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "max_cost": 0.316,
+    "variant": "Taiwan",
+    "moe_radical": "竹",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "簽",
+    "model_count": 19,
+    "moe_count": 19,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "max_cost": 0.228,
+    "variant": "project-adapted",
+    "moe_radical": "竹",
+    "structure_source": "project visual IDS; radical checked against MOE"
+  },
+  {
+    "character": "紀",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.202,
+    "variant": "Taiwan",
+    "moe_radical": "糸",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "約",
     "model_count": 9,
     "moe_count": 9,
@@ -4003,6 +5941,50 @@
     "structure_source": "project visual IDS; radical checked against MOE"
   },
   {
+    "character": "累",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.339,
+    "variant": "Taiwan",
+    "moe_radical": "糸",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "紹",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.188,
+    "variant": "Taiwan",
+    "moe_radical": "糸",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "結",
     "model_count": 12,
     "moe_count": 12,
@@ -4024,6 +6006,29 @@
     "variant": "Taiwan",
     "moe_radical": "糸",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "絡",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.245,
+    "variant": "project-adapted",
+    "moe_radical": "糸",
+    "structure_source": "project visual IDS; radical checked against MOE"
   },
   {
     "character": "經",
@@ -4075,6 +6080,38 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "續",
+    "model_count": 21,
+    "moe_count": 21,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "max_cost": 0.294,
+    "variant": "Taiwan",
+    "moe_radical": "糸",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "老",
     "model_count": 6,
     "moe_count": 6,
@@ -4109,6 +6146,81 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "聊",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.18,
+    "variant": "Taiwan",
+    "moe_radical": "耳",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "聚",
+    "model_count": 14,
+    "moe_count": 14,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "max_cost": 0.481,
+    "variant": "project-adapted",
+    "moe_radical": "耳",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "聯",
+    "model_count": 17,
+    "moe_count": 17,
+    "order": [
+      0,
+      1,
+      5,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "max_cost": 0.131,
+    "variant": "Taiwan",
+    "moe_radical": "耳",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "聽",
     "model_count": 22,
     "moe_count": 22,
@@ -4139,6 +6251,24 @@
     "max_cost": 0.183,
     "variant": "Taiwan",
     "moe_radical": "耳",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "肚",
+    "model_count": 7,
+    "moe_count": 7,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "max_cost": 0.205,
+    "variant": "project-adapted",
+    "moe_radical": "肉",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -4234,6 +6364,29 @@
     "structure_source": "project visual IDS; radical checked against MOE"
   },
   {
+    "character": "舒",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.249,
+    "variant": "Taiwan",
+    "moe_radical": "舌",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "英",
     "model_count": 9,
     "moe_count": 9,
@@ -4321,6 +6474,36 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "藥",
+    "model_count": 19,
+    "moe_count": 19,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "max_cost": 0.197,
+    "variant": "Taiwan",
+    "moe_radical": "艸",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "蘋",
     "model_count": 20,
     "moe_count": 20,
@@ -4376,6 +6559,59 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "行",
+    "model_count": 6,
+    "moe_count": 6,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "max_cost": 0.203,
+    "variant": "Taiwan",
+    "moe_radical": "行",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "衣",
+    "model_count": 6,
+    "moe_count": 6,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "max_cost": 0.231,
+    "variant": "Taiwan",
+    "moe_radical": "衣",
+    "structure_source": "project visual IDS; radical checked against MOE"
+  },
+  {
+    "character": "表",
+    "model_count": 8,
+    "moe_count": 8,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max_cost": 0.18,
+    "variant": "Taiwan",
+    "moe_radical": "衣",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "袋",
     "model_count": 11,
     "moe_count": 11,
@@ -4417,6 +6653,31 @@
     ],
     "max_cost": 0.286,
     "variant": "Taiwan",
+    "moe_radical": "衣",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "裹",
+    "model_count": 14,
+    "moe_count": 14,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "max_cost": 0.162,
+    "variant": "project-adapted",
     "moe_radical": "衣",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
@@ -4490,6 +6751,58 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "覽",
+    "model_count": 21,
+    "moe_count": 21,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "max_cost": 0.365,
+    "variant": "project-adapted",
+    "moe_radical": "見",
+    "structure_source": "project visual IDS; radical checked against MOE"
+  },
+  {
+    "character": "訂",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.258,
+    "variant": "Taiwan",
+    "moe_radical": "言",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "計",
     "model_count": 9,
     "moe_count": 9,
@@ -4508,6 +6821,27 @@
     "variant": "Taiwan",
     "moe_radical": "言",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "訊",
+    "model_count": 10,
+    "moe_count": 10,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      7,
+      8
+    ],
+    "max_cost": 0.293,
+    "variant": "project-adapted",
+    "moe_radical": "言",
+    "structure_source": "project visual IDS; radical checked against MOE"
   },
   {
     "character": "討",
@@ -4529,6 +6863,29 @@
     "variant": "Taiwan",
     "moe_radical": "言",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "診",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.269,
+    "variant": "project-adapted",
+    "moe_radical": "言",
+    "structure_source": "project visual IDS; radical checked against MOE"
   },
   {
     "character": "詞",
@@ -4784,6 +7141,99 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "證",
+    "model_count": 19,
+    "moe_count": 19,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "max_cost": 0.223,
+    "variant": "Taiwan",
+    "moe_radical": "言",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "議",
+    "model_count": 20,
+    "moe_count": 20,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "max_cost": 0.26,
+    "variant": "Taiwan",
+    "moe_radical": "言",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "護",
+    "model_count": 21,
+    "moe_count": 21,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "max_cost": 0.214,
+    "variant": "Taiwan",
+    "moe_radical": "言",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "讀",
     "model_count": 22,
     "moe_count": 22,
@@ -4858,6 +7308,29 @@
       11
     ],
     "max_cost": 0.242,
+    "variant": "Taiwan",
+    "moe_radical": "貝",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "費",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.278,
     "variant": "Taiwan",
     "moe_radical": "貝",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -5071,6 +7544,24 @@
     "structure_source": "project visual IDS; radical checked against MOE"
   },
   {
+    "character": "身",
+    "model_count": 7,
+    "moe_count": 7,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "max_cost": 0.216,
+    "variant": "Taiwan",
+    "moe_radical": "身",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "車",
     "model_count": 7,
     "moe_count": 7,
@@ -5160,6 +7651,27 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "退",
+    "model_count": 10,
+    "moe_count": 10,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "max_cost": 0.282,
+    "variant": "Taiwan",
+    "moe_radical": "辵",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "這",
     "model_count": 11,
     "moe_count": 11,
@@ -5177,6 +7689,28 @@
       10
     ],
     "max_cost": 0.143,
+    "variant": "Taiwan",
+    "moe_radical": "辵",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "通",
+    "model_count": 11,
+    "moe_count": 11,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "max_cost": 0.216,
     "variant": "Taiwan",
     "moe_radical": "辵",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
@@ -5277,6 +7811,30 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "達",
+    "model_count": 13,
+    "moe_count": 13,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "max_cost": 0.24,
+    "variant": "Taiwan",
+    "moe_radical": "辵",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "遠",
     "model_count": 14,
     "moe_count": 14,
@@ -5298,6 +7856,61 @@
     ],
     "max_cost": 0.276,
     "variant": "Taiwan",
+    "moe_radical": "辵",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "遲",
+    "model_count": 16,
+    "moe_count": 16,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "max_cost": 0.258,
+    "variant": "Taiwan",
+    "moe_radical": "辵",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "邀",
+    "model_count": 17,
+    "moe_count": 17,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "max_cost": 0.907,
+    "variant": "project-adapted",
     "moe_radical": "辵",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
@@ -5427,6 +8040,49 @@
     "max_cost": 0.305,
     "variant": "Taiwan",
     "moe_radical": "酉",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "重",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.223,
+    "variant": "Taiwan",
+    "moe_radical": "里",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "量",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.251,
+    "variant": "Taiwan",
+    "moe_radical": "里",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -5643,6 +8299,104 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "陽",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.251,
+    "variant": "Taiwan",
+    "moe_radical": "阜",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "隊",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.213,
+    "variant": "Taiwan",
+    "moe_radical": "阜",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "雅",
+    "model_count": 12,
+    "moe_count": 12,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_cost": 0.221,
+    "variant": "project-adapted",
+    "moe_radical": "隹",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "雙",
+    "model_count": 18,
+    "moe_count": 18,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "max_cost": 0.207,
+    "variant": "Taiwan",
+    "moe_radical": "隹",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "零",
     "model_count": 13,
     "moe_count": 13,
@@ -5807,6 +8561,58 @@
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
+    "character": "領",
+    "model_count": 14,
+    "moe_count": 14,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "max_cost": 0.213,
+    "variant": "Taiwan",
+    "moe_radical": "頁",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "頭",
+    "model_count": 16,
+    "moe_count": 16,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "max_cost": 0.188,
+    "variant": "Taiwan",
+    "moe_radical": "頁",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
     "character": "題",
     "model_count": 18,
     "moe_count": 18,
@@ -5833,6 +8639,26 @@
     "max_cost": 0.289,
     "variant": "Taiwan",
     "moe_radical": "頁",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "風",
+    "model_count": 9,
+    "moe_count": 9,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "max_cost": 0.19,
+    "variant": "Taiwan",
+    "moe_radical": "風",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {
@@ -5930,6 +8756,40 @@
     "max_cost": 0.19,
     "variant": "Taiwan",
     "moe_radical": "食",
+    "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
+  },
+  {
+    "character": "體",
+    "model_count": 23,
+    "moe_count": 23,
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "max_cost": 0.391,
+    "variant": "Taiwan",
+    "moe_radical": "骨",
     "structure_source": "AnimCJK dictionary at ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
   },
   {

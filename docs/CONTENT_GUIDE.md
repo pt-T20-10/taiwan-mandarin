@@ -1,5 +1,17 @@
 # Quy tắc nội dung
 
+## Nội dung hiện tại v6 — 27/09/2026
+
+- 18 chủ đề, 72 bài, 360 mục từ, 36 ngữ pháp; 540 bài tập trong bài và 144 bài ngữ pháp riêng. 12 chủ đề/24 grammar cũ giữ nguyên nội dung/ID, khóa bằng hash fixture.
+- Sáu chủ đề mới: sức khỏe, thuê nhà, dịch vụ, công việc, du lịch, giao tiếp xã hội. Mỗi chủ đề 20 từ mới/4 bài/30 bài tập, hội thoại 6 lượt, đọc hiểu và đề viết. Không tạo thẻ/tiến độ trước khi học.
+- `content/a2.py` là nguồn biên soạn; `grammar_foundation.json` giữ 24 mục cũ theo ID, `grammar_details.enrich` không dựa vị trí. Mỗi grammar có ba ví dụ khác nhau, bốn bài tập và đáp án/biến thể theo ý của đề.
+- Audit 120 mục mới qua TBCL: 48 khớp từ/Pinyin, 72 chưa khớp truy vấn; báo cáo từng URL ở `a2-vocabulary-audit.json`. Giữ draft vì câu/nghĩa Việt chưa giáo viên duyệt; A2 chỉ là định hướng, không quy đổi TBCL/CEFR. 有點/得 dùng MOE; 垃圾 ghi lèsè, 得 nghĩa cần phải đọc děi.
+- Animation 424 chữ, giữ byte 294 cũ; chấm viết tay vẫn 12. Pinyin grid 406 chỉ bằng chữ, không WAV/MP3/đánh vần hoặc Latin TTS. Từ/câu dùng zh-TW local, còn cần nghe duyệt.
+- Kiểm tra đầu vào tăng 36→54 câu do ba câu/chủ đề; các câu cũ giữ thứ tự đầu, bản nháp cũ tiếp tục được. Lộ trình B2 vẫn là kế hoạch, không đánh dấu hoàn thành lô.
+
+Các mục nhắc v5/audio cũ phía dưới là lịch sử biên soạn.
+
+
 ## Phạm vi và trạng thái
 
 Gói foundation-tw v5 giữ 12 chủ đề, 48 bài, 240 mục từ, 24 điểm ngữ pháp và 360 bài tập trong bài. Tab Ngữ pháp có thêm 72 ví dụ riêng biệt và 96 bài tập, giữ ID ngữ pháp cũ. Có 5 mục từ đã đối chiếu chữ, Pinyin và nghĩa cơ bản với MOE: 先生、太太、名字、朋友、星期; xem content/source_checks.json. 235 mục còn là **bản nháp do AI hỗ trợ**, trong đó 麻煩 và 不客氣 mới đối chiếu một phần âm đọc. Tất cả ngữ pháp/bài tập/audio chưa được giáo viên duyệt. `ready` nghĩa là đủ cấu trúc để học/luyện, không phải `source-checked` hoặc đạt CEFR.
@@ -45,4 +57,4 @@ Lộ trình đối chiếu tiếp: từng mục và chữ đa âm → ghi URL/m�
 
 `content/grammar-roadmap.json` giữ snapshot 496 nhãn/cấp nguồn. `content/grammar_roadmap.py` phân nhóm biên tập thành 12 chủ điểm, 27 lô tối đa 24 mục, xếp từ cấp nguồn thấp đến cao trong từng chủ điểm và có tiên quyết không vòng lặp. Đây là định hướng biên soạn, không quy đổi TBCL sang CEFR; bộ lọc nhóm/cấp/lô áp dụng cả danh mục chờ soạn. Mỗi lô cần đủ giải thích, ít nhất 3 ví dụ và 4 bài tập mỗi mục, đáp án/biến thể, nguồn, rà ngôn ngữ trước khi chuyển thành nội dung sẵn học. Sau nền tảng tiếp tục thời–thể/bổ ngữ → so sánh/câu phức → lập luận/văn viết; đánh giá nghe/nói/đọc/viết để xác định độ phủ B2 riêng.
 
-Phiên `grammar:<id>` dùng CAS/sự kiện chống trùng, gợi ý được lưu ngay, tạm dừng lưu bản nháp. Đi hết bài luyện chỉ tính cho tab ngữ pháp; không tăng số bài trong 48 bài hoặc tự đổi lịch FSRS.
+Phiên `grammar:<id>` dùng CAS/sự kiện chống trùng, gợi ý được lưu ngay, tạm dừng lưu bản nháp. Đi hết bài luyện chỉ tính cho tab ngữ pháp; không tăng số bài trong 72 bài hoặc tự đổi lịch FSRS.

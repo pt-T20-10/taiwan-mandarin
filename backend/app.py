@@ -19,6 +19,7 @@ asr_lock = asyncio.Lock()
 @asynccontextmanager
 async def lifespan(app):
     db.init()
+    db.migrate_retired_voice()
     await ai.discover_voices()
     yield
     ai.stop()
@@ -168,7 +169,7 @@ def status():
     return {**ai.status(), 'sizes': sizes, 'budget_bytes': 10_000_000_000}
 
 class AIConfig(BaseModel):
-    model: Literal['Qwen3-1.7B-Q4_K_M.gguf','Qwen3-4B-Q4_K_M.gguf']
+    model: Literal['Qwen3-4B-Q4_K_M.gguf']
     runtime: Literal['cpu','cuda']
 
 @app.post('/api/ai/config')

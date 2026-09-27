@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Qwen3-1.7B-Q4_K_M.gguf",
+    "bytes": 1107408544,
+    "sha256": "54c0f1203a724e9f33e76916beab3bdfaffef56cf7b42a93b1bc21319fc0bf97"
+  },
+  {
+    "name": "Qwen3-1.7B-Q8_0.gguf",
+    "bytes": 1834426016,
+    "sha256": "061b54daade076b5d3362dac252678d17da8c68f07560be70818cace6590cb1a"
+  }
+]

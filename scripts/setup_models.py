@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-REVISIONS={'Qwen/Qwen3-1.7B-GGUF':'90862c4b9d2787eaed51d12237eafdfe7c5f6077','Qwen/Qwen3-4B-GGUF':'bc640142c66e1fdd12af0bd68f40445458f3869b','ggerganov/whisper.cpp':'5359861c739e955e79d9a303bcbc70fb988958b1'}
+REVISIONS={'Qwen/Qwen3-4B-GGUF':'bc640142c66e1fdd12af0bd68f40445458f3869b','ggerganov/whisper.cpp':'5359861c739e955e79d9a303bcbc70fb988958b1'}
 
 def get_json(url):
     with urllib.request.urlopen(url, timeout=60) as r:
@@ -25,7 +25,7 @@ def download(url, path, expected=None, size=None):
             return
     part = path.with_suffix(path.suffix + '.part')
     additional=max(0,size-(part.stat().st_size if part.exists() else 0)) if size else 0
-    managed=sum(f.stat().st_size for folder in ('models','runtime','data','dist','content') for f in (ROOT/folder).rglob('*') if f.is_file())
+    managed=sum(f.stat().st_size for folder in ('models','runtime','data','public','dist','content') for f in (ROOT/folder).rglob('*') if f.is_file())
     if size and managed+additional>10_000_000_000:
         raise RuntimeError('Download would exceed the 10 GB managed budget. Remove unused project download caches/models first.')
     if size and shutil.disk_usage(ROOT).free<additional+500_000_000:
@@ -75,23 +75,8 @@ def runtime(repo, tag, filename, folder):
     return {'repository': repo, 'tag': tag, 'asset': asset['name'], 'sha256': hashlib.file_digest(archive.open('rb'), 'sha256').hexdigest()}
 
 def main():
-    # CPU baseline first: avoids a driver/toolkit change and leaves VRAM free.
-    records = []
-    records.append(runtime('llama.cpp', 'b11120', 'llama-b11120-bin-win-cpu-x64.zip', 'llama'))
-    records.append(runtime('whisper.cpp', 'v1.9.2', 'whisper-bin-x64.zip', 'whisper'))
-    files = get_json('https://huggingface.co/api/models/ggerganov/whisper.cpp/tree/'+REVISIONS['ggerganov/whisper.cpp'])
-    base = next(f for f in files if f['path'] == 'ggml-base.bin')
-    download('https://huggingface.co/ggerganov/whisper.cpp/resolve/'+REVISIONS['ggerganov/whisper.cpp']+'/ggml-base.bin', ROOT / 'models/ggml-base.bin', base['lfs']['oid'], base['size'])
-    qfiles = get_json('https://huggingface.co/api/models/Qwen/Qwen3-1.7B-GGUF/tree/'+REVISIONS['Qwen/Qwen3-1.7B-GGUF'])
-    q = next(f for f in qfiles if f['path'] == 'Qwen3-1.7B-Q8_0.gguf')
-    source = ROOT / 'models/Qwen3-1.7B-Q8_0.gguf'
-    dest = ROOT / 'models/Qwen3-1.7B-Q4_K_M.gguf'
-    download('https://huggingface.co/Qwen/Qwen3-1.7B-GGUF/resolve/'+REVISIONS['Qwen/Qwen3-1.7B-GGUF']+'/Qwen3-1.7B-Q8_0.gguf', source, q['lfs']['oid'], q['size'])
-    if not dest.exists():
-        subprocess.run([str(ROOT / 'runtime/llama/llama-quantize.exe'), '--allow-requantize', str(source), str(dest), 'Q4_K_M', '6'], check=True, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
-    records += [{'model': 'Qwen3-1.7B-Q4_K_M', 'source': 'official Qwen Q8_0', 'source_sha256': q['lfs']['oid'], 'sha256': hashlib.file_digest(dest.open('rb'), 'sha256').hexdigest(), 'bytes': dest.stat().st_size, 'note': 'Requantized from Q8_0; quality needs evaluation'}, {'model':'Whisper base multilingual','sha256':base['lfs']['oid'],'bytes':base['size']}]
-    (ROOT / 'models/installed.json').write_text(json.dumps(records, indent=2), encoding='utf-8')
-    print('Setup complete. Q8 source retained for reproducibility; under 10 GB budget.', flush=True)
+    # One supported model; retain the selected installer as the single source.
+    from setup_selected import main as install_selected
+    install_selected()
 
-if __name__ == '__main__':
-    main()
+if __name__ == '__main__':main()

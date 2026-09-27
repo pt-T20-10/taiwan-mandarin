@@ -1,5 +1,7 @@
 # Giọng neural offline để so sánh — 25/09/2026
 
+> **Lịch sử — đã gỡ ngày 27/09/2026.** Kokoro, sherpa-tts, archive/cache và các lựa chọn neural đã được bỏ theo yêu cầu chỉ giọng Đài Loan. Hướng dẫn cài/nghe bên dưới không còn áp dụng. Giữ báo cáo và giấy phép để truy vết, không chạy lại installer cũ. Hiện chỉ Windows/browser zh-TW local; xem RELEASE-V6.md.
+
 Người dùng ưu tiên độ tự nhiên và đã đồng ý thêm giọng Quan thoại phổ thông có nhãn thật để so sánh. Không thay Qwen/Whisper hoặc tự đổi lựa chọn giọng đã lưu. Giọng Windows zh-TW vẫn có đủ; `auto` vẫn chỉ tự chọn zh-TW local.
 
 ## Sử dụng

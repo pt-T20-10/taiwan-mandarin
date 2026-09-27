@@ -1,5 +1,10 @@
 # Môi trường kiểm tra 23/09/2026
 
+## Trạng thái v6 — 27/09/2026
+
+Chỉ còn file Qwen3-4B-Q4_K_M.gguf; giữ CPU/CUDA và Whisper base/small, không tạo lại venv hoặc tải lại model. Xóa Kokoro/runtime riêng/archive/audio Pinyin, vẫn giữ license/benchmark lịch sử. Cấu hình hợp lệ tại máy là 4B/CUDA + Whisper small. Native Hanhan tổng hợp và hủy tiến trình thật đã qua; tính tự nhiên chưa được chứng nhận. Số đo mới khoảng 5,25 GB cho bản sử dụng; các số phía dưới là lịch sử.
+
+
 - Git root: `D:\Taiwanese App\taiwan-mandarin`; ban đầu chỉ docs/PLAN.md chưa theo dõi và .venv.
 - Git 2.45.1.windows.1; Node v24.12.0; npm 11.6.2.
 - .venv có CPython 3.14.3 AMD64, pip 25.3. Giữ nguyên môi trường của người dùng.

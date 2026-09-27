@@ -1,6 +1,6 @@
 # Đảo nhỏ — Hoa ngữ Đài Loan
 
-Ứng dụng học local cho Windows, UI tiếng Việt. **Bản đang phát triển, chưa đạt nghiệm thu Windows v1.** Gói v5 có 12 đơn vị/48 bài, 240 từ, animation 294 chữ, ghép Pinyin với audio local và tab Ngữ pháp 24 mục/96 bài tập. Phần lớn nội dung chưa giáo viên duyệt; chấm viết tay vẫn giới hạn 12 chữ. Người dùng đã xác nhận nghe câu mới, ghi âm và nghe lại offline được; ASR còn sai và giọng đọc chưa tự nhiên.
+Ứng dụng học local cho Windows, UI tiếng Việt. **Bản đang phát triển, chưa đạt nghiệm thu Windows v1.** Gói v6 có 18 chủ đề/72 bài, 360 mục từ, animation 424 chữ, grid Pinyin bằng chữ và tab Ngữ pháp 36 mục/144 bài tập riêng. Sáu chủ đề mới được biên soạn theo định hướng A2, chưa phải chứng nhận trình độ. Phần lớn nội dung chưa giáo viên duyệt; chấm viết tay vẫn giới hạn 12 chữ. Người dùng đã xác nhận nghe câu mới, ghi âm và nghe lại offline được; ASR còn sai và giọng đọc chưa tự nhiên.
 
 ## Dùng hằng ngày
 
@@ -8,7 +8,7 @@ Nhấp đúp **Start.cmd** trong thư mục này. Trình duyệt mở **http://1
 
 Tiến độ nằm trong `data/learning.sqlite3`. Tải sao lưu ở Cài đặt; phục hồi cũng tại đó. Mỗi thiết bị dùng SQLite, không phụ thuộc cache trình duyệt. Không chia sẻ thư mục data nếu có thông tin cá nhân.
 
-Trong **Học**, chọn từng chữ cạnh từ để xem nét; tổng kết có nút chuyển bài/chủ đề và giữ tiến độ cũ. Trong **Phát âm**, bấm trực tiếp grid 406 âm tiết, tìm nhanh, chọn thanh rồi nghe/đánh vần; sáu nhóm quy tắc giữ đủ ví dụ 一/不/thanh nhẹ. Mẫu âm tiết bổ sung là Quan thoại chưa xác minh vùng giọng; âm thiếu báo thiếu. Trong **Ngữ pháp**, học và lưu tiến độ riêng, xem kiến thức tiên quyết; lộ trình 27 lô B2 là kế hoạch biên soạn, chưa phải nội dung B2 hoàn thành. Xem [nguồn/giấy phép tài sản](public/learning/ATTRIBUTION.md).
+Trong **Học**, chọn từng chữ cạnh từ để xem nét; tổng kết có nút chuyển bài/chủ đề và giữ tiến độ cũ. Trong **Phát âm**, bấm trực tiếp grid 406 âm tiết, tìm nhanh, chọn thanh và xem cách ghép bằng chữ; sáu nhóm quy tắc giữ đủ ví dụ 一/不/thanh nhẹ. Đã bỏ audio âm tiết/đánh vần; ví dụ Hán tự vẫn đọc bằng zh-TW. Trong **Ngữ pháp**, học và lưu tiến độ riêng, xem kiến thức tiên quyết; lộ trình 27 lô B2 là kế hoạch biên soạn, chưa phải nội dung B2 hoàn thành. Xem [nguồn/giấy phép tài sản](public/learning/ATTRIBUTION.md).
 
 ## Cài dependency/build lại
 
@@ -43,10 +43,10 @@ Trong Cài đặt có màn hình ghi âm/nghe lại/nhận dạng, danh sách vo
 
 Chữ/flashcard/ghi chú dùng offline. Bài nghe cần giọng local đã chọn; thiếu có thể bỏ qua, không tính đạt kỹ năng. ASR không phải chấm thanh điệu. AI sinh Pinyin/dịch có thể sai và không tham gia chấm bài đóng.
 
-Đã thêm **Kokoro nữ 001, nữ 002, nam 009** neural offline để nghe so sánh. Trong Cài đặt/Phát âm, nhập cùng một câu rồi nghe thử; **Dùng giọng này** mới lưu cho các nút nghe. Đây là Quan thoại phổ thông, chưa xác minh Đài Loan; các giọng Windows vẫn giữ nguyên. Lần đầu tạo câu cần vài giây, câu lặp được cache RAM. Xem [nguồn, giấy phép, kết quả và hạn chế](docs/NEURAL_TTS.md). Gói Traditional Chinese của Windows cung cấp giọng local nhưng không tự nâng chất lượng các giọng cũ thành neural.
+Chỉ dùng giọng **Windows/browser zh-TW local**. Chọn giọng và nhịp trong Cài đặt/Phát âm, nghe thử cả câu. Kokoro và audio Pinyin đã gỡ theo lựa chọn của người dùng. Setting Kokoro cũ được backup rồi chuyển riêng voice về `auto`, giữ nhịp và nhận xét. Thiếu zh-TW thì báo thiếu và cho bỏ qua bài nghe. Gói Traditional Chinese của Windows cung cấp giọng local, không tự biến giọng cũ thành neural hoặc bảo đảm đọc tự nhiên.
 
 Nút nghe cạnh Hán tự hoặc Pinyin đọc nguyên từ/cụm/câu. Chọn giọng và nhịp trong Cài đặt hoặc mục **Phát âm**. Mục Phát âm có bài đối chiếu biến điệu, thanh nhẹ và nhịp câu; âm TTS chưa được chứng nhận phát âm chuẩn. Đã bỏ câu gợi dẫn ASR gây lặp transcript; cần thu lại câu để kiểm tra trên micro thật sau khi cập nhật.
 
-Model đang chọn: Qwen3-4B Q4_K_M trên CUDA 12.4; Whisper small đa ngôn ngữ trên CPU. Có thể chuyển LLM sang CPU hoặc ASR về base trong Cài đặt. Small sửa được một số lỗi từ trong thử nghiệm, chậm hơn và vẫn có Giản thể. Tài sản ứng dụng sau khi thêm Kokoro khoảng 9,13 GB/10 GB, gồm cả model/runtime thử nghiệm, public/dist/cache và backup; đo ngày 25/09/2026. Số đo và giới hạn chất lượng ở [BENCHMARKS](docs/BENCHMARKS.md) và [NEURAL_TTS](docs/NEURAL_TTS.md).
+Model đang chọn: Qwen3-4B Q4_K_M trên CUDA 12.4; Whisper small đa ngôn ngữ trên CPU. Có thể chuyển LLM sang CPU hoặc ASR về base trong Cài đặt. Small sửa được một số lỗi từ trong thử nghiệm, chậm hơn và vẫn có Giản thể. Đã gỡ khoảng 3,907 GB; tài sản quản lý còn khoảng 5,25 GB/10 GB, gồm models/runtime/data/public/dist/content và backup (không gồm môi trường phát triển/lịch sử Git). Giữ đúng một LLM Qwen 4B, runtime CPU/CUDA và Whisper small/base. Xóa model nhỏ chỉ giảm ổ đĩa, không giảm RAM/VRAM của 4B. Hash model cũ chuyển sang [MODELS-RETIRED](docs/MODELS-RETIRED.json); benchmark cũ giữ nguyên. Xem [kết quả và giới hạn](docs/RELEASE-V6.md).
 
 Xem [TASKS](docs/TASKS.md), [ENVIRONMENT](docs/ENVIRONMENT.md), [DECISIONS](docs/DECISIONS.md), [CONTENT_GUIDE](docs/CONTENT_GUIDE.md) và [PLAN](docs/PLAN.md) để tiếp tục.

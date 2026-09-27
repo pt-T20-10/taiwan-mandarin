@@ -14,7 +14,8 @@ def main():
         download(f'https://huggingface.co/{repo}/resolve/{revision}/{filename}',ROOT/'models'/filename,file['lfs']['oid'],file['size'])
         records.append({'repository':repo,'file':filename,'bytes':file['size'],'sha256':file['lfs']['oid']})
     (ROOT/'models/selected-installed.json').write_text(json.dumps(records,indent=2),encoding='utf-8')
-    (ROOT/'models/active.json').write_text(json.dumps({'model':'Qwen3-4B-Q4_K_M.gguf','runtime':'cuda','asr_model':'ggml-small.bin'}),encoding='utf-8')
+    if not (ROOT/'models/active.json').exists():
+        (ROOT/'models/active.json').write_text(json.dumps({'model':'Qwen3-4B-Q4_K_M.gguf','runtime':'cpu','asr_model':'ggml-small.bin'}),encoding='utf-8')
     print('Selected candidate installed. If CUDA fails, select CPU in the application. Language quality remains experimental.')
 
 if __name__=='__main__':main()

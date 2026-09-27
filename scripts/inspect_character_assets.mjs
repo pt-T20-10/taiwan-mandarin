@@ -4,7 +4,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {chromium} from '@playwright/test';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const chars='吃址宿寄局廁廚悠戶捷授浴灣研碼究窗素臺舍袋踏辣常';
+const chars=process.argv[2]||'吃址宿寄局廁廚悠戶捷授浴灣研碼究窗素臺舍袋踏辣常';
 const browser=await chromium.launch({channel:'msedge',headless:true});
 try {
  const page=await browser.newPage({viewport:{width:1400,height:1000}});

@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from content.seeds import UNITS, READING
+from content.a2 import UNITS as A2_UNITS, READING as A2_READING
 from content.grammar_details import enrich
 from content.grammar_roadmap import organize
 from backend.content import Content, envelope
@@ -24,8 +25,9 @@ def sentence_tokens(sentence, words):
 def build(limit=None):
     roadmap,batches=organize(json.loads((ROOT/'content/grammar-roadmap.json').read_text(encoding='utf-8')))
     source_checks=json.loads((ROOT/'content/source_checks.json').read_text(encoding='utf-8'))['words']
+    a2_audit={r['hanzi']:r for r in json.loads((ROOT/'docs/a2-vocabulary-audit.json').read_text(encoding='utf-8'))['words']}
     units = []
-    for slug, title, description, character, rows, grammar_rows, dialogue_rows, writing in UNITS[:limit]:
+    for slug, title, description, character, rows, grammar_rows, dialogue_rows, writing in (UNITS+A2_UNITS)[:limit]:
         uid = 'tw.' + slug
         words = []
         for row in rows.splitlines():
@@ -33,8 +35,13 @@ def build(limit=None):
             word = text(fields)
             word['id'] = uid + '.w.' + '-'.join(f'{ord(c):x}' for c in fields[0])
             if fields[0] in source_checks:word.update(source_checks[fields[0]])
+            if slug in {u[0] for u in A2_UNITS}:
+                audit=a2_audit[fields[0]]
+                word['source']=audit['url']
+                word['note']=('Đã đối chiếu mục từ và Pinyin với TBCL; nghĩa Việt và cách dùng trong bài chưa giáo viên duyệt.' if audit['reading_matches'] else 'Đã tra TBCL nhưng chưa khớp mục từ/Pinyin tự động; còn là bản nháp cần đối chiếu thêm.')
+                if fields[0]=='垃圾':word['note']+=' Cách đọc Đài Loan: lèsè.'
             words.append(word)
-        grammar = [enrich(dict(id=f'{uid}.g.{i+1}', **text(r), explanation=r[3]),len(units)*2+i,roadmap) for i, r in enumerate(grammar_rows)]
+        grammar = [enrich(dict(id=f'{uid}.g.{i+1}', **text(r), explanation=r[3]),roadmap) for i, r in enumerate(grammar_rows)]
         dialogue = [text(r) for r in dialogue_rows]
         lessons = []
         def exercise(lid, suffix, kind, prompt, answers, explanation, stimulus=None, choices=None, word=None, skill='vocabulary'):
@@ -66,7 +73,7 @@ def build(limit=None):
                 exercises.append(exercise(lid, 'dictate', 'dictation', 'Nghe và chép lại bằng Hán tự Phồn thể.', [d['hanzi']], 'Dấu câu không ảnh hưởng kết quả; chữ phải đúng.', d, skill='listening'))
                 d=dialogue[1]
                 exercises.append(exercise(lid, 'read', 'reading', 'Chọn nghĩa phù hợp với câu đọc.', [d['vi']], 'Thông tin nằm trong câu được hiển thị.', d, [dialogue[2]['vi'],dialogue[0]['vi'],d['vi']], skill='reading'))
-                question,answer,alternatives,evidence=READING[slug]
+                question,answer,alternatives,evidence={**READING,**A2_READING}[slug]
                 paragraph={key:' '.join(d[key] for d in dialogue) for key in ('hanzi','pinyin','vi')}
                 exercises.append(exercise(lid,'reading-detail','reading',question,[answer],evidence,paragraph,[alternatives[0],alternatives[1],answer,alternatives[2]],skill='reading'))
             if index == 3:
@@ -75,11 +82,7 @@ def build(limit=None):
                 exercises.append(exercise(lid, 'write', 'writing', writing, [grammar[0]['hanzi']], 'Đáp án mẫu chỉ để tham khảo; bài mở không chấm đúng/sai tự động.', skill='writing'))
             lessons.append(dict(id=lid,title=name,objective=description,word_ids=[w['id'] for w in selected],grammar_ids=[g['id'] for g in grammar] if index==1 else [],exercises=exercises))
         units.append(dict(id=uid,title=title,description=description,words=words,grammar=grammar,dialogue=dialogue,writing_prompt=writing,character=character,lessons=lessons))
-    grammars=[g for u in units for g in u['grammar']]
-    dependencies={12:[0],13:[9,10],17:[5],19:[5],20:[3],21:[7],22:[15],23:[1,3]}
-    for index,prerequisites in dependencies.items():
-        if index<len(grammars):grammars[index]['prerequisites']=[grammars[i]['id'] for i in prerequisites]
-    payload = Content.model_validate(dict(id='foundation-tw',version=5,title='Bước đầu đến Đài Loan',license='Original AI-assisted teaching text. TBCL catalog: reference labels and levels only; no textbook examples copied. Local assets carry separate licenses.',source_note='Nội dung do dự án biên soạn; chưa có giáo viên duyệt. Ngữ pháp có tham chiếu TBCL, không đồng nhất cấp TBCL với CEFR/B2. Nét và âm mẫu có nguồn/giấy phép riêng.',units=units,grammar_roadmap=roadmap,grammar_batches=batches)).model_dump()
+    payload = Content.model_validate(dict(id='foundation-tw',version=6,title='Bước đầu đến Đài Loan',license='Original AI-assisted teaching text. TBCL catalog: reference labels and levels only; no textbook examples copied. Local assets carry separate licenses.',source_note='Nội dung do dự án biên soạn; chưa có giáo viên duyệt. Sáu chủ đề mới định hướng A2, không chứng nhận trình độ. Ngữ pháp có tham chiếu TBCL, không đồng nhất cấp TBCL với CEFR/B2. TTS chỉ dùng zh-TW; bảng Pinyin không có audio mẫu.',units=units,grammar_roadmap=roadmap,grammar_batches=batches)).model_dump()
     (ROOT/'content/foundation.pack.json').write_text(json.dumps(envelope(payload),ensure_ascii=False,indent=2),encoding='utf-8')
     print(f'Built {len(units)} units; {sum(len(u["words"]) for u in units)} words')
 
