@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "date": "2026-09-27",
+  "date": "2026-09-28",
   "source_notes": "See ATTRIBUTION.md and sources.json; per-file licenses apply.",
-  "bytes": 3131117,
+  "bytes": 3447304,
   "files": [
     {
       "path": "ATTRIBUTION.md",
-      "bytes": 4903,
-      "sha256": "4dbd41b6531835e1fda2f8061416828a7297148d8e6ec0c7b9b3748f87423d8e"
+      "bytes": 6203,
+      "sha256": "152f0ced3836b1312ccd9e5c9419aee960f3f9fcb9a9e59bc3a03d319f534e45"
     },
     {
       "path": "characters/19968.json",
@@ -2175,9 +2175,14 @@
       "sha256": "716728151f5e0f5767babe1f728bf1637d6e0d709d1d0bd1da66fa3946dc48f7"
     },
     {
+      "path": "pinyin/examples.json",
+      "bytes": 314580,
+      "sha256": "1833708c94db4d66698cae4c129d630f58bb37150b5594917e90a75e3c4cda3c"
+    },
+    {
       "path": "sources.json",
-      "bytes": 53297,
-      "sha256": "b9b41ec3883116effd624fb5b1db8b50f9e65bdf0c6dbce915d44f213fdec76d"
+      "bytes": 53604,
+      "sha256": "cb3615c49901f4186ad6e1d5bcbe1d417ff5e56ec5560ce5e64768c61c212d29"
     }
   ]
 }

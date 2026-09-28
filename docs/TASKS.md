@@ -1,5 +1,17 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Khôi phục bấm Pinyin để nghe — 28/09/2026
+
+- [x] Giữ 406 ô, tìm kiếm, dấu thanh và ghép chữ; bấm ô/thanh gọi TTS bằng lựa chọn mới, bấm lại phát lại. Mặc định nghe ngay, có bật/tắt, nghe lại, dừng, trạng thái/lỗi ngay cạnh bảng. Không phát khi mở trang hoặc gõ tìm kiếm; không đổi thanh khi thiếu ví dụ. Hủy khi đổi/dừng/rời trang, bỏ qua callback cũ.
+- [x] Bảng `public/learning/pinyin/examples.json` độc lập 360 từ giáo trình. Từ danh sách mục từ cốt lõi TBCL, chọn một/hai chữ có phân đoạn Pinyin duy nhất, ưu tiên mục một chữ có một cách đọc trong nguồn rồi cụm ngắn theo cấp. Chỉ đối chiếu tự động mục từ/Pinyin; không coi là giáo viên rà hay chứng minh chữ không đa âm ngoài nguồn này.
+- [x] Audit toàn bộ **2.030 tổ hợp**: **589 có ví dụ** trên **302/406 âm cơ sở**, **1.441 chưa có ví dụ**; 376 ánh xạ phát một chữ, 213 phát cụm. Theo thanh: 1=134, 2=128, 3=120, 4=183, nhẹ=24. Cả 589 khớp nguồn từ điển, 0 ánh xạ chưa khớp nguồn; **589 chưa người nghe duyệt TTS**. Thiếu ví dụ không chứng minh tổ hợp bất khả thi. Danh sách khóa thiếu và hash nguồn: [pinyin-coverage.json](pinyin-coverage.json).
+- [x] Thanh nhẹ chỉ phát cụm có âm đích/vị trí rõ ràng (ví dụ 爸爸 · bà ba); hiển thị chính xác Hán tự gửi TTS, Pinyin, nguồn và trạng thái kiểm chứng. Không Latin TTS, audio mẫu, nối audio hoặc đổi pitch. Phần thanh/vận mẫu giữ visual-only.
+- [x] Source cuối qua build; **26/26 core/adapter**, content checker (18/72/360/36/540), **1 kiểm tra manifest/tài sản** (436 file, 3.447.304 bytes), **7/7 Edge E2E liên quan**. Lệnh E2E: `npm.cmd run test:e2e -- e2e/learning-features.spec.ts e2e/taiwan-voice.spec.ts e2e/app.spec.ts --grep 'grid 406|Pinyin|giọng Windows|nghe cạnh|zh-TW Windows|thiếu'`. Backend code không đổi; không chạy lại benchmark/model/toàn bộ bài. Cảnh báo Starlette/httpx có từ trước, không đổi dependency.
+- [x] Ba flow Pinyin gồm gửi Hanzi/giọng/nhịp đã lưu, replay/toggle/tìm kiếm, lỗi/thiếu giọng, thiếu mapping, thanh nhẹ, callback cũ/dừng/điều hướng; giữ nút nghe 一/不 và mobile. Native zh-TW thật trả audio và tiến triển playback cho **八, 爸爸, 女**, nhịp chậm; kiểm tra dừng thành công. Đây là xác nhận phát được, không phải đánh giá phát âm bằng người nghe hoặc ASR.
+- [x] Build cuối được phục vụ tại **http://127.0.0.1:8765/#pronunciation**. Smoke bản cài desktop/mobile: 406 ô, ví dụ mới, nghe ngay mặc định, không request ngoài loopback/page error; giọng đã lưu và toàn bộ state trước/sau bằng nhau. Kết quả/hình local: `data/pinyin-installed-smoke.json`, `data/pinyin-installed-{desktop,mobile}.png`.
+- [x] Giữ foundation-tw v6, schema, ID, tiến độ, lịch ôn và cấu hình model/voice; không migration, không tải model/dependency hoặc khôi phục bản thu. Nguồn/manifest cập nhật; checkpoint Git local, không push.
+- [ ] Còn 1.441 tổ hợp chưa chọn được ví dụ từ phạm vi nguồn này; mở rộng cần đối chiếu nguồn theo mục. Cần người nghe kiểm tra giọng, đa âm/biến điệu và thanh nhẹ; chưa nghiệm thu Windows v1.
+
 ## Hoàn tất đợt v6 — 27/09/2026
 
 Kết quả hiện tại: [RELEASE-V6.md](RELEASE-V6.md), [HANDOFF-2026-09-27.md](HANDOFF-2026-09-27.md). Kokoro/audio Pinyin ở các mục dưới là lịch sử đã thay thế.

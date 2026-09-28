@@ -1,4 +1,6 @@
 export type Syllable={base:string;initial:string;final:string};
+export type PinyinExample={base:string;tone:number;hanzi:string;pinyin:string;target_index:number;kind:'character'|'phrase';source:{name:string;url:string};dictionary_status:'verified'|'unverified';listening_status:'not-reviewed'};
+export type PinyinExamples={examples:Record<string,PinyinExample>;coverage:{combinations:number;mapped:number;unavailable:number}};
 export const initials=['','b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s'];
 export const finals='a o e ai ei ao ou an en ang eng er i ia ie iao iou ian in iang ing iong u ua uo uai uei uan uen uang ueng ong ü üe üan ün -i'.split(' ');
 export function toneMark(base:string,tone:number){

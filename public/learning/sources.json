@@ -1,7 +1,7 @@
 {
   "animcjk_revision": "ec5e17cca76c87587790bcbce5ea0b4d4fb753d6",
   "grammar_references": 496,
-  "pinyin_mode": "visual-only",
+  "pinyin_mode": "hanzi-tts-examples; visual-only spelling",
   "download_sha256": {
     "dictionaryJa.txt": "0d80195ac4821d2075bd277934c4eda4c8d98ede047275921e9ece73c660b378",
     "dictionaryZhHans.txt": "be5d59ccd5acf05229e293f22189afa62636ac90a99727c813fc54db8f367c7f",
@@ -570,5 +570,11 @@
     "vocabulary/probe.html": "5e5f58321c761e2bd9488190ea37243236477701c0b5df9c7a0be8ae6deb658b",
     "licenses/Unihan/License-Unihan.txt": "eeb6fd06beac4a94a12ffb66876ecd6af68d5b6f38650d5f11aa90125933098b",
     "licenses/APL/english/ARPHICPL.TXT": "3a5e90c0957524a89e48203febcd4492ca4393678abaa7e5b4d70f3ff32b386d"
+  },
+  "pinyin_examples": {
+    "url": "https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=&num=10000&page=1&deng_ji=all",
+    "sha256": "b93232870c3e585ed0bd55959d339d52c64e2107c0e36dc24465ad2adcc77552",
+    "date": "2026-09-28",
+    "asset": "pinyin/examples.json"
   }
 }

@@ -1,6 +1,8 @@
 import {describe,it,expect} from 'vitest';
 import pack from '../../content/foundation.pack.json';
 import samples from '../../public/learning/pinyin/catalog.json';
+import listening from '../../public/learning/pinyin/examples.json';
+import coverage from '../../docs/pinyin-coverage.json';
 import {followingLesson,lessonAt,lessonRoute,orderedLessons} from './routes';
 import {spellingSteps,toneMark,type Syllable,initials,finals} from './pinyin';
 import {grade} from './learning';
@@ -16,6 +18,22 @@ describe('lesson navigation',()=>{
  });
 });
 describe('Pinyin and packaged examples',()=>{
+ it('validates all Hanzi mappings and accounts for every catalog/tone combination',()=>{
+  const keys=catalog.flatMap(s=>[0,1,2,3,4].map(t=>`${s.base}:${t}`));
+  const examples=Object.entries(listening.examples);
+  expect(new Set([...examples.map(([k])=>k),...coverage.unavailable_keys]).size).toBe(keys.length);
+  expect(examples.length+coverage.unavailable_keys.length).toBe(keys.length);
+  expect(examples.length).toBe(listening.coverage.mapped);
+  for(const [key,e] of examples){
+   expect(keys).toContain(key);expect(key).toBe(`${e.base}:${e.tone}`);
+   const parts=e.pinyin.split(' ');expect(parts[e.target_index]).toBe(toneMark(e.base,e.tone));
+   expect(parts.length).toBe(Array.from(e.hanzi).length);expect(e.hanzi).toMatch(/^[\u4e00-\u9fff]+$/);
+   expect(e.source.url).toContain('https://bcoct.naer.edu.tw/');expect(e.source.name).toBeTruthy();
+   expect(e.pinyin.replaceAll(' ','')).toBe(e.source.reading.replace(/[\s’'\-]/g,''));
+   expect(e.dictionary_status).toBe('verified');expect(e.listening_status).toBe('not-reviewed');
+   if(e.tone===0)expect(e.kind).toBe('phrase');
+  }
+ });
  it('places tones on priority vowels and preserves ü',()=>{
   expect(toneMark('liu',3)).toBe('liǔ');expect(toneMark('gui',4)).toBe('guì');expect(toneMark('lüe',4)).toBe('lüè');expect(toneMark('nü',3)).toBe('nǚ');expect(toneMark('shui',3)).toBe('shuǐ');expect(toneMark('ou',2)).toBe('óu');expect(toneMark('zhi',0)).toBe('zhi');
  });

@@ -16,7 +16,11 @@ Copyright Arphic Technology Co., Ltd. ©1999; AnimCJK FM&SH ©2016–2026; ngu�
 
 ## Pinyin và giọng đọc
 
-Grid 406 âm chỉ còn danh mục chữ, dấu thanh và cách ghép. Không có WAV/MP3 mẫu, nghe âm tiết hoặc đánh vần. Ví dụ Hán tự đọc bằng Windows/browser zh-TW local; không dùng Latin TTS thay âm mẫu. Chất lượng giọng/biến điệu cần nghe đối chiếu.
+Ngày 28/09/2026: grid 406 âm giữ dấu thanh/cách ghép; bấm ô hoặc thanh đọc ví dụ Hán tự bằng Windows/browser zh-TW local. Không có WAV/MP3 mẫu hoặc đánh vần bằng audio; không dùng Latin TTS.
+
+`pinyin/examples.json` là bảng độc lập giáo trình, gồm 589 tổ hợp, chọn từ mục từ một/hai chữ trong [TBCL — NAER, từ vựng cốt lõi](https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=&num=10000&page=1&deng_ji=all). Chỉ ghi sự kiện mục từ/Pinyin/cấp/URL và vị trí âm đích; không sao chép định nghĩa, câu ví dụ hoặc audio. Ưu tiên mục một chữ chỉ có một cách đọc trong nguồn này, rồi cụm ngắn theo thứ tự cấp của nguồn; không suy ra chữ không đa âm trong mọi ngữ cảnh. Chỉ tách Pinyin khi có duy nhất một cách khớp số chữ với catalog. Thanh nhẹ luôn phát cả cụm. Không gán giấy phép audio/nét chữ cho dữ liệu tham chiếu TBCL.
+
+Mọi mục có `dictionary_status=verified` (khớp mục từ/Pinyin), `listening_status=not-reviewed` (chưa người nghe duyệt). 1.441 tổ hợp chưa có ví dụ từ phạm vi nguồn đã chọn, không phải kết luận bất khả thi. `docs/pinyin-coverage.json` ghi từng khóa thiếu và SHA-256 nguồn; `scripts/build_pinyin_examples.py` dựng/kiểm tra offline từ cache, tùy chọn `--refresh-source` chỉ tải HTML nếu thiếu. Không dùng ASR xác nhận phát âm. Chất lượng giọng/biến điệu vẫn cần người nghe đối chiếu.
 
 Lịch sử tài sản đã gỡ ngày 27/09/2026; giữ thông báo nguồn/giấy phép để truy vết:
 
