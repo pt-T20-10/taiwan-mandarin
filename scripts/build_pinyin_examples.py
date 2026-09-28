@@ -79,7 +79,6 @@ def main():
         by_tone={str(t):sum(e['tone']==t for e in examples.values()) for t in range(5)})
     dump(OUT/'pinyin/examples.json', dict(schema=1, examples=examples, coverage=coverage))
     sources = json.loads((OUT/'sources.json').read_text(encoding='utf-8'))
-    sources['pinyin_mode'] = 'hanzi-tts-examples; visual-only spelling'
     sources['pinyin_examples'] = dict(url=URL, sha256=hashlib.sha256(SOURCE.read_bytes()).hexdigest(), date='2026-09-28', asset='pinyin/examples.json')
     dump(OUT/'sources.json', sources)
     dump(ROOT/'docs/pinyin-coverage.json', dict(date='2026-09-28', **coverage,

@@ -49,6 +49,17 @@ export async function previewSpeech(text:string,selected:SpeechPreferences){spee
     });
 }
 export function downloadJSON(value:unknown,name:string){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+// Share cancellation with TTS so a recording and a spoken phrase never overlap.
+export async function playPinyinRecording(path:string){
+  speech.stop();const ticket=generation;
+  const current=new Audio(path);audio=current;
+  await new Promise<void>((resolve,reject)=>{
+    const cleanup=()=>{current.onended=null;current.onerror=null;if(audio===current)audio=null;if(finishSpeech===finish)finishSpeech=null;};
+    const finish=()=>{cleanup();resolve();};finishSpeech=finish;
+    const failed=()=>{cleanup();if(ticket!==generation)resolve();else reject(new Error('Không phát được bản thu. Hãy thử lại.'));};
+    current.onended=finish;current.onerror=failed;current.play().catch(failed);
+  });
+}
 export async function encodeWav(blob:Blob):Promise<Blob>{
   const context=new AudioContext();let buffer:AudioBuffer;
   try{buffer=await context.decodeAudioData(await blob.arrayBuffer());}finally{await context.close();}

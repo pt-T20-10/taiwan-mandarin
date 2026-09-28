@@ -1,5 +1,16 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Bảng Pinyin hover/chạm, bốn thanh và bản thu riêng — yêu cầu tiếp theo 28/09/2026
+
+- [x] Thay grid/nội dung ghép từng phần bằng table hàng thanh mẫu/cột vận mẫu, giữ 406 ô. Hover hoặc chạm mở popup bốn thanh cạnh ô; chỉ click thanh mới phát, click lại replay. Có tìm kiếm/dừng; hỗ trợ bàn phím (Enter/Space mở, ↓ vào thanh, Escape đóng), popup trong viewport, cuộn bảng riêng trên mobile.
+- [x] Theo yêu cầu mới, khôi phục **1.598 bản MP3 nguyên âm tiết / 31.305.950 bytes** từ Git `9198c81`, xác minh từng hash/size. Không khôi phục WAV ghép thành phần, model hoặc runtime cũ. Có **26/1.624 tổ hợp** thiếu bản thu, nút mờ “Chưa có”; bỏ thông báo thiếu ví dụ Hán tự. Mapping TBCL cũ giữ làm dữ liệu tham chiếu, không được bảng này gọi nữa.
+- [x] Nguồn Unlicense davinfifield, revision và giới hạn ghi trong ATTRIBUTION/recordings.json. Quan thoại phổ thông, chưa xác minh vùng giọng Đài Loan hoặc nghe duyệt toàn bộ; không coi mọi bản thu là từ có nghĩa. Từ/câu và các nhóm 一/不/thanh nhẹ vẫn dùng zh-TW đã lưu. Không TTS Latin hoặc ghép audio.
+- [x] Adapter phát một bản thu dùng chung cơ chế dừng với TTS: chọn mới, dừng, phát câu và rời trang đều hủy; lỗi muộn không đè lượt mới. Giữ settings/progress/content v6/schema/models, không migration. Dung lượng tài sản quản lý sau build **5.316.595.302 / 10.000.000.000 bytes** (không tính môi trường phát triển).
+- [x] Source cuối qua **build, 27 core/adapter, content checker, kiểm tra manifest 2.035 file / 35.388.602 bytes**, và **7 Edge E2E liên quan**. Ba flow table kiểm tra phát MP3 thật, hover/replay/search, thiếu bản thu, mobile có cảm ứng, keyboard, lỗi/dừng/đổi/điều hướng; bốn flow cũ kiểm tra thiếu voice, Windows TTS, nút nghe và preferences. Không đổi backend code; chỉ chạy kiểm tra tài sản backend, không benchmark Qwen hoặc duyệt lại 72 bài.
+- [x] `http://127.0.0.1:8765/#pronunciation` phục vụ build mới. Smoke bản cài phát/dừng MP3 thật, 406 ô, desktop/mobile không tràn trang/page error, toàn bộ state trước/sau giữ nguyên. Kết quả/hình: `data/pinyin-table-installed-smoke.json`, `data/pinyin-table-installed-{desktop,mobile}.png`. Lưu checkpoint local, không push.
+
+Đợt này thay cách nghe của đợt Hanzi-TTS ngay dưới đây theo yêu cầu mới; số 1.441 thiếu mapping bên dưới là lịch sử, không phải độ phủ audio của bảng hiện tại.
+
 ## Khôi phục bấm Pinyin để nghe — 28/09/2026
 
 - [x] Giữ 406 ô, tìm kiếm, dấu thanh và ghép chữ; bấm ô/thanh gọi TTS bằng lựa chọn mới, bấm lại phát lại. Mặc định nghe ngay, có bật/tắt, nghe lại, dừng, trạng thái/lỗi ngay cạnh bảng. Không phát khi mở trang hoặc gõ tìm kiếm; không đổi thanh khi thiếu ví dụ. Hủy khi đổi/dừng/rời trang, bỏ qua callback cũ.

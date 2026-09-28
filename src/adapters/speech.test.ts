@@ -1,5 +1,5 @@
 import {afterEach,describe,expect,it,vi} from 'vitest';
-import {speech,configureSpeech,previewSpeech} from './local';
+import {speech,configureSpeech,previewSpeech,playPinyinRecording} from './local';
 
 class Utterance {
   voice:unknown;lang='';rate=1;
@@ -12,6 +12,18 @@ describe('TTS local và hủy phát',()=>{
     const synth={getVoices:()=>voices,speak:vi.fn(),cancel:vi.fn()};
     vi.stubGlobal('window',{speechSynthesis:synth});vi.stubGlobal('SpeechSynthesisUtterance',Utterance);return synth;
   }
+  it('bản thu dùng chung hủy với TTS, bỏ lỗi play muộn và dừng trước resolve',async()=>{
+    const synth=setup([{lang:'zh-TW',localService:true}]);
+    const instances:any[]=[];
+    class Sample {onended:any;onerror:any;fail!:()=>void;pause=vi.fn();play=()=>new Promise<void>((_r,reject)=>{this.fail=()=>reject(new Error('late'));});constructor(public src:string){instances.push(this);}}
+    vi.stubGlobal('Audio',Sample);
+    const first=playPinyinRecording('/learning/pinyin/syllables/ba1.mp3');
+    const second=playPinyinRecording('/learning/pinyin/syllables/ba2.mp3');
+    await first;expect(instances[0].pause).toHaveBeenCalledOnce();instances[0].fail();
+    const phrase=speech.speak('你好');await second;expect(instances[1].pause).toHaveBeenCalledOnce();
+    synth.speak.mock.calls[0][0].onend();await phrase;
+    const third=playPinyinRecording('/learning/pinyin/syllables/ba3.mp3');speech.stop();await third;expect(instances[2].pause).toHaveBeenCalledOnce();
+  });
   it('gửi nguyên câu, dùng giọng đã chọn và tốc độ thường mặc định',async()=>{
     const first={voiceURI:'hanhan',lang:'zh-TW',localService:true},second={voiceURI:'yating',lang:'zh-TW',localService:true};
     const synth=setup([first,second]);configureSpeech({voice:'browser:yating',pace:'normal'});

@@ -43,7 +43,15 @@ def test_packaged_characters_and_visual_pinyin_are_complete():
     assert len(catalog)==406
     assert all(set(row)=={'base','initial','final'} for row in catalog)
     assert not list((root/'public/learning/pinyin').rglob('*.WAV'))
-    assert not list((root/'public/learning/pinyin').rglob('*.mp3'))
+    recordings=json.loads((root/'public/learning/pinyin/recordings.json').read_text(encoding='utf-8'))
+    assert set(recordings['recordings'])=={s['base'] for s in catalog}
+    samples=[s for tones in recordings['recordings'].values() for s in tones.values()]
+    assert len(samples)==recordings['available']==1598
+    assert len(recordings['missing'])==406*4-len(samples)==26
+    assert len(list((root/'public/learning/pinyin').rglob('*.mp3')))==1598
+    for sample in samples:
+        data=(root/'public'/sample['path'].lstrip('/')).read_bytes()
+        assert len(data)==sample['bytes'] and hashlib.sha256(data).hexdigest()==sample['sha256']
 
 @pytest.fixture
 def client(tmp_path,monkeypatch):

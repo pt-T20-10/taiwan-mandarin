@@ -16,7 +16,11 @@ Copyright Arphic Technology Co., Ltd. ©1999; AnimCJK FM&SH ©2016–2026; ngu�
 
 ## Pinyin và giọng đọc
 
-Ngày 28/09/2026: grid 406 âm giữ dấu thanh/cách ghép; bấm ô hoặc thanh đọc ví dụ Hán tự bằng Windows/browser zh-TW local. Không có WAV/MP3 mẫu hoặc đánh vần bằng audio; không dùng Latin TTS.
+Yêu cầu mới ngày 28/09/2026: bảng hàng/cột 406 âm; hover/chạm mở 4 thanh rồi click phát bản thu nguyên âm tiết. Khôi phục riêng **1.598 MP3 / 31.305.950 bytes** từ checkpoint `9198c81`, kiểm tra byte/SHA-256 từng file theo catalog cũ bằng `scripts/restore_pinyin_recordings.py`. `pinyin/recordings.json` ghi từng đường dẫn, nguồn, hash và 26 tổ hợp thiếu. Không khôi phục WAV thành phần MOE, không ghép/nối âm, không dùng Latin TTS, không đổi giọng từ/câu. Không suy bản thu tồn tại thành cách đọc của một từ có nghĩa.
+
+Nguồn MP3: [davinfifield/mp3-chinese-pinyin-sound](https://github.com/davinfifield/mp3-chinese-pinyin-sound/tree/aa25ecce7b7fb02757b2c2b8e3c01aa975812edc), revision `aa25ecce7b7fb02757b2c2b8e3c01aa975812edc`; [Unlicense](licenses/pinyin-unlicense.txt). Quan thoại phổ thông, chưa xác minh vùng giọng Đài Loan và chưa nghe duyệt toàn bộ. Playback thật xác nhận file phát được, không thay đánh giá người nghe.
+
+Bảng ví dụ Hán tự của đợt trước được giữ làm dữ liệu tham chiếu, **không còn dùng cho bảng nghe Pinyin**:
 
 `pinyin/examples.json` là bảng độc lập giáo trình, gồm 589 tổ hợp, chọn từ mục từ một/hai chữ trong [TBCL — NAER, từ vựng cốt lõi](https://bcoct.naer.edu.tw/standsys/querycorevocab.php?q=&num=10000&page=1&deng_ji=all). Chỉ ghi sự kiện mục từ/Pinyin/cấp/URL và vị trí âm đích; không sao chép định nghĩa, câu ví dụ hoặc audio. Ưu tiên mục một chữ chỉ có một cách đọc trong nguồn này, rồi cụm ngắn theo thứ tự cấp của nguồn; không suy ra chữ không đa âm trong mọi ngữ cảnh. Chỉ tách Pinyin khi có duy nhất một cách khớp số chữ với catalog. Thanh nhẹ luôn phát cả cụm. Không gán giấy phép audio/nét chữ cho dữ liệu tham chiếu TBCL.
 
@@ -25,7 +29,7 @@ Mọi mục có `dictionary_status=verified` (khớp mục từ/Pinyin), `listen
 Lịch sử tài sản đã gỡ ngày 27/09/2026; giữ thông báo nguồn/giấy phép để truy vết:
 
 - 37 WAV từ [國語注音符號手冊-開放部件](https://language.moe.gov.tw/001/Upload/files/SITE_CONTENT/M0001/deploy/index.html), 2017 © 教育部, CC BY 4.0; [thông báo](licenses/moe-bopomofo.txt).
-- 1.632 MP3 từ [davinfifield/mp3-chinese-pinyin-sound](https://github.com/davinfifield/mp3-chinese-pinyin-sound/tree/aa25ecce7b7fb02757b2c2b8e3c01aa975812edc), revision `aa25ecce7b7fb02757b2c2b8e3c01aa975812edc`; [Unlicense](licenses/pinyin-unlicense.txt). Giọng bổ sung chưa xác minh Đài Loan, hiện không được dùng.
+- Bộ cũ 1.632 MP3 đã gỡ ngày 27/09; nay chỉ khôi phục 1.598 file thực sự được catalog 406 âm tham chiếu như mô tả trên.
 - Kokoro và runtime riêng đã gỡ; giấy phép/lịch sử benchmark ở `docs/NEURAL_TTS.md`, không còn trong lựa chọn giọng hiện tại.
 
 ## Nội dung và nguồn ngôn ngữ

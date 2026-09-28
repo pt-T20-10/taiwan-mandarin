@@ -1,42 +1,55 @@
 import {useEffect,useRef,useState} from 'react';
-import {initials,spellingSteps,toneMark,type Syllable,type PinyinExamples} from '../core/pinyin';
-import {speech} from '../adapters/local';
+import {createPortal} from 'react-dom';
+import {toneMark,type Syllable} from '../core/pinyin';
+import {playPinyinRecording,speech} from '../adapters/local';
+
+const rows=['','b','p','m','f','d','t','n','l','g','k','h','z','c','s','zh','ch','sh','r','j','q','x'];
+const columns='a o e -i er ai ei ao ou an en ang eng ong i ia iao ie iou ian in iang ing iong u ua uo uai uei uan uen uang ueng ü üe üan ün'.split(' ');
+const headings:Record<string,string>={'-i':'i',iou:'iu',uei:'ui',uen:'un',ueng:'ueng'};
+type Recordings={recordings:Record<string,Record<string,{path:string}>>;available:number;missing:string[]};
+type Popup={base:string;left:number;top:number};
 
 export function PinyinLab(){
- const [catalog,setCatalog]=useState<Syllable[]>([]),[data,setData]=useState<PinyinExamples>(),[chosen,setChosen]=useState('ba'),[tone,setTone]=useState(1),[query,setQuery]=useState(''),[loadError,setLoadError]=useState('');
- const [autoplay,setAutoplay]=useState(true),[error,setError]=useState(''),[playing,setPlaying]=useState(false);
- const request=useRef(0);
+ const [catalog,setCatalog]=useState<Syllable[]>([]),[data,setData]=useState<Recordings>(),[query,setQuery]=useState(''),[popup,setPopup]=useState<Popup|null>(null);
+ const [error,setError]=useState(''),[last,setLast]=useState(''),[playing,setPlaying]=useState(false);
+ const ticket=useRef(0),leave=useRef<ReturnType<typeof setTimeout>|undefined>(undefined),anchor=useRef<HTMLButtonElement|null>(null);
+ function keepOpen(){clearTimeout(leave.current);}
+ function close(){keepOpen();setPopup(null);}
+ function show(base:string,button:HTMLButtonElement){
+  keepOpen();anchor.current=button;const r=button.getBoundingClientRect();
+  setPopup({base,left:Math.max(8,Math.min(r.right+4,innerWidth-148)),top:Math.max(8,Math.min(r.top,innerHeight-208))});
+ }
  useEffect(()=>{
   const controller=new AbortController();
-  async function load(){
-   const [grid,examples]=await Promise.all(['/learning/pinyin/catalog.json','/learning/pinyin/examples.json'].map(async url=>{const r=await fetch(url,{signal:controller.signal});if(!r.ok)throw new Error('Chưa có dữ liệu Pinyin local.');return r.json();}));
-   if(!controller.signal.aborted){setCatalog(grid);setData(examples);}
-  }
-  void load().catch(e=>{if(!controller.signal.aborted)setLoadError(e.message);});
-  return()=>{controller.abort();request.current++;speech.stop();};
+  Promise.all(['/learning/pinyin/catalog.json','/learning/pinyin/recordings.json'].map(async url=>{const r=await fetch(url,{signal:controller.signal});if(!r.ok)throw Error('Chưa mở được bảng âm thanh local.');return r.json();})).then(([grid,audio])=>{if(!controller.signal.aborted){setCatalog(grid);setData(audio);}}).catch(e=>{if(!controller.signal.aborted)setError(e.message);});
+  const dismiss=(e:PointerEvent)=>{if(!(e.target as Element).closest('.pinyin-cell-button, .pinyin-tone-popup'))close();};
+  const escape=(e:KeyboardEvent)=>{if(e.key==='Escape'){close();anchor.current?.focus();}};
+  const scroll=()=>close();
+  document.addEventListener('pointerdown',dismiss);document.addEventListener('keydown',escape);window.addEventListener('resize',scroll);
+  return()=>{controller.abort();ticket.current++;speech.stop();keepOpen();document.removeEventListener('pointerdown',dismiss);document.removeEventListener('keydown',escape);window.removeEventListener('resize',scroll);};
  },[]);
- function stop(){request.current++;speech.stop();setPlaying(false);setError('');}
- async function play(base:string,nextTone:number){
-  stop();const ticket=request.current,example=data?.examples[`${base}:${nextTone}`];
-  if(!example)return;
-  setPlaying(true);
-  try{await speech.speak(example.hanzi);}catch(e){if(ticket===request.current)setError(e instanceof Error?e.message:'Không phát được giọng zh-TW. Hãy thử lại.');}
-  finally{if(ticket===request.current)setPlaying(false);}
+ function stop(){ticket.current++;speech.stop();setPlaying(false);setError('');}
+ async function play(base:string,tone:number){
+  stop();const id=ticket.current,sample=data?.recordings[base]?.[tone];if(!sample)return;
+  setLast(toneMark(base,tone));setPlaying(true);
+  try{await playPinyinRecording(sample.path);}catch(e){if(id===ticket.current)setError((e as Error).message);}finally{if(id===ticket.current)setPlaying(false);}
  }
- function select(base:string,nextTone:number){setChosen(base);setTone(nextTone);if(autoplay)void play(base,nextTone);else stop();}
- const selected=catalog.find(x=>x.base===chosen)||catalog[0],spelling=selected?toneMark(selected.base,tone):'';
- const example=data?.examples[`${chosen}:${tone}`];
- const search=query.trim().toLowerCase().replaceAll('v','ü').replaceAll('u:','ü');
- if(loadError)return <p className="notice" role="alert">{loadError}</p>;
- if(!selected||!data)return <p>Đang mở bảng ghép âm…</p>;
- return <section className="panel pinyin-lab"><span className="eyebrow">THANH MẪU · VẬN MẪU · THANH ĐIỆU</span><h2>Ghép âm Pinyin</h2><p>Bấm ô âm tiết hoặc thanh để nghe ví dụ Hán tự bằng giọng zh-TW đã chọn. Bấm lại để nghe lại. Phần ghép thanh mẫu và vận mẫu chỉ hướng dẫn bằng chữ.</p>
- <label className="inline-check"><input type="checkbox" checked={autoplay} onChange={e=>{setAutoplay(e.target.checked);stop();}}/> Nghe ngay khi chọn</label>
- <label>Tìm âm Pinyin<input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Ví dụ: ba, nü, ju…"/></label>
- <div className="pinyin-workbench"><div className="pinyin-grid-scroll" role="region" aria-label="Bảng chọn âm Pinyin" tabIndex={0}>{initials.map(i=>{const rows=catalog.filter(s=>s.initial===i&&s.base.includes(search));return rows.length>0&&<div className="pinyin-grid-row" key={i}><strong className="pinyin-initial">{i||'∅'}</strong><div className="pinyin-syllables">{rows.map(s=><button key={s.base} aria-label={'Chọn âm '+s.base} aria-pressed={chosen===s.base} onClick={()=>select(s.base,tone)}>{s.base}</button>)}</div></div>;})}{!catalog.some(s=>s.base.includes(search))&&<p>Không có âm phù hợp. Thử bỏ dấu thanh; dùng v hoặc ü để tìm ü.</p>}</div>
- <div className="pinyin-result"><div className="tabs" aria-label="Chọn thanh điệu">{[1,2,3,4,0].map(t=><button key={t} aria-pressed={tone===t} onClick={()=>select(selected.base,t)}>{t?`Thanh ${t} · ${toneMark(selected.base,t)}`:'Thanh nhẹ'}</button>)}</div>
- <strong className="syllable-result">{spelling}</strong>{tone===0?<p>Thanh nhẹ phụ thuộc âm trước và ngữ cảnh; nghe cả cụm, không phải âm tiết thanh nhẹ riêng lẻ.</p>:<><p>{selected.initial||'∅'} + {selected.final} + thanh {tone} → {spelling}</p><div className="spelling-steps">{spellingSteps(selected,tone).join(' → ')}</div></>}
- {example?<div className="pinyin-example"><p>{example.kind==='phrase'?'Phát cả cụm':'Phát một chữ'} · âm đang chọn ở vị trí {example.target_index+1}</p><strong lang="zh-TW" className="hanzi">{example.hanzi}</strong><p>{example.pinyin}</p><small>Nội dung đọc chính xác: {example.hanzi}. {example.dictionary_status==='verified'?'Đã đối chiếu mục từ/Pinyin với TBCL.':'Chưa đối chiếu từ điển.'} Chưa nghe duyệt giọng TTS. Đọc liền có thể có biến điệu.</small><details><summary>Nguồn ví dụ</summary><p>{example.source.name}</p><a href={example.source.url} target="_blank" rel="noreferrer">Tra mục từ (cần mạng)</a></details></div>:<p className="notice">Chưa có ví dụ Hán tự đã đối chiếu cho {spelling} ({tone?`thanh ${tone}`:'thanh nhẹ'}). Đây là thiếu dữ liệu, không có nghĩa tổ hợp này không tồn tại. Hãy chọn tổ hợp khác; thanh đang chọn vẫn được giữ.</p>}
- <div className="actions"><button disabled={!example} onClick={()=>void play(chosen,tone)}>Nghe lại ví dụ</button><button onClick={stop}>Dừng nghe Pinyin</button></div>
- <p role="status">{playing?'Đang phát ví dụ…':'Đã dừng / sẵn sàng nghe.'}</p>{error&&<p className="notice" role="alert">{error}</p>}
- </div></div><details><summary>Quy tắc ghép bằng chữ và phạm vi ví dụ</summary><p>∅ là âm đầu rỗng; y/w là quy ước chính tả. ü bỏ hai chấm sau j/q/x và trong yu. iou/uei/uen rút gọn thành iu/ui/un sau thanh mẫu.</p><p>Các phần hiển thị giúp phân tích cách viết, không phải hướng dẫn nối âm cơ học. ian/in/ing/ong có thay đổi khi đọc liền. -i trong zhi/chi/shi/ri/zi/ci/si khác i trong yi.</p><p>{data.coverage.mapped}/{data.coverage.combinations} tổ hợp có ví dụ; {data.coverage.unavailable} chưa có ví dụ. Không phải cả 406 × 5 tổ hợp đều có cách đọc riêng lẻ hợp lệ. Không dùng TTS đọc ký hiệu Latin; không có bản thu âm mẫu hay đánh vần bằng âm thanh.</p></details></section>;
+ const search=query.trim().toLowerCase().replaceAll('u:','ü').replaceAll('v','ü');
+ return <section className="panel pinyin-lab"><span className="eyebrow">BẢNG ÂM PINYIN</span><h2>Ghép âm Pinyin</h2>
+ <p>Rê chuột hoặc chạm vào một ô, rồi chọn thanh để nghe. Bấm lại thanh để nghe lại.</p>
+ <div className="pinyin-table-tools"><label>Tìm âm Pinyin<input value={query} onChange={e=>{setQuery(e.target.value);close();}} placeholder="Ví dụ: ba, nü, ju…"/></label><button onClick={stop}>Dừng âm mẫu</button><span role="status">{last?`${playing?'Đang nghe':'Âm đã chọn'}: ${last}`:''}</span></div>
+ {error&&<p role="alert" className="notice">{error}</p>}
+ {!data?(!error&&<p>Đang mở bảng âm thanh…</p>):<div className="pinyin-matrix-scroll" role="region" aria-label="Bảng âm Pinyin" tabIndex={0} onScroll={close}>
+ <table className="pinyin-matrix"><thead><tr><th scope="col" aria-label="Âm đầu / vần"/>{columns.map(f=><th scope="col" key={f}>{headings[f]||f}</th>)}</tr></thead>
+ <tbody>{rows.map(initial=><tr key={initial}><th scope="row">{initial||'∅'}</th>{columns.map(final=>{
+  const s=catalog.find(s=>s.initial===initial&&s.final===final),visible=s&&s.base.includes(search);
+  return <td key={final}>{visible&&<button className="pinyin-cell-button" aria-label={'Chọn âm '+s.base} aria-expanded={popup?.base===s.base} aria-controls={popup?.base===s.base?'pinyin-tone-popup':undefined} onMouseEnter={e=>show(s.base,e.currentTarget)} onMouseLeave={()=>{leave.current=setTimeout(()=>setPopup(null),160);}} onClick={e=>show(s.base,e.currentTarget)} onKeyDown={e=>{if(e.key==='ArrowDown'){e.preventDefault();show(s.base,e.currentTarget);setTimeout(()=>document.querySelector<HTMLButtonElement>('#pinyin-tone-popup button:not(:disabled)')?.focus(),0);}}}>{s.base}</button>}</td>;
+ })}</tr>)}</tbody></table></div>}
+ {data&&!catalog.some(s=>s.base.includes(search))&&<p>Không tìm thấy âm này. Thử nhập không dấu thanh.</p>}
+ <small className="pinyin-recording-note">Âm thu sẵn · Quan thoại phổ thông, chưa xác minh giọng Đài Loan. Kéo ngang để xem hết bảng.</small>
+ <details><summary>Nguồn bản thu</summary><p>{data?.available||0}/1624 tổ hợp có bản thu; {data?.missing.length||0} tổ hợp chưa có bản thu. Bản thu để luyện âm và thanh, không khẳng định mọi tổ hợp đều là từ có nghĩa. Chưa nghe duyệt toàn bộ.</p><p>davinfifield/mp3-chinese-pinyin-sound · Unlicense. Các ví dụ từ/câu bên dưới vẫn dùng giọng zh-TW đã chọn.</p><a href="/learning/licenses/pinyin-unlicense.txt" target="_blank" rel="noreferrer">Giấy phép bản thu</a></details>
+ {popup&&data&&createPortal(<div id="pinyin-tone-popup" className="pinyin-tone-popup" role="group" aria-label={'Bốn thanh của '+popup.base} style={{left:popup.left,top:popup.top}} onMouseEnter={keepOpen} onMouseLeave={()=>{leave.current=setTimeout(()=>setPopup(null),160);}} onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget as Node))close();}}>{[1,2,3,4].map(t=>{
+  const available=!!data.recordings[popup.base]?.[t];return <button key={t} disabled={!available} aria-label={`Nghe ${toneMark(popup.base,t)} · thanh ${t}`} title={available?`Thanh ${t}`:'Chưa có bản thu'} onClick={()=>void play(popup.base,t)}><span>{toneMark(popup.base,t)}</span><small>{available?`Thanh ${t}`:'Chưa có'}</small></button>;
+ })}</div>,document.body)}
+ </section>;
 }

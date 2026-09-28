@@ -1,7 +1,7 @@
 {
   "animcjk_revision": "ec5e17cca76c87587790bcbce5ea0b4d4fb753d6",
   "grammar_references": 496,
-  "pinyin_mode": "hanzi-tts-examples; visual-only spelling",
+  "pinyin_mode": "table; whole-syllable recordings; four tones",
   "download_sha256": {
     "dictionaryJa.txt": "0d80195ac4821d2075bd277934c4eda4c8d98ede047275921e9ece73c660b378",
     "dictionaryZhHans.txt": "be5d59ccd5acf05229e293f22189afa62636ac90a99727c813fc54db8f367c7f",
@@ -576,5 +576,13 @@
     "sha256": "b93232870c3e585ed0bd55959d339d52c64e2107c0e36dc24465ad2adcc77552",
     "date": "2026-09-28",
     "asset": "pinyin/examples.json"
+  },
+  "pinyin_recordings": {
+    "checkpoint": "9198c81",
+    "asset": "pinyin/recordings.json",
+    "source": "davinfifield/mp3-chinese-pinyin-sound",
+    "license": "Unlicense",
+    "available": 1598,
+    "missing": 26
   }
 }
