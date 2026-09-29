@@ -1,5 +1,12 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Điều tra Start.cmd tự dừng — 29/09/2026
+
+- [x] Log người dùng cho thấy startup thành công, shutdown hoàn tất rồi `KeyboardInterrupt`/`^C`; người dùng xác nhận không tự bấm ngắt. Uvicorn cài đặt phát lại signal sau cleanup; launcher nay bắt riêng KeyboardInterrupt ở entrypoint, không che lỗi khác. Không coi favicon 404 là nguyên nhân.
+- [x] Thêm log xoay vòng `data/launcher.log` (1 MB × tối đa 3 file), timestamp/PID/parent và phân biệt tín hiệu SIGINT/SIGTERM/SIGBREAK với callback `/api/shutdown`. Không ghi nội dung học/request body; không tự bỏ qua signal, đổi dependency hoặc cấu hình Windows.
+- [x] 37/37 backend tests qua, gồm subprocess Uvicorn thật với data tạm/port tự chọn nhận SIGINT sau startup, cleanup đủ và không traceback, log signal đầy đủ. Không đổi frontend nên không build/E2E lại. Dịch vụ hiện tại trả health bình thường; giữ nguyên tiến trình người dùng đang chạy, log mới có hiệu lực khi khởi động lại.
+- [ ] Chưa xác định nguồn gửi tín hiệu của lần tự dừng trước; Python/Windows signal không cung cấp sender trong handler. Chuỗi tiến trình hiện tại thuộc terminal VS Code, chưa đủ bằng chứng quy lỗi cho VS Code. Cần log mới nếu tái diễn; không tuyên bố đã sửa nguyên nhân tự dừng.
+
 ## Bảng Pinyin hover/chạm, bốn thanh và bản thu riêng — yêu cầu tiếp theo 28/09/2026
 
 - [x] Thay grid/nội dung ghép từng phần bằng table hàng thanh mẫu/cột vận mẫu, giữ 406 ô. Hover hoặc chạm mở popup bốn thanh cạnh ô; chỉ click thanh mới phát, click lại replay. Có tìm kiếm/dừng; hỗ trợ bàn phím (Enter/Space mở, ↓ vào thanh, Escape đóng), popup trong viewport, cuộn bảng riêng trên mobile.

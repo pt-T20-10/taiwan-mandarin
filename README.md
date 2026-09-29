@@ -6,6 +6,8 @@
 
 Nhấp đúp **Start.cmd** trong thư mục này. Trình duyệt mở **http://127.0.0.1:8765**. Chỉ có một dịch vụ; không cần mở VS Code hoặc Vite. Giữ cửa sổ dịch vụ trong lúc học. Trong Cài đặt, chọn **Dừng dịch vụ** để đóng cả model.
 
+Nếu terminal hiện `KeyboardInterrupt`/`^C`, tiến trình đã nhận tín hiệu ngắt; chưa đủ thông tin để khẳng định người dùng bấm Ctrl+C. Launcher ghi thời điểm, PID/parent và lý do dừng (tín hiệu hoặc nút Dừng dịch vụ) vào `data/launcher.log`, tối đa 3 file × 1 MB. Nếu ứng dụng tự dừng, giữ log này để kiểm tra; log không xác định được chương trình gửi tín hiệu. `Terminate batch job (Y/N)?` là câu hỏi của Windows khi ngắt file `.cmd`; chọn `Y` nếu muốn kết thúc. Có thể chạy trực tiếp `.\.venv\Scripts\python.exe -m backend.launcher` từ PowerShell để không qua batch. Dòng `favicon.ico 404` không làm dừng dịch vụ.
+
 Tiến độ nằm trong `data/learning.sqlite3`. Tải sao lưu ở Cài đặt; phục hồi cũng tại đó. Mỗi thiết bị dùng SQLite, không phụ thuộc cache trình duyệt. Không chia sẻ thư mục data nếu có thông tin cá nhân.
 
 Trong **Học**, chọn từng chữ cạnh từ để xem nét; tổng kết có nút chuyển bài/chủ đề và giữ tiến độ cũ. Trong **Phát âm**, bấm trực tiếp grid 406 âm tiết, tìm nhanh, chọn thanh và xem cách ghép bằng chữ; sáu nhóm quy tắc giữ đủ ví dụ 一/不/thanh nhẹ. Đã bỏ audio âm tiết/đánh vần; ví dụ Hán tự vẫn đọc bằng zh-TW. Trong **Ngữ pháp**, học và lưu tiến độ riêng, xem kiến thức tiên quyết; lộ trình 27 lô B2 là kế hoạch biên soạn, chưa phải nội dung B2 hoàn thành. Xem [nguồn/giấy phép tài sản](public/learning/ATTRIBUTION.md).
