@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const headers={'X-Mandarin-Client':'local-ui'};
 test.beforeEach(async({request})=>{
  const backup=await(await request.get('/api/backup')).json();backup.objects=[];backup.events=[];
- const pack=JSON.parse(fs.readFileSync('content/foundation.pack.json','utf8'));backup.packages=[{id:pack.content.id,version:6,payload:JSON.stringify(pack)}];await request.post('/api/restore',{headers,data:backup});
+ const pack=JSON.parse(fs.readFileSync('content/foundation.pack.json','utf8'));backup.packages=[{id:pack.content.id,version:pack.content.version,payload:JSON.stringify(pack)}];await request.post('/api/restore',{headers,data:backup});
 });
 test('12 mục A2: đủ bài luyện, lưu/gợi ý/sổ lỗi; không tạo thẻ hay hoàn thành lô B2',async({page,request})=>{
  test.setTimeout(90000);

@@ -1,5 +1,17 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Luyện bốn kỹ năng v7 — 29/09/2026
+
+- [x] 18 chủ đề × 4 kỹ năng × 3 bộ = 216 bộ/1.620 câu-lượt. Nghe/Đọc 10 câu đúng tỷ lệ dạng bài; Nói 8 lượt; Viết 2 đề. Mỗi bộ 8 câu ngữ cảnh, 54 tình huống. Nối hội thoại cũ thành 8 câu, 72 bài × 10 = 720 bài tập; hash fixture khóa toàn bộ nội dung v6, giữ 540 ID/câu cũ.
+- [x] Bật/tắt Pinyin/nghĩa Việt từng câu/cả đoạn, ẩn khi đổi câu/bộ; trợ giúp được lưu. Điền từ che câu/audio đáp án; chấm giữ khác biệt Hán tự. Ghi âm/nghe lại/transcript sửa được, tự xác nhận/bỏ qua; Viết lưu và xem mẫu sau nộp. Không chấm phát âm hoặc cho đúng/sai bài mở.
+- [x] Vòng ba bộ không lặp, giữ thứ tự câu/đáp án qua reload; bản nháp, lịch sử, tiếp tục và chống nộp trùng. Đã tìm/sửa lỗi UI dùng state cũ sau chuyển tab; mount chờ lượt ghi còn chờ rồi tải state mới. Không đổi lịch thẻ hoặc mốc hoàn thành Học.
+- [x] Backend/adapter AI tạo theo lô tối đa hai câu, tiến độ/hủy và khóa chung; source AI tách thống kê/sổ lỗi. Bộ AI lưu nguyên trong phiên; lỗi/hủy không thay bộ cũ. JSON schema giới hạn dạng câu, hậu kiểm căn cứ/chỗ trống/ngôn ngữ thô; không nhận prompt tùy ý.
+- [x] Build/content/manifest qua; 31 core/adapter và 43 backend qua. Sau sửa retry AI, 6/6 backend Skills qua. Lượt Edge đầy đủ 46/46 kiểm tra cả 72 bài; 11/11 flow liên quan sau sửa nội dung/audio; bản sửa cuối khôi phục draft qua tab/resume đã qua 5/5 Skills. Có một lượt 4/5 Skills lỗi do cờ chặn lưu khởi tạo sai trong bản sửa giữa chừng; đã sửa và chạy lại đủ năm, không bỏ kiểm tra.
+- [x] Smoke zh-TW thật qua API/playback/dừng. Smoke Qwen CPU/CUDA thật chạy, **lượt cuối đều bị hậu kiểm từ chối** (CPU: dịch lẫn Hán tự; CUDA: câu hỏi lặp). AI optional chưa ổn định, không khẳng định có bộ qua toàn bộ kiểm tra cuối. Chi tiết/timing/lỗi ở [RELEASE-V7](RELEASE-V7.md), kết quả thô `data/practice-smoke-v7*.json`. Không đổi cấu hình/model, không benchmark lại toàn bộ.
+- [x] Sao lưu trước restart và trước nâng gói. API transaction nâng v6→v7 ngày `20260929-132736`; **state giữ nguyên 15 objects/44 events**, SHA-256 trước/sau `62531c7e9c48153893f55454ba93e2037a590351b39005cd859001786beb02ba`. Backup `data/backups/before-v7-20260929-132736.json`, report cùng timestamp. Không sửa trực tiếp database hoặc reset lịch ôn.
+- [x] Bản cuối chạy `http://127.0.0.1:8765`; smoke Edge bản cài desktop/mobile không tràn, không page error/request ngoài loopback, đủ 216 bộ/720 câu, toggle đoạn 8 câu và state trước restart/sau smoke bằng nhau. Artifact `data/v7-installed-smoke.json`, `data/v7-installed-{desktop,mobile}.png`. Lưu checkpoint Git local, không push.
+- [ ] Nội dung mới chưa giáo viên duyệt, TTS chưa nghe duyệt, AI còn lỗi nghĩa/Pinyin. Xem giới hạn trong bàn giao; chưa nghiệm thu Windows v1/B2.
+
 ## Điều tra Start.cmd tự dừng — 29/09/2026
 
 - [x] Log người dùng cho thấy startup thành công, shutdown hoàn tất rồi `KeyboardInterrupt`/`^C`; người dùng xác nhận không tự bấm ngắt. Uvicorn cài đặt phát lại signal sau cleanup; launcher nay bắt riêng KeyboardInterrupt ở entrypoint, không che lỗi khác. Không coi favicon 404 là nguyên nhân.

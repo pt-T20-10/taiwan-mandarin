@@ -1,6 +1,6 @@
 # Đảo nhỏ — Hoa ngữ Đài Loan
 
-Ứng dụng học local cho Windows, UI tiếng Việt. **Bản đang phát triển, chưa đạt nghiệm thu Windows v1.** Gói v6 có 18 chủ đề/72 bài, 360 mục từ, animation 424 chữ, grid Pinyin bằng chữ và tab Ngữ pháp 36 mục/144 bài tập riêng. Sáu chủ đề mới được biên soạn theo định hướng A2, chưa phải chứng nhận trình độ. Phần lớn nội dung chưa giáo viên duyệt; chấm viết tay vẫn giới hạn 12 chữ. Người dùng đã xác nhận nghe câu mới, ghi âm và nghe lại offline được; ASR còn sai và giọng đọc chưa tự nhiên.
+Ứng dụng học local cho Windows, UI tiếng Việt. **Bản đang phát triển, chưa đạt nghiệm thu Windows v1.** Gói v7 có 18 chủ đề/72 bài/720 bài tập, 216 bộ luyện bốn kỹ năng với 1.620 câu/lượt luyện, 360 mục từ và tab Ngữ pháp 36 mục/144 bài tập riêng. Sáu chủ đề mới định hướng A2, chưa phải chứng nhận trình độ. Nội dung mới còn là bản nháp, chưa giáo viên duyệt; animation phủ 424 chữ, chấm viết tay vẫn giới hạn 12 chữ. Xem [bàn giao v7](docs/RELEASE-V7.md).
 
 ## Dùng hằng ngày
 
@@ -10,7 +10,9 @@ Nếu terminal hiện `KeyboardInterrupt`/`^C`, tiến trình đã nhận tín h
 
 Tiến độ nằm trong `data/learning.sqlite3`. Tải sao lưu ở Cài đặt; phục hồi cũng tại đó. Mỗi thiết bị dùng SQLite, không phụ thuộc cache trình duyệt. Không chia sẻ thư mục data nếu có thông tin cá nhân.
 
-Trong **Học**, chọn từng chữ cạnh từ để xem nét; tổng kết có nút chuyển bài/chủ đề và giữ tiến độ cũ. Trong **Phát âm**, bấm trực tiếp grid 406 âm tiết, tìm nhanh, chọn thanh và xem cách ghép bằng chữ; sáu nhóm quy tắc giữ đủ ví dụ 一/不/thanh nhẹ. Đã bỏ audio âm tiết/đánh vần; ví dụ Hán tự vẫn đọc bằng zh-TW. Trong **Ngữ pháp**, học và lưu tiến độ riêng, xem kiến thức tiên quyết; lộ trình 27 lô B2 là kế hoạch biên soạn, chưa phải nội dung B2 hoàn thành. Xem [nguồn/giấy phép tài sản](public/learning/ATTRIBUTION.md).
+Trong **Học**, mỗi bài mới có 10 câu; bài v6 đang dở giữ danh sách câu cũ. Hội thoại giới thiệu có 8 câu, nút bật/tắt Pinyin và tiếng Việt. Liên kết “Luyện thêm” mở đúng chủ đề/kỹ năng. Trong **Luyện kỹ năng**, chọn **Bộ đề mới**, làm hoặc bỏ qua từng câu rồi xem tổng kết. Ba bộ soạn sẵn luân phiên không lặp trong một vòng; bản nháp tự lưu, danh sách “Bài đang dở và lịch sử” cho tiếp tục. Đọc/Nói ẩn Pinyin và nghĩa mặc định. Nói cho ghi âm/nghe lại/sửa transcript; Nói/Viết không tự chấm đúng sai. **Tạo đề bằng AI** là thử nghiệm, có hủy và có thể thất bại do model; bộ hợp lệ ghi “Chưa kiểm chứng”, không cộng vào điểm chuẩn.
+
+Trong **Phát âm**, bảng 406 âm tiết mở bốn thanh khi hover/chạm; click thanh để nghe bản thu riêng. Có 1.598 bản thu và 26 tổ hợp thiếu, nhãn nguồn Quan thoại phổ thông. Từ/câu và ví dụ biến điệu vẫn dùng zh-TW. Trong **Ngữ pháp**, tiến độ riêng và lộ trình 27 lô B2 vẫn là kế hoạch biên soạn. Xem [nguồn/giấy phép tài sản](public/learning/ATTRIBUTION.md).
 
 ## Cài dependency/build lại
 
@@ -45,7 +47,7 @@ Trong Cài đặt có màn hình ghi âm/nghe lại/nhận dạng, danh sách vo
 
 Chữ/flashcard/ghi chú dùng offline. Bài nghe cần giọng local đã chọn; thiếu có thể bỏ qua, không tính đạt kỹ năng. ASR không phải chấm thanh điệu. AI sinh Pinyin/dịch có thể sai và không tham gia chấm bài đóng.
 
-Chỉ dùng giọng **Windows/browser zh-TW local**. Chọn giọng và nhịp trong Cài đặt/Phát âm, nghe thử cả câu. Kokoro và audio Pinyin đã gỡ theo lựa chọn của người dùng. Setting Kokoro cũ được backup rồi chuyển riêng voice về `auto`, giữ nhịp và nhận xét. Thiếu zh-TW thì báo thiếu và cho bỏ qua bài nghe. Gói Traditional Chinese của Windows cung cấp giọng local, không tự biến giọng cũ thành neural hoặc bảo đảm đọc tự nhiên.
+Từ/câu dùng giọng **Windows/browser zh-TW local**. Chọn giọng và nhịp trong Cài đặt/Phát âm, nghe thử cả câu. Kokoro đã gỡ; bản thu Pinyin được khôi phục riêng cho bảng theo yêu cầu tiếp theo. Setting Kokoro cũ được backup rồi chuyển riêng voice về `auto`, giữ nhịp và nhận xét. Thiếu zh-TW thì báo thiếu và cho bỏ qua bài nghe. Gói Traditional Chinese của Windows cung cấp giọng local, không bảo đảm đọc tự nhiên.
 
 Nút nghe cạnh Hán tự hoặc Pinyin đọc nguyên từ/cụm/câu. Chọn giọng và nhịp trong Cài đặt hoặc mục **Phát âm**. Mục Phát âm có bài đối chiếu biến điệu, thanh nhẹ và nhịp câu; âm TTS chưa được chứng nhận phát âm chuẩn. Đã bỏ câu gợi dẫn ASR gây lặp transcript; cần thu lại câu để kiểm tra trên micro thật sau khi cập nhật.
 

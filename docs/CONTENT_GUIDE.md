@@ -1,5 +1,11 @@
 # Quy tắc nội dung
 
+## Bổ sung v7 — 29/09/2026
+
+720 bài tập/72 bài, 216 bộ luyện/1.620 câu-lượt; hội thoại 18 chủ đề đủ 8 câu. `practice_scenarios.py` chứa 54 tình huống và cụm đã ghi Phồn thể/Pinyin/nghĩa; `practice_dialogues.py` nối đúng hội thoại cũ. Rà cụm trong khung câu, nghĩa, đáp án/căn cứ và các trường hợp phi lý (mang thực đơn tới quán, vừa đến nơi đã về nhà); đã sửa các trường hợp này. Chưa có giáo viên duyệt, không nâng source-checked. Các khung đọc/nghe luyện kế hoạch, thông tin, quan hệ người đi cùng và mục đích chính; chưa thay cho giáo trình đọc mở rộng. Xem [RELEASE-V7](RELEASE-V7.md) về thiết kế, kiểm tra và giới hạn AI.
+
+Toàn bộ 540 bài tập cũ/18 chủ đề khóa bằng fixture v6, ID giữ nguyên. Bài mới theo lesson giữ `.v7.extraN`, bộ Skills theo chủ đề/kỹ năng/số bộ/câu. AI có ID riêng và nhãn chưa kiểm chứng. Khác biệt Hán tự giữ khi chấm; gợi ý nghĩa không được tự hiện câu hoàn chỉnh/audio đáp án trước nộp. Pinyin bảng bốn thanh và tab Viết chữ không đổi trong v7; bản thu riêng đã được khôi phục theo yêu cầu ngày 28/09.
+
 ## Nội dung hiện tại v6 — 27/09/2026
 
 - 18 chủ đề, 72 bài, 360 mục từ, 36 ngữ pháp; 540 bài tập trong bài và 144 bài ngữ pháp riêng. 12 chủ đề/24 grammar cũ giữ nguyên nội dung/ID, khóa bằng hash fixture.

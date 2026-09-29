@@ -118,6 +118,12 @@ def validate_object(collection, data):
         raise ValueError('Tiến độ bài học không hợp lệ')
     if collection == 'notes' and not isinstance(data.get('text'),str):
         raise ValueError('Ghi chú không hợp lệ')
+    if collection=='sessions' and data.get('scope')=='skills':
+        from .content import PracticeSet
+        packet=PracticeSet.model_validate(data.get('packet'))
+        if data.get('skill')!=packet.skill or not data.get('run') or not data.get('unit_id'):raise ValueError('Sai liên kết phiên luyện')
+        if data['index']>len(packet.items):raise ValueError('Vị trí câu vượt bộ đề')
+        if data.get('phase')=='summary' and data['index']!=len(packet.items):raise ValueError('Bộ đề chưa hoàn thành')
 
 def save_event(event, mutation=None):
     with connect() as db:
@@ -128,6 +134,7 @@ def save_event(event, mutation=None):
             if old['id'] == event['id'] and old != event:
                 raise Conflict('ID sự kiện đã được dùng cho nội dung khác')
             fields=('kind','skill','item_id','correct','assisted','answer','rating','algorithm')
+            if old.get('source','authored')!=event.get('source','authored'):raise Conflict('Nguồn sự kiện không khớp')
             if any(old.get(key)!=event.get(key) for key in fields):
                 raise Conflict('Câu/thẻ này đã được trả lời khác ở tab còn lại. Hãy tải lại để xem kết quả đã lưu.')
             return {'duplicate': True}

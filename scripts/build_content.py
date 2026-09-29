@@ -8,6 +8,7 @@ from content.seeds import UNITS, READING
 from content.a2 import UNITS as A2_UNITS, READING as A2_READING
 from content.grammar_details import enrich
 from content.grammar_roadmap import organize
+from content.practice import extend_unit
 from backend.content import Content, envelope
 
 def text(row):
@@ -82,7 +83,8 @@ def build(limit=None):
                 exercises.append(exercise(lid, 'write', 'writing', writing, [grammar[0]['hanzi']], 'Đáp án mẫu chỉ để tham khảo; bài mở không chấm đúng/sai tự động.', skill='writing'))
             lessons.append(dict(id=lid,title=name,objective=description,word_ids=[w['id'] for w in selected],grammar_ids=[g['id'] for g in grammar] if index==1 else [],exercises=exercises))
         units.append(dict(id=uid,title=title,description=description,words=words,grammar=grammar,dialogue=dialogue,writing_prompt=writing,character=character,lessons=lessons))
-    payload = Content.model_validate(dict(id='foundation-tw',version=6,title='Bước đầu đến Đài Loan',license='Original AI-assisted teaching text. TBCL catalog: reference labels and levels only; no textbook examples copied. Local assets carry separate licenses.',source_note='Nội dung do dự án biên soạn; chưa có giáo viên duyệt. Sáu chủ đề mới định hướng A2, không chứng nhận trình độ. Ngữ pháp có tham chiếu TBCL, không đồng nhất cấp TBCL với CEFR/B2. TTS chỉ dùng zh-TW; bảng Pinyin không có audio mẫu.',units=units,grammar_roadmap=roadmap,grammar_batches=batches)).model_dump()
+    for unit in units:extend_unit(unit)
+    payload = Content.model_validate(dict(id='foundation-tw',version=7,title='Bước đầu đến Đài Loan',license='Original AI-assisted teaching text. TBCL catalog: reference labels and levels only; no textbook examples copied. Local assets carry separate licenses.',source_note='Nội dung do dự án biên soạn; chưa có giáo viên duyệt. Có ngân hàng luyện bốn kỹ năng; bài AI được tách điểm. Sáu chủ đề mới định hướng A2, không chứng nhận trình độ. Từ/câu dùng zh-TW; bảng Pinyin dùng bản thu riêng có nhãn nguồn.',units=units,grammar_roadmap=roadmap,grammar_batches=batches)).model_dump()
     (ROOT/'content/foundation.pack.json').write_text(json.dumps(envelope(payload),ensure_ascii=False,indent=2),encoding='utf-8')
     print(f'Built {len(units)} units; {sum(len(u["words"]) for u in units)} words')
 

@@ -1,0 +1,794 @@
+{
+  "tw.greetings": {
+    "sha256": "f76cae964ed7d627efc9b110fcdd9448115ba21461dfc0f1ee13865f321ecc4d",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.greetings.lesson.1": [
+        "tw.greetings.lesson.1.meaning0",
+        "tw.greetings.lesson.1.meaning1",
+        "tw.greetings.lesson.1.meaning2",
+        "tw.greetings.lesson.1.meaning3",
+        "tw.greetings.lesson.1.meaning4",
+        "tw.greetings.lesson.1.pinyin"
+      ],
+      "tw.greetings.lesson.2": [
+        "tw.greetings.lesson.2.recall0",
+        "tw.greetings.lesson.2.recall1",
+        "tw.greetings.lesson.2.recall2",
+        "tw.greetings.lesson.2.recall3",
+        "tw.greetings.lesson.2.recall4",
+        "tw.greetings.lesson.2.translate0",
+        "tw.greetings.lesson.2.translate1",
+        "tw.greetings.lesson.2.cloze"
+      ],
+      "tw.greetings.lesson.3": [
+        "tw.greetings.lesson.3.recall0",
+        "tw.greetings.lesson.3.recall1",
+        "tw.greetings.lesson.3.recall2",
+        "tw.greetings.lesson.3.recall3",
+        "tw.greetings.lesson.3.recall4",
+        "tw.greetings.lesson.3.listen",
+        "tw.greetings.lesson.3.dictate",
+        "tw.greetings.lesson.3.read",
+        "tw.greetings.lesson.3.reading-detail"
+      ],
+      "tw.greetings.lesson.4": [
+        "tw.greetings.lesson.4.recall0",
+        "tw.greetings.lesson.4.recall1",
+        "tw.greetings.lesson.4.recall2",
+        "tw.greetings.lesson.4.recall3",
+        "tw.greetings.lesson.4.recall4",
+        "tw.greetings.lesson.4.say",
+        "tw.greetings.lesson.4.write"
+      ]
+    }
+  },
+  "tw.numbers": {
+    "sha256": "cd93a4bf5c0a01cd258ca9f036af9db9cad45c93199b042249e12d4c4d07c38a",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.numbers.lesson.1": [
+        "tw.numbers.lesson.1.meaning0",
+        "tw.numbers.lesson.1.meaning1",
+        "tw.numbers.lesson.1.meaning2",
+        "tw.numbers.lesson.1.meaning3",
+        "tw.numbers.lesson.1.meaning4",
+        "tw.numbers.lesson.1.pinyin"
+      ],
+      "tw.numbers.lesson.2": [
+        "tw.numbers.lesson.2.recall0",
+        "tw.numbers.lesson.2.recall1",
+        "tw.numbers.lesson.2.recall2",
+        "tw.numbers.lesson.2.recall3",
+        "tw.numbers.lesson.2.recall4",
+        "tw.numbers.lesson.2.translate0",
+        "tw.numbers.lesson.2.translate1",
+        "tw.numbers.lesson.2.cloze"
+      ],
+      "tw.numbers.lesson.3": [
+        "tw.numbers.lesson.3.recall0",
+        "tw.numbers.lesson.3.recall1",
+        "tw.numbers.lesson.3.recall2",
+        "tw.numbers.lesson.3.recall3",
+        "tw.numbers.lesson.3.recall4",
+        "tw.numbers.lesson.3.listen",
+        "tw.numbers.lesson.3.dictate",
+        "tw.numbers.lesson.3.read",
+        "tw.numbers.lesson.3.reading-detail"
+      ],
+      "tw.numbers.lesson.4": [
+        "tw.numbers.lesson.4.recall0",
+        "tw.numbers.lesson.4.recall1",
+        "tw.numbers.lesson.4.recall2",
+        "tw.numbers.lesson.4.recall3",
+        "tw.numbers.lesson.4.recall4",
+        "tw.numbers.lesson.4.say",
+        "tw.numbers.lesson.4.write"
+      ]
+    }
+  },
+  "tw.food": {
+    "sha256": "6ca025f2771fe6409fe7c4bbfa38d8fa876c7bbfd725d8a0b47dd1dfb3295c95",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.food.lesson.1": [
+        "tw.food.lesson.1.meaning0",
+        "tw.food.lesson.1.meaning1",
+        "tw.food.lesson.1.meaning2",
+        "tw.food.lesson.1.meaning3",
+        "tw.food.lesson.1.meaning4",
+        "tw.food.lesson.1.pinyin"
+      ],
+      "tw.food.lesson.2": [
+        "tw.food.lesson.2.recall0",
+        "tw.food.lesson.2.recall1",
+        "tw.food.lesson.2.recall2",
+        "tw.food.lesson.2.recall3",
+        "tw.food.lesson.2.recall4",
+        "tw.food.lesson.2.translate0",
+        "tw.food.lesson.2.translate1",
+        "tw.food.lesson.2.cloze"
+      ],
+      "tw.food.lesson.3": [
+        "tw.food.lesson.3.recall0",
+        "tw.food.lesson.3.recall1",
+        "tw.food.lesson.3.recall2",
+        "tw.food.lesson.3.recall3",
+        "tw.food.lesson.3.recall4",
+        "tw.food.lesson.3.listen",
+        "tw.food.lesson.3.dictate",
+        "tw.food.lesson.3.read",
+        "tw.food.lesson.3.reading-detail"
+      ],
+      "tw.food.lesson.4": [
+        "tw.food.lesson.4.recall0",
+        "tw.food.lesson.4.recall1",
+        "tw.food.lesson.4.recall2",
+        "tw.food.lesson.4.recall3",
+        "tw.food.lesson.4.recall4",
+        "tw.food.lesson.4.say",
+        "tw.food.lesson.4.write"
+      ]
+    }
+  },
+  "tw.shopping": {
+    "sha256": "a45c9fb2a90b51628c5ebd0529ef6802bd2ce4bceafdc606d778d1124f28d390",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.shopping.lesson.1": [
+        "tw.shopping.lesson.1.meaning0",
+        "tw.shopping.lesson.1.meaning1",
+        "tw.shopping.lesson.1.meaning2",
+        "tw.shopping.lesson.1.meaning3",
+        "tw.shopping.lesson.1.meaning4",
+        "tw.shopping.lesson.1.pinyin"
+      ],
+      "tw.shopping.lesson.2": [
+        "tw.shopping.lesson.2.recall0",
+        "tw.shopping.lesson.2.recall1",
+        "tw.shopping.lesson.2.recall2",
+        "tw.shopping.lesson.2.recall3",
+        "tw.shopping.lesson.2.recall4",
+        "tw.shopping.lesson.2.translate0",
+        "tw.shopping.lesson.2.translate1",
+        "tw.shopping.lesson.2.cloze"
+      ],
+      "tw.shopping.lesson.3": [
+        "tw.shopping.lesson.3.recall0",
+        "tw.shopping.lesson.3.recall1",
+        "tw.shopping.lesson.3.recall2",
+        "tw.shopping.lesson.3.recall3",
+        "tw.shopping.lesson.3.recall4",
+        "tw.shopping.lesson.3.listen",
+        "tw.shopping.lesson.3.dictate",
+        "tw.shopping.lesson.3.read",
+        "tw.shopping.lesson.3.reading-detail"
+      ],
+      "tw.shopping.lesson.4": [
+        "tw.shopping.lesson.4.recall0",
+        "tw.shopping.lesson.4.recall1",
+        "tw.shopping.lesson.4.recall2",
+        "tw.shopping.lesson.4.recall3",
+        "tw.shopping.lesson.4.recall4",
+        "tw.shopping.lesson.4.say",
+        "tw.shopping.lesson.4.write"
+      ]
+    }
+  },
+  "tw.transport": {
+    "sha256": "d0cca739c1cc9da1a395f7d612ffae2bd0da0579de84474f88ff362ed35053ce",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.transport.lesson.1": [
+        "tw.transport.lesson.1.meaning0",
+        "tw.transport.lesson.1.meaning1",
+        "tw.transport.lesson.1.meaning2",
+        "tw.transport.lesson.1.meaning3",
+        "tw.transport.lesson.1.meaning4",
+        "tw.transport.lesson.1.pinyin"
+      ],
+      "tw.transport.lesson.2": [
+        "tw.transport.lesson.2.recall0",
+        "tw.transport.lesson.2.recall1",
+        "tw.transport.lesson.2.recall2",
+        "tw.transport.lesson.2.recall3",
+        "tw.transport.lesson.2.recall4",
+        "tw.transport.lesson.2.translate0",
+        "tw.transport.lesson.2.translate1",
+        "tw.transport.lesson.2.cloze"
+      ],
+      "tw.transport.lesson.3": [
+        "tw.transport.lesson.3.recall0",
+        "tw.transport.lesson.3.recall1",
+        "tw.transport.lesson.3.recall2",
+        "tw.transport.lesson.3.recall3",
+        "tw.transport.lesson.3.recall4",
+        "tw.transport.lesson.3.listen",
+        "tw.transport.lesson.3.dictate",
+        "tw.transport.lesson.3.read",
+        "tw.transport.lesson.3.reading-detail"
+      ],
+      "tw.transport.lesson.4": [
+        "tw.transport.lesson.4.recall0",
+        "tw.transport.lesson.4.recall1",
+        "tw.transport.lesson.4.recall2",
+        "tw.transport.lesson.4.recall3",
+        "tw.transport.lesson.4.recall4",
+        "tw.transport.lesson.4.say",
+        "tw.transport.lesson.4.write"
+      ]
+    }
+  },
+  "tw.family": {
+    "sha256": "dfb923fde3260a9cf27ce997761590bbf224e621143e42f28bc92c9f03505baa",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.family.lesson.1": [
+        "tw.family.lesson.1.meaning0",
+        "tw.family.lesson.1.meaning1",
+        "tw.family.lesson.1.meaning2",
+        "tw.family.lesson.1.meaning3",
+        "tw.family.lesson.1.meaning4",
+        "tw.family.lesson.1.pinyin"
+      ],
+      "tw.family.lesson.2": [
+        "tw.family.lesson.2.recall0",
+        "tw.family.lesson.2.recall1",
+        "tw.family.lesson.2.recall2",
+        "tw.family.lesson.2.recall3",
+        "tw.family.lesson.2.recall4",
+        "tw.family.lesson.2.translate0",
+        "tw.family.lesson.2.translate1",
+        "tw.family.lesson.2.cloze"
+      ],
+      "tw.family.lesson.3": [
+        "tw.family.lesson.3.recall0",
+        "tw.family.lesson.3.recall1",
+        "tw.family.lesson.3.recall2",
+        "tw.family.lesson.3.recall3",
+        "tw.family.lesson.3.recall4",
+        "tw.family.lesson.3.listen",
+        "tw.family.lesson.3.dictate",
+        "tw.family.lesson.3.read",
+        "tw.family.lesson.3.reading-detail"
+      ],
+      "tw.family.lesson.4": [
+        "tw.family.lesson.4.recall0",
+        "tw.family.lesson.4.recall1",
+        "tw.family.lesson.4.recall2",
+        "tw.family.lesson.4.recall3",
+        "tw.family.lesson.4.recall4",
+        "tw.family.lesson.4.say",
+        "tw.family.lesson.4.write"
+      ]
+    }
+  },
+  "tw.home": {
+    "sha256": "c87b39e92af069597f05d9b57e276ee8963f4397b77d9545182c89dea11fd249",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.home.lesson.1": [
+        "tw.home.lesson.1.meaning0",
+        "tw.home.lesson.1.meaning1",
+        "tw.home.lesson.1.meaning2",
+        "tw.home.lesson.1.meaning3",
+        "tw.home.lesson.1.meaning4",
+        "tw.home.lesson.1.pinyin"
+      ],
+      "tw.home.lesson.2": [
+        "tw.home.lesson.2.recall0",
+        "tw.home.lesson.2.recall1",
+        "tw.home.lesson.2.recall2",
+        "tw.home.lesson.2.recall3",
+        "tw.home.lesson.2.recall4",
+        "tw.home.lesson.2.translate0",
+        "tw.home.lesson.2.translate1",
+        "tw.home.lesson.2.cloze"
+      ],
+      "tw.home.lesson.3": [
+        "tw.home.lesson.3.recall0",
+        "tw.home.lesson.3.recall1",
+        "tw.home.lesson.3.recall2",
+        "tw.home.lesson.3.recall3",
+        "tw.home.lesson.3.recall4",
+        "tw.home.lesson.3.listen",
+        "tw.home.lesson.3.dictate",
+        "tw.home.lesson.3.read",
+        "tw.home.lesson.3.reading-detail"
+      ],
+      "tw.home.lesson.4": [
+        "tw.home.lesson.4.recall0",
+        "tw.home.lesson.4.recall1",
+        "tw.home.lesson.4.recall2",
+        "tw.home.lesson.4.recall3",
+        "tw.home.lesson.4.recall4",
+        "tw.home.lesson.4.say",
+        "tw.home.lesson.4.write"
+      ]
+    }
+  },
+  "tw.schedule": {
+    "sha256": "53ab4beb1b6602c4484328ee0a72ded1471a791a2f44dd39cb7ccd5134fefe57",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.schedule.lesson.1": [
+        "tw.schedule.lesson.1.meaning0",
+        "tw.schedule.lesson.1.meaning1",
+        "tw.schedule.lesson.1.meaning2",
+        "tw.schedule.lesson.1.meaning3",
+        "tw.schedule.lesson.1.meaning4",
+        "tw.schedule.lesson.1.pinyin"
+      ],
+      "tw.schedule.lesson.2": [
+        "tw.schedule.lesson.2.recall0",
+        "tw.schedule.lesson.2.recall1",
+        "tw.schedule.lesson.2.recall2",
+        "tw.schedule.lesson.2.recall3",
+        "tw.schedule.lesson.2.recall4",
+        "tw.schedule.lesson.2.translate0",
+        "tw.schedule.lesson.2.translate1",
+        "tw.schedule.lesson.2.cloze"
+      ],
+      "tw.schedule.lesson.3": [
+        "tw.schedule.lesson.3.recall0",
+        "tw.schedule.lesson.3.recall1",
+        "tw.schedule.lesson.3.recall2",
+        "tw.schedule.lesson.3.recall3",
+        "tw.schedule.lesson.3.recall4",
+        "tw.schedule.lesson.3.listen",
+        "tw.schedule.lesson.3.dictate",
+        "tw.schedule.lesson.3.read",
+        "tw.schedule.lesson.3.reading-detail"
+      ],
+      "tw.schedule.lesson.4": [
+        "tw.schedule.lesson.4.recall0",
+        "tw.schedule.lesson.4.recall1",
+        "tw.schedule.lesson.4.recall2",
+        "tw.schedule.lesson.4.recall3",
+        "tw.schedule.lesson.4.recall4",
+        "tw.schedule.lesson.4.say",
+        "tw.schedule.lesson.4.write"
+      ]
+    }
+  },
+  "tw.information": {
+    "sha256": "18e4a2edde33a14d5fccbadcf4f16a68b67abdf24468ece38038d17c1059a755",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.information.lesson.1": [
+        "tw.information.lesson.1.meaning0",
+        "tw.information.lesson.1.meaning1",
+        "tw.information.lesson.1.meaning2",
+        "tw.information.lesson.1.meaning3",
+        "tw.information.lesson.1.meaning4",
+        "tw.information.lesson.1.pinyin"
+      ],
+      "tw.information.lesson.2": [
+        "tw.information.lesson.2.recall0",
+        "tw.information.lesson.2.recall1",
+        "tw.information.lesson.2.recall2",
+        "tw.information.lesson.2.recall3",
+        "tw.information.lesson.2.recall4",
+        "tw.information.lesson.2.translate0",
+        "tw.information.lesson.2.translate1",
+        "tw.information.lesson.2.cloze"
+      ],
+      "tw.information.lesson.3": [
+        "tw.information.lesson.3.recall0",
+        "tw.information.lesson.3.recall1",
+        "tw.information.lesson.3.recall2",
+        "tw.information.lesson.3.recall3",
+        "tw.information.lesson.3.recall4",
+        "tw.information.lesson.3.listen",
+        "tw.information.lesson.3.dictate",
+        "tw.information.lesson.3.read",
+        "tw.information.lesson.3.reading-detail"
+      ],
+      "tw.information.lesson.4": [
+        "tw.information.lesson.4.recall0",
+        "tw.information.lesson.4.recall1",
+        "tw.information.lesson.4.recall2",
+        "tw.information.lesson.4.recall3",
+        "tw.information.lesson.4.recall4",
+        "tw.information.lesson.4.say",
+        "tw.information.lesson.4.write"
+      ]
+    }
+  },
+  "tw.classroom": {
+    "sha256": "31c0bec1e29c9d585a9fc0f4307d4dc872c0ef787d37c367ec896611157595ac",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.classroom.lesson.1": [
+        "tw.classroom.lesson.1.meaning0",
+        "tw.classroom.lesson.1.meaning1",
+        "tw.classroom.lesson.1.meaning2",
+        "tw.classroom.lesson.1.meaning3",
+        "tw.classroom.lesson.1.meaning4",
+        "tw.classroom.lesson.1.pinyin"
+      ],
+      "tw.classroom.lesson.2": [
+        "tw.classroom.lesson.2.recall0",
+        "tw.classroom.lesson.2.recall1",
+        "tw.classroom.lesson.2.recall2",
+        "tw.classroom.lesson.2.recall3",
+        "tw.classroom.lesson.2.recall4",
+        "tw.classroom.lesson.2.translate0",
+        "tw.classroom.lesson.2.translate1",
+        "tw.classroom.lesson.2.cloze"
+      ],
+      "tw.classroom.lesson.3": [
+        "tw.classroom.lesson.3.recall0",
+        "tw.classroom.lesson.3.recall1",
+        "tw.classroom.lesson.3.recall2",
+        "tw.classroom.lesson.3.recall3",
+        "tw.classroom.lesson.3.recall4",
+        "tw.classroom.lesson.3.listen",
+        "tw.classroom.lesson.3.dictate",
+        "tw.classroom.lesson.3.read",
+        "tw.classroom.lesson.3.reading-detail"
+      ],
+      "tw.classroom.lesson.4": [
+        "tw.classroom.lesson.4.recall0",
+        "tw.classroom.lesson.4.recall1",
+        "tw.classroom.lesson.4.recall2",
+        "tw.classroom.lesson.4.recall3",
+        "tw.classroom.lesson.4.recall4",
+        "tw.classroom.lesson.4.say",
+        "tw.classroom.lesson.4.write"
+      ]
+    }
+  },
+  "tw.daily": {
+    "sha256": "31248c89de7e4512b205093e47eb4bbeffb29893a7e550c7c50826471ed45327",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.daily.lesson.1": [
+        "tw.daily.lesson.1.meaning0",
+        "tw.daily.lesson.1.meaning1",
+        "tw.daily.lesson.1.meaning2",
+        "tw.daily.lesson.1.meaning3",
+        "tw.daily.lesson.1.meaning4",
+        "tw.daily.lesson.1.pinyin"
+      ],
+      "tw.daily.lesson.2": [
+        "tw.daily.lesson.2.recall0",
+        "tw.daily.lesson.2.recall1",
+        "tw.daily.lesson.2.recall2",
+        "tw.daily.lesson.2.recall3",
+        "tw.daily.lesson.2.recall4",
+        "tw.daily.lesson.2.translate0",
+        "tw.daily.lesson.2.translate1",
+        "tw.daily.lesson.2.cloze"
+      ],
+      "tw.daily.lesson.3": [
+        "tw.daily.lesson.3.recall0",
+        "tw.daily.lesson.3.recall1",
+        "tw.daily.lesson.3.recall2",
+        "tw.daily.lesson.3.recall3",
+        "tw.daily.lesson.3.recall4",
+        "tw.daily.lesson.3.listen",
+        "tw.daily.lesson.3.dictate",
+        "tw.daily.lesson.3.read",
+        "tw.daily.lesson.3.reading-detail"
+      ],
+      "tw.daily.lesson.4": [
+        "tw.daily.lesson.4.recall0",
+        "tw.daily.lesson.4.recall1",
+        "tw.daily.lesson.4.recall2",
+        "tw.daily.lesson.4.recall3",
+        "tw.daily.lesson.4.recall4",
+        "tw.daily.lesson.4.say",
+        "tw.daily.lesson.4.write"
+      ]
+    }
+  },
+  "tw.campus": {
+    "sha256": "fe7f0c0cd3ca85587ff8dd825af6413b015ea5425b7e8141bbd87d189e381232",
+    "dialogue_count": 3,
+    "lesson_ids": {
+      "tw.campus.lesson.1": [
+        "tw.campus.lesson.1.meaning0",
+        "tw.campus.lesson.1.meaning1",
+        "tw.campus.lesson.1.meaning2",
+        "tw.campus.lesson.1.meaning3",
+        "tw.campus.lesson.1.meaning4",
+        "tw.campus.lesson.1.pinyin"
+      ],
+      "tw.campus.lesson.2": [
+        "tw.campus.lesson.2.recall0",
+        "tw.campus.lesson.2.recall1",
+        "tw.campus.lesson.2.recall2",
+        "tw.campus.lesson.2.recall3",
+        "tw.campus.lesson.2.recall4",
+        "tw.campus.lesson.2.translate0",
+        "tw.campus.lesson.2.translate1",
+        "tw.campus.lesson.2.cloze"
+      ],
+      "tw.campus.lesson.3": [
+        "tw.campus.lesson.3.recall0",
+        "tw.campus.lesson.3.recall1",
+        "tw.campus.lesson.3.recall2",
+        "tw.campus.lesson.3.recall3",
+        "tw.campus.lesson.3.recall4",
+        "tw.campus.lesson.3.listen",
+        "tw.campus.lesson.3.dictate",
+        "tw.campus.lesson.3.read",
+        "tw.campus.lesson.3.reading-detail"
+      ],
+      "tw.campus.lesson.4": [
+        "tw.campus.lesson.4.recall0",
+        "tw.campus.lesson.4.recall1",
+        "tw.campus.lesson.4.recall2",
+        "tw.campus.lesson.4.recall3",
+        "tw.campus.lesson.4.recall4",
+        "tw.campus.lesson.4.say",
+        "tw.campus.lesson.4.write"
+      ]
+    }
+  },
+  "tw.health": {
+    "sha256": "47012fac8b02e6a83f9e2f5bca9712d18dcb2022112f8e2768fb0677525fc935",
+    "dialogue_count": 6,
+    "lesson_ids": {
+      "tw.health.lesson.1": [
+        "tw.health.lesson.1.meaning0",
+        "tw.health.lesson.1.meaning1",
+        "tw.health.lesson.1.meaning2",
+        "tw.health.lesson.1.meaning3",
+        "tw.health.lesson.1.meaning4",
+        "tw.health.lesson.1.pinyin"
+      ],
+      "tw.health.lesson.2": [
+        "tw.health.lesson.2.recall0",
+        "tw.health.lesson.2.recall1",
+        "tw.health.lesson.2.recall2",
+        "tw.health.lesson.2.recall3",
+        "tw.health.lesson.2.recall4",
+        "tw.health.lesson.2.translate0",
+        "tw.health.lesson.2.translate1",
+        "tw.health.lesson.2.cloze"
+      ],
+      "tw.health.lesson.3": [
+        "tw.health.lesson.3.recall0",
+        "tw.health.lesson.3.recall1",
+        "tw.health.lesson.3.recall2",
+        "tw.health.lesson.3.recall3",
+        "tw.health.lesson.3.recall4",
+        "tw.health.lesson.3.listen",
+        "tw.health.lesson.3.dictate",
+        "tw.health.lesson.3.read",
+        "tw.health.lesson.3.reading-detail"
+      ],
+      "tw.health.lesson.4": [
+        "tw.health.lesson.4.recall0",
+        "tw.health.lesson.4.recall1",
+        "tw.health.lesson.4.recall2",
+        "tw.health.lesson.4.recall3",
+        "tw.health.lesson.4.recall4",
+        "tw.health.lesson.4.say",
+        "tw.health.lesson.4.write"
+      ]
+    }
+  },
+  "tw.renting": {
+    "sha256": "7d0c6a04ecc1823db6607f1ec64123057d9131a6f4beb54bf9e5af4ac476ff29",
+    "dialogue_count": 6,
+    "lesson_ids": {
+      "tw.renting.lesson.1": [
+        "tw.renting.lesson.1.meaning0",
+        "tw.renting.lesson.1.meaning1",
+        "tw.renting.lesson.1.meaning2",
+        "tw.renting.lesson.1.meaning3",
+        "tw.renting.lesson.1.meaning4",
+        "tw.renting.lesson.1.pinyin"
+      ],
+      "tw.renting.lesson.2": [
+        "tw.renting.lesson.2.recall0",
+        "tw.renting.lesson.2.recall1",
+        "tw.renting.lesson.2.recall2",
+        "tw.renting.lesson.2.recall3",
+        "tw.renting.lesson.2.recall4",
+        "tw.renting.lesson.2.translate0",
+        "tw.renting.lesson.2.translate1",
+        "tw.renting.lesson.2.cloze"
+      ],
+      "tw.renting.lesson.3": [
+        "tw.renting.lesson.3.recall0",
+        "tw.renting.lesson.3.recall1",
+        "tw.renting.lesson.3.recall2",
+        "tw.renting.lesson.3.recall3",
+        "tw.renting.lesson.3.recall4",
+        "tw.renting.lesson.3.listen",
+        "tw.renting.lesson.3.dictate",
+        "tw.renting.lesson.3.read",
+        "tw.renting.lesson.3.reading-detail"
+      ],
+      "tw.renting.lesson.4": [
+        "tw.renting.lesson.4.recall0",
+        "tw.renting.lesson.4.recall1",
+        "tw.renting.lesson.4.recall2",
+        "tw.renting.lesson.4.recall3",
+        "tw.renting.lesson.4.recall4",
+        "tw.renting.lesson.4.say",
+        "tw.renting.lesson.4.write"
+      ]
+    }
+  },
+  "tw.services": {
+    "sha256": "19f833ec24f7a5bfc3148d797f657a2eab969ba5bb519e2328e1477be030135c",
+    "dialogue_count": 6,
+    "lesson_ids": {
+      "tw.services.lesson.1": [
+        "tw.services.lesson.1.meaning0",
+        "tw.services.lesson.1.meaning1",
+        "tw.services.lesson.1.meaning2",
+        "tw.services.lesson.1.meaning3",
+        "tw.services.lesson.1.meaning4",
+        "tw.services.lesson.1.pinyin"
+      ],
+      "tw.services.lesson.2": [
+        "tw.services.lesson.2.recall0",
+        "tw.services.lesson.2.recall1",
+        "tw.services.lesson.2.recall2",
+        "tw.services.lesson.2.recall3",
+        "tw.services.lesson.2.recall4",
+        "tw.services.lesson.2.translate0",
+        "tw.services.lesson.2.translate1",
+        "tw.services.lesson.2.cloze"
+      ],
+      "tw.services.lesson.3": [
+        "tw.services.lesson.3.recall0",
+        "tw.services.lesson.3.recall1",
+        "tw.services.lesson.3.recall2",
+        "tw.services.lesson.3.recall3",
+        "tw.services.lesson.3.recall4",
+        "tw.services.lesson.3.listen",
+        "tw.services.lesson.3.dictate",
+        "tw.services.lesson.3.read",
+        "tw.services.lesson.3.reading-detail"
+      ],
+      "tw.services.lesson.4": [
+        "tw.services.lesson.4.recall0",
+        "tw.services.lesson.4.recall1",
+        "tw.services.lesson.4.recall2",
+        "tw.services.lesson.4.recall3",
+        "tw.services.lesson.4.recall4",
+        "tw.services.lesson.4.say",
+        "tw.services.lesson.4.write"
+      ]
+    }
+  },
+  "tw.worklife": {
+    "sha256": "581f3e35c2a6456e97417291ea7af0eb7eb2b7db11fbff0f923a8a04ec9de890",
+    "dialogue_count": 6,
+    "lesson_ids": {
+      "tw.worklife.lesson.1": [
+        "tw.worklife.lesson.1.meaning0",
+        "tw.worklife.lesson.1.meaning1",
+        "tw.worklife.lesson.1.meaning2",
+        "tw.worklife.lesson.1.meaning3",
+        "tw.worklife.lesson.1.meaning4",
+        "tw.worklife.lesson.1.pinyin"
+      ],
+      "tw.worklife.lesson.2": [
+        "tw.worklife.lesson.2.recall0",
+        "tw.worklife.lesson.2.recall1",
+        "tw.worklife.lesson.2.recall2",
+        "tw.worklife.lesson.2.recall3",
+        "tw.worklife.lesson.2.recall4",
+        "tw.worklife.lesson.2.translate0",
+        "tw.worklife.lesson.2.translate1",
+        "tw.worklife.lesson.2.cloze"
+      ],
+      "tw.worklife.lesson.3": [
+        "tw.worklife.lesson.3.recall0",
+        "tw.worklife.lesson.3.recall1",
+        "tw.worklife.lesson.3.recall2",
+        "tw.worklife.lesson.3.recall3",
+        "tw.worklife.lesson.3.recall4",
+        "tw.worklife.lesson.3.listen",
+        "tw.worklife.lesson.3.dictate",
+        "tw.worklife.lesson.3.read",
+        "tw.worklife.lesson.3.reading-detail"
+      ],
+      "tw.worklife.lesson.4": [
+        "tw.worklife.lesson.4.recall0",
+        "tw.worklife.lesson.4.recall1",
+        "tw.worklife.lesson.4.recall2",
+        "tw.worklife.lesson.4.recall3",
+        "tw.worklife.lesson.4.recall4",
+        "tw.worklife.lesson.4.say",
+        "tw.worklife.lesson.4.write"
+      ]
+    }
+  },
+  "tw.travel": {
+    "sha256": "e75f17736ddeada3c3b15be1e00deaaeb0814e595571d55f13377abaf68383f8",
+    "dialogue_count": 6,
+    "lesson_ids": {
+      "tw.travel.lesson.1": [
+        "tw.travel.lesson.1.meaning0",
+        "tw.travel.lesson.1.meaning1",
+        "tw.travel.lesson.1.meaning2",
+        "tw.travel.lesson.1.meaning3",
+        "tw.travel.lesson.1.meaning4",
+        "tw.travel.lesson.1.pinyin"
+      ],
+      "tw.travel.lesson.2": [
+        "tw.travel.lesson.2.recall0",
+        "tw.travel.lesson.2.recall1",
+        "tw.travel.lesson.2.recall2",
+        "tw.travel.lesson.2.recall3",
+        "tw.travel.lesson.2.recall4",
+        "tw.travel.lesson.2.translate0",
+        "tw.travel.lesson.2.translate1",
+        "tw.travel.lesson.2.cloze"
+      ],
+      "tw.travel.lesson.3": [
+        "tw.travel.lesson.3.recall0",
+        "tw.travel.lesson.3.recall1",
+        "tw.travel.lesson.3.recall2",
+        "tw.travel.lesson.3.recall3",
+        "tw.travel.lesson.3.recall4",
+        "tw.travel.lesson.3.listen",
+        "tw.travel.lesson.3.dictate",
+        "tw.travel.lesson.3.read",
+        "tw.travel.lesson.3.reading-detail"
+      ],
+      "tw.travel.lesson.4": [
+        "tw.travel.lesson.4.recall0",
+        "tw.travel.lesson.4.recall1",
+        "tw.travel.lesson.4.recall2",
+        "tw.travel.lesson.4.recall3",
+        "tw.travel.lesson.4.recall4",
+        "tw.travel.lesson.4.say",
+        "tw.travel.lesson.4.write"
+      ]
+    }
+  },
+  "tw.social": {
+    "sha256": "5fd216d37bfbf873f89986b9464c73db395067ea9d94214deb9e435e5def7f71",
+    "dialogue_count": 6,
+    "lesson_ids": {
+      "tw.social.lesson.1": [
+        "tw.social.lesson.1.meaning0",
+        "tw.social.lesson.1.meaning1",
+        "tw.social.lesson.1.meaning2",
+        "tw.social.lesson.1.meaning3",
+        "tw.social.lesson.1.meaning4",
+        "tw.social.lesson.1.pinyin"
+      ],
+      "tw.social.lesson.2": [
+        "tw.social.lesson.2.recall0",
+        "tw.social.lesson.2.recall1",
+        "tw.social.lesson.2.recall2",
+        "tw.social.lesson.2.recall3",
+        "tw.social.lesson.2.recall4",
+        "tw.social.lesson.2.translate0",
+        "tw.social.lesson.2.translate1",
+        "tw.social.lesson.2.cloze"
+      ],
+      "tw.social.lesson.3": [
+        "tw.social.lesson.3.recall0",
+        "tw.social.lesson.3.recall1",
+        "tw.social.lesson.3.recall2",
+        "tw.social.lesson.3.recall3",
+        "tw.social.lesson.3.recall4",
+        "tw.social.lesson.3.listen",
+        "tw.social.lesson.3.dictate",
+        "tw.social.lesson.3.read",
+        "tw.social.lesson.3.reading-detail"
+      ],
+      "tw.social.lesson.4": [
+        "tw.social.lesson.4.recall0",
+        "tw.social.lesson.4.recall1",
+        "tw.social.lesson.4.recall2",
+        "tw.social.lesson.4.recall3",
+        "tw.social.lesson.4.recall4",
+        "tw.social.lesson.4.say",
+        "tw.social.lesson.4.write"
+      ]
+    }
+  }
+}

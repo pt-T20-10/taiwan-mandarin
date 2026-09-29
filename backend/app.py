@@ -111,6 +111,7 @@ class LearningEvent(BaseModel):
     timestamp: str
     category: str = ''
     rating: int | None = Field(default=None, ge=1, le=4)
+    source: Literal['authored','ai'] = 'authored'
 
 class EventRequest(BaseModel):
     event: LearningEvent
@@ -118,7 +119,22 @@ class EventRequest(BaseModel):
 
 @app.post('/api/events')
 def event(body: EventRequest):
+    if body.event.source=='ai':
+        body.event.correct=None
+        body.event.category=''
     return db.save_event(body.event.model_dump(), body.mutation.model_dump() if body.mutation else None)
+
+@app.post('/api/practice/sessions')
+def create_practice_session(body: BulkObjects):
+    if len(body.mutations)!=2:raise HTTPException(422,'Cần phiên luyện và lịch sử')
+    session,report=body.mutations
+    if session.collection!='sessions' or report.collection!='reports' or session.expected_version!=0 or session.data.get('scope')!='skills':raise HTTPException(422,'Sai phiên luyện')
+    if session.id!='skills:'+str(session.data.get('run')) or report.id!='skills-history:'+str(session.data.get('unit_id'))+':'+str(session.data.get('skill')):raise HTTPException(422,'Sai ID phiên/lịch sử')
+    if report.data.get('kind')!='skills-history':raise HTTPException(422,'Sai loại lịch sử')
+    with db.connect() as conn:
+        conn.execute('BEGIN IMMEDIATE')
+        for mutation in body.mutations:db.put_object(conn,**mutation.model_dump())
+    return {'created':session.id}
 
 @app.get('/api/backup')
 def backup():
@@ -226,7 +242,23 @@ async def cancel(request_id: str):
     if task:
         task.cancel()
         ai.stop()
+        if request_id in practice.jobs:
+            practice.jobs[request_id].update(status='cancelled',error='Đã hủy tạo đề.')
     return {'cancelled': bool(task)}
+
+from . import practice
+
+@app.post('/api/ai/practice')
+async def create_practice(body: practice.PracticeRequest):
+    try:return practice.start(body)
+    except ValueError as e:raise HTTPException(422,str(e))
+    except RuntimeError as e:raise HTTPException(409,str(e))
+
+@app.get('/api/ai/practice/{request_id}')
+async def practice_status(request_id: str):
+    job=practice.jobs.get(request_id)
+    if not job:raise HTTPException(404,'Không tìm thấy lượt tạo đề; hãy thử lại.')
+    return job
 
 @app.post('/api/ai/unload')
 async def unload():

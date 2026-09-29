@@ -1,5 +1,7 @@
 # Kế hoạch ứng dụng tự học Hoa ngữ Đài Loan
 
+> Phạm vi v7 được người dùng duyệt ngày 29/09/2026: mở rộng bốn kỹ năng cho 18 chủ đề, ba bộ soạn sẵn/kỹ năng và AI tùy chọn; 72 bài lên 720 bài tập, hội thoại 8 câu. Bảo toàn v6, SQLite, FSRS, offline/model/zh-TW; Pinyin và Viết chữ không đổi. Triển khai và giới hạn thực tế ở [RELEASE-V7](RELEASE-V7.md); các kế hoạch cũ dưới đây giữ làm lịch sử.
+
 > Cập nhật phạm vi 27/09/2026: kế hoạch v6 đã duyệt thay lựa chọn model/giọng cũ bên dưới. Chỉ Qwen3-4B-Q4_K_M, CPU/CUDA, Whisper base/small; zh-TW local, không Kokoro/audio mẫu Pinyin. Thêm 6 chủ đề A2 định hướng (24 bài/120 từ/12 ngữ pháp), tổng 18 chủ đề/72 bài/360 từ/36 ngữ pháp và animation 424 chữ. Giữ ID, dữ liệu, schema, offline và ngân sách 10 GB; B2 chưa hoàn thành. Trạng thái nghiệm thu ở TASKS/RELEASE-V6, không suy từ tài liệu kế hoạch gốc.
 
 Ngày lập: 23/09/2026. Phiên bản: 1.0 — kế hoạch trước triển khai.
