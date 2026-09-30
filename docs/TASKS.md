@@ -1,5 +1,11 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Ưu tiên trọng tâm: đọc liền/biến điệu — 30/09/2026
+
+- [ ] Người dùng xác nhận hầu hết ví dụ đọc liền vẫn rời từng âm. Tính năng nghe chưa đạt mục tiêu dạy phát âm; ưu tiên xử lý trước mở rộng nội dung. Không coi playback/WAV/ASR pass là nghiệm thu biến điệu.
+- [x] Xác nhận giọng đã lưu Yating zh-TW/normal, ứng dụng gửi nguyên cụm/câu, ghi chú đọc liền chưa điều khiển TTS. Probe native Hanhan: plain và SSML câu cho WAV trùng byte, IPA có thanh điệu bị từ chối. Không đổi giọng/tiến độ, không công bố probe là audio chuẩn.
+- [ ] Chưa có audio thay thế được nghe kiểm chứng. Cần mẫu nguyên cụm/câu và đánh giá TTS cho câu mới theo bộ ca đọc liền. Điều tra/tiêu chí/nguồn và giới hạn: [CONNECTED-SPEECH](CONNECTED-SPEECH.md). BreezyVoice chỉ là ứng viên đã tìm hiểu, chưa cài hoặc xác nhận chạy phù hợp máy này.
+
 ## Luyện bốn kỹ năng v7 — 29/09/2026
 
 - [x] 18 chủ đề × 4 kỹ năng × 3 bộ = 216 bộ/1.620 câu-lượt. Nghe/Đọc 10 câu đúng tỷ lệ dạng bài; Nói 8 lượt; Viết 2 đề. Mỗi bộ 8 câu ngữ cảnh, 54 tình huống. Nối hội thoại cũ thành 8 câu, 72 bài × 10 = 720 bài tập; hash fixture khóa toàn bộ nội dung v6, giữ 540 ID/câu cũ.
