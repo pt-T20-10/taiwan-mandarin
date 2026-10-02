@@ -1,5 +1,13 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Lượng từ bổ sung — 02/10/2026
+
+- [x] Mục Học → Lượng từ: bài nhập môn, 22 cụm ví dụ/20 lượng từ, tìm kiếm và lọc theo 18 chủ đề; liên kết từ bài Học, Ngữ pháp và Skills. Bài tập tổng hợp nhập môn dùng sáu cụm, các chủ đề dùng cụm liên quan.
+- [x] Dùng lại SkillPractice: đọc hiểu chọn nghĩa, điền lượng từ có ngữ cảnh/đáp án thay thế, nghe chép câu, đọc mẫu/tự nói, viết câu; lưu nháp, lịch sử, trộn thứ tự và tiếp tục. Mỗi chủ đề/kỹ năng có một bộ bổ sung, không quảng bá thành ba bộ khác nhau. Không tạo đề AI cho các chủ đề bổ sung chưa có trong API.
+- [x] Thêm thẻ theo cả cụm khi người học chọn; sổ lỗi đọc được câu/đáp án từ packet đã lưu. Tiến độ bổ sung dùng ID `classifiers:*`, không sửa 72 bài, gói v7 hoặc lịch ôn hiện có.
+- [x] Build và kiểm tra core/adapter; chỉ thêm một test ngân hàng để kiểm tra đủ chủ đề, ID, đáp án/lựa chọn và roundtrip phiên. Không chạy E2E/benchmark lớn theo yêu cầu tiết kiệm của người dùng. Chưa kiểm tra nghe thủ công hoặc nghiệm thu giáo viên.
+- Nguồn tham khảo: [tài liệu lượng từ trên 全球華文網](https://blog2.huayuworld.org/phunglaoshi/wp-content/uploads/sites/1457/2019/01/L9-PPT.pdf); ví dụ và giải thích Việt do dự án biên soạn, trạng thái bản nháp.
+
 ## Ưu tiên trọng tâm: đọc liền/biến điệu — 30/09/2026
 
 - [ ] Người dùng xác nhận hầu hết ví dụ đọc liền vẫn rời từng âm. Tính năng nghe chưa đạt mục tiêu dạy phát âm; ưu tiên xử lý trước mở rộng nội dung. Không coi playback/WAV/ASR pass là nghiệm thu biến điệu.
