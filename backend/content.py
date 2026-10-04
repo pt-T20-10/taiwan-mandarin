@@ -84,6 +84,28 @@ class PracticeItem(Strict):
         if self.kind in ('dictation','read-aloud','respond') and not self.stimulus:raise ValueError('Thiếu câu tham khảo')
         return self
 
+class SupplementalPracticeSet(Strict):
+    """Short authored verb/classifier practice; not the v7 or AI contract."""
+    id: str
+    title: str
+    skill: Literal['reading','listening','speaking','writing']
+    source: Literal['authored']
+    verification: Literal['draft']
+    reference: str = Field(min_length=1)
+    passage: list[Text] = Field(max_length=48)
+    items: list[PracticeItem] = Field(min_length=1,max_length=48)
+
+    @model_validator(mode='after')
+    def check_set(self):
+        if not self.id.startswith(('verbs:', 'classifiers:')):raise ValueError('Sai ID bài bổ sung')
+        if len({q.id for q in self.items})!=len(self.items):raise ValueError('ID câu trùng')
+        allowed={'reading':{'choice','cloze-choice','cloze-input'},'listening':{'choice','cloze-choice','dictation'},'speaking':{'read-aloud','respond'},'writing':{'write'}}
+        for q in self.items:
+            if q.kind not in allowed[self.skill]:raise ValueError('Sai dạng bài bổ sung')
+            if q.evidence_index is not None and q.evidence_index>=len(self.passage):raise ValueError('Căn cứ ngoài đoạn')
+            if q.stimulus and q.kind in ('dictation','read-aloud','respond') and q.stimulus.hanzi not in q.answers:raise ValueError('Câu mẫu không khớp đáp án')
+        return self
+
 class PracticeSet(Strict):
     id: str
     title: str

@@ -119,8 +119,11 @@ def validate_object(collection, data):
     if collection == 'notes' and not isinstance(data.get('text'),str):
         raise ValueError('Ghi chú không hợp lệ')
     if collection=='sessions' and data.get('scope')=='skills':
-        from .content import PracticeSet
-        packet=PracticeSet.model_validate(data.get('packet'))
+        from .content import PracticeSet, SupplementalPracticeSet
+        unit_id=data.get('unit_id','')
+        supplemental=isinstance(unit_id,str) and unit_id.startswith(('verbs:','classifiers:'))
+        packet=(SupplementalPracticeSet if supplemental else PracticeSet).model_validate(data.get('packet'))
+        if supplemental and packet.id.split(':')[0]!=unit_id.split(':')[0]:raise ValueError('Sai chuyên đề bổ sung')
         if data.get('skill')!=packet.skill or not data.get('run') or not data.get('unit_id'):raise ValueError('Sai liên kết phiên luyện')
         if data['index']>len(packet.items):raise ValueError('Vị trí câu vượt bộ đề')
         if data.get('phase')=='summary' and data['index']!=len(packet.items):raise ValueError('Bộ đề chưa hoàn thành')

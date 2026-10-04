@@ -16,7 +16,7 @@ it('covers all topics with valid choices, blanks and persisted supplemental pack
     expect(ids.has(q.id)).toBe(false);ids.add(q.id);
     expect(q.answers.length).toBeGreaterThan(0);
     if(q.kind==='choice')for(const a of q.answers)expect(q.choices).toContain(a);
-    if(q.kind==='cloze-input'){expect(q.prompt).toContain('＿＿');for(const a of q.answers)expect(practiceGrade(q,a)).toBe(true);expect(practiceGrade(q,'錯')).toBe(false);}
+    if(q.kind==='cloze-input'){expect(q.prompt).toContain('___');for(const a of q.answers)expect(practiceGrade(q,a)).toBe(true);expect(practiceGrade(q,'錯')).toBe(false);}
    }
   }
  }

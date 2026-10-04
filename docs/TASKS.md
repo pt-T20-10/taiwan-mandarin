@@ -1,5 +1,13 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Chuyên đề động từ — 04/10/2026
+
+- [x] Ngữ pháp → Động từ và cách dùng: sáu bài × sáu câu; 20 động từ đơn/song âm để đối chiếu; 36 từ li hợp với 72 câu ví dụ liền/tách, Phồn thể/Pinyin/nghĩa Việt, 24 mục học trước + 12 mở rộng. Nhãn số âm tiết/tân ngữ/li hợp không bị đồng nhất; ghi riêng biến thể 幫忙, 報名. Ví dụ do dự án soạn, chưa giáo viên duyệt.
+- [x] Liên kết từ Học, bài Học và Skills theo 18 chủ đề; bộ ôn sáu mục/kỹ năng/chủ đề, tổng hợp có sáu nhóm luân phiên. Dùng lại lưu nháp, tiếp tục, ghi âm, trợ giúp, sổ lỗi; thêm thẻ theo câu khi người học chọn. Không sửa gói v7/ID/tiến độ 72 bài hoặc FSRS.
+- [x] Smoke phát hiện backend chỉ nhận bộ Skills v7 (8 câu ngữ cảnh và tỷ lệ dạng bài cố định), cũng làm lượng từ không lưu được. Thêm SupplementalPracticeSet chỉ cho nguồn authored và namespace verbs/classifiers; giữ kiểm tra v7/AI cũ. Sửa câu khuyết `___`, câu mẫu Nói và lựa chọn của ngân hàng lượng từ để đáp ứng hợp đồng lưu. Không đổi schema SQLite.
+- [x] Build pass; hai kiểm tra core ngân hàng pass, test động từ đối chiếu toàn bộ packet frontend qua validator Python và kiểm tra biên v7/AI không bị nới. Một Edge E2E pass: bắt đầu, lưu đáp án, reload giữ thứ tự/nháp, nộp, tiếp tục và mobile. Không chạy benchmark hay E2E toàn bộ theo yêu cầu tiết kiệm.
+- Nguồn/giới hạn: [hướng dẫn NTNU](https://www.mtc.ntnu.edu.tw/upload_files/resource/download/Contemporary-Chinese/1.pdf), [nghiên cứu NTNU về li hợp và lỗi người học](https://web.ntnu.edu.tw/~lchang/separable_2007.pdf). Chưa nghiệm thu âm thanh hoặc xác minh giáo viên cho toàn bộ câu. Phần đọc liền còn là công việc riêng đang dở.
+
 ## Lượng từ bổ sung — 02/10/2026
 
 - [x] Mục Học → Lượng từ: bài nhập môn, 22 cụm ví dụ/20 lượng từ, tìm kiếm và lọc theo 18 chủ đề; liên kết từ bài Học, Ngữ pháp và Skills. Bài tập tổng hợp nhập môn dùng sáu cụm, các chủ đề dùng cụm liên quan.
