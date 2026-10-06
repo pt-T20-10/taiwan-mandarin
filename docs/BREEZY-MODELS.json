@@ -1,0 +1,42 @@
+{
+  "source_revision": "d592c9d3e8927a0f53f68616387060dcd32a05ea",
+  "source_archive_sha256": "048015db48dc038d98cd5072f1ed495633af495d966c04d3abbaf81a25d19ded",
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 3302,
+      "sha256": "533f1466a7041aa894e5a9a04b2899bd9189287932cb15a580189b6b52139b92"
+    },
+    {
+      "file": "campplus.onnx",
+      "bytes": 28303423,
+      "sha256": "a6ac6a63997761ae2997373e2ee1c47040854b4b759ea41ec48e4e42df0f4d73"
+    },
+    {
+      "file": "cosyvoice.yaml",
+      "bytes": 6402,
+      "sha256": "5bcbc8cd884a89e921eee20b6c478393b942fe5f007d05846e992be54842b43d"
+    },
+    {
+      "file": "flow.pt",
+      "bytes": 419900943,
+      "sha256": "fd80b089444a95e52956c57cdf177d7f6017a5af13b8a697717628a1d2be6b55"
+    },
+    {
+      "file": "hift.pt",
+      "bytes": 81896716,
+      "sha256": "91e679b6ca1eff71187ffb4f3ab0444935594cdcc20a9bd12afad111ef8d6012"
+    },
+    {
+      "file": "llm.pt",
+      "bytes": 1243027089,
+      "sha256": "310c74da4315729c6069c0d0efdfb5bc9b433dc75c890f6ebaf0d18373bda52f"
+    },
+    {
+      "file": "speech_tokenizer_v1.onnx",
+      "bytes": 522624269,
+      "sha256": "23b5a723ed9143aebfd9ffda14ac4c21231f31c35ef837b6a13bb9e5488abb1e"
+    }
+  ],
+  "model_revision": "e33b502e0ac21c16b0ee0d00df66ac3fa737393d"
+}

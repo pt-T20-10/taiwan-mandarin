@@ -133,11 +133,11 @@ test('nghe cạnh Hán tự/Pinyin gửi nguyên cụm; giữ kín đáp án và
  await page.goto('/#pronunciation');await expect(page.locator('.pronunciation-case')).toHaveCount(11);
  await page.getByRole('combobox',{name:'Nhịp đọc',exact:true}).selectOption('slow');
  await expect.poll(async()=>(await(await request.get('/api/state')).json()).objects.settings.speech.data.pace).toBe('slow');await expect(page.getByRole('combobox',{name:'Nhịp đọc',exact:true})).toBeEnabled();
- await page.locator('.pronunciation-group summary').filter({hasText:'Nhịp câu'}).click();await page.getByRole('button',{name:'Nghe trong câu: grouping',exact:true}).click();
+ await page.locator('.pronunciation-group summary').filter({hasText:'Nhịp câu'}).click();await page.getByText('Đối chiếu với giọng Windows đang chọn',{exact:true}).last().click();await page.getByRole('button',{name:'Nghe câu bằng Windows',exact:true}).last().click();
  expect(await page.evaluate(()=>(window as any).__utterances.at(-1))).toEqual({text:'我是越南人，我是留學生。',rate:.85,voice:'TEST-b'});
  await page.getByLabel('Nhận xét: grouping',{exact:true}).selectOption('choppy');
  await expect.poll(async()=>Object.values((await(await request.get('/api/state')).json()).objects.reports).filter((r:any)=>r.data.kind==='pronunciation-listening').length).toBe(1);
- await page.reload();await page.locator('.pronunciation-group summary').filter({hasText:'Nhịp câu'}).click();await expect(page.getByText('1 nhận xét của bạn với cấu hình này')).toBeVisible();
+ await page.reload();await page.locator('.pronunciation-group summary').filter({hasText:'Nhịp câu'}).click();await expect(page.getByText('1 nhận xét của bạn cho ví dụ này;', {exact:false})).toBeVisible();
  await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.screenshot({path:'test-results/pronunciation-mobile.png',fullPage:true});
 });

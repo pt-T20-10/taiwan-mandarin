@@ -11,6 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from . import db
 from .ai import ai
+from . import connected_speech
 from .content import ROOT, validate_package
 
 shutdown_callback = None
@@ -25,6 +26,17 @@ async def lifespan(app):
     ai.stop()
 
 app = FastAPI(lifespan=lifespan, docs_url=None, redoc_url=None)
+
+@app.get('/api/pronunciation/audio')
+def pronunciation_audio_catalog():
+    return {'engine': 'BreezyVoice', 'status': 'experimental', 'clips': connected_speech.catalog()}
+
+@app.get('/api/pronunciation/audio/{key}')
+def pronunciation_audio_file(key: str):
+    path = connected_speech.clip_path(key)
+    if path is None:
+        raise HTTPException(404, 'Bản đọc liền chưa có hoặc không còn hợp lệ. Không tự thay bằng giọng khác.')
+    return FileResponse(path, media_type='audio/wav')
 
 @app.middleware('http')
 async def local_only(request: Request, call_next):
@@ -181,7 +193,15 @@ def install_package(package: dict):
 def status():
     sizes = {}
     for folder in ('models', 'runtime', 'data', 'dist', 'content', 'public'):
-        sizes[folder] = sum(f.stat().st_size for f in (ROOT / folder).rglob('*') if f.is_file()) if (ROOT / folder).exists() else 0
+        sizes[folder] = 0
+        for file in (ROOT / folder).rglob('*'):
+            try:
+                if file.is_file():
+                    sizes[folder] += file.stat().st_size
+            except FileNotFoundError:
+                # Installers and atomic writers may remove a temporary file
+                # between enumeration and stat; this is a live size estimate.
+                continue
     return {**ai.status(), 'sizes': sizes, 'budget_bytes': 10_000_000_000}
 
 class AIConfig(BaseModel):

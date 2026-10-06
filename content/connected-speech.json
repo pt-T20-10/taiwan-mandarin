@@ -1,0 +1,13 @@
+[
+  {"id":"third-third","phrase":"你[:ㄋㄧ2]好。","context":"你[:ㄋㄧ2]好，我是越南人。"},
+  {"id":"half-third","phrase":"很忙。","context":"我今天很忙。"},
+  {"id":"yi-first","phrase":"一[:ㄧ4]杯。","context":"我要一[:ㄧ4]杯茶。"},
+  {"id":"yi-third","phrase":"一[:ㄧ4]本。","context":"我想買一[:ㄧ4]本書。"},
+  {"id":"yi-fourth","phrase":"一[:ㄧ2]次。","context":"請再說一[:ㄧ2]次。"},
+  {"id":"yi-ordinal","phrase":"第一[:ㄧ1]。","context":"這是第一[:ㄧ1]課。"},
+  {"id":"bu-fourth","phrase":"不[:ㄅㄨ2]要。","context":"我不[:ㄅㄨ2]要冰。"},
+  {"id":"bu-other","phrase":"不[:ㄅㄨ4]喝。","context":"我不[:ㄅㄨ4]喝咖啡。"},
+  {"id":"neutral","phrase":"名字[:ㄗ5]。","context":"你叫什麼名字[:ㄗ5]？"},
+  {"id":"polyphonic","phrase":"銀行[:ㄏㄤ2]。","context":"銀行[:ㄏㄤ2]在學校旁邊。"},
+  {"id":"grouping","phrase":"我是越南人，我是留學生。","context":"我是越南人，我是留學生。"}
+]
