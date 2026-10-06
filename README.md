@@ -5,7 +5,7 @@ A personal Mandarin learning system built for studying **Traditional Chinese** a
 The project started as a simple way to organize my own vocabulary and sentence practice. Over time, it grew into an offline Windows application covering structured lessons, spaced repetition, pronunciation references, grammar, and practice across listening, speaking, reading, and writing.
 
 > [!NOTE]
-> This is a personal learning project and an active work in progress.  
+> This is a personal learning project and an active work in progress.
 > The content is not a certified language course and has not been fully reviewed by a professional Mandarin teacher.
 
 ---
@@ -161,29 +161,43 @@ User learning data is stored locally in:
 
 ```text
 data/learning.sqlite3
+```
 
 The database, local models, generated audio, runtime files, and personal learning data are intentionally excluded from Git.
-🛠️ Tech Stack
-Frontend
+
+## 🛠️ Tech Stack
+
+### Frontend
+
 - React
 - TypeScript
 - Vite
-Backend
+
+### Backend
+
 - Python
 - FastAPI
 - SQLite
-Learning system
+
+### Learning system
+
 - spaced-repetition scheduling
 - persistent learning sessions
 - authored exercise banks
 - progress and event tracking
-Optional local AI
+
+### Optional local AI
+
 - llama.cpp
 - Qwen3-4B
 - whisper.cpp
 - local speech / TTS experiments
+
 AI is a supporting component of the application rather than the core learning methodology.
-🏗️ Architecture
+
+## 🏗️ Architecture
+
+```text
 React / TypeScript UI
         │
         ▼
@@ -202,21 +216,32 @@ React / TypeScript UI
         ├── cards
         ├── notes
         └── reports
+```
 
 The frontend is built once and served by the local backend.
-🚀 Running the application
+
+## 🚀 Running the application
+
 On the configured Windows environment:
+
+```powershell
 npm.cmd ci
 .\.venv\Scripts\python.exe -m pip install -r requirements.lock
 npm.cmd run build
 .\Start.cmd
+```
 
 The application is then available at:
-http://127.0.0.1:8765
+
+<http://127.0.0.1:8765>
 
 Local AI features require the corresponding models and runtimes to be installed separately.
-🧪 Development
+
+## 🧪 Development
+
 Useful commands:
+
+```powershell
 npm.cmd run server
 npm.cmd run dev
 
@@ -227,12 +252,16 @@ npm.cmd test
 
 npm.cmd run build
 npm.cmd run test:e2e
+```
 
 Browser tests currently use Microsoft Edge.
-Development and E2E environments use separate data directories so tests do not overwrite the real learning database.
-⚠️ Current Limitations
+E2E tests use a separate data directory so they do not overwrite the real learning database.
+
+## ⚠️ Current Limitations
+
 This project should not currently be treated as a complete or professionally validated Mandarin curriculum.
 Known limitations include:
+
 - learning content has not been fully reviewed by a Mandarin teacher
 - proficiency labels are learning targets, not TOCFL certification
 - connected-speech pronunciation is still being evaluated
@@ -241,21 +270,30 @@ Known limitations include:
 - some pronunciation resources use general Standard Mandarin rather than specifically validated Taiwanese Mandarin recordings
 - Windows is currently the primary supported platform
 - Android and synchronization are future possibilities rather than current features
+
 For implementation details and known issues, see the documents in [`docs/`](docs/).
-🤖 Development Note
+
+## 🤖 Development Note
+
 This project has been developed with extensive AI-assisted coding.
 I use AI tools to help with implementation, debugging, refactoring, documentation, and technical exploration.
 My role has focused on defining the learning requirements, deciding features and workflows, testing the application in real study sessions, evaluating whether features actually help me learn, identifying failures, and iterating on the system.
 In other words, this is intentionally a personal AI-assisted / vibe-coding project, rather than a claim that every line of the codebase was written manually.
-📖 Documentation
+
+## 📖 Documentation
+
 More detailed technical and development documentation is available in:
+
 - [`docs/TASKS.md`](docs/TASKS.md)
 - [`docs/DECISIONS.md`](docs/DECISIONS.md)
 - [`docs/ENVIRONMENT.md`](docs/ENVIRONMENT.md)
 - [`docs/CONTENT_GUIDE.md`](docs/CONTENT_GUIDE.md)
 - [`docs/PLAN.md`](docs/PLAN.md)
+
 Release notes and experiment-specific documentation are also kept in the docs/ directory.
-🚧 Project Status
+
+## 🚧 Project Status
+
 Active personal project — work in progress.
 The application is already used for my own Mandarin study, but features and content continue to change as my learning needs evolve.
 There is no fixed "final version" yet — the system grows together with my learning.
