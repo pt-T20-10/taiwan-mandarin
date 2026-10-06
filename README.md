@@ -1,56 +1,261 @@
-# Đảo nhỏ — Hoa ngữ Đài Loan
+# 🏝️ Đảo nhỏ — Taiwan Mandarin
 
-Ứng dụng học local cho Windows, UI tiếng Việt. **Bản đang phát triển, chưa đạt nghiệm thu Windows v1.** Gói v7 có 18 chủ đề/72 bài/720 bài tập, 216 bộ luyện bốn kỹ năng với 1.620 câu/lượt luyện, 360 mục từ và tab Ngữ pháp 36 mục/144 bài tập riêng. Sáu chủ đề mới định hướng A2, chưa phải chứng nhận trình độ. Nội dung mới còn là bản nháp, chưa giáo viên duyệt; animation phủ 424 chữ, chấm viết tay vẫn giới hạn 12 chữ. Xem [bàn giao v7](docs/RELEASE-V7.md).
+A personal Mandarin learning system built for studying **Traditional Chinese** and preparing for daily life and graduate study in Taiwan.
 
-## Dùng hằng ngày
+The project started as a simple way to organize my own vocabulary and sentence practice. Over time, it grew into an offline Windows application covering structured lessons, spaced repetition, pronunciation references, grammar, and practice across listening, speaking, reading, and writing.
 
-Nhấp đúp **Start.cmd** trong thư mục này. Trình duyệt mở **http://127.0.0.1:8765**. Chỉ có một dịch vụ; không cần mở VS Code hoặc Vite. Giữ cửa sổ dịch vụ trong lúc học. Trong Cài đặt, chọn **Dừng dịch vụ** để đóng cả model.
+> [!NOTE]
+> This is a personal learning project and an active work in progress.  
+> The content is not a certified language course and has not been fully reviewed by a professional Mandarin teacher.
 
-Nếu terminal hiện `KeyboardInterrupt`/`^C`, tiến trình đã nhận tín hiệu ngắt; chưa đủ thông tin để khẳng định người dùng bấm Ctrl+C. Launcher ghi thời điểm, PID/parent và lý do dừng (tín hiệu hoặc nút Dừng dịch vụ) vào `data/launcher.log`, tối đa 3 file × 1 MB. Nếu ứng dụng tự dừng, giữ log này để kiểm tra; log không xác định được chương trình gửi tín hiệu. `Terminate batch job (Y/N)?` là câu hỏi của Windows khi ngắt file `.cmd`; chọn `Y` nếu muốn kết thúc. Có thể chạy trực tiếp `.\.venv\Scripts\python.exe -m backend.launcher` từ PowerShell để không qua batch. Dòng `favicon.ico 404` không làm dừng dịch vụ.
+---
 
-Tiến độ nằm trong `data/learning.sqlite3`. Tải sao lưu ở Cài đặt; phục hồi cũng tại đó. Mỗi thiết bị dùng SQLite, không phụ thuộc cache trình duyệt. Không chia sẻ thư mục data nếu có thông tin cá nhân.
+## 🎯 Why I built it
 
-Trong **Học**, mỗi bài mới có 10 câu; bài v6 đang dở giữ danh sách câu cũ. Hội thoại giới thiệu có 8 câu, nút bật/tắt Pinyin và tiếng Việt. Liên kết “Luyện thêm” mở đúng chủ đề/kỹ năng. Trong **Luyện kỹ năng**, chọn **Bộ đề mới**, làm hoặc bỏ qua từng câu rồi xem tổng kết. Ba bộ soạn sẵn luân phiên không lặp trong một vòng; bản nháp tự lưu, danh sách “Bài đang dở và lịch sử” cho tiếp tục. Đọc/Nói ẩn Pinyin và nghĩa mặc định. Nói cho ghi âm/nghe lại/sửa transcript; Nói/Viết không tự chấm đúng sai. **Tạo đề bằng AI** là thử nghiệm, có hủy và có thể thất bại do model; bộ hợp lệ ghi “Chưa kiểm chứng”, không cộng vào điểm chuẩn.
+I wanted a learning environment that matched the way I study:
 
-Trong **Phát âm**, bảng 406 âm tiết mở bốn thanh khi hover/chạm; click thanh để nghe bản thu riêng. Có 1.598 bản thu và 26 tổ hợp thiếu, nhãn nguồn Quan thoại phổ thông. Từ/câu và ví dụ biến điệu vẫn dùng zh-TW. Trong **Ngữ pháp**, tiến độ riêng và lộ trình 27 lô B2 vẫn là kế hoạch biên soạn. Xem [nguồn/giấy phép tài sản](public/learning/ATTRIBUTION.md).
+- Traditional Chinese rather than Simplified Chinese
+- Taiwanese Mandarin as the main context
+- Vietnamese explanations
+- Pinyin with tone marks
+- practical daily-life and university-related topics
+- structured review instead of scattered screenshots and notes
+- progress stored locally rather than depending on an online service
 
-## Cài dependency/build lại
+The goal is not to replace a teacher or an established language-learning platform.
 
-Chạy ở đúng `D:\Taiwanese App\taiwan-mandarin` bằng PowerShell:
+It is simply a tool I can continuously adapt to my own learning process.
 
-```powershell
+---
+
+## ✨ Current Features
+
+### 📚 Structured learning
+
+- 18 topic-based units
+- 72 lessons
+- 360 vocabulary items
+- 720 core learning exercises
+- introductory dialogues for each topic
+- Traditional Chinese + Pinyin + Vietnamese support
+
+Topics include areas such as:
+
+- greetings
+- food
+- shopping
+- transportation
+- family
+- home
+- schedules
+- classroom
+- campus life
+- health
+- renting
+- work
+- travel
+- social situations
+
+---
+
+### 🎧 Four-skill practice
+
+The application includes practice for:
+
+- Listening
+- Speaking
+- Reading
+- Writing
+
+There are currently **216 authored practice sets** with approximately **1,620 practice items / turns**.
+
+Practice sessions support:
+
+- progress saving
+- unfinished-session recovery
+- rotating authored exercise sets
+- optional hints
+- hiding Pinyin and Vietnamese meaning during practice
+- recording and replaying speaking attempts
+
+Speaking and writing exercises are intentionally not treated as automatically correct or incorrect when reliable evaluation is unavailable.
+
+---
+
+### 🔁 Review and spaced repetition
+
+Vocabulary and learning items can be reviewed through a spaced-repetition workflow.
+
+Progress is stored locally in SQLite, including:
+
+- cards
+- sessions
+- notes
+- learning events
+- settings
+- reports
+
+The application also includes backup and restore support.
+
+---
+
+### 🧩 Grammar and focused practice
+
+Current learning modules include:
+
+- 36 grammar items
+- measure-word practice
+- verb-focused lessons
+- separable verbs
+- topic-based grammar review
+
+Content is still being expanded and refined as I continue learning Mandarin myself.
+
+---
+
+### 🔊 Pronunciation
+
+The pronunciation section currently includes:
+
+- a Pinyin reference table
+- four-tone playback
+- 1,598 recorded syllable audio files
+- pronunciation examples
+- tone-change and connected-speech experiments
+
+Some pronunciation features remain experimental.
+
+Audio quality and Taiwanese accent accuracy have **not** been professionally certified.
+
+---
+
+### 🤖 Optional AI-assisted practice
+
+The application can optionally generate additional practice exercises using a local language model.
+
+Generated exercises are clearly separated from authored learning content and are treated as:
+
+> **Unverified supplemental practice**
+
+They are not included in the application's core learning scores.
+
+Speech transcription is also available through a local ASR model, but transcription accuracy should not be interpreted as pronunciation or tone assessment.
+
+---
+
+## 🖥️ Offline-first
+
+The application is designed primarily for local Windows use.
+
+Most core features work without an external cloud service:
+
+- lessons
+- vocabulary
+- review
+- notes
+- grammar
+- local progress storage
+- local AI features when models are installed
+
+User learning data is stored locally in:
+
+```text
+data/learning.sqlite3
+
+The database, local models, generated audio, runtime files, and personal learning data are intentionally excluded from Git.
+🛠️ Tech Stack
+Frontend
+- React
+- TypeScript
+- Vite
+Backend
+- Python
+- FastAPI
+- SQLite
+Learning system
+- spaced-repetition scheduling
+- persistent learning sessions
+- authored exercise banks
+- progress and event tracking
+Optional local AI
+- llama.cpp
+- Qwen3-4B
+- whisper.cpp
+- local speech / TTS experiments
+AI is a supporting component of the application rather than the core learning methodology.
+🏗️ Architecture
+React / TypeScript UI
+        │
+        ▼
+   FastAPI backend
+        │
+        ├── Learning logic
+        ├── Practice generation
+        ├── Content validation
+        ├── Audio / speech adapters
+        │
+        ▼
+     SQLite
+        │
+        ├── progress
+        ├── sessions
+        ├── cards
+        ├── notes
+        └── reports
+
+The frontend is built once and served by the local backend.
+🚀 Running the application
+On the configured Windows environment:
 npm.cmd ci
 .\.venv\Scripts\python.exe -m pip install -r requirements.lock
 npm.cmd run build
 .\Start.cmd
-```
 
-Không tự tạo lại .venv của người dùng. Interpreter hiện dùng Python 3.14.3 64-bit. Model/runtime đã tải ở máy hiện tại; script cài lại có mạng: `.\.venv\Scripts\python.exe scripts/setup_selected.py`. Xem docs/DECISIONS.md trước khi thay model.
+The application is then available at:
+http://127.0.0.1:8765
 
-## Phát triển và kiểm tra
+Local AI features require the corresponding models and runtimes to be installed separately.
+🧪 Development
+Useful commands:
+npm.cmd run server
+npm.cmd run dev
 
-```powershell
-npm.cmd run server       # backend + web build, 8765
-npm.cmd run dev          # Vite 5173, proxy API tới 8765, chỉ cho phát triển
 npm.cmd run content:check
 npm.cmd test
+
 .\.venv\Scripts\python.exe -m pytest -q
+
 npm.cmd run build
-npm.cmd run test:e2e     # Edge headless; server riêng 8767, data/e2e
-```
+npm.cmd run test:e2e
 
-Test trình duyệt dùng Edge đã có, không cần tải browser khác. Test không ghi đè database học thật. Các lượt chat benchmark chạy local bằng scripts/benchmark.py; không phải chứng nhận ngôn ngữ.
-
-## Micro và offline
-
-Trong Cài đặt có màn hình ghi âm/nghe lại/nhận dạng, danh sách voice thực tế và thử câu mới. Cấp quyền micro cho localhost khi muốn ghi. Trên máy hiện tại không cần cài thêm voice: đã thấy Hanhan Desktop qua System.Speech và Hanhan/Yating/Zhiwei local qua Edge. Để tự kiểm tra, ngắt Internet, sửa câu thử, bấm Nghe rồi ghi 5–10 giây, nghe lại và nhận dạng. Nếu chuyển máy mà thiếu voice, cài Chinese (Traditional, Taiwan) và Speech/Text-to-speech qua Windows Settings, mở lại dịch vụ/trình duyệt. Không đổi registry hoặc dùng giọng online thay thế.
-
-Chữ/flashcard/ghi chú dùng offline. Bài nghe cần giọng local đã chọn; thiếu có thể bỏ qua, không tính đạt kỹ năng. ASR không phải chấm thanh điệu. AI sinh Pinyin/dịch có thể sai và không tham gia chấm bài đóng.
-
-Từ/câu dùng giọng **Windows/browser zh-TW local**. Chọn giọng và nhịp trong Cài đặt/Phát âm, nghe thử cả câu. Kokoro đã gỡ; bản thu Pinyin được khôi phục riêng cho bảng theo yêu cầu tiếp theo. Setting Kokoro cũ được backup rồi chuyển riêng voice về `auto`, giữ nhịp và nhận xét. Thiếu zh-TW thì báo thiếu và cho bỏ qua bài nghe. Gói Traditional Chinese của Windows cung cấp giọng local, không bảo đảm đọc tự nhiên.
-
-Nút nghe cạnh Hán tự hoặc Pinyin đọc nguyên từ/cụm/câu. Chọn giọng và nhịp trong Cài đặt hoặc mục **Phát âm**. Mục Phát âm có bài đối chiếu biến điệu, thanh nhẹ và nhịp câu; âm TTS chưa được chứng nhận phát âm chuẩn. Đã bỏ câu gợi dẫn ASR gây lặp transcript; cần thu lại câu để kiểm tra trên micro thật sau khi cập nhật.
-
-Model đang chọn: Qwen3-4B Q4_K_M trên CUDA 12.4; Whisper small đa ngôn ngữ trên CPU. Có thể chuyển LLM sang CPU hoặc ASR về base trong Cài đặt. Small sửa được một số lỗi từ trong thử nghiệm, chậm hơn và vẫn có Giản thể. Đã gỡ khoảng 3,907 GB; tài sản quản lý còn khoảng 5,25 GB/10 GB, gồm models/runtime/data/public/dist/content và backup (không gồm môi trường phát triển/lịch sử Git). Giữ đúng một LLM Qwen 4B, runtime CPU/CUDA và Whisper small/base. Xóa model nhỏ chỉ giảm ổ đĩa, không giảm RAM/VRAM của 4B. Hash model cũ chuyển sang [MODELS-RETIRED](docs/MODELS-RETIRED.json); benchmark cũ giữ nguyên. Xem [kết quả và giới hạn](docs/RELEASE-V6.md).
-
-Xem [TASKS](docs/TASKS.md), [ENVIRONMENT](docs/ENVIRONMENT.md), [DECISIONS](docs/DECISIONS.md), [CONTENT_GUIDE](docs/CONTENT_GUIDE.md) và [PLAN](docs/PLAN.md) để tiếp tục.
+Browser tests currently use Microsoft Edge.
+Development and E2E environments use separate data directories so tests do not overwrite the real learning database.
+⚠️ Current Limitations
+This project should not currently be treated as a complete or professionally validated Mandarin curriculum.
+Known limitations include:
+- learning content has not been fully reviewed by a Mandarin teacher
+- proficiency labels are learning targets, not TOCFL certification
+- connected-speech pronunciation is still being evaluated
+- speech recognition does not reliably evaluate Mandarin tones
+- AI-generated exercises may contain language errors
+- some pronunciation resources use general Standard Mandarin rather than specifically validated Taiwanese Mandarin recordings
+- Windows is currently the primary supported platform
+- Android and synchronization are future possibilities rather than current features
+For implementation details and known issues, see the documents in [`docs/`](docs/).
+🤖 Development Note
+This project has been developed with extensive AI-assisted coding.
+I use AI tools to help with implementation, debugging, refactoring, documentation, and technical exploration.
+My role has focused on defining the learning requirements, deciding features and workflows, testing the application in real study sessions, evaluating whether features actually help me learn, identifying failures, and iterating on the system.
+In other words, this is intentionally a personal AI-assisted / vibe-coding project, rather than a claim that every line of the codebase was written manually.
+📖 Documentation
+More detailed technical and development documentation is available in:
+- [`docs/TASKS.md`](docs/TASKS.md)
+- [`docs/DECISIONS.md`](docs/DECISIONS.md)
+- [`docs/ENVIRONMENT.md`](docs/ENVIRONMENT.md)
+- [`docs/CONTENT_GUIDE.md`](docs/CONTENT_GUIDE.md)
+- [`docs/PLAN.md`](docs/PLAN.md)
+Release notes and experiment-specific documentation are also kept in the docs/ directory.
+🚧 Project Status
+Active personal project — work in progress.
+The application is already used for my own Mandarin study, but features and content continue to change as my learning needs evolve.
+There is no fixed "final version" yet — the system grows together with my learning.
