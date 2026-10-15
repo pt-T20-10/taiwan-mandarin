@@ -1,0 +1,860 @@
+{
+  "added": [
+    {
+      "character": "也",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "些",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "交",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "份",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "但",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "位",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "來",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "例",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "做",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "傅",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "傘",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "傳",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "價",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "光",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "兒",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "內",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "共",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "別",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "刷",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "北",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "千",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "博",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "又",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "口",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "另",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "只",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "台",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "向",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "吧",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "含",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "吵",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "呢",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "呼",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "和",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "員",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "售",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "唱",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "啊",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "嗎",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "園",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "型",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "場",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "外",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "夠",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "奇",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "如",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "姓",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "婚",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "存",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "它",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "容",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "寓",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "就",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "展",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "己",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "巾",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "帶",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "年",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "幾",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "度",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "座",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "康",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "式",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "張",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "很",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "得",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "從",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "心",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "志",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "忘",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "快",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "怪",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "情",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "想",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "或",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "才",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "把",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "抽",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "招",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "拿",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "按",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "挑",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "接",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "推",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "換",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "搭",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "擦",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "放",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "效",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "散",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "整",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "數",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "新",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "旁",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "更",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "最",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "月",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "材",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "板",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "架",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "某",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "核",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "栽",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "條",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "樣",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "歌",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "正",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "比",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "毛",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "法",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "注",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "清",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "漢",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "然",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "營",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "爺",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "片",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "牌",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "牙",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "特",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "玲",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "瓶",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "留",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "略",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "畫",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "白",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "的",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "盆",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "直",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "相",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "省",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "確",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "稍",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "稱",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "稿",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "穿",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "第",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "等",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "答",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "算",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "節",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "粒",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "糖",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "系",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "紙",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "級",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "給",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "線",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "練",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "繫",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "美",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "習",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "者",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "肉",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "能",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "自",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "興",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "舊",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "舞",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "色",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "草",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "著",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "蔬",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "藍",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "處",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "蛋",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "街",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "被",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "複",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "褲",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "西",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "觀",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "解",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "言",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "記",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "訴",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "認",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "識",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "讓",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "豆",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "貓",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "趣",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "跟",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "跳",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "較",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "輛",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "轉",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "迎",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "送",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "逛",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "造",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "進",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "過",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "選",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "部",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "都",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "鉛",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "銀",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "錄",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "鐘",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "阿",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "限",
+      "variant": "Hans-source"
+    },
+    {
+      "character": "隻",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "雖",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "雨",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "鞋",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "頓",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "首",
+      "variant": "Hant-source"
+    },
+    {
+      "character": "鮮",
+      "variant": "Hant-source"
+    }
+  ],
+  "missing": [
+    "冊",
+    "壺",
+    "夢",
+    "帳",
+    "廳",
+    "曆",
+    "漿",
+    "薦",
+    "詢",
+    "貨",
+    "購",
+    "釋",
+    "項",
+    "顆",
+    "額",
+    "飾",
+    "餅"
+  ],
+  "note": "New source geometry, not professionally reviewed."
+}

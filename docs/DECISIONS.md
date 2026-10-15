@@ -1,5 +1,9 @@
 # Quyết định triển khai — 23/09/2026
 
+## Bổ sung v8 — 15/10/2026
+
+Tra từ dùng ngân hàng đóng gói trước, không gọi AI khi bấm. Câu thay nội dung có ID mới và archive; báo cập nhật thay vì chuyển đáp án cũ. Sửa lỗi dùng event `mistake-repair` cùng report trong transaction, tách khỏi điểm học; viết dùng `writing:<char>`. Không đổi schema/FSRS. Nguồn và hạn chế mẫu nét chuyển vào Cài đặt; thiếu mẫu phải báo rõ. Xem `RELEASE-V8.md`.
+
 1. Giữ Windows native, Git root hiện có và .venv Python 3.14.3. FastAPI/Pydantic có wheel tương thích; đã cài bằng interpreter riêng, không đổi Python global.
 2. React 19.3.0 + TypeScript 7.0.2 + Vite 8.3.0; ts-fsrs 5.4.2. Lock npm bằng package-lock.json, Python bằng requirements.lock. Không thêm framework state/router: hash navigation và context đủ cho bản local.
 3. FastAPI phục vụ dist cùng origin tại 127.0.0.1:8765. Launcher kiểm tra health, tránh mở thêm dịch vụ. Runtime không dùng CDN/cloud. Chặn Host lạ, Origin khác và yêu cầu header riêng cho mutation; không mở CORS cho website bên ngoài.

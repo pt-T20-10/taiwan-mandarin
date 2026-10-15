@@ -1,5 +1,28 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Học trong ngữ cảnh v8 — 15/10/2026
+
+- [x] Sửa thẻ bị chồng lấn trong Khám phá từ mới: dùng cùng `study-card-grid` với Từ cần biết thay lưới thẻ nhỏ cũ. Build và E2E chủ đề giao thông ở rộng 1440/768/390 px qua; bản dist cập nhật tại 8765.
+
+- [x] Thẻ từ dùng chung, trình bày lại lượng từ/động từ/ngữ pháp, tra từ offline, luyện viết bằng mẫu nét hiện có, sửa lỗi có điểm kết thúc. Chi tiết và giới hạn: [RELEASE-V8.md](RELEASE-V8.md).
+- [x] Build, 3 core checks, 3 backend/content/manifest checks, 2 E2E (tra từ/mobile/luyện viết và sửa→reload→sai lại) qua. Không chạy benchmark AI.
+- [x] Sao lưu và nâng v7→v8 qua API ngày 15/10/2026 15:07; 81 objects và 180 events giữ nguyên, hash state trước/sau trùng. Backup local `data/backups/before-v8-20261015-150720.json`. Phục vụ tại 127.0.0.1:8765; không push.
+- [ ] 17 chữ chưa có mẫu; mẫu mới chưa đối chiếu MOE từng chữ. Một số ghi chú/mảnh câu ngoài hội thoại và ví dụ ngữ pháp chưa tra được mọi chữ. Không nâng nhãn nội dung đã duyệt.
+
+## Mẫu nét tự lặp — 11/10/2026
+
+- [x] CharacterStudy tự lặp sau khi giữ chữ hoàn chỉnh 2,5 giây; bỏ nút Phát lại. Tạm dừng/Phát tiếp, Nét kế và Chậm vẫn hoạt động; hủy timer/frame khi đổi chữ hoặc rời màn hình. Giữ tùy chọn hệ thống giảm chuyển động (bấm Phát tiếp để bắt đầu). Build qua.
+
+## Pinyin trong bài chọn nghĩa — 11/10/2026
+
+- [x] Thêm Hiện/Ẩn Pinyin dưới từ ở bài `meaning`, dùng PracticeText với riêng lớp Pinyin. Mở Pinyin lưu trạng thái có trợ giúp; ẩn lại vẫn giữ, câu/lượt mới mặc định ẩn. Tiếng Việt tiếp tục chỉ mở qua gợi ý hoặc đối chiếu để bảo toàn đáp án. Build qua; không thêm test cho thay đổi giao diện nhỏ.
+
+## Thành phần cấu tạo chữ — 11/10/2026
+
+- [x] Màn hình mẫu nét tách bộ thủ tra cứu khỏi các thành phần, hiện vị trí và tên Việt khi có dữ liệu; 好 hiện 女 (bộ nữ) và 子 (bộ tử). Bản đầu chỉ tách một tầng, chưa đạt yêu cầu ở 您; đã sửa để tách đệ quy 您 → 你 + 心 → 亻 + 尔 + 心 → 亻 + ⺈ + 小 + 心, giữ bộ/biến thể làm đơn vị học thay vì tách tiếp thành nét. ⺈ được ghi là dạng thành phần của 刀, không gán thành 冖 (mịch).
+- [x] Đóng gói 637 cấu tạo có thể truy cập từ 424 chữ, lấy từ AnimCJK dictionary đã cache ở revision `ec5e17cca76c87587790bcbce5ea0b4d4fb753d6` (LGPL-3.0), ưu tiên IDS đã chỉnh của dự án. Script tái tạo: `scripts/build_character_components.py`. Giữ thành phần lặp, chặn vòng tham chiếu; thiếu dữ liệu/tên Việt thì giữ hình chữ và báo rõ, không đoán từ nguyên. Chưa thẩm định chuyên môn toàn bộ cấu tạo.
+- [x] Build và một test qua: 您/好/林, vị trí nhiều tầng, IDS thiếu và toàn bộ 424 mẫu. Loại file test khỏi bước typecheck của bản ứng dụng vì test động từ dùng `node:child_process` trong khi tsconfig chỉ nạp kiểu Vite; Vitest vẫn chạy các file này.
+
 ## Chuyên đề động từ — 04/10/2026
 
 - [x] Ngữ pháp → Động từ và cách dùng: sáu bài × sáu câu; 20 động từ đơn/song âm để đối chiếu; 36 từ li hợp với 72 câu ví dụ liền/tách, Phồn thể/Pinyin/nghĩa Việt, 24 mục học trước + 12 mở rộng. Nhãn số âm tiết/tân ngữ/li hợp không bị đồng nhất; ghi riêng biến thể 幫忙, 報名. Ví dụ do dự án soạn, chưa giáo viên duyệt.

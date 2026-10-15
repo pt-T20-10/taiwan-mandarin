@@ -41,3 +41,13 @@ Lịch sử tài sản đã gỡ ngày 27/09/2026; giữ thông báo nguồn/gi�
 120 mục từ mới đã tra TBCL; 48 mục khớp từ/Pinyin trong công cụ đối chiếu, 72 mục chưa khớp theo truy vấn hiện tại. Báo cáo `docs/a2-vocabulary-audit.json` ghi từng URL và mức kiểm tra. Câu, nghĩa Việt, hội thoại và ngữ cảnh vẫn do dự án soạn với AI hỗ trợ, chưa giáo viên duyệt. Không tự nâng toàn bộ mục thành `source-checked`.
 
 `manifest.json` ghi SHA-256/kích thước mọi file tài sản trừ chính manifest. `sources.json` ghi revision/hash nguồn đã tải. Học không tải nguồn từ xa; liên kết ngoài chỉ mở khi người dùng chọn tra cứu.
+
+## Bổ sung v8 — 15/10/2026
+
+Thêm 209 mẫu nét từ cache AnimCJK revision `ec5e17cca76c87587790bcbce5ea0b4d4fb753d6`, ưu tiên ZhHant, chỉ dùng cùng mã chữ nếu lấy từ ZhHans. Giữ nguyên đường nét và thứ tự nguồn; chuyển sang JSON cùng ma trận tọa độ. Arphic Technology Co., Ltd. ©1999; AnimCJK FM&SH ©2016–2026. Outlines theo Arphic Public License, dữ liệu dictionary theo LGPL-3.0. Đây là bản chuyển đổi của dự án ngày 15/10/2026, không có bảo đảm.
+
+Các mẫu bổ sung chưa được đối chiếu hình chữ Đài Loan từng chữ; không mang nhãn MOE duyệt. Nguồn và mức đối chiếu có trong từng JSON. Luyện viết nay dùng trung tuyến của cùng mẫu hoạt ảnh, không còn giới hạn 12 chữ cũ; kết quả chỉ là phản hồi luyện tập theo mẫu.
+
+Chưa có mẫu: 冊 壺 夢 帳 廳 曆 漿 薦 詢 貨 購 釋 項 顆 額 飾 餅. Ứng dụng báo thiếu, không thay bằng chữ khác.
+
+Từ theo ngữ cảnh, nghĩa Việt, phân đoạn và câu luyện v8 do dự án biên soạn, chưa giáo viên duyệt. Phân đoạn được đóng gói trước phiên học; không gọi AI hoặc suy Pinyin khi bấm từ.

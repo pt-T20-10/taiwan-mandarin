@@ -39,7 +39,7 @@ export function classifierUnit(topic:string,title:string):Unit{
    if(skill==='speaking')return [{...base,kind:'read-aloud',prompt:'Đọc cả câu, nối số lượng với lượng từ và danh từ.',stimulus:{hanzi:e.hanzi,pinyin:e.pinyin,vi:e.vi},answers:[e.hanzi]},{...base,id:base.id+':respond',kind:'respond',stimulus:{hanzi:e.hanzi,pinyin:e.pinyin,vi:e.vi},prompt:`Hãy tự đặt một câu có cụm mang nghĩa “${e.phrase.vi}”.`,answers:[e.hanzi]}];
    return [{...base,kind:'write',prompt:`Viết một câu dùng “${e.phrase.vi}”. Sau khi nộp, đối chiếu với câu mẫu; có thể có nhiều cách viết đúng.`,answers:[e.hanzi]}];
   });
-  return {id:`${id}:${skill}:v1`,title:`Lượng từ · ${title}`,skill,source:'authored',verification:'draft',reference:'Ví dụ do dự án biên soạn; chưa giáo viên duyệt.',passage:examples.map(({hanzi,pinyin,vi})=>({hanzi,pinyin,vi})),items};
+  return {id:`${id}:${skill}:v8`,title:`Lượng từ · ${title}`,skill,source:'authored',verification:'draft',reference:'Ví dụ do dự án biên soạn; chưa giáo viên duyệt.',passage:examples.map(({hanzi,pinyin,vi})=>({hanzi,pinyin,vi})),items};
  });
  return {id,title,description:'Ôn lượng từ bổ sung',words:[],grammar:[],dialogue:[],writing_prompt:'',character:'量',lessons:[],practice_sets};
 }

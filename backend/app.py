@@ -112,7 +112,7 @@ def import_objects(body: BulkObjects):
 class LearningEvent(BaseModel):
     id: str = Field(min_length=1, max_length=100)
     action_key: str = Field(min_length=1, max_length=300)
-    kind: Literal['answer','review','practice','speaking','writing','stroke']
+    kind: Literal['answer','review','practice','speaking','writing','stroke','mistake-repair']
     skill: str = Field(max_length=40)
     item_id: str = Field(max_length=200)
     correct: bool | None = None
@@ -174,7 +174,7 @@ def install_package(package: dict):
         if old:
             previous=json.loads(old['payload'])['content']
             def ids(content):
-                result=set()
+                result={e['id'] for e in content.get('retired_exercises',[])}
                 for u in content['units']:
                     result.add(u['id'])
                     for kind in ('words','grammar','lessons'):

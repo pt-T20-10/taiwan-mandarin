@@ -1,6 +1,6 @@
 import type { CardInput } from 'ts-fsrs';
 export type Layers = {hanzi: 'show'|'tap'|'hide'; pinyin:'show'|'tap'|'hide'|'new'; vi:'show'|'tap'|'hide'};
-export type TextItem = {hanzi:string;pinyin:string;vi:string};
+export type TextItem = {lookup_key?:string|null;hanzi:string;pinyin:string;vi:string};
 export type Word = TextItem & {id:string;note:string;source:string;verification:string};
 export type Grammar = TextItem & {id:string;explanation:string;title?:string;pattern?:string;restrictions?:string;common_mistake?:string;examples?:TextItem[];exercises?:Exercise[];status?:'planned'|'ready';group?:string;level?:string;prerequisites?:string[];references?:{title:string;tbcl_level:string;url:string;id:string}[]};
 export type Exercise = {id:string;kind:string;prompt:string;stimulus:TextItem|null;answers:string[];choices:string[];tokens:string[];explanation:string;word_id:string|null;grammar_id?:string|null;skill:string};
@@ -11,7 +11,7 @@ export type PracticeSet={id:string;title:string;skill:PracticeSkill;source:'auth
 export type Unit = {id:string;title:string;description:string;words:Word[];grammar:Grammar[];dialogue:TextItem[];writing_prompt:string;character:string;lessons:Lesson[];practice_sets?:PracticeSet[]};
 export type GrammarRoadmap={id:string;title:string;tbcl_level:string;source:string;status:'planned';batch:number;group?:string;batch_id?:string};
 export type GrammarBatch={id:string;title:string;group:string;objective:string;prerequisites:string[];source_levels:string[];status:'planned'};
-export type Content = {id:string;version:number;title:string;source_note:string;units:Unit[];grammar_roadmap?:GrammarRoadmap[];grammar_batches?:GrammarBatch[]};
+export type Content = {retired_exercises?:Exercise[];id:string;version:number;title:string;source_note:string;units:Unit[];grammar_roadmap?:GrammarRoadmap[];grammar_batches?:GrammarBatch[]};
 export type Stored<T=Record<string,unknown>> = {version:number;deleted:boolean;data:T};
 export type Collection = 'sessions'|'cards'|'notes'|'settings'|'placement'|'chats'|'reports';
 export type LearningEvent = {id:string;action_key:string;kind:string;skill:string;item_id:string;correct:boolean|null;assisted:boolean;answer:string;duration_ms:number;algorithm:string;timestamp:string;category:string;rating?:number;source?:'authored'|'ai'};

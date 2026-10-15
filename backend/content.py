@@ -18,6 +18,7 @@ class Text(Strict):
     source: str = 'original-ai-draft'
     verification: Literal['draft','source-checked'] = 'draft'
     audio: str = 'Windows/browser zh-TW local; not yet auditioned'
+    lookup_key: str | None = None
 
 class Word(Text):
     id: str
@@ -167,10 +168,15 @@ class Content(Strict):
     units: list[Unit] = Field(min_length=1, max_length=100)
     grammar_roadmap: list[dict] = []
     grammar_batches: list[GrammarBatch] = []
+    retired_exercises: list[Exercise] = []
 
     @model_validator(mode='after')
     def references(self):
         ids = set()
+        for ex in self.retired_exercises:
+            if ex.id in ids or not re.fullmatch(r'[a-z0-9][a-z0-9._:-]{0,199}', ex.id):
+                raise ValueError('Invalid or duplicate retired exercise ID')
+            ids.add(ex.id)
         all_grammar={g.id for u in self.units for g in u.grammar}
         validate_dependencies({g.id:g.prerequisites for u in self.units for g in u.grammar})
         batches={b.id:b for b in self.grammar_batches}
@@ -194,7 +200,7 @@ class Content(Strict):
                 for skill in ('reading','listening','speaking','writing'):
                     packets=[p for p in unit.practice_sets if p.skill==skill]
                     if len(packets)!=3 or len({tuple(s.hanzi for s in p.passage) for p in packets})!=3:raise ValueError('Bộ luyện thiếu/trùng')
-                if any(len(l.exercises)!=10 or not set(l.legacy_exercise_ids)<={e.id for e in l.exercises} for l in unit.lessons):raise ValueError('Bài v7/ID kế thừa sai')
+                if any(len(l.exercises)!=10 or not set(l.legacy_exercise_ids)<={e.id for e in [*l.exercises,*self.retired_exercises]} for l in unit.lessons):raise ValueError('Bài v7/ID kế thừa sai')
             words = {w.id for w in unit.words}
             grammars = {g.id for g in unit.grammar}
             entities = [unit, *unit.words, *unit.grammar, *unit.lessons]

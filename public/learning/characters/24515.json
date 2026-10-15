@@ -1,0 +1,122 @@
+{
+  "character": "心",
+  "radical": "心",
+  "decomposition": "⿲丿⿺乚丶丶",
+  "strokes": [
+    {
+      "outline": "M171,459Q147,381 112,311Q91,269 117,230Q129,209 152,227Q177,249 190,289Q211,344 208,392Q211,432 199,462Q192,472 185,472Q175,469 171,459Z",
+      "median": [
+        [
+          187,
+          464
+        ],
+        [
+          134,
+          223
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M863,228Q859,243 834,262Q797,290 698,391Q691,398 685,398Q682,397 684,389Q708,338 732,281Q742,257 728,241Q689,208 550,226Q441,244 397,323Q370,377 355,435Q348,463 324,476Q306,486 299,478Q295,474 302,454Q312,429 335,363Q372,224 476,178Q495,171 521,163Q710,115 851,212Q866,221 863,228Z",
+      "median": [
+        [
+          305,
+          476
+        ],
+        [
+          405,
+          269
+        ],
+        [
+          515,
+          199
+        ],
+        [
+          663,
+          184
+        ],
+        [
+          805,
+          234
+        ],
+        [
+          689,
+          389
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M441,617Q475,578 511,531Q524,515 541,513Q553,512 561,525Q568,541 564,574Q560,619 444,670Q428,677 420,675Q414,672 414,658Q415,645 441,617Z",
+      "median": [
+        [
+          424,
+          671
+        ],
+        [
+          523,
+          577
+        ],
+        [
+          549,
+          519
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    },
+    {
+      "outline": "M760,585Q814,536 877,465Q896,441 914,437Q924,436 933,447Q948,463 932,514Q922,563 840,592Q789,613 761,621Q751,627 748,612Q747,596 760,585Z",
+      "median": [
+        [
+          755,
+          616
+        ],
+        [
+          876,
+          528
+        ],
+        [
+          923,
+          442
+        ]
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        900
+      ]
+    }
+  ],
+  "source": "https://github.com/parsimonhi/animCJK/tree/ec5e17cca76c87587790bcbce5ea0b4d4fb753d6",
+  "reference": "https://stroke-order.learningweb.moe.edu.tw/dictView.jsp?ID=24515",
+  "license": "Arphic Public License; dictionary LGPL-3.0",
+  "variant": "Hant-source",
+  "verification": "Mẫu từ nguồn có giấy phép; chưa đối chiếu MOE/duyệt chuyên môn trong đợt v8.",
+  "copyright": "Arphic Technology Co., Ltd. ©1999; AnimCJK FM&SH ©2016–2026",
+  "modification": "2026-10-15: JSON/matrix conversion only; source outlines/order retained; APL derivative, no warranty."
+}

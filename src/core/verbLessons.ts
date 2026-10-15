@@ -1,9 +1,10 @@
 import type {PracticeItem} from './types';
 import {verbPacket,verbUnit} from './verbs';
+import {practicalVerbGuides} from './verbPractical';
 type Question=Omit<PracticeItem,'id'|'stimulus'|'evidence_index'>;
 const choice=(prompt:string,answer:string,others:string[],explanation:string):Question=>({kind:'choice',prompt,answers:[answer],choices:[answer,...others],explanation});
 const fill=(prompt:string,answers:string[],explanation:string):Question=>({kind:'cloze-input',prompt:prompt.includes('＿＿')?prompt.replace('＿＿','___'):prompt+' Câu hoàn chỉnh: ___.',answers,choices:[],explanation});
-export const verbLessons=[
+export const legacyVerbLessons=[
  {id:'recognize',title:'1. Nhận biết động từ',notes:['Đơn âm/song âm nói về số âm tiết, không nói động từ có tân ngữ hay có tách được không. 看 là đơn âm; 參加 là song âm.','Động từ li hợp cũng thường có hai âm tiết. Không phải mọi từ hai chữ đều là li hợp: 參加, 休息 không tách theo mẫu 見面.','Từ loại gắn với nghĩa trong câu. Hãy đọc cả mẫu dùng thay vì đoán chỉ từ mặt chữ.'],related:[],questions:[
  choice('Từ nào có một âm tiết?','看',['參加','休息'],'看 đọc kàn, có một âm tiết.'),
  choice('Từ nào có hai âm tiết?','討論',['買','聽'],'討論 đọc tǎolùn, có hai âm tiết.'),
@@ -53,4 +54,5 @@ export const verbLessons=[
  choice('“Xin nghỉ hai ngày” và “họp hai tiếng” dùng cặp nào?','請兩天假 / 開兩個小時的會',['請兩個小時的假 / 開兩天會','請兩次假 / 開兩次會'],'天 đo ngày nghỉ; 個小時 đo thời lượng họp. Chọn theo đúng ý, không chỉ theo hình thức.'),
  ]},
 ];
-export function verbLessonUnit(id:string){const lesson=verbLessons.find(l=>l.id===id)!;return verbUnit('lesson:'+id,lesson.title,[verbPacket(`verbs:lesson:${id}:v1`,lesson.title,'reading',lesson.questions.map((q,i)=>({...q,id:`verbs:lesson:${id}:${i+1}`,stimulus:null,evidence_index:null})))]);}
+export const verbLessons=legacyVerbLessons.map(lesson=>{const guide=practicalVerbGuides[lesson.id];return {...lesson,...guide,questions:guide.examples.map((example,i):Question=>i<4?choice(`Bạn muốn nói: “${example.vi}”`,example.hanzi,guide.examples.filter(e=>e.hanzi!==example.hanzi).slice(0,2).map(e=>e.hanzi),`${example.hanzi} (${example.pinyin}) — ${example.vi}`):fill(`Gõ câu để nói: “${example.vi}”`,[example.hanzi],`${example.hanzi} (${example.pinyin}) — ${example.vi}`))};});
+export function verbLessonUnit(id:string){const lesson=verbLessons.find(l=>l.id===id)!;return verbUnit('lesson:'+id,lesson.title,[verbPacket(`verbs:lesson:${id}:v8`,lesson.title,'reading',lesson.questions.map((q,i)=>({...q,id:`verbs:lesson:${id}:v8:${i+1}`,stimulus:null,evidence_index:null})))]);}
