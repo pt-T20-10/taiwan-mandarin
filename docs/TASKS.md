@@ -1,5 +1,51 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Sổ tay: trạng thái thẻ và căn chỉnh bộ lọc — 19/10/2026
+
+- Tra trong gói hiển thị ✓ Đã thêm, viền nhận diện và khóa nút thêm khi đã có thẻ theo hướng đang chọn. Bộ lọc Tất cả/Đã thêm/Chưa thêm có số lượng kết quả; nếu chỉ có hướng khác thì có nhãn riêng. Thẻ tạm ngưng vẫn được tính đã thêm; thẻ đã xóa không tính.
+- Dò cả word_id và Hán tự + Pinyin chuẩn hóa, nên thẻ nhập JSON/ID cá nhân cũng được nhận ra. Chống bấm thêm trùng trong lúc lưu; không ghi đè thẻ cũ nếu nó từng được sửa sang hướng khác. Lịch ôn của thẻ đã tồn tại giữ nguyên.
+- `forms.css` thống nhất chiều cao, nhãn và căn đáy ô nhập/dropdown; `filter-bar` dùng cho Sổ tay, ngữ pháp, động từ, lượng từ. Sửa căn hàng các actions có dropdown, ô tìm Học và thanh tìm Pinyin. Màn hình hẹp chuyển bộ lọc thành cột; không đổi cài đặt hiển thị/lịch học.
+- Build, 1 core test dò thẻ nhập/tạm ngưng/xóa/khác cách đọc, 2 E2E trạng thái/lọc/đổi hướng/reload/giữ lịch ôn và bố cục desktop/mobile trên 8 màn hình qua. Đã xem ảnh desktop Sổ tay. Chưa commit/push; bản dist local cập nhật.
+
+## Giữ nguyên đơn vị bộ thủ/thành phần đã nhận diện — 19/10/2026
+
+- `radical-learning-units.json` là danh mục dùng chung cho tên Việt hiển thị và điểm dừng phân tích. Bổ sung các tên/dạng phổ biến còn thiếu như 虍, 几, 米, 气; giữ nguyên các đơn vị có tên như 王, 青, 母 thay vì tách tiếp.
+- 號: giữ nguyên 虎 bên phải, hiển thị hổ · con hổ; bộ thủ tra cứu vẫn là 虍 — hổ · đầu hổ. Đối chiếu MOE: https://stroke-order.learningweb.moe.edu.tw/dictMean.jsp?ID=34399&la=0 ; danh mục bộ thủ: https://dict.variants.moe.edu.tw/file/files/214%E9%83%A8%E9%A6%96%E5%AD%97%E9%9F%B3%E8%AE%80%E8%A1%A8.pdf . Không coi mọi thành phần nguyên khối là bộ thủ tra cứu riêng.
+- Bộ đóng gói dùng danh mục này để tạo các mẫu IDS nhận diện được. Gộp cả cây con IDS được viết tường minh, chỉ khi hình thức trùng đúng và ánh xạ không mơ hồ; không gộp mọi chữ có nghĩa. Vẫn tách 您 thành 亻/⺈/小/心, giữ thành phần lặp và chống vòng lặp.
+- Build, một core test mở rộng (quét toàn bộ danh mục mẫu chữ + 號/皇 và IDS tường minh), một E2E thẻ 號/nhãn hổ/desktop/mobile qua. Không đổi nét chữ gốc, SQLite hay tiến độ; chưa commit/push.
+
+## Đánh dấu từ đã học ngay trong bài — 19/10/2026
+
+- Thẻ từ dùng chung (gồm hộp Từ bổ sung) có nút Đánh dấu đã học / Đã học ✓ · Bỏ đánh dấu. Chỉ khi người học bấm mới ghi nhận; mở thẻ hay nghe không tự đánh dấu.
+- Lưu report `learned-word:<mã chữ>` với đúng Hán tự/Pinyin/nghĩa/ngữ cảnh, phiên bản CAS và thời điểm; dùng schema/backup hiện có. Có thể bỏ dấu và tải lại vẫn giữ trạng thái. Không tạo flashcard, sửa lịch ôn, tăng điểm hoặc đánh dấu xong bài.
+- `writingKnowledge` nhận dấu này là nguồn thứ ba cùng flashcard và bài hoàn thành. Chỉ mở đúng từ/cụm được đánh dấu, không tự mở chữ thành phần hay ngữ pháp/cả chủ đề. Bỏ dấu không xóa bằng chứng đã học từ nguồn khác. Giao diện luyện viết có đếm nguồn tự đánh dấu.
+- Build qua; 3 core tests (nguồn mới/bỏ dấu/giữ nguồn khác cùng bộ lọc cũ) và 1 E2E tra từ → đánh dấu → reload → bỏ dấu, đối chiếu cards/sessions/events giữ nguyên, desktop/mobile qua. Không chạy lại benchmark AI. Dist local đã cập nhật, chưa commit/push.
+
+## Sửa điều kiện kiến thức đã học cho viết câu — 17/10/2026
+
+- Thay việc chọn chủ đề là đủ bằng `writingKnowledge`/`learnedSentenceBank`: từ từ flashcard không xóa/không tạm dừng, đúng `word_ids` của từng bài hoàn thành, mẫu ngữ pháp gắn với bài/phiên ngữ pháp hoàn thành. Bài đang dở, AI feedback và phiên viết câu trước không tự mở khóa từ mới.
+- Kiểm tra từng từ/cụm bằng từ điển phân đoạn đóng gói, không suy đã biết từ ghép chỉ vì biết từng chữ. Các mẫu tách động từ phải có bằng chứng đã luyện; bài bổ sung chỉ mở đúng các câu trong bộ đã hoàn thành. Theo dõi cả danh sách câu v6/v7/v8 của phiên đã hoàn thành khi lấy bằng chứng.
+- Chọn chủ đề chỉ lọc hẹp nguồn đã học, không cấp thêm kiến thức. Đọc lại state mới trước khi tạo bộ; báo thiếu khi dưới 5 câu, giữ bộ cũ/bản nháp. Bộ dở vượt kiến thức hiện tại có thông báo tạo bộ mới thay vì tiếp tục hiển thị câu không phù hợp. Bài đã nộp vẫn xem được trong lịch sử.
+- Bổ sung lời chào/câu giao tiếp ngắn để các bài chào hỏi đầu tiên có bộ ôn phù hợp. Đối chiếu read-only tiến độ local: 61 flashcard đang dùng, 6 bài hoàn thành, 62 từ/cụm được ghi nhận, 19 câu đủ điều kiện tại thời điểm kiểm tra.
+- Build qua; 4 core checks về nguồn học/không tự mở từ ghép/ngữ pháp/chu kỳ và 1 E2E từ hồ sơ trống → thêm flashcard + hoàn thành bài → tạo/đổi/tiếp tục/nộp bộ qua. Không sửa SQLite, không chạy lại benchmark AI, chưa commit/push.
+
+## Viết câu theo bộ và đọc vận dụng — 17/10/2026
+
+- Thêm `#skills/<chủ đề>/sentences`, liên kết từ Ôn tập: chọn nhiều chủ đề đã học, bộ 5/8/10 câu Việt → Hán tự bằng IME Pinyin của Windows; gom ví dụ đã soạn từ ngữ pháp/hội thoại/động từ/lượng từ. Câu mới trộn không lặp trước khi cạn ngân hàng; bản nháp, thứ tự và lịch sử được lưu.
+- Nộp cả bộ, đối chiếu biến thể đã biên soạn; câu khác mẫu cần đối chiếu, không tự kết luận sai. Có tự nhận xét AI local các câu khác mẫu khi bật, hoặc gọi từng câu sau nộp; prompt mới `sentence-review` nhận cả đề Việt và đáp án tham chiếu. Kết quả AI thử nghiệm, không biến thành điểm đúng tự động.
+- Đọc theo bộ hiển thị trọn đoạn và 10 câu hỏi cùng lúc. Chào hỏi có 3 bộ mới: 2 hội thoại 8–10 lượt có nhãn nhân vật, 1 đoạn văn 9 câu; thêm câu hỏi suy luận, vận dụng và tự gõ. Chủ đề khác dùng lại ngân hàng hiện có dưới dạng đoạn văn, chưa biên soạn lại toàn bộ. Có liên kết tiếp tục phiên đọc cũ.
+- Hover câu 0,5 giây hiện Pinyin và đọc nguyên câu Hán tự; bàn phím/nút chạm cũng dùng được. Không tra từ làm lộ nghĩa Việt; bản dịch chỉ xuất hiện qua gợi ý hoặc sau nộp. Trợ giúp được lưu.
+- Namespace `written:*` / `written-history:*`, dùng transaction tạo phiên + lịch sử và event nộp chống trùng; không đổi schema, package v8, lịch FSRS hoặc mốc bài Học. Bộ đề nằm trong source có ID phiên bản và được chụp vào phiên.
+- Máy hiện chỉ báo một giọng zh-TW native: Microsoft Hanhan Desktop. Có chọn giọng theo vai, nhưng hai nhân vật phải dùng chung nếu máy không có giọng thứ hai; không giả giọng nam.
+- Kiểm tra thực chạy: build; 2 core tests (chu kỳ/biến thể và ngân hàng đọc); 2 backend tests (namespace/transaction/chống nộp trùng và tương thích v8); 2 E2E (viết/lưu nháp/đổi bộ/tiếp tục/nộp/AI fixture và đọc 10 câu/ẩn nghĩa/mobile) qua. E2E có một cảnh báo Proactor WinError 10054 khi hủy kết nối audio, không làm test thất bại.
+- Smoke Qwen local CUDA một câu thật qua mode `sentence-review`: phản hồi đủ Hán tự/Pinyin/nghĩa/nhận xét đúng với câu thử “Tôi có hai quyển sách”; tổng 63,09 giây gồm nạp model, phần tạo câu 3,552 giây. Không chạy lại benchmark chất lượng; không suy rộng chất lượng từ một câu. Báo cáo local ignored: `data/sentence-review-smoke.json`.
+- Bản local tại 127.0.0.1:8765 đã nạp backend mới và dist mới; không nâng gói/sửa trực tiếp SQLite, không commit/push.
+
+## Gỡ luyện viết bằng chuột — 17/10/2026
+
+- Gỡ tab Viết chữ, nút Luyện viết từ này, luyện nét cuối bài Học và bảng vẽ nháp trong flashcard. Xóa bộ so nét bằng chuột và các kiểm tra dành riêng cho tính năng đã gỡ. Giữ hoạt ảnh thứ tự nét, cấu tạo chữ, Pinyin/nghe và viết diễn đạt bằng bàn phím. Bản ghi luyện cũ vẫn được giữ.
+- Kiểm tra: build qua; một E2E tra từ/xem hoạt ảnh/mobile và đường dẫn tab viết cũ qua. Bản local 8765 phục vụ dist mới. Chưa commit/push thay đổi này.
+
 ## Học trong ngữ cảnh v8 — 15/10/2026
 
 - [x] Sửa thẻ bị chồng lấn trong Khám phá từ mới: dùng cùng `study-card-grid` với Từ cần biết thay lưới thẻ nhỏ cũ. Build và E2E chủ đề giao thông ở rộng 1440/768/390 px qua; bản dist cập nhật tại 8765.

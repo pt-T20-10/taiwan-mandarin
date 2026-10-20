@@ -1,6 +1,5 @@
 import {test,expect} from '@playwright/test';
 import fs from 'node:fs';
-import {strokeModels,type Stroke} from '../src/core/strokes';
 test.beforeEach(async({request})=>{
  const backup=await (await request.get('/api/backup')).json();backup.objects=[];backup.events=[];
  const pack=JSON.parse(fs.readFileSync('content/foundation.pack.json','utf8'));backup.packages=[{id:pack.content.id,version:pack.content.version,payload:JSON.stringify(pack)}];
@@ -66,29 +65,6 @@ test('luồng micro mô phỏng TEST: sửa transcript trước gửi, chat và 
  await page.route('**/api/ai/asr',r=>r.fulfill({json:{text:'[TEST] 你好',elapsed_ms:1,notice:'TEST fixture; not microphone benchmark'}}));
  await page.route('**/api/ai/chat',r=>{sent=r.request().postDataJSON().messages.at(-1).content;return r.fulfill({json:{hanzi:'[TEST] 你好！',pinyin:'nǐ hǎo',vi:'[TEST] xin chào',feedback:'TEST fixture',elapsed_ms:1,generated:true}});});
  await page.goto('/#chat');await page.getByLabel('Đọc câu trả lời').uncheck();await page.getByRole('button',{name:'● Ghi âm',exact:true}).click();await expect(page.getByRole('button',{name:/Dừng ghi/})).toBeVisible();await page.waitForTimeout(500);await page.getByRole('button',{name:/Dừng ghi/}).click();await page.getByRole('button',{name:'Nhận dạng local',exact:true}).click();await expect(page.getByLabel('Transcript / tin nhắn')).toHaveValue('[TEST] 你好');expect(sent).toBe('');await page.getByLabel('Transcript / tin nhắn').fill('[TEST] 你好，我是安。');await page.getByRole('button',{name:'Gửi câu →',exact:true}).click();await expect(page.locator('.bubble.assistant')).toContainText('[TEST] 你好！');expect(sent).toBe('[TEST] 你好，我是安。');await page.reload();await expect(page.locator('.bubble.assistant')).toContainText('[TEST] 你好！');
-});
-test('luyện nét bằng chuột: sai hướng không ghi, đổi chủ đề và lưu đúng chữ đã chọn',async({page,request})=>{
- await page.goto('/#skills');await page.getByRole('button',{name:'Viết chữ',exact:true}).click();
- const canvas=page.getByLabel('Ô luyện nét');
- async function draw(stroke:Stroke){
-  const box=(await canvas.boundingBox())!;
-  const x=(v:number)=>box.x+v*box.width/300,y=(v:number)=>box.y+v*box.height/300;
-  await page.mouse.move(x(stroke[0][0]),y(stroke[0][1]));await page.mouse.down();
-  for(const p of stroke.slice(1))await page.mouse.move(x(p[0]),y(p[1]),{steps:8});
-  await page.mouse.up();
- }
- await draw([[255,150],[45,150]]);await expect(page.getByText(/Nét 1 chưa khớp/)).toBeVisible();
- expect((await(await request.get('/api/state')).json()).events).toHaveLength(0);
- await page.getByLabel('Chủ đề').selectOption('tw.information');await expect(page.getByRole('combobox',{name:'Chữ',exact:true})).toHaveValue('月');
- await page.getByRole('combobox',{name:'Chữ',exact:true}).selectOption('口');
- for(const stroke of strokeModels['口'])await draw(stroke);
- await expect(page.getByText('Đủ nét và đúng hướng theo mẫu. Không phải điểm thư pháp.')).toBeVisible();
- await expect.poll(async()=>(await(await request.get('/api/state')).json()).events.filter((e:any)=>e.kind==='stroke').map((e:any)=>e.item_id)).toEqual(['口']);
- await page.getByRole('combobox',{name:'Gợi ý',exact:true}).selectOption('memory');
- await expect(page.locator('.writing-pad svg path')).toHaveCount(1);
- await page.getByRole('button',{name:'Xem thứ tự nét',exact:true}).click();
- await expect(page.locator('.writing-pad svg path[stroke="#d88145"]')).toHaveCount(1);
- await page.screenshot({path:'test-results/handwriting.png'});
 });
 test('giọng Windows local thật tạo WAV cho câu mới, chặn mạng ngoài browser',async({page,request})=>{
  const status=await(await request.get('/api/status')).json();

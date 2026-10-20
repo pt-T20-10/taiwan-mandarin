@@ -140,9 +140,18 @@ def event(body: EventRequest):
 def create_practice_session(body: BulkObjects):
     if len(body.mutations)!=2:raise HTTPException(422,'Cần phiên luyện và lịch sử')
     session,report=body.mutations
-    if session.collection!='sessions' or report.collection!='reports' or session.expected_version!=0 or session.data.get('scope')!='skills':raise HTTPException(422,'Sai phiên luyện')
-    if session.id!='skills:'+str(session.data.get('run')) or report.id!='skills-history:'+str(session.data.get('unit_id'))+':'+str(session.data.get('skill')):raise HTTPException(422,'Sai ID phiên/lịch sử')
-    if report.data.get('kind')!='skills-history':raise HTTPException(422,'Sai loại lịch sử')
+    if session.collection!='sessions' or report.collection!='reports' or session.expected_version!=0:raise HTTPException(422,'Sai phiên luyện')
+    if session.data.get('scope')=='written-batch':
+        mode=session.data.get('mode')
+        if mode not in ('reading','sentences'):raise HTTPException(422,'Sai dạng bộ luyện')
+        if session.id!='written:'+str(session.data.get('run')) or report.id!='written-history:'+str(session.data.get('unit_id'))+':'+mode:raise HTTPException(422,'Sai ID bộ luyện/lịch sử')
+        if report.data.get('kind')!='written-history':raise HTTPException(422,'Sai loại lịch sử')
+        packet=session.data.get('packet',{});items=packet.get('items',[])
+        if packet.get('mode')!=mode or not 5<=len(items)<=10 or len({q.get('id') for q in items})!=len(items):raise HTTPException(422,'Bộ luyện cần 5–10 câu có ID riêng')
+    elif session.data.get('scope')=='skills':
+        if session.id!='skills:'+str(session.data.get('run')) or report.id!='skills-history:'+str(session.data.get('unit_id'))+':'+str(session.data.get('skill')):raise HTTPException(422,'Sai ID phiên/lịch sử')
+        if report.data.get('kind')!='skills-history':raise HTTPException(422,'Sai loại lịch sử')
+    else:raise HTTPException(422,'Sai phiên luyện')
     with db.connect() as conn:
         conn.execute('BEGIN IMMEDIATE')
         for mutation in body.mutations:db.put_object(conn,**mutation.model_dump())
@@ -238,7 +247,7 @@ class Message(BaseModel):
 
 class ChatRequest(BaseModel):
     messages: list[Message] = Field(min_length=1, max_length=24)
-    mode: Literal['chat', 'feedback'] = 'chat'
+    mode: Literal['chat', 'feedback', 'sentence-review'] = 'chat'
     request_id: str = Field(min_length=1, max_length=100)
 
 @app.post('/api/ai/chat')

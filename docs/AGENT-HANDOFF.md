@@ -1,5 +1,15 @@
 # Bàn giao dự án Đảo nhỏ — Taiwan Mandarin
 
+**Sổ tay 19/10/2026:** `NotebookDictionary.tsx` tách phần tra từ, có Đã thêm/Chưa thêm theo hướng và nhận diện thẻ ID nhập riêng qua `core/notebookCards.ts`. `forms.css` được nạp sau stylesheet cũ để thống nhất ô tìm/dropdown; các thanh lọc dùng class `filter-bar`. Xem TASKS/DECISIONS về hành vi thẻ tạm ngưng/xóa và kiểm tra thực chạy.
+
+**Cấu tạo chữ 19/10/2026:** danh mục `core/radical-learning-units.json` dùng chung cho nhãn và điểm dừng, script `build_character_components.py` sinh thêm `recognizedForms` để gộp cây con IDS khớp đơn vị đã biết. Sửa 號 giữ nguyên 虎 ở phải, bộ tra cứu vẫn 虍; giữ hồi quy 您. Xem TASKS/DECISIONS về nguồn MOE và kiểm tra thực chạy.
+
+**Tiếp nối 19/10/2026:** thẻ từ có tự đánh dấu Đã học, kể cả từ bổ sung gặp khi đang học bài. `LearnedWordButton.tsx` ghi report `learned-word:*`, `core/learnedWords.ts` xác định ID/trạng thái, `writingKnowledge` nhận thêm nguồn này. Có bỏ dấu, giữ riêng nguồn flashcard/bài hoàn thành, không tự mở khóa từ thành phần/grammatical pattern. Xem đầu TASKS/DECISIONS cho kiểm tra và quy tắc.
+
+**Sửa tiếp ngày 17/10/2026:** viết câu đã có bộ lọc nguồn thật tại `core/learnedWriting.ts`; chọn chủ đề không còn mở khóa toàn bộ ngân hàng. Đọc nguồn từ flashcard đang dùng và từng bài/phiên ngữ pháp/bổ sung hoàn thành, kiểm tra từ ghép và cấu trúc; bộ dở vượt phạm vi được chặn với thông báo giữ lịch sử/bản nháp. Xem đầu TASKS/DECISIONS cho kiểm tra thực chạy và quy tắc mới.
+
+**Thay đổi tiếp nối ngày 17/10/2026:** đã gỡ vẽ/tô nét bằng chuột theo yêu cầu (giữ hoạt ảnh nét), thêm `WrittenPractice.tsx` cho viết câu Việt → Hán tự và đọc theo bộ. Route viết `#skills/<unit>/sentences`, route đọc chính dùng bộ 10 câu nộp một lần; phiên đọc trước vẫn ở `/reading/legacy`. Bank câu nguồn từ nội dung v8 và ví dụ lượng từ/động từ; 3 bộ đọc chào hỏi mới ở `greetingReadings.ts`. Snapshot `written:*` và `written-history:*` dùng transaction hiện có. `sentence-review` bổ sung vào AI chat để xét đề Việt/đáp án, không thay chat/góp ý cũ. Chưa commit/push các thay đổi này. Trạng thái/test/giới hạn mới xem đầu `TASKS.md`; tài liệu bên dưới giữ snapshot lịch sử.
+
 **Cập nhật: 06/10/2026, múi giờ Asia/Bangkok.** Tài liệu dành cho agent tiếp quản mà không có lịch sử chat. Đã đối chiếu mã nguồn, Git và các tệp local tại thời điểm viết; không chạy lại ứng dụng/test cho riêng lần bàn giao này.
 
 **Cập nhật xuất bản cùng ngày:** sau khi tạo tài liệu, người dùng yêu cầu commit và push lên remote. Mã thử nghiệm đọc liền và tài liệu này được đưa vào commit `Add experimental connected-speech playback and agent handoff`. Các mô tả “chưa commit” bên dưới là snapshot trước checkpoint này; hãy dùng `git status` và `git log` để xác định trạng thái mới nhất. Việc commit không đồng nghĩa nghiệm thu chất lượng audio. Database/model/runtime/WAV local vẫn không nằm trong Git.

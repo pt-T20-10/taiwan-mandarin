@@ -1,0 +1,70 @@
+import type {WrittenSet,ReadingLine,WrittenItem} from './writtenPractice';
+const line=(hanzi:string,pinyin:string,vi:string,speaker?:string,role?:'female'|'male'):ReadingLine=>({hanzi,pinyin,vi,speaker,role});
+const question=(id:string,prompt:string,answers:string[],explanation:string,evidence:number[],choices:string[]=[]):WrittenItem=>({id:'reading:greetings:v1:'+id,prompt,answers,explanation,evidence,choices});
+export const greetingReadings:WrittenSet[]=[{
+ id:'reading:greetings:v1:classmates',title:'Ngày đầu gặp bạn học',mode:'reading',format:'dialogue',passage:[
+  line('你好，我叫美玲，你叫什麼名字？','Nǐ hǎo, wǒ jiào Měilíng, nǐ jiào shénme míngzi?','Chào bạn, tôi tên Mỹ Linh, bạn tên gì?','Cô gái — Mỹ Linh','female'),
+  line('我叫小安。你也是這個班的學生嗎？','Wǒ jiào Xiǎo Ān. Nǐ yě shì zhè ge bān de xuéshēng ma?','Tôi tên Tiểu An. Bạn cũng là học viên lớp này à?','Chàng trai — Tiểu An','male'),
+  line('是，我是新生。我從越南來。','Shì, wǒ shì xīnshēng. Wǒ cóng Yuènán lái.','Đúng, tôi là học viên mới. Tôi đến từ Việt Nam.','Cô gái — Mỹ Linh','female'),
+  line('歡迎！我也是越南人，不過我來臺灣兩個月了。','Huānyíng! Wǒ yě shì Yuènán rén, búguò wǒ lái Táiwān liǎng ge yuè le.','Chào mừng! Tôi cũng là người Việt, nhưng tôi đến Đài Loan được hai tháng rồi.','Chàng trai — Tiểu An','male'),
+  line('很高興認識你。今天幾點上課？','Hěn gāoxìng rènshì nǐ. Jīntiān jǐ diǎn shàngkè?','Rất vui được biết bạn. Hôm nay mấy giờ vào học?','Cô gái — Mỹ Linh','female'),
+  line('九點。我們還有十分鐘，可以先去教室。','Jiǔ diǎn. Wǒmen hái yǒu shí fēnzhōng, kěyǐ xiān qù jiàoshì.','Chín giờ. Chúng ta còn mười phút, có thể đến phòng học trước.','Chàng trai — Tiểu An','male'),
+  line('教室在哪裡？我第一次來，不太清楚。','Jiàoshì zài nǎlǐ? Wǒ dì yī cì lái, bù tài qīngchǔ.','Phòng học ở đâu? Đây là lần đầu tôi đến nên chưa rõ lắm.','Cô gái — Mỹ Linh','female'),
+  line('在二樓。我帶你去，老師應該已經到了。','Zài èr lóu. Wǒ dài nǐ qù, lǎoshī yīnggāi yǐjīng dào le.','Ở tầng hai. Tôi dẫn bạn đi, chắc thầy cô đã đến rồi.','Chàng trai — Tiểu An','male'),
+  line('謝謝你！下課以後，一起喝杯茶吧。','Xièxie nǐ! Xiàkè yǐhòu, yīqǐ hē bēi chá ba.','Cảm ơn bạn! Sau giờ học cùng uống trà nhé.','Cô gái — Mỹ Linh','female'),
+  line('好啊，我也想多認識一些朋友。','Hǎo a, wǒ yě xiǎng duō rènshì yīxiē péngyou.','Được chứ, tôi cũng muốn làm quen thêm bạn.','Chàng trai — Tiểu An','male'),
+ ],items:[
+ question('a1','Ai là người mới đến lớp lần đầu?',['美玲','Mỹ Linh'],'Mỹ Linh nói mình là học viên mới và lần đầu đến.',[2,6]),
+ question('a2','Hai bạn có điểm gì chung?',['Đều là người Việt Nam.'],'Cả hai đều nói đến xuất thân Việt Nam.',[2,3],['Đều là người Việt Nam.','Đều mới đến Đài Loan hôm nay.','Đều là giáo viên.']),
+ question('a3','Lúc nói chuyện khoảng mấy giờ?',['八點五十分','8:50','8 giờ 50','Tám giờ năm mươi'],'Chín giờ vào học, còn mười phút: khoảng 8:50.',[4,5]),
+ question('a4','Vì sao Tiểu An dẫn Mỹ Linh đi?',['Mỹ Linh chưa biết phòng học ở đâu.'],'Mỹ Linh hỏi vị trí vì lần đầu đến.',[6,7],['Mỹ Linh chưa biết phòng học ở đâu.','Hai bạn đi mua trà trước giờ học.','Mỹ Linh là giáo viên mới.']),
+ question('a5','Phòng học ở tầng mấy? Trả lời bằng Hán tự.',['二樓','在二樓','教室在二樓'],'Tiểu An trả lời 在二樓.',[7]),
+ question('a6','Tiểu An đến Đài Loan lâu hơn Mỹ Linh bao nhiêu tháng?',['Không đủ dữ kiện.'],'Biết Tiểu An đến hai tháng nhưng không biết chính xác Mỹ Linh đến ngày nào.',[2,3],['Không đủ dữ kiện.','Đúng hai tháng.','Mười tháng.']),
+ question('a7','Khi muốn mời bạn uống trà sau giờ học, chọn câu phù hợp.',['下課以後，一起喝杯茶吧。'],'下課以後 chỉ thời gian sau buổi học; 吧 đưa ra lời rủ.',[8],['下課以後，一起喝杯茶吧。','上課以前，我已經喝茶了。','你是這個班的老師嗎？']),
+ question('a8','Điền lượng từ: 一___茶。',['杯'],'杯 dùng cho trà tính theo ly.',[8]),
+ question('a9','Điền từ để hỏi tên: 你叫什麼___？',['名字'],'名字 là tên; câu mở đầu hỏi tên.',[0]),
+ question('a10','Viết câu ngắn chào người vừa quen, mang nghĩa “Rất vui được biết bạn”.',['很高興認識你','我很高興認識你','認識你很高興'],'Mỹ Linh dùng 很高興認識你 sau khi giới thiệu.',[4]),
+ ]},{
+ id:'reading:greetings:v1:visit',title:'Chào cô giáo và hẹn gặp lại',mode:'reading',format:'dialogue',passage:[
+ line('老師，您好！我是小安，今天來問上課的時間。','Lǎoshī, nín hǎo! Wǒ shì Xiǎo Ān, jīntiān lái wèn shàngkè de shíjiān.','Em chào cô! Em là Tiểu An, hôm nay đến hỏi giờ học.','Chàng trai — Tiểu An','male'),
+ line('你好，請坐。你想上上午的課，還是下午的課？','Nǐ hǎo, qǐng zuò. Nǐ xiǎng shàng shàngwǔ de kè, háishi xiàwǔ de kè?','Chào em, mời ngồi. Em muốn học buổi sáng hay chiều?','Cô giáo — cô Trần','female'),
+ line('我上午要工作，所以下午比較方便。','Wǒ shàngwǔ yào gōngzuò, suǒyǐ xiàwǔ bǐjiào fāngbiàn.','Buổi sáng em phải làm việc nên buổi chiều thuận tiện hơn.','Chàng trai — Tiểu An','male'),
+ line('下午的課兩點開始，一個星期上三次。','Xiàwǔ de kè liǎng diǎn kāishǐ, yī ge xīngqí shàng sān cì.','Lớp chiều bắt đầu lúc hai giờ, mỗi tuần học ba buổi.','Cô giáo — cô Trần','female'),
+ line('請問，我可以明天來上課嗎？','Qǐngwèn, wǒ kěyǐ míngtiān lái shàngkè ma?','Xin hỏi, ngày mai em có thể đến học không?','Chàng trai — Tiểu An','male'),
+ line('可以。請帶一本筆記本和一枝筆。','Kěyǐ. Qǐng dài yī běn bǐjìběn hé yī zhī bǐ.','Được. Em hãy mang một quyển vở và một cây bút.','Cô giáo — cô Trần','female'),
+ line('好的，謝謝老師。明天下午見！','Hǎo de, xièxie lǎoshī. Míngtiān xiàwǔ jiàn!','Dạ, cảm ơn cô. Chiều mai gặp lại cô!','Chàng trai — Tiểu An','male'),
+ line('不客氣。明天見，路上小心。','Bú kèqi. Míngtiān jiàn, lùshàng xiǎoxīn.','Không có gì. Hẹn mai gặp, đi đường cẩn thận nhé.','Cô giáo — cô Trần','female'),
+ ],items:[
+ question('b1','Tiểu An đến để làm gì?',['Hỏi giờ học.'],'Câu đầu nói rõ 來問上課的時間.',[0],['Hỏi giờ học.','Xin nghỉ học.','Mua vở cho cô giáo.']),
+ question('b2','Tại sao em chọn buổi chiều?',['Buổi sáng em phải làm việc.'],'上午要工作 là lý do cho 下午比較方便.',[2],['Buổi sáng em phải làm việc.','Lớp sáng đã hết chỗ.','Cô giáo chỉ làm buổi chiều.']),
+ question('b3','Ngày mai nên có mặt trước mấy giờ chiều?',['兩點','下午兩點','2 giờ','14:00','14 giờ'],'Lớp bắt đầu lúc hai giờ chiều.',[3,4,5]),
+ question('b4','Một tuần lớp học mấy buổi? Viết bằng Hán tự.',['三次','三次課','一個星期上三次'],'Cô giáo nói 一個星期上三次.',[3]),
+ question('b5','Chọn đồ cần mang đúng theo lời cô giáo.',['一本筆記本和一枝筆'],'Không có yêu cầu mang sách giáo khoa trong đoạn.',[5],['一本筆記本和一枝筆','兩本書和一杯茶','一枝筆和兩張票']),
+ question('b6','Điền lượng từ: 一___筆記本。',['本'],'Vở đếm bằng 本.',[5]),
+ question('b7','Điền lượng từ: 一___筆。',['枝','支'],'Ở Đài Loan có thể đếm bút bằng 枝 hoặc 支; câu mẫu dùng 枝.',[5]),
+ question('b8','Tiểu An chào “您好” vì sao?',['Thể hiện sự kính trọng với cô giáo.'],'您 là cách xưng hô lịch sự với người được kính trọng.',[0],['Thể hiện sự kính trọng với cô giáo.','Vì có nhiều giáo viên trong phòng.','Vì em chưa biết tiếng Trung.']),
+ question('b9','Viết câu đáp lại lời cảm ơn mang nghĩa “Không có gì”.',['不客氣','不用謝','別客氣'],'Cô giáo dùng 不客氣; 不用謝 và 別客氣 cũng phù hợp.',[7]),
+ question('b10','Điền từ nối chỉ kết quả: 我上午要工作，___下午比較方便。',['所以'],'所以 nối lý do làm việc buổi sáng với kết quả chọn học chiều.',[2]),
+ ]},{
+ id:'reading:greetings:v1:letter',title:'Tin nhắn kể về người bạn mới',mode:'reading',format:'prose',passage:[
+ line('我叫美玲，是越南人，現在在臺灣學中文。','Wǒ jiào Měilíng, shì Yuènán rén, xiànzài zài Táiwān xué Zhōngwén.','Tôi tên Mỹ Linh, là người Việt Nam, hiện học tiếng Trung ở Đài Loan.'),
+ line('今天是我第一天上課，我有一點緊張。','Jīntiān shì wǒ dì yī tiān shàngkè, wǒ yǒu yīdiǎn jǐnzhāng.','Hôm nay là ngày đầu tôi đi học nên hơi hồi hộp.'),
+ line('到了教室以後，一個男生先跟我說你好。','Dào le jiàoshì yǐhòu, yī ge nánshēng xiān gēn wǒ shuō nǐ hǎo.','Sau khi đến phòng học, một bạn nam chào tôi trước.'),
+ line('他叫小安，也從越南來，已經在這裡學了兩個月。','Tā jiào Xiǎo Ān, yě cóng Yuènán lái, yǐjīng zài zhèlǐ xué le liǎng ge yuè.','Bạn ấy tên Tiểu An, cũng đến từ Việt Nam và đã học ở đây hai tháng.'),
+ line('他坐在我旁邊，幫我找到今天要用的書。','Tā zuò zài wǒ pángbiān, bāng wǒ zhǎodào jīntiān yào yòng de shū.','Bạn ấy ngồi bên cạnh và giúp tôi tìm sách cần dùng hôm nay.'),
+ line('老師請我們用中文介紹自己，再問旁邊的人一個問題。','Lǎoshī qǐng wǒmen yòng Zhōngwén jièshào zìjǐ, zài wèn pángbiān de rén yī ge wèntí.','Cô giáo yêu cầu chúng tôi giới thiệu bản thân bằng tiếng Trung rồi hỏi người bên cạnh một câu.'),
+ line('我問小安喜歡喝什麼，他說他喜歡喝熱茶。','Wǒ wèn Xiǎo Ān xǐhuān hē shénme, tā shuō tā xǐhuān hē rè chá.','Tôi hỏi Tiểu An thích uống gì, bạn ấy nói thích trà nóng.'),
+ line('下課以後，我們一起去買了兩杯茶，坐下來聊天。','Xiàkè yǐhòu, wǒmen yīqǐ qù mǎi le liǎng bēi chá, zuò xiàlái liáotiān.','Sau giờ học, chúng tôi cùng mua hai ly trà rồi ngồi trò chuyện.'),
+ line('現在我不那麼緊張了，也很期待明天的課。','Xiànzài wǒ bù nàme jǐnzhāng le, yě hěn qídài míngtiān de kè.','Giờ tôi không còn hồi hộp như trước và rất mong buổi học ngày mai.'),
+ ],items:[
+ question('c1','Ai là người kể chuyện?',['美玲','Mỹ Linh'],'Người kể giới thiệu tên ngay câu đầu.',[0]),
+ question('c2','Vì sao tâm trạng của người kể thay đổi?',['Được bạn mới giúp đỡ và trò chuyện.'],'Ban đầu hồi hộp, sau khi được giúp và trò chuyện thì bớt căng thẳng.',[1,4,7,8],['Được bạn mới giúp đỡ và trò chuyện.','Không phải học tiếng Trung nữa.','Cô giáo cho nghỉ cả tuần.']),
+ question('c3','Ai chủ động chào trước?',['小安','Tiểu An'],'Bạn nam chào trước, câu sau xác định bạn ấy là Tiểu An.',[2,3]),
+ question('c4','Hai người uống trà lúc nào?',['下課以後','下課後','Sau giờ học'],'Câu 8 mở đầu bằng 下課以後.',[7]),
+ question('c5','Cô giáo yêu cầu việc gì trước việc hỏi bạn bên cạnh?',['Giới thiệu bản thân bằng tiếng Trung.'],'先 được hiểu qua thứ tự 介紹自己，再問…', [5],['Giới thiệu bản thân bằng tiếng Trung.','Mua hai ly trà.','Tìm một chỗ ngồi khác.']),
+ question('c6','Điền số và lượng từ: 我們買了___茶。',['兩杯'],'Hai người mua hai ly trà: 兩杯茶.',[7]),
+ question('c7','Tiểu An thích thức uống nào? Viết bằng Hán tự.',['熱茶','喝熱茶','他喜歡喝熱茶'],'Câu 7 ghi rõ 喜歡喝熱茶.',[6]),
+ question('c8','Chọn nhan đề phù hợp nhất.',['Ngày học đầu tiên và một người bạn mới'],'Toàn đoạn xoay quanh ngày đầu học và sự giúp đỡ của bạn mới.',[0,1,2,4,8],['Ngày học đầu tiên và một người bạn mới','Cách pha trà nóng','Một chuyến du lịch cuối tuần']),
+ question('c9','Điền từ chỉ trình tự: 介紹自己，___問旁邊的人一個問題。',['再'],'再 đặt trước việc thực hiện tiếp theo.',[5]),
+ question('c10','Có thể kết luận Tiểu An là giáo viên không?',['Không. Đoạn cho thấy Tiểu An là bạn học.'],'Tiểu An ngồi cạnh, cùng làm hoạt động của lớp; người dạy được gọi riêng là 老師.',[3,4,5],['Không. Đoạn cho thấy Tiểu An là bạn học.','Có. Tiểu An là người yêu cầu giới thiệu.','Có. Ai giúp tìm sách cũng là giáo viên.']),
+ ]}];

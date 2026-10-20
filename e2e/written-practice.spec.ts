@@ -1,0 +1,53 @@
+import {test,expect} from '@playwright/test';
+import {createEmptyCard} from 'ts-fsrs';
+const runs=async(request:any,mode:string)=>Object.values((await(await request.get('/api/state')).json()).objects.sessions).filter((o:any)=>!o.deleted&&o.data.scope==='written-batch'&&o.data.mode===mode).sort((a:any,b:any)=>a.data.created_at.localeCompare(b.data.created_at)) as any[];
+test('writing batch: drafts, stable questions, fresh set, resume and one submission',async({page,request})=>{
+ const headers={'X-Mandarin-Client':'local-ui'},backup=await(await request.get('/api/backup')).json();backup.objects=[];backup.events=[];
+ expect((await request.post('/api/restore',{headers,data:backup})).ok()).toBe(true);
+ await page.goto('/#skills/tw.greetings/sentences');
+ await expect(page.getByRole('button',{name:'Bộ đề mới',exact:true})).toBeDisabled();
+ await expect(page.getByText(/Chưa đủ 5 câu chỉ dùng kiến thức đã học/)).toBeVisible();
+ const content=await(await request.get('/api/content')).json(),unit=content.units[0],lesson=unit.lessons[0];
+ expect((await request.post('/api/objects',{headers,data:{collection:'sessions',id:lesson.id,expected_version:0,data:{phase:'summary',index:10,answers:[],exercise_ids:lesson.exercises.map((e:any)=>e.id)}}})).ok()).toBe(true);
+ for(const word of [...unit.words.slice(5,10),unit.words.find((w:any)=>w.hanzi==='你')])expect((await request.post('/api/objects',{headers,data:{collection:'cards',id:'test:'+word.id,expected_version:0,data:{word,word_id:word.id,direction:'recognize',schedule:createEmptyCard(),deck:'TEST',tags:[],suspended:false,source:'authored-draft'}}})).ok()).toBe(true);
+ await page.route('**/api/status',route=>route.fulfill({json:{tts_voices:[],llm_installed:true}}));
+ await page.route('**/api/ai/chat',async route=>{expect(route.request().postDataJSON().mode).toBe('sentence-review');await route.fulfill({json:{hanzi:'TEST',pinyin:'TEST',vi:'TEST',feedback:'TEST nhận xét theo nghĩa yêu cầu',generated:true}});});
+ const before=(await runs(request,'sentences')).at(-1)?.data.run;
+ await page.reload();
+ await page.goto('/#skills/tw.greetings/sentences');await page.getByRole('button',{name:'Bộ đề mới',exact:true}).click();
+ await expect.poll(async()=>(await runs(request,'sentences')).at(-1)?.data.run).not.toBe(before);
+ await expect(page.locator('.written-question')).toHaveCount(8);
+ const original=(await runs(request,'sentences')).at(-1).data;
+ await page.getByLabel('Câu trả lời 1',{exact:true}).fill(original.packet.items[0].answers[0]);
+ await expect.poll(async()=>(await runs(request,'sentences')).at(-1).data.drafts[original.packet.items[0].id]).toBe(original.packet.items[0].answers[0]);
+ await expect(page.getByRole('button',{name:/Nộp cả bộ/})).toBeEnabled();await page.reload();await expect(page.getByLabel('Câu trả lời 1',{exact:true})).toHaveValue(original.packet.items[0].answers[0]);
+ expect((await runs(request,'sentences')).at(-1).data.packet).toEqual(original.packet);
+ await expect(page.locator('.written-answer')).toHaveCount(0);
+ await page.getByRole('button',{name:'Bộ đề mới',exact:true}).click();
+ await expect.poll(async()=>(await runs(request,'sentences')).at(-1)?.data.run).not.toBe(original.run);
+ const fresh=(await runs(request,'sentences')).at(-1).data;
+ if(fresh.cycle===original.cycle)expect(fresh.packet.items.every((q:any)=>!original.packet.items.some((old:any)=>q.id===old.id))).toBe(true);
+ await page.locator('.written-practice details').filter({has:page.getByText(/Bài đang dở và lịch sử/)}).locator('summary').click();
+ await page.locator(`button[data-run="${original.run}"]`).click();
+ await expect(page.getByLabel('Câu trả lời 1',{exact:true})).toHaveValue(original.packet.items[0].answers[0]);
+ await page.getByLabel('Câu trả lời 2',{exact:true}).fill('這是另一個答案。');
+ await expect(page.getByRole('button',{name:/Nộp cả bộ/})).toBeEnabled();
+ await page.getByRole('button',{name:/Nộp cả bộ/}).click();await expect(page.getByRole('heading',{name:'Kết quả bộ luyện'})).toBeVisible();
+ await expect(page.getByText(/TEST nhận xét theo nghĩa yêu cầu/)).toBeVisible();
+ const events=(await(await request.get('/api/state')).json()).events.filter((e:any)=>e.action_key==='written-submit:'+original.run);expect(events).toHaveLength(1);
+ await page.reload();await expect(page.locator('.written-practice')).toBeVisible();
+});
+test('reading batch: ten questions, sentence Pinyin without translation, speaker voices, whole submission and mobile',async({page,request})=>{
+ const before=(await runs(request,'reading')).at(-1)?.data.run;
+ await page.goto('/#skills/tw.greetings/reading');await page.getByRole('button',{name:'Bộ đề mới',exact:true}).click();
+ await expect.poll(async()=>(await runs(request,'reading')).at(-1)?.data.run).not.toBe(before);
+ await expect(page.locator('.written-question')).toHaveCount(10);
+ const r=(await runs(request,'reading')).at(-1).data;
+ await page.locator('.reading-line-text').first().hover();await expect(page.locator('.sentence-help .pinyin').first()).toBeVisible();
+ await expect(page.locator('.sentence-translation')).toHaveCount(0);
+ if(r.packet.format==='dialogue'){await expect(page.locator('.speaker')).toHaveCount(r.packet.passage.length);}
+ for(let i=0;i<r.packet.items.length;i++){const q=r.packet.items[i],card=page.locator('.written-question').nth(i);if(q.choices.length)await card.getByRole('button',{name:q.answers[0],exact:true}).click();else await page.getByLabel('Câu trả lời '+(i+1),{exact:true}).fill(q.answers[0]);}
+ await expect(page.getByRole('button',{name:/Nộp cả bộ/})).toBeEnabled();await page.getByRole('button',{name:/Nộp cả bộ/}).click();
+ await expect(page.getByRole('heading',{name:'Kết quả bộ luyện'})).toBeVisible();await expect(page.locator('.written-answer')).toHaveCount(10);await expect(page.locator('.sentence-translation')).toHaveCount(r.packet.passage.length);
+ await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});

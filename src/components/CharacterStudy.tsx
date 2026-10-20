@@ -1,13 +1,17 @@
 import {useEffect,useId,useState,useRef} from 'react';
 import {structureParts} from '../core/characterStructure';
+import radicalUnits from '../core/radical-learning-units.json';
+const radicalNames:Record<string,string>=radicalUnits.radicalNames;
+const preservedNames:Record<string,string>=radicalUnits.preservedComponents;
 
 type Stroke={outline:string;median:number[][];matrix:number[]};
 type CharacterData={character:string;radical:string;decomposition:string;strokes:Stroke[];source:string;reference:string;verification:string;variant:string;copyright?:string;modification?:string;structure_verification?:string};
 const descriptions:Record<string,string>={'⿰':'trái – phải','⿱':'trên – dưới','⿲':'trái – giữa – phải','⿳':'trên – giữa – dưới','⿴':'bao kín','⿵':'bao phía trên','⿶':'bao phía dưới','⿷':'bao phía trái','⿸':'bao phía trên/trái','⿹':'bao phía trên/phải','⿺':'bao phía dưới/trái','⿻':'đan xen'};
-const radicalNames:Record<string,string>={'人':'nhân · người','亻':'nhân đứng · người','口':'khẩu · miệng','心':'tâm · tim, lòng','忄':'tâm đứng · lòng','手':'thủ · tay','扌':'thủ đứng · tay','水':'thủy · nước','氵':'ba chấm thủy · nước','木':'mộc · cây','火':'hỏa · lửa','灬':'hỏa ở dưới · lửa','土':'thổ · đất','女':'nữ · phụ nữ','子':'tử · con','言':'ngôn · lời nói','糸':'mịch · tơ','糹':'mịch đứng · tơ','金':'kim · kim loại','食':'thực · ăn','雨':'vũ · mưa','石':'thạch · đá','足':'túc · chân','宀':'miên · mái nhà','广':'nghiễm · mái che','穴':'huyệt · hang','日':'nhật · mặt trời','月':'nguyệt · trăng','衣':'y · áo','門':'môn · cửa','辵':'sước · đi','⻎':'sước ở dưới · đi','艸':'thảo · cỏ','艹':'thảo ở trên · cỏ','目':'mục · mắt','耳':'nhĩ · tai','貝':'bối · vỏ sò','馬':'mã · ngựa','竹':'trúc · tre','王':'vương · vua','一':'nhất · một','二':'nhị · hai','十':'thập · mười','八':'bát · tám','大':'đại · lớn','小':'tiểu · nhỏ','力':'lực · sức','寸':'thốn · tấc','田':'điền · ruộng','山':'sơn · núi','工':'công · việc','刀':'đao · dao','刂':'đao đứng · dao','囗':'vi · vây quanh','阝':'phụ/ấp · gò/ấp','頁':'hiệt · trang','見':'kiến · thấy','立':'lập · đứng','禾':'hòa · lúa','白':'bạch · trắng','走':'tẩu · đi/chạy','止':'chỉ · dừng','尸':'thi · thân/mái','欠':'khiếm · thiếu','又':'hựu · lại','夕':'tịch · chiều tối','彳':'xích · bước chân','礻':'thị đứng · thờ cúng'};
+
 const componentNames:Record<string,string>={'𠃌':'nét gập có móc','䜌':'(糸 – 言 – 糸)','𧾷':'dạng bên trái của 足','龶':'ba nét ngang với nét dọc xuyên','龸':'phần trên của 尚','亼':'(人 trên 一)','尌':'(壴 trái, 寸 phải)'};
 function decompositionDescription(value:string){return Array.from(value).map(c=>descriptions[c]?`[${descriptions[c]}]`:componentNames[c]||c).join(' ');}
 function componentLabel(char:string){
+ if(preservedNames[char])return preservedNames[char];
  if(char==='⺈')return 'dạng thành phần của 刀 (đao); khác 冖 (mịch)';
  if(char==='冖')return 'bộ mịch · che phủ';
  return radicalNames[char]?`bộ ${radicalNames[char]}`:componentNames[char]||'thành phần chưa có tên Việt trong dữ liệu';

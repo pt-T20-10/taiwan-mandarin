@@ -1,0 +1,44 @@
+import {expect,it} from 'vitest';
+import pack from '../../content/foundation.pack.json';
+import {writingKnowledge,learnedSentenceBank,missingWritingWords,canWriteSentence} from './learnedWriting';
+import type {AppState,Content} from './types';
+import {learnedWordId} from './learnedWords';
+const content=pack.content as Content;
+const empty=():AppState=>({device_id:'test',objects:{sessions:{},cards:{},notes:{},settings:{},placement:{},chats:{},reports:{}},events:[]});
+it('counts explicitly marked supplementary words immediately and supports undo without unlearning other sources',()=>{
+ const state=empty(),id=learnedWordId('車站');
+ state.objects.reports[id]={version:1,deleted:false,data:{kind:'learned-word',learned:true,word:{hanzi:'車站',pinyin:'chēzhàn',vi:'nhà ga'}}};
+ let knowledge=writingKnowledge(content,state);
+ expect(knowledge.words.has('車站')).toBe(true);expect(knowledge.markedWordIds).toEqual([id]);
+ expect(knowledge.words.has('車')).toBe(false);expect(knowledge.words.has('站')).toBe(false);expect(knowledge.grammar.size).toBe(0);
+ expect(missingWritingWords('車站',knowledge)).toHaveLength(0);
+ state.objects.reports[id].data.learned=false;expect(writingKnowledge(content,state).words.has('車站')).toBe(false);
+ state.objects.cards.station={version:1,deleted:false,data:{word:{hanzi:'車站'},suspended:false}};
+ expect(writingKnowledge(content,state).words.has('車站')).toBe(true);
+ state.objects.reports[id].data.learned=true;state.objects.reports[id].deleted=true;delete state.objects.cards.station;
+ expect(writingKnowledge(content,state).words.has('車站')).toBe(false);
+});
+it('requires actual cards/completed lessons, not a selected topic or a partially completed lesson',()=>{
+ const state=empty(),unit=content.units[0],lesson=unit.lessons[0];
+ expect(learnedSentenceBank(content.units,writingKnowledge(content,state))).toHaveLength(0);
+ state.objects.sessions[lesson.id]={version:1,deleted:false,data:{phase:'exercise',index:9,answers:[]}};
+ expect(learnedSentenceBank(content.units,writingKnowledge(content,state))).toHaveLength(0);
+ state.objects.sessions[lesson.id].data={phase:'summary',index:10,answers:[],exercise_ids:lesson.exercises.map(e=>e.id)};
+ const learned=writingKnowledge(content,state),pool=learnedSentenceBank(content.units,learned);
+ expect(pool.length).toBeGreaterThanOrEqual(5);expect(learned.words.has('你好')).toBe(true);expect(learned.words.has('他')).toBe(false);
+ expect(pool.every(q=>missingWritingWords(q.sample!.hanzi,learned).length===0)).toBe(true);
+ expect(pool.some(q=>q.sample!.hanzi.includes('睡'))).toBe(false);
+});
+it('uses active flashcards without treating individual Hanzi as a learned compound or unlocking grammar',()=>{
+ const state=empty();for(const hanzi of ['我','是','學','生','謝謝','你好','您好','早安','晚安','再見'])state.objects.cards[hanzi]={version:1,deleted:false,data:{word:{hanzi},suspended:false}};
+ state.objects.cards['睡覺']={version:1,deleted:true,data:{word:{hanzi:'睡覺'}}};
+ state.objects.cards['買']={version:1,deleted:false,data:{word:{hanzi:'買'},suspended:true}};
+ let learned=writingKnowledge(content,state);expect(learned.words.has('睡覺')).toBe(false);expect(learned.words.has('買')).toBe(false);
+ expect(missingWritingWords('我是學生。',learned)).toContain('學生');
+ state.objects.cards['學生']={version:1,deleted:false,data:{word:{hanzi:'學生'}}};learned=writingKnowledge(content,state);
+ const oldItem={id:'sentence:v1:tw.greetings.g.1:1',prompt:'Tôi là học sinh.',answers:['我是學生。'],choices:[],explanation:'',sample:{hanzi:'我是學生。',pinyin:'Wǒ shì xuéshēng.',vi:'Tôi là học sinh.'}};
+ expect(missingWritingWords(oldItem.sample.hanzi,learned)).toHaveLength(0);expect(canWriteSentence(oldItem,learned)).toBe(false);
+ state.objects.sessions['grammar:tw.greetings.g.1']={version:1,deleted:false,data:{scope:'grammar',grammar_id:'tw.greetings.g.1',phase:'summary'}};
+ expect(canWriteSentence(oldItem,writingKnowledge(content,state))).toBe(true);
+ expect(learnedSentenceBank(content.units,learned).length).toBeGreaterThanOrEqual(5);
+});

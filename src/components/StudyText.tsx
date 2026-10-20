@@ -4,15 +4,15 @@ import lookup from '../core/study-lookup.json';
 import type {TextItem} from '../core/types';
 import {useApp} from '../context';
 import {CharacterStudy} from './CharacterStudy';
-import {Handwriting} from './Handwriting';
 import {speech} from '../adapters/local';
+import {LearnedWordButton} from './LearnedWordButton';
 type Span={start:number;end:number;word:TextItem};
 const sentences:Record<string,Span[]>=lookup.sentences;
 export const studyWords:TextItem[]=lookup.words;
 
-export function StudyCard({word,writing=false}:{word:TextItem;writing?:boolean}){
- const {notify}=useApp(),[write,setWrite]=useState(writing);
- return <article className="study-card"><div><h3 lang="zh-TW">{word.hanzi}</h3><p className="pinyin">{word.pinyin}</p><p>{word.vi}</p><div className="actions"><button onClick={()=>void speech.speak(word.hanzi).catch(e=>notify(e.message))}>Nghe từ</button><button onClick={()=>setWrite(!write)}>{write?'Xem cách viết':'Luyện viết từ này'}</button></div></div>{write?<Handwriting key={word.hanzi} initial={word.hanzi}/>:<CharacterStudy key={word.hanzi} text={word.hanzi}/>}</article>;
+export function StudyCard({word}:{word:TextItem}){
+ const {notify}=useApp();
+ return <article className="study-card"><div><h3 lang="zh-TW">{word.hanzi}</h3><p className="pinyin">{word.pinyin}</p><p>{word.vi}</p><div className="actions"><button onClick={()=>void speech.speak(word.hanzi).catch(e=>notify(e.message))}>Nghe từ</button><LearnedWordButton word={word}/></div></div><CharacterStudy key={word.hanzi} text={word.hanzi}/></article>;
 }
 function WordDialog({word,onClose,supplemental}:{word:TextItem;onClose:()=>void;supplemental:boolean}){
  const dialog=useRef<HTMLDialogElement>(null),{content}=useApp();

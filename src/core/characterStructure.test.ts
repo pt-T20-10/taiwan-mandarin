@@ -6,6 +6,12 @@ it('expands compound parts recursively, retaining radicals and repeated parts',(
  expect(structureParts('⿱你心','您').map(p=>p.character)).toEqual(['亻','⺈','小','心']);
  expect(structureParts('⿰女子','好').map(p=>p.character)).toEqual(['女','子']);
  expect(structureParts('⿰木木','林').map(p=>p.character)).toEqual(['木','木']);
+ const number=structureParts(index['號'].decomposition,'號');
+ expect(number.filter(p=>p.position==='phải')).toEqual([{character:'虎',position:'phải'}]);
+ expect(number.some(p=>p.position.startsWith('phải /'))).toBe(false);
+ expect(structureParts('⿰号⿸虍几','號').filter(p=>p.position==='phải')).toEqual([{character:'虎',position:'phải'}]);
+ expect(structureParts('⿱白王','皇').map(p=>p.character)).toEqual(['白','王']);
+ expect(structureParts('⿱白⿱一土','皇').map(p=>p.character)).toEqual(['白','王']);
  expect(structureParts('⿱你心','您').map(p=>p.position)).toEqual(['trên / trái','trên / phải / trên','trên / phải / dưới','dưới']);
  expect(structureParts('⿱你','')).toEqual([]);
  for(const [char,row] of Object.entries(index)){

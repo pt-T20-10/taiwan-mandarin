@@ -1,5 +1,29 @@
 # Quyết định triển khai — 23/09/2026
 
+## Sổ tay: dấu Đã thêm — 19/10/2026
+
+Tính trạng thái thêm theo đúng hướng flashcard đang chọn; hướng khác chỉ là thông tin bổ sung, không chặn tạo hướng mới. Nhận ra thẻ qua ID từ gốc hoặc cặp Hán tự/Pinyin, kể cả ID nhập riêng. Thẻ tạm ngưng là đã có, tombstone là đã xóa. Các bộ lọc dùng chung bố cục `filter-bar` và quy tắc kích thước ở `forms.css`; không dùng hàng actions căn giữa cho ô tìm không nhãn cạnh dropdown có nhãn.
+
+## Điểm dừng khi phân tích cấu tạo chữ — 19/10/2026
+
+Giữ nguyên bộ thủ/dạng bộ thủ và thành phần nguyên khối đã được chỉ định trong danh mục học; dùng cùng metadata cho tên và cơ chế dừng. Không tách vô hạn tới mảnh không có tên, cũng không dừng ở mọi chữ thông dụng vì sẽ làm mất các bộ bên trong 您. IDS viết tường minh chỉ được gộp lại nếu khớp duy nhất một đơn vị được chỉ định. 虎 là thành phần nguyên khối trong 號; 虍 vẫn là bộ thủ tra cứu. Tên Việt là chú giải học tập của dự án, không gán nhãn toàn bộ dữ liệu đã duyệt chuyên môn.
+
+## Nguồn từ tự đánh dấu đã học — 19/10/2026
+
+Cho người học tự xác nhận từ bổ sung ngay trên thẻ từ, không bắt buộc flashcard hoặc hoàn thành bài. Dấu đã học là report riêng theo đúng từ, có thể bỏ; là nguồn kiến thức bổ sung cho bộ lọc tạo đề, không phải đánh giá mức thành thạo và không tự mở khóa ngữ pháp. Các nguồn flashcard/bài hoàn thành vẫn độc lập và được giữ khi bỏ dấu.
+
+## Nguồn đã học cho viết câu — 17/10/2026
+
+Chọn chủ đề không phải bằng chứng đã học. Nguồn viết câu phải dựa vào flashcard đang dùng và từng bài/phiên đã hoàn thành; chỉ dùng đúng nội dung và mẫu cấu trúc được mở khóa. Từ ghép chưa học không được suy từ các chữ thành phần. Thiếu 5 câu thì yêu cầu học thêm hoặc mở rộng phạm vi nguồn đã học, không chèn câu vượt kiến thức. Snapshot cũ và bản nháp vẫn được giữ nhưng phiên chưa nộp phải kiểm tra lại điều kiện khi mở.
+
+## Bộ luyện viết câu/đọc — 17/10/2026
+
+Đề viết Việt → Hán tự dùng IME hệ điều hành và ngân hàng ví dụ đã soạn, chọn nguồn theo chủ đề. Ghi nhận khớp đáp án chuẩn/biến thể; cách diễn đạt khác giữ trạng thái cần đối chiếu và nhận xét AI thử nghiệm. Không lấy AI để tăng tỷ lệ đúng của bài học. Bộ đọc/viết mới dùng snapshot và namespace riêng trên sessions/reports, tương thích SQLite hiện có. Chuyển đọc sang nộp cả bộ; giữ liên kết phiên cũ. Giọng nhân vật chỉ lấy giọng zh-TW thực sự khả dụng, báo rõ khi dùng chung.
+
+## Gỡ luyện nét — 17/10/2026
+
+Theo yêu cầu người dùng, bỏ toàn bộ thao tác vẽ/tô/chấm nét bằng chuột, bút và cảm ứng cùng bảng nháp flashcard. Tiếp tục cung cấp hoạt ảnh cách viết và thành phần chữ. Không xóa lịch sử luyện đã lưu; không đổi dữ liệu bài học hoặc lịch ôn.
+
 ## Bổ sung v8 — 15/10/2026
 
 Tra từ dùng ngân hàng đóng gói trước, không gọi AI khi bấm. Câu thay nội dung có ID mới và archive; báo cập nhật thay vì chuyển đáp án cũ. Sửa lỗi dùng event `mistake-repair` cùng report trong transaction, tách khỏi điểm học; viết dùng `writing:<char>`. Không đổi schema/FSRS. Nguồn và hạn chế mẫu nét chuyển vào Cài đặt; thiếu mẫu phải báo rõ. Xem `RELEASE-V8.md`.

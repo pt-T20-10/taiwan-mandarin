@@ -1,21 +1,22 @@
 import {useEffect,useRef,useState} from 'react';
 import {useApp} from '../context';
-import {Handwriting,Recorder,Speak} from './common';
+import {Recorder,Speak} from './common';
 import {PracticeText} from './PracticeText';
 import {eventFor} from '../core/learning';
 import {choosePacket,practiceGrade,practiceSession,practiceAudio} from '../core/practice';
 import type {PracticeSession,PracticeSet,PracticeSkill,Unit} from '../core/types';
 import {api,chatModel,speech,storage} from '../adapters/local';
 import {generatePractice} from '../adapters/practice';
+import {WrittenPractice} from './WrittenPractice';
 
 const pendingSaves=new Set<Promise<unknown>>();
 function tracked<T>(operation:Promise<T>):Promise<T>{const task=operation.finally(()=>pendingSaves.delete(task));pendingSaves.add(task);return task;}
 
-const labels:Record<string,string>={listening:'Nghe',speaking:'Nói',reading:'Đọc',writing:'Viết diễn đạt',stroke:'Viết chữ'};
+const labels:Record<string,string>={listening:'Nghe',speaking:'Nói',reading:'Đọc',writing:'Viết diễn đạt',sentences:'Viết câu Việt → Hán tự'};
 export function Skills({route='skills'}:{route?:string}){
- const {content,event,notify}=useApp();const parts=route.split('/'),unit=content.units.find(u=>u.id===parts[1])||content.units[0],skill=parts[2] in labels?parts[2]:'reading';
+ const {content}=useApp();const parts=route.split('/'),unit=content.units.find(u=>u.id===parts[1])||content.units[0],skill=parts[2] in labels?parts[2]:'reading';
  function navigate(u:string,s:string){speech.stop();location.hash=`skills/${u}/${s}`;}
- return <><h1>Luyện kỹ năng</h1><p><a href={"#grammar/verbs/topic/"+unit.id+"/"+(skill==='stroke'?'guide':skill)}>Ôn động từ trong chủ đề này →</a></p><p><a href={"#learn/classifiers/"+unit.id+"/"+(skill==='stroke'?'guide':skill)}>Ôn lượng từ trong chủ đề này →</a></p><p><a href="#pronunciation">Phát âm, biến điệu và nhịp câu →</a></p><div className="tabs">{Object.entries(labels).map(([key,label])=><button key={key} className={skill===key?'active':''} onClick={()=>navigate(unit.id,key)}>{label}</button>)}</div><label>Chủ đề<select value={unit.id} onChange={e=>navigate(e.target.value,skill)}>{content.units.map(u=><option value={u.id} key={u.id}>{u.title}</option>)}</select></label>{skill==='stroke'?<Handwriting initial={unit.character} onComplete={character=>event(eventFor(character,'writing',{kind:'stroke'})).catch(e=>notify(e.message))}/>:<SkillPractice key={unit.id+skill} unit={unit} skill={skill as PracticeSkill}/>}</>;
+ return <><h1>Luyện kỹ năng</h1><p><a href={"#grammar/verbs/topic/"+unit.id+"/"+(skill==='sentences'?'writing':skill)}>Ôn động từ trong chủ đề này →</a></p><p><a href={"#learn/classifiers/"+unit.id+"/"+(skill==='sentences'?'writing':skill)}>Ôn lượng từ trong chủ đề này →</a></p><p><a href="#pronunciation">Phát âm, biến điệu và nhịp câu →</a></p><div className="tabs">{Object.entries(labels).map(([key,label])=><button key={key} className={skill===key?'active':''} onClick={()=>navigate(unit.id,key)}>{label}</button>)}</div><label>Chủ đề<select value={unit.id} onChange={e=>navigate(e.target.value,skill)}>{content.units.map(u=><option value={u.id} key={u.id}>{u.title}</option>)}</select></label>{(skill==='reading'&&parts[3]!=='legacy')||skill==='sentences'?<WrittenPractice key={unit.id+skill+parts[3]} unit={unit} mode={skill==='sentences'?'sentences':'reading'}/>:<SkillPractice key={unit.id+skill} unit={unit} skill={skill as PracticeSkill}/>}</>;
 }
 
 export function SkillPractice({unit,skill,allowAI=true}:{unit:Unit;skill:PracticeSkill;allowAI?:boolean}){
