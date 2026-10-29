@@ -3,7 +3,7 @@ import {normalizeHanzi} from './learning';
 export function shuffled<T>(items:T[],random= Math.random):T[]{const result=[...items];for(let i=result.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}return result;}
 export function lessonItems(lesson:Lesson,session:Session,legacy=false){
  const ids=session.exercise_ids||(legacy?lesson.legacy_exercise_ids:undefined)||lesson.exercises.map(e=>e.id);
- return ids.map(id=>lesson.exercises.find(e=>e.id===id)).filter(e=>!!e);
+ return ids.map(id=>(session.exercise_snapshot||lesson.exercises).find(e=>e.id===id)).filter(e=>!!e);
 }
 export function choosePacket(packets:PracticeSet[],history:PracticeSession[],random=Math.random){
  const authored=history.filter(h=>h.packet.source==='authored'&&packets.some(p=>p.id===h.packet.id));

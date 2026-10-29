@@ -4,6 +4,7 @@ import {sentenceBank} from './writtenPractice';
 import {normalizeHanzi} from './learning';
 import lookup from './study-lookup.json';
 import {isMarkedLearned} from './learnedWords';
+import {topicLanguageId,topicLanguageItems} from './topicLanguage';
 
 export type WritingKnowledge={words:Set<string>;grammar:Set<string>;sentences:Set<string>;lessonIds:string[];cardIds:string[];markedWordIds:string[]};
 const lexicon=[...new Set(lookup.words.map(w=>normalizeHanzi(w.hanzi)).filter(Boolean))].sort((a,b)=>b.length-a.length);
@@ -27,7 +28,7 @@ export function writingKnowledge(content:Content,state:AppState):WritingKnowledg
   lesson.grammar_ids.forEach(id=>result.grammar.add(id));
   // Only the actual completed exercise list is evidence, including legacy snapshots.
   const ids:string[]=record.data.exercise_ids||lesson.legacy_exercise_ids||lesson.exercises.map(e=>e.id);
-  const questions=[...lesson.exercises,...(content.retired_exercises||[])];
+  const questions=[...(record.data.exercise_snapshot||[]),...lesson.exercises,...(content.retired_exercises||[])];
   for(const id of ids){const ex=questions.find(q=>q.id===id);if(ex?.stimulus)addSentence(ex.stimulus.hanzi);}
  }
  for(const row of Object.values(state.objects.sessions)){
@@ -37,6 +38,17 @@ export function writingKnowledge(content:Content,state:AppState):WritingKnowledg
    // A completed supplemental packet proves its actual phrases, not the entire topic bank.
    for(const line of s.packet.passage||[])addSentence(line.hanzi);
    for(const q of s.packet.items||[]){addSentence(q.stimulus?.hanzi);for(const a of q.answers||[])addSentence(a);}
+  }
+ }
+ // A finished fifth part grants only correctly practiced focus items and the
+ // exact examples taught with them. It does not unlock unrelated grammar.
+ for(const unit of content.units)for(const revision of [1,2]){
+  const row=state.objects.sessions[topicLanguageId(unit.id,revision)],s=row?.data;
+  if(!row||row.deleted||s?.scope!=='topic-language'||s.unit_id!==unit.id||s.revision!==revision||(!s.completed_at&&s.phase!=='summary')||s.archived)continue;
+  const completed=new Set(s.learned_item_ids||(s.answers||[]).filter((a:{correct:boolean})=>a.correct===true).map((a:{id:string})=>a.id));
+  result.lessonIds.push(topicLanguageId(unit.id,revision));
+  for(const item of topicLanguageItems(content,unit.id,revision))if(completed.has(item.id)){
+   item.words.forEach(w=>addWord(w.hanzi));item.examples.forEach(e=>addSentence(e.hanzi));
   }
  }
  for(const g of content.units.flatMap(u=>u.grammar))if(result.grammar.has(g.id)){

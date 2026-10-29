@@ -1,0 +1,56 @@
+import {test,expect} from '@playwright/test';
+import {topicLanguageId,topicLanguageItems} from '../src/core/topicLanguage';
+
+test('fifth part saves drafts, completes once, supplies learned writing and preserves old lessons',async({page,request})=>{
+ const headers={'X-Mandarin-Client':'local-ui'},backup=await(await request.get('/api/backup')).json();backup.objects=[];backup.events=[];
+ expect((await request.post('/api/restore',{headers,data:backup})).ok()).toBe(true);
+ const content=await(await request.get('/api/content')).json(),unit=content.units[0],id=topicLanguageId(unit.id),items=topicLanguageItems(content,unit.id);
+ const original={phase:'summary',index:10,run:'TEST existing completed lesson',answers:[]};
+ expect((await request.post('/api/objects',{headers,data:{collection:'sessions',id:unit.lessons[0].id,expected_version:0,data:original}})).ok()).toBe(true);
+ const old=(await(await request.get('/api/state')).json()).objects.sessions[unit.lessons[0].id];
+ const legacyId=topicLanguageId(unit.id,1),legacyItems=topicLanguageItems(content,unit.id,1);
+ expect((await request.post('/api/objects',{headers,data:{collection:'sessions',id:legacyId,expected_version:0,data:{scope:'topic-language',unit_id:unit.id,revision:1,run:'TEST legacy',phase:'exercise',index:2,items:legacyItems,answers:[],draft:'TEST legacy draft'}}})).ok()).toBe(true);
+ const legacyBefore=(await(await request.get('/api/state')).json()).objects.sessions[legacyId];
+ await page.goto('/#learn');
+ await page.locator(`[data-topic-language="${unit.id}"]`).click();
+ await expect(page.getByRole('heading',{name:'5. Lượng từ và động từ · '+unit.title,exact:true})).toBeVisible();
+ await expect(page.getByRole('heading',{name:'Câu mẫu ngắn',exact:true})).toHaveCount(1);
+ await expect(page.getByRole('heading',{name:'Dạng liền và một mẫu tách',exact:true})).toHaveCount(0);
+ await page.getByRole('link',{name:'Tiếp tục bản cũ',exact:true}).click();
+ await expect(page.getByLabel('Từ còn thiếu')).toHaveValue('TEST legacy draft');
+ await page.getByRole('link',{name:'Chuyển sang bản nhập môn rút gọn →',exact:true}).click();
+ await page.getByRole('link',{name:'Động từ nâng cao / bổ sung →',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'Động từ nâng cao / bổ sung',exact:true})).toBeVisible();
+ await expect(page.locator('[data-verb-id]')).toHaveCount(15);
+ await expect(page.locator('[data-verb-id="dream"]')).toHaveCount(1);
+ await page.goto('/#learn/topic-language/'+unit.id);
+ await page.getByRole('button',{name:/Luyện trong câu/}).click();
+ await page.getByLabel('Từ còn thiếu').fill(items[0].answer);
+ await expect.poll(async()=>(await(await request.get('/api/state')).json()).objects.sessions[id]?.data.draft).toBe(items[0].answer);
+ await page.reload();await expect(page.getByLabel('Từ còn thiếu')).toHaveValue(items[0].answer);
+ await page.getByRole('button',{name:'Lưu & tạm dừng',exact:true}).click();
+ await page.getByRole('button',{name:'Tiếp tục bài đang học →',exact:true}).click();
+ await expect(page.getByLabel('Từ còn thiếu')).toHaveValue(items[0].answer);
+ for(const item of items){
+  await page.getByLabel('Từ còn thiếu').fill(item.answer);
+  await page.getByRole('button',{name:'Kiểm tra',exact:true}).dblclick();
+  await expect(page.getByText('Đúng rồi.',{exact:false})).toBeVisible();
+  await page.getByRole('button',{name:'Tiếp tục →',exact:true}).click();
+ }
+ await expect(page.getByRole('heading',{name:'Đã hoàn thành phần 5'})).toBeVisible();
+ const state=await(await request.get('/api/state')).json();
+ expect(state.objects.sessions[unit.lessons[0].id]).toEqual(old);
+ expect(state.objects.sessions[legacyId]).toEqual(legacyBefore);
+ expect(state.objects.sessions[id].data.learned_item_ids).toHaveLength(items.length);
+ expect(state.events.filter((e:any)=>e.item_id.startsWith(id+':'))).toHaveLength(items.length);
+ expect(Object.keys(state.objects.cards)).toHaveLength(0);
+ await page.goto('/#skills/tw.greetings/sentences');
+ await expect(page.getByRole('button',{name:'Bộ đề mới',exact:true})).toBeEnabled();
+ await page.goto('/#learn');
+ await expect(page.locator(`[data-topic-language="${unit.id}"]`)).toContainText('✓');
+ await expect(page.locator('[data-topic-language="tw.social"]')).toHaveCount(1);
+ await page.locator('[data-topic-language="tw.food"]').click();
+ await expect(page.getByText('Ôn lại từ chủ đề trước',{exact:false})).toBeVisible();
+ await page.setViewportSize({width:390,height:844});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+});

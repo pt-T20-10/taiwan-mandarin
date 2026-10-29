@@ -1,0 +1,362 @@
+# Hội thoại riêng từng lesson. Bản nháp biên soạn, chưa giáo viên duyệt.
+# @topic.lesson | mỗi dòng: Hán tự|Pinyin|nghĩa Việt; người A/B luân phiên.
+@greetings.1
+你好！|Nǐ hǎo!|Chào bạn!
+您好！早安！|Nín hǎo! Zǎo ān!|Chào anh/chị! Chào buổi sáng!
+晚安！|Wǎn ān!|Chúc ngủ ngon!
+晚安！再見！|Wǎn ān! Zàijiàn!|Chúc ngủ ngon! Tạm biệt!
+@greetings.2
+請。|Qǐng.|Xin mời.
+謝謝！|Xièxie!|Cảm ơn!
+不客氣。對不起！|Bú kèqi. Duìbuqǐ!|Không có gì. Xin lỗi nhé!
+沒關係。|Méi guānxi.|Không sao.
+@greetings.3
+你是誰？|Nǐ shì shéi?|Bạn là ai?
+我是小安。他是小明。|Wǒ shì Xiǎo'ān. Tā shì Xiǎomíng.|Tôi là Tiểu An. Anh ấy là Tiểu Minh.
+她呢？|Tā ne?|Còn cô ấy?
+她是小美。我們是朋友。|Tā shì Xiǎoměi. Wǒmen shì péngyǒu.|Cô ấy là Tiểu Mỹ. Chúng tôi là bạn.
+@greetings.4
+你叫什麼名字？|Nǐ jiào shénme míngzi?|Bạn tên là gì?
+我叫小安。我是越南人。|Wǒ jiào Xiǎo'ān. Wǒ shì Yuènán rén.|Tôi tên là Tiểu An. Tôi là người Việt Nam.
+我是臺灣人。|Wǒ shì Táiwān rén.|Tôi là người Đài Loan.
+你好！|Nǐ hǎo!|Chào bạn!
+@numbers.1
+請讀：零、一、二。|Qǐng dú: líng, yī, èr.|Hãy đọc: không, một, hai.
+零、一、二。|Líng, yī, èr.|Không, một, hai.
+再讀：三、四。|Zài dú: sān, sì.|Đọc tiếp: ba, bốn.
+三、四。|Sān, sì.|Ba, bốn.
+@numbers.2
+五、六、七，對嗎？|Wǔ, liù, qī, duì ma?|Năm, sáu, bảy, đúng không?
+對。再讀八、九。|Duì. Zài dú bā, jiǔ.|Đúng. Đọc tiếp tám, chín.
+八、九。|Bā, jiǔ.|Tám, chín.
+很好！|Hěn hǎo!|Tốt lắm!
+@numbers.3
+今天有幾個人？|Jīntiān yǒu jǐ ge rén?|Hôm nay có mấy người?
+今天有十個人。|Jīntiān yǒu shí ge rén.|Hôm nay có mười người.
+明天呢？|Míngtiān ne?|Còn ngày mai?
+明天有兩百個人。|Míngtiān yǒu liǎng bǎi ge rén.|Ngày mai có hai trăm người.
+@numbers.4
+現在幾點？|Xiànzài jǐ diǎn?|Bây giờ mấy giờ?
+現在三點半。|Xiànzài sān diǎn bàn.|Bây giờ ba giờ rưỡi.
+昨天也是三點半嗎？|Zuótiān yě shì sān diǎn bàn ma?|Hôm qua cũng là ba giờ rưỡi à?
+不是，昨天是三點十分。|Bú shì, zuótiān shì sān diǎn shí fēn.|Không, hôm qua là ba giờ mười phút.
+@food.1
+你吃飯嗎？|Nǐ chī fàn ma?|Bạn ăn cơm không?
+我吃麵。|Wǒ chī miàn.|Tôi ăn mì.
+你喝什麼？|Nǐ hē shénme?|Bạn uống gì?
+我喝水。|Wǒ hē shuǐ.|Tôi uống nước.
+@food.2
+早餐喝什麼？|Zǎocān hē shénme?|Bữa sáng uống gì?
+我喝牛奶，你呢？|Wǒ hē niúnǎi, nǐ ne?|Tôi uống sữa bò, còn bạn?
+我喝咖啡。午餐呢？|Wǒ hē kāfēi. Wǔcān ne?|Tôi uống cà phê. Còn bữa trưa?
+午餐吃飯、喝茶。|Wǔcān chī fàn, hē chá.|Bữa trưa ăn cơm, uống trà.
+@food.3
+晚餐要吃什麼？|Wǎncān yào chī shénme?|Bữa tối muốn ăn gì?
+我要看菜單。|Wǒ yào kàn càidān.|Tôi muốn xem thực đơn.
+麵很好吃，茶也很好喝。|Miàn hěn hǎochī, chá yě hěn hǎohē.|Mì rất ngon, trà cũng rất ngon.
+好，我要麵和茶。|Hǎo, wǒ yào miàn hé chá.|Được, tôi muốn mì và trà.
+@food.4
+你要一碗麵嗎？|Nǐ yào yì wǎn miàn ma?|Bạn muốn một bát mì không?
+我要素食，不要辣。|Wǒ yào sùshí, bú yào là.|Tôi muốn đồ chay, không cay.
+好，要一杯茶嗎？|Hǎo, yào yì bēi chá ma?|Được, muốn một ly trà không?
+不要，謝謝。|Bú yào, xièxie.|Không, cảm ơn.
+@shopping.1
+你要買什麼？|Nǐ yào mǎi shénme?|Bạn muốn mua gì?
+我要買水。多少錢？|Wǒ yào mǎi shuǐ. Duōshǎo qián?|Tôi muốn mua nước. Bao nhiêu tiền?
+二十塊。|Èrshí kuài.|Hai mươi đồng.
+好，二十元。|Hǎo, èrshí yuán.|Được, hai mươi đồng.
+@shopping.2
+你賣這個嗎？|Nǐ mài zhège ma?|Bạn có bán cái này không?
+有，這個一百元。|Yǒu, zhège yì bǎi yuán.|Có, cái này một trăm đồng.
+太貴了。那個呢？|Tài guì le. Nàge ne?|Đắt quá. Còn cái kia?
+那個比較便宜，五十元。|Nàge bǐjiào piányí, wǔshí yuán.|Cái kia rẻ hơn, năm mươi đồng.
+@shopping.3
+你要去商店嗎？|Nǐ yào qù shāngdiàn ma?|Bạn muốn đi cửa hàng à?
+我要去超市，不去便利商店。|Wǒ yào qù chāoshì, bú qù biànlì shāngdiàn.|Tôi muốn đi siêu thị, không đi cửa hàng tiện lợi.
+你有袋子嗎？|Nǐ yǒu dàizi ma?|Bạn có túi không?
+有。買東西後，我要拿發票。|Yǒu. Mǎi dōngxi hòu, wǒ yào ná fāpiào.|Có. Sau khi mua đồ, tôi muốn lấy hóa đơn.
+@shopping.4
+你要買什麼水果？|Nǐ yào mǎi shénme shuǐguǒ?|Bạn muốn mua trái cây gì?
+我要一公斤蘋果。|Wǒ yào yì gōngjīn píngguǒ.|Tôi muốn một ki-lô-gam táo.
+付現金嗎？|Fù xiànjīn ma?|Trả tiền mặt à?
+可以用信用卡嗎？|Kěyǐ yòng xìnyòngkǎ ma?|Có thể dùng thẻ tín dụng không?
+@transport.1
+你去哪裡？|Nǐ qù nǎlǐ?|Bạn đi đâu?
+我去車站坐火車。|Wǒ qù chēzhàn zuò huǒchē.|Tôi đi đến ga để đi tàu hỏa.
+坐公車去嗎？|Zuò gōngchē qù ma?|Đi bằng xe buýt à?
+不是，我坐捷運去。|Bú shì, wǒ zuò jiéyùn qù.|Không, tôi đi bằng tàu điện đô thị.
+@transport.2
+高鐵站在右邊嗎？|Gāotiě zhàn zài yòubiān ma?|Ga tàu cao tốc ở bên phải à?
+對。你要坐計程車嗎？|Duì. Nǐ yào zuò jìchéngchē ma?|Đúng. Bạn muốn đi taxi không?
+我想騎腳踏車。|Wǒ xiǎng qí jiǎotàchē.|Tôi muốn đi xe đạp.
+我想走路。|Wǒ xiǎng zǒulù.|Tôi muốn đi bộ.
+@transport.3
+車站在附近嗎？|Chēzhàn zài fùjìn ma?|Ga ở gần đây không?
+不遠，就在前面。|Bù yuǎn, jiù zài qiánmiàn.|Không xa, ngay phía trước.
+在商店左邊嗎？|Zài shāngdiàn zuǒbiān ma?|Ở bên trái cửa hàng à?
+不是，在商店後面。|Bú shì, zài shāngdiàn hòumiàn.|Không, ở phía sau cửa hàng.
+@transport.4
+到車站了，要下車嗎？|Dào chēzhàn le, yào xiàchē ma?|Đến ga rồi, xuống xe không?
+對，我家很近。|Duì, wǒ jiā hěn jìn.|Đúng, nhà tôi rất gần.
+明天也坐公車嗎？|Míngtiān yě zuò gōngchē ma?|Ngày mai cũng đi xe buýt à?
+對，我有悠遊卡。|Duì, wǒ yǒu Yōuyóukǎ.|Đúng, tôi có thẻ EasyCard.
+@family.1
+你家在哪裡？|Nǐ jiā zài nǎlǐ?|Nhà bạn ở đâu?
+我家在臺灣。|Wǒ jiā zài Táiwān.|Nhà tôi ở Đài Loan.
+你的家人呢？|Nǐ de jiārén ne?|Còn người nhà của bạn?
+爸爸、媽媽和哥哥都在家。|Bàba, māma hé gēge dōu zài jiā.|Bố, mẹ và anh trai đều ở nhà.
+@family.2
+她是你姐姐嗎？|Tā shì nǐ jiějie ma?|Cô ấy là chị gái bạn à?
+不是，她是我妹妹。|Bú shì, tā shì wǒ mèimei.|Không, cô ấy là em gái tôi.
+他是你弟弟的同學嗎？|Tā shì nǐ dìdi de tóngxué ma?|Anh ấy là bạn cùng lớp của em trai bạn à?
+對，也是我的朋友。|Duì, yě shì wǒ de péngyǒu.|Đúng, cũng là bạn của tôi.
+@family.3
+那位先生是誰？|Nà wèi xiānsheng shì shéi?|Người đàn ông kia là ai?
+他是王先生，那是他太太。|Tā shì Wáng xiānsheng, nà shì tā tàitai.|Đó là ông Vương, kia là vợ ông ấy.
+他們有幾個孩子？|Tāmen yǒu jǐ ge háizi?|Họ có mấy người con?
+兩個。他們家有四個人。|Liǎng ge. Tāmen jiā yǒu sì ge rén.|Hai. Gia đình họ có bốn người.
+@family.4
+你有工作嗎？|Nǐ yǒu gōngzuò ma?|Bạn có việc làm không?
+有，我喜歡我的工作。|Yǒu, wǒ xǐhuān wǒ de gōngzuò.|Có, tôi thích công việc của mình.
+你弟弟幾歲？他有工作嗎？|Nǐ dìdi jǐ suì? Tā yǒu gōngzuò ma?|Em trai bạn bao nhiêu tuổi? Em ấy có việc làm không?
+他十八歲，沒有工作。|Tā shíbā suì, méiyǒu gōngzuò.|Em ấy mười tám tuổi, chưa có việc làm.
+@home.1
+你住宿舍嗎？|Nǐ zhù sùshè ma?|Bạn ở ký túc xá à?
+不是，我租房間。|Bú shì, wǒ zū fángjiān.|Không, tôi thuê phòng.
+房租多少？房間有床嗎？|Fángzū duōshǎo? Fángjiān yǒu chuáng ma?|Tiền thuê bao nhiêu? Phòng có giường không?
+房租五千元。房東說有床。|Fángzū wǔ qiān yuán. Fángdōng shuō yǒu chuáng.|Tiền thuê năm nghìn đồng. Chủ nhà nói có giường.
+@home.2
+桌子和椅子在哪裡？|Zhuōzi hé yǐzi zài nǎlǐ?|Bàn và ghế ở đâu?
+在窗戶旁邊。|Zài chuānghù pángbiān.|Ở cạnh cửa sổ.
+廚房的門在哪裡？|Chúfáng de mén zài nǎlǐ?|Cửa nhà bếp ở đâu?
+在你後面。|Zài nǐ hòumiàn.|Ở phía sau bạn.
+@home.3
+浴室裡有廁所嗎？|Yùshì lǐ yǒu cèsuǒ ma?|Trong phòng tắm có nhà vệ sinh không?
+有。房間也有冷氣。|Yǒu. Fángjiān yě yǒu lěngqì.|Có. Phòng cũng có máy lạnh.
+有網路嗎？電費多少？|Yǒu wǎnglù ma? Diànfèi duōshǎo?|Có mạng không? Tiền điện bao nhiêu?
+有網路。用多少電，就付多少錢。|Yǒu wǎnglù. Yòng duōshǎo diàn, jiù fù duōshǎo qián.|Có mạng. Dùng bao nhiêu điện thì trả bấy nhiêu tiền.
+@home.4
+你住的房間大嗎？|Nǐ zhù de fángjiān dà ma?|Phòng bạn ở có rộng không?
+不大，有一點小。|Bú dà, yǒu yìdiǎn xiǎo.|Không rộng, hơi nhỏ.
+乾淨、安靜嗎？|Gānjìng, ānjìng ma?|Có sạch sẽ, yên tĩnh không?
+很乾淨，也很安靜。|Hěn gānjìng, yě hěn ānjìng.|Rất sạch, cũng rất yên tĩnh.
+@schedule.1
+你在哪個學校上課？|Nǐ zài nǎ ge xuéxiào shàngkè?|Bạn học ở trường nào?
+我在臺灣的大學上課。|Wǒ zài Táiwān de dàxué shàngkè.|Tôi học tại một trường đại học ở Đài Loan.
+你是老師嗎？|Nǐ shì lǎoshī ma?|Bạn là giáo viên à?
+不是，我是學生。|Bú shì, wǒ shì xuéshēng.|Không, tôi là sinh viên.
+@schedule.2
+星期一早上有課嗎？|Xīngqí yī zǎoshang yǒu kè ma?|Sáng thứ Hai có tiết học không?
+有，十點下課。|Yǒu, shí diǎn xiàkè.|Có, mười giờ tan học.
+週末呢？|Zhōumò ne?|Còn cuối tuần?
+週末沒有課。|Zhōumò méiyǒu kè.|Cuối tuần không có tiết học.
+@schedule.3
+你下午忙嗎？|Nǐ xiàwǔ máng ma?|Chiều bạn bận không?
+很忙，中午也沒有時間。|Hěn máng, zhōngwǔ yě méiyǒu shíjiān.|Rất bận, buổi trưa cũng không có thời gian.
+晚上呢？|Wǎnshang ne?|Còn buổi tối?
+晚上有時間。|Wǎnshang yǒu shíjiān.|Buổi tối có thời gian.
+@schedule.4
+這個學期每天都有課嗎？|Zhège xuéqí měitiān dōu yǒu kè ma?|Học kỳ này ngày nào cũng có tiết học à?
+不是，星期五有空。|Bú shì, xīngqí wǔ yǒu kòng.|Không, thứ Sáu rảnh.
+星期一的課幾點開始？|Xīngqí yī de kè jǐ diǎn kāishǐ?|Tiết học thứ Hai bắt đầu lúc mấy giờ?
+九點開始，十點結束。|Jiǔ diǎn kāishǐ, shí diǎn jiéshù.|Bắt đầu lúc chín giờ, kết thúc lúc mười giờ.
+@information.1
+請問，可以問一個問題嗎？|Qǐngwèn, kěyǐ wèn yí ge wèntí ma?|Xin hỏi, tôi hỏi một câu được không?
+可以。|Kěyǐ.|Được.
+我不懂這個字，你知道嗎？|Wǒ bù dǒng zhège zì, nǐ zhīdào ma?|Tôi không hiểu chữ này, bạn biết không?
+知道，我們一起看。|Zhīdào, wǒmen yìqǐ kàn.|Biết, chúng ta cùng xem nhé.
+@information.2
+可以幫忙嗎？|Kěyǐ bāngmáng ma?|Bạn giúp được không?
+可以，你找誰？|Kěyǐ, nǐ zhǎo shéi?|Được, bạn tìm ai?
+我找老師。他在哪裡？|Wǒ zhǎo lǎoshī. Tā zài nǎlǐ?|Tôi tìm thầy giáo. Thầy ở đâu?
+你有什麼問題？我幫你問。|Nǐ yǒu shénme wèntí? Wǒ bāng nǐ wèn.|Bạn có vấn đề gì? Tôi hỏi giúp bạn.
+@information.3
+你為什麼問地址？|Nǐ wèishénme wèn dìzhǐ?|Sao bạn hỏi địa chỉ?
+因為我要去找朋友。|Yīnwèi wǒ yào qù zhǎo péngyǒu.|Vì tôi muốn đến gặp bạn.
+所以你想知道怎麼去？|Suǒyǐ nǐ xiǎng zhīdào zěnme qù?|Vậy bạn muốn biết đi thế nào à?
+對，謝謝。|Duì, xièxie.|Đúng, cảm ơn.
+@information.4
+服務臺在哪裡？|Fúwùtái zài nǎlǐ?|Quầy dịch vụ ở đâu?
+在前面。你要問什麼？|Zài qiánmiàn. Nǐ yào wèn shénme?|Ở phía trước. Bạn muốn hỏi gì?
+我要問醫院的電話號碼。|Wǒ yào wèn yīyuàn de diànhuà hàomǎ.|Tôi muốn hỏi số điện thoại bệnh viện.
+好，郵局的電話也可以在那裡問。|Hǎo, yóujú de diànhuà yě kěyǐ zài nàlǐ wèn.|Được, số điện thoại bưu điện cũng có thể hỏi ở đó.
+@classroom.1
+你說英文嗎？|Nǐ shuō Yīngwén ma?|Bạn nói tiếng Anh không?
+我說越南文，也學中文。|Wǒ shuō Yuènánwén, yě xué Zhōngwén.|Tôi nói tiếng Việt, cũng học tiếng Trung.
+你在哪裡學華語？|Nǐ zài nǎlǐ xué Huáyǔ?|Bạn học Hoa ngữ ở đâu?
+我在臺灣學華語。|Wǒ zài Táiwān xué Huáyǔ.|Tôi học Hoa ngữ ở Đài Loan.
+@classroom.2
+請看這個字。|Qǐng kàn zhège zì.|Hãy nhìn chữ này.
+我不會讀。|Wǒ bú huì dú.|Tôi không biết đọc.
+先聽我讀，再寫。|Xiān tīng wǒ dú, zài xiě.|Hãy nghe tôi đọc trước, rồi viết.
+好，我聽。|Hǎo, wǒ tīng.|Được, tôi nghe đây.
+@classroom.3
+這個詞是什麼意思？|Zhège cí shì shénme yìsi?|Từ này nghĩa là gì?
+我們看這個句子。|Wǒmen kàn zhège jùzi.|Chúng ta xem câu này nhé.
+今天的作業要寫句子嗎？|Jīntiān de zuòyè yào xiě jùzi ma?|Bài tập hôm nay phải viết câu à?
+對，明天的考試也要寫句子。|Duì, míngtiān de kǎoshì yě yào xiě jùzi.|Đúng, bài kiểm tra ngày mai cũng phải viết câu.
+@classroom.4
+請再讀一次，慢一點。|Qǐng zài dú yí cì, màn yìdiǎn.|Xin đọc lại một lần, chậm hơn chút.
+好。你有書嗎？|Hǎo. Nǐ yǒu shū ma?|Được. Bạn có sách không?
+有，我有兩本書，可是沒有筆。|Yǒu, wǒ yǒu liǎng běn shū, kěshì méiyǒu bǐ.|Có, tôi có hai quyển sách, nhưng không có bút.
+我的筆給你。|Wǒ de bǐ gěi nǐ.|Bút của tôi cho bạn dùng.
+@daily.1
+你幾點起床？|Nǐ jǐ diǎn qǐchuáng?|Bạn dậy lúc mấy giờ?
+七點，起床後去運動。|Qī diǎn, qǐchuáng hòu qù yùndòng.|Bảy giờ, sau khi dậy thì đi tập thể dục.
+回家後呢？|Huí jiā hòu ne?|Sau khi về nhà thì sao?
+先洗澡，晚上十點睡覺。|Xiān xǐzǎo, wǎnshang shí diǎn shuìjiào.|Tắm trước, tối mười giờ đi ngủ.
+@daily.2
+你想跑步還是游泳？|Nǐ xiǎng pǎobù háishi yóuyǒng?|Bạn muốn chạy bộ hay bơi?
+我想休息。|Wǒ xiǎng xiūxi.|Tôi muốn nghỉ ngơi.
+你在用手機上網嗎？|Nǐ zài yòng shǒujī shàngwǎng ma?|Bạn đang dùng điện thoại lên mạng à?
+對，我休息一下再去跑步。|Duì, wǒ xiūxi yíxià zài qù pǎobù.|Đúng, tôi nghỉ một chút rồi đi chạy.
+@daily.3
+你常常用電腦嗎？|Nǐ chángcháng yòng diànnǎo ma?|Bạn có thường dùng máy tính không?
+常常，我用電腦看電影。|Chángcháng, wǒ yòng diànnǎo kàn diànyǐng.|Thường xuyên, tôi dùng máy tính xem phim.
+也聽音樂嗎？|Yě tīng yīnyuè ma?|Cũng nghe nhạc à?
+有時候聽音樂。|Yǒushíhou tīng yīnyuè.|Thỉnh thoảng nghe nhạc.
+@daily.4
+你會游泳嗎？|Nǐ huì yóuyǒng ma?|Bạn biết bơi không?
+會，我已經學了。|Huì, wǒ yǐjīng xué le.|Biết, tôi đã học rồi.
+我還不會，我們一起學，好嗎？|Wǒ hái bú huì, wǒmen yìqǐ xué, hǎo ma?|Tôi vẫn chưa biết, chúng ta cùng học được không?
+好，一起去！|Hǎo, yìqǐ qù!|Được, cùng đi nhé!
+@campus.1
+教授在教室嗎？|Jiàoshòu zài jiàoshì ma?|Giáo sư ở phòng học à?
+不在，他在辦公室。|Bú zài, tā zài bàngōngshì.|Không, thầy ở văn phòng.
+研究所的辦公室在哪裡？|Yánjiūsuǒ de bàngōngshì zài nǎlǐ?|Văn phòng viện sau đại học ở đâu?
+在圖書館旁邊。|Zài túshūguǎn pángbiān.|Ở cạnh thư viện.
+@campus.2
+我們今天討論研究報告嗎？|Wǒmen jīntiān tǎolùn yánjiū bàogào ma?|Hôm nay chúng ta thảo luận báo cáo nghiên cứu à?
+對，你有資料嗎？|Duì, nǐ yǒu zīliào ma?|Đúng, bạn có tài liệu không?
+有，我用電子郵件寄給你。|Yǒu, wǒ yòng diànzǐ yóujiàn jì gěi nǐ.|Có, tôi gửi cho bạn bằng email.
+好，下午一起討論。|Hǎo, xiàwǔ yìqǐ tǎolùn.|Được, chiều cùng thảo luận.
+@campus.3
+你收到我寄的資料了嗎？|Nǐ shōudào wǒ jì de zīliào le ma?|Bạn nhận được tài liệu tôi gửi chưa?
+收到了，我在準備報告。|Shōudào le, wǒ zài zhǔnbèi bàogào.|Nhận được rồi, tôi đang chuẩn bị báo cáo.
+還需要什麼？|Hái xūyào shénme?|Còn cần gì nữa?
+我需要借一本書。|Wǒ xūyào jiè yì běn shū.|Tôi cần mượn một quyển sách.
+@campus.4
+明天見面方便嗎？|Míngtiān jiànmiàn fāngbiàn ma?|Ngày mai gặp nhau có tiện không?
+方便，我要先去還書。|Fāngbiàn, wǒ yào xiān qù huán shū.|Tiện, tôi phải đi trả sách trước.
+麻煩你預約討論室。|Máfan nǐ yùyuē tǎolùnshì.|Phiền bạn đặt phòng thảo luận.
+好，我們下午見。|Hǎo, wǒmen xiàwǔ jiàn.|Được, chiều gặp nhé.
+@health.1
+你身體不舒服嗎？|Nǐ shēntǐ bù shūfu ma?|Bạn thấy trong người không khỏe à?
+對，我感冒了，一直咳嗽。|Duì, wǒ gǎnmào le, yìzhí késòu.|Đúng, tôi bị cảm rồi, ho suốt.
+有發燒嗎？|Yǒu fāshāo ma?|Có sốt không?
+沒有發燒。|Méiyǒu fāshāo.|Không sốt.
+@health.2
+你哪裡痛？|Nǐ nǎlǐ tòng?|Bạn đau ở đâu?
+我頭痛，喉嚨也痛。|Wǒ tóutòng, hóulóng yě tòng.|Tôi đau đầu, họng cũng đau.
+肚子痛嗎？|Dùzi tòng ma?|Có đau bụng không?
+肚子不痛，可是很累。|Dùzi bú tòng, kěshì hěn lèi.|Không đau bụng, nhưng rất mệt.
+@health.3
+我要去診所看醫生。|Wǒ yào qù zhěnsuǒ kàn yīshēng.|Tôi muốn đến phòng khám gặp bác sĩ.
+你帶健保卡了嗎？|Nǐ dài jiànbǎokǎ le ma?|Bạn mang thẻ bảo hiểm y tế chưa?
+帶了，在哪裡掛號？|Dài le, zài nǎlǐ guàhào?|Mang rồi, đăng ký khám ở đâu?
+問那位護士吧。|Wèn nà wèi hùshì ba.|Hỏi cô y tá kia nhé.
+@health.4
+你去看病了嗎？|Nǐ qù kànbìng le ma?|Bạn đi khám bệnh chưa?
+去了，醫生先幫我量體溫。|Qù le, yīshēng xiān bāng wǒ liáng tǐwēn.|Đi rồi, bác sĩ đo nhiệt độ cho tôi trước.
+嚴重嗎？|Yánzhòng ma?|Có nghiêm trọng không?
+不嚴重，我現在去藥局拿藥。|Bù yánzhòng, wǒ xiànzài qù yàojú ná yào.|Không nghiêm trọng, giờ tôi đi nhà thuốc lấy thuốc.
+@renting.1
+你在找租屋資料嗎？|Nǐ zài zhǎo zūwū zīliào ma?|Bạn đang tìm thông tin thuê nhà à?
+對，我想看套房和雅房。|Duì, wǒ xiǎng kàn tàofáng hé yǎfáng.|Đúng, tôi muốn xem phòng khép kín và phòng dùng chung nhà tắm.
+合約寫押金多少？|Héyuē xiě yājīn duōshǎo?|Hợp đồng ghi tiền cọc bao nhiêu?
+兩個月的房租。|Liǎng ge yuè de fángzū.|Hai tháng tiền thuê.
+@renting.2
+租金包括管理費嗎？|Zūjīn bāokuò guǎnlǐfèi ma?|Tiền thuê có gồm phí quản lý không?
+包括，可是水電費另外付。|Bāokuò, kěshì shuǐdiànfèi lìngwài fù.|Có, nhưng tiền điện nước trả riêng.
+樓層高嗎？有電梯嗎？|Lóucéng gāo ma? Yǒu diàntī ma?|Tầng có cao không? Có thang máy không?
+在六樓，有電梯。|Zài liù lóu, yǒu diàntī.|Ở tầng sáu, có thang máy.
+@renting.3
+房間有家具嗎？|Fángjiān yǒu jiājù ma?|Phòng có nội thất không?
+有，也有冰箱。|Yǒu, yě yǒu bīngxiāng.|Có, cũng có tủ lạnh.
+洗衣機在陽臺嗎？有熱水嗎？|Xǐyījī zài yángtái ma? Yǒu rèshuǐ ma?|Máy giặt ở ban công à? Có nước nóng không?
+對，洗衣機在陽臺，浴室有熱水。|Duì, xǐyījī zài yángtái, yùshì yǒu rèshuǐ.|Đúng, máy giặt ở ban công, phòng tắm có nước nóng.
+@renting.4
+你要搬家嗎？|Nǐ yào bānjiā ma?|Bạn sắp chuyển nhà à?
+對，新房間漏水，冷氣也壞了。|Duì, xīn fángjiān lòushuǐ, lěngqì yě huài le.|Đúng, phòng mới bị dột, máy lạnh cũng hỏng.
+房東會修理嗎？|Fángdōng huì xiūlǐ ma?|Chủ nhà sẽ sửa chứ?
+會，我先把垃圾拿出去。|Huì, wǒ xiān bǎ lèsè ná chūqù.|Có, tôi mang rác ra ngoài trước.
+@services.1
+你要寄包裹嗎？|Nǐ yào jì bāoguǒ ma?|Bạn muốn gửi bưu kiện à?
+對，也要買信封和郵票。|Duì, yě yào mǎi xìnfēng hé yóupiào.|Đúng, cũng muốn mua phong bì và tem.
+請寫寄件人的名字。|Qǐng xiě jìjiànrén de míngzi.|Xin viết tên người gửi.
+好，運費多少？|Hǎo, yùnfèi duōshǎo?|Được, phí vận chuyển bao nhiêu?
+@services.2
+請填寫這張表格。|Qǐng tiánxiě zhè zhāng biǎogé.|Xin điền mẫu đơn này.
+收件人的名字寫在哪裡？|Shōujiànrén de míngzi xiě zài nǎlǐ?|Viết tên người nhận ở đâu?
+寫在這裡，再簽名。|Xiě zài zhèlǐ, zài qiānmíng.|Viết ở đây, rồi ký tên.
+好，填完交給櫃臺嗎？|Hǎo, tián wán jiāo gěi guìtái ma?|Được, điền xong nộp cho quầy à?
+@services.3
+我收到領取包裹的通知。|Wǒ shōudào lǐngqǔ bāoguǒ de tōngzhī.|Tôi nhận được thông báo đến nhận bưu kiện.
+請帶證件，先排隊。|Qǐng dài zhèngjiàn, xiān páiduì.|Xin mang giấy tờ tùy thân, xếp hàng trước.
+需要影印證件嗎？|Xūyào yǐngyìn zhèngjiàn ma?|Có cần photocopy giấy tờ không?
+不用，給櫃臺看就好。|Bú yòng, gěi guìtái kàn jiù hǎo.|Không cần, cho quầy xem là được.
+@services.4
+我想申請這個服務，手續怎麼辦？|Wǒ xiǎng shēnqǐng zhège fúwù, shǒuxù zěnme bàn?|Tôi muốn đăng ký dịch vụ này, làm thủ tục thế nào?
+先填表，再付款。|Xiān tián biǎo, zài fùkuǎn.|Điền đơn trước, rồi thanh toán.
+取件的時候要帶收據嗎？|Qǔjiàn de shíhou yào dài shōujù ma?|Lúc nhận đồ có cần mang biên lai không?
+對，請帶收據。|Duì, qǐng dài shōujù.|Đúng, xin mang biên lai.
+@worklife.1
+你在這家公司上班嗎？|Nǐ zài zhè jiā gōngsī shàngbān ma?|Bạn làm ở công ty này à?
+對，和我的同事一起。|Duì, hé wǒ de tóngshì yìqǐ.|Đúng, cùng với đồng nghiệp của tôi.
+主管幾點下班？|Zhǔguǎn jǐ diǎn xiàbān?|Quản lý tan làm lúc mấy giờ?
+他六點下班。|Tā liù diǎn xiàbān.|Anh ấy tan làm lúc sáu giờ.
+@worklife.2
+你看排班表了嗎？明天是早班還是晚班？|Nǐ kàn páibān biǎo le ma? Míngtiān shì zǎobān háishi wǎnbān?|Bạn xem lịch phân ca chưa? Mai ca sáng hay ca tối?
+早班，今天要加班。|Zǎobān, jīntiān yào jiābān.|Ca sáng, hôm nay phải làm thêm giờ.
+星期五可以請假嗎？|Xīngqí wǔ kěyǐ qǐngjià ma?|Thứ Sáu xin nghỉ được không?
+要先問主管。|Yào xiān wèn zhǔguǎn.|Phải hỏi quản lý trước.
+@worklife.3
+今天幾點開會？|Jīntiān jǐ diǎn kāihuì?|Hôm nay họp mấy giờ?
+會議改期了，明天九點。|Huìyì gǎiqí le, míngtiān jiǔ diǎn.|Cuộc họp đổi lịch rồi, chín giờ ngày mai.
+我改一下行程，明天不會遲到。|Wǒ gǎi yíxià xíngchéng, míngtiān bú huì chídào.|Tôi sửa lịch trình một chút, mai sẽ không đến muộn.
+好，明天見。|Hǎo, míngtiān jiàn.|Được, mai gặp.
+@worklife.4
+報告可以準時完成嗎？|Bàogào kěyǐ zhǔnshí wánchéng ma?|Báo cáo có thể hoàn thành đúng giờ không?
+可以，我先檢查一下。|Kěyǐ, wǒ xiān jiǎnchá yíxià.|Có, tôi kiểm tra trước một chút.
+完成後請聯絡我。|Wánchéng hòu qǐng liánluò wǒ.|Xong rồi xin liên lạc với tôi.
+好，我傳訊息給你。|Hǎo, wǒ chuán xùnxí gěi nǐ.|Được, tôi nhắn tin cho bạn.
+@travel.1
+這次旅行住旅館還是民宿？|Zhè cì lǚxíng zhù lǚguǎn háishi mínsù?|Chuyến đi này ở khách sạn hay homestay?
+住民宿，我已經訂房了。|Zhù mínsù, wǒ yǐjīng dìngfáng le.|Ở homestay, tôi đã đặt phòng rồi.
+幾點可以入住？|Jǐ diǎn kěyǐ rùzhù?|Mấy giờ có thể nhận phòng?
+下午三點。|Xiàwǔ sān diǎn.|Ba giờ chiều.
+@travel.2
+你要單人房還是雙人房？|Nǐ yào dānrénfáng háishi shuāngrénfáng?|Bạn muốn phòng đơn hay phòng đôi?
+雙人房。這是我的護照。|Shuāngrénfáng. Zhè shì wǒ de hùzhào.|Phòng đôi. Đây là hộ chiếu của tôi.
+明天十一點退房，行李可以放這裡。|Míngtiān shíyī diǎn tuìfáng, xínglǐ kěyǐ fàng zhèlǐ.|Mai trả phòng lúc mười một giờ, có thể để hành lý ở đây.
+好，謝謝。|Hǎo, xièxie.|Được, cảm ơn.
+@travel.3
+這個景點要買門票嗎？|Zhège jǐngdiǎn yào mǎi ménpiào ma?|Điểm tham quan này có phải mua vé không?
+要，也有中文導覽。|Yào, yě yǒu Zhōngwén dǎolǎn.|Có, cũng có hướng dẫn tham quan bằng tiếng Trung.
+風景很好，可以拍照嗎？|Fēngjǐng hěn hǎo, kěyǐ pāizhào ma?|Phong cảnh rất đẹp, có thể chụp ảnh không?
+可以，在這裡拍吧。|Kěyǐ, zài zhèlǐ pāi ba.|Được, chụp ở đây nhé.
+@travel.4
+明天去海邊還是爬山？|Míngtiān qù hǎibiān háishi páshān?|Mai đi biển hay leo núi?
+去海邊，八點出發。|Qù hǎibiān, bā diǎn chūfā.|Đi biển, tám giờ xuất phát.
+幾點抵達？可以買紀念品嗎？|Jǐ diǎn dǐdá? Kěyǐ mǎi jìniànpǐn ma?|Mấy giờ đến? Có thể mua đồ lưu niệm không?
+十點抵達，那裡有商店。|Shí diǎn dǐdá, nàlǐ yǒu shāngdiàn.|Mười giờ đến, ở đó có cửa hàng.
+@social.1
+我想邀請你參加生日聚餐。|Wǒ xiǎng yāoqǐng nǐ cānjiā shēngrì jùcān.|Tôi muốn mời bạn dự bữa ăn mừng sinh nhật.
+謝謝！幾點？我要先買禮物。|Xièxie! Jǐ diǎn? Wǒ yào xiān mǎi lǐwù.|Cảm ơn! Mấy giờ? Tôi muốn mua quà trước.
+晚上七點。你有約會嗎？|Wǎnshang qī diǎn. Nǐ yǒu yuēhuì ma?|Bảy giờ tối. Bạn có hẹn hò không?
+沒有，我可以去。|Méiyǒu, wǒ kěyǐ qù.|Không, tôi có thể đi.
+@social.2
+恭喜你！這是我的祝福。|Gōngxǐ nǐ! Zhè shì wǒ de zhùfú.|Chúc mừng bạn! Đây là lời chúc của tôi.
+謝謝你來參加今天的活動。|Xièxie nǐ lái cānjiā jīntiān de huódòng.|Cảm ơn bạn đến tham gia hoạt động hôm nay.
+我們可以聊聊天嗎？|Wǒmen kěyǐ liáo liáo tiān ma?|Chúng ta trò chuyện một chút được không?
+好，坐這裡吧。|Hǎo, zuò zhèlǐ ba.|Được, ngồi đây nhé.
+@social.3
+抱歉，打擾了。|Bàoqiàn, dǎrǎo le.|Xin lỗi đã làm phiền.
+不會，歡迎！我介紹一下，這位是今天的主人。|Bú huì, huānyíng! Wǒ jièshào yíxià, zhè wèi shì jīntiān de zhǔrén.|Không đâu, chào mừng! Để tôi giới thiệu, đây là chủ nhà hôm nay.
+你好，我是小安的客人。|Nǐ hǎo, wǒ shì Xiǎo'ān de kèrén.|Xin chào, tôi là khách của Tiểu An.
+請坐。|Qǐng zuò.|Xin mời ngồi.
+@social.4
+我建議明天一起吃飯。|Wǒ jiànyì míngtiān yìqǐ chī fàn.|Tôi đề nghị mai cùng ăn cơm.
+可惜，我明天沒有空。下次好嗎？|Kěxí, wǒ míngtiān méiyǒu kòng. Xià cì hǎo ma?|Tiếc quá, mai tôi không rảnh. Lần sau nhé?
+好，那我們決定下星期五見面？|Hǎo, nà wǒmen juédìng xià xīngqí wǔ jiànmiàn?|Được, vậy chúng ta quyết định gặp vào thứ Sáu tuần sau nhé?
+我同意。|Wǒ tóngyì.|Tôi đồng ý.

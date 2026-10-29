@@ -1,6 +1,6 @@
 import type { CardInput } from 'ts-fsrs';
 export type Layers = {hanzi: 'show'|'tap'|'hide'; pinyin:'show'|'tap'|'hide'|'new'; vi:'show'|'tap'|'hide'};
-export type TextItem = {lookup_key?:string|null;hanzi:string;pinyin:string;vi:string};
+export type TextItem = {speaker?:string;lookup_key?:string|null;hanzi:string;pinyin:string;vi:string};
 export type Word = TextItem & {id:string;note:string;source:string;verification:string};
 export type Grammar = TextItem & {id:string;explanation:string;title?:string;pattern?:string;restrictions?:string;common_mistake?:string;examples?:TextItem[];exercises?:Exercise[];status?:'planned'|'ready';group?:string;level?:string;prerequisites?:string[];references?:{title:string;tbcl_level:string;url:string;id:string}[]};
 export type Exercise = {id:string;kind:string;prompt:string;stimulus:TextItem|null;answers:string[];choices:string[];tokens:string[];explanation:string;word_id:string|null;grammar_id?:string|null;skill:string};
@@ -17,7 +17,7 @@ export type Collection = 'sessions'|'cards'|'notes'|'settings'|'placement'|'chat
 export type LearningEvent = {id:string;action_key:string;kind:string;skill:string;item_id:string;correct:boolean|null;assisted:boolean;answer:string;duration_ms:number;algorithm:string;timestamp:string;category:string;rating?:number;source?:'authored'|'ai'};
 export type AppState = {device_id:string;objects:Record<Collection,Record<string,Stored<any>>>;events:LearningEvent[]};
 export type Mutation = {collection:Collection;id:string;expected_version:number;data:object;deleted?:boolean};
-export type Session = {index:number;phase:'intro'|'exercise'|'summary';run:string;answers:{id:string;answer:string;correct:boolean|null;assisted:boolean;skipped?:boolean}[];draft?:string;retry?:string[];assisted?:boolean;answer_hint?:boolean;exercise_ids?:string[]};
+export type Session = {sequence_revision?:number;exercise_snapshot?:Exercise[];review_labels?:Record<string,string>;paused_speaking?:{index:number;draft?:string;assisted?:boolean;answer_hint?:boolean}[];index:number;phase:'intro'|'exercise'|'summary';run:string;answers:{id:string;answer:string;correct:boolean|null;assisted:boolean;skipped?:boolean}[];draft?:string;retry?:string[];assisted?:boolean;answer_hint?:boolean;exercise_ids?:string[]};
 export type PracticeSession=Session & {scope:'skills';unit_id:string;skill:PracticeSkill;packet:PracticeSet;created_at:string;cycle:number};
 export type Flashcard = {word:TextItem;word_id:string;direction:'recognize'|'produce'|'audio'|'write'|'cloze'|'situation';schedule:CardInput;deck:string;tags:string[];suspended:boolean;source:string;cue?:string};
 export type AIReply = TextItem & {feedback:string;elapsed_ms:number;generated:boolean;quality_warnings?:string[];annotation_source?:string};

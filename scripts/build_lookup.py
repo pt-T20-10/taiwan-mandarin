@@ -18,13 +18,21 @@ def build():
    for v in value:collect(v)
   elif isinstance(value,str) and re.search('[\u3400-\u9fff]',value):texts.add(value)
  collect(pack['units'])
+ dialogues=json.loads((ROOT/'src/core/lesson-dialogues.json').read_text(encoding='utf-8'))
+ collect(dialogues)
+ for unit in pack['units']:
+  for lesson in unit['lessons']:
+   for word in unit['words']:
+    if word['id'] in lesson['word_ids']:
+     for line in dialogues.get(lesson['id'],[]):
+      if word['hanzi'] in line['hanzi']:texts.add(line['hanzi'].replace(word['hanzi'],'___'))
  source=(ROOT/'src/core/verbs.ts').read_text(encoding='utf-8')
  rows=ast.literal_eval(re.search(r'const rows=([\s\S]*?\n\]);',source)[1])
  for row in rows:
   _,h,p,v,*_=row;words[h]={'hanzi':h,'pinyin':p,'vi':v}
  basic=ast.literal_eval(re.search(r'export const basicVerbs=(\[[\s\S]*?\])\.map',source)[1])
  for h,p,v,_ in basic:words[h]={'hanzi':h,'pinyin':p,'vi':v}
- for name in ['verbs.ts','classifiers.ts','verbLessons.ts','verbPractical.ts','classifierGuide.ts']:
+ for name in ['verbs.ts','classifiers.ts','verbLessons.ts','verbPractical.ts','classifierGuide.ts','beginnerVerbs.ts']:
   source=(ROOT/'src/core'/name).read_text(encoding='utf-8')
   texts.update(re.findall(r"'([^'\n]*[\u3400-\u9fff][^'\n]*)'",source))
  keys=sorted(words,key=len,reverse=True);lookup={};missing={}
@@ -40,6 +48,21 @@ def build():
    else:missing[sentence[i]]=missing.get(sentence[i],0)+1;i+=1
   if spans:lookup[sentence]=spans
  output={'version':8,'words':list(words.values()),'sentences':lookup}
+ # Compile visible Hanzi fragments for question/answer controls offline. Runtime
+ # only reads these entries; it never fills a gap or guesses a pronunciation.
+ readings={}
+ for text in sorted(texts):
+  for fragment in re.findall('[\u3400-\u9fff]+',text):
+   parts=[];i=0
+   while i<len(fragment):
+    word=next((w for w in keys if fragment.startswith(w,i)),None)
+    if not word:break
+    parts.append(words[word]['pinyin']);i+=len(word)
+   if i==len(fragment):readings[fragment]=' '.join(parts)
+ for text,pinyin in context_pinyin.items():
+  fragments=re.findall('[\u3400-\u9fff]+',text)
+  if len(fragments)==1:readings[fragments[0]]=pinyin.strip(' .,!?:;，。！？：；')
+ (ROOT/'src/core/question-readings.json').write_text(json.dumps(readings,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  (ROOT/'src/core/study-lookup.json').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  (ROOT/'data/lookup-missing.json').write_text(json.dumps(sorted(missing.items(),key=lambda r:-r[1]),ensure_ascii=False,indent=2),encoding='utf-8')
  print('Lookup:',len(words),'words;',len(lookup),'texts;',len(missing),'uncovered characters')

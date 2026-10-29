@@ -1,5 +1,50 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Pinyin/nghe ở câu hỏi, lựa chọn và đáp án — 25/10/2026
+
+- Dùng chung `QuestionReading` trong Học, Skills, phần 5, WrittenPractice và Sổ lỗi sai: Hiện/Ẩn Pinyin nhiều lần và nghe đúng phần Hán tự đang hiển thị bằng adapter zh-TW. Điều khiển nằm ngoài nút chọn đáp án; chỉ hiển thị khi có Hán tự. Chuyển câu/phiên trở lại ẩn Pinyin. Phần đối chiếu của Học dùng PracticeText thay lớp Pinyin luôn hiện.
+- `build_lookup.py` biên soạn `question-readings.json` từ dữ liệu có sẵn, gồm các mảnh câu còn lại sau khi tạo chỗ trống. Runtime chỉ tra chính văn bản hiển thị, ưu tiên Pinyin nguồn nếu khớp nguyên câu; không phục hồi chỗ trống hoặc sinh phiên âm bằng AI. Mảnh chưa có dữ liệu báo thiếu Pinyin. Nghe dùng cả cụm/câu Hán tự qua giọng cũ, không đọc chuỗi Latin.
+- Mở Pinyin/nghe trong lượt chấm được ghi là trợ giúp, ẩn lại không xóa dấu. Phần 5 và sửa lỗi tách cờ đã dùng trợ giúp khỏi cờ mở đáp án để không vô tình lộ lời giải. Giữ tiến độ, ID, snapshot và FSRS.
+- Đã chạy build, 3 core tests (questionReading + lessonSequence), 2 E2E (lesson-sequence + question-reading): lặp toggle, chỗ trống không lộ đáp án, nghe không chọn lựa chọn, payload audio đúng từ, dấu trợ giúp qua reload/nộp, phản hồi đáp án, phần 5 không mở đáp án khi bật Pinyin, mobile. TTS trong E2E chặn request để xác nhận văn bản, không đánh giá chất lượng giọng. Build còn cảnh báo bundle lớn như trước. Local 8765 đã phục vụ build mới; chưa commit/push.
+
+## Nối từ mới → hội thoại → luyện xen ôn theo lesson — 25/10/2026
+
+- Soạn 72 hội thoại riêng, mỗi bài 4 lượt A/B, đủ 5 từ trọng tâm; nguồn `content/lesson-dialogues.tsv`, đóng gói bằng `scripts/build_lesson_dialogues.py` vào `core/lesson-dialogues.json`. Intro không dùng lại `unit.dialogue`. Pinyin/Việt soạn sẵn, tra từ và nghe dùng cơ chế hiện có; thêm 13 mục tra từ hỗ trợ. Không gọi AI lúc học; nội dung vẫn là bản nháp, chưa giáo viên duyệt.
+- `lessonSequence.ts` tạo 10 câu/bài: 5 nhớ từ, 3 điền từ trong câu, 1 nghe và 1 đọc từ hội thoại vừa học. Mỗi từ có câu vận dụng. Xen tối đa 2 câu từ bài trước đã hoàn thành trong cùng chủ đề và 1 câu từ chủ đề trước đã hoàn thành. Không lấy bài sau/dở/xóa; phiên legacy chỉ lấy câu từ đúng word_ids đã giới thiệu, bỏ filler dùng từ tương lai. Có nhãn nguồn ôn.
+- Phiên mới lưu `sequence_revision`, `exercise_snapshot`, thứ tự `exercise_ids`/lựa chọn và `review_labels` trong sessions hiện có. Retry giải theo snapshot; Review tìm được câu mới để sửa lỗi. `learnedWriting` đọc đúng snapshot đã hoàn thành; ngân hàng viết câu bổ sung hội thoại mới qua bộ lọc đã học. Giữ v8/package/SQLite/schema/FSRS và phiên đang làm cũ; Học lại mở bộ mới. Màn intro cũ chưa bắt đầu chuyển sang bộ liên kết khi bấm bắt đầu.
+- Đã chạy: build; compiler 72/72 và bao phủ từ; 7 core tests (lessonSequence/learnedWriting/topicLanguage); 1 E2E qua (food.3: hội thoại, 13 câu, chỗ trống không lộ câu đầy đủ, reload, lưu/tiếp tục bản nháp, hoàn thành, legacy nguyên trạng, mobile); content:check và 1 test manifest/tài sản. Hai lần E2E đầu lỗi test do điều hướng và locator label khi textarea có giá trị; sửa test dùng chờ URL và role textbox rồi qua. Không benchmark AI hay kiểm định nghe toàn bộ. Build có cảnh báo bundle >500kB như trước.
+- Tất cả chữ trong 72 đoạn mới có phân đoạn tra từ; dữ liệu cũ còn 66 ký tự chưa phủ ở các văn bản khác. Không bổ sung/chứng nhận mẫu nét mới. Local 8765 phục vụ bản build mới, giữ thay đổi trước đó, chưa commit/push.
+
+## Giảm tải động từ nhập môn — 20/10/2026 (điều chỉnh phần 5)
+
+- Thay phân bổ động từ tự động bằng `beginnerVerbs.ts`: 21 động từ toàn lộ trình, sáu chủ đề đầu chỉ 1 từ/chủ đề, các chủ đề sau tối đa 2. 15 từ còn lại của ngân hàng 36 từ chuyển sang `#grammar/verbs/advanced`, nhãn nâng cao/bổ sung tự chọn. Đây là phân tầng biên tập theo mức tải của bài, không phải chứng nhận cấp độ TOCFL.
+- Dùng 21 câu ngắn, tối đa 8 ký tự kể cả dấu câu, có Phồn thể/Pinyin/nghĩa. Phần 5 nhập môn chỉ dạy nguyên từ, không bắt học tách/thời lượng/trải nghiệm. Trang động từ cũng thu mẫu tách vào mục Học thêm, danh sách nhập môn 21 từ và phân loại bổ sung nhất quán. Câu ngắn được đưa vào ngân hàng viết câu nhưng vẫn qua bộ lọc đã học.
+- Phiên mới dùng `topic-language:v2:<unit>` và câu động từ có hậu tố `intro-v2`; lưu tách khỏi v1. Link `/legacy` đọc đúng snapshot, bản nháp và kết quả v1; không ghi đè, chuyển đáp án hoặc tự hoàn thành v2. Dấu hoàn thành cũ vẫn được nhận diện trên lộ trình. `learnedWriting` đọc cả hai phiên bản, cấp đúng từ/câu của phiên đã hoàn thành, không biến bằng chứng v1 thành câu v2 chưa học.
+- Phân bổ nhập môn mới có nội dung cho cả 18 chủ đề (tổng 90 phần cùng 72 bài gốc); số lượng từ không đổi. Tài liệu phần 5 bên dưới là lịch sử phân bổ v1.
+- Build cuối qua; 5 core checks và 2 E2E liên quan qua sau cập nhật kỳ vọng phiên bản: giới hạn số từ, không trùng, câu ngắn, nguồn v1/v2, học/tiếp tục/nộp, bản nháp v1 nguyên trạng, mục bổ sung 15 từ và mobile. `build_lookup.py` đóng gói câu mới; đối chiếu cả 21 câu không thiếu chữ trong phân đoạn tra từ (67 chữ chưa phủ ở dữ liệu cũ không tăng). Không chạy benchmark AI, không sửa SQLite/FSRS/package. Bản local cập nhật, chưa commit/push.
+
+## Phần 5: lượng từ và động từ mới — 20/10/2026
+
+- `core/topicLanguage.ts` phân bổ theo lần giới thiệu đầu tiên trong thứ tự 18 chủ đề của gói. Lượng từ so theo chữ lượng từ chính (張 đi với danh từ mới vẫn là ôn lại), động từ so ID từ. Không phụ thuộc tìm kiếm, thứ tự mở bài hoặc tiến độ người dùng. Ngân hàng hiện tại tạo 14 phần mới, tổng 20 lượng từ và 34 động từ li hợp; classroom/campus/renting/social không thêm phần 5 vì không có mục mới. Không bổ sung ngôn liệu chỉ để đủ số.
+- Thẻ chủ đề trong Học có phần thứ 5 khi cần, thay hai liên kết bổ sung cũ. Từ đã giới thiệu nằm trong mục Ôn lại kèm liên kết chủ đề giới thiệu đầu. Trang tra cứu động từ/lượng từ vẫn giữ ngân hàng liên quan cho ôn tập, gắn nhãn Mới/Ôn lại và liên kết phần 5.
+- `TopicLanguage.tsx`: học thẻ từ/nét/Pinyin/nghĩa và mẫu dùng, điền từ vào câu thật; chấp nhận biến thể lượng từ đã biên soạn. Namespace `topic-language:v1:<unit>` lưu snapshot câu, đáp án, trợ giúp, bản nháp, tiến độ và danh sách mục đã học. Lưu nháp tuần tự CAS; nộp dùng event practice + mutation transaction/key chống trùng. Đây là lượt thực hành, không cộng vào tỷ lệ đúng bài đóng hoặc tạo flashcard/lịch FSRS.
+- Hoàn thành mới cấp bằng chứng cho đúng mục đã trả lời đúng: từ trọng tâm và các câu mẫu đã trình bày, không tự mở ngữ pháp hay mọi từ trong đoạn. `learnedWriting` nhận nguồn này; học lại giữ danh sách đã học từ lần hoàn thành trước. Có dấu hoàn thành, tiếp tục bài đang dở, chuyển phần 4 → 5 → chủ đề sau. 72 ID/mốc bài cũ giữ nguyên; tổng hiển thị là 86 phần, không đánh dấu lại các bài cũ.
+- Build qua; 5 core checks (2 mới + 3 học từ cũ) và 2 E2E tập trung qua: chu kỳ giới thiệu không trùng, thiếu thật trong câu, nguồn từ đúng/sai/chưa xong/học lại, lưu nháp/reload/tiếp tục/nộp đúp/hoàn thành, giữ bản ghi bài cũ và số thẻ, tra cứu chủ đề/mobile. E2E lần đầu phát hiện loại event không được API chấp nhận; đã dùng kind practice hiện có và chạy lại qua. Không chạy benchmark AI. Bản local cập nhật; chưa commit/push.
+
+## Phân biệt trang lượng từ/động từ theo chủ đề — 20/10/2026
+
+- Liên kết trong 18 thẻ Học đã mang đúng ID; vấn đề là trang chủ đề mở đầu bằng nội dung chung giống nhau. Đưa tên chủ đề, phạm vi và bộ chọn lên đầu. Trang động từ chủ đề chỉ hiện nhóm từ tương ứng; sáu bài nền tảng và 20 động từ đối chiếu nằm ở trang tổng hợp, ghi rõ kiến thức chung.
+- Phần Dùng khi nào/Từ cần biết/Cách dùng/Ví dụ của lượng từ dùng đúng tập cụm theo chủ đề thay vì luôn ly trà/sách/vé. Trang tổng hợp của cả hai mục có danh sách 18 chủ đề kèm từ/cụm. Ghi rõ từ có thể xuất hiện ở nhiều chủ đề và đây là ngân hàng bổ sung.
+- Đổi chủ đề lượng từ tạo lại trạng thái tìm kiếm; giữ nguyên ID nội dung, ngân hàng, lịch sử và các phiên luyện. Không nâng gói hay sửa SQLite.
+- Build qua; một E2E kiểm tra liên kết của 18 chủ đề, bộ từ/giới thiệu riêng Số và thời gian/Ăn uống/Giao thông, đổi chủ đề và màn hình 390px qua. Lần đầu test kỳ vọng sai thứ tự hai cụm vận tải; sửa kỳ vọng, chạy lại qua. Bản local đã build; chưa commit/push.
+
+## Tạm ẩn luyện nói — 20/10/2026
+
+- Cờ `SPEAKING_ENABLED=false` tại `src/core/features.ts`: ẩn tab/liên kết Nói trong Skills, Học, lượng từ, động từ và hàng thống kê Nói. Link nói cũ mở phần đọc/tra cứu; bộ luyện nói không được khởi tạo qua UI.
+- Ẩn Recorder dùng chung, cấu hình ASR và thử micro trong Cài đặt; Hội thoại giữ nhập chữ, nghe trả lời và góp ý viết. Giữ code/model/API/ngân hàng và dữ liệu cũ để bật lại sau.
+- Phiên Học mới/học lại loại câu nói khỏi danh sách. Phiên cũ gặp câu nói có nút tiếp tục, giữ snapshot bản nháp trong `paused_speaking`, không phát sự kiện nói hay thêm đáp án giả. Không sửa lịch FSRS hoặc xóa lịch sử.
+- Build qua; 1 E2E qua: 6 màn hình/link nói cũ không có Recorder/liên kết nói, tiếp tục phiên cũ giữ bản nháp/không tạo đáp án. Không benchmark ASR. Chưa commit/push.
+
 ## Sổ tay: trạng thái thẻ và căn chỉnh bộ lọc — 19/10/2026
 
 - Tra trong gói hiển thị ✓ Đã thêm, viền nhận diện và khóa nút thêm khi đã có thẻ theo hướng đang chọn. Bộ lọc Tất cả/Đã thêm/Chưa thêm có số lượng kết quả; nếu chỉ có hướng khác thì có nhãn riêng. Thẻ tạm ngưng vẫn được tính đã thêm; thẻ đã xóa không tính.

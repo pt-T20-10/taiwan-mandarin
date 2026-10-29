@@ -1,5 +1,25 @@
 # Quyết định triển khai — 23/09/2026
 
+## Liên kết bài học và ôn xen kẽ — 25/10/2026
+
+Hội thoại là dữ liệu soạn sẵn cấp lesson, không chọn ngẫu nhiên đoạn chung chủ đề. Mười câu mới liên kết với năm từ của lesson và chính các câu vừa đọc. Câu ôn chỉ lấy từ phiên đã hoàn thành trước vị trí bài hiện tại trong lộ trình; giữ mọi câu cốt lõi rồi xen tối đa ba câu ôn. Đóng băng toàn bộ đề/lựa chọn vào snapshot khi bắt đầu, giải retry và lịch sử theo snapshot. Không sửa câu cũ dưới cùng ID: câu liên kết dùng namespace `:linked-v1:`; phiên cũ giữ hợp đồng và danh sách gốc. Hội thoại là supplement frontend có nguồn TSV/JSON và revision riêng, không cần nâng gói foundation hay ghi trực tiếp database.
+
+## Giảm tải phần 5 nhập môn — 20/10/2026
+
+Phản hồi người dùng ưu tiên ít từ và câu dễ hơn. Phân bổ v2 soạn rõ 21 động từ (1 từ ở mỗi chủ đề đầu, tối đa 2 ở chủ đề sau), câu ngắn học nguyên từ; 15 từ còn lại và mẫu tách là bổ sung tự chọn. Không tự thay dữ liệu phiên v1: dùng session v2, giữ link legacy, dấu hoàn thành và bằng chứng đã học v1. Câu động từ v2 có ID mới, nguồn luyện viết nhận đúng phiên bản đã học. Không suy từ “nâng cao” là đã đối chiếu chuẩn cấp độ hoặc giáo viên duyệt.
+
+## Lần giới thiệu đầu và phần học thứ 5 — 20/10/2026
+
+Người dùng chọn tích hợp lượng từ/động từ vào học chính và cho phép không hiển thị khi không có kiến thức mới. Dùng ngân hàng soạn sẵn hiện có, phân bổ lần đầu theo thứ tự chủ đề cố định: dedup lượng từ theo measure chính, động từ theo ID. Ví dụ mới của lượng từ cũ chỉ là ôn lại; không tăng số từ để đủ chỉ tiêu. Phần 5 dùng namespace session riêng, không sửa 72 bài hoặc package/SQLite. Tập từ trả lời đúng chỉ thành bằng chứng sau khi hoàn thành; giữ bằng chứng qua học lại, không tự tạo flashcard. Nếu thay thứ tự chủ đề/ánh xạ trong tương lai phải version lại phân bổ và diễn giải snapshot cũ, không âm thầm thay kiến thức của phiên đã lưu.
+
+## Nội dung bổ sung theo chủ đề — 20/10/2026
+
+Trang lượng từ/động từ mở từ Học phải nêu chủ đề và hiển thị tập từ tương ứng trước nội dung dùng chung. Sáu bài nền tảng động từ chỉ nằm ở trang tổng hợp; giới thiệu lượng từ dùng tập cụm của chủ đề. Giữ các ánh xạ từ đã soạn và ID phiên hiện có, cho phép cùng từ ôn ở nhiều chủ đề. Không coi bộ động từ li hợp bổ sung là toàn bộ động từ của bài Học. Trang tổng hợp có mục lục 18 chủ đề và chú thích từ/cụm.
+
+## Tạm dừng luyện nói — 20/10/2026
+
+Theo yêu cầu người dùng, tạm ẩn luyện nói và nhận dạng micro bằng cờ chung `SPEAKING_ENABLED`; giữ mã nguồn, API, model và lịch sử. Nghe mẫu và Hội thoại bằng chữ tiếp tục hoạt động. Không chuyển câu nói thành bài viết hay tự gán kết quả. Phiên Học mới bỏ câu nói; phiên cũ cho tiếp tục và lưu riêng bản nháp bị tạm dừng. Bật lại cần xem lại các snapshot `Session.paused_speaking`, không tự coi chúng là đã luyện.
+
 ## Sổ tay: dấu Đã thêm — 19/10/2026
 
 Tính trạng thái thêm theo đúng hướng flashcard đang chọn; hướng khác chỉ là thông tin bổ sung, không chặn tạo hướng mới. Nhận ra thẻ qua ID từ gốc hoặc cặp Hán tự/Pinyin, kể cả ID nhập riêng. Thẻ tạm ngưng là đã có, tombstone là đã xóa. Các bộ lọc dùng chung bố cục `filter-bar` và quy tắc kích thước ở `forms.css`; không dùng hàng actions căn giữa cho ô tìm không nhãn cạnh dropdown có nhãn.

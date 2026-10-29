@@ -4,6 +4,8 @@ import {shuffled} from './practice';
 import {examplesFor} from './classifiers';
 import {verbsFor} from './verbs';
 import {greetingReadings} from './greetingReadings';
+import {beginnerVerbsFor} from './beginnerVerbs';
+import {lessonDialogue} from './lessonSequence';
 
 export type WrittenItem={id:string;prompt:string;answers:string[];choices:string[];explanation:string;sample?:TextItem;evidence?:number[];requiredGrammar?:string;requiresPracticedForm?:boolean};
 export type ReadingLine=TextItem&{speaker?:string;role?:'female'|'male'};
@@ -15,7 +17,9 @@ export function sentenceBank(units:Unit[]):WrittenItem[]{
   const add=(id:string,t:TextItem,note:string,requirements:Partial<WrittenItem>={})=>{const key=normalizeHanzi(t.hanzi);if(!key||seen.has(key)||!t.vi)return;seen.add(key);rows.push({id:'sentence:v1:'+id,prompt:t.vi,answers:[t.hanzi],choices:[],explanation:note,sample:{hanzi:t.hanzi,pinyin:t.pinyin,vi:t.vi},...requirements});};
   unit.grammar.forEach(g=>(g.examples||[]).forEach((t,i)=>add(g.id+':'+i,t,g.explanation,{requiredGrammar:g.id})));
   unit.dialogue.forEach((t,i)=>add(unit.id+':dialogue:'+i,t,'Câu trong hội thoại '+unit.title+'. Chú ý cách xưng hô và ngữ cảnh.'));
+  unit.lessons.forEach(l=>lessonDialogue(l).forEach((t,i)=>add(l.id+':linked-v1:'+i,t,'Câu vận dụng từ mới trong '+l.title+'.')));
   examplesFor(unit.id).forEach(t=>add('classifier:'+t.id,t,t.use));
+  beginnerVerbsFor(unit.id).forEach(v=>add('verb-intro-v2:'+unit.id+':'+v.id,v.whole,'Mẫu câu ngắn trong phần 5 nhập môn.'));
   verbsFor(unit.id).forEach(v=>{add('verb:'+v.id+':whole',v.whole,v.note);add('verb:'+v.id+':split',v.split,v.note,{requiresPracticedForm:true});});
   if(unit.id==='tw.greetings')for(const [hanzi,pinyin,vi] of [
    ['你好！','Nǐ hǎo!','Xin chào!'],['您好！','Nín hǎo!','Xin chào (kính trọng)!'],['早安！','Zǎo ān!','Chào buổi sáng!'],['晚安！','Wǎn ān!','Chúc ngủ ngon!'],['再見！','Zàijiàn!','Tạm biệt!'],['謝謝！','Xièxie!','Cảm ơn!'],['謝謝你！','Xièxie nǐ!','Cảm ơn bạn!'],['不客氣。','Bú kèqi.','Không có gì (đáp lời cảm ơn).'],['對不起。','Duìbuqǐ.','Xin lỗi.'],['沒關係。','Méi guānxi.','Không sao.'],

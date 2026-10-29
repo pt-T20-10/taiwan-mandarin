@@ -1,0 +1,1874 @@
+{
+  "tw.greetings.lesson.1": [
+    {
+      "hanzi": "你好！",
+      "pinyin": "Nǐ hǎo!",
+      "vi": "Chào bạn!",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "您好！早安！",
+      "pinyin": "Nín hǎo! Zǎo ān!",
+      "vi": "Chào anh/chị! Chào buổi sáng!",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "晚安！",
+      "pinyin": "Wǎn ān!",
+      "vi": "Chúc ngủ ngon!",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "晚安！再見！",
+      "pinyin": "Wǎn ān! Zàijiàn!",
+      "vi": "Chúc ngủ ngon! Tạm biệt!",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.greetings.lesson.2": [
+    {
+      "hanzi": "請。",
+      "pinyin": "Qǐng.",
+      "vi": "Xin mời.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "謝謝！",
+      "pinyin": "Xièxie!",
+      "vi": "Cảm ơn!",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "不客氣。對不起！",
+      "pinyin": "Bú kèqi. Duìbuqǐ!",
+      "vi": "Không có gì. Xin lỗi nhé!",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "沒關係。",
+      "pinyin": "Méi guānxi.",
+      "vi": "Không sao.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.greetings.lesson.3": [
+    {
+      "hanzi": "你是誰？",
+      "pinyin": "Nǐ shì shéi?",
+      "vi": "Bạn là ai?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我是小安。他是小明。",
+      "pinyin": "Wǒ shì Xiǎo'ān. Tā shì Xiǎomíng.",
+      "vi": "Tôi là Tiểu An. Anh ấy là Tiểu Minh.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "她呢？",
+      "pinyin": "Tā ne?",
+      "vi": "Còn cô ấy?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "她是小美。我們是朋友。",
+      "pinyin": "Tā shì Xiǎoměi. Wǒmen shì péngyǒu.",
+      "vi": "Cô ấy là Tiểu Mỹ. Chúng tôi là bạn.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.greetings.lesson.4": [
+    {
+      "hanzi": "你叫什麼名字？",
+      "pinyin": "Nǐ jiào shénme míngzi?",
+      "vi": "Bạn tên là gì?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我叫小安。我是越南人。",
+      "pinyin": "Wǒ jiào Xiǎo'ān. Wǒ shì Yuènán rén.",
+      "vi": "Tôi tên là Tiểu An. Tôi là người Việt Nam.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "我是臺灣人。",
+      "pinyin": "Wǒ shì Táiwān rén.",
+      "vi": "Tôi là người Đài Loan.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "你好！",
+      "pinyin": "Nǐ hǎo!",
+      "vi": "Chào bạn!",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.numbers.lesson.1": [
+    {
+      "hanzi": "請讀：零、一、二。",
+      "pinyin": "Qǐng dú: líng, yī, èr.",
+      "vi": "Hãy đọc: không, một, hai.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "零、一、二。",
+      "pinyin": "Líng, yī, èr.",
+      "vi": "Không, một, hai.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "再讀：三、四。",
+      "pinyin": "Zài dú: sān, sì.",
+      "vi": "Đọc tiếp: ba, bốn.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "三、四。",
+      "pinyin": "Sān, sì.",
+      "vi": "Ba, bốn.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.numbers.lesson.2": [
+    {
+      "hanzi": "五、六、七，對嗎？",
+      "pinyin": "Wǔ, liù, qī, duì ma?",
+      "vi": "Năm, sáu, bảy, đúng không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對。再讀八、九。",
+      "pinyin": "Duì. Zài dú bā, jiǔ.",
+      "vi": "Đúng. Đọc tiếp tám, chín.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "八、九。",
+      "pinyin": "Bā, jiǔ.",
+      "vi": "Tám, chín.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "很好！",
+      "pinyin": "Hěn hǎo!",
+      "vi": "Tốt lắm!",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.numbers.lesson.3": [
+    {
+      "hanzi": "今天有幾個人？",
+      "pinyin": "Jīntiān yǒu jǐ ge rén?",
+      "vi": "Hôm nay có mấy người?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "今天有十個人。",
+      "pinyin": "Jīntiān yǒu shí ge rén.",
+      "vi": "Hôm nay có mười người.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "明天呢？",
+      "pinyin": "Míngtiān ne?",
+      "vi": "Còn ngày mai?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "明天有兩百個人。",
+      "pinyin": "Míngtiān yǒu liǎng bǎi ge rén.",
+      "vi": "Ngày mai có hai trăm người.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.numbers.lesson.4": [
+    {
+      "hanzi": "現在幾點？",
+      "pinyin": "Xiànzài jǐ diǎn?",
+      "vi": "Bây giờ mấy giờ?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "現在三點半。",
+      "pinyin": "Xiànzài sān diǎn bàn.",
+      "vi": "Bây giờ ba giờ rưỡi.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "昨天也是三點半嗎？",
+      "pinyin": "Zuótiān yě shì sān diǎn bàn ma?",
+      "vi": "Hôm qua cũng là ba giờ rưỡi à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不是，昨天是三點十分。",
+      "pinyin": "Bú shì, zuótiān shì sān diǎn shí fēn.",
+      "vi": "Không, hôm qua là ba giờ mười phút.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.food.lesson.1": [
+    {
+      "hanzi": "你吃飯嗎？",
+      "pinyin": "Nǐ chī fàn ma?",
+      "vi": "Bạn ăn cơm không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我吃麵。",
+      "pinyin": "Wǒ chī miàn.",
+      "vi": "Tôi ăn mì.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "你喝什麼？",
+      "pinyin": "Nǐ hē shénme?",
+      "vi": "Bạn uống gì?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我喝水。",
+      "pinyin": "Wǒ hē shuǐ.",
+      "vi": "Tôi uống nước.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.food.lesson.2": [
+    {
+      "hanzi": "早餐喝什麼？",
+      "pinyin": "Zǎocān hē shénme?",
+      "vi": "Bữa sáng uống gì?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我喝牛奶，你呢？",
+      "pinyin": "Wǒ hē niúnǎi, nǐ ne?",
+      "vi": "Tôi uống sữa bò, còn bạn?",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "我喝咖啡。午餐呢？",
+      "pinyin": "Wǒ hē kāfēi. Wǔcān ne?",
+      "vi": "Tôi uống cà phê. Còn bữa trưa?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "午餐吃飯、喝茶。",
+      "pinyin": "Wǔcān chī fàn, hē chá.",
+      "vi": "Bữa trưa ăn cơm, uống trà.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.food.lesson.3": [
+    {
+      "hanzi": "晚餐要吃什麼？",
+      "pinyin": "Wǎncān yào chī shénme?",
+      "vi": "Bữa tối muốn ăn gì?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我要看菜單。",
+      "pinyin": "Wǒ yào kàn càidān.",
+      "vi": "Tôi muốn xem thực đơn.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "麵很好吃，茶也很好喝。",
+      "pinyin": "Miàn hěn hǎochī, chá yě hěn hǎohē.",
+      "vi": "Mì rất ngon, trà cũng rất ngon.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，我要麵和茶。",
+      "pinyin": "Hǎo, wǒ yào miàn hé chá.",
+      "vi": "Được, tôi muốn mì và trà.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.food.lesson.4": [
+    {
+      "hanzi": "你要一碗麵嗎？",
+      "pinyin": "Nǐ yào yì wǎn miàn ma?",
+      "vi": "Bạn muốn một bát mì không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我要素食，不要辣。",
+      "pinyin": "Wǒ yào sùshí, bú yào là.",
+      "vi": "Tôi muốn đồ chay, không cay.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "好，要一杯茶嗎？",
+      "pinyin": "Hǎo, yào yì bēi chá ma?",
+      "vi": "Được, muốn một ly trà không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不要，謝謝。",
+      "pinyin": "Bú yào, xièxie.",
+      "vi": "Không, cảm ơn.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.shopping.lesson.1": [
+    {
+      "hanzi": "你要買什麼？",
+      "pinyin": "Nǐ yào mǎi shénme?",
+      "vi": "Bạn muốn mua gì?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我要買水。多少錢？",
+      "pinyin": "Wǒ yào mǎi shuǐ. Duōshǎo qián?",
+      "vi": "Tôi muốn mua nước. Bao nhiêu tiền?",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "二十塊。",
+      "pinyin": "Èrshí kuài.",
+      "vi": "Hai mươi đồng.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，二十元。",
+      "pinyin": "Hǎo, èrshí yuán.",
+      "vi": "Được, hai mươi đồng.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.shopping.lesson.2": [
+    {
+      "hanzi": "你賣這個嗎？",
+      "pinyin": "Nǐ mài zhège ma?",
+      "vi": "Bạn có bán cái này không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "有，這個一百元。",
+      "pinyin": "Yǒu, zhège yì bǎi yuán.",
+      "vi": "Có, cái này một trăm đồng.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "太貴了。那個呢？",
+      "pinyin": "Tài guì le. Nàge ne?",
+      "vi": "Đắt quá. Còn cái kia?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "那個比較便宜，五十元。",
+      "pinyin": "Nàge bǐjiào piányí, wǔshí yuán.",
+      "vi": "Cái kia rẻ hơn, năm mươi đồng.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.shopping.lesson.3": [
+    {
+      "hanzi": "你要去商店嗎？",
+      "pinyin": "Nǐ yào qù shāngdiàn ma?",
+      "vi": "Bạn muốn đi cửa hàng à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我要去超市，不去便利商店。",
+      "pinyin": "Wǒ yào qù chāoshì, bú qù biànlì shāngdiàn.",
+      "vi": "Tôi muốn đi siêu thị, không đi cửa hàng tiện lợi.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "你有袋子嗎？",
+      "pinyin": "Nǐ yǒu dàizi ma?",
+      "vi": "Bạn có túi không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "有。買東西後，我要拿發票。",
+      "pinyin": "Yǒu. Mǎi dōngxi hòu, wǒ yào ná fāpiào.",
+      "vi": "Có. Sau khi mua đồ, tôi muốn lấy hóa đơn.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.shopping.lesson.4": [
+    {
+      "hanzi": "你要買什麼水果？",
+      "pinyin": "Nǐ yào mǎi shénme shuǐguǒ?",
+      "vi": "Bạn muốn mua trái cây gì?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我要一公斤蘋果。",
+      "pinyin": "Wǒ yào yì gōngjīn píngguǒ.",
+      "vi": "Tôi muốn một ki-lô-gam táo.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "付現金嗎？",
+      "pinyin": "Fù xiànjīn ma?",
+      "vi": "Trả tiền mặt à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "可以用信用卡嗎？",
+      "pinyin": "Kěyǐ yòng xìnyòngkǎ ma?",
+      "vi": "Có thể dùng thẻ tín dụng không?",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.transport.lesson.1": [
+    {
+      "hanzi": "你去哪裡？",
+      "pinyin": "Nǐ qù nǎlǐ?",
+      "vi": "Bạn đi đâu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我去車站坐火車。",
+      "pinyin": "Wǒ qù chēzhàn zuò huǒchē.",
+      "vi": "Tôi đi đến ga để đi tàu hỏa.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "坐公車去嗎？",
+      "pinyin": "Zuò gōngchē qù ma?",
+      "vi": "Đi bằng xe buýt à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不是，我坐捷運去。",
+      "pinyin": "Bú shì, wǒ zuò jiéyùn qù.",
+      "vi": "Không, tôi đi bằng tàu điện đô thị.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.transport.lesson.2": [
+    {
+      "hanzi": "高鐵站在右邊嗎？",
+      "pinyin": "Gāotiě zhàn zài yòubiān ma?",
+      "vi": "Ga tàu cao tốc ở bên phải à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對。你要坐計程車嗎？",
+      "pinyin": "Duì. Nǐ yào zuò jìchéngchē ma?",
+      "vi": "Đúng. Bạn muốn đi taxi không?",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "我想騎腳踏車。",
+      "pinyin": "Wǒ xiǎng qí jiǎotàchē.",
+      "vi": "Tôi muốn đi xe đạp.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我想走路。",
+      "pinyin": "Wǒ xiǎng zǒulù.",
+      "vi": "Tôi muốn đi bộ.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.transport.lesson.3": [
+    {
+      "hanzi": "車站在附近嗎？",
+      "pinyin": "Chēzhàn zài fùjìn ma?",
+      "vi": "Ga ở gần đây không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不遠，就在前面。",
+      "pinyin": "Bù yuǎn, jiù zài qiánmiàn.",
+      "vi": "Không xa, ngay phía trước.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "在商店左邊嗎？",
+      "pinyin": "Zài shāngdiàn zuǒbiān ma?",
+      "vi": "Ở bên trái cửa hàng à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不是，在商店後面。",
+      "pinyin": "Bú shì, zài shāngdiàn hòumiàn.",
+      "vi": "Không, ở phía sau cửa hàng.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.transport.lesson.4": [
+    {
+      "hanzi": "到車站了，要下車嗎？",
+      "pinyin": "Dào chēzhàn le, yào xiàchē ma?",
+      "vi": "Đến ga rồi, xuống xe không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，我家很近。",
+      "pinyin": "Duì, wǒ jiā hěn jìn.",
+      "vi": "Đúng, nhà tôi rất gần.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "明天也坐公車嗎？",
+      "pinyin": "Míngtiān yě zuò gōngchē ma?",
+      "vi": "Ngày mai cũng đi xe buýt à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，我有悠遊卡。",
+      "pinyin": "Duì, wǒ yǒu Yōuyóukǎ.",
+      "vi": "Đúng, tôi có thẻ EasyCard.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.family.lesson.1": [
+    {
+      "hanzi": "你家在哪裡？",
+      "pinyin": "Nǐ jiā zài nǎlǐ?",
+      "vi": "Nhà bạn ở đâu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我家在臺灣。",
+      "pinyin": "Wǒ jiā zài Táiwān.",
+      "vi": "Nhà tôi ở Đài Loan.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "你的家人呢？",
+      "pinyin": "Nǐ de jiārén ne?",
+      "vi": "Còn người nhà của bạn?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "爸爸、媽媽和哥哥都在家。",
+      "pinyin": "Bàba, māma hé gēge dōu zài jiā.",
+      "vi": "Bố, mẹ và anh trai đều ở nhà.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.family.lesson.2": [
+    {
+      "hanzi": "她是你姐姐嗎？",
+      "pinyin": "Tā shì nǐ jiějie ma?",
+      "vi": "Cô ấy là chị gái bạn à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不是，她是我妹妹。",
+      "pinyin": "Bú shì, tā shì wǒ mèimei.",
+      "vi": "Không, cô ấy là em gái tôi.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "他是你弟弟的同學嗎？",
+      "pinyin": "Tā shì nǐ dìdi de tóngxué ma?",
+      "vi": "Anh ấy là bạn cùng lớp của em trai bạn à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，也是我的朋友。",
+      "pinyin": "Duì, yě shì wǒ de péngyǒu.",
+      "vi": "Đúng, cũng là bạn của tôi.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.family.lesson.3": [
+    {
+      "hanzi": "那位先生是誰？",
+      "pinyin": "Nà wèi xiānsheng shì shéi?",
+      "vi": "Người đàn ông kia là ai?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "他是王先生，那是他太太。",
+      "pinyin": "Tā shì Wáng xiānsheng, nà shì tā tàitai.",
+      "vi": "Đó là ông Vương, kia là vợ ông ấy.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "他們有幾個孩子？",
+      "pinyin": "Tāmen yǒu jǐ ge háizi?",
+      "vi": "Họ có mấy người con?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "兩個。他們家有四個人。",
+      "pinyin": "Liǎng ge. Tāmen jiā yǒu sì ge rén.",
+      "vi": "Hai. Gia đình họ có bốn người.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.family.lesson.4": [
+    {
+      "hanzi": "你有工作嗎？",
+      "pinyin": "Nǐ yǒu gōngzuò ma?",
+      "vi": "Bạn có việc làm không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "有，我喜歡我的工作。",
+      "pinyin": "Yǒu, wǒ xǐhuān wǒ de gōngzuò.",
+      "vi": "Có, tôi thích công việc của mình.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "你弟弟幾歲？他有工作嗎？",
+      "pinyin": "Nǐ dìdi jǐ suì? Tā yǒu gōngzuò ma?",
+      "vi": "Em trai bạn bao nhiêu tuổi? Em ấy có việc làm không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "他十八歲，沒有工作。",
+      "pinyin": "Tā shíbā suì, méiyǒu gōngzuò.",
+      "vi": "Em ấy mười tám tuổi, chưa có việc làm.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.home.lesson.1": [
+    {
+      "hanzi": "你住宿舍嗎？",
+      "pinyin": "Nǐ zhù sùshè ma?",
+      "vi": "Bạn ở ký túc xá à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不是，我租房間。",
+      "pinyin": "Bú shì, wǒ zū fángjiān.",
+      "vi": "Không, tôi thuê phòng.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "房租多少？房間有床嗎？",
+      "pinyin": "Fángzū duōshǎo? Fángjiān yǒu chuáng ma?",
+      "vi": "Tiền thuê bao nhiêu? Phòng có giường không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "房租五千元。房東說有床。",
+      "pinyin": "Fángzū wǔ qiān yuán. Fángdōng shuō yǒu chuáng.",
+      "vi": "Tiền thuê năm nghìn đồng. Chủ nhà nói có giường.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.home.lesson.2": [
+    {
+      "hanzi": "桌子和椅子在哪裡？",
+      "pinyin": "Zhuōzi hé yǐzi zài nǎlǐ?",
+      "vi": "Bàn và ghế ở đâu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "在窗戶旁邊。",
+      "pinyin": "Zài chuānghù pángbiān.",
+      "vi": "Ở cạnh cửa sổ.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "廚房的門在哪裡？",
+      "pinyin": "Chúfáng de mén zài nǎlǐ?",
+      "vi": "Cửa nhà bếp ở đâu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "在你後面。",
+      "pinyin": "Zài nǐ hòumiàn.",
+      "vi": "Ở phía sau bạn.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.home.lesson.3": [
+    {
+      "hanzi": "浴室裡有廁所嗎？",
+      "pinyin": "Yùshì lǐ yǒu cèsuǒ ma?",
+      "vi": "Trong phòng tắm có nhà vệ sinh không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "有。房間也有冷氣。",
+      "pinyin": "Yǒu. Fángjiān yě yǒu lěngqì.",
+      "vi": "Có. Phòng cũng có máy lạnh.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "有網路嗎？電費多少？",
+      "pinyin": "Yǒu wǎnglù ma? Diànfèi duōshǎo?",
+      "vi": "Có mạng không? Tiền điện bao nhiêu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "有網路。用多少電，就付多少錢。",
+      "pinyin": "Yǒu wǎnglù. Yòng duōshǎo diàn, jiù fù duōshǎo qián.",
+      "vi": "Có mạng. Dùng bao nhiêu điện thì trả bấy nhiêu tiền.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.home.lesson.4": [
+    {
+      "hanzi": "你住的房間大嗎？",
+      "pinyin": "Nǐ zhù de fángjiān dà ma?",
+      "vi": "Phòng bạn ở có rộng không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不大，有一點小。",
+      "pinyin": "Bú dà, yǒu yìdiǎn xiǎo.",
+      "vi": "Không rộng, hơi nhỏ.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "乾淨、安靜嗎？",
+      "pinyin": "Gānjìng, ānjìng ma?",
+      "vi": "Có sạch sẽ, yên tĩnh không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "很乾淨，也很安靜。",
+      "pinyin": "Hěn gānjìng, yě hěn ānjìng.",
+      "vi": "Rất sạch, cũng rất yên tĩnh.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.schedule.lesson.1": [
+    {
+      "hanzi": "你在哪個學校上課？",
+      "pinyin": "Nǐ zài nǎ ge xuéxiào shàngkè?",
+      "vi": "Bạn học ở trường nào?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我在臺灣的大學上課。",
+      "pinyin": "Wǒ zài Táiwān de dàxué shàngkè.",
+      "vi": "Tôi học tại một trường đại học ở Đài Loan.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "你是老師嗎？",
+      "pinyin": "Nǐ shì lǎoshī ma?",
+      "vi": "Bạn là giáo viên à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不是，我是學生。",
+      "pinyin": "Bú shì, wǒ shì xuéshēng.",
+      "vi": "Không, tôi là sinh viên.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.schedule.lesson.2": [
+    {
+      "hanzi": "星期一早上有課嗎？",
+      "pinyin": "Xīngqí yī zǎoshang yǒu kè ma?",
+      "vi": "Sáng thứ Hai có tiết học không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "有，十點下課。",
+      "pinyin": "Yǒu, shí diǎn xiàkè.",
+      "vi": "Có, mười giờ tan học.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "週末呢？",
+      "pinyin": "Zhōumò ne?",
+      "vi": "Còn cuối tuần?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "週末沒有課。",
+      "pinyin": "Zhōumò méiyǒu kè.",
+      "vi": "Cuối tuần không có tiết học.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.schedule.lesson.3": [
+    {
+      "hanzi": "你下午忙嗎？",
+      "pinyin": "Nǐ xiàwǔ máng ma?",
+      "vi": "Chiều bạn bận không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "很忙，中午也沒有時間。",
+      "pinyin": "Hěn máng, zhōngwǔ yě méiyǒu shíjiān.",
+      "vi": "Rất bận, buổi trưa cũng không có thời gian.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "晚上呢？",
+      "pinyin": "Wǎnshang ne?",
+      "vi": "Còn buổi tối?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "晚上有時間。",
+      "pinyin": "Wǎnshang yǒu shíjiān.",
+      "vi": "Buổi tối có thời gian.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.schedule.lesson.4": [
+    {
+      "hanzi": "這個學期每天都有課嗎？",
+      "pinyin": "Zhège xuéqí měitiān dōu yǒu kè ma?",
+      "vi": "Học kỳ này ngày nào cũng có tiết học à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不是，星期五有空。",
+      "pinyin": "Bú shì, xīngqí wǔ yǒu kòng.",
+      "vi": "Không, thứ Sáu rảnh.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "星期一的課幾點開始？",
+      "pinyin": "Xīngqí yī de kè jǐ diǎn kāishǐ?",
+      "vi": "Tiết học thứ Hai bắt đầu lúc mấy giờ?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "九點開始，十點結束。",
+      "pinyin": "Jiǔ diǎn kāishǐ, shí diǎn jiéshù.",
+      "vi": "Bắt đầu lúc chín giờ, kết thúc lúc mười giờ.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.information.lesson.1": [
+    {
+      "hanzi": "請問，可以問一個問題嗎？",
+      "pinyin": "Qǐngwèn, kěyǐ wèn yí ge wèntí ma?",
+      "vi": "Xin hỏi, tôi hỏi một câu được không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "可以。",
+      "pinyin": "Kěyǐ.",
+      "vi": "Được.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "我不懂這個字，你知道嗎？",
+      "pinyin": "Wǒ bù dǒng zhège zì, nǐ zhīdào ma?",
+      "vi": "Tôi không hiểu chữ này, bạn biết không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "知道，我們一起看。",
+      "pinyin": "Zhīdào, wǒmen yìqǐ kàn.",
+      "vi": "Biết, chúng ta cùng xem nhé.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.information.lesson.2": [
+    {
+      "hanzi": "可以幫忙嗎？",
+      "pinyin": "Kěyǐ bāngmáng ma?",
+      "vi": "Bạn giúp được không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "可以，你找誰？",
+      "pinyin": "Kěyǐ, nǐ zhǎo shéi?",
+      "vi": "Được, bạn tìm ai?",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "我找老師。他在哪裡？",
+      "pinyin": "Wǒ zhǎo lǎoshī. Tā zài nǎlǐ?",
+      "vi": "Tôi tìm thầy giáo. Thầy ở đâu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "你有什麼問題？我幫你問。",
+      "pinyin": "Nǐ yǒu shénme wèntí? Wǒ bāng nǐ wèn.",
+      "vi": "Bạn có vấn đề gì? Tôi hỏi giúp bạn.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.information.lesson.3": [
+    {
+      "hanzi": "你為什麼問地址？",
+      "pinyin": "Nǐ wèishénme wèn dìzhǐ?",
+      "vi": "Sao bạn hỏi địa chỉ?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "因為我要去找朋友。",
+      "pinyin": "Yīnwèi wǒ yào qù zhǎo péngyǒu.",
+      "vi": "Vì tôi muốn đến gặp bạn.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "所以你想知道怎麼去？",
+      "pinyin": "Suǒyǐ nǐ xiǎng zhīdào zěnme qù?",
+      "vi": "Vậy bạn muốn biết đi thế nào à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，謝謝。",
+      "pinyin": "Duì, xièxie.",
+      "vi": "Đúng, cảm ơn.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.information.lesson.4": [
+    {
+      "hanzi": "服務臺在哪裡？",
+      "pinyin": "Fúwùtái zài nǎlǐ?",
+      "vi": "Quầy dịch vụ ở đâu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "在前面。你要問什麼？",
+      "pinyin": "Zài qiánmiàn. Nǐ yào wèn shénme?",
+      "vi": "Ở phía trước. Bạn muốn hỏi gì?",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "我要問醫院的電話號碼。",
+      "pinyin": "Wǒ yào wèn yīyuàn de diànhuà hàomǎ.",
+      "vi": "Tôi muốn hỏi số điện thoại bệnh viện.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，郵局的電話也可以在那裡問。",
+      "pinyin": "Hǎo, yóujú de diànhuà yě kěyǐ zài nàlǐ wèn.",
+      "vi": "Được, số điện thoại bưu điện cũng có thể hỏi ở đó.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.classroom.lesson.1": [
+    {
+      "hanzi": "你說英文嗎？",
+      "pinyin": "Nǐ shuō Yīngwén ma?",
+      "vi": "Bạn nói tiếng Anh không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我說越南文，也學中文。",
+      "pinyin": "Wǒ shuō Yuènánwén, yě xué Zhōngwén.",
+      "vi": "Tôi nói tiếng Việt, cũng học tiếng Trung.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "你在哪裡學華語？",
+      "pinyin": "Nǐ zài nǎlǐ xué Huáyǔ?",
+      "vi": "Bạn học Hoa ngữ ở đâu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我在臺灣學華語。",
+      "pinyin": "Wǒ zài Táiwān xué Huáyǔ.",
+      "vi": "Tôi học Hoa ngữ ở Đài Loan.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.classroom.lesson.2": [
+    {
+      "hanzi": "請看這個字。",
+      "pinyin": "Qǐng kàn zhège zì.",
+      "vi": "Hãy nhìn chữ này.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我不會讀。",
+      "pinyin": "Wǒ bú huì dú.",
+      "vi": "Tôi không biết đọc.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "先聽我讀，再寫。",
+      "pinyin": "Xiān tīng wǒ dú, zài xiě.",
+      "vi": "Hãy nghe tôi đọc trước, rồi viết.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，我聽。",
+      "pinyin": "Hǎo, wǒ tīng.",
+      "vi": "Được, tôi nghe đây.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.classroom.lesson.3": [
+    {
+      "hanzi": "這個詞是什麼意思？",
+      "pinyin": "Zhège cí shì shénme yìsi?",
+      "vi": "Từ này nghĩa là gì?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我們看這個句子。",
+      "pinyin": "Wǒmen kàn zhège jùzi.",
+      "vi": "Chúng ta xem câu này nhé.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "今天的作業要寫句子嗎？",
+      "pinyin": "Jīntiān de zuòyè yào xiě jùzi ma?",
+      "vi": "Bài tập hôm nay phải viết câu à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，明天的考試也要寫句子。",
+      "pinyin": "Duì, míngtiān de kǎoshì yě yào xiě jùzi.",
+      "vi": "Đúng, bài kiểm tra ngày mai cũng phải viết câu.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.classroom.lesson.4": [
+    {
+      "hanzi": "請再讀一次，慢一點。",
+      "pinyin": "Qǐng zài dú yí cì, màn yìdiǎn.",
+      "vi": "Xin đọc lại một lần, chậm hơn chút.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好。你有書嗎？",
+      "pinyin": "Hǎo. Nǐ yǒu shū ma?",
+      "vi": "Được. Bạn có sách không?",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "有，我有兩本書，可是沒有筆。",
+      "pinyin": "Yǒu, wǒ yǒu liǎng běn shū, kěshì méiyǒu bǐ.",
+      "vi": "Có, tôi có hai quyển sách, nhưng không có bút.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我的筆給你。",
+      "pinyin": "Wǒ de bǐ gěi nǐ.",
+      "vi": "Bút của tôi cho bạn dùng.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.daily.lesson.1": [
+    {
+      "hanzi": "你幾點起床？",
+      "pinyin": "Nǐ jǐ diǎn qǐchuáng?",
+      "vi": "Bạn dậy lúc mấy giờ?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "七點，起床後去運動。",
+      "pinyin": "Qī diǎn, qǐchuáng hòu qù yùndòng.",
+      "vi": "Bảy giờ, sau khi dậy thì đi tập thể dục.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "回家後呢？",
+      "pinyin": "Huí jiā hòu ne?",
+      "vi": "Sau khi về nhà thì sao?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "先洗澡，晚上十點睡覺。",
+      "pinyin": "Xiān xǐzǎo, wǎnshang shí diǎn shuìjiào.",
+      "vi": "Tắm trước, tối mười giờ đi ngủ.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.daily.lesson.2": [
+    {
+      "hanzi": "你想跑步還是游泳？",
+      "pinyin": "Nǐ xiǎng pǎobù háishi yóuyǒng?",
+      "vi": "Bạn muốn chạy bộ hay bơi?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我想休息。",
+      "pinyin": "Wǒ xiǎng xiūxi.",
+      "vi": "Tôi muốn nghỉ ngơi.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "你在用手機上網嗎？",
+      "pinyin": "Nǐ zài yòng shǒujī shàngwǎng ma?",
+      "vi": "Bạn đang dùng điện thoại lên mạng à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，我休息一下再去跑步。",
+      "pinyin": "Duì, wǒ xiūxi yíxià zài qù pǎobù.",
+      "vi": "Đúng, tôi nghỉ một chút rồi đi chạy.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.daily.lesson.3": [
+    {
+      "hanzi": "你常常用電腦嗎？",
+      "pinyin": "Nǐ chángcháng yòng diànnǎo ma?",
+      "vi": "Bạn có thường dùng máy tính không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "常常，我用電腦看電影。",
+      "pinyin": "Chángcháng, wǒ yòng diànnǎo kàn diànyǐng.",
+      "vi": "Thường xuyên, tôi dùng máy tính xem phim.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "也聽音樂嗎？",
+      "pinyin": "Yě tīng yīnyuè ma?",
+      "vi": "Cũng nghe nhạc à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "有時候聽音樂。",
+      "pinyin": "Yǒushíhou tīng yīnyuè.",
+      "vi": "Thỉnh thoảng nghe nhạc.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.daily.lesson.4": [
+    {
+      "hanzi": "你會游泳嗎？",
+      "pinyin": "Nǐ huì yóuyǒng ma?",
+      "vi": "Bạn biết bơi không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "會，我已經學了。",
+      "pinyin": "Huì, wǒ yǐjīng xué le.",
+      "vi": "Biết, tôi đã học rồi.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "我還不會，我們一起學，好嗎？",
+      "pinyin": "Wǒ hái bú huì, wǒmen yìqǐ xué, hǎo ma?",
+      "vi": "Tôi vẫn chưa biết, chúng ta cùng học được không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，一起去！",
+      "pinyin": "Hǎo, yìqǐ qù!",
+      "vi": "Được, cùng đi nhé!",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.campus.lesson.1": [
+    {
+      "hanzi": "教授在教室嗎？",
+      "pinyin": "Jiàoshòu zài jiàoshì ma?",
+      "vi": "Giáo sư ở phòng học à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不在，他在辦公室。",
+      "pinyin": "Bú zài, tā zài bàngōngshì.",
+      "vi": "Không, thầy ở văn phòng.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "研究所的辦公室在哪裡？",
+      "pinyin": "Yánjiūsuǒ de bàngōngshì zài nǎlǐ?",
+      "vi": "Văn phòng viện sau đại học ở đâu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "在圖書館旁邊。",
+      "pinyin": "Zài túshūguǎn pángbiān.",
+      "vi": "Ở cạnh thư viện.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.campus.lesson.2": [
+    {
+      "hanzi": "我們今天討論研究報告嗎？",
+      "pinyin": "Wǒmen jīntiān tǎolùn yánjiū bàogào ma?",
+      "vi": "Hôm nay chúng ta thảo luận báo cáo nghiên cứu à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，你有資料嗎？",
+      "pinyin": "Duì, nǐ yǒu zīliào ma?",
+      "vi": "Đúng, bạn có tài liệu không?",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "有，我用電子郵件寄給你。",
+      "pinyin": "Yǒu, wǒ yòng diànzǐ yóujiàn jì gěi nǐ.",
+      "vi": "Có, tôi gửi cho bạn bằng email.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，下午一起討論。",
+      "pinyin": "Hǎo, xiàwǔ yìqǐ tǎolùn.",
+      "vi": "Được, chiều cùng thảo luận.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.campus.lesson.3": [
+    {
+      "hanzi": "你收到我寄的資料了嗎？",
+      "pinyin": "Nǐ shōudào wǒ jì de zīliào le ma?",
+      "vi": "Bạn nhận được tài liệu tôi gửi chưa?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "收到了，我在準備報告。",
+      "pinyin": "Shōudào le, wǒ zài zhǔnbèi bàogào.",
+      "vi": "Nhận được rồi, tôi đang chuẩn bị báo cáo.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "還需要什麼？",
+      "pinyin": "Hái xūyào shénme?",
+      "vi": "Còn cần gì nữa?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我需要借一本書。",
+      "pinyin": "Wǒ xūyào jiè yì běn shū.",
+      "vi": "Tôi cần mượn một quyển sách.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.campus.lesson.4": [
+    {
+      "hanzi": "明天見面方便嗎？",
+      "pinyin": "Míngtiān jiànmiàn fāngbiàn ma?",
+      "vi": "Ngày mai gặp nhau có tiện không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "方便，我要先去還書。",
+      "pinyin": "Fāngbiàn, wǒ yào xiān qù huán shū.",
+      "vi": "Tiện, tôi phải đi trả sách trước.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "麻煩你預約討論室。",
+      "pinyin": "Máfan nǐ yùyuē tǎolùnshì.",
+      "vi": "Phiền bạn đặt phòng thảo luận.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，我們下午見。",
+      "pinyin": "Hǎo, wǒmen xiàwǔ jiàn.",
+      "vi": "Được, chiều gặp nhé.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.health.lesson.1": [
+    {
+      "hanzi": "你身體不舒服嗎？",
+      "pinyin": "Nǐ shēntǐ bù shūfu ma?",
+      "vi": "Bạn thấy trong người không khỏe à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，我感冒了，一直咳嗽。",
+      "pinyin": "Duì, wǒ gǎnmào le, yìzhí késòu.",
+      "vi": "Đúng, tôi bị cảm rồi, ho suốt.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "有發燒嗎？",
+      "pinyin": "Yǒu fāshāo ma?",
+      "vi": "Có sốt không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "沒有發燒。",
+      "pinyin": "Méiyǒu fāshāo.",
+      "vi": "Không sốt.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.health.lesson.2": [
+    {
+      "hanzi": "你哪裡痛？",
+      "pinyin": "Nǐ nǎlǐ tòng?",
+      "vi": "Bạn đau ở đâu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我頭痛，喉嚨也痛。",
+      "pinyin": "Wǒ tóutòng, hóulóng yě tòng.",
+      "vi": "Tôi đau đầu, họng cũng đau.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "肚子痛嗎？",
+      "pinyin": "Dùzi tòng ma?",
+      "vi": "Có đau bụng không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "肚子不痛，可是很累。",
+      "pinyin": "Dùzi bú tòng, kěshì hěn lèi.",
+      "vi": "Không đau bụng, nhưng rất mệt.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.health.lesson.3": [
+    {
+      "hanzi": "我要去診所看醫生。",
+      "pinyin": "Wǒ yào qù zhěnsuǒ kàn yīshēng.",
+      "vi": "Tôi muốn đến phòng khám gặp bác sĩ.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "你帶健保卡了嗎？",
+      "pinyin": "Nǐ dài jiànbǎokǎ le ma?",
+      "vi": "Bạn mang thẻ bảo hiểm y tế chưa?",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "帶了，在哪裡掛號？",
+      "pinyin": "Dài le, zài nǎlǐ guàhào?",
+      "vi": "Mang rồi, đăng ký khám ở đâu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "問那位護士吧。",
+      "pinyin": "Wèn nà wèi hùshì ba.",
+      "vi": "Hỏi cô y tá kia nhé.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.health.lesson.4": [
+    {
+      "hanzi": "你去看病了嗎？",
+      "pinyin": "Nǐ qù kànbìng le ma?",
+      "vi": "Bạn đi khám bệnh chưa?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "去了，醫生先幫我量體溫。",
+      "pinyin": "Qù le, yīshēng xiān bāng wǒ liáng tǐwēn.",
+      "vi": "Đi rồi, bác sĩ đo nhiệt độ cho tôi trước.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "嚴重嗎？",
+      "pinyin": "Yánzhòng ma?",
+      "vi": "Có nghiêm trọng không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不嚴重，我現在去藥局拿藥。",
+      "pinyin": "Bù yánzhòng, wǒ xiànzài qù yàojú ná yào.",
+      "vi": "Không nghiêm trọng, giờ tôi đi nhà thuốc lấy thuốc.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.renting.lesson.1": [
+    {
+      "hanzi": "你在找租屋資料嗎？",
+      "pinyin": "Nǐ zài zhǎo zūwū zīliào ma?",
+      "vi": "Bạn đang tìm thông tin thuê nhà à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，我想看套房和雅房。",
+      "pinyin": "Duì, wǒ xiǎng kàn tàofáng hé yǎfáng.",
+      "vi": "Đúng, tôi muốn xem phòng khép kín và phòng dùng chung nhà tắm.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "合約寫押金多少？",
+      "pinyin": "Héyuē xiě yājīn duōshǎo?",
+      "vi": "Hợp đồng ghi tiền cọc bao nhiêu?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "兩個月的房租。",
+      "pinyin": "Liǎng ge yuè de fángzū.",
+      "vi": "Hai tháng tiền thuê.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.renting.lesson.2": [
+    {
+      "hanzi": "租金包括管理費嗎？",
+      "pinyin": "Zūjīn bāokuò guǎnlǐfèi ma?",
+      "vi": "Tiền thuê có gồm phí quản lý không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "包括，可是水電費另外付。",
+      "pinyin": "Bāokuò, kěshì shuǐdiànfèi lìngwài fù.",
+      "vi": "Có, nhưng tiền điện nước trả riêng.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "樓層高嗎？有電梯嗎？",
+      "pinyin": "Lóucéng gāo ma? Yǒu diàntī ma?",
+      "vi": "Tầng có cao không? Có thang máy không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "在六樓，有電梯。",
+      "pinyin": "Zài liù lóu, yǒu diàntī.",
+      "vi": "Ở tầng sáu, có thang máy.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.renting.lesson.3": [
+    {
+      "hanzi": "房間有家具嗎？",
+      "pinyin": "Fángjiān yǒu jiājù ma?",
+      "vi": "Phòng có nội thất không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "有，也有冰箱。",
+      "pinyin": "Yǒu, yě yǒu bīngxiāng.",
+      "vi": "Có, cũng có tủ lạnh.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "洗衣機在陽臺嗎？有熱水嗎？",
+      "pinyin": "Xǐyījī zài yángtái ma? Yǒu rèshuǐ ma?",
+      "vi": "Máy giặt ở ban công à? Có nước nóng không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，洗衣機在陽臺，浴室有熱水。",
+      "pinyin": "Duì, xǐyījī zài yángtái, yùshì yǒu rèshuǐ.",
+      "vi": "Đúng, máy giặt ở ban công, phòng tắm có nước nóng.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.renting.lesson.4": [
+    {
+      "hanzi": "你要搬家嗎？",
+      "pinyin": "Nǐ yào bānjiā ma?",
+      "vi": "Bạn sắp chuyển nhà à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，新房間漏水，冷氣也壞了。",
+      "pinyin": "Duì, xīn fángjiān lòushuǐ, lěngqì yě huài le.",
+      "vi": "Đúng, phòng mới bị dột, máy lạnh cũng hỏng.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "房東會修理嗎？",
+      "pinyin": "Fángdōng huì xiūlǐ ma?",
+      "vi": "Chủ nhà sẽ sửa chứ?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "會，我先把垃圾拿出去。",
+      "pinyin": "Huì, wǒ xiān bǎ lèsè ná chūqù.",
+      "vi": "Có, tôi mang rác ra ngoài trước.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.services.lesson.1": [
+    {
+      "hanzi": "你要寄包裹嗎？",
+      "pinyin": "Nǐ yào jì bāoguǒ ma?",
+      "vi": "Bạn muốn gửi bưu kiện à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，也要買信封和郵票。",
+      "pinyin": "Duì, yě yào mǎi xìnfēng hé yóupiào.",
+      "vi": "Đúng, cũng muốn mua phong bì và tem.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "請寫寄件人的名字。",
+      "pinyin": "Qǐng xiě jìjiànrén de míngzi.",
+      "vi": "Xin viết tên người gửi.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，運費多少？",
+      "pinyin": "Hǎo, yùnfèi duōshǎo?",
+      "vi": "Được, phí vận chuyển bao nhiêu?",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.services.lesson.2": [
+    {
+      "hanzi": "請填寫這張表格。",
+      "pinyin": "Qǐng tiánxiě zhè zhāng biǎogé.",
+      "vi": "Xin điền mẫu đơn này.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "收件人的名字寫在哪裡？",
+      "pinyin": "Shōujiànrén de míngzi xiě zài nǎlǐ?",
+      "vi": "Viết tên người nhận ở đâu?",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "寫在這裡，再簽名。",
+      "pinyin": "Xiě zài zhèlǐ, zài qiānmíng.",
+      "vi": "Viết ở đây, rồi ký tên.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，填完交給櫃臺嗎？",
+      "pinyin": "Hǎo, tián wán jiāo gěi guìtái ma?",
+      "vi": "Được, điền xong nộp cho quầy à?",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.services.lesson.3": [
+    {
+      "hanzi": "我收到領取包裹的通知。",
+      "pinyin": "Wǒ shōudào lǐngqǔ bāoguǒ de tōngzhī.",
+      "vi": "Tôi nhận được thông báo đến nhận bưu kiện.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "請帶證件，先排隊。",
+      "pinyin": "Qǐng dài zhèngjiàn, xiān páiduì.",
+      "vi": "Xin mang giấy tờ tùy thân, xếp hàng trước.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "需要影印證件嗎？",
+      "pinyin": "Xūyào yǐngyìn zhèngjiàn ma?",
+      "vi": "Có cần photocopy giấy tờ không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不用，給櫃臺看就好。",
+      "pinyin": "Bú yòng, gěi guìtái kàn jiù hǎo.",
+      "vi": "Không cần, cho quầy xem là được.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.services.lesson.4": [
+    {
+      "hanzi": "我想申請這個服務，手續怎麼辦？",
+      "pinyin": "Wǒ xiǎng shēnqǐng zhège fúwù, shǒuxù zěnme bàn?",
+      "vi": "Tôi muốn đăng ký dịch vụ này, làm thủ tục thế nào?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "先填表，再付款。",
+      "pinyin": "Xiān tián biǎo, zài fùkuǎn.",
+      "vi": "Điền đơn trước, rồi thanh toán.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "取件的時候要帶收據嗎？",
+      "pinyin": "Qǔjiàn de shíhou yào dài shōujù ma?",
+      "vi": "Lúc nhận đồ có cần mang biên lai không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，請帶收據。",
+      "pinyin": "Duì, qǐng dài shōujù.",
+      "vi": "Đúng, xin mang biên lai.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.worklife.lesson.1": [
+    {
+      "hanzi": "你在這家公司上班嗎？",
+      "pinyin": "Nǐ zài zhè jiā gōngsī shàngbān ma?",
+      "vi": "Bạn làm ở công ty này à?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "對，和我的同事一起。",
+      "pinyin": "Duì, hé wǒ de tóngshì yìqǐ.",
+      "vi": "Đúng, cùng với đồng nghiệp của tôi.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "主管幾點下班？",
+      "pinyin": "Zhǔguǎn jǐ diǎn xiàbān?",
+      "vi": "Quản lý tan làm lúc mấy giờ?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "他六點下班。",
+      "pinyin": "Tā liù diǎn xiàbān.",
+      "vi": "Anh ấy tan làm lúc sáu giờ.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.worklife.lesson.2": [
+    {
+      "hanzi": "你看排班表了嗎？明天是早班還是晚班？",
+      "pinyin": "Nǐ kàn páibān biǎo le ma? Míngtiān shì zǎobān háishi wǎnbān?",
+      "vi": "Bạn xem lịch phân ca chưa? Mai ca sáng hay ca tối?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "早班，今天要加班。",
+      "pinyin": "Zǎobān, jīntiān yào jiābān.",
+      "vi": "Ca sáng, hôm nay phải làm thêm giờ.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "星期五可以請假嗎？",
+      "pinyin": "Xīngqí wǔ kěyǐ qǐngjià ma?",
+      "vi": "Thứ Sáu xin nghỉ được không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "要先問主管。",
+      "pinyin": "Yào xiān wèn zhǔguǎn.",
+      "vi": "Phải hỏi quản lý trước.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.worklife.lesson.3": [
+    {
+      "hanzi": "今天幾點開會？",
+      "pinyin": "Jīntiān jǐ diǎn kāihuì?",
+      "vi": "Hôm nay họp mấy giờ?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "會議改期了，明天九點。",
+      "pinyin": "Huìyì gǎiqí le, míngtiān jiǔ diǎn.",
+      "vi": "Cuộc họp đổi lịch rồi, chín giờ ngày mai.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "我改一下行程，明天不會遲到。",
+      "pinyin": "Wǒ gǎi yíxià xíngchéng, míngtiān bú huì chídào.",
+      "vi": "Tôi sửa lịch trình một chút, mai sẽ không đến muộn.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，明天見。",
+      "pinyin": "Hǎo, míngtiān jiàn.",
+      "vi": "Được, mai gặp.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.worklife.lesson.4": [
+    {
+      "hanzi": "報告可以準時完成嗎？",
+      "pinyin": "Bàogào kěyǐ zhǔnshí wánchéng ma?",
+      "vi": "Báo cáo có thể hoàn thành đúng giờ không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "可以，我先檢查一下。",
+      "pinyin": "Kěyǐ, wǒ xiān jiǎnchá yíxià.",
+      "vi": "Có, tôi kiểm tra trước một chút.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "完成後請聯絡我。",
+      "pinyin": "Wánchéng hòu qǐng liánluò wǒ.",
+      "vi": "Xong rồi xin liên lạc với tôi.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，我傳訊息給你。",
+      "pinyin": "Hǎo, wǒ chuán xùnxí gěi nǐ.",
+      "vi": "Được, tôi nhắn tin cho bạn.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.travel.lesson.1": [
+    {
+      "hanzi": "這次旅行住旅館還是民宿？",
+      "pinyin": "Zhè cì lǚxíng zhù lǚguǎn háishi mínsù?",
+      "vi": "Chuyến đi này ở khách sạn hay homestay?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "住民宿，我已經訂房了。",
+      "pinyin": "Zhù mínsù, wǒ yǐjīng dìngfáng le.",
+      "vi": "Ở homestay, tôi đã đặt phòng rồi.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "幾點可以入住？",
+      "pinyin": "Jǐ diǎn kěyǐ rùzhù?",
+      "vi": "Mấy giờ có thể nhận phòng?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "下午三點。",
+      "pinyin": "Xiàwǔ sān diǎn.",
+      "vi": "Ba giờ chiều.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.travel.lesson.2": [
+    {
+      "hanzi": "你要單人房還是雙人房？",
+      "pinyin": "Nǐ yào dānrénfáng háishi shuāngrénfáng?",
+      "vi": "Bạn muốn phòng đơn hay phòng đôi?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "雙人房。這是我的護照。",
+      "pinyin": "Shuāngrénfáng. Zhè shì wǒ de hùzhào.",
+      "vi": "Phòng đôi. Đây là hộ chiếu của tôi.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "明天十一點退房，行李可以放這裡。",
+      "pinyin": "Míngtiān shíyī diǎn tuìfáng, xínglǐ kěyǐ fàng zhèlǐ.",
+      "vi": "Mai trả phòng lúc mười một giờ, có thể để hành lý ở đây.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，謝謝。",
+      "pinyin": "Hǎo, xièxie.",
+      "vi": "Được, cảm ơn.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.travel.lesson.3": [
+    {
+      "hanzi": "這個景點要買門票嗎？",
+      "pinyin": "Zhège jǐngdiǎn yào mǎi ménpiào ma?",
+      "vi": "Điểm tham quan này có phải mua vé không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "要，也有中文導覽。",
+      "pinyin": "Yào, yě yǒu Zhōngwén dǎolǎn.",
+      "vi": "Có, cũng có hướng dẫn tham quan bằng tiếng Trung.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "風景很好，可以拍照嗎？",
+      "pinyin": "Fēngjǐng hěn hǎo, kěyǐ pāizhào ma?",
+      "vi": "Phong cảnh rất đẹp, có thể chụp ảnh không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "可以，在這裡拍吧。",
+      "pinyin": "Kěyǐ, zài zhèlǐ pāi ba.",
+      "vi": "Được, chụp ở đây nhé.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.travel.lesson.4": [
+    {
+      "hanzi": "明天去海邊還是爬山？",
+      "pinyin": "Míngtiān qù hǎibiān háishi páshān?",
+      "vi": "Mai đi biển hay leo núi?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "去海邊，八點出發。",
+      "pinyin": "Qù hǎibiān, bā diǎn chūfā.",
+      "vi": "Đi biển, tám giờ xuất phát.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "幾點抵達？可以買紀念品嗎？",
+      "pinyin": "Jǐ diǎn dǐdá? Kěyǐ mǎi jìniànpǐn ma?",
+      "vi": "Mấy giờ đến? Có thể mua đồ lưu niệm không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "十點抵達，那裡有商店。",
+      "pinyin": "Shí diǎn dǐdá, nàlǐ yǒu shāngdiàn.",
+      "vi": "Mười giờ đến, ở đó có cửa hàng.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.social.lesson.1": [
+    {
+      "hanzi": "我想邀請你參加生日聚餐。",
+      "pinyin": "Wǒ xiǎng yāoqǐng nǐ cānjiā shēngrì jùcān.",
+      "vi": "Tôi muốn mời bạn dự bữa ăn mừng sinh nhật.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "謝謝！幾點？我要先買禮物。",
+      "pinyin": "Xièxie! Jǐ diǎn? Wǒ yào xiān mǎi lǐwù.",
+      "vi": "Cảm ơn! Mấy giờ? Tôi muốn mua quà trước.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "晚上七點。你有約會嗎？",
+      "pinyin": "Wǎnshang qī diǎn. Nǐ yǒu yuēhuì ma?",
+      "vi": "Bảy giờ tối. Bạn có hẹn hò không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "沒有，我可以去。",
+      "pinyin": "Méiyǒu, wǒ kěyǐ qù.",
+      "vi": "Không, tôi có thể đi.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.social.lesson.2": [
+    {
+      "hanzi": "恭喜你！這是我的祝福。",
+      "pinyin": "Gōngxǐ nǐ! Zhè shì wǒ de zhùfú.",
+      "vi": "Chúc mừng bạn! Đây là lời chúc của tôi.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "謝謝你來參加今天的活動。",
+      "pinyin": "Xièxie nǐ lái cānjiā jīntiān de huódòng.",
+      "vi": "Cảm ơn bạn đến tham gia hoạt động hôm nay.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "我們可以聊聊天嗎？",
+      "pinyin": "Wǒmen kěyǐ liáo liáo tiān ma?",
+      "vi": "Chúng ta trò chuyện một chút được không?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "好，坐這裡吧。",
+      "pinyin": "Hǎo, zuò zhèlǐ ba.",
+      "vi": "Được, ngồi đây nhé.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.social.lesson.3": [
+    {
+      "hanzi": "抱歉，打擾了。",
+      "pinyin": "Bàoqiàn, dǎrǎo le.",
+      "vi": "Xin lỗi đã làm phiền.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "不會，歡迎！我介紹一下，這位是今天的主人。",
+      "pinyin": "Bú huì, huānyíng! Wǒ jièshào yíxià, zhè wèi shì jīntiān de zhǔrén.",
+      "vi": "Không đâu, chào mừng! Để tôi giới thiệu, đây là chủ nhà hôm nay.",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "你好，我是小安的客人。",
+      "pinyin": "Nǐ hǎo, wǒ shì Xiǎo'ān de kèrén.",
+      "vi": "Xin chào, tôi là khách của Tiểu An.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "請坐。",
+      "pinyin": "Qǐng zuò.",
+      "vi": "Xin mời ngồi.",
+      "speaker": "Người B"
+    }
+  ],
+  "tw.social.lesson.4": [
+    {
+      "hanzi": "我建議明天一起吃飯。",
+      "pinyin": "Wǒ jiànyì míngtiān yìqǐ chī fàn.",
+      "vi": "Tôi đề nghị mai cùng ăn cơm.",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "可惜，我明天沒有空。下次好嗎？",
+      "pinyin": "Kěxí, wǒ míngtiān méiyǒu kòng. Xià cì hǎo ma?",
+      "vi": "Tiếc quá, mai tôi không rảnh. Lần sau nhé?",
+      "speaker": "Người B"
+    },
+    {
+      "hanzi": "好，那我們決定下星期五見面？",
+      "pinyin": "Hǎo, nà wǒmen juédìng xià xīngqí wǔ jiànmiàn?",
+      "vi": "Được, vậy chúng ta quyết định gặp vào thứ Sáu tuần sau nhé?",
+      "speaker": "Người A"
+    },
+    {
+      "hanzi": "我同意。",
+      "pinyin": "Wǒ tóngyì.",
+      "vi": "Tôi đồng ý.",
+      "speaker": "Người B"
+    }
+  ]
+}

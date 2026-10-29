@@ -1,3 +1,4 @@
+import {SPEAKING_ENABLED} from '../core/features';
 import {useEffect,useRef,useState} from 'react';
 import type {Layers,TextItem} from '../core/types';
 import {encodeWav,recognition,speech} from '../adapters/local';
@@ -15,7 +16,8 @@ export function LayerText({item,layers,newWord,force=false}:{item:TextItem;layer
   })}</div>;
 }
 export function Speak({text,onError,label}:{text:string;onError:(s:string)=>void;label?:string}){return <button type="button" className="icon-button" aria-label={label} title="Nghe cả từ/cụm/câu bằng giọng Đài Loan local" onClick={()=>speech.speak(text).catch(e=>onError(e.message))}>◖)) <span>Nghe</span></button>;}
-export function Recorder({onTranscript,onError}:{onTranscript:(s:string)=>void;onError:(s:string)=>void}){
+export function Recorder(props:{onTranscript:(s:string)=>void;onError:(s:string)=>void}){return SPEAKING_ENABLED?<ActiveRecorder {...props}/>:null;}
+function ActiveRecorder({onTranscript,onError}:{onTranscript:(s:string)=>void;onError:(s:string)=>void}){
   const [recording,setRecording]=useState(false),[busy,setBusy]=useState(false),[url,setUrl]=useState(''),[blob,setBlob]=useState<Blob|null>(null),[seconds,setSeconds]=useState(0);
   const [asrNote,setAsrNote]=useState('');const abort=useRef<AbortController|null>(null);
   const recorder=useRef<MediaRecorder|null>(null),stream=useRef<MediaStream|null>(null),timer=useRef<ReturnType<typeof setInterval>|null>(null),mounted=useRef(true);
