@@ -13,6 +13,7 @@ from . import db
 from .ai import ai
 from . import connected_speech
 from .content import ROOT, validate_package
+from . import mobile_sync
 
 shutdown_callback = None
 asr_lock = asyncio.Lock()
@@ -22,10 +23,13 @@ async def lifespan(app):
     db.init()
     db.migrate_retired_voice()
     await ai.discover_voices()
+    await asyncio.to_thread(mobile_sync.resume_enabled)
     yield
+    await asyncio.to_thread(mobile_sync.manager.stop)
     ai.stop()
 
 app = FastAPI(lifespan=lifespan, docs_url=None, redoc_url=None)
+mobile_sync.desktop_routes(app)
 
 @app.get('/api/pronunciation/audio')
 def pronunciation_audio_catalog():
@@ -112,7 +116,7 @@ def import_objects(body: BulkObjects):
 class LearningEvent(BaseModel):
     id: str = Field(min_length=1, max_length=100)
     action_key: str = Field(min_length=1, max_length=300)
-    kind: Literal['answer','review','practice','speaking','writing','stroke','mistake-repair']
+    kind: Literal['answer','review','practice','speaking','writing','stroke','mistake-repair','topic-review']
     skill: str = Field(max_length=40)
     item_id: str = Field(max_length=200)
     correct: bool | None = None
@@ -131,6 +135,8 @@ class EventRequest(BaseModel):
 
 @app.post('/api/events')
 def event(body: EventRequest):
+    if body.event.kind=='topic-review' and body.event.item_id.startswith('topic-review:v1:'):
+        raise HTTPException(409,'Bộ ôn cũ đã được thay thế do lỗi ngữ cảnh. Tải lại trang và bắt đầu bộ đã sửa; lịch sử và bản nháp vẫn được giữ.')
     if body.event.source=='ai':
         body.event.correct=None
         body.event.category=''
@@ -148,6 +154,10 @@ def create_practice_session(body: BulkObjects):
         if report.data.get('kind')!='written-history':raise HTTPException(422,'Sai loại lịch sử')
         packet=session.data.get('packet',{});items=packet.get('items',[])
         if packet.get('mode')!=mode or not 5<=len(items)<=10 or len({q.get('id') for q in items})!=len(items):raise HTTPException(422,'Bộ luyện cần 5–10 câu có ID riêng')
+    elif session.data.get('scope')=='topic-review':
+        if session.data.get('packet',{}).get('revision')!=2:raise HTTPException(409,'Bộ ôn cũ đã được thay thế. Tải lại trang để tạo bộ đã sửa.')
+        if session.id!='topic-review:'+str(session.data.get('run')) or report.id!='topic-review-history:'+str(session.data.get('unit_id')):raise HTTPException(422,'Sai ID phiên ôn chủ đề')
+        if report.data.get('kind')!='topic-review-history':raise HTTPException(422,'Sai lịch sử ôn chủ đề')
     elif session.data.get('scope')=='skills':
         if session.id!='skills:'+str(session.data.get('run')) or report.id!='skills-history:'+str(session.data.get('unit_id'))+':'+str(session.data.get('skill')):raise HTTPException(422,'Sai ID phiên/lịch sử')
         if report.data.get('kind')!='skills-history':raise HTTPException(422,'Sai loại lịch sử')

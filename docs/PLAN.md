@@ -1,5 +1,11 @@
 # Kế hoạch ứng dụng tự học Hoa ngữ Đài Loan
 
+> 04/11/2026: bổ sung Ôn tập chủ đề sau khi hoàn thành bốn bài và phần 5 nếu có. Mỗi bộ 15 câu, thay tổ hợp tình huống trong khung soạn sẵn, giới hạn kiến thức đã học, lưu riêng lượt ôn và bài dở. Chi tiết ở TOPIC_REVIEW.md; không thay foundation v8 hoặc lịch FSRS.
+
+> 29/10/2026 bổ sung: thêm flashcard riêng với đánh dấu đã học; PC/Android có nhóm ít nhất 20 từ và lượt 20/30/40/cả nhóm, lưu bộ đang ôn và điểm dừng. Nhóm nhỏ được ghép theo chủ đề; tổng chưa đủ 20 và chế độ FSRS đến hạn báo số thật. Audio vẫn tạo khi đồng bộ yêu cầu file thiếu. Xem ANDROID_REVIEW.md.
+
+> 29/10/2026: đã xây APK companion chỉ ôn flashcard, theo luồng Hán tự → lật → Pinyin/nghĩa/nghe → Tiếp, không đánh giá nhớ và không thay FSRS. Dùng VS Code/CLI, SQLite offline, ghép cặp QR/HTTPS LAN và WAV Yating từ PC. Phạm vi/quy trình/giới hạn kiểm tra điện thoại thật ở [ANDROID_REVIEW](ANDROID_REVIEW.md); phần Android toàn ứng dụng bên dưới vẫn là kế hoạch dài hạn.
+
 > Phạm vi v7 được người dùng duyệt ngày 29/09/2026: mở rộng bốn kỹ năng cho 18 chủ đề, ba bộ soạn sẵn/kỹ năng và AI tùy chọn; 72 bài lên 720 bài tập, hội thoại 8 câu. Bảo toàn v6, SQLite, FSRS, offline/model/zh-TW; Pinyin và Viết chữ không đổi. Triển khai và giới hạn thực tế ở [RELEASE-V7](RELEASE-V7.md); các kế hoạch cũ dưới đây giữ làm lịch sử.
 
 > Cập nhật phạm vi 27/09/2026: kế hoạch v6 đã duyệt thay lựa chọn model/giọng cũ bên dưới. Chỉ Qwen3-4B-Q4_K_M, CPU/CUDA, Whisper base/small; zh-TW local, không Kokoro/audio mẫu Pinyin. Thêm 6 chủ đề A2 định hướng (24 bài/120 từ/12 ngữ pháp), tổng 18 chủ đề/72 bài/360 từ/36 ngữ pháp và animation 424 chữ. Giữ ID, dữ liệu, schema, offline và ngân sách 10 GB; B2 chưa hoàn thành. Trạng thái nghiệm thu ở TASKS/RELEASE-V6, không suy từ tài liệu kế hoạch gốc.

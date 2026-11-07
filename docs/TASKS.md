@@ -1,5 +1,49 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Sửa ghép câu ôn chủ đề — 04/11/2026
+
+- Người dùng báo `你見面`; nguyên nhân là thay chủ ngữ/nối động từ máy móc và thiếu kiểm tra ngữ cảnh giữa các câu. Đã bỏ cả hai đường sinh câu động từ này, dùng câu hoàn chỉnh trong topicReviewScenes, kèm hồ sơ bốn thông tin được chọn trước thay tích tổ hợp tùy ý.
+- Rà các mẫu: giữ chủ thể số nhiều cho gặp mặt/trò chuyện; giữ thời gian/lời nhờ trong câu mẫu; xin lỗi có đối tượng; giờ tan học khớp cuối buổi, đồ ăn khớp lượng từ và ví dụ lượng từ khớp nơi/sự việc. Không thêm từ 紙/照片 vào tập đã học chỉ để đủ bộ; thay hồ sơ bằng từ đã có.
+- Nâng bộ bổ sung lên v2; v1 giữ nguyên lịch sử/bản nháp nhưng không luyện tiếp, không dùng làm đáp án sửa lỗi hoặc thống kê. Backend chặn tạo/nộp v1 từ tab cũ. Không đổi gói foundation, schema hoặc tiến độ Học/FSRS.
+- Kiểm tra thực chạy: core audit đủ 18 chủ đề qua, kiểm tra hồ sơ dùng câu động từ nguyên vẹn, chặn ví dụ 見面 chủ ngữ đơn lẻ, ràng buộc giờ tan học, chỗ trống/đáp án/15 câu và không lặp đoạn ngay. Edge E2E qua đủ15 câu, thêm ca nạp v1 có `你見面`: không render câu mẫu cũ, API trả409, giữ nguyên bản nháp/snapshot và mở bộ v2. Build và content/manifest check qua. Đây là kiểm tra tính toàn vẹn và hồi quy, không phải chứng nhận ngôn ngữ bằng test.
+- Dịch vụ local đã restart, hash sessions/cards trước/sau giống nhau (29 phiên/115 thẻ). Không tạo bài/lượt ôn giả trong dữ liệu thật. Đối chiếu 見面 với MOE/TUFS, nguồn và giới hạn tại TOPIC_REVIEW.md. Không chạy full regression/benchmark AI; chưa commit/push.
+
+## Ôn tập chủ đề · 15 câu — 04/11/2026
+
+- Nút trên thẻ chủ đề/màn đã học xong/phần 5; mở sau bốn bài và phần 5 nếu có, kiểm tra cả URL trực tiếp.
+- Bộ 15 câu: 6 đọc/đối chiếu, 4 điền, 3 viết hai câu, 2 chọn cách nói; hai lời nhắn có người nói. Thay dữ kiện trong khung biên soạn, trộn và chu kỳ không lặp, giới hạn từ đã học; không đưa động từ nâng cao tự động.
+- Phiên/bản nháp/hỗ trợ/lịch chọn bộ lưu riêng bằng API transaction, CAS/hàng đợi và khóa nộp chống trùng. Không sửa lịch flashcard hay phiên Học.
+- Mẫu câu bản nháp chưa giáo viên duyệt; ngân hàng hữu hạn. Bài viết khác mẫu chưa tự kết luận sai. Chi tiết TOPIC_REVIEW.md.
+- Kiểm tra thực chạy: một core audit qua toàn bộ 18 chủ đề (đủ nhóm câu dùng từ đã học, 15 ID riêng, lựa chọn/đáp án/chỗ trống hợp lệ, bộ tiếp theo đổi đoạn); một Edge E2E qua đủ 15 câu, khóa/mở phần 5, reload bản nháp và snapshot, Pinyin không lộ lời giải điền, bài viết chưa khớp mẫu, nộp trùng không tăng sự kiện, giữ phiên Học và bộ mới, chiều rộng 390px. Build và content/manifest check qua (18 chủ đề/72 bài/720 câu). Không chạy benchmark AI hoặc toàn bộ E2E.
+- Lượt E2E phát hiện API chưa nhận kind topic-review; đã bổ sung literal và chạy lại qua. Fixture ban đầu thiếu index/answers và chờ async tạo phiên, đã chỉnh fixture. Dịch vụ 8765 đã khởi động lại; đối chiếu hash sessions/cards trước/sau giống nhau (28 phiên/115 thẻ), không tạo lượt ôn giả trong database người dùng. Chưa commit/push.
+
+## Gọn phần đối chiếu đáp án — 31/10/2026
+
+- Điều chỉnh tiếp theo phản hồi: trình bày một dòng `飯 (fàn): cơm; bữa ăn.` và một nút Nghe, không tách thành ba dòng. Nếu lời giải đã có Hán tự/Pinyin/nghĩa thì dùng chính lời giải, kể cả câu hoàn chỉnh của bài điền từ; không dựng thêm thẻ đáp án. Phát âm vẫn gửi Hán tự/câu hoàn chỉnh, không gửi Latin Pinyin tới TTS.
+
+- Dùng AnswerFeedback chung cho Learn, Skills, TopicLanguage và phần xem lời giải trong MistakeRepair. Hiện sẵn Hán tự/Pinyin/nghĩa từ dữ liệu có sẵn, một nút Nghe đọc Hán tự; bỏ bản trả lời đúng lặp lại, PracticeText và các nút ẩn/hiện trùng trong phần kết quả. Giữ câu trả lời sai để so sánh và giải thích cách dùng, bỏ giải thích chỉ lặp từ–Pinyin–nghĩa.
+- Chỉ thay nội dung sau nộp/xin xem đáp án; câu hỏi/gợi ý trước nộp và ghi nhận trợ giúp giữ nguyên. Không đổi dữ liệu, điểm hay TTS/Android.
+- Build TypeScript/Vite và một Edge E2E ở e2e/answer-feedback.spec.ts qua: đáp án hiện Pinyin/nghĩa, một Hán tự, không còn nút ẩn/hiện trong kết quả, chỉ Nghe và Tiếp tục. Lượt đầu test sai nhãn nút bắt đầu (thiếu →), đã sửa selector và chạy lại qua; không chạy lại toàn bộ ngân hàng/AI.
+
+## Xác minh audio Android và sửa resume — 29/10/2026
+
+- Người dùng báo đã có thẻ nhưng chưa nghe được audio. Kiểm tra PC vẫn đủ 98 WAV; ADB nay có Redmi thật, đọc UI sau lần sync thấy audio 98/98. Phát hiện race: resume xảy ra khi sync bị hủy bởi pause vẫn giữ lock; lượt resume bị bỏ qua, nên phần thẻ đã lưu nhưng vòng tải audio có thể không chạy tiếp. Thêm active/resume flag để chạy lại sau cleanup, giữ cache đã tải.
+- Chỉ ghi lastSync hoàn tất sau khi đủ audio; tách lastDataSync cho dữ liệu thẻ. Footer và nút Nghe phản ánh cache thật, không báo offline sẵn sàng khi audio chưa đủ. Thất bại hiển thị nguyên nhân trong màn sync, không xóa thẻ/lượt ôn. Không thay nguồn thẻ hoặc FSRS.
+- E2E hiện có bổ sung tình huống pause→resume ngay trong downloadAudio và kiểm tra tự tải đủ phần còn lại; qua. Build/typecheck/assembleRelease/lint qua; đã cập nhật cùng chữ ký bằng adb install -r thành công, giữ dữ liệu/ghép cặp. Người dùng xác nhận trực tiếp **“Đã nghe được”** trên bản cập nhật. PC đã nhận 3 lượt thực tế từ Android, tất cả practice/null/no rating; không thêm sự kiện luyện giả để test.
+- Làm rõ phạm vi trước khi nghiệm thu: đánh dấu đã học chỉ lưu report; chưa tự thêm flashcard, chưa tạo audio hoặc đưa từ đó sang Android. Thêm flashcard mới là nguồn sync; audio thiếu được tạo khi Android yêu cầu tải, không phải job tự tạo ngay lúc thêm. 98 audio ban đầu đã chuẩn bị riêng. Các lần sau cùng Wi-Fi, PC/app/dịch vụ sync đang mở, bấm Đồng bộ ngay; không cần USB/QR lại khi pairing hợp lệ.
+- APK sửa vẫn ở `data/android-build/dao-nho-review.apk` (32,179,259 bytes). Checkpoint release đầu phía dưới giữ làm lịch sử, không phải hash bản mới. Chưa commit/push.
+
+## Android flashcard companion — 29/10/2026
+
+- Từ checkpoint người dùng `b74f11f`, thêm mobile React/Capacitor 8.6 riêng (app ID `app.daonho.review`, min API 26/target 36). Không cần Android Studio: JDK 21/SDK/ADB portable, script Setup/Build/Install trong VS Code, release key riêng ngoài Git. Giữ các toolchain/SDK/Gradle artifacts ngoài nội dung tracked.
+- UI chỉ Hán tự → Lật → Pinyin/nghĩa/Yating → Tiếp, Trộn phần còn lại; không đăng nhập/đánh giá mức nhớ. SQLite native ghi trước khi chuyển thẻ; hàng đợi/pending events qua reload, không lặp trước hết vòng; gộp thẻ theo Hán tự/Pinyin, giữ nghĩa và source card IDs. Một PC là nguồn thẻ, điện thoại không sửa thẻ/lịch FSRS. Chặn trộn outbox của database PC khác.
+- `backend/mobile_sync.py` là HTTPS LAN riêng 8766, main PC 8765 vẫn loopback. QR một lần/5 phút, xác nhận tại PC, token riêng thiết bị/hash tại PC/mã hóa Android Keystore; pin đúng cert, không trust-all. Chỉ manifest/âm thanh/events/pairing, mDNS tìm IP và chọn LAN address trên PC, thu hồi thiết bị. Dùng collections/events schema 1; first enable backup trước khi ghi settings. Push atomic/idempotent, practice/null/no rating. Không sync toàn database/chat/model.
+- Giữ Microsoft Yating OneCore tốc độ thường bằng Export-Yating.ps1, checksum WAV/cache cá nhân; đã tạo 98 WAV thật (4,186,368 bytes) từ 99 thẻ đang dùng. Không phân phối model/engine/ghi âm trong APK. Audio lỗi không đổi giọng hoặc chặn ôn chữ.
+- Đã build mobile/web PC; assembleRelease + lintVitalRelease qua sau xử lý Gradle Windows #31438. Release APK `data/android-build/dao-nho-review.apk`: 32,179,139 bytes, SHA256 `4f433c3c7e8a054f0562f10d67ea4e7d3013f73ae185cea008e02f833ac831e8`; apksigner verify v2/1 signer qua, aapt đúng app ID/API/label và ARM64. Không có Studio/emulator/registry/antivirus changes. Gradle cache chuyển sang `.dao-nho-gradle` cạnh repo, có repair chỉ completed transform, log và retry giới hạn cho đúng lỗi workspace.
+- Kiểm tra tập trung qua: 1 pytest tích hợp ghép cặp/gộp thẻ/dedup/conflict/xóa/thu hồi/FSRS không đổi; 1 Vitest queue/outbox; 1 E2E UI mobile (bridge giả lập) lật/nghe/trộn, double submit/reload/offline→sync/no rating và PC QR POST. Đã xem screenshot 390px. E2E không thay kiểm tra SQLite/Keystore/camera/NSD trên máy Android thật. Không benchmark AI.
+- Nâng patch Vite 8.3.5/Vitest 5.0.5 cùng major và source-map-js để xử lý các advisory thực phát hiện khi cài toolchain; npm audit cuối 0 vulnerabilities, khóa dependencies.
+- Web PC đã restart tại 8765, LAN 8766 đang bật; đã test HTTPS live: unauth manifest 401, API desktop qua LAN 404; so dữ liệu cards trước/sau rollout/enable nguyên trạng. Backup trước enable ở data/backups. ADB hiện không thấy điện thoại: **chưa cài APK/chưa xác minh camera, kết nối, âm thanh trên máy thật**. Hướng dẫn kết nối USB/QR/Wi-Fi và cập nhật giữ dữ liệu ở ANDROID_REVIEW. Chưa commit/push thay đổi đợt này.
+
 ## Pinyin/nghe ở câu hỏi, lựa chọn và đáp án — 25/10/2026
 
 - Dùng chung `QuestionReading` trong Học, Skills, phần 5, WrittenPractice và Sổ lỗi sai: Hiện/Ẩn Pinyin nhiều lần và nghe đúng phần Hán tự đang hiển thị bằng adapter zh-TW. Điều khiển nằm ngoài nút chọn đáp án; chỉ hiển thị khi có Hán tự. Chuyển câu/phiên trở lại ẩn Pinyin. Phần đối chiếu của Học dùng PracticeText thay lớp Pinyin luôn hiện.
@@ -274,3 +318,10 @@ Cập nhật 25/09/2026. Không coi số lượng bản nháp hoặc test tự �
 2. Đọc docs/DECISIONS.md và benchmark JSON. Cấu hình đã chọn Qwen3-4B Q4_K_M/CUDA, Whisper small/CPU (base thay thế), Windows zh-TW với lựa chọn voice/nhịp; không cài lại voice/model đã có.
 3. Build/test sau thay đổi; cập nhật gói qua API khi version tăng, không xóa database.
 4. Tiếp tục đối chiếu nội dung và bài đọc/đáp án theo ngữ cảnh; làm cùng người dùng ở bước nghe/micro/offline. Nghiệm thu theo 10 tiêu chí PLAN, giữ trạng thái chưa đạt nếu còn thiếu.
+## Flashcard theo nhóm — 29/10/2026
+
+- [x] Nút thêm flashcard riêng trên StudyCard, chống trùng; đánh dấu đã học giữ ý nghĩa cũ.
+- [x] Chia nhóm PC/Android theo từ riêng biệt, tối thiểu 20 khi đủ dữ liệu; chọn lượt 20/30/40/cả nhóm, trộn, lưu tiếp tục, dừng cuối lượt.
+- [x] Build PC/mobile; 3 kiểm tra core/bridge và 2 E2E tập trung qua (thêm thẻ, nhóm, reload, mobile offline/audio resume).
+- [x] Giữ sync toàn bộ thẻ/audio thiếu; không gọi tạo audio lúc thêm thẻ, không đổi FSRS trong lượt tự do.
+- [x] Kiểm tra thêm import/export free cũ; tổng 3 E2E liên quan qua. APK release/lintVital qua, cài cập nhật Redmi giữ dữ liệu; UI thật có 98 từ, nhóm 25/25/24/24. Không tuyên bố đã thử hết các lượt/nhóm trên máy thật.

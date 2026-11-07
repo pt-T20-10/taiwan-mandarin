@@ -6,13 +6,14 @@ import {useApp} from '../context';
 import {CharacterStudy} from './CharacterStudy';
 import {speech} from '../adapters/local';
 import {LearnedWordButton} from './LearnedWordButton';
+import {AddFlashcardButton} from './AddFlashcardButton';
 type Span={start:number;end:number;word:TextItem};
 const sentences:Record<string,Span[]>=lookup.sentences;
 export const studyWords:TextItem[]=lookup.words;
 
 export function StudyCard({word}:{word:TextItem}){
  const {notify}=useApp();
- return <article className="study-card"><div><h3 lang="zh-TW">{word.hanzi}</h3><p className="pinyin">{word.pinyin}</p><p>{word.vi}</p><div className="actions"><button onClick={()=>void speech.speak(word.hanzi).catch(e=>notify(e.message))}>Nghe từ</button><LearnedWordButton word={word}/></div></div><CharacterStudy key={word.hanzi} text={word.hanzi}/></article>;
+ return <article className="study-card"><div><h3 lang="zh-TW">{word.hanzi}</h3><p className="pinyin">{word.pinyin}</p><p>{word.vi}</p><div className="actions"><button onClick={()=>void speech.speak(word.hanzi).catch(e=>notify(e.message))}>Nghe từ</button><LearnedWordButton word={word}/><AddFlashcardButton word={word}/></div></div><CharacterStudy key={word.hanzi} text={word.hanzi}/></article>;
 }
 function WordDialog({word,onClose,supplemental}:{word:TextItem;onClose:()=>void;supplemental:boolean}){
  const dialog=useRef<HTMLDialogElement>(null),{content}=useApp();

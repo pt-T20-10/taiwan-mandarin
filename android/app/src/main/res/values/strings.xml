@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Đảo nhỏ – Ôn tập</string>
+    <string name="title_activity_main">Đảo nhỏ – Ôn tập</string>
+    <string name="package_name">app.daonho.review</string>
+    <string name="custom_url_scheme">app.daonho.review</string>
+</resources>

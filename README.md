@@ -1,5 +1,7 @@
 # 🏝️ Đảo nhỏ — Taiwan Mandarin
 
+Android flashcard companion: [Build/install from VS Code and pair over Wi-Fi](docs/ANDROID_REVIEW.md). Offline Hanzi → Pinyin/meaning review, cached Yating audio, no account, and no change to desktop FSRS schedules.
+
 A personal Mandarin learning system built for studying **Traditional Chinese** and preparing for daily life and graduate study in Taiwan.
 
 The project started as a simple way to organize my own vocabulary and sentence practice. Over time, it grew into an offline Windows application covering structured lessons, spaced repetition, pronunciation references, grammar, and practice across listening, speaking, reading, and writing.
@@ -269,7 +271,7 @@ Known limitations include:
 - AI-generated exercises may contain language errors
 - some pronunciation resources use general Standard Mandarin rather than specifically validated Taiwanese Mandarin recordings
 - Windows is currently the primary supported platform
-- Android and synchronization are future possibilities rather than current features
+- Android currently has a flashcard-only offline companion with local Wi-Fi synchronization; the full desktop learning application is not available on Android yet. Physical-device checks are still required; see [Android setup](docs/ANDROID_REVIEW.md).
 
 For implementation details and known issues, see the documents in [`docs/`](docs/).
 

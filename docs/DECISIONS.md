@@ -1,5 +1,21 @@
 # Quyết định triển khai — 23/09/2026
 
+## Sửa tính tự nhiên và ngữ cảnh của ôn chủ đề — 04/11/2026
+
+Người dùng phát hiện `你見面`. V1 sai ở giả định đổi chủ ngữ là giữ được tính hợp lệ, và lấy tích các dữ kiện riêng lẻ thành đoạn. V2 dùng câu động từ nguyên vẹn, danh sách hồ sơ tình huống được chỉ định rõ, giữ tham chiếu người/đối tượng và tương thích giờ học/món–lượng từ. Bài viết lấy hai câu trong cùng hồ sơ, không suy mọi đảo thứ tự là đáp án hợp lệ. Ngân hàng ít hơn nhưng có giới hạn biên soạn rõ; không dùng structural test để tự nhận câu chuẩn. V1 bị ngừng luyện/không dùng để thống kê chấm, giữ nguyên snapshot/câu trả lời/bản nháp; API chặn tab cũ tiếp tục nộp. Không sửa lịch FSRS/bài Học.
+
+## Ôn vận dụng 15 câu theo chủ đề — 04/11/2026
+
+Người dùng chốt mỗi bộ 15 câu sau khi học xong toàn bộ chủ đề. Dùng khung câu biên soạn và thay cụm tương thích, kết hợp hai lời nhắn để hỏi thông tin/đối chiếu, rồi tình huống điền/viết/chọn câu mới. Không chỉ xáo thứ tự câu cũ; không gọi model để tạo đề trong lượt này. Ngân hàng hữu hạn, lọc theo kiến thức đã học, có chu kỳ không lặp. Namespace topic-review riêng trong sessions/reports, API transaction tạo phiên/lịch sử và ghi đáp án, không đổi schema/gói/FSRS. Bài viết khác mẫu cần đối chiếu, không tự chấm sai. Xem TOPIC_REVIEW.md về phạm vi và giới hạn.
+
+## Thêm flashcard riêng và lượt ôn có giới hạn — 29/10/2026
+
+Đánh dấu đã học chỉ là bằng chứng học cho tạo câu. StudyCard có hành động thêm thẻ recognize độc lập, ID ổn định và CAS; không tạo audio sớm. PC/Android dùng core/reviewSets chung: nhóm theo chủ đề cân bằng ít nhất 20 từ riêng biệt, không đếm hướng thẻ; tổng ít hơn 20 có thông báo. Lượt 20/30/40/cả nhóm, lưu thứ tự và ưu tiên từ chưa lấy; cuối vòng bổ sung từ cũ để đủ lượt. PC free là practice/null, FSRS chỉ ở tab đến hạn riêng. Android lưu review trong state SQLite cũ; PC reports flashcard-review:v1. Không đổi schema, đồng bộ vị trí lượt hay FSRS; audio vẫn được tạo/tải theo yêu cầu đồng bộ cho toàn bộ thẻ hoạt động.
+
+## Companion Android chỉ ôn tự do — 29/10/2026
+
+Người dùng chốt chỉ Tiếp sau khi lật (không rating), mọi từ từ thẻ hoạt động gộp hướng học, sync cùng Wi-Fi và QR một lần; không login/không cloud. PC giữ quyền sửa thẻ/FSRS, Android giữ SQLite/outbox chỉ ghi practice/null, nên không có bài toán replay FSRS hai chiều trong phase này. Dịch vụ TLS riêng và cert pin không nới middleware localhost của app PC. Yating OneCore đã xác minh trên máy thay vì tự thay giọng Hanhan SAPI; chỉ đồng bộ WAV cá nhân, không đưa engine/audio người dùng vào APK/repo. Dùng VS Code/CLI portable theo yêu cầu, không bắt cài Android Studio; giữ khóa ký ngoài Git. Chỉ công bố đã build/kiểm tra được, không suy từ bridge giả lập sang điện thoại thật.
+
 ## Liên kết bài học và ôn xen kẽ — 25/10/2026
 
 Hội thoại là dữ liệu soạn sẵn cấp lesson, không chọn ngẫu nhiên đoạn chung chủ đề. Mười câu mới liên kết với năm từ của lesson và chính các câu vừa đọc. Câu ôn chỉ lấy từ phiên đã hoàn thành trước vị trí bài hiện tại trong lộ trình; giữ mọi câu cốt lõi rồi xen tối đa ba câu ôn. Đóng băng toàn bộ đề/lựa chọn vào snapshot khi bắt đầu, giải retry và lịch sử theo snapshot. Không sửa câu cũ dưới cùng ID: câu liên kết dùng namespace `:linked-v1:`; phiên cũ giữ hợp đồng và danh sách gốc. Hội thoại là supplement frontend có nguồn TSV/JSON và revision riêng, không cần nâng gói foundation hay ghi trực tiếp database.

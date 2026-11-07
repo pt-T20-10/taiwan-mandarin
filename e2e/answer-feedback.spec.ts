@@ -1,0 +1,20 @@
+import {test,expect} from '@playwright/test';
+test('submitted answer shows one reading and meaning with a single listen button',async({page,request})=>{
+ const backup=await(await request.get('/api/backup')).json();backup.objects=[];backup.events=[];
+ await request.post('/api/restore',{headers:{'X-Mandarin-Client':'local-ui'},data:backup});
+ const content=await(await request.get('/api/content')).json();
+ const ex=content.units[0].lessons[0].exercises[0];
+ await page.goto('/#learn/tw.greetings.lesson.1');
+ await page.getByRole('button',{name:'Bắt đầu luyện tập →',exact:true}).click();
+ await page.getByRole('button',{name:ex.answers[0],exact:true}).click();
+ await page.getByRole('button',{name:'Kiểm tra',exact:true}).click();
+ const feedback=page.locator('.feedback');
+ await expect(feedback.getByRole('heading',{name:'Đúng rồi!',exact:true})).toBeVisible();
+ await expect(feedback.locator('.answer-feedback')).toContainText(ex.stimulus.pinyin);
+ await expect(feedback.locator('.answer-feedback')).toContainText(ex.stimulus.vi);
+ await expect(feedback.locator('.answer-feedback > p')).toHaveCount(1);
+ await expect(feedback.locator('.question-reading')).toHaveCount(0);
+ await expect(feedback.getByRole('button')).toHaveCount(2);
+ await expect(feedback.getByRole('button',{name:/Nghe/})).toHaveCount(1);
+ await page.screenshot({path:'data/answer-feedback-preview.png'});
+});

@@ -96,6 +96,18 @@ def put_object(db, collection, id, expected_version, data, deleted=False):
     return current + 1
 
 def validate_object(collection, data):
+    if collection=='sessions' and data.get('scope')=='topic-review':
+        packet=data.get('packet',{});items=packet.get('items',[])
+        if packet.get('source')!='authored' or len(items)!=15 or len({q.get('id') for q in items})!=15:raise ValueError('Bộ ôn chủ đề cần đúng 15 câu soạn sẵn có ID riêng')
+        if not isinstance(data.get('run'),str) or not isinstance(data.get('unit_id'),str):raise ValueError('Thiếu liên kết bộ ôn chủ đề')
+        if type(data.get('index')) is not int or not 0<=data['index']<=15 or data.get('phase') not in ('exercise','summary'):raise ValueError('Vị trí bộ ôn không hợp lệ')
+        if data['phase']=='summary' and data['index']!=15:raise ValueError('Bộ ôn chưa hoàn thành')
+        if not isinstance(data.get('answers'),list) or [a.get('id') for a in data['answers']]!=[q['id'] for q in items[:data['index']]]:raise ValueError('Lịch sử câu trả lời không khớp bộ ôn')
+        if len(packet.get('passage',[]))!=8:raise ValueError('Bài đọc cần tám câu có người nói')
+        for q in items:
+            if not isinstance(q.get('prompt'),str) or not q.get('answers') or any(not isinstance(a,str) or not a for a in q['answers']):raise ValueError('Câu ôn thiếu đề hoặc đáp án')
+            if q.get('choices') and not set(q['answers']).issubset(set(q['choices'])):raise ValueError('Đáp án ôn không có trong lựa chọn')
+        if len(json.dumps(data))>200_000:raise ValueError('Bộ ôn quá lớn')
     if not isinstance(data, dict):
         raise ValueError('Bản ghi phải là đối tượng')
     if collection == 'cards':
