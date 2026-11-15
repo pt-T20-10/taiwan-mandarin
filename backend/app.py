@@ -14,6 +14,7 @@ from .ai import ai
 from . import connected_speech
 from .content import ROOT, validate_package
 from . import mobile_sync
+from . import learn_course
 
 shutdown_callback = None
 asr_lock = asyncio.Lock()
@@ -30,6 +31,9 @@ async def lifespan(app):
 
 app = FastAPI(lifespan=lifespan, docs_url=None, redoc_url=None)
 mobile_sync.desktop_routes(app)
+learn_course.routes(app)
+from . import answer_grading
+answer_grading.routes(app)
 
 @app.get('/api/pronunciation/audio')
 def pronunciation_audio_catalog():

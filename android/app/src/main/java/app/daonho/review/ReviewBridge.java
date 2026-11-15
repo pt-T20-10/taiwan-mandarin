@@ -95,7 +95,7 @@ public class ReviewBridge extends Plugin {
     }
     private HttpsURLConnection connection(JSONObject pair,String path,String method) throws Exception {
         if(pair==null)throw new IOException("Chưa kết nối máy tính");
-        if(!path.matches("/v1/(pair(/status)?|cards|events|audio/[a-f0-9]{64})"))throw new IOException("Unsupported endpoint");
+        if(!path.matches("/v1/(pair(/status)?|cards|events|audio/[a-f0-9]{64})|/v2/(sentences|sentence-events)"))throw new IOException("Unsupported endpoint");
         URI base=new URI(pair.getString("address"));
         if(!"https".equals(base.getScheme())||base.getUserInfo()!=null||base.getHost()==null)throw new IOException("Cần địa chỉ HTTPS nội bộ");
         InetAddress ip=InetAddress.getByName(base.getHost());
@@ -142,9 +142,9 @@ public class ReviewBridge extends Plugin {
         File folder=new File(getContext().getFilesDir(),"audio");folder.mkdirs();return new File(folder,key+".wav");
     }
     @PluginMethod public void audioStatus(PluginCall call){try{
-        JSArray keys=call.getArray("keys",new JSArray()),found=new JSArray();
-        for(int i=0;i<keys.length();i++)if(audioFile(keys.getString(i)).isFile())found.put(keys.getString(i));
-        call.resolve(new JSObject().put("keys",found));
+        JSArray keys=call.getArray("keys",new JSArray()),found=new JSArray();JSObject sizes=new JSObject();
+        for(int i=0;i<keys.length();i++){String key=keys.getString(i);File file=audioFile(key);if(file.isFile()){found.put(key);sizes.put(key,file.length());}}
+        call.resolve(new JSObject().put("keys",found).put("bytes",sizes));
     }catch(Exception e){call.reject(e.getMessage(),e);}}
     @PluginMethod public void downloadAudio(PluginCall call){worker.execute(()->{
         HttpsURLConnection c=null;File temp=null;
@@ -153,6 +153,14 @@ public class ReviewBridge extends Plugin {
             if(!file.exists()){
                 c=connection(pair(),"/v1/audio/"+key,"GET");byte[] bytes=response(c);
                 if(bytes.length<44||!new String(bytes,0,4,StandardCharsets.US_ASCII).equals("RIFF")||!hash(bytes).equals(c.getHeaderField("X-Audio-SHA256")))throw new IOException("Audio thiếu hoặc sai checksum");
+                int budget=call.getInt("budgetBytes",0);
+                if(budget>0){
+                    JSArray exempt=call.getArray("exemptKeys",new JSArray());java.util.HashSet<String> names=new java.util.HashSet<>();
+                    for(int i=0;i<exempt.length();i++)names.add(exempt.getString(i)+".wav");
+                    long used=0;File[] files=file.getParentFile().listFiles();
+                    if(files!=null)for(File f:files)if(f.getName().endsWith(".wav")&&!names.contains(f.getName()))used+=f.length();
+                    if(!names.contains(file.getName())&&used+bytes.length>budget)throw new IOException("Đã đạt giới hạn 200 MB audio câu. Vẫn có thể luyện chữ và nghe file đã tải.");
+                }
                 temp=new File(file.getParentFile(),key+".part");Files.write(temp.toPath(),bytes);
                 Files.move(temp.toPath(),file.toPath(),StandardCopyOption.REPLACE_EXISTING);
             }

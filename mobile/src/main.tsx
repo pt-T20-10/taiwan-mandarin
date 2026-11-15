@@ -3,9 +3,12 @@ import {createRoot} from 'react-dom/client';
 import {App as Lifecycle} from '@capacitor/app';
 import {native,emptyState,shuffle,withCards,reviewGroups,startReview,upgradeReview} from './bridge';
 import type {State,Pair,Seen} from './bridge';
+import {SentencePractice} from '../../src/components/SentencePractice';
+import {emptySentenceState,sentenceAudioKeys} from '../../src/core/sentenceReview';
 import './style.css';
 
 function App(){
+ const [mode,setMode]=useState<'cards'|'sentences'>('cards');
  const [state,setState]=useState<State>(),[pair,setPair]=useState<Pair|null>(null),[back,setBack]=useState(false),[settings,setSettings]=useState(false),[message,setMessage]=useState(''),[syncing,setSyncing]=useState(false),[saving,setSaving]=useState(false),[manual,setManual]=useState(''),[audio,setAudio]=useState<string[]>([]),[progress,setProgress]=useState('');
  const current=useRef<State>(emptyState()),pairRef=useRef<Pair|null>(null),writes=useRef(Promise.resolve()),syncLock=useRef(false),actionLock=useRef(false),generation=useRef(0),started=useRef(Date.now()),live=useRef(true);
  const active=useRef(true),resumeSync=useRef(false);
@@ -18,8 +21,23 @@ function App(){
  }
  async function storePair(p:Pair){await native.setPair({pair:p});pairRef.current=p;setPair(p);}
  async function request(path:string,body?:object,config?:Pair){return (await native.request({path,method:body?'POST':'GET',body,pair:config})).data;}
+ async function syncSentences(){
+  const previous=current.current.sentences||emptySentenceState();
+  const result=await request('/v2/sentences',{known_ids:previous.entries.map(e=>e.id)});
+  if(result.protocol!==2||result.pc_id!==pairRef.current?.pc_id||!Array.isArray(result.entries)||!Array.isArray(result.allowed_ids))throw Error('Dữ liệu ôn câu không hợp lệ.');
+  await commit(s=>{const before=s.sentences||emptySentenceState(),allowed=new Set(result.allowed_ids),incoming=new Map(result.entries.map((e:any)=>[e.id,e]));
+   return {...s,sentenceUnits:result.units,sentences:{...before,revision:result.revision,exposure:result.exposure||[],entries:[...before.entries.filter(e=>allowed.has(e.id)&&!incoming.has(e.id)),...result.entries].map(e=>({...e,options:result.options?.[e.id]||e.options})),prepared:before.prepared.filter(r=>r.tasks.every(t=>allowed.has(t.entry.id)))}};
+  });
+  while(current.current.sentences?.pending.length){
+   const batch=current.current.sentences.pending.slice(0,200),response=await request('/v2/sentence-events',{events:batch});
+   const accepted=new Set(response.accepted as string[]);
+   if(!batch.some(e=>accepted.has(e.id)))throw Error('Lượt ôn câu chưa được PC xác nhận.');
+   await commit(s=>({...s,sentences:s.sentences?{...s.sentences,pending:s.sentences.pending.filter(e=>!accepted.has(e.id))}:s.sentences}));
+  }
+ }
  async function sync(showError=false){
-  if(syncLock.current||!pairRef.current||!active.current)return;syncLock.current=true;const ticket=generation.current;setSyncing(true);setMessage('');
+  if(syncLock.current){resumeSync.current=true;return;}
+  if(!pairRef.current||!active.current)return;syncLock.current=true;const ticket=generation.current;setSyncing(true);setMessage('');
   try{
    if(!(await native.wifi()).wifi){setProgress('Đang ôn offline. Kết nối Wi-Fi cùng PC để đồng bộ.');return;}
    let manifest;
@@ -39,6 +57,7 @@ function App(){
     await commit(s=>({...s,pending:s.pending.filter(e=>!accepted.has(e.id))}));
    }
    if(ticket!==generation.current)return;
+   try{await syncSentences();}catch(e){note(e);}
    await commit(s=>({...s,lastDataSync:new Date().toISOString()}));
    const keys=[...new Set(current.current.cards.map(c=>c.audio_key))],cached=(await native.audioStatus({keys})).keys;
    setAudio(cached);let ready=new Set(cached);
@@ -46,7 +65,17 @@ function App(){
     if(ticket!==generation.current)break;
     if(!ready.has(key)){setProgress(`Đang tải giọng Yating · ${ready.size}/${keys.length}`);await native.downloadAudio({key});ready.add(key);setAudio([...ready]);}
    }
-   if(ticket===generation.current){await native.pruneAudio({keys});await commit(s=>({...s,lastSync:new Date().toISOString()}));setProgress(keys.length?'Sẵn sàng ôn offline · audio '+ready.size+'/'+keys.length:'PC chưa có thẻ hoạt động.');}
+   const sentenceKeys=current.current.sentences?sentenceAudioKeys(current.current.sentences):[];
+   if(ticket===generation.current){
+    const keep=[...new Set([...keys,...sentenceKeys])];await native.pruneAudio({keys:keep});
+    const found=(await native.audioStatus({keys:keep})).keys;ready=new Set(found);setAudio(found);
+    for(const key of sentenceKeys){if(ticket!==generation.current)break;if(ready.has(key))continue;
+     setProgress(`Đang tải audio câu/từ · ${sentenceKeys.filter(k=>ready.has(k)).length}/${sentenceKeys.length}`);
+     try{await native.downloadAudio({key,budgetBytes:200*1024*1024,exemptKeys:keys});ready.add(key);setAudio([...ready]);}catch(e){note(e);break;}
+    }
+    if(keep.every(k=>ready.has(k)))await commit(s=>({...s,lastSync:new Date().toISOString()}));
+    setProgress(`Flashcard: ${keys.filter(k=>ready.has(k)).length}/${keys.length} audio · Ôn câu: ${sentenceKeys.filter(k=>ready.has(k)).length}/${sentenceKeys.length} audio. ${sentenceKeys.every(k=>ready.has(k))?'Bộ đã chuẩn bị có thể nghe offline.':'Có thể luyện chữ; đồng bộ lại để tải audio còn thiếu.'}`);
+   }
   }catch(e){if(showError)note(e);setProgress('Chưa tải đủ dữ liệu/audio: '+(e instanceof Error?e.message:String(e))+'. Thẻ và lượt ôn đã lưu vẫn được giữ.');}
   finally{
    syncLock.current=false;if(live.current)setSyncing(false);
@@ -62,7 +91,7 @@ function App(){
    const saved=await native.load();current.current=upgradeReview(saved.state||emptyState());await native.save({state:current.current});setState(current.current);
    try{pairRef.current=(await native.getPair()).pair||null;}catch(e){note(e);pairRef.current=null;}
    setPair(pairRef.current);
-   setAudio((await native.audioStatus({keys:current.current.cards.map(c=>c.audio_key)})).keys);
+   setAudio((await native.audioStatus({keys:[...current.current.cards.map(c=>c.audio_key),...(current.current.sentences?sentenceAudioKeys(current.current.sentences):[])]})).keys);
    if(pairRef.current)void sync();else setSettings(true);
   }catch(e){note(e);setState(emptyState());}})();
   const lifecycle=Lifecycle.addListener('appStateChange',({isActive})=>{active.current=isActive;if(isActive){if(syncLock.current)resumeSync.current=true;else void sync();}else{generation.current++;void native.stopAudio();}});
@@ -107,9 +136,9 @@ function App(){
  async function mix(){if(actionLock.current)return;actionLock.current=true;setSaving(true);try{await commit(s=>({...s,queue:s.queue.length?[s.queue[0],...shuffle(s.queue.slice(1))]:[]}));}catch(e){note(e);}finally{actionLock.current=false;setSaving(false);}}
  async function begin(groupId=state?.review?.group||'all',size=state?.review?.size??20){if(actionLock.current)return;actionLock.current=true;setSaving(true);try{await native.stopAudio();await commit(s=>startReview(s,groupId,size));setBack(false);}catch(e){note(e);}finally{actionLock.current=false;setSaving(false);}}
  return <main><header><span>島 <b>đảo nhỏ</b></span><button aria-label={settings?'Về ôn thẻ':'Đồng bộ và cài đặt'} onClick={()=>setSettings(!settings)}>{settings?'Ôn thẻ':'☰'}</button></header>{message&&<div className="message" role="status">{message}<button onClick={()=>setMessage('')} aria-label="Đóng thông báo">×</button></div>}
- {!settings&&!!state?.cards.length&&<details className="review-filters"><summary>Bộ ôn · {group.label} · {state.review?.size===0?'cả nhóm':(state.review?.size??20)+' từ/lượt'}</summary><label>Nhóm từ<select aria-label="Nhóm từ" disabled={saving} value={group.id} onChange={e=>void begin(e.target.value,state.review?.size??20)}>{groups.map(g=><option key={g.id} value={g.id}>{g.label} ({g.ids.length} từ)</option>)}</select></label><label>Số từ mỗi lượt<select aria-label="Số từ mỗi lượt" disabled={saving} value={state.review?.size??20} onChange={e=>void begin(group.id,Number(e.target.value))}>{[20,30,40,0].map(n=><option key={n} value={n}>{n?n+' từ':'Cả nhóm'}</option>)}</select></label><button disabled={saving} onClick={()=>void begin()}>Bộ mới</button>{state.cards.length<20&&<small>Hiện chỉ có {state.cards.length} từ; thêm thẻ để có nhóm từ 20 trở lên.</small>}</details>}
+ {!settings&&<nav className="actions"><button aria-pressed={mode==='cards'} onClick={()=>{setMode('cards');void native.stopAudio();}}>Flashcard</button><button aria-pressed={mode==='sentences'} onClick={()=>{setMode('sentences');void native.stopAudio();}}>Ôn câu</button></nav>}{!settings&&mode==='cards'&&!!state?.cards.length&&<details className="review-filters"><summary>Bộ ôn · {group.label} · {state.review?.size===0?'cả nhóm':(state.review?.size??20)+' từ/lượt'}</summary><label>Nhóm từ<select aria-label="Nhóm từ" disabled={saving} value={group.id} onChange={e=>void begin(e.target.value,state.review?.size??20)}>{groups.map(g=><option key={g.id} value={g.id}>{g.label} ({g.ids.length} từ)</option>)}</select></label><label>Số từ mỗi lượt<select aria-label="Số từ mỗi lượt" disabled={saving} value={state.review?.size??20} onChange={e=>void begin(group.id,Number(e.target.value))}>{[20,30,40,0].map(n=><option key={n} value={n}>{n?n+' từ':'Cả nhóm'}</option>)}</select></label><button disabled={saving} onClick={()=>void begin()}>Bộ mới</button>{state.cards.length<20&&<small>Hiện chỉ có {state.cards.length} từ; thêm thẻ để có nhóm từ 20 trở lên.</small>}</details>}
  {settings?<section><h1>Kết nối máy tính</h1><p>{pair?'Đã ghép cặp. Mở ứng dụng PC và dùng cùng Wi-Fi để đồng bộ.':'Mở Cài đặt → Đồng bộ điện thoại trên PC rồi tạo QR.'}</p><div className="actions"><button disabled={syncing} onClick={()=>void scan()}>Quét QR ghép cặp</button><button disabled={syncing||!pair} onClick={()=>void sync(true)}>Đồng bộ ngay</button></div><details><summary>Nhập thông tin kết nối thủ công</summary><textarea aria-label="Thông tin ghép cặp" placeholder="Dán toàn bộ thông tin từ PC" value={manual} onChange={e=>setManual(e.target.value)}/><button disabled={syncing||!manual.trim()} onClick={()=>void connect(manual)}>Kết nối</button></details><p>{progress||'Một giọng đọc: Microsoft Yating.'}</p><small>{state?.lastSync?'Đồng bộ đủ thẻ/audio gần nhất: '+new Date(state.lastSync).toLocaleString('vi-VN'):'Chưa đồng bộ.'}<br/>{state?.cards.length||0} từ · {state?.pending.length||0} lượt chưa gửi · audio {new Set(audio).size}/{new Set(state?.cards.map(c=>c.audio_key)).size}</small></section>:
- !state?<section><p>Đang mở thẻ…</p></section>:!card&&state.review?.finished&&state.cards.length>0?<section><h1>Đã xong lượt ôn</h1><p>{state.done} từ đã ôn. Bạn có thể dừng ở đây hoặc lấy bộ tiếp theo.</p><button disabled={saving} onClick={()=>void begin()}>Bộ tiếp theo</button></section>:!card?<section><h1>Chưa có thẻ</h1><p>Kết nối máy tính để tải flashcard. Sau đó bạn có thể ôn cả khi máy tính tắt.</p><button onClick={()=>setSettings(true)}>Kết nối máy tính</button></section>:<><div className="toolbar"><small>Lượt {state.cycle} · {state.done+1}/{state.done+state.queue.length}</small><button disabled={saving} onClick={()=>void mix()}>⤨ Trộn</button></div><article className="flashcard"><div className="hanzi" lang="zh-TW">{card.hanzi}</div>{back?<><p className="pinyin">{card.pinyin}</p><div className="meaning">{card.meanings.map(v=><p key={v}>{v}</p>)}</div><button className="listen" disabled={!audio.includes(card.audio_key)} onClick={()=>void native.play({key:card.audio_key}).catch(note)}>◖)) Nghe</button><button className="primary" disabled={saving} onClick={()=>void next()}>Tiếp →</button></>:<button className="primary" onClick={()=>setBack(true)}>Lật thẻ</button>}</article><footer>{syncing?'Đang đồng bộ · bạn vẫn có thể ôn':state.pending.length?`${state.pending.length} lượt đã lưu trên máy, chờ đồng bộ`:state.cards.every(c=>audio.includes(c.audio_key))?'Sẵn sàng ôn offline · giọng Yating':`Đã có thẻ · audio ${new Set(audio).size}/${new Set(state.cards.map(c=>c.audio_key)).size} · mở ☰ để đồng bộ audio`}{progress&&syncing&&<small>{progress}</small>}</footer></>}
+ !state?<section><p>Đang mở thẻ…</p></section>:mode==='sentences'?<SentencePractice state={state.sentences||emptySentenceState()} units={state.sentenceUnits||[]} change={update=>commit(s=>({...s,sentences:update(s.sentences||emptySentenceState())}))} play={(key)=>native.play({key})} available={key=>audio.includes(key)} onSync={()=>void sync()}/>:!card&&state.review?.finished&&state.cards.length>0?<section><h1>Đã xong lượt ôn</h1><p>{state.done} từ đã ôn. Bạn có thể dừng ở đây hoặc lấy bộ tiếp theo.</p><button disabled={saving} onClick={()=>void begin()}>Bộ tiếp theo</button></section>:!card?<section><h1>Chưa có thẻ</h1><p>Kết nối máy tính để tải flashcard. Sau đó bạn có thể ôn cả khi máy tính tắt.</p><button onClick={()=>setSettings(true)}>Kết nối máy tính</button></section>:<><div className="toolbar"><small>Lượt {state.cycle} · {state.done+1}/{state.done+state.queue.length}</small><button disabled={saving} onClick={()=>void mix()}>⤨ Trộn</button></div><article className="flashcard"><div className="hanzi" lang="zh-TW">{card.hanzi}</div>{back?<><p className="pinyin">{card.pinyin}</p><div className="meaning">{card.meanings.map(v=><p key={v}>{v}</p>)}</div><button className="listen" disabled={!audio.includes(card.audio_key)} onClick={()=>void native.play({key:card.audio_key}).catch(note)}>◖)) Nghe</button><button className="primary" disabled={saving} onClick={()=>void next()}>Tiếp →</button></>:<button className="primary" onClick={()=>setBack(true)}>Lật thẻ</button>}</article><footer>{syncing?'Đang đồng bộ · bạn vẫn có thể ôn':state.pending.length?`${state.pending.length} lượt đã lưu trên máy, chờ đồng bộ`:state.cards.every(c=>audio.includes(c.audio_key))?'Sẵn sàng ôn offline · giọng Yating':`Đã có thẻ · audio ${new Set(audio).size}/${new Set(state.cards.map(c=>c.audio_key)).size} · mở ☰ để đồng bộ audio`}{progress&&syncing&&<small>{progress}</small>}</footer></>}
  </main>;
 }
 createRoot(document.getElementById('root')!).render(<App/>);

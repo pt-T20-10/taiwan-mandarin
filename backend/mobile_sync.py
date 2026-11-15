@@ -20,6 +20,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel, Field, ConfigDict, AwareDatetime
 from . import db
+from . import sentence_review
 from .content import ROOT
 
 VOICE = 'Microsoft Yating'
@@ -212,13 +213,14 @@ class MobileSync:
 
     def audio(self,key):
         card=next((c for c in cards_snapshot() if c['audio_key']==key),None)
-        if not card:raise HTTPException(404,'Audio không thuộc bộ thẻ hiện hành.')
+        text=card['hanzi'] if card else sentence_review.audio_text(key)
+        if not text:raise HTTPException(404,'Audio không thuộc nội dung đã phát hành.')
         folder=self.folder/'audio';folder.mkdir(parents=True,exist_ok=True)
         path=folder/(key+'.wav')
         with self.audio_lock:
             if not path.exists():
                 temp=folder/(key+'.part.wav')
-                payload=base64.b64encode(json.dumps({'text':card['hanzi'],'path':str(temp.resolve())},ensure_ascii=False).encode()).decode()
+                payload=base64.b64encode(json.dumps({'text':text,'path':str(temp.resolve())},ensure_ascii=False).encode()).decode()
                 try:
                     process=subprocess.run(['powershell.exe','-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass','-File',str(ROOT/'scripts/Export-Yating.ps1')],input=payload.encode(),capture_output=True,timeout=90,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
                     if process.returncode or not temp.exists() or temp.stat().st_size<44:
@@ -293,6 +295,10 @@ def events(body:Push,request:Request):
     return {'accepted':accepted}
 
 def desktop_routes(app):
+    @app.post('/api/sentence-review/pull')
+    def sentence_pull(body:sentence_review.Pull):return sentence_review.manifest(body, relaxed=True)
+    @app.post('/api/sentence-review/events')
+    def sentence_events(body:sentence_review.Push):return sentence_review.push(body,'desktop')
     @app.get('/api/mobile/status')
     def status():return manager.status()
     @app.post('/api/mobile/enable')
@@ -310,3 +316,12 @@ def resume_enabled():
     if row and not row['deleted'] and row['data'].get('enabled'):
         try:manager.start()
         except Exception as e:manager.audio_error=str(e)
+
+@lan_app.post('/v2/sentences')
+def sentence_manifest(body:sentence_review.Pull,request:Request):
+    manager.auth(request)
+    return sentence_review.manifest(body)
+
+@lan_app.post('/v2/sentence-events')
+def sentence_events(body:sentence_review.Push,request:Request):
+    return sentence_review.push(body,manager.auth(request))

@@ -1,5 +1,39 @@
 # Quyết định triển khai — 23/09/2026
 
+## AI local quyết định đáp án mở — 12/11/2026
+
+Theo yêu cầu, câu dịch và điền từ cần xác định đúng/sai ngay tại bài, nhận cách diễn đạt khác mẫu còn đúng ý. Đáp án khớp mẫu không cần gọi model; khác mẫu dùng model local có sẵn, đánh giá câu sau khi điền chỗ trống và toàn bộ ý câu gốc. Bỏ cơ chế mặc định “cần đối chiếu” cho lượt mới. Chỉ báo chưa chấm khi model thực sự lỗi/bận/không xác định, giữ nguyên nháp để thử lại; không giả kết quả để luôn có đúng/sai. Màu xanh/đỏ kèm nhãn chữ, kết quả được lưu cùng phản hồi.
+
+## Sửa ngữ nghĩa toàn giáo trình — 10/11/2026
+
+Phản hồi câu vô lý cho thấy giới hạn số từ và đúng cấu trúc không đủ để đảm bảo nội dung có ý nghĩa. Rà cả khung câu, từng nhóm cụm thay thế và nghĩa theo ngữ cảnh; không ghép nghề vào chính nghề đó, không dùng câu tự hỏi danh tính thiếu tình huống, không coi từ rời là nhiệm vụ câu. Bản PC v2 giữ dữ liệu lịch sử nhưng không nối tiếp snapshot câu v1. Không reset tiến độ lần nữa. Khôi phục lưới thẻ dọc; đề/đáp án/ô nhập là nội dung lớn nhất trong khung luyện.
+
+## Giáo trình PC 90 bài được duyệt — 10/11/2026
+
+Áp dụng LEARN_COURSE_PC.md. Người dùng chọn cả 18 chủ đề, 7/10/15 từ và 15/20/25 câu theo mức, reset toàn bộ #learn nhưng giữ flashcard. Đi hết bộ thì cấp từ đầu bài dù còn sai/bỏ qua. Cho phép 2–3 từ bổ sung cả khi tự gõ Việt→Trung. Không build mobile. Không tiếp tục dùng fallback từ rời để bù câu thiếu.
+
+## Vốn từ và bố cục nhập môn — 10/11/2026
+
+Thay chính sách quá rộng của lượt chỉnh trước: bài chính ưu tiên nhận diện năm từ đích trước, sau đó dùng câu ngắn tối đa 18 ký tự, chứa từ đích, tối đa một từ hỗ trợ cho cả lượt và ít nhất 80% mục từ đã biết. Câu Việt→Trung không dùng từ chưa học. Ngoại lệ biên soạn rõ cho bài chào đầu: cụm hai từ như 老師，早安！ chỉ thêm 老師, không đòi người học tự sản xuất từ này. Chưa đủ câu phù hợp thì luyện từ/cụm ngắn thay vì chèn câu khó. Không nhận biết chữ thành biết từ; chỉ dùng từ của bài hiện tại và các bài trước đã hoàn thành. Phiên v4; bản cũ giữ snapshot và có nút mở bộ mới.
+
+Tham khảo nguyên tắc scaffolding và độ khó tăng dần của Duolingo: https://blog.duolingo.com/keeping-you-at-the-frontier-of-learning-with-adaptive-lessons/ và https://blog.duolingo.com/right-level-of-difficulty/ . Giới hạn 80%/một từ là quyết định của dự án, không phải thông số do Duolingo công bố. Không tự nhận có thuật toán thích ứng như Duolingo.
+
+## Điều chỉnh #learn — 10/11/2026
+
+Theo phản hồi người dùng: bỏ bài tình huống, chỉ điền/chọn từ/dịch hai chiều; câu vận dụng khác câu mẫu và có thể chứa từ mới tra được. Bỏ liệt kê đáp án toàn bộ, nguồn và lượt cũ khỏi UI bài vận dụng, vẫn giữ dữ liệu. Chuẩn hóa nút điều hướng. Phạm vi #learn; không sửa bộ đề #skills hoặc APK/mobile trong đợt này.
+
+## Phase ôn câu — 09/11/2026
+
+Người dùng duyệt MOBILE_SENTENCE_REVIEW.md: Học + ôn chủ đề PC, Android có cả chọn/ghép và dịch tự gõ. Không nhúng AI, không mang nguồn học chi tiết lên mobile. Vận dụng cần câu/tình huống riêng; sửa cơ chế 08/11 dùng lại ví dụ để đủ số. Chấm tự gõ khác mẫu là cần đối chiếu, không tự sai. Giữ flashcard/FSRS/pairing/outbox. Thêm hướng dẫn cài đè APK qua USB/VS Code.
+
+## Tăng luyện tập và dùng lại thẻ từ — 08/11/2026
+
+Theo phản hồi: mọi bài quy tắc/vận dụng có 10 câu. Giữ câu gốc, bổ sung nhiệm vụ đọc hiểu/điền dựa trên ví dụ đã soạn, không sinh ngôn ngữ mới; giữ ID và snapshot cũ. StudyCard và StudyText dùng chung với lesson chính, cho phép truyền từ vựng bổ sung vào cơ chế tra offline; chỉ bật trên nội dung được phép thấy, tra đề ghi trợ giúp. Không sửa gói nền tảng hoặc FSRS.
+
+## Mở rộng cả 18 chủ đề — 07/11/2026
+
+Người dùng chọn triển khai toàn bộ 18 chủ đề, tập trung nghiên cứu và thiết kế lesson, cho phép kiểm tra vừa đủ. Bổ sung 40 bài quy tắc/vận dụng thay vì tăng cứng số từ mỗi lesson: 6 bài số/thời gian, 2 bài cho mỗi chủ đề còn lại. Tham khảo NAER, MOE, NTNU và OCAC, câu/giải thích do dự án soạn và giữ nhãn chưa giáo viên thẩm định. Nguồn cụ thể/ma trận khoảng thiếu ở LESSON-EXPANSION.md. Namespace phiên mới, snapshot toàn bài và mỗi lượt có ID riêng; học lại giữ lịch sử, không nâng foundation hoặc đổi tiến độ cũ/FSRS. Kết quả chỉ là practice, câu đúng trong lượt đã hoàn tất cấp bằng chứng đúng câu cho luyện viết. Giữ bộ ôn cũ với nhãn “Ôn bài nền tảng”; không tự coi bộ đó bao phủ phần mở rộng. Không đổi APK/model/giọng hoặc thêm dịch vụ online vào phiên học.
+
 ## Sửa tính tự nhiên và ngữ cảnh của ôn chủ đề — 04/11/2026
 
 Người dùng phát hiện `你見面`. V1 sai ở giả định đổi chủ ngữ là giữ được tính hợp lệ, và lấy tích các dữ kiện riêng lẻ thành đoạn. V2 dùng câu động từ nguyên vẹn, danh sách hồ sơ tình huống được chỉ định rõ, giữ tham chiếu người/đối tượng và tương thích giờ học/món–lượng từ. Bài viết lấy hai câu trong cùng hồ sơ, không suy mọi đảo thứ tự là đáp án hợp lệ. Ngân hàng ít hơn nhưng có giới hạn biên soạn rõ; không dùng structural test để tự nhận câu chuẩn. V1 bị ngừng luyện/không dùng để thống kê chấm, giữ nguyên snapshot/câu trả lời/bản nháp; API chặn tab cũ tiếp tục nộp. Không sửa lịch FSRS/bài Học.

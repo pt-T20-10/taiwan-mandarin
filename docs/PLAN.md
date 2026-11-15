@@ -1,5 +1,15 @@
 # Kế hoạch ứng dụng tự học Hoa ngữ Đài Loan
 
+> 10/11/2026: triển khai [giáo trình PC 90 bài](LEARN_COURSE_PC.md), thay cấu trúc 4+1 hiện tại, năm dạng bài luyện câu; reset toàn bộ #learn sau backup, giữ flashcard và #skills. Kế hoạch mới thay các giới hạn một từ và fallback dịch từ bên dưới.
+
+> 10/11/2026, phản hồi tiếp: thu gọn trang từ mới, tối đa 4 lựa chọn theo lưới 2×2; thay nới vốn từ không giới hạn bằng câu ngắn bám từ đang học và tối đa một từ hỗ trợ. Không đổi #skills.
+
+> 10/11/2026: #learn chuyển sang điền/chọn từ/dịch hai chiều, bỏ gợi dẫn tình huống và danh sách thừa. Cho phép từ mới có tra nghĩa trong câu vận dụng riêng. #skills giữ nguyên; xem TASKS/DECISIONS.
+
+> 09/11/2026: đã triển khai phase [Ôn câu PC/mobile](MOBILE_SENTENCE_REVIEW.md), tách minh họa khỏi vận dụng, ngân hàng 18 chủ đề, Android offline và sync mở rộng. PC/mobile build và kiểm tra tập trung qua; APK 1.1 sẵn cài, còn nghiệm thu trên điện thoại thật. Các mô tả flashcard-only bên dưới là lịch sử.
+
+> 07/11/2026: người dùng duyệt mở rộng cả 18 chủ đề theo quy tắc và nhiệm vụ thực tế. Thêm 40 bài ngắn/126 câu, trong đó Số và thời gian có 6 bài ghép số, 二/兩, giờ/phút, lịch và mốc tương đối. Tích hợp lộ trình, giữ 72 bài/ID/gói v8/FSRS; nghiên cứu và phạm vi thật ở [LESSON-EXPANSION](LESSON-EXPANSION.md). Không coi đây là chứng nhận hoàn thành trình độ.
+
 > 04/11/2026: bổ sung Ôn tập chủ đề sau khi hoàn thành bốn bài và phần 5 nếu có. Mỗi bộ 15 câu, thay tổ hợp tình huống trong khung soạn sẵn, giới hạn kiến thức đã học, lưu riêng lượt ôn và bài dở. Chi tiết ở TOPIC_REVIEW.md; không thay foundation v8 hoặc lịch FSRS.
 
 > 29/10/2026 bổ sung: thêm flashcard riêng với đánh dấu đã học; PC/Android có nhóm ít nhất 20 từ và lượt 20/30/40/cả nhóm, lưu bộ đang ôn và điểm dừng. Nhóm nhỏ được ghép theo chủ đề; tổng chưa đủ 20 và chế độ FSRS đến hạn báo số thật. Audio vẫn tạo khi đồng bộ yêu cầu file thiếu. Xem ANDROID_REVIEW.md.

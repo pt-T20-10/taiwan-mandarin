@@ -17,6 +17,12 @@ it('all 72 lessons cover their own five words in a distinct dialogue and ten lin
    for(let i=0;i<line.hanzi.length;i++)if(/\p{Script=Han}/u.test(line.hanzi[i]))expect(spans.some(s=>s.start<=i&&s.end>i),line.hanzi).toBe(true);
   }
   const items=lessonPractice(u,l);expect(items).toHaveLength(10);
+  for(const q of items){
+   expect(['cloze','choice','translate_vi','translate_zh']).toContain(q.kind);
+   if(q.id.includes(':sentence:'))expect(lines.some(line=>line.hanzi===q.stimulus?.hanzi)).toBe(false);
+   expect(q.prompt).not.toContain('Tình huống:');expect(q.choices.length).toBeLessThanOrEqual(4);
+   if(q.id.includes(':word:'))expect(u.words.filter(w=>l.word_ids.includes(w.id)).map(w=>w.hanzi)).toContain(q.stimulus?.hanzi);
+  }
   for(const q of items){expect(ids.has(q.id)).toBe(false);ids.add(q.id);expect(l.word_ids).toContain(q.word_id);
    if(q.choices.length)expect(q.choices).toContain(q.answers[0]);
    if(q.kind==='cloze'){expect(q.prompt).toContain('___');expect(q.prompt).not.toContain(q.answers[0]);}

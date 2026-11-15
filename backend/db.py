@@ -87,6 +87,8 @@ def put_object(db, collection, id, expected_version, data, deleted=False):
     if collection not in COLLECTIONS:
         raise ValueError('Loại dữ liệu không hợp lệ')
     validate_object(collection, data)
+    from .learn_course import guard_write
+    guard_write(db,collection,id,data)
     row = db.execute('SELECT version FROM objects WHERE collection=? AND id=?', (collection, id)).fetchone()
     current = row['version'] if row else 0
     if current != expected_version:
@@ -96,6 +98,9 @@ def put_object(db, collection, id, expected_version, data, deleted=False):
     return current + 1
 
 def validate_object(collection, data):
+    if collection=='sessions' and isinstance(data,dict) and data.get('scope')=='lesson-expansion':
+        from .lesson_expansion import validate_run
+        validate_run(data)
     if collection=='sessions' and data.get('scope')=='topic-review':
         packet=data.get('packet',{});items=packet.get('items',[])
         if packet.get('source')!='authored' or len(items)!=15 or len({q.get('id') for q in items})!=15:raise ValueError('Bộ ôn chủ đề cần đúng 15 câu soạn sẵn có ID riêng')

@@ -1,0 +1,75 @@
+import {useEffect,useRef,useState} from 'react';
+import {api,speech,storage} from '../adapters/local';
+import {gradeAnswer} from '../adapters/answerGrading';
+import {useApp} from '../context';
+import {courseGrade,courseRuns,courseSessionId,newCourseRun,reviewLesson} from '../core/learnCourse';
+import type {Course,CourseLesson,CourseRun,CourseTask} from '../core/learnCourse';
+import type {AppState,TextItem} from '../core/types';
+import {eventFor} from '../core/learning';
+import {useActiveTimer} from '../core/useActiveTimer';
+import {StudyCard} from './StudyText';
+import {LearnedWordButton} from './LearnedWordButton';
+import {LearnOption} from './LearnOption';
+import {ExpansionLinks,LessonExpansion} from './LessonExpansion';
+import {expansionAt} from '../core/lessonExpansion';
+import '../learn-page.css';
+const pending=new Set<Promise<unknown>>();
+const track=<T,>(p:Promise<T>)=>{pending.add(p);void p.finally(()=>pending.delete(p)).catch(()=>{});return p;};
+const routeFor=(l:CourseLesson)=>'#learn/course/'+l.unit_id+'/'+(l.review?'review':l.index+1);
+
+export function LearnCourse({route='learn'}:{route?:string}){
+ const [course,setCourse]=useState<Course>(),[fresh,setFresh]=useState<AppState>(),[error,setError]=useState('');
+ const {state}=useApp();
+ useEffect(()=>{let live=true;setCourse(undefined);setError('');void(async()=>{try{await Promise.allSettled([...pending]);const [c,s]=await Promise.all([api<Course>('/learn/course'),storage.load()]);if(live){setFresh(s);setCourse(c);}}catch(e){if(live)setError((e as Error).message);}})();return()=>{live=false;speech.stop();};},[route]);
+ if(error)return <section className="panel"><h1>Chưa mở được giáo trình</h1><p role="alert">{error}</p><button onClick={()=>location.reload()}>Tải lại</button></section>;
+ if(!course||!fresh)return <p>Đang mở giáo trình và bài đã lưu…</p>;
+ const expansion=expansionAt(route);
+ if(expansion)return <div className="learn-page"><LessonExpansion key={route+course.epoch} lesson={expansion} historyRun={route.split('/')[4]} epoch={course.epoch}/></div>;
+ let lesson:CourseLesson|undefined;
+ if(route.startsWith('learn/course/')){const [, ,unitId,index]=route.split('/'),unit=course.units.find(u=>u.id===unitId);if(unit)lesson=index==='review'?reviewLesson(unit):unit.lessons[Number(index)-1];}
+ const old=/^learn\/(tw\.[^.]+)\.lesson\.(\d+)/.exec(route);
+ if(old)lesson=course.units.find(u=>u.id===old[1])?.lessons[Number(old[2])-1];
+ if(route.startsWith('learn/topic-language/'))lesson=course.units.find(u=>u.id===route.split('/')[2])?.lessons[4];
+ if(/^learn\/(sentence-review|topic-review)\//.test(route)){const u=course.units.find(u=>u.id===route.split('/')[2]);if(u)lesson=reviewLesson(u);}
+ if(lesson)return <CourseLessonView key={lesson.id+course.epoch} course={course} lesson={lesson} initialState={fresh}/>;
+ return <div className="learn-page"><h1>Học Hoa ngữ Đài Loan</h1><p>Mỗi bài: từ mới, cấu trúc, câu mẫu và luyện câu. Chọn một chủ đề để bắt đầu.</p><div className="unit-grid course-overview">{course.units.map((u,i)=><article className="unit-card" key={u.id}><span className="unit-number">{String(i+1).padStart(2,'0')}</span><h2>{u.title}</h2><p>{u.description}</p><div className="lesson-list">{u.lessons.map(l=>{const done=courseRuns(state,l.id,course.epoch).some(r=>r.data.phase==='summary');return <button key={l.id} onClick={()=>{location.hash=routeFor(l);window.scrollTo(0,0);}}><span>{done?'✓':l.index+1}</span>{l.title}<small>{l.words.length} từ · {l.question_count} câu</small></button>;})}</div><ExpansionLinks unitId={u.id}/><div className="actions"><a href={routeFor(reviewLesson(u))}>Ôn chủ đề</a></div></article>)}</div></div>;
+}
+
+function CourseLessonView({course,lesson,initialState}:{course:Course;lesson:CourseLesson;initialState:AppState}){
+ const {refresh,notify}=useApp(),rows=courseRuns(initialState,lesson.id,course.epoch);
+ const [run,setRun]=useState<CourseRun|undefined>((rows[0]?.data.content_version===course.version?rows[0].data:undefined)),current=useRef(run),version=useRef(rows[0]?.version||0),queue=useRef(Promise.resolve()),failed=useRef(false),locked=useRef(false),live=useRef(true);
+ const [busy,setBusy]=useState(false),[error,setError]=useState(''),[hint,setHint]=useState(false),[word,setWord]=useState<TextItem|null>(null),[heard,setHeard]=useState(false),[audioBusy,setAudioBusy]=useState(false);
+ const task=run?.tasks[run.index],timer=useActiveTimer(!!run&&run.phase==='exercise'&&!run.submitted&&!busy),dict=new Map(course.dictionary.map(w=>[w.hanzi,w])),keys=[...dict.keys()].sort((a,b)=>b.length-a.length);
+ useEffect(()=>{live.current=true;return()=>{live.current=false;speech.stop();};},[]);
+ useEffect(()=>{setHint(false);setWord(null);setHeard(false);speech.stop();},[run?.run,run?.index]);
+ function update(r:CourseRun){current.current=r;if(live.current)setRun(r);}
+ async function persist(r:CourseRun){await storage.put({collection:'sessions',id:courseSessionId(r),expected_version:version.current,data:r});version.current++;}
+ function draft(value:string){if(locked.current||!current.current)return;const next={...current.current,draft:value};update(next);queue.current=track(queue.current.then(async()=>{if(!failed.current)await persist(next);}).catch(e=>{failed.current=true;if(live.current)setError(e.message);}));}
+ async function act(fn:()=>Promise<void>){if(locked.current)return;locked.current=true;setBusy(true);try{await queue.current;if(failed.current)throw Error('Bản nháp chưa lưu. Sao chép câu trả lời trước khi tải lại.');await track(fn());}catch(e){if(live.current)setError((e as Error).message);}finally{locked.current=false;if(live.current)setBusy(false);}}
+ async function begin(){await act(async()=>{const latest=await api<Course>('/learn/course');if(latest.epoch!==course.epoch)throw Error('Dữ liệu Học đã reset. Hãy tải lại trang.');const s=await storage.load();const next=newCourseRun(latest,lesson,courseRuns(s,lesson.id,course.epoch).map(r=>r.data));version.current=0;await persist(next);update(next);await refresh();window.scrollTo(0,0);});}
+ async function assist(){if(!current.current||current.current.submitted||current.current.assisted)return;const next={...current.current,assisted:true};update(next);queue.current=track(queue.current.then(async()=>{if(!failed.current)await persist(next);}).catch(e=>{failed.current=true;if(live.current)setError(e.message);}));await queue.current;}
+ async function openWord(w:TextItem){await assist();if(!failed.current)setWord(w);}
+ function text(value:string){const parts=[];let at=0;while(at<value.length){const w=keys.find(k=>value.startsWith(k,at));if(w){const position=at;parts.push(<button type="button" className="word-token" key={position} disabled={busy} onClick={()=>void openWord(dict.get(w)!)} aria-label={'Tra từ '+w}>{w}</button>);at+=w.length;}else{parts.push(value[at]);at++;}}return <span lang="zh-TW">{parts}</span>;}
+ async function judge(q:CourseTask,answer:string){return gradeAnswer({mode:q.mode as 'gap'|'to_vi'|'to_zh',answer,reference:q.answer,meaning:q.entry.vi,sentence:q.entry.hanzi,template:q.mode==='gap'?q.entry.hanzi.split(q.gap).join('___'):''});}
+ async function regrade(){await act(async()=>{setError('');const r=current.current!,q=r.tasks[r.index],a=r.answers.at(-1)!;const g=await judge(q,a.answer);const next:CourseRun={...r,answers:[...r.answers.slice(0,-1),{...a,result:g.correct?'correct':'incorrect',feedback:g.feedback,grader:g.grader}]};await persist(next);update(next);await refresh();});}
+ async function submit(skip=false){await act(async()=>{setError('');const r=current.current;if(!r||r.submitted)return;const q=r.tasks[r.index];if(!skip&&!r.draft.trim())return;if(q.mode==='listen'&&!heard&&!skip)throw Error('Hãy nghe câu trước hoặc chọn Bỏ qua.');const g=!skip&&!q.choices.length?await judge(q,r.draft):undefined;const result=g?(g.correct?'correct' as const:'incorrect' as const):courseGrade(q,r.draft,skip);const next={...r,submitted:true,answers:[...r.answers,{id:q.id,answer:skip?'':r.draft,result,assisted:r.assisted,feedback:g?.feedback,grader:g?.grader}]};
+  await storage.event(eventFor(q.id,q.mode==='listen'?'listening':'vocabulary',{kind:'practice',correct:null,answer:skip?'[bỏ qua]':r.draft,assisted:r.assisted,action_key:courseSessionId(r)+':'+r.index,duration_ms:timer.consume()}),{collection:'sessions',id:courseSessionId(r),expected_version:version.current,data:next});version.current++;update(next);await refresh();speech.stop();});}
+ async function next(){await act(async()=>{const r=current.current!;const index=r.index+1;const next:CourseRun={...r,index,phase:index===r.tasks.length?'summary':'exercise',submitted:false,draft:'',assisted:false};await persist(next);update(next);await refresh();});}
+ async function listen(){if(!task||audioBusy)return;setAudioBusy(true);const id=run?.run,index=run?.index;try{await speech.speak(task.entry.hanzi);if(live.current&&current.current?.run===id&&current.current?.index===index)setHeard(true);}catch(e){notify((e as Error).message);}finally{if(live.current)setAudioBusy(false);}}
+ const unit=course.units.find(u=>u.id===lesson.unit_id)!,all=course.units.flatMap(u=>u.lessons),following=all[all.findIndex(l=>l.id===lesson.id)+1];
+ const title:Record<CourseTask['mode'],string>={word:'Chọn nghĩa tiếng Việt',gap:'Điền Hán tự vào câu',listen:'Nghe câu và chọn từ còn thiếu',to_zh:task?.choices.length?'Chọn câu tiếng Trung':'Viết câu tiếng Trung',to_vi:'Dịch câu sang tiếng Việt'};
+ return <div className="learn-page course-page"><div className="breadcrumbs"><a href="#learn">← Lộ trình</a><span>{unit.title}</span></div><h1>{lesson.title}</h1>{error&&<p role="alert" className="notice">{error}</p>}
+ {!run?<>{rows[0]&&rows[0].data.content_version!==course.version&&<p className="notice">Nội dung đã được sửa. Bắt đầu lượt mới bên dưới; lượt cũ được giữ trong dữ liệu.</p>}<section className="panel lesson-vocabulary"><h2>Làm quen với từ · {lesson.words.length}</h2><p>Từ đầu bài được ghi nhận khi bạn đi hết bộ luyện tập.</p><div className="study-card-grid">{lesson.words.map(w=><StudyCard key={w.hanzi} word={w} compact markable={false}/>)}</div></section>
+ <section className="panel"><h2>Ghép thành câu</h2>{lesson.patterns.map((p,i)=><div key={i}><h3>{p.title}</h3><p>{p.explanation}</p></div>)}<div className="expansion-examples">{lesson.examples.map(e=><article className="expansion-example" key={e.id}><p>{text(e.hanzi)}</p><p className="pinyin">{e.pinyin}</p><p>{e.vi}</p><button aria-label="Nghe câu mẫu" title="Nghe câu mẫu" onClick={()=>void speech.speak(e.hanzi).catch(e=>notify(e.message))}>🔊</button></article>)}</div></section><div className="actions"><button className="primary" disabled={busy} onClick={()=>void begin()}>Bắt đầu · {lesson.question_count} câu</button></div></>:
+ run.phase==='summary'?<section className="panel summary"><h2>Đã hoàn thành bài</h2><p>{run.answers.filter(a=>a.result==='correct'&&!a.assisted).length} đúng độc lập · {run.answers.filter(a=>a.result==='compare').length} chưa chấm · {run.answers.filter(a=>a.result==='skipped').length} bỏ qua</p>{!lesson.review&&<p>{lesson.words.length} từ đầu bài đã được ghi nhận. Bạn vẫn có thể luyện lại các câu chưa chắc.</p>}<div className="actions">{following&&!lesson.review&&<a className="primary" href={routeFor(following)}>Bài tiếp theo</a>}<button onClick={()=>{setRun(undefined);current.current=undefined;}}>Xem từ</button><button disabled={busy} onClick={()=>void begin()}>Luyện lại</button><a href="#learn">Lộ trình</a></div></section>:
+ task&&<section className="panel exercise"><div className="section-title"><span>Luyện tập</span><span>{run.index+1}/{run.tasks.length}</span></div><progress value={run.index} max={run.tasks.length}/><h2>{title[task.mode]}</h2>
+ <div className="course-prompt">{task.mode==='to_zh'?<p>{task.entry.vi}</p>:<p>{text(task.mode==='gap'||task.mode==='listen'?task.entry.hanzi.split(task.gap).join('___'):task.entry.hanzi)}</p>}{task.mode==='gap'&&<p>{task.entry.vi}</p>}</div>
+ {task.mode==='listen'&&!run.submitted&&<div className="actions"><button disabled={audioBusy} onClick={()=>void listen()}>{audioBusy?'Đang đọc…':'🔊 Nghe câu'}</button><small>{heard?'Đã nghe':'Thiếu audio vẫn có thể bỏ qua câu này.'}</small></div>}
+ {run.submitted?<div className={'feedback grade-'+run.answers.at(-1)!.result} role="status"><h3>{{correct:'Đúng rồi',incorrect:'Chưa đúng',compare:'Chưa được AI chấm',skipped:'Đã bỏ qua'}[run.answers.at(-1)!.result]}</h3><p>Bạn trả lời: {run.answers.at(-1)?.answer||'—'}</p><p>{text(task.entry.hanzi)}</p><p className="pinyin">{task.entry.pinyin}</p><p>{task.entry.vi}</p>{run.answers.at(-1)?.feedback&&<p>{run.answers.at(-1)?.feedback}</p>}{run.answers.at(-1)?.grader==='local-ai'&&<small>AI local đã chấm</small>}{run.answers.at(-1)?.result==='compare'&&<button disabled={busy} onClick={()=>void regrade()}>Chấm bằng AI local</button>}<div className="actions"><button aria-label="Nghe đáp án" onClick={()=>void speech.speak(task.entry.hanzi).catch(e=>notify(e.message))}>🔊</button><button className="primary" disabled={busy} onClick={()=>void next()}>Tiếp tục</button></div></div>:<>
+ {task.choices.length?<div className="choices">{task.choices.map(c=><LearnOption key={c} text={c} selected={run.draft===c} disabled={busy} candidates={[...course.dictionary,...lesson.sentences]} onChoose={()=>draft(c)} onReveal={()=>void assist()}/>)}</div>:<label>Câu trả lời<textarea aria-label="Câu trả lời" value={run.draft} disabled={busy} onChange={e=>draft(e.target.value)} onKeyDown={e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.nativeEvent.isComposing){e.preventDefault();void submit();}}}/></label>}
+ {!!task.support.length&&<div><button disabled={busy} onClick={()=>void assist().then(()=>setHint(!hint))}>Từ hỗ trợ · {task.support.length}</button>{hint&&<div className="course-support">{task.support.map(w=><div key={w.hanzi}><button className="word-token" onClick={()=>void openWord(w)}>{w.hanzi}</button> · {w.pinyin} · {w.vi}</div>)}</div>}</div>}
+ <p><small>{run.assisted?'Đã dùng trợ giúp':'Bản nháp được lưu trên máy.'}</small></p><div className="actions"><button className="primary" disabled={busy||failed.current||!run.draft.trim()||(task.mode==='listen'&&!heard)} onClick={()=>void submit()}>{busy?'Đang chấm…':'Kiểm tra'}</button><button disabled={busy} onClick={()=>void submit(true)}>Bỏ qua</button><button disabled={busy} onClick={()=>void act(async()=>{await persist(current.current!);location.hash='learn';})}>Tạm dừng</button></div>
+ </>}</section>}
+ {word&&<div className="course-word-backdrop" onClick={()=>setWord(null)}><section className="course-word-dialog" role="dialog" aria-modal="true" aria-label="Tra từ" onKeyDown={e=>{if(e.key==='Escape')setWord(null);}} onClick={e=>e.stopPropagation()}><button autoFocus onClick={()=>setWord(null)}>Đóng</button><StudyCard word={word} compact markable={false}/>{run?.phase==='exercise'&&!lesson.words.some(w=>w.hanzi===word.hanzi)&&!course.knowledge.words.includes(word.hanzi)&&<LearnedWordButton word={word} compact epoch={course.epoch}/>}</section></div>}
+ </div>;
+}

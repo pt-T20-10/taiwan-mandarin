@@ -1,5 +1,15 @@
 # Quy tắc nội dung
 
+## Điều chỉnh nhập môn 10/11/2026
+
+Không coi tra từ là lý do để đưa nhiều từ mới vào câu. Câu luyện phải chứa từ đích, chủ yếu dùng vốn từ đã học; lượt bài chính chỉ thêm tối đa một từ hỗ trợ, không yêu cầu sản xuất từ chưa học trong dịch Việt→Trung. `lessonPrimer.ts` chứa câu chào ngắn soạn riêng; `lessonSequence.ts` lọc ngân hàng và dùng luyện từ/cụm khi không đủ câu phù hợp. Gợi dẫn tình huống trong `lesson-use-cues.tsv` là dữ liệu lịch sử, không còn dùng cho lượt mới. Nguồn phương pháp và giới hạn cụ thể tại DECISIONS.
+
+## Ôn câu — 09/11/2026
+
+Minh họa và vận dụng phải tách biệt. Nguồn soạn ôn câu: `content/sentence_review_authoring.py`, từ hỗ trợ `sentence-review-words.json`, dấu hiệu cấu trúc `sentence-review-features.json`; chạy `.venv\Scripts\python.exe scripts/build_sentence_review.py`. Câu phải có đủ Phồn thể/Pinyin/nghĩa được soạn, slot chỉ nhận tổ hợp hợp lệ, không suy phiên âm từng chữ. Script kiểm tra phân đoạn, loại câu trùng minh họa, tạo ID theo nội dung và giữ retired_entries để nhận kết quả cũ. Cập nhật cùng nguồn và JSON sinh ra.
+
+40 bài bổ sung: sửa `content/expansion_application_authoring.py`, chạy `.venv\Scripts\python.exe scripts/build_expansion_application.py`. 72 bài chính dùng gợi dẫn tại `content/lesson-use-cues.tsv` và ngân hàng câu. Các từ đích có thể lặp để nhớ từ, nhưng không lấy lại nguyên câu mẫu làm câu vận dụng. Hai ngân hàng mới vẫn là bản biên soạn chưa giáo viên duyệt; kiểm tra cấu trúc không nâng nhãn source-checked.
+
 ## Bổ sung v7 — 29/09/2026
 
 720 bài tập/72 bài, 216 bộ luyện/1.620 câu-lượt; hội thoại 18 chủ đề đủ 8 câu. `practice_scenarios.py` chứa 54 tình huống và cụm đã ghi Phồn thể/Pinyin/nghĩa; `practice_dialogues.py` nối đúng hội thoại cũ. Rà cụm trong khung câu, nghĩa, đáp án/căn cứ và các trường hợp phi lý (mang thực đơn tới quán, vừa đến nơi đã về nhà); đã sửa các trường hợp này. Chưa có giáo viên duyệt, không nâng source-checked. Các khung đọc/nghe luyện kế hoạch, thông tin, quan hệ người đi cùng và mục đích chính; chưa thay cho giáo trình đọc mở rộng. Xem [RELEASE-V7](RELEASE-V7.md) về thiết kế, kiểm tra và giới hạn AI.

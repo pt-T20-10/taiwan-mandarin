@@ -6,6 +6,7 @@ import {verbsFor} from './verbs';
 import {greetingReadings} from './greetingReadings';
 import {beginnerVerbsFor} from './beginnerVerbs';
 import {lessonDialogue} from './lessonSequence';
+import {expansionsFor} from './lessonExpansion';
 
 export type WrittenItem={id:string;prompt:string;answers:string[];choices:string[];explanation:string;sample?:TextItem;evidence?:number[];requiredGrammar?:string;requiresPracticedForm?:boolean};
 export type ReadingLine=TextItem&{speaker?:string;role?:'female'|'male'};
@@ -24,6 +25,11 @@ export function sentenceBank(units:Unit[]):WrittenItem[]{
   if(unit.id==='tw.greetings')for(const [hanzi,pinyin,vi] of [
    ['你好！','Nǐ hǎo!','Xin chào!'],['您好！','Nín hǎo!','Xin chào (kính trọng)!'],['早安！','Zǎo ān!','Chào buổi sáng!'],['晚安！','Wǎn ān!','Chúc ngủ ngon!'],['再見！','Zàijiàn!','Tạm biệt!'],['謝謝！','Xièxie!','Cảm ơn!'],['謝謝你！','Xièxie nǐ!','Cảm ơn bạn!'],['不客氣。','Bú kèqi.','Không có gì (đáp lời cảm ơn).'],['對不起。','Duìbuqǐ.','Xin lỗi.'],['沒關係。','Méi guānxi.','Không sao.'],
   ])add('greetings:basic:'+Array.from(normalizeHanzi(hanzi)).map(c=>c.codePointAt(0)).join('-'),{hanzi,pinyin,vi},'Lời chào hoặc câu giao tiếp ngắn từ các từ đã học.');
+ }
+ for(const unit of units)for(const l of expansionsFor(unit.id))for(const q of l.questions){
+  const key=normalizeHanzi(q.solution.hanzi);
+  if(!/[。？！]/.test(q.solution.hanzi)||seen.has(key))continue;
+  seen.add(key);rows.push({id:'sentence:v1:'+q.id,prompt:q.solution.vi,answers:[q.solution.hanzi],choices:[],explanation:q.explanation,sample:q.solution,requiresPracticedForm:true});
  }
  return rows;
 }

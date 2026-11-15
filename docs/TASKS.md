@@ -1,5 +1,77 @@
 # Tiến độ Windows — chưa đạt nghiệm thu v1
 
+## Quy tắc và vận dụng — sửa nhóm lựa chọn 12/11/2026
+
+Rà nguồn 40 bộ/400 nhiệm vụ. Lỗi chính nằm ở expandPractice: gom đáp án input khác câu thành nhiễu, trộn từ chức năng và đại từ. Bộ tạo nay giữ lựa chọn cùng slot; 不是 có nhóm 是/也是/都是; trường hợp chưa có nhóm phù hợp giữ tự nhập. Viết lại câu phủ định bài chào thành “không phải bạn học mới”, thay đối chiếu nghề thiếu mục đích. Nâng ID câu UI v4 để cơ chế có sẵn mở bộ mới, giữ lịch sử. Các mẫu số rời vẫn dành riêng bài đọc/ghép số. Không reset dữ liệu.
+
+## Chấm dịch/điền từ bằng AI local — 12/11/2026
+
+- 90 bài chính/ôn chủ đề và 40 bài bổ sung dùng endpoint riêng `/api/learn/grade`. Đáp án đúng mẫu được nhận ngay; đáp án tự nhập khác mẫu được Qwen local đánh giá theo câu, nghĩa Việt và vị trí khuyết. Không đổi cách chấm lựa chọn đóng hoặc #skills/mobile.
+- Nhận diễn đạt tương đương; kiểm tra phủ định, người, số lượng, thời gian và cấu trúc. Lưu đúng/sai, giải thích, nguồn chấm cùng câu trả lời. Lượt cũ ở trạng thái compare/null có nút chấm AI ngay trong khung hiện tại. Không sửa lịch FSRS hoặc reset tiến độ.
+- Xanh/đỏ phân biệt đúng/sai, có nhãn chữ; vàng cho bỏ qua/chưa chấm. AI bận, lỗi, timeout hoặc kết quả không hợp lệ không bị biến thành sai: giữ nháp, cho thử lại. Model chỉ qua runtime loopback hiện có, không cloud.
+- Build qua; 8 backend tests qua. Edge qua với fixture chấm đúng/sai, lỗi lần đầu rồi thử lại, bảo toàn nháp, reload và hoàn tất. Live Qwen3-4B CUDA: 6 ca hiệu chỉnh cuối đều đúng, lần đầu 9,53 giây, các ca sau 1,38–1,98 giây (`data/answer-grading-live.json`). Lượt đầu đã phát hiện bác nhầm 想/要 và câu hỏi Việt đuôi “à”; đã sửa rubric/few-shot rồi chạy lại. Đây là bộ hiệu chỉnh nhỏ, không phải đo chất lượng độc lập hay bảo đảm mọi cách dịch. AI vẫn có thể nhận xét/chấm nhầm; có câu giải thích còn trích tiếng Anh. Cảnh báo bundle lớn vẫn còn.
+
+## Sửa nghĩa câu và phân cấp giao diện #learn — 10/11/2026
+
+- Sửa sai tên class `units-grid` thành lưới `unit-grid`: thẻ dọc, ba cột màn rộng/hai cột màn vừa/một cột hẹp; tiêu đề bài và số từ/câu tách dòng. Áp dụng chung toàn 18 chủ đề.
+- Đề chính 26–36 px, lựa chọn 21–28 px, ô nhập 24–30 px; yêu cầu dạng bài 16 px. Nút tra từng từ kế thừa cỡ đề. Áp dụng bài chính và bài quy tắc; không đổi #skills.
+- Rà nguồn khung/cụm thay thế trên 18 chủ đề, các khung 40 bài bổ sung và luồng nhập câu cũ. Loại vai trò tự mâu thuẫn/lặp, tự hỏi nghề của mình không có ngữ cảnh, nghề gắn tháng tùy tiện, số thứ tự người thiếu ngữ cảnh, quan hệ gia đình thiếu tham chiếu, chữ Hán bị coi là đồ vật, từ rời bị dùng như câu. Viết lại nhóm lời lịch sự; bổ sung câu hoàn chỉnh thay vì giảm điều kiện đủ đề. Dịch cụm theo ngữ cảnh thay vì lấy máy móc nghĩa đầu tiên (đá, chồng/vợ, tàu cao tốc, số điện thoại trong thông tin liên lạc). Lựa chọn Việt→Trung loại phương án có cùng bản dịch với đáp án.
+- `content_version=2`: không tiếp tục bộ câu lỗi đã lưu; giữ dữ liệu cũ/tiến độ hoàn tất và flashcard, không reset lần nữa. Backend chặn tab cũ ghi tiếp bộ v1; bài bổ sung đọc ví dụ đã sửa và mở bộ mới nếu ID câu đã đổi.
+- Build qua; 7 core tests giáo trình/bài bổ sung, 3 backend tests qua. Edge kiểm tra 90 mục, nhiều thẻ cùng hàng, đề/lựa chọn lớn hơn hướng dẫn, nghe/nháp/hoàn tất qua; đã xem ảnh `data/learn-course-overview-v2.png` và `data/learn-course-exercise-v2.png`. Dữ liệu chặn chi tiết ở `data/learn-course-editorial-exclusions.json`. Đây là rà soát biên soạn và kiểm tra hồi quy, không phải chứng nhận giáo viên thẩm định mọi câu. Cảnh báo bundle lớn vẫn còn.
+
+## Giáo trình PC 90 bài — triển khai PC 10/11/2026
+
+- [x] Ghi kế hoạch/giới hạn/reset được duyệt tại LEARN_COURSE_PC.md.
+- [x] Nội dung 90 bài và bộ kiểm tra biên soạn: 960 vị trí từ/cụm, 713 mục khác nhau; 4.240 câu luyện khác nhau, 360 vị trí câu mẫu. Có ôn lại từ giữa các chủ đề; không gọi 960 từ mới độc lập. Nội dung vẫn là draft, chưa giáo viên duyệt.
+- [x] Luồng học mới, năm dạng, vốn từ/ngữ pháp theo mốc reset và UI gọn. Năm dạng chia đều, 80% câu; thiếu vốn phù hợp thì thông báo, không bù bằng dịch từ. Click đáp án Hán tự đọc, hover/focus hiện Pinyin; 好 hiện 女 và 子. Bài chính và 40 bài bổ sung tự ghi nhận từ đầu bài khi đi hết lượt.
+- [x] Build qua; 2 core tests quét cả 90 bài và bộ ôn; 3 backend tests gồm reset/idempotence/flashcard/mobile-sync qua. Edge một kịch bản qua: 90 mục, thẻ gọn, năm dạng, nháp/reload, nghe nguyên câu qua WAV fixture, hover Pinyin, hoàn thành cấp từ và không tràn 390px. Đã xem ảnh `data/learn-course-intro.png`; có ảnh tổng kết. Fixture audio chỉ kiểm tra đường phát, chưa nghe duyệt chất lượng giọng.
+- [x] Backup/reset thật một lần lúc 11:53 UTC 10/11/2026: 87 bản ghi #learn được đánh dấu xóa; vốn từ/ngữ pháp mới rỗng; giữ 127 flashcard và toàn bộ payload/version/FSRS ngoài phạm vi bằng đối chiếu hash. Chạy lại reset trả no-op. Backup/báo cáo ghi ở LEARN_COURSE_PC.md.
+
+Giới hạn kiểm tra: lệnh `npm test -- ...` đã chạy cả bộ src (do script có đối số src): 55/56 qua; `studyV8.test.ts` còn lỗi lookup cũ thiếu 格 trong 表格. Lượt kiểm tra riêng `vitest run src/core/learnCourse.test.ts` qua 2/2. Không tuyên bố cả suite xanh. Pytest cần quyền chạy ngoài sandbox vì thư mục tạm bị từ chối; chạy lại đúng dữ liệu thử qua. Vẫn có cảnh báo bundle >500 kB và Starlette. Không build/cài APK; các thay đổi mobile có sẵn thuộc phase trước.
+
+## Thu gọn từ mới và sửa độ khó — 10/11/2026
+
+- Một trang từ mới, năm thẻ cùng hàng ở màn hình rộng, giữ nghe/đánh dấu/thêm thẻ/nét chữ. Thẻ dùng dòng Bộ thủ ngắn, bỏ phân tích vị trí ở chế độ gọn. Bốn lựa chọn tối đa, giữ đáp án đúng và trộn thứ tự, lưới 2×2 trong #learn.
+- Bài chính v4 bám năm từ đích và từ từ bài trước đã hoàn thành; tối đa một từ hỗ trợ trong cả lượt, không có từ mới ở câu Việt→Trung. Câu chào nhập môn biên soạn riêng chỉ thêm 老師. Các câu ngân hàng cần ≥80% từ đã biết, ngắn và không có cấu trúc nâng cao được đánh dấu; thiếu câu thì dùng luyện từ/cụm ngắn. Ôn chủ đề giới hạn một từ mới/câu và giữ điều kiện cấu trúc đã học. Không thay #skills/mobile APK.
+- Build qua; 10 kiểm tra lõi, 2 backend tests qua. Edge kiểm tra năm thẻ cùng hàng, bốn lựa chọn 2×2, bài đầu và 390px không tràn qua. Đã xem ảnh `data/learn-vocabulary-compact.png`, `data/learn-choices-compact.png`. Còn cảnh báo bundle PC lớn và Starlette test client. Chưa thẩm định ngôn ngữ bởi giáo viên; không sửa dữ liệu học thật.
+
+## Điều chỉnh Học — 10/11/2026
+
+- Thay gợi dẫn tình huống ở lượt mới của 72 bài bằng điền từ/chọn từ/dịch Trung–Việt/Việt–Trung từ ngân hàng riêng. Không dùng lại câu minh họa. Lượt cũ giữ snapshot và có nút mở bộ mới, lưu bản cũ trước khi đổi.
+- 40 bài bổ sung bỏ dạng nghe ở bộ mới, dùng câu riêng và bốn dạng bài được yêu cầu. Dịch khác mẫu cần đối chiếu; không tự đánh sai. Bỏ danh sách 10 câu sau bài, nguồn và lịch sử khỏi giao diện; dữ liệu vẫn giữ.
+- Ôn câu trong #learn dùng bốn dạng, cho phép từ mới có tra nghĩa; endpoint mobile vẫn giữ chính sách cũ. Không sửa ngân hàng #skills. Nút/link điều hướng trong Học được trình bày thống nhất.
+- Build PC qua; 10/10 kiểm tra lõi qua (bao gồm cả 72 bài không trùng hội thoại mẫu), 2/2 Edge E2E qua: ôn câu, nháp/reload/trợ giúp, hoàn thành 10 câu, ẩn danh sách/nguồn/lịch sử, giữ tiến độ cũ. Đã xem ảnh tổng kết `data/learn-summary-20261110.png`. Lần E2E đầu vướng Node import JSON của fixture, sửa sang đọc snapshot API thật rồi chạy qua. Còn cảnh báo bundle lớn; chưa cập nhật APK trong đợt này. Không sửa dữ liệu học thật hoặc các bộ đề #skills.
+
+## Phase ôn câu PC/mobile — 09/11/2026
+
+- [x] Ghi đặc tả được duyệt và hướng dẫn USB tại MOBILE_SENTENCE_REVIEW.md.
+- [x] Ngân hàng riêng 1.150 câu / 18 chủ đề / 8 nhóm mỗi chủ đề; 63–64 câu/chủ đề. 400 câu vận dụng riêng cho 40 bài bổ sung. 72 bài chính giữ 5 câu nhớ từ, thay 5 câu lấy lại hội thoại mẫu bằng gợi dẫn tình huống nhập từ; ôn câu đầy đủ nằm ở luồng riêng.
+- [x] Lõi chọn đề 10/15 câu, lọc kiến thức, ưu tiên mới/yếu, tránh hai lượt gần nhất khi đủ; câu khác nhau giữa các dạng trong lượt; dịch khác mẫu cần đối chiếu. Chuẩn bị tối đa 3 lượt và kiểm lại khi kiến thức/kết quả từ thiết bị khác thay đổi.
+- [x] API v2 bên cạnh flashcard v1; sự kiện chống trùng/xung đột, kết quả practice không sửa FSRS; lưu câu một lần theo ID, snapshot cũ và outbox được giữ. Audio nguyên câu/từ, cache câu 200 MiB không tính flashcard, báo thiếu thật.
+- [x] Mobile điền/chọn/ghép/dịch hai chiều, tra từ gọn, đánh dấu trợ giúp, nháp bền vững và lịch sử; flashcard giữ nguyên. Đóng/chuyển tab rồi mở lại tiếp tục lượt hiện tại.
+- [x] 15 core/adapter tests và 3 backend tests qua; build PC/mobile và Gradle assembleRelease qua, APK 1.1 tại `data/android-build/dao-nho-review.apk`. `git diff --check` qua (cảnh báo CRLF). Đã xem ảnh PC và mobile 390px.
+- [x] Edge: desktop-sentences, lesson-expansion và mobile-review qua trong lượt chung. mobile-sentences timeout 45 giây tại page.goto ở lượt chung, chưa xác định nguyên nhân; chạy riêng bản build cuối qua 3,9 giây. Tổng 4 kịch bản đã qua trên các lượt, không tuyên bố một lượt chung xanh hoàn toàn. Bao phủ bộ 10 câu đủ dạng, tra từ/trợ giúp, reload nháp, gửi outbox, bộ cũ và FSRS; native/audio mobile giả lập.
+- [ ] Cài/thử bản này trên Redmi: ADB không có thiết bị kết nối; chưa chạy android:install, chưa nghe duyệt audio câu hoặc đo cache trên máy thật.
+
+Ngân hàng và nội dung mới chưa giáo viên duyệt. Hoàn thành bài nền tảng chưa nhất thiết mở đủ 60 câu: bộ lọc còn yêu cầu từ/cấu trúc bổ sung đã học. Kiểm tra trình duyệt dùng native bridge giả lập; không coi đó là xác nhận Android thật. Còn cảnh báo bundle PC >500 kB, Gradle deprecated/flatDir và Starlette test client; không nâng dependency ngoài phạm vi. Không chạy toàn bộ suite/benchmark, không thay database học thật. Mở lại dịch vụ PC bằng Start.cmd sau cập nhật để nạp route mới; tải lại trang.
+
+## Bổ sung 10 câu và cơ chế từ mới — 08/11/2026
+
+- 40 bài × 10 câu = 400 nhiệm vụ; giữ 126 câu gốc, thêm đọc hiểu/điền từ các ví dụ đã soạn. Không coi đây là 274 câu Hoa mới. Snapshot cũ không đổi; có nút tạo lượt 10 câu riêng.
+- Dùng StudyCard cho từ mới; StudyText cho ví dụ, đáp án, đề bài với từ vựng bổ sung và ngân hàng offline cũ. Tra đề trước khi nộp lưu trợ giúp; các nút nghe, đánh dấu đã học, thêm flashcard và xem chữ dùng cơ chế sẵn có.
+- Build qua (`index-BbikRkrs.js`), 7/7 kiểm tra tập trung qua, bao gồm validator backend cho toàn bộ 40 bộ và giữ bộ ngắn cũ. Edge E2E 1/1 qua: 10 câu, thẻ từ, hộp tra từ, assisted, reload, bản nháp, học lại, dữ liệu cũ, màn hình 390px không tràn ngang. `git diff --check` qua. Lần Edge đầu thất bại vì test tìm token 十一 trong khi ngân hàng tách 十/一; sửa locator theo phân đoạn thật rồi chạy lại qua.
+- Sandbox vẫn chặn spawn EPERM khi khởi động Vitest; chạy ngoài sandbox đã qua. Cảnh báo bundle lớn vẫn còn; không chạy toàn bộ suite hoặc đánh giá ngôn ngữ/giọng người thật. Không thay dữ liệu người dùng/FSRS hay APK.
+
+## Mở rộng lesson cho 18 chủ đề — 07/11/2026
+
+- Hoàn tất lượt tiếp tục ngày **08/11/2026**: build bản cuối qua (bundle `index-BtqpdAY4.js`); chạy lại đúng một Edge E2E qua, bổ sung xác nhận phần 5 đã hoàn thành dẫn tới bài mở rộng. `git diff --check` không có lỗi whitespace. Lượt build cuối trước khi gián đoạn chưa được thực thi do hệ thống xét duyệt tự động hết hạn mức; lần tiếp tục đã được thực thi thành công. Không còn bước build/kiểm tra đang chờ trong đợt này.
+
+- Đã nghiên cứu NAER/TBCL (ngữ pháp trang 1–6), NTNU/MTC (nguyên tắc và bảng đối chiếu giáo trình), OCAC và các mục từ MOE. Soạn 40 bài ngắn/126 câu, bao phủ cả 18 chủ đề. Số và thời gian có riêng 11–99, trăm/nghìn/零, 二/兩, giờ/phút, đủ thứ/tháng, tháng trước/này/sau và các mốc tương đối. Xem [LESSON-EXPANSION](LESSON-EXPANSION.md) về nguồn, ma trận và giới hạn.
+- Đã tích hợp thẻ chủ đề/tìm kiếm/tiếp tục, phần 5 → bài mở rộng → chủ đề sau; Hán tự/Pinyin/nghĩa, nghe qua adapter cũ, thêm flashcard chủ động. Lưu snapshot và mọi lượt học lại; queue/CAS, nộp atomic/idempotent, gợi ý/bản nháp bền vững. Câu đã luyện đúng chỉ cấp bằng chứng sau khi hoàn tất. Không nâng gói v8/schema, thay ID cũ, tự thêm thẻ hoặc sửa FSRS.
+- Build qua; 6/6 kiểm tra tập trung (3 mới + 3 learnedWriting) qua, gồm đưa mọi snapshot sang validator backend thật. Một Edge E2E qua luồng học/reload/gợi ý/skip nghe/học lại/giữ dữ liệu cũ/mobile. Đã xem ảnh `data/lesson-expansion-{desktop,mobile}.png`.
+- Lệnh npm test chọn file ban đầu chạy rộng vì script có sẵn `src`: 48/49 qua, lỗi cũ ở `studyV8.test.ts` thiếu tra chữ 格 trong câu `請先填表格，再到這個櫃臺付款。`. Không đổi gói/lookup/test đó. Đã dùng trực tiếp `node node_modules/vitest/vitest.mjs run src/core/lessonExpansion.test.ts src/core/learnedWriting.test.ts` để kiểm tra đúng phạm vi. Build trong sandbox gặp spawn EPERM; chạy lại với quyền tạo tiến trình đã qua.
+- Nội dung vẫn chưa giáo viên thẩm định, chưa nghe duyệt TTS. Không benchmark AI hoặc thay runtime/giọng, không tác động database học thật. Dist đã cập nhật; mở lại Start.cmd để backend nạp validator mới. Chưa commit/push. Bộ ôn 15 câu giữ phạm vi nền tảng, không tự nhận bao phủ 40 bài mới.
+
 ## Sửa ghép câu ôn chủ đề — 04/11/2026
 
 - Người dùng báo `你見面`; nguyên nhân là thay chủ ngữ/nối động từ máy móc và thiếu kiểm tra ngữ cảnh giữa các câu. Đã bỏ cả hai đường sinh câu động từ này, dùng câu hoàn chỉnh trong topicReviewScenes, kèm hồ sơ bốn thông tin được chọn trước thay tích tổ hợp tùy ý.

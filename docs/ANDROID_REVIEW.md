@@ -2,7 +2,7 @@
 
 ## Phạm vi
 
-APK `Đảo nhỏ – Ôn tập` chỉ ôn flashcard. Mặt trước là Hán tự; lật thẻ để xem Pinyin/nghĩa Việt, nghe Microsoft Yating và bấm Tiếp. Không đăng nhập, không chấm nhớ/đúng sai, không thay lịch FSRS. Không mang model chat/ASR hoặc tài sản nét chữ lên điện thoại.
+APK `Đảo nhỏ – Ôn tập` từ bản 1.1 có Flashcard và Ôn câu. Flashcard giữ mặt trước Hán tự, lật xem Pinyin/nghĩa Việt, nghe Microsoft Yating và bấm Tiếp. Ôn câu có điền/chọn từ, ghép câu và dịch hai chiều, lưu nháp/offline và tra từ gọn. Không thay lịch FSRS hoặc mang model chat/ASR, tài sản nét chữ lên điện thoại. Xem [đặc tả và hướng dẫn cập nhật USB](MOBILE_SENTENCE_REVIEW.md); phần kiểm tra bản flashcard bên dưới là lịch sử, không chứng nhận tính năng ôn câu trên máy thật.
 
 PC quản lý thẻ; điện thoại chỉ nhận bản sao những thẻ chưa xóa/tạm ngưng. Các hướng học có cùng Hán tự/Pinyin được gộp thành một từ, giữ các nghĩa khác nhau. Lượt đã xem trên Android được đồng bộ về sự kiện practice riêng, `correct:null`, không có rating.
 

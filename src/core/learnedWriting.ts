@@ -34,6 +34,15 @@ export function writingKnowledge(content:Content,state:AppState):WritingKnowledg
  for(const row of Object.values(state.objects.sessions)){
   const s=row.data;if(row.deleted||s.archived||s.phase!=='summary')continue;
   if(s.scope==='grammar'&&typeof s.grammar_id==='string')result.grammar.add(s.grammar_id);
+  if(s.scope==='lesson-expansion'&&s.packet?.revision===1){
+   // Only exact solutions successfully practiced in this completed snapshot.
+   // Reading an introduction never unlocks a whole vocabulary/grammar topic.
+   result.lessonIds.push(s.lesson_id);
+   for(const answer of s.answers||[])if(answer.correct===true&&!answer.skipped){
+    const question=s.packet.questions?.find((q:{id:string})=>q.id===answer.id);
+    addSentence(question?.solution?.hanzi);
+   }
+  }
   if(s.scope==='skills'&&s.packet?.source==='authored'&&/^(verbs|classifiers):/.test(s.unit_id||'')){
    // A completed supplemental packet proves its actual phrases, not the entire topic bank.
    for(const line of s.packet.passage||[])addSentence(line.hanzi);

@@ -9,7 +9,7 @@ import {QuestionReading} from './QuestionReading';
 import {AnswerFeedback} from './AnswerFeedback';
 
 const writes=new Set<Promise<unknown>>();
-export function TopicReviewLink({unit}:{unit:Unit}){const {content,state}=useApp();return topicReviewReady(content,state,unit)?<a className="button" data-topic-review={unit.id} href={'#learn/topic-review/'+unit.id}>Ôn tập chủ đề · 15 câu →</a>:null;}
+export function TopicReviewLink({unit}:{unit:Unit}){return <div className="actions"><a className="button" href={'#learn/sentence-review/'+unit.id}>Ôn câu mới →</a></div>;}
 export function TopicReview({unit}:{unit:Unit}){
  const {state,content,refresh,notify}=useApp();
  const [run,setRun]=useState<TopicReviewRun>(),[busy,setBusy]=useState(true),[saving,setSaving]=useState(false),[failed,setFailed]=useState(false),[feedback,setFeedback]=useState<TopicReviewRun['answers'][number]>();

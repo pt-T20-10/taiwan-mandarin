@@ -1,0 +1,13 @@
+.sentence-practice{max-width:900px;margin:auto;overflow-wrap:anywhere}
+.sentence-practice label{display:block;margin:12px 0}
+.sentence-practice select,.sentence-practice textarea{display:block;box-sizing:border-box;width:100%;max-width:100%;padding:12px;margin-top:6px}
+.sentence-practice textarea{min-height:100px;font:inherit}
+.sentence-line{font-size:1.35rem;line-height:2}
+.sentence-token{display:inline!important;background:transparent!important;color:inherit!important;border:0!important;border-bottom:1px dotted currentColor!important;border-radius:0!important;padding:0 2px!important;margin:0!important;font:inherit!important;min-height:0!important}
+.sentence-choices{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.sentence-choices .selected{outline:2px solid #487061}
+.sentence-feedback{padding:16px;border:1px solid #b8c7b8;border-radius:12px}
+.sentence-word-sheet{position:fixed;bottom:0;left:50%;transform:translateX(-50%);box-sizing:border-box;width:min(100%,480px);max-height:65vh;overflow:auto;background:#fffdf5;color:#22372c;padding:20px;z-index:1000;border:1px solid #b8c7b8;border-radius:18px 18px 0 0;box-shadow:0 -8px 40px #0003}
+.sentence-word-sheet h3{font-size:1.8rem;margin:8px 0}
+.sentence-practice input[type=checkbox]{width:auto;display:inline;margin-right:8px}
+@media(max-width:600px){.sentence-practice .actions{display:flex;flex-wrap:wrap;gap:8px}.sentence-practice button{white-space:normal}.sentence-practice h1{font-size:1.7rem}}

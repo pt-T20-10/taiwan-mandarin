@@ -1,0 +1,68 @@
+.learn-page .actions,.expansion-page .actions {display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;margin-block:18px}
+.learn-page .actions>a,.expansion-page .actions>a {display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 18px;border:1px solid var(--border,#deded2);border-radius:12px;text-decoration:none;line-height:1.5;background:var(--panel,#fff);color:inherit;font-size:.9rem}
+.learn-page .actions>button,.expansion-page .actions>button {min-height:44px;line-height:1.5;margin:0}
+.learn-page .actions>a.primary,.expansion-page .actions>a.primary {background:var(--primary,#245f50);color:white}
+.learn-page .actions>div {flex-basis:100%}
+@media(max-width:600px){.learn-page .actions>button,.learn-page .actions>a,.expansion-page .actions>button,.expansion-page .actions>a{flex:1 1 180px;white-space:normal}}
+
+/* Vocabulary overview: one continuous page, five compact cards on wide screens. */
+main:has(.lesson-vocabulary){max-width:1680px;padding-inline:24px}
+.lesson-vocabulary .study-card-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px}
+.lesson-vocabulary .study-card{display:flex;flex-direction:column;padding:12px;gap:12px;min-width:0}
+.lesson-vocabulary .study-card>div:first-child{width:100%}
+.lesson-vocabulary .study-card h3{font-size:1.6rem}
+.lesson-vocabulary .study-card p{margin:5px 0}
+.lesson-vocabulary .study-card .actions{display:flex;gap:6px;margin:10px 0 0}
+.lesson-vocabulary .study-card .actions button{padding:6px 9px;font-size:.8rem;min-height:34px;flex:1 1 70px}
+.lesson-vocabulary .character-study{width:100%;padding:10px;margin-top:auto}
+.lesson-vocabulary .stroke-stage{max-width:120px;margin:auto}
+.lesson-vocabulary .character-tabs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.lesson-vocabulary .character-tabs button{padding:5px 10px}
+.lesson-vocabulary .stroke-controls{flex-wrap:wrap}
+.lesson-vocabulary .character-study p{font-size:.8rem}
+.learn-page .choices,.learn-page .sentence-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:640px;margin:20px auto}
+.learn-page .choices>button,.learn-page .sentence-choices>button,.learn-page .choice-with-reading>button{width:100%;min-height:48px;margin:0;padding:10px 14px;text-align:center}
+.learn-page .choice-with-reading{min-width:0;margin:0}
+.learn-page .choice-with-reading .actions{margin:5px 0;gap:5px}
+@media(min-width:1450px){.lesson-vocabulary .study-card-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:600px){main:has(.lesson-vocabulary){padding-inline:14px}.lesson-vocabulary{padding:14px}.lesson-vocabulary .study-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lesson-vocabulary .study-card{padding:9px}.learn-page .choices,.learn-page .sentence-choices{gap:8px}}
+
+.course-page .lesson-vocabulary .study-card .actions button{flex:0 1 auto;min-height:34px;padding:5px 10px;white-space:nowrap}
+.course-page .lesson-vocabulary .study-card .actions{justify-content:flex-start}
+.course-page .course-prompt{font-size:1.25rem;line-height:1.8;margin:20px 0}
+.learn-option{position:relative;min-width:0}
+.learn-option>button{width:100%;min-height:52px;margin:0;padding:12px;overflow-wrap:anywhere}
+.option-pinyin{position:absolute;z-index:5;bottom:calc(100% + 5px);left:0;max-width:100%;background:#173f35;color:white;border-radius:8px;padding:6px 10px;font-size:.85rem;pointer-events:none;box-shadow:0 3px 12px #173f3522}
+.course-support{padding:12px;border:1px solid var(--line);border-radius:12px;margin-top:10px}
+.course-word-backdrop{position:fixed;inset:0;background:#14251d88;z-index:1000;display:grid;place-items:center;padding:20px}
+.course-word-dialog{background:#fafbf6;padding:20px;border-radius:16px;max-width:500px;max-height:90vh;overflow:auto;width:100%}
+.course-word-dialog .study-card{display:flex;flex-direction:column;gap:12px}
+.course-word-dialog .character-study{width:100%}
+.course-word-dialog .stroke-stage{max-width:160px;margin:auto}
+.course-word-dialog>.study-card .actions{margin:8px 0}
+.course-page .lesson-list small{display:block;margin-left:auto;color:var(--muted);white-space:nowrap}
+
+/* Shared hierarchy for every PC Learn lesson, including supplemental lessons. */
+.course-overview{align-items:stretch;gap:22px}
+.course-overview .unit-card{display:flex;flex-direction:column;padding:24px;min-width:0}
+.course-overview .unit-card h2{font-size:1.35rem;line-height:1.4;margin:16px 0 8px}
+.course-overview .lesson-list button{display:grid;grid-template-columns:22px 1fr;gap:6px 10px;font-size:.95rem;padding:10px 4px;line-height:1.5}
+.course-overview .lesson-list small{grid-column:2;font-size:.75rem;color:#667564}
+.course-overview .unit-card>.actions{margin-top:auto;padding-top:16px;margin-bottom:0}
+.learn-page .exercise{max-width:960px}
+.learn-page .exercise>h2{font-size:1rem;font-weight:500;color:#607567;margin-top:24px;margin-bottom:12px}
+.learn-page .course-prompt,.learn-page .question-hanzi{font-size:clamp(26px,2.3vw,36px);font-weight:500;line-height:1.65;color:#254c42}
+.learn-page .course-prompt .word-token{font-size:inherit;font-weight:inherit;line-height:inherit}
+.learn-page .exercise .choices{max-width:none;width:100%;gap:14px}
+.learn-page .exercise .choices button{font-size:clamp(21px,1.8vw,28px);line-height:1.6;min-height:76px;padding:16px 18px}
+.learn-page .exercise textarea,.learn-page .exercise input:not([type=checkbox]){font-size:clamp(24px,2vw,30px);line-height:1.6;min-height:100px;padding:16px;color:#254c42}
+.learn-page .exercise .feedback>p{font-size:22px;line-height:1.7}
+.learn-page .exercise .feedback .word-token{font-size:inherit}
+.learn-page .exercise>.section-title h2{font-size:1rem;font-weight:500;color:#607567}
+.learn-page .exercise>h3{font-size:clamp(26px,2.3vw,36px);line-height:1.65;font-weight:500}
+.learn-page .exercise>h3 .study-token{font-size:inherit}
+.learn-page .feedback.grade-correct{background:#e5f5e9;border:2px solid #32834b;color:#174d2b}
+.learn-page .feedback.grade-incorrect{background:#fff0ef;border:2px solid #bd4640;color:#7e2521}
+.learn-page .feedback.grade-compare,.learn-page .feedback.grade-skipped{background:#fff6dd;border:2px solid #b4882e;color:#654c16}
+.learn-page .feedback[class*="grade-"] h3{color:inherit}
+@media(max-width:760px){.learn-page .exercise .choices button{font-size:21px;padding:12px}.course-overview .unit-card{padding:20px}}

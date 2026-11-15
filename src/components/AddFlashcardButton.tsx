@@ -2,7 +2,7 @@ import {useRef,useState} from 'react';
 import {useApp} from '../context';
 import type {TextItem} from '../core/types';
 import {newSchedule,normalizeHanzi,normalizePinyin} from '../core/learning';
-export function AddFlashcardButton({word}:{word:TextItem}){
+export function AddFlashcardButton({word,compact=false}:{word:TextItem;compact?:boolean}){
  const {state,content,put,notify}=useApp(),[busy,setBusy]=useState(false),lock=useRef(false);
  const same=(w:TextItem)=>normalizeHanzi(w.hanzi)===normalizeHanzi(word.hanzi)&&normalizePinyin(w.pinyin)===normalizePinyin(word.pinyin);
  const existing=Object.values(state.objects.cards).find(r=>!r.deleted&&r.data.direction==='recognize'&&same(r.data.word));
@@ -16,5 +16,5 @@ export function AddFlashcardButton({word}:{word:TextItem}){
    notify('Đã thêm vào flashcard. Đồng bộ trên điện thoại để tải từ và audio.');
   }catch(e){notify((e as Error).message);}finally{lock.current=false;setBusy(false);}
  }
- return <button type="button" disabled={busy||!!existing} onClick={()=>void add()}>{existing?(existing.data.suspended?'Đã có flashcard · tạm ngưng':'Đã thêm vào flashcard'):busy?'Đang thêm…':'+ Thêm vào flashcard'}</button>;
+ return <button type="button" disabled={busy||!!existing} onClick={()=>void add()}>{compact?(existing?'Đã có':busy?'…':'Thêm thẻ'):existing?(existing.data.suspended?'Đã có flashcard · tạm ngưng':'Đã thêm vào flashcard'):busy?'Đang thêm…':'+ Thêm vào flashcard'}</button>;
 }

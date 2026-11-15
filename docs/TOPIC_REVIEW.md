@@ -1,5 +1,9 @@
 # Ôn vận dụng theo chủ đề
 
+## Cập nhật 09/11/2026
+
+Liên kết chính trên thẻ chủ đề là “Ôn câu trong tình huống mới”, dùng ngân hàng 1.150 câu chung PC/mobile và lọc kiến thức đã học. Bộ đọc/ôn nền tảng trước đây cùng lịch sử vẫn truy cập qua mục đóng/mở; không xóa hoặc viết lại lượt cũ. Các mô tả bộ cố định bên dưới là hệ thống cũ. Xem [phase ôn câu](MOBILE_SENTENCE_REVIEW.md) về chọn đề, audio và lưu tiếp tục.
+
 Ngày 04/11/2026, bản bổ sung v2 cho foundation-tw v8. Không thay gói đã cài, ID bài học hoặc schema SQLite. V1 đã ngừng dùng vì phép thay chủ ngữ và ghép tổ hợp tạo câu thiếu ngữ cảnh như `你見面`.
 
 ## Cách mở

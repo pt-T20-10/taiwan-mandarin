@@ -1,0 +1,23 @@
+import {test,expect} from '@playwright/test';
+test('beginner words fit one overview and four choices stay in two columns',async({page,request})=>{
+ const headers={'X-Mandarin-Client':'local-ui'},backup=await(await request.get('/api/backup')).json();backup.objects=[];backup.events=[];
+ expect((await request.post('/api/restore',{headers,data:backup})).ok()).toBeTruthy();
+ await page.setViewportSize({width:1536,height:1000});
+ await page.goto('/#learn/tw.greetings.lesson.1');
+ await expect(page.locator('.lesson-vocabulary .study-card')).toHaveCount(5);
+ await expect(page.locator('.lesson-vocabulary').getByText('Các thành phần:')).toHaveCount(0);
+ const cards=await page.locator('.lesson-vocabulary .study-card').evaluateAll(els=>els.map(e=>e.getBoundingClientRect().top));
+ expect(new Set(cards).size).toBe(1);
+ await page.screenshot({path:'data/learn-vocabulary-compact.png',fullPage:true});
+ await page.getByRole('button',{name:'Bắt đầu luyện tập →'}).click();
+ await expect(page.locator('.choices .choice-with-reading>button')).toHaveCount(4);
+ const choices=await page.locator('.choices .choice-with-reading').evaluateAll(els=>els.map(e=>({x:e.getBoundingClientRect().left,y:e.getBoundingClientRect().top})));
+ expect(new Set(choices.map(e=>e.x)).size).toBe(2);expect(new Set(choices.map(e=>e.y)).size).toBe(2);
+ const state=await(await request.get('/api/state')).json(),run=state.objects.sessions['tw.greetings.lesson.1'].data;
+ expect(run.sequence_revision).toBe(4);
+ expect(run.exercise_snapshot.every((q:any)=>['你好','您好','早安','晚安','再見'].includes(q.stimulus.hanzi)||/^老師，[你您]好！$|^老師，(早安|晚安|再見)！$/.test(q.stimulus.hanzi))).toBe(true);
+ expect(run.exercise_snapshot.filter((q:any)=>q.kind==='translate_zh').every((q:any)=>!q.stimulus.hanzi.includes('老師'))).toBe(true);
+ await page.screenshot({path:'data/learn-choices-compact.png',fullPage:true});
+ await page.setViewportSize({width:390,height:844});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
